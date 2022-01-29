@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       ab2f5dfb-e355-4dbb-8ca0-12845b82e38a
+:ROAM_ALIASES: programming
+:END:
+#+title: open_research_literate_programming
+* Literate Programming
+
+[[https://en.wikipedia.org/wiki/Literate_programming][Literate programming]] was introduced by [[https://en.wikipedia.org/wiki/Donald_Knuth][Donald Knuth]] whereby programs are written in the logical order in which they are
+processed in human language with text inter-weaved with code that is compiled in a self-documenting process.
+
+* Links
+:PROPERTIES:
+:ID:       90892c9b-d38f-4257-8bbf-6687edf06bcd
+:END:
+** Frameworks
+:PROPERTIES:
+:ID:       1f26addc-d7de-4033-93ff-322e46f730af
+:END:
++ [[https://orgmode.org/worg/org-contrib/babel/][Org Babel]]
++ [[https://quarto.org/][Quarto]]
++ [[https://rmarkdown.rstudio.com/][R Markdown]]

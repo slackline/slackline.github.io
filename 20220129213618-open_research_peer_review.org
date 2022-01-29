@@ -1,5 +1,6 @@
 :PROPERTIES:
 :ID:       04cf68bf-0db2-403e-b0a6-9c94aa662577
+:ROAM_ALIASES: "peer review" replication
 :END:
 #+title: open-research-peer-review
 * Peer Review

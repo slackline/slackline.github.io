@@ -1,5 +1,6 @@
 :PROPERTIES:
 :ID:       3df9f7ea-12c0-47ab-97a8-e2b3d6c72606
+:ROAM_ALIASES: publishing
 :END:
 #+title: open-research-publishing
 * Publishing

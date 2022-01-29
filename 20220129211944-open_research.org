@@ -1,5 +1,6 @@
 :PROPERTIES:
 :ID:       0911a63f-4b82-4bf1-9235-f1e41e93d210
+:ROAM_ALIASES: "open research"
 :END:
 #+title: open-research
 * Open Research
@@ -10,10 +11,11 @@ to validate and contribute to the research.
 :PROPERTIES:
 :ID:       2a72c799-73c8-4522-a841-1f16ce3edc62
 :END:
-** [[id:af7ec14e-3022-4d4b-b05d-101e937569e2][Frameworks]]
-** [[id:04cf68bf-0db2-403e-b0a6-9c94aa662577][Replication / Peer Review]]
-** [[id:3df9f7ea-12c0-47ab-97a8-e2b3d6c72606][Publishing]]
 ** [[id:4a5588f8-6472-4eda-993c-e026e9ecfa29][Data]]
+** [[id:af7ec14e-3022-4d4b-b05d-101e937569e2][Frameworks]]
+** [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]]
+** [[id:3df9f7ea-12c0-47ab-97a8-e2b3d6c72606][Publishing]]
+** [[id:04cf68bf-0db2-403e-b0a6-9c94aa662577][Replication / Peer Review]]
 * Links
 :PROPERTIES:
 :ID:       a10f58ae-6b69-4fe4-a8bd-5f8a5f94818f
