@@ -1,0 +1,13 @@
+#+FILENAME: README.org
+#+TITLE: README
+#+AUTHOR: Neil Shephard
+#+email: nshephard@gmail.com
+
+* org-roam
+
+My org-roam files.
+
+* Links
+
+* [[https://gitlab.com/nshephard/emacs][emacs]] (includes configuration for all things org)
+* [[https://gitlab.com/nshephard/org][org]] my non-org-roam org files.
