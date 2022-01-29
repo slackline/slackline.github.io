@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       04cf68bf-0db2-403e-b0a6-9c94aa662577
+:END:
+#+title: open-research-peer-review
+* Peer Review
+* Links
+:PROPERTIES:
+:ID:       87fb0829-ccfa-4520-b440-96cfa3c88d81
+:END:
++ [[https://i4replication.org/][Institute for Replication]]
++ [[https://pubpeer.com/][PubPeer - Search publications and join the conversation.]]
++ [[https://www.reprohack.org/paper/][ReproHack Hub]]
++ [[https://replicationnetwork.com/][The Replication Network | Furthering the Practice of Replication in Economics]]

@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       0911a63f-4b82-4bf1-9235-f1e41e93d210
+:END:
+#+title: open-research
+* Open Research
+Open Research seeks to make the practice of scientific method one that has rigour. reliability and reproducibility as
+this supports the interpretation and re-use of research. Further it promotes the dissemination of work to allow others
+to validate and contribute to the research.
+* Topics
+:PROPERTIES:
+:ID:       2a72c799-73c8-4522-a841-1f16ce3edc62
+:END:
+** [[id:af7ec14e-3022-4d4b-b05d-101e937569e2][Frameworks]]
+** [[id:04cf68bf-0db2-403e-b0a6-9c94aa662577][Replication / Peer Review]]
+** [[id:3df9f7ea-12c0-47ab-97a8-e2b3d6c72606][Publishing]]
+** [[id:4a5588f8-6472-4eda-993c-e026e9ecfa29][Data]]
+* Links
+:PROPERTIES:
+:ID:       a10f58ae-6b69-4fe4-a8bd-5f8a5f94818f
+:END:
++ [[https://www.sheffield.ac.uk/openresearch/][Open Research | The University of Sheffield]]
++ [[https://open-research-europe.ec.europa.eu/][Open Research Europe | Open Access Publishing Platform]]

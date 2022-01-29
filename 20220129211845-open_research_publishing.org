@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       3df9f7ea-12c0-47ab-97a8-e2b3d6c72606
+:END:
+#+title: open-research-publishing
+* Publishing
+* Links
+:PROPERTIES:
+:ID:       ff36058f-63c4-471c-9cec-c7235851e36f
+:END:
++ [[https://octopuspublishing.org/][Octopus Publishing]]

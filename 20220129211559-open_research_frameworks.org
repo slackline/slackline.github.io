@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       af7ec14e-3022-4d4b-b05d-101e937569e2
+:END:
+#+title: open-research-frameworks
+
+* Open Research Frameworks
+* Links
+:PROPERTIES:
+:ID:       c37bdddb-fe60-4ae9-a880-97640c7e24e6
+:END:
++ [[https://osf.io/][OpenScienceFramework (OSF)]]
++ [[https://www.cos.io/][Center for Open Science]]
