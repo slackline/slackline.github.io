@@ -3,6 +3,7 @@
 :ROAM_ALIASES: frameworks
 :END:
 #+title: open-research-frameworks
+#+filetags: :open-research::frameworks:
 
 * Open Research Frameworks
 * Links

@@ -3,6 +3,7 @@
 :ROAM_ALIASES: data
 :END:
 #+title: open-research-data
+#+filetags: :open-research::data:
 * Open Data
 * Links
 :PROPERTIES:

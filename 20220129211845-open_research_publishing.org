@@ -3,9 +3,16 @@
 :ROAM_ALIASES: publishing
 :END:
 #+title: open-research-publishing
+#+filetags: :open-research::publishing:
+
 * Publishing
+
+Many journals have adopted open access research policies in recent years, although many push the cost for this onto the
+author, something that then has to be budgeted in the grant application.
+
 * Links
 :PROPERTIES:
 :ID:       ff36058f-63c4-471c-9cec-c7235851e36f
 :END:
 + [[https://octopuspublishing.org/][Octopus Publishing]]
++ [[https://joss.theoj.org/][Journal of Open Source Software]]

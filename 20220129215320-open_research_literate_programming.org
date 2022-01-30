@@ -3,6 +3,8 @@
 :ROAM_ALIASES: programming
 :END:
 #+title: open_research_literate_programming
+#+filetags: :open-research::literate programming:
+
 * Literate Programming
 
 [[https://en.wikipedia.org/wiki/Literate_programming][Literate programming]] was introduced by [[https://en.wikipedia.org/wiki/Donald_Knuth][Donald Knuth]] whereby programs are written in the logical order in which they are

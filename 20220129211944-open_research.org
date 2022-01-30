@@ -3,6 +3,7 @@
 :ROAM_ALIASES: "open research"
 :END:
 #+title: open-research
+#+filetags: :open-research:
 * Open Research
 Open Research seeks to make the practice of scientific method one that has rigour. reliability and reproducibility as
 this supports the interpretation and re-use of research. Further it promotes the dissemination of work to allow others

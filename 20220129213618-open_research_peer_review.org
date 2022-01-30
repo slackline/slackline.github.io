@@ -3,7 +3,15 @@
 :ROAM_ALIASES: "peer review" replication
 :END:
 #+title: open-research-peer-review
+#+filetags: :open-research::peer review:
+
 * Peer Review
+
+Just as traditional journals undertake peer review, the literate programming and code that underpins the analyses of a
+piece of body of research can be peer reviewed. A pre-requisite is having access to the original data and code used to
+prepare and analyse is and a first step would be to ensure that the results published can be faithfully reproduced from
+the data and the code.
+
 * Links
 :PROPERTIES:
 :ID:       87fb0829-ccfa-4520-b440-96cfa3c88d81
