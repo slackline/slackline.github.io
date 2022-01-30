@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ab2f5dfb-e355-4dbb-8ca0-12845b82e38a
-:ROAM_ALIASES: programming
+:ROAM_ALIASES: "Open Research : Literate Programming"
 :END:
 #+title: open_research_literate_programming
 #+filetags: :open-research::literate programming:

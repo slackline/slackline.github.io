@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       af7ec14e-3022-4d4b-b05d-101e937569e2
-:ROAM_ALIASES: frameworks
+:ROAM_ALIASES: "Open Research : Frameworks"
 :END:
 #+title: open-research-frameworks
 #+filetags: :open-research::frameworks:

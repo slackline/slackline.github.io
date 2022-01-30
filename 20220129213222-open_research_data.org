@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       4a5588f8-6472-4eda-993c-e026e9ecfa29
-:ROAM_ALIASES: data
+:ROAM_ALIASES: "Open Research : Data"
 :END:
 #+title: open-research-data
 #+filetags: :open-research::data:

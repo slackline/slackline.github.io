@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0911a63f-4b82-4bf1-9235-f1e41e93d210
-:ROAM_ALIASES: "open research"
+:ROAM_ALIASES: "Open Research Overview"
 :END:
 #+title: open-research
 #+filetags: :open-research:
