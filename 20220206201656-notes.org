@@ -5,4 +5,4 @@
 #+date: [2022-02-06 Sun 20:16]
 
 This page contains notes that are waiting to be bulked out or written up into longer articles. Add notes using the
-~org-capture~ template ~C-c s~. There is a weekly agenda item to write these notes up.
+~org-capture~ template ~C-c c s~. There is a weekly agenda item to write these notes up.
