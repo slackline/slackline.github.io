@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       b2043729-1e38-4b92-95ce-e89c106d7db8
+:END:
+#+title: notes
+#+date: [2022-02-06 Sun 20:16]
+
+This page contains notes that are waiting to be bulked out or written up into longer articles. Add notes using the
+~org-capture~ template ~C-c s~. There is a weekly agenda item to write these notes up.
