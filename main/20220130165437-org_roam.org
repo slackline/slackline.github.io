@@ -5,6 +5,7 @@
 #+title: org-roam
 #+filetags: :org-roam::zettelkasten::org:
 
+
 * Templates
 :PROPERTIES:
 :ID:       904d2d18-37d6-47a1-b1c6-3bdb1cdd817d
@@ -38,23 +39,32 @@ You may want to capture notes daily and process them, this can be done by custom
 ~org-roam-dailies-capture-templates~. The example below saves to the directory defined by
 ~org-roam-dailies-directory~ which I have simply set to be ~org-roam/daily~.
 
-#+BEGIN_SRC: elisp
-(org-roam-dailies-capture-templates
-'(("d" "default" entry
-"* %?"
-:target (file+head "%<%Y-%m-%d%H%M%S>.org"
-"#+title: %{title}\n#+date: %U\n"))))
+#+BEGIN_SRC elisp
+  (org-roam-dailies-capture-templates
+   '(("d" "default" entry
+   "* %?"
+   :target (file+head "%<%Y-%m-%d%H%M%S>.org"
+            "#+title: %{title}\n#+date: %U\n"))))
 #+END_SRC
 
 This adds entries into the Org-roam db which may not be desirable, an alternative is to use a simple Org-capture template
 to capture notes each day. The following template does this, but regardless one needs to be religious about writing up
 notes or deleting them if not needed.
 
-#+BEGIN_SRC: elisp
-(setq org-capture-templates
- ("s" "Org-Roam Notes" entry (file "~/work/org-roam/20220206201656-notes.org")
-  "* %U %?\n" :prepend t))
+#+BEGIN_SRC elisp
+  (setq org-capture-templates
+   ("s" "Org-Roam Notes" entry (file "~/work/org-roam/20220206201656-notes.org")
+    "* %U %?\n" :prepend t))
 #+END_SRC
+
+
+* Keeping up to Date
+:PROPERTIES:
+:ID:       68374984-d0f4-46de-8d3d-004fa9a82886
+:END:
+
+If you decide to delete files you can do so, but the references and links to them will persist in the database. To
+rectify this you can use ~org-roam-db-sync~ to update the database by scanning all files.
 
 * Citations
 :PROPERTIES:
