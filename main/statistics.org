@@ -1,0 +1,73 @@
+:PROPERTIES:
+:ID:       9f72e8bd-2dbe-4a95-9517-c0c94bc995a0
+:END:
+#+title: statistics
+#+date: [2022-02-13 Sun 19:26]
+#+filetags: :statistics:R:python:bayes:glm:regression:classification:
+
+* Statistics
+:PROPERTIES:
+:ID:       995b9b7c-d14e-4ebb-9661-1e49510ac526
+:END:
+Statistics is about quantifying variation and apportioning the causes.
+** Classification
+Often the outcome of interest in an analysis is binary (or dichotomous), whether an event occurred or not or whether
+there is the presence of something such as a viral infection.
+
+** Generalised Linear Models
+:PROPERTIES:
+:ID:       56436b7c-3d29-400c-9158-9da4b075d813
+:END:
+
+** Bayesian Statistics
+:PROPERTIES:
+:ID:       efb673a2-8d38-43d4-8ef9-1c87898dc6e5
+:END:
+* Software
+:PROPERTIES:
+:ID:       526272b2-904f-4656-b24c-fdefc4492fdc
+:END:
+
+There are a number of options available when it comes to writing code to do your statistical analysis and there is no
+single right answer, the choice will often be influenced by more pragmatic factors such as what existing code and
+functionality is already available and what languages those you are working with already use (as they will often be the
+first port of call when you need assistance). Here I give a brief overview of some of the popular languages for
+statistical analyses, but each is worthy of its own topic and you can read more on each.
+
+** R
+:PROPERTIES:
+:ID:       be99717c-a792-4f9a-9b89-a9635ee0a9ee
+:END:
+[[https://www.r-project.org/][R]] is the most popular statistical programming language, although this opinion is likely slightly biased because of my
+background in academia where it prevails (although some still hang on to programmes such as Stata) and I have since
+learnt and like using Python.
+
+When I started using R there was no [[https://www.tidyverse.org/][Tidyverse]] and everything was done in base R. There is a lot to be said for learning
+the basics of R, but there is also a lot of benefits to using the Tidyverse and in particular leveraging pipes which
+make the code considerably for others (including your future self) easier to read.
+
+Read more on R.
+
+** Python
+:PROPERTIES:
+:ID:       5cee9682-e884-43ea-8aba-4473320d8997
+:END:
+[[https://www.python.org/][Python]] is a general purpose interpreted programming language, but it has excellent support for statistical analysis
+courtesy of packages such as [[https://pandas.pydata.org/][pandas]], [[https://scikit-learn.org/stable/index.html][scikit-learn]], [[https://www.statsmodels.org/stable/index.html][statsmodels]], [[https://docs.pymc.io/en/v3/][PyMC3]] and plotting libraries such as [[https://matplotlib.org/][Matplotlib]],
+[[https://holoviews.org/][HoloViews]], [[https://seaborn.pydata.org/][seaborn]] and [[https://plotnine.readthedocs.io/en/stable/index.html][plotnine]] to name but a few. There are often petty arguments about what is the best language
+between Python and R which are a waste of time and effort, but typically those coming from a computer science background
+will be more likely to learn statistical analysis with Python than they are with R.
+
+There is a lot to write about Python, you can start reading more.
+
+** Julia
+:PROPERTIES:
+:ID:       67f03851-d5bf-46ea-a7f5-14dfbaa7c61c
+:END:
+[[https://julialang.org/][Julia]] is the new kid on the block and I've heard good things about it in terms of speed and its support for Bayesian
+analyses.
+
+* Links
+:PROPERTIES:
+:ID:       21f8246c-a9bb-4f4d-9735-f711199e9929
+:END:
