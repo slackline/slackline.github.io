@@ -1,0 +1,119 @@
+:PROPERTIES:
+:ID:       5b5d1562-ecb4-4199-b530-e7993723e112
+:END:
+#+TITLE: Python
+#+DATE: [2022-02-13 Sun 20:49]
+#+FILETAGS: :python:programming:statistics:
+
+[[https://www.python.org][Python]] is a general interpreted programming language.
+
+* Data Structures
+:PROPERTIES:
+:ID:       8da3c4d1-e3ef-40ec-b2bd-1d5685c8fa51
+:END:
+** Strings
+:PROPERTIES:
+:ID:       21faef08-02b9-4a88-9db5-87e40a5d524a
+:END:
+** Numbers
+:PROPERTIES:
+:ID:       868ba2d6-b2ad-4f0f-9ad5-e8eeda4f7c5e
+:END:
+** Lists
+:PROPERTIES:
+:ID:       9eaeb648-e835-4b6b-8540-0ebfec2ba48d
+:END:
+** Dictionaries
+:PROPERTIES:
+:ID:       6bb3fd5e-63e3-43de-aecc-7c840f6d9819
+:END:
+** Tuples
+:PROPERTIES:
+:ID:       508c31b8-cbea-4b69-b134-e9ab50691e8e
+:END:
+** Sets
+:PROPERTIES:
+:ID:       13fb7bc5-0226-4071-b03b-08ca01fba5f0
+:END:
+* I/O
+:PROPERTIES:
+:ID:       c821f0a2-07d8-4713-907d-d4916b998fdc
+:END:
+Reading and writing data and files is fairly key to many things you will wish to do.
+
+* Inherithance
+:PROPERTIES:
+:ID:       a74a48ce-a5a5-4368-8301-f1d965527993
+:END:
+* Logging
+:PROPERTIES:
+:ID:       345cadc2-52a5-4c91-8de1-a45a98aaa5a8
+:END:
+
+* Parallelisation
+:PROPERTIES:
+:ID:       024c41bd-500b-4362-bd4e-fe27f00e6bdb
+:END:
+
+* Testing
+:PROPERTIES:
+:ID:       8f921470-1ed4-4f20-8520-5f8274f0bc3d
+:END:
+
+Testing is something I came across late in my programming adventure, but it is really something that should be learnt or
+taught from the beginning as it has huge benefits as you progress through developing your code. It is so useful there is
+even a popular paradigm of [[https://en.wikipedia.org/wiki/Test-driven_development][Test-driven development]] whereby tests are written /before/ any code is written.
+
+** Pytest
+:PROPERTIES:
+:ID:       2acf0dff-79d6-417e-8f5c-5bd4e386fc22
+:END:
+
+[[https://docs.pytest.org/en/7.0.x/][pytest: helps you write better programs]] as its web-page states helps you write better programs.
+* Data Analysis and Visualisation
+:PROPERTIES:
+:ID:       48ab38bc-4166-4a90-9b1e-214ae6f636ef
+:END:
+** Data Analysis
+:PROPERTIES:
+:ID:       f7c491f4-c557-4a68-916a-4e883a15e8ac
+:END:
+*** Pandas
+:PROPERTIES:
+:ID:       28963f75-6411-4e1b-b4d3-1d7e7510052c
+:END:
+*** Scikit-Learn
+*** Statsmodels
+** Visualisation
+:PROPERTIES:
+:ID:       4dc223eb-96f0-4188-a4a0-c5f86e5d89ba
+:END:
+*** Matplotlib
+:PROPERTIES:
+:ID:       43350ae9-bbef-487f-8661-1336974ffecd
+:END:
+*** Seaborn
+:PROPERTIES:
+:ID:       5f252cfd-fe8e-421f-9a51-958aed5da794
+:END:
+*** Plotnine
+:PROPERTIES:
+:ID:       1608b51b-a98e-4ffe-b157-c0ea959faeae
+:END:
+*** Holoviews
+:PROPERTIES:
+:ID:       a026ee5d-c965-4697-81e5-dc5153f6d8b3
+:END:
+
+
+* Community
+:PROPERTIES:
+:ID:       ba8fd031-e329-4274-aa0c-310854b897f4
+:END:
+
+I'm yet to come across anything like the [[id:e7011db4-16fc-4cde-bb81-4d172cb0db14][R community]]
+
+* Links
+:PROPERTIES:
+:ID:       d9611e43-9422-4cfd-8598-55aae7f7c4a9
+:END:

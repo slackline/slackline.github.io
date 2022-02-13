@@ -1,0 +1,201 @@
+:PROPERTIES:
+:ID:       de9a18a7-b4ef-4a9f-ac99-68f3c76488e5
+:END:
+#+TITLE: R
+#+DATE: [2022-02-13 Sun 19:51]
+#+FILETAGS: :r:programming:statistics:
+
+[[https://www.r-project.org][R]] is a statistical programming language, written and developed initially by
+
+* Tidyverse
+:PROPERTIES:
+:ID:       b4510762-8409-4e5e-8ee8-c27574977772
+:END:
+
+The Tidyverse refers to a group of packages that work in unison to simplify the process of writing readable code. I've
+seen it argued that at times it can be inefficient but these are mostly pedantic and outdated arguments by those who do
+not realise nor understand that shaving a few seconds off of what is often exploratory analyses is insignificant
+compared to the time spent by people reading and understanding code (even their own that they wrote a few months or more
+ago).
+
+There are a lot of packages out there in the Tidyverse, I only cover a few here and nowhere near in as much depth as the
+official documentation for each package. An excellent resource if you wish to learn these tools is the [[https://r4ds.had.co.nz/][R for Data
+Science]] book by Hadley Wickham and Garrett Grolemund which is free to read on-line or can be purchased in physical form.
+
+** Pipes
+:PROPERTIES:
+:ID:       a7d25501-fa12-4f13-bbf0-154d850209eb
+:END:
+Pipes are the backbone of what makes the Tidyverse so great. When I started learning R I really struggled reading nested
+functions but with Pipes the grammar is far more intuitive, reading more like a story.
+
+Compare and contrast base R code...
+
+#+NAME: tidyverse-pipes-base-r
+#+CAPTION: Base R code for XXX
+#BEGIN_SRC R :eval no
+#END_SRC
+
+#+NAME: tidyverse-pipes-tidyverse
+#+CAPTION: Tidyverse R code for XXX
+#BEGIN_SRC R :eval no
+#END_SRC
+
+There are two forms of pipes in R, the original was introduced in [[https://magrittr.tidyverse.org/][Magrittr]] but a native pipe was introduced in base R
+v4.1.0. A couple of posts dissecting and comparing the two can be found at [[https://michaelbarrowman.co.uk/post/the-new-base-pipe/][The New Base Pipe]] which is a good exposition
+of the speed associated with the two options and [[https://ivelasq.rbind.io/blog/understanding-the-r-pipe/][Understanding the native R pipe |> | %>% dreams]], which is a great
+exposition of how the two function "in the wild" and how you might get caught out by problems. I highly recommend
+reading both if you are going to use pipes although I'll try and explain each here.
+*** Base Pipe
+:PROPERTIES:
+:ID:       4d45f3f8-61ef-4375-bb27-351c8419635e
+:END:
+*** Magrittr
+:PROPERTIES:
+:ID:       bd93d909-8cb4-4c27-8db2-66df0ca9567f
+:END:
+[[https://magrittr.tidyverse.org/][Magrittr]]
+** ggplot2
+:PROPERTIES:
+:ID:       85c00373-f18d-4c82-939c-f5a1c2770890
+:END:
+
+
+#+NAME: tidyverse-ggplot2
+#+CAPTION: ggplot2
+#BEGIN_SRC R :eval no
+#END_SRC
+
+** forcats
+:PROPERTIES:
+:ID:       e0e5c206-28fb-4c18-b376-4c04a09222ea
+:END:
+
+#+NAME: tidyverse-forcats
+#+CAPTION: forcats
+#BEGIN_SRC R :eval no
+#END_SRC
+
+** dplyr
+:PROPERTIES:
+:ID:       78504ff1-a3cd-4f64-a515-ffa2ab6ac36c
+:END:
+
+#+NAME: tidyverse-dplyr
+#+CAPTION: dplyr
+#BEGIN_SRC R :eval no
+#END_SRC
+
+** tibble
+:PROPERTIES:
+:ID:       c8693079-9cc9-457a-ab83-16be852963b1
+:END:
+
+#+NAME: tidyverse-tibble
+#+CAPTION: tibble
+#BEGIN_SRC R :eval no
+#END_SRC
+
+** stringr
+:PROPERTIES:
+:ID:       1eeb28cd-e80f-43b5-ab4b-7b063c1df73d
+:END:
+
+#+NAME: tidyverse-stringt
+#+CAPTION: stringr
+#BEGIN_SRC R :eval no
+#END_SRC
+
+** lubridate
+:PROPERTIES:
+:ID:       4cde3c5d-8868-4d4e-ba55-172aa93822f1
+:END:
+
+#+NAME: tidyverse-lubridate
+#+CAPTION: lubridate
+#BEGIN_SRC R :eval no
+#END_SRC
+
+** tidyr
+:PROPERTIES:
+:ID:       14fb5f71-1230-4350-8d26-85f58120545c
+:END:
+
+#+NAME: tidyverse-tidyr
+#+CAPTION: tidyr
+#BEGIN_SRC R :eval no
+#END_SRC
+
+
+* Shiny
+:PROPERTIES:
+:ID:       35414407-8fca-420e-a097-aed71e25bbd4
+:END:
+
+* Community
+:PROPERTIES:
+:TITLE: R community
+:ID:       e7011db4-16fc-4cde-bb81-4d172cb0db14
+:END:
+
+There is a wonderful community around R online. Gone are the days of trepidation about posting on [[https://stat.ethz.ch/mailman/listinfo/r-help][R-help]] only to get
+chided for not being clear enough about the problem. These days there is [[https://stackoverflow.com/questions/tagged/r][StackOverflow]] and [[https://stats.stackexchange.com/][CrossValidated]], [[https://www.tidytuesday.com/][Tidy Tuesday]]
+
+** Seeking Help
+:PROPERTIES:
+:ID:       bbe26fc4-9c87-477b-ab93-eeec4449bc4b
+:END:
+
+It can be daunting asking questions about something you don't feel you understand particularly well. Often a seed of
+doubt about whether it is even a valid question will be there, the fear of "looking stupid". Anyone who fails to
+acknowledge that there are beginners ("newbies") in any area of life is probably not worth worrying too much about, even
+if they are held in high-regard within a community. Listen to the people who are willing to help you as you will learn
+more from them than an aloof answer.
+
+That said there are things that you can do to help those who's assistance you seek answer your question. This is not a
+new topic and there are examples out there such as Eric S. Raymond [[http://www.catb.org/esr/faqs/smart-questions.html][How To Ask Questions The Smart Way]] (on which some of
+this advice is based, although that article is heavily orientated towards Computer Science)
+
++ Start by searching, chances are someone has had the same question before and an answer is out there somewhere. Include
+  links to some of the threads you might have found but explain why they didn't answer your question/problem. This
+  avoids people responding with "/Use the search/" as it demonstrates you have tried doing so already.
++ Be explicit and give a working example that demonstrates the problem you have.
++ Show your code and the result it gives (in text, not screen shots so that others can copy and paste it and modify it)
+  and explain what you were expecting.
++ Take the time to develop a reproducible example (the package [[https://reprex.tidyverse.org/][reprex]] can help here). Often you will find when creating
+  a small self-contained example that you actually understand the problem better and solve it yourself before getting
+  round to posting it on a forum. This is a form of [[https://rubberduckdebugging.com/][Rubber Duck Debugging – Debugging software with a rubber ducky]] and
+  is quite satisfying.
++ Remember what is urgent for you won't be for those you are asking to spend their free time helping you for no benefit
+  to them whatsoever (i.e. its often their free time).
++ In the same vein if you're asked for more information or to provide an example clarifying your problem take the time
+  to do so.
++ Keep conversations open. People are helping for free and the information should remain visible to anyone else who is
+  searching for assistance in the future. Don't message people privately asking for help.
+
+** R User Groups
+:PROPERTIES:
+:ID:       d76ffaee-8e40-4d36-a901-80401a4cc836
+:END:
+
+There are a lot of R user groups and there is no single definitive list, below are links to some.
+
++ [[https://benubah.github.io/r-community-explorer/rugs.html][R Community Explorer]] a Shiny Dashboard which is regularly updated, probably your best first port of call when looking
+  for an R user group.
++ [[https://www.meetup.com/pro/r-user-groups/][R User Groups - Meetup]]
++ [[https://jumpingrivers.github.io/meetingsR/r-user-groups.html][R User Groups]] curated by
+* Development
+:PROPERTIES:
+:ID:       61a19339-e706-4f93-b98c-f5b336d0f280
+:END:
+At some point you may want to delve further into writing more structured code in R and write your own package. This can
+be a good way of organising your work and making it reproducible and available to others, but for this to be effective
+there are some principles which should be followed and thanks to the work of others there are many tools available to
+help with that.
+** testthat
+** roxygen2
+
+* Links
+:PROPERTIES:
+:ID:       5f45f652-354c-4d7f-8167-72f4aaf5aaa1
+:END:

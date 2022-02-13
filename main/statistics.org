@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       9f72e8bd-2dbe-4a95-9517-c0c94bc995a0
 :END:
-#+title: statistics
-#+date: [2022-02-13 Sun 19:26]
-#+filetags: :statistics:R:python:bayes:glm:regression:classification:
+#+TITLE: Statistics
+#+DATE: [2022-02-13 Sun 19:26]
+#+FILETAGS: :statistics:R:python:bayes:glm:regression:classification:
 
 * Statistics
 :PROPERTIES:
@@ -23,6 +23,7 @@ there is the presence of something such as a viral infection.
 :PROPERTIES:
 :ID:       efb673a2-8d38-43d4-8ef9-1c87898dc6e5
 :END:
+
 * Software
 :PROPERTIES:
 :ID:       526272b2-904f-4656-b24c-fdefc4492fdc
@@ -46,7 +47,7 @@ When I started using R there was no [[https://www.tidyverse.org/][Tidyverse]] an
 the basics of R, but there is also a lot of benefits to using the Tidyverse and in particular leveraging pipes which
 make the code considerably for others (including your future self) easier to read.
 
-Read more on R.
+Read more on [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]].
 
 ** Python
 :PROPERTIES:
@@ -58,7 +59,7 @@ courtesy of packages such as [[https://pandas.pydata.org/][pandas]], [[https://s
 between Python and R which are a waste of time and effort, but typically those coming from a computer science background
 will be more likely to learn statistical analysis with Python than they are with R.
 
-There is a lot to write about Python, you can start reading more.
+Read more on [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]].
 
 ** Julia
 :PROPERTIES:
@@ -67,7 +68,19 @@ There is a lot to write about Python, you can start reading more.
 [[https://julialang.org/][Julia]] is the new kid on the block and I've heard good things about it in terms of speed and its support for Bayesian
 analyses.
 
+Read more on Julia.
+* Community
+:PROPERTIES:
+:ID:       486f6dda-fe14-4215-a347-c575b6ee0c57
+:END:
+
+Because statistics is spread across many different disciplines the communities and sites you would use to seek help are
+often subject specific and I can not cover all areas here, only those that I'm familiar with.
+
++ [[https://stats.stackexchange.com/][Cross Validated]] : a [[https://stakexchange.com][StackExchange]] site specific to statistics.
+
 * Links
 :PROPERTIES:
 :ID:       21f8246c-a9bb-4f4d-9735-f711199e9929
 :END:
+** Books

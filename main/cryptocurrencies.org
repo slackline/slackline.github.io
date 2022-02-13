@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       e78362b2-3b99-4810-a9dc-7ffedf436289
+:END:
+#+title: cryptocurrencies
+#+date: [2022-02-13 Sun 11:38]
+#+filetags: :cryptocurrencies::economics:
+
+Notes and (mostly) links on cryptocurrencies and economics.
+
+* Links
++ <2022-02-13 Sun> [[https://metacpc.org/en/crypto-blockchain/][Crypto, the Left, and Techno-Feudalism | Yanis Varoufakis & Evgeny Morozov in dialogue - mέta]]

@@ -2,9 +2,24 @@
 :ID:       136364e7-1a6d-4b28-b284-0e415b860699
 :ROAM-ALIASES: "Org Roam : Overview"
 :END:
-#+title: org-roam
-#+filetags: :org-roam::zettelkasten::org:
+#+TITLE: org-roam
+#+FILETAGS: :orgroam:zettelkasten:org:
 
+* Links
+:PROPERTIES:
+  :ID:       e02fac30-1d8a-47ea-a91f-3c0b993ca2a3
+  :END:
+
+The power of the Zettelkasten approach comes from linking nodes. To achieve this in Org-roam the common keybinding
+for doing so is ~C-c n i~ which is defined by
+
+#BEGIN_SRC lisp :eval no
+#END_SRC
+
+Once defined you can insert a link to an existing node using the key sequence and then typing the name of the node (as
+defined in the ~#TITLE~). If you want to manually insert a link then you can do so using ~C-c l~ (default for
+inserting a link in Org-mode) and entering a node's ID prefixed with ~id:~ (e.g.
+~id:136364e7-1a6d-4b28-b284-0e415b860699~) followed by the text you want to appear.
 
 * Templates
 :PROPERTIES:
@@ -13,11 +28,11 @@
 
 Customising templates for capture Org-roam notes streamlines the process. The default is...
 
-#+BEGIN_SRC elisp
+#+BEGIN_SRC elisp :eval no
   (org-roam-capture-templates
    '(("d" "default" plain
       "%?"
-      :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+      :if-new (file+head "${slug}.org" "#+TITLE: ${title}\n")
       :unnarrowed t)))
 #+END_SRC
 
@@ -25,11 +40,11 @@ Customising templates for capture Org-roam notes streamlines the process. The de
 reference is the [[https://www.orgroam.com/manual.html#The-Templating-System][Templating System]]. The following will add a date/time stamp and prompt for tags to add the header
 of the file...
 
-#+BEGIN_SRC elisp
+#+BEGIN_SRC elisp :eval no
   (org-roam-capture-templates
    '(("d" "default" plain
       "%?"
-      :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+date: %U\n")
+      :if-new (file+head "${slug}.org" "#+TITLE: ${title}\n#+DATE: %U\n")
       :unnarrowed t)))
 #+END_SRC
 
@@ -44,7 +59,7 @@ You may want to capture notes daily and process them, this can be done by custom
    '(("d" "default" entry
    "* %?"
    :target (file+head "%<%Y-%m-%d%H%M%S>.org"
-            "#+title: %{title}\n#+date: %U\n"))))
+            "#+TITLE: %{title}\n#+DATE: %U\n"))))
 #+END_SRC
 
 This adds entries into the Org-roam db which may not be desirable, an alternative is to use a simple Org-capture template

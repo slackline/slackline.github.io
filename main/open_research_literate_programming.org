@@ -2,13 +2,16 @@
 :ID:       ab2f5dfb-e355-4dbb-8ca0-12845b82e38a
 :ROAM_ALIASES: "Open Research : Literate Programming"
 :END:
-#+title: open_research_literate_programming
-#+filetags: :open-research::literate programming:
+#+TITLE: open-research-literate-programming
+#+FILETAGS: :open-research::literate programming:
 
-* Literate Programming
 
 [[https://en.wikipedia.org/wiki/Literate_programming][Literate programming]] was introduced by [[https://en.wikipedia.org/wiki/Donald_Knuth][Donald Knuth]] whereby programs are written in the logical order in which they are
 processed in human language with text inter-weaved with code that is compiled in a self-documenting process.
+
+* Org Babel
+* Quatro
+* RMarkdown
 
 * Links
 :PROPERTIES:
