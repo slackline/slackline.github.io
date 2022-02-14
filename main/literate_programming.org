@@ -2,8 +2,8 @@
 :ID:       ab2f5dfb-e355-4dbb-8ca0-12845b82e38a
 :ROAM_ALIASES: "Open Research : Literate Programming"
 :END:
-#+TITLE: open-research-literate-programming
-#+FILETAGS: :open-research::literate programming:
+#+TITLE: Literate Programming
+#+FILETAGS: :open-research:literate programming:reproducibility:
 
 
 [[https://en.wikipedia.org/wiki/Literate_programming][Literate programming]] was introduced by [[https://en.wikipedia.org/wiki/Donald_Knuth][Donald Knuth]] whereby programs are written in the logical order in which they are

@@ -83,7 +83,13 @@ even a popular paradigm of [[https://en.wikipedia.org/wiki/Test-driven_developme
 :ID:       28963f75-6411-4e1b-b4d3-1d7e7510052c
 :END:
 *** Scikit-Learn
+:PROPERTIES:
+:ID:       604e7d36-7828-4ef9-a8e1-5bf655a080b9
+:END:
 *** Statsmodels
+:PROPERTIES:
+:ID:       439ab90c-aa40-4a4e-9410-404e7829a98c
+:END:
 ** Visualisation
 :PROPERTIES:
 :ID:       4dc223eb-96f0-4188-a4a0-c5f86e5d89ba
