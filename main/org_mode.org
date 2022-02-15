@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       169b9c5f-df34-46ab-b64f-8ee98946ee69
+:END:
+#+TITLE: Orgmode
+#+DATE: [2022-02-15 Tue 09:30]
+#+FILETAGS: :orgmode:emacs:
+
+[[https://orgmode.org][OrgMode]] is an incredibly powerful and well developed system for managing all manner of tasks and activities in plain
+text files. There are diaries and agendas, literate programming, note organisation, and lots more.
+
+* Topics
++ [[id:fc9974d4-2a26-4bf7-9360-c828bfaeed1d][Agenda]]
++ [[id:6e75f9df-df3d-4402-b5ad-ed98d0834e08][Org Babel]]
++ [[id:136364e7-1a6d-4b28-b284-0e415b860699][Org-roam]]
+
+* Links
++ [[https://orgmode.org][OrgMode]]

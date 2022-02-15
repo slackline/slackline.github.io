@@ -9,9 +9,15 @@
 [[https://en.wikipedia.org/wiki/Literate_programming][Literate programming]] was introduced by [[https://en.wikipedia.org/wiki/Donald_Knuth][Donald Knuth]] whereby programs are written in the logical order in which they are
 processed in human language with text inter-weaved with code that is compiled in a self-documenting process.
 
-* Org Babel
-* Quatro
-* RMarkdown
+* Frameworks
+:PROPERTIES:
+:ID:       90eb6015-6a7b-4a52-870d-bd8457da171d
+:END:
+There are many options available, only some of which I cover here.
+
++ [[id:6e75f9df-df3d-4402-b5ad-ed98d0834e08][Org Babel]]
++ Quatro
++ RMarkdown
 
 * Links
 :PROPERTIES:

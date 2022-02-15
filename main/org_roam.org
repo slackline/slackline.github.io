@@ -2,7 +2,7 @@
 :ID:       136364e7-1a6d-4b28-b284-0e415b860699
 :ROAM-ALIASES: "Org Roam : Overview"
 :END:
-#+TITLE: org-roam
+#+TITLE: Org-roam
 #+FILETAGS: :orgroam:zettelkasten:org:
 
 * Links

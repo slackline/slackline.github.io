@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       6e75f9df-df3d-4402-b5ad-ed98d0834e08
+:END:
+#+TITLE: Org Babel
+#+DATE: [2022-02-15 Tue 09:39]
+#+FILETAGS: :orgmode:emacs:literate programming:reproducibility:
+
+[[https://orgmode.org/worg/org-contrib/babel/][Org-Babel]] allows for active code in Org that provides a highly flexible literate programming environment for
+reproducible research.
+
+* Links
+:PROPERTIES:
+:ID:       ff420069-fa49-4440-865b-406290a9c02f
+:END:
+
++ [[https://www.jstatsoft.org/article/view/v046i03][A Multi-Language Computing Environment for Literate Programming and Reproducible Research | Journal of Statistical Software]]
