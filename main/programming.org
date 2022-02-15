@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       ea1499ab-dab2-49b1-8479-cb5a2fbd38bc
+:END:
+#+TITLE: Programming
+#+DATE: [2022-02-15 Tue 21:07]
+#+FILETAGS: %?
+
+Programming can be abstracted from the language in which it is written and the [[id:526272b2-904f-4656-b24c-fdefc4492fdc][Software]] which results.
+
+* Data Structures
+:PROPERTIES:
+:ID:       347000ec-6cec-4187-a998-9a96ad6f3946
+:END:
+
+* Algorithms
+:PROPERTIES:
+:ID:       c7298d65-4e43-447b-b6fd-968b8eef03db
+:END:
+
+* SOLID Principles
+:PROPERTIES:
+:ID:       4d2971f0-9dc1-4a51-b022-2b586c735fd2
+:END:
+
+* Design Patterns
+:PROPERTIES:
+:ID:       28961e24-0099-4440-bae1-87dac7c81ef1
+:END:
+
+* Test Driven Development
+:PROPERTIES:
+:ID:       119d0863-1d66-4fda-ac42-5806243f9c99
+:END:
+
+* Refactoring
+:PROPERTIES:
+:ID:       9b72d256-9d28-444d-86ca-a49197342b03
+:END:
+
+* Links
++ [[https://www.catharsisinsight.com/_files/ugd/fce7f8_f9d2fea4f1b9478baeb7e84ab1b63759.pdf]["It's like Coding in the Dark" : The need for learning cultures within coding teams]]
++ [[https://refactoring.guru/refactoring][Refactoring Guru : Refactoring]]
++ [[https://refactoring.guru/design-patterns][Refactoring Guru : Design Patterns]]

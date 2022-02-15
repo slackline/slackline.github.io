@@ -11,8 +11,6 @@ Many journals have adopted open access research policies in recent years, althou
 author, something that then has to be budgeted in the grant application.
 
 * Links
-:PROPERTIES:
-:ID:       ff36058f-63c4-471c-9cec-c7235851e36f
-:END:
+
 + [[https://octopuspublishing.org/][Octopus Publishing]]
 + [[https://joss.theoj.org/][Journal of Open Source Software]]

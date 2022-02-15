@@ -13,9 +13,7 @@ to validate and contribute to the research.
 * [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]]
 * [[id:3df9f7ea-12c0-47ab-97a8-e2b3d6c72606][Publishing]]
 * [[id:04cf68bf-0db2-403e-b0a6-9c94aa662577][Replication / Peer Review]]
+
 * Links
-:PROPERTIES:
-:ID:       a10f58ae-6b69-4fe4-a8bd-5f8a5f94818f
-:END:
 + [[https://www.sheffield.ac.uk/openresearch/][Open Research | The University of Sheffield]]
 + [[https://open-research-europe.ec.europa.eu/][Open Research Europe | Open Access Publishing Platform]]

@@ -35,10 +35,7 @@ functionality is already available and what languages those you are working with
 first port of call when you need assistance). Here I give a brief overview of some of the popular languages for
 statistical analyses, but each is worthy of its own topic and you can read more on each.
 
-** R
-:PROPERTIES:
-:ID:       be99717c-a792-4f9a-9b89-a9635ee0a9ee
-:END:
+** [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]]
 [[https://www.r-project.org/][R]] is the most popular statistical programming language, although this opinion is likely slightly biased because of my
 background in academia where it prevails (although some still hang on to programmes such as Stata) and I have since
 learnt and like using Python.
@@ -49,10 +46,8 @@ make the code considerably for others (including your future self) easier to rea
 
 Read more on [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]].
 
-** Python
-:PROPERTIES:
-:ID:       5cee9682-e884-43ea-8aba-4473320d8997
-:END:
+** [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]]
+
 [[https://www.python.org/][Python]] is a general purpose interpreted programming language, but it has excellent support for statistical analysis
 courtesy of packages such as [[https://pandas.pydata.org/][pandas]], [[https://scikit-learn.org/stable/index.html][scikit-learn]], [[https://www.statsmodels.org/stable/index.html][statsmodels]], [[https://docs.pymc.io/en/v3/][PyMC3]] and plotting libraries such as [[https://matplotlib.org/][Matplotlib]],
 [[https://holoviews.org/][HoloViews]], [[https://seaborn.pydata.org/][seaborn]] and [[https://plotnine.readthedocs.io/en/stable/index.html][plotnine]] to name but a few. There are often petty arguments about what is the best language

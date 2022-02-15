@@ -9,8 +9,5 @@
 reproducible research.
 
 * Links
-:PROPERTIES:
-:ID:       ff420069-fa49-4440-865b-406290a9c02f
-:END:
 
 + [[https://www.jstatsoft.org/article/view/v046i03][A Multi-Language Computing Environment for Literate Programming and Reproducible Research | Journal of Statistical Software]]

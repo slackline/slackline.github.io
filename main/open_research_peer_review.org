@@ -13,9 +13,7 @@ prepare and analyse is and a first step would be to ensure that the results publ
 the data and the code.
 
 * Links
-:PROPERTIES:
-:ID:       87fb0829-ccfa-4520-b440-96cfa3c88d81
-:END:
+
 + [[https://i4replication.org/][Institute for Replication]]
 + [[https://pubpeer.com/][PubPeer - Search publications and join the conversation.]]
 + [[https://www.reprohack.org/paper/][ReproHack Hub]]

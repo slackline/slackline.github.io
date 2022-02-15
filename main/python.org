@@ -11,6 +11,7 @@
 :PROPERTIES:
 :ID:       8da3c4d1-e3ef-40ec-b2bd-1d5685c8fa51
 :END:
+
 ** Strings
 :PROPERTIES:
 :ID:       21faef08-02b9-4a88-9db5-87e40a5d524a
@@ -35,6 +36,14 @@
 :PROPERTIES:
 :ID:       13fb7bc5-0226-4071-b03b-08ca01fba5f0
 :END:
+** Types
+:PROPERTIES:
+:ID:       0325ed22-c17e-4c30-a8c6-bee38a2a74cc
+:END:
+Python is "dynamically typed" which for some time I thought meant you just type it out, but that is not the case. The
+term means you do not /have/ to declare whether something is a string, integer, float, list and so forth up-front,
+rather the type of an object is determined dynamically. This has some advantages, but it is also worth being explicit
+about the types of data functions are expected to accept in order to avoid problems.
 * I/O
 :PROPERTIES:
 :ID:       c821f0a2-07d8-4713-907d-d4916b998fdc
@@ -83,13 +92,7 @@ even a popular paradigm of [[https://en.wikipedia.org/wiki/Test-driven_developme
 :ID:       28963f75-6411-4e1b-b4d3-1d7e7510052c
 :END:
 *** Scikit-Learn
-:PROPERTIES:
-:ID:       604e7d36-7828-4ef9-a8e1-5bf655a080b9
-:END:
 *** Statsmodels
-:PROPERTIES:
-:ID:       439ab90c-aa40-4a4e-9410-404e7829a98c
-:END:
 ** Visualisation
 :PROPERTIES:
 :ID:       4dc223eb-96f0-4188-a4a0-c5f86e5d89ba

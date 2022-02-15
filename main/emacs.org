@@ -19,3 +19,5 @@ Org-mode is a powerful suite of packages that allow you to organise your work an
 Emacs can be used as a powerful Integrated Development Environment (IDE) for a range of languages thanks to its support
 of the Language Server Protocol (LSP) courtesy of which supports [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]], [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]], Bash and many others.
 + [[id:04868965-8413-4d9d-8ecc-573570fec5b1][LSP Mode]]
+
+* Links
