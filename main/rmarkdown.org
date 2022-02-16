@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       ca27ae38-f187-4a3c-803f-b36ee2cfa374
+:END:
+#+TITLE: RMarkdown
+#+DATE: [2022-02-16 Wed 06:45]
+#+FILETAGS: :R:literate programming:
+
+[[https://rmarkdown.rstudio.com/][R Markdown]] is a superb language for [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]] as it leverages the simplicity of [[id:0c371287-128d-4e46-8128-b2d4f5fc604c][Markdown]] but enriches it with
+embedded code that can display tables, graphs and more as well as supporting in-line code and [[id:e1c2cfef-1b43-47a8-a425-94e6ae58d917][LaTeX]].
+
+* Code Blocks
+
+* LaTeX
+
+* Links
+
++ [[https://rmarkdown.rstudio.com/][R Markdown]]
++ [[https://bookdown.org/yihui/rmarkdown/][R Markdown: The Definitive Guide]]
++ [[https://bookdown.org/yihui/rmarkdown-cookbook/][R Markdown Cookbook]]
++ [[https://bookdown.org/yihui/blogdown/][blogdown: Creating Websites with R Markdown]]
++ [[https://bookdown.org/yihui/bookdown/][bookdown: Authoring Books and Technical Documents with R Markdown]]

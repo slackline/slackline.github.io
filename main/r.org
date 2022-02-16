@@ -33,8 +33,8 @@ Compare and contrast base R code...
 
 #+NAME: tidyverse-pipes-base-r
 #+CAPTION: Base R code for XXX
-#BEGIN_SRC R :eval no
-#END_SRC
+#+BEGIN_SRC R :eval no
+#+END_SRC
 
 #+NAME: tidyverse-pipes-tidyverse
 #+CAPTION: Tidyverse R code for XXX
@@ -63,8 +63,8 @@ reading both if you are going to use pipes although I'll try and explain each he
 
 #+NAME: tidyverse-ggplot2
 #+CAPTION: ggplot2
-#BEGIN_SRC R :eval no
-#END_SRC
+#+BEGIN_SRC R :eval no
+#+END_SRC
 
 ** forcats
 :PROPERTIES:
@@ -93,8 +93,8 @@ reading both if you are going to use pipes although I'll try and explain each he
 
 #+NAME: tidyverse-tibble
 #+CAPTION: tibble
-#BEGIN_SRC R :eval no
-#END_SRC
+#+BEGIN_SRC R :eval no
+#+END_SRC
 
 ** stringr
 :PROPERTIES:
@@ -103,8 +103,8 @@ reading both if you are going to use pipes although I'll try and explain each he
 
 #+NAME: tidyverse-stringt
 #+CAPTION: stringr
-#BEGIN_SRC R :eval no
-#END_SRC
+#+BEGIN_SRC R :eval no
+#+END_SRC
 
 ** lubridate
 :PROPERTIES:
@@ -113,8 +113,8 @@ reading both if you are going to use pipes although I'll try and explain each he
 
 #+NAME: tidyverse-lubridate
 #+CAPTION: lubridate
-#BEGIN_SRC R :eval no
-#END_SRC
+#+BEGIN_SRC R :eval no
+#+END_SRC
 
 ** tidyr
 :PROPERTIES:
@@ -123,8 +123,8 @@ reading both if you are going to use pipes although I'll try and explain each he
 
 #+NAME: tidyverse-tidyr
 #+CAPTION: tidyr
-#BEGIN_SRC R :eval no
-#END_SRC
+#+BEGIN_SRC R :eval no
+#+END_SRC
 
 
 * Shiny
@@ -191,11 +191,26 @@ There are a lot of R user groups and there is no single definitive list, below a
 At some point you may want to delve further into writing more structured code in R and write your own package. This can
 be a good way of organising your work and making it reproducible and available to others, but for this to be effective
 there are some principles which should be followed and thanks to the work of others there are many tools available to
-help with that.
+help with that. An excellent resource is the [[https://r-pkgs.org/][R Packages book by Hadley Wickham and Jenny Bryan]]
+
 ** testthat
+:PROPERTIES:
+:ID:       206d377a-f739-4cb9-afa7-8f3956ca2e38
+:END:
 ** roxygen2
+:PROPERTIES:
+:ID:       02920384-18c3-4e27-8a63-29a693ab16d0
+:END:
 
 * Links
 :PROPERTIES:
 :ID:       5f45f652-354c-4d7f-8167-72f4aaf5aaa1
 :END:
+** Books
++ [[https://r-pkgs.org/][R Packages]]
++ [[https://r4ds.had.co.nz/][R for Data Science]]
++ [[https://rstudio-education.github.io/hopr/][Hands-On Programming with R]]
++ [[https://adv-r.hadley.nz/][Advanced R]]
++ [[https://r-graphics.org/][R Graphics Cookbook, 2nd edition]]
++ [[https://geocompr.robinlovelace.net/][Geocomputation with R]]
++ [[https://www.bayesrulesbook.com/][Bayes Rules! An Introduction to Applied Bayesian Modeling]]

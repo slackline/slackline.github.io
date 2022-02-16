@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       0c371287-128d-4e46-8128-b2d4f5fc604c
+:END:
+#+TITLE: Markdown
+#+DATE: [2022-02-16 Wed 06:36]
+#+FILETAGS: :markup:literate programming:
+
+In a similar vein to [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]], [[https://daringfireball.net/projects/markdown/][Markdown]] is a markup language for formatting plain text. Its simple yet pretty functional
+and forms the basis of several [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]] frameworks such as .
+
+* Formatting
+
+* Tables
+
+#+NAME: markdown-tables
+#+CAPTION: Markdown Tables
+#+BEGIN_SRC R :eval no
+#+END_SRC
+
+* Figures
+
+#+NAME: markdown-figures
+#+CAPTION: Markdown Figures
+#+BEGIN_SRC R :eval no
+#+END_SRC
+
+* Links
+
++ [[https://www.markdownguide.org/][Markdown Guide]]
++ [[https://markdownlivepreview.com/][Markdown Live Preview]]
++ [[https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/][Include diagrams in your Markdown files with Mermaid | The GitHub Blog]]

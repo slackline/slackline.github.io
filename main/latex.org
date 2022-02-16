@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       e1c2cfef-1b43-47a8-a425-94e6ae58d917
+:END:
+#+TITLE: LaTeX
+#+DATE: [2022-02-16 Wed 06:51]
+#+FILETAGS: :latex:literate programming:
