@@ -116,13 +116,8 @@ even a popular paradigm of [[https://en.wikipedia.org/wiki/Test-driven_developme
 
 
 * Community
-:PROPERTIES:
-:ID:       ba8fd031-e329-4274-aa0c-310854b897f4
-:END:
 
 I'm yet to come across anything like the [[id:e7011db4-16fc-4cde-bb81-4d172cb0db14][R community]]
 
 * Links
-:PROPERTIES:
-:ID:       d9611e43-9422-4cfd-8598-55aae7f7c4a9
-:END:
++ [[https://www.python.org][Python]]

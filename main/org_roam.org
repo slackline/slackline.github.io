@@ -5,7 +5,7 @@
 #+TITLE: Org-roam
 #+FILETAGS: :orgroam:zettelkasten:org:
 
-* Links
+* Linking Nodes
 :PROPERTIES:
   :ID:       e02fac30-1d8a-47ea-a91f-3c0b993ca2a3
   :END:
@@ -91,18 +91,12 @@ can interact with your citations. Perhaps the most straight-forward is to use [[
 with [[https://github.com/jkitchin/org-ref][org-ref]] and the ~cite:~ that is built-in to Org-mode >9.5.
 
 * Links
-:PROPERTIES:
-:ID:       68204b4f-3c44-4116-984f-bf9e231df8f3
-:END:
 ** Reference
-:PROPERTIES:
-:ID:       30b1a31b-22d3-477e-afd8-1503f0aff2cd
-:END:
+
 + [[https://www.orgroam.com/manual.html#A-Brief-Introduction-to-the-Zettelkasten-Method][Org-roam User Manual]]
+
 ** Articles
-:PROPERTIES:
-:ID:       dbb1d7a8-a467-4278-8cd9-0445d0f608d4
-:END:
+
 + [[https://lucidmanager.org/productivity/taking-notes-with-emacs-org-mode-and-org-roam/][Taking Notes with Emacs Org Mode and Org-Roam]]
 + [[https://blog.jethro.dev/posts/how_to_take_smart_notes_org/][How To Take Smart Notes With Org-mode · Jethro Kuan]]
 + [[https://jethrokuan.github.io/org-roam-guide/][How I Take Notes with Org-roam · Jethro Kuan]]
@@ -110,7 +104,5 @@ with [[https://github.com/jkitchin/org-ref][org-ref]] and the ~cite:~ that is bu
 + [[https://www.eigenbahn.com/2021/09/15/org-roam][Graphing my External Brain with Org-Roam | Eigenbahn blog]] (includes deleting articles from the database)
 
 ** Zettelkasten
-:PROPERTIES:
-:ID:       28cb0c3b-9734-4e17-b815-ece5b4576274
-:END:
+
 + [[https://zenkit.com/en/blog/a-beginners-guide-to-the-zettelkasten-method/][A Beginner’s Guide to the Zettelkasten Method - Zenkit]]

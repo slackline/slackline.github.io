@@ -127,10 +127,15 @@ reading both if you are going to use pipes although I'll try and explain each he
 #+END_SRC
 
 
+* RMarkdown
+:PROPERTIES:
+:ID:       1db6158d-cb5d-4b73-b926-95e9c09f878b
+:END:
 * Shiny
 :PROPERTIES:
 :ID:       35414407-8fca-420e-a097-aed71e25bbd4
 :END:
+
 
 * Community
 :PROPERTIES:
@@ -203,9 +208,6 @@ help with that. An excellent resource is the [[https://r-pkgs.org/][R Packages b
 :END:
 
 * Links
-:PROPERTIES:
-:ID:       5f45f652-354c-4d7f-8167-72f4aaf5aaa1
-:END:
 ** Books
 + [[https://r-pkgs.org/][R Packages]]
 + [[https://r4ds.had.co.nz/][R for Data Science]]

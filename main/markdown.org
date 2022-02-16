@@ -6,7 +6,7 @@
 #+FILETAGS: :markup:literate programming:
 
 In a similar vein to [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]], [[https://daringfireball.net/projects/markdown/][Markdown]] is a markup language for formatting plain text. Its simple yet pretty functional
-and forms the basis of several [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]] frameworks such as .
+and forms the basis of several [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]] frameworks such as RMarkdown.
 
 * Formatting
 

@@ -5,21 +5,17 @@
 #+DATE: [2022-02-13 Sun 19:26]
 #+FILETAGS: :statistics:R:python:bayes:glm:regression:classification:
 
-* Statistics
-:PROPERTIES:
-:ID:       995b9b7c-d14e-4ebb-9661-1e49510ac526
-:END:
 Statistics is about quantifying variation and apportioning the causes.
-** Classification
+* Classification
 Often the outcome of interest in an analysis is binary (or dichotomous), whether an event occurred or not or whether
 there is the presence of something such as a viral infection.
 
-** Generalised Linear Models
+* Generalised Linear Models
 :PROPERTIES:
 :ID:       56436b7c-3d29-400c-9158-9da4b075d813
 :END:
 
-** Bayesian Statistics
+* Bayesian Statistics
 :PROPERTIES:
 :ID:       efb673a2-8d38-43d4-8ef9-1c87898dc6e5
 :END:
@@ -65,9 +61,6 @@ analyses.
 
 Read more on Julia.
 * Community
-:PROPERTIES:
-:ID:       486f6dda-fe14-4215-a347-c575b6ee0c57
-:END:
 
 Because statistics is spread across many different disciplines the communities and sites you would use to seek help are
 often subject specific and I can not cover all areas here, only those that I'm familiar with.
@@ -75,7 +68,4 @@ often subject specific and I can not cover all areas here, only those that I'm f
 + [[https://stats.stackexchange.com/][Cross Validated]] : a [[https://stakexchange.com][StackExchange]] site specific to statistics.
 
 * Links
-:PROPERTIES:
-:ID:       21f8246c-a9bb-4f4d-9735-f711199e9929
-:END:
 ** Books

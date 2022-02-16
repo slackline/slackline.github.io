@@ -20,13 +20,9 @@ There are many options available, only some of which I cover here.
 + RMarkdown
 
 * Links
-:PROPERTIES:
-:ID:       90892c9b-d38f-4257-8bbf-6687edf06bcd
-:END:
+
 ** Frameworks
-:PROPERTIES:
-:ID:       1f26addc-d7de-4033-93ff-322e46f730af
-:END:
+
 + [[https://orgmode.org/worg/org-contrib/babel/][Org Babel]]
 + [[https://quarto.org/][Quarto]]
 + [[https://rmarkdown.rstudio.com/][R Markdown]]

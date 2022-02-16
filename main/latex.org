@@ -4,3 +4,9 @@
 #+TITLE: LaTeX
 #+DATE: [2022-02-16 Wed 06:51]
 #+FILETAGS: :latex:literate programming:
+
+[[https://www.latex.org][LaTeX]] is an amazing type-setting language built on top of the original TeX langage developed by Donald Knuth. It can be
+used to produce all sorts of documents from scientific reports, beamer slides, curriculum viate, letters, business cards
+and more.
+
+* Links
