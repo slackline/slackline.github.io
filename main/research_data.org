@@ -10,3 +10,6 @@
 * Links
 + [[https://theodi.org][The Open Data Institute]]
 + [[https://www.pachyderm.com/][Pachyderm | The Data Foundation for Machine Learning]]
+
+** Journals
++ [[https://www.nature.com/sdata/][Scientific Data]]

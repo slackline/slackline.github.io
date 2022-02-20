@@ -79,6 +79,14 @@ even a popular paradigm of [[https://en.wikipedia.org/wiki/Test-driven_developme
 :END:
 
 [[https://docs.pytest.org/en/7.0.x/][pytest: helps you write better programs]] as its web-page states helps you write better programs.
+
+Often when writing tests early on you might expect them to fail, you can use the ~@pytest.mark.xfail~ fixture to mark a
+test as "expect to fail" and ~pytest~ will not halt and instead carry on with the rest of the tests.
+
+*** Documentation Tests
+
+I came across an article advocating [[https://simonwillison.net/2018/Jul/28/documentation-unit-tests/][Documentation unit tests]] and showing one approach to testing documentation.
+
 * Data Analysis and Visualisation
 :PROPERTIES:
 :ID:       48ab38bc-4166-4a90-9b1e-214ae6f636ef

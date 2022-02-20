@@ -34,11 +34,13 @@ Compare and contrast base R code...
 #+NAME: tidyverse-pipes-base-r
 #+CAPTION: Base R code for XXX
 #+BEGIN_SRC R :eval no
+  library(tidyverse)
 #+END_SRC
 
 #+NAME: tidyverse-pipes-tidyverse
 #+CAPTION: Tidyverse R code for XXX
 #BEGIN_SRC R :eval no
+  library(tidyverse)
 #END_SRC
 
 There are two forms of pipes in R, the original was introduced in [[https://magrittr.tidyverse.org/][Magrittr]] but a native pipe was introduced in base R
@@ -64,6 +66,8 @@ reading both if you are going to use pipes although I'll try and explain each he
 #+NAME: tidyverse-ggplot2
 #+CAPTION: ggplot2
 #+BEGIN_SRC R :eval no
+  library(tidyverse)
+  library(ggplot2)
 #+END_SRC
 
 ** forcats
@@ -74,6 +78,7 @@ reading both if you are going to use pipes although I'll try and explain each he
 #+NAME: tidyverse-forcats
 #+CAPTION: forcats
 #BEGIN_SRC R :eval no
+  library(forcats)
 #END_SRC
 
 ** dplyr
@@ -84,6 +89,7 @@ reading both if you are going to use pipes although I'll try and explain each he
 #+NAME: tidyverse-dplyr
 #+CAPTION: dplyr
 #BEGIN_SRC R :eval no
+  library(dplyr)
 #END_SRC
 
 ** tibble
@@ -94,6 +100,7 @@ reading both if you are going to use pipes although I'll try and explain each he
 #+NAME: tidyverse-tibble
 #+CAPTION: tibble
 #+BEGIN_SRC R :eval no
+  library(tidyverse)
 #+END_SRC
 
 ** stringr
@@ -104,6 +111,7 @@ reading both if you are going to use pipes although I'll try and explain each he
 #+NAME: tidyverse-stringt
 #+CAPTION: stringr
 #+BEGIN_SRC R :eval no
+  library(stringr)
 #+END_SRC
 
 ** lubridate
@@ -114,6 +122,7 @@ reading both if you are going to use pipes although I'll try and explain each he
 #+NAME: tidyverse-lubridate
 #+CAPTION: lubridate
 #+BEGIN_SRC R :eval no
+  library(lubridate)
 #+END_SRC
 
 ** tidyr
@@ -124,8 +133,25 @@ reading both if you are going to use pipes although I'll try and explain each he
 #+NAME: tidyverse-tidyr
 #+CAPTION: tidyr
 #+BEGIN_SRC R :eval no
+      library(tidyr)
 #+END_SRC
 
+** tidytable
+   :PROPERTIES:
+   :ID:       00e28ab9-3ae3-481b-99ca-7cc143481437
+   :END:
+
+Tidytable provides ~tidyverse~ like syntax built on top of the fast ~data.table package~
+#+NAME: tidyverse-tidyr
+#+CAPTION: tidytable
+#+BEGIN_SRC R :eval no
+      library(tidyr)
+#+END_SRC
+
+* ~data.table~
+  :PROPERTIES:
+  :ID:       af60974e-e132-48d0-a1ad-8137ee50f4b9
+  :END:
 
 * RMarkdown
 :PROPERTIES:

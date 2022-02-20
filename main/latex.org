@@ -7,6 +7,7 @@
 
 [[https://www.latex.org][LaTeX]] is an amazing type-setting language built on top of the original TeX langage developed by Donald Knuth. It can be
 used to produce all sorts of documents from scientific reports, beamer slides, curriculum viate, letters, business cards
-and more.
+and more. Thanks to integration with [[id:1db6158d-cb5d-4b73-b926-95e9c09f878b][RMarkdown]] you can take advantage of the array of markup in LaTeX when writing
+literate documents in [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]].
 
 * Links
