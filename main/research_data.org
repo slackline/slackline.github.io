@@ -1,12 +1,18 @@
 :PROPERTIES:
 :ID:       4c9eab3d-4ae2-4f48-a32c-925929fe60bf
 :END:
-#+TITLE: Research Data
-#+DATE: [2022-02-15 Tue 14:02]
-#+FILETAGS: %?
-#+title: Research Data
+#+title: Open Research Data
+#+date: [2022-02-15 Tue 14:02]
 #+filetags: :open-research::data:
 * Open Data
+
+The FAIR principles are that data is Findable, Accessible Interoperable and Reusable. They are not rigorous in their
+formulation but are rather meant to encourage researchers to think about how their data could be curated in such a
+manner that it is usable by others.
+
+A major feature therefore lies around what metadata is used to describe the data contained within. This should be rich
+in detail so that the content is well described and to make it findable it should include a globally unique and
+persistent identifier, that makes it possible to retrieve the data
 * Links
 + [[https://theodi.org][The Open Data Institute]]
 + [[https://www.pachyderm.com/][Pachyderm | The Data Foundation for Machine Learning]]

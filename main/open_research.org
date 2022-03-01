@@ -8,6 +8,7 @@
 Open Research seeks to make the practice of scientific method one that has rigour. reliability and reproducibility as
 this supports the interpretation and re-use of research. Further it promotes the dissemination of work to allow others
 to validate and contribute to the research.
+
 * [[id:4c9eab3d-4ae2-4f48-a32c-925929fe60bf][Research Data]]
 * [[id:af7ec14e-3022-4d4b-b05d-101e937569e2][Frameworks]]
 * [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]]
@@ -20,3 +21,4 @@ to validate and contribute to the research.
 * Links
 + [[https://www.sheffield.ac.uk/openresearch/][Open Research | The University of Sheffield]]
 + [[https://open-research-europe.ec.europa.eu/][Open Research Europe | Open Access Publishing Platform]]
++ [[https://www.fosteropenscience.eu/][FOSTER Open Science]]

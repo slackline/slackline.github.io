@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       d62fd426-a267-4601-ba41-3340aa789ee3
+:END:
+#+TITLE: Regression
+#+DATE: [2022-03-01 Tue 19:14]
+#+FILETAGS: :statistics:regression:

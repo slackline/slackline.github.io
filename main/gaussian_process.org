@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       7ced9fda-ff1e-4ff0-a80b-2193255e511d
+:END:
+#+TITLE: Gaussian Process
+#+DATE: [2022-03-01 Tue 18:55]
+#+FILETAGS: :statistics:bayesian:
+
+Gaussian processes have multiple applications, they can be used for [[id:d62fd426-a267-4601-ba41-3340aa789ee3][regression]], [[id:efb673a2-8d38-43d4-8ef9-1c87898dc6e5][bayesian]] priors, classification and
+clustering.
+
+* Links
++ [[https://katbailey.github.io/post/gaussian-processes-for-dummies/][Gaussian Processes for Dummies · Katherine Bailey]]
++ [[http://www.infinitecuriosity.org/vizgp/][Interactive visualization of Gaussian processes]]
++ [[https://distill.pub/2019/visual-exploration-gaussian-processes/][A Visual Exploration of Gaussian Processes]]
