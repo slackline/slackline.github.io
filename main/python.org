@@ -63,6 +63,13 @@ Reading and writing data and files is fairly key to many things you will wish to
 :PROPERTIES:
 :ID:       024c41bd-500b-4362-bd4e-fe27f00e6bdb
 :END:
+* Typing and Validation
+:PROPERTIES:
+:ID:       e42e7d26-345d-4bab-ba48-473ac26f5161
+:END:
+Whilst Python is a dynamically typed language, which means that the type of [[id:8da3c4d1-e3ef-40ec-b2bd-1d5685c8fa51][data structure]] is determined on the fly when
+running code, the typing of arguments and their subsequent validation can be invaluable. Basic typing can be achieved by
+using typehints and checked using mypy. Validation can be extended using [[id:ba02ecdf-c35f-4deb-8308-28341922c096][pydantic]]
 
 * Testing
 :PROPERTIES:
@@ -121,7 +128,6 @@ I came across an article advocating [[https://simonwillison.net/2018/Jul/28/docu
 :PROPERTIES:
 :ID:       a026ee5d-c965-4697-81e5-dc5153f6d8b3
 :END:
-
 
 * Community
 

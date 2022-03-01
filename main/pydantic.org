@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       ba02ecdf-c35f-4deb-8308-28341922c096
+:END:
+#+TITLE: Pydantic
+#+DATE: [2022-03-01 Tue 21:48]
+#+FILETAGS: :python:programming:typing:validation:
+
+[[https://pydantic-docs.helpmanual.io/][Pydantic]] is a validation framework that builds on type-hints.
+
+* Links
++ [[https://pydantic-docs.helpmanual.io/][pydantic]]
+** Articles
++ [[https://betterprogramming.pub/the-beginners-guide-to-pydantic-ba33b26cde89][The Beginner’s Guide to Pydantic. A Python package to parse and validate… | by Ng Wai Foong | Better Programming]]
++ [[https://medium.com/swlh/cool-things-you-can-do-with-pydantic-fc1c948fbde0][Cool Things You Can Do With Pydantic | by Gideon Caller ...]]
