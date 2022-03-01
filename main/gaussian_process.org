@@ -10,5 +10,6 @@ clustering.
 
 * Links
 + [[https://katbailey.github.io/post/gaussian-processes-for-dummies/][Gaussian Processes for Dummies · Katherine Bailey]]
++ [[http://www.gaussianprocess.org/gpml/][Gaussian Processes for Machine Learning: Book webpage]]
 + [[http://www.infinitecuriosity.org/vizgp/][Interactive visualization of Gaussian processes]]
 + [[https://distill.pub/2019/visual-exploration-gaussian-processes/][A Visual Exploration of Gaussian Processes]]

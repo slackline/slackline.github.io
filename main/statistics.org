@@ -67,5 +67,9 @@ often subject specific and I can not cover all areas here, only those that I'm f
 
 + [[https://stats.stackexchange.com/][Cross Validated]] : a [[https://stakexchange.com][StackExchange]] site specific to statistics.
 
+* Risk
+[[id:9679a312-f631-45ea-b1f5-0e6411aef086][Risk]] is often an endpoint that people are concerned about when considering statistics, but its hard to understand as it
+pertains to events which have not happened based on observations of those that have.
+
 * Links
 ** Books

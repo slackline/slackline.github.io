@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       9679a312-f631-45ea-b1f5-0e6411aef086
+:END:
+#+TITLE: Risk
+#+DATE: [2022-03-01 Tue 19:56]
+#+FILETAGS: :statistics:risk:uncertainty:
