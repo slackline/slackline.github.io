@@ -5,5 +5,34 @@
 #+DATE: [2022-02-15 Tue 09:35]
 #+FILETAGS: :orgmode:agenda:scheduling:
 
+[[https://orgmode.org/manual/Agenda-Views.html][Org Agenda Views]] are a useful way of managing your calendar, TODO tasks and scheduling of work.
+
+Org Agenda will work with any file defined under ~org-agenda-files~ so to configure multiple files
+
+#+BEGIN_SRC elisp
+  (setq org-agenda-files '("~/org/agenda.org" "~/org/birthdays.org" "~/org/work_tasks.org"))
+#+END_SRC
+
+Each file listed should then contain various items, those that you wish to have appear in your Agenda View should
+contain a ~SCHEDULED: <yyyy-mm-dd [hh:mm]>~ and/or ~DEADLINE: <yyyy-mm-dd [hh:mm]>~ within each section. Then when you
+call the Agenda View (~C-c a a~) the resulting view will show these, right down to the minute if you have included
+~[hh:mm]~ in the date/time.
+
+* Repeating Entries
+If you want a task to [[https://orgmode.org/manual/Repeated-tasks.html][repeat tasks]] then you should include include a repeater in the ~SCHEDULED~ or ~DEADLINE~
+timestamp. There are repeaters for ~y~ ear, ~m~ onth, ~w~ eek and ~h~ our. If you need an earlier warning for a deadline
+then include in it a negative period. For example the following repeats monthly but has a warning five days before hand.
+
+#+begin_src org
+  DEADLINE: <2022-03-07 Mon +1m -5d>
+#+end_src
+
+* Viewing Agenda
+
+To view your Agenda use ~C-c a~ to bring up a menu of options, the weekly agenda is accessed with another ~a~.
+
+You can mark tasks ~DONE~ with ~C-c t~ to toggle their status. Tasks not completed on-time roll over and are added to
+the end of the next day from where they can be marked as ~DONE~.
+
 * Links
 + [[https://irreal.org/blog/?p=5045][Bulk Rescheduling of Org Agenda Items | Irreal]]
