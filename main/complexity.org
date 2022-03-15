@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       506f1b3d-aa3e-4ba8-a0b3-aa6df07bdf14
+:END:
+#+TITLE: Complexity
+#+DATE: [2022-03-15 Tue 20:08]
+#+FILETAGS: :complexity:
+
+I've read a few books on complexity over the years, the most accessible was the popular science book [[https://www.goodreads.com/book/show/3217407-at-home-in-the-universe][At Home in the
+Universe: The Search for the Laws of Self-Organization and Complexity by Stuart A. Kauffman]] (I also have his monograph
+[[https://www.goodreads.com/book/show/783559.The_Origins_of_Order][The Origins of Order: Self-Organization and Selection in Evolution]] but never finished reading it all). Another good book
+which I did finish was [[https://www.goodreads.com/book/show/1361299.Frontiers_Of_Complexity][Frontiers Of Complexity: The Search For Order In A Chaotic World by Peter Coveney and Roger
+Highfield]]
+
+A lot of the concepts about emergent properties of systems which can not be explained nor predicted by a reductionist
+approach to systems are important to the processes of ecology and [[id:fdd7fac9-d26d-4338-b9f0-a3748fda7c54][evolution]].
+
+* Links
+
+** Miscellaneous
++ [[https://fs.blog/why-life-cant-be-simpler/][Why Life Can’t Be Simpler - Farnam Street]]

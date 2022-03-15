@@ -4,3 +4,17 @@
 #+TITLE: Risk
 #+DATE: [2022-03-01 Tue 19:56]
 #+FILETAGS: :statistics:risk:uncertainty:
+
+Understanding what risk actually means is very useful for modern life, particularly as we are constantly bombarded with
+information about how risky action x, y or z is. There are two ways of quantifying risk, absolute and relative, the
+former is the most important and useful, but unfortunately the later is what is most commonly used in the media. When I
+was first taught epidemiology we had a task about understanding the risk associated with living in areas close to large
+amounts of bracken, which *doubles* your risk of colorectal cancer which sounds pretty drastic, unless you are aware
+that the baseline risk of colorectal cancer is very low in the first place (from memory something like 1 in 100,000) and
+so doubling it isn't that risky (2 in 100,000) *TODO* look this up and add citations.
+
+* Links
+
++ [[https://www.significancemagazine.com/711][Significance magazine - What is risk know-how?]]
++ [[https://riskytalk.libsyn.com/][Risky Talk]]
++ [[https://wintoncentre.maths.cam.ac.uk/][Winton Centre for Risk and Evidence Communication (University of Cambridge)]]

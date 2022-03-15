@@ -2,8 +2,11 @@
 :ID:       04cf68bf-0db2-403e-b0a6-9c94aa662577
 :ROAM_ALIASES: "Open Research : Peer Review"
 :END:
-#+title: open-research-peer-review
+#+title: Open Research : Peer Review
 #+filetags: :open-research::peer review:
+
+An extension to reproducibility is peer review of code ensuring that code runs as described in other environments. This
+can be facilitated by using containers such as Docker to provide reproducible environments.
 
 * Peer Review
 
@@ -18,3 +21,4 @@ the data and the code.
 + [[https://pubpeer.com/][PubPeer - Search publications and join the conversation.]]
 + [[https://www.reprohack.org/paper/][ReproHack Hub]]
 + [[https://replicationnetwork.com/][The Replication Network | Furthering the Practice of Replication in Economics]]
++ [[https://www.itcrtraining.org/courses#h.ugabyqq1bigx][ITCR Courses]] includes two on reproducibility in Cancer Informatics

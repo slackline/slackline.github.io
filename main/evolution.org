@@ -1,0 +1,79 @@
+:PROPERTIES:
+:ID:       fdd7fac9-d26d-4338-b9f0-a3748fda7c54
+:END:
+#+TITLE: Evolution
+#+DATE: [2022-03-15 Tue 21:09]
+#+FILETAGS: :evolution:biology:science:genetics:
+
+Evolution was what got me fascinated in science originally. I enjoyed Biology and Chemistry at school and was a fairly
+diligent and productive student to such an extent that I won some book tokens in Chemistry around the age of 15 or 16.
+In the local book shop I came across Richard Dawkins /The Selfish Gene/ which I purchased with the book tokens and set
+about reading. It blew my mind. It was far more interesting than anything I was learning in school and understanding the
+framework of Evolution by [[https://en.wikipedia.org/wiki/Natural_selection][Natural Selection]], first proposed by [[https://en.wikipedia.org/wiki/Charles_Darwin][Charles Darwin]] and [[https://en.wikipedia.org/wiki/Alfred_Russel_Wallace][Alfred Russel Wallace]] in
+[[https://en.wikipedia.org/wiki/On_the_Tendency_of_Species_to_form_Varieties;_and_on_the_Perpetuation_of_Varieties_and_Species_by_Natural_Means_of_Selection][1858]] and subsequently in Darwin's famous book [[https://en.wikipedia.org/wiki/On_the_Origin_of_Species][On the Origin of Species by Means of Natural Selection, or the
+Preservation of Favoured Races in the Struggle for Life]] all just clicked, it made sense and was far simpler than
+invoking the existence of gods of which I had always been sceptical. I particularly found the aspect of genetics
+fascinating and subsequently went on to study a Dual Honors BSc in Zoology and Genetics and an MSc in Genetic Epidemiology
+
+Darwin and Wallace formulated their theory of gradual change in species by differential fecundity in response to local
+environmental changes or conditions in the absence of knowledge about the genetic material through which traits were
+inherited which we now know today to be deoxy-ribonucleic acid (DNA). They were also unaware of the work of the monk
+[[https://en.wikipedia.org/wiki/Gregor_Mendel][Gregor Mendel]] who through a series of elegant experiments with peas showed that certain traits in peas followed discrete
+particular inheritance, although he too was unaware of what the genetic material was.
+
+When talking about evolution these days you can't escape talking about[[id:9aa32f65-144f-4c52-aab6-afebd17c1e5b][genetics]]
+* Neo-Darwinism
+:PROPERTIES:
+:ID:       c3c8f03a-2133-4ff5-a7ed-87fb32b407be
+:END:
+
+The modern synthesis required reconciliation of particulate inheritance, as discovered by Mendel, with the continuous
+traits we see around us, height being the simple classic example. The [[https://en.wikipedia.org/wiki/Neo-Darwinism][neo-darwinist]] reconciliation of Darwin's theory
+of evolution and and Mendels theory of genetics was begun by [[https://en.wikipedia.org/wiki/Ronald_Fisher][R.A. Fisher]] (also a big name in [[id:9f72e8bd-2dbe-4a95-9517-c0c94bc995a0][Statistics]]), [[https://en.wikipedia.org/wiki/Sewall_Wright][Sewall Wright]]
+and [[https://en.wikipedia.org/wiki/J._B._S._Haldane][J. B. S. Haldane]] who founded the field of [[https://en.wikipedia.org/wiki/Population_genetics][population genetics]].
+
+
+** Units of Selection
+
+After Mendel demonstrated particulate inheritance it was suggested that the unit of selection be that of a gene as these
+are inherited as units (unless recombination occurs within a gene), but this isn't the whole picture as collections of
+genes produce organisms on which selection then acts.
+
+* Evolutionary Game Theory
+:PROPERTIES:
+:ID:       99849034-2ca6-4abc-80b4-eeea7dc60bb3
+:END:
+
+[[https://en.wikipedia.org/wiki/John_Maynard_Smith][John Maynard Smith]] along with George Price applied the [[https://en.wikipedia.org/wiki/Game_theory][game theory]] principles to biological/evolution scenarios and
+started the field of [[https://en.wikipedia.org/wiki/Evolutionary_game_theory][evolutionary game theory]].
+
+
+* Punctuated Equilibrium
+
+* Books
+
+There are hundreds of thousands of books out there, here are some I recommend.
+
+** Popular Science
++ [[https://www.goodreads.com/book/show/835509.The_Origin_of_Species][The Origin of Species by Charles Darwin]] anyone interested in evolution should read this book.
++ [[https://www.goodreads.com/book/show/61535.The_Selfish_Gene][The Selfish Gene by Richard Dawkins]] another must read.
++ [[https://www.goodreads.com/book/show/2068.Darwin_s_Dangerous_Idea][Darwin's Dangerous Idea: Evolution and the Meanings of Life by Daniel C. Dennett]] another must read.
++ [[https://www.goodreads.com/book/show/58700545-probably-approximately-correct][Probably Approximately Correct: Nature's Algorithms for Learning and Prospering in a Complex World by Leslie Valiant]] a
+  computer scientists perspective on the algorithms that shape evolution, recommended.
++ [[https://www.goodreads.com/book/show/790421.In_Mendel_s_Footnotes][In Mendel's Footnotes: An Introduction to the Science and Technology of Genes and Genetics from the 19th Century to
+  the 22nd by Colin Tudge]]
++ [[https://www.goodreads.com/book/show/9794248-the-doctrine-of-dna#][The Doctrine of DNA by Richard C. Lewontin]]
++ [[https://www.goodreads.com/book/show/331817.Genes_Peoples_and_Languages][Genes, Peoples, and Languages by Luigi Luca Cavalli-Sforza]]
+
+** Mathematical Genetics of Evolution
++ [[https://www.goodreads.com/book/show/255217.The_Genetical_Theory_of_Natural_Selection][The Genetical Theory of Natural Selection: A Complete Variorum Edition by Ronald A. Fisher]]
++ [[https://www.goodreads.com/book/show/472833.Narrow_Roads_of_Gene_Land][Narrow Roads of Gene Land: The Collected Papers of W. D. Hamilton Volume 1: Evolution of Social Behaviour by
+  W.D. Hamilton]]
++ [[https://www.goodreads.com/book/show/387576.Narrow_Roads_of_Gene_Land][Narrow Roads of Gene Land: The Collected Papers of W. D. Hamilton Volume 2: Evolution of Sex by W.D. Hamilton]]
++ [[https://www.goodreads.com/book/show/387579.Narrow_Roads_of_Gene_Land][Narrow Roads of Gene Land: The Collected Papers of W. D. Hamilton Volume 3: Last Words by W.D. Hamilton]]
++ [[https://www.goodreads.com/book/show/633010.The_Neutral_Theory_of_Molecular_Evolution][The Neutral Theory of Molecular Evolution by Motoo Kimura]]
++ [[https://www.goodreads.com/book/show/6578134-an-introduction-to-population-genetics-theory][An Introduction to Population Genetics Theory by James F. Crow and Motoo Kimura]]
++ [[https://www.goodreads.com/book/show/1075287.Basic_Concepts_In_Population_Quantitative_And_Evolutionary_Genetics][Basic Concepts In Population, Quantitative, And Evolutionary Genetics by James F. Crow]]
++ [[https://www.goodreads.com/book/show/41862.Evolution_and_the_Theory_of_Games][Evolution and the Theory of Games by John Maynard Smith]]
+
+* Links

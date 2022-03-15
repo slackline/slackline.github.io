@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       9aa32f65-144f-4c52-aab6-afebd17c1e5b
+:END:
+#+TITLE: Genetics
+#+DATE: [2022-03-15 Tue 22:07]
+#+FILETAGS :evolution:biology:science:genetics:
