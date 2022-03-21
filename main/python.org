@@ -135,3 +135,7 @@ I'm yet to come across anything like the [[id:e7011db4-16fc-4cde-bb81-4d172cb0db
 
 * Links
 + [[https://www.python.org][Python]]
+
+** Miscellaneous
++ [[https://pythonspeed.com/performance/][Speed up your code]]
++ [[https://pythonspeed.com/articles/json-memory-streaming/][Processing large JSON files in Python without running out of memory]]

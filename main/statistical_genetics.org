@@ -40,3 +40,7 @@ such as Genehunter were superseeded by re-implementations such as [[http://csg.s
 integrates with [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]] for Genome Wide Association Scans is [[https://www.cog-genomics.org/plink2/][PLINK (v1.9)]]
 
 * Links
+
+** Software
+
++ [[https://gaow.github.io/genetic-analysis-software/0/][The Rockefeller List :: Genetic Analysis Software | The Rockefeller List]]

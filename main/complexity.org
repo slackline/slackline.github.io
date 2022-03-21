@@ -17,4 +17,7 @@ approach to systems are important to the processes of ecology and [[id:fdd7fac9-
 * Links
 
 ** Miscellaneous
+:PROPERTIES:
+:ID:       60a64dcf-e863-4963-832b-a7d0844f5615
+:END:
 + [[https://fs.blog/why-life-cant-be-simpler/][Why Life Can’t Be Simpler - Farnam Street]]

@@ -1,0 +1,58 @@
+:PROPERTIES:
+:ID:       38feb454-ee1e-440b-939c-c413009c609d
+:END:
+#+TITLE: Bayesian Statistics
+#+DATE: [2022-02-13 Sun 19:26]
+#+FILETAGS: :statistics:R:python:bayes:glm:regression:classification:causality
+
+Often mistakenly [[id:9f72e8bd-2dbe-4a95-9517-c0c94bc995a0][statisticians]] get pigeon-holed into being either Frequentists or Bayesian.  I'd heard about Bayesian
+Statistics early in my Masters and that there was consternation and a "battle" between Frequentists and Bayesian
+methodologies (or more accurately those who practised either). Ultimately the battle part was nonsense as most people
+want to use the most appropriate tools for the task at hand, although there is a philosophical underpinning to the two
+approaches that can influence how one views the world from a scientific approach and how data/evidence is used to assess
+the world.
+
+Unfortunately I was never taught much about Bayes beyond the basics of conditional probability and it was a way too long
+before I started to rectify the situation.
+
+* Basic Principles
+:PROPERTIES:
+:ID:       b892421c-d17f-4774-a2cf-006f470c1999
+:END:
+
+* Markov Chain Monte Carlo
+:PROPERTIES:
+:ID:       57fc9276-c335-47e4-97fc-a00494ca294c
+:END:
+
+* Learning Resources
+:PROPERTIES:
+:ID:       bdfa2000-29b5-4147-b7f1-0b78f6138064
+:END:
+There are some great resources available that can be used to teach yourself Bayesian principles and methodologies to
+then apply to your own areas of research.
+
+** Statistical Rethinking
+
+The book [[https://xcelab.net/rm/statistical-rethinking/][Statistical Rethinking : A Bayesian Course with Examples in R and Stan by Richard McElreath]] is an excellent
+exposition of Bayesian statistics and causal inference with practical examples in [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]] and [[https://mc-stan.org/][Stan]]. The author has run a
+number of online courses and makes the lectures and materials freely available (see [[https://github.com/rmcelreath/stat_rethinking_2022][Statistical Rethinking course winter
+2022]]). The exercises and material has been translated into a number of different packages (e.g. [[https://bookdown.org/content/4857/][~brms~ in R]]) and
+languages (e.g. PyMC3, Julia and NumPyro) although some translations are more complete than others, for full details see
+links on the [[https://xcelab.net/rm/statistical-rethinking/][books page]].
+
+** Bayes Rules
+
+[[https://www.bayesrulesbook.com/][Bayes Rules! An Introduction to Applied Bayesian Modeling by Alicia Johnson, Miles Ott and Mine Dogucu]] is another
+excellent book which is available on-line for free as well as in print.
+
+* Links
+
+** Books
++ [[https://xcelab.net/rm/statistical-rethinking/][Statistical Rethinking : A Bayesian Course with Examples in R and Stan by Richard McElreath]]
++ [[https://www.bayesrulesbook.com/][Bayes Rules! An Introduction to Applied Bayesian Modeling by Alicia Johnson, Miles Ott and Mine Dogucu]]
+
+** Blog
++ [[https://www.learnbayesstats.com/][The "Learning Bayesian Statistics" podcast]]
+** Miscellaneous
++ [[https://neurallikelihoodfreeinference.github.io/about][Neural Likelihood Free Inference]] - a list of papers using neural networks for Bayesian Likelihood-free Inference.

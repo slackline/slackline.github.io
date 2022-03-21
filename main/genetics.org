@@ -4,3 +4,8 @@
 #+TITLE: Genetics
 #+DATE: [2022-03-15 Tue 22:07]
 #+FILETAGS :evolution:biology:science:genetics:
+
+* Human Genetics
+
+I spent a number of years studying and researching the genes involved in human diseases, often cancers and autoimmune
+diseases. More on this can be found in the section on [[id:3899f7f8-bc4a-4228-b922-5b9bb361106c][Statistical Genetics]]

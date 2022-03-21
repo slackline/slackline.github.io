@@ -16,9 +16,6 @@ there is the presence of something such as a viral infection.
 :END:
 
 * Bayesian Statistics
-:PROPERTIES:
-:ID:       efb673a2-8d38-43d4-8ef9-1c87898dc6e5
-:END:
 
 * Software
 :PROPERTIES:
