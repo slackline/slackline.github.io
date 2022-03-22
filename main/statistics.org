@@ -49,14 +49,7 @@ will be more likely to learn statistical analysis with Python than they are with
 
 Read more on [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]].
 
-** Julia
-:PROPERTIES:
-:ID:       67f03851-d5bf-46ea-a7f5-14dfbaa7c61c
-:END:
-[[https://julialang.org/][Julia]] is the new kid on the block and I've heard good things about it in terms of speed and its support for Bayesian
-analyses.
 
-Read more on Julia.
 * Community
 
 Because statistics is spread across many different disciplines the communities and sites you would use to seek help are

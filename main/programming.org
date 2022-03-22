@@ -27,6 +27,26 @@ Programming can be abstracted from the language in which it is written and the [
 :ID:       28961e24-0099-4440-bae1-87dac7c81ef1
 :END:
 
+* Linting
+:PROPERTIES:
+:ID:       55581960-395e-443c-bd5d-bc00c496b6ae
+:END:
+
+Linting is a process of automatically formatting your code to conform to specific coding styles. What these might be
+depends on the language and the preferred style but there are a number of advantages to using linting on your code.
+
++ Reduce bugs.
++ Improve performance.
++ Mitigate against some security flaws.
++ Improve coding skills.
++ Consistent coding style.
+
+All of which help reduce the [[https://en.wikipedia.org/wiki/Technical_debt][technical debt]] which reduces the mount of maintenance required.
+
+These can be setup on a per language, or even per project basis to work from your IDE or in a given pipeline, but a
+useful approach is to integrate something like [[https://megalinter.github.io/latest/][MegaLinter]] into your pipeline (GitHub Action, CI on GitLab etc.). A
+useful article on doing so is [[https://nicolas.vuillamy.fr/improve-uniformize-and-secure-your-code-base-with-megalinter-62ebab422c1][Limit your technical debt and secure your code base using MegaLinter]].
+
 * Test Driven Development
 :PROPERTIES:
 :ID:       119d0863-1d66-4fda-ac42-5806243f9c99
@@ -36,6 +56,11 @@ Programming can be abstracted from the language in which it is written and the [
 :PROPERTIES:
 :ID:       9b72d256-9d28-444d-86ca-a49197342b03
 :END:
+
+Often code is written in a rush to get something working and best practices aren't always followed, in part because the
+requirements of the software are often hazy at the outset and only crystalise once work has progressed. This means that
+code would often benefit from being refactored. This means re-writing it and simplifying the code, abstracting common
+features out into reusable functions.
 
 * Links
 + [[https://www.catharsisinsight.com/_files/ugd/fce7f8_f9d2fea4f1b9478baeb7e84ab1b63759.pdf]["It's like Coding in the Dark" : The need for learning cultures within coding teams]]

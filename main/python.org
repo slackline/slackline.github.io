@@ -7,6 +7,46 @@
 
 [[https://www.python.org][Python]] is a general interpreted programming language.
 
+* Linting
+
+Linting is the process of following a specific coding style. This has many advantages in that it makes the code easier
+to read and understand. For Python the original guide is [[https://peps.python.org/pep-0008/][PEP 8 – Style Guide for Python Code]] and there are various
+extensions such as [[https://www.python.org/dev/peps/pep-0484/][PEP 484 - Type Hints]] which expect type annotations to be applied. It can be challenging to
+remember all of the rules though and so there are linters which work with your Integrated Development Environment (IDE)
+to refactor your code on the fly applying the rules when saving a file so that code is consistently structured before it
+goes out to peer-review.
+
++ [[https://pylint.org/][Pylint - code analysis for Python]]
++ [[https://flake8.pycqa.org/en/latest/][Flake8: Your Tool For Style Guide Enforcement]]
++ [[http://mypy-lang.org/][mypy - Optional Static Typing for Python]]
++ [[https://black.readthedocs.io/en/stable/][Black - the uncomprimising code formatter]]
+
+
+You can also "AI" to lint your code using services such as [[https://sourcery.ai/][Sourcery]] to "/Automatically Improve Python Code Quality/".
+
+* Testing
+:PROPERTIES:
+:ID:       8f921470-1ed4-4f20-8520-5f8274f0bc3d
+:END:
+
+Testing is something I came across late in my programming adventure, but it is really something that should be learnt or
+taught from the beginning as it has huge benefits as you progress through developing your code. It is so useful there is
+even a popular paradigm of [[https://en.wikipedia.org/wiki/Test-driven_development][Test-driven development]] whereby tests are written /before/ any code is written.
+
+** Pytest
+:PROPERTIES:
+:ID:       2acf0dff-79d6-417e-8f5c-5bd4e386fc22
+:END:
+
+[[https://docs.pytest.org/en/7.0.x/][pytest: helps you write better programs]] as its web-page states helps you write better programs.
+
+Often when writing tests early on you might expect them to fail, you can use the ~@pytest.mark.xfail~ fixture to mark a
+test as "expect to fail" and ~pytest~ will not halt and instead carry on with the rest of the tests.
+
+*** Documentation Tests
+
+I came across an article advocating [[https://simonwillison.net/2018/Jul/28/documentation-unit-tests/][Documentation unit tests]] and showing one approach to testing documentation.
+
 * Data Structures
 :PROPERTIES:
 :ID:       8da3c4d1-e3ef-40ec-b2bd-1d5685c8fa51
@@ -63,6 +103,8 @@ Reading and writing data and files is fairly key to many things you will wish to
 :PROPERTIES:
 :ID:       024c41bd-500b-4362-bd4e-fe27f00e6bdb
 :END:
+
+
 * Typing and Validation
 :PROPERTIES:
 :ID:       e42e7d26-345d-4bab-ba48-473ac26f5161
@@ -70,29 +112,6 @@ Reading and writing data and files is fairly key to many things you will wish to
 Whilst Python is a dynamically typed language, which means that the type of [[id:8da3c4d1-e3ef-40ec-b2bd-1d5685c8fa51][data structure]] is determined on the fly when
 running code, the typing of arguments and their subsequent validation can be invaluable. Basic typing can be achieved by
 using typehints and checked using mypy. Validation can be extended using [[id:ba02ecdf-c35f-4deb-8308-28341922c096][pydantic]]
-
-* Testing
-:PROPERTIES:
-:ID:       8f921470-1ed4-4f20-8520-5f8274f0bc3d
-:END:
-
-Testing is something I came across late in my programming adventure, but it is really something that should be learnt or
-taught from the beginning as it has huge benefits as you progress through developing your code. It is so useful there is
-even a popular paradigm of [[https://en.wikipedia.org/wiki/Test-driven_development][Test-driven development]] whereby tests are written /before/ any code is written.
-
-** Pytest
-:PROPERTIES:
-:ID:       2acf0dff-79d6-417e-8f5c-5bd4e386fc22
-:END:
-
-[[https://docs.pytest.org/en/7.0.x/][pytest: helps you write better programs]] as its web-page states helps you write better programs.
-
-Often when writing tests early on you might expect them to fail, you can use the ~@pytest.mark.xfail~ fixture to mark a
-test as "expect to fail" and ~pytest~ will not halt and instead carry on with the rest of the tests.
-
-*** Documentation Tests
-
-I came across an article advocating [[https://simonwillison.net/2018/Jul/28/documentation-unit-tests/][Documentation unit tests]] and showing one approach to testing documentation.
 
 * Data Analysis and Visualisation
 :PROPERTIES:
@@ -135,6 +154,7 @@ I'm yet to come across anything like the [[id:e7011db4-16fc-4cde-bb81-4d172cb0db
 
 * Links
 + [[https://www.python.org][Python]]
+
 
 ** Miscellaneous
 + [[https://pythonspeed.com/performance/][Speed up your code]]

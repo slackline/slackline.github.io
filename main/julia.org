@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       67f03851-d5bf-46ea-a7f5-14dfbaa7c61c
+:END:
+
+[[https://julialang.org/][Julia]] is the new kid on the block and I've heard good things about it in terms of speed and its support for Bayesian
+analyses.
+
+Read more on Julia in the official [[https://docs.julialang.org/][Documentation]], [[https://julialang.org/learning/][Learn]] and [[https://julialang.org/blog/][Blog]]. There are also various [[https://julialang.org/community/][community resources]] such as a
+[[https://discourse.julialang.org/][Discourse forum]], [[https://julialang.org/slack/][Julia Slack]], [[https://www.youtube.com/user/JuliaLanguage][Julia Language YouTube channel]], [[https://twitter.com/JuliaLanguage][Official Julia Language Twitter account]] and questions on
+StackOverflow can be found with the tag [[https://stackoverflow.com/tags/julia][[julia]]].
+
+* Links
+
+** Packages
+
+There are a lot of packages but some useful tools for browsing them are listed below along with a couple of notable
+packages I've selected.
++ [[https://juliapackages.com/][Julia Packages]]
++ [[https://juliahub.com/ui/Packages][JuliaHub · Packages]]
++ [[https://openmendel.github.io/][OpenMendel Project | OpenMendel]]
