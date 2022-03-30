@@ -5,7 +5,8 @@
 #+DATE: [2022-02-13 Sun 20:49]
 #+FILETAGS: :python:programming:statistics:
 
-[[https://www.python.org][Python]] is a general interpreted programming language.
+[[https://www.python.org][Python]] is a general interpreted programming language. Its been around a while and is very mature, you should by all
+accounts be using Python > 3.6 although you may encounter situations where Python 2.* is still in use.
 
 * Linting
 
@@ -103,59 +104,43 @@ Reading and writing data and files is fairly key to many things you will wish to
 :PROPERTIES:
 :ID:       024c41bd-500b-4362-bd4e-fe27f00e6bdb
 :END:
-
-
 * Typing and Validation
 :PROPERTIES:
 :ID:       e42e7d26-345d-4bab-ba48-473ac26f5161
 :END:
 Whilst Python is a dynamically typed language, which means that the type of [[id:8da3c4d1-e3ef-40ec-b2bd-1d5685c8fa51][data structure]] is determined on the fly when
 running code, the typing of arguments and their subsequent validation can be invaluable. Basic typing can be achieved by
-using typehints and checked using mypy. Validation can be extended using [[id:ba02ecdf-c35f-4deb-8308-28341922c096][pydantic]]
+using typehints and checked using mypy. Validation can be extended using [[id:ba02ecdf-c35f-4deb-8308-28341922c096][pydantic]].
 
-* Data Analysis and Visualisation
+* Packages
 :PROPERTIES:
-:ID:       48ab38bc-4166-4a90-9b1e-214ae6f636ef
+:ID:       b428a706-f9d4-44d9-9525-a28dd01be167
 :END:
-** Data Analysis
-:PROPERTIES:
-:ID:       f7c491f4-c557-4a68-916a-4e883a15e8ac
-:END:
-*** Pandas
-:PROPERTIES:
-:ID:       28963f75-6411-4e1b-b4d3-1d7e7510052c
-:END:
-*** Scikit-Learn
-*** Statsmodels
-** Visualisation
-:PROPERTIES:
-:ID:       4dc223eb-96f0-4188-a4a0-c5f86e5d89ba
-:END:
-*** Matplotlib
-:PROPERTIES:
-:ID:       43350ae9-bbef-487f-8661-1336974ffecd
-:END:
-*** Seaborn
-:PROPERTIES:
-:ID:       5f252cfd-fe8e-421f-9a51-958aed5da794
-:END:
-*** Plotnine
-:PROPERTIES:
-:ID:       1608b51b-a98e-4ffe-b157-c0ea959faeae
-:END:
-*** Holoviews
-:PROPERTIES:
-:ID:       a026ee5d-c965-4697-81e5-dc5153f6d8b3
-:END:
+
+At some point you will want to package your code up and make it available for others to use. There are many approaches
+to this and whilst it requires a little more learning the [[https://setuptools.pypa.io/en/latest/#][setuptools]] package offers many advantages in the long run.
+
+* [[id:ec8e7ee9-0316-4de2-98c1-f775c20b0e35][Data Analysis and Visualisation]]
+
+Python has a very mature and well developed set of packages for statistical computing, data analysis and visualisation.
+
 
 * Community
 
-I'm yet to come across anything like the [[id:e7011db4-16fc-4cde-bb81-4d172cb0db14][R community]]
+I'm yet to come across anything like the [[id:e7011db4-16fc-4cde-bb81-4d172cb0db14][R community]] but many Python users are enthusiastic and happy to share their
+code and wisdom, whether that is via [[https://www.reddit.com/r/python][/r/python]] or other places.
 
 * Links
 + [[https://www.python.org][Python]]
++ [[https://docs.python.org/3/][Official Documentation (3.10.3)]]
++ [[https://www.pythonmorsels.com/terms/][Python Terminology - Python Morsels]]
 
+** Learning Resources
+
++ [[https://www.pythonmorsels.com/][Python Morsels -- Write better Python code]]
++ [[https://realpython.com/][Real Python - Python Tutorials]]
 
 ** Miscellaneous
+
 + [[https://pythonspeed.com/performance/][Speed up your code]]
 + [[https://pythonspeed.com/articles/json-memory-streaming/][Processing large JSON files in Python without running out of memory]]

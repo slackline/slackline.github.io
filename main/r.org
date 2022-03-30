@@ -162,6 +162,11 @@ Tidytable provides ~tidyverse~ like syntax built on top of the fast ~data.table 
 :ID:       35414407-8fca-420e-a097-aed71e25bbd4
 :END:
 
+Shiny provides an interface to creating web-pages from within R. These can take the form of interactive Dashboards where
+users can explore the data.
+
+There are a few ways in which dashboards can be created. The package [[https://rinterface.github.io/bs4Dash/index.html][bs4Dash]] is /A Bootstrap 4 Version of
+shinydashboard/ and as v2.0.0 its as simple as switching from ~library(shinydashboard)~ to ~library(bs4Dash)~
 
 * Community
 :PROPERTIES:
@@ -244,13 +249,22 @@ help with that. An excellent resource is the [[https://r-pkgs.org/][R Packages b
 + [[https://www.bayesrulesbook.com/][Bayes Rules! An Introduction to Applied Bayesian Modeling]]
 + [[https://epirhandbook.com/en/][The Epidemiologist R Handbook : R for applied epidemiology and public health]]
 
-** ROpenSci
-+ [[https://docs.ropensci.org/occCite/][Querying and Managing Large Biodiversity Occurrence Datasets • occCite]]
-+ [[https://docs.ropensci.org/osmextract/][Download and Import Open Street Map Data Extracts • osmextract]]
-+ [[https://docs.ropensci.org/jqr/][Client for jq, a JSON Processor • jqr]]
 
-** Packages
+** HowTos
+
++ [[https://www.tidyverse.org/blog/2019/09/callr-task-q/][Multi Process Task Queue in 100 Lines of R Code]]
+
+** Packages and Documentation
+
++ [[https://r-universe.dev/search/][ROpenSci : R-universe]]
++ [[https://www.rdocumentation.org/][RDocumentation]]
++ [[https://rdrr.io/][R Package Documentation]]
 
 *** Genetics
 
 + [[https://www.slendr.net/][A Simulation Framework for Spatiotemporal Population Genetics • slendr]]
+
+** ROpenSci
++ [[https://docs.ropensci.org/occCite/][Querying and Managing Large Biodiversity Occurrence Datasets • occCite]]
++ [[https://docs.ropensci.org/osmextract/][Download and Import Open Street Map Data Extracts • osmextract]]
++ [[https://docs.ropensci.org/jqr/][Client for jq, a JSON Processor • jqr]]
