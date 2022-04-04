@@ -27,25 +27,9 @@ Programming can be abstracted from the language in which it is written and the [
 :ID:       28961e24-0099-4440-bae1-87dac7c81ef1
 :END:
 
-* Linting
-:PROPERTIES:
-:ID:       55581960-395e-443c-bd5d-bc00c496b6ae
-:END:
+* [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linting]]
 
-Linting is a process of automatically formatting your code to conform to specific coding styles. What these might be
-depends on the language and the preferred style but there are a number of advantages to using linting on your code.
-
-+ Reduce bugs.
-+ Improve performance.
-+ Mitigate against some security flaws.
-+ Improve coding skills.
-+ Consistent coding style.
-
-All of which help reduce the [[https://en.wikipedia.org/wiki/Technical_debt][technical debt]] which reduces the mount of maintenance required.
-
-These can be setup on a per language, or even per project basis to work from your IDE or in a given pipeline, but a
-useful approach is to integrate something like [[https://megalinter.github.io/latest/][MegaLinter]] into your pipeline (GitHub Action, CI on GitLab etc.). A
-useful article on doing so is [[https://nicolas.vuillamy.fr/improve-uniformize-and-secure-your-code-base-with-megalinter-62ebab422c1][Limit your technical debt and secure your code base using MegaLinter]].
+Linting is a process of static code analysis that aims to improve the quality of your code. Read more about [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linting]].
 
 * Test Driven Development
 :PROPERTIES:
