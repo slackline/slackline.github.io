@@ -1,0 +1,122 @@
+:PROPERTIES:
+:ID:       55581960-395e-443c-bd5d-bc00c496b6ae
+:END:
+#+TITLE: Linting
+#+DATE: [2022-04-02 Sat 08:32]
+#+FILETAGS: %?
+
+* What is all the fluff about?
+
+If you've been dabbling in programming for a while you may have heard of "linting your code" which is a process of
+static code analysis to remove the "fluff" from your code. Just as physically linting your clothes removes unwanted
+fluff, linting your code can help...
+
++ Reduce bugs.
++ Improve performance.
++ Mitigate against some security flaws.
++ Improve coding skills.
++ Consistent coding style.
+
+All of which help reduce the [[https://en.wikipedia.org/wiki/Technical_debt][technical debt]] which reduces the mount of maintenance required. The main focus of this
+article will be the use of linting to ensure consistent coding style.
+
+* Style Matters
+
+What has style got to do with writing code? Trends come and go in fashion but when coding styles are meant to be
+relatively static and not change each year, although they can and do evolve over time. This is because using a
+consistent and widely used style when writing code makes it easier for other people, and often most likely that will be
+your future self, to read and understand the code you have written. If code is easier to understand then its easier to
+modify, update, improve and generally contribute to.
+
+A useful insight from [[https://en.wikipedia.org/wiki/Guido_van_Rossum][Gudio van Rossum]], the creator of [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] is that "/[[https://peps.python.org/pep-0008/#a-foolish-consistency-is-the-hobgoblin-of-little-minds][code is read much more often than it is
+written]]/" and so it should be easy to understand and not obfuscate its intent. Python is quite good for this as it is an
+expressive language which encourages coders to be explicit when naming variables, functions, classes, objects and so
+forth so that their purpose and intention is clear. However, going a step further and using consistent styles helps
+enhance this.
+
+* Linting in [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]]
+
+Stylistically the most widely used Python style is defined in the long established [[https://pep8.org/][PEP 8: The Style Guide for Python
+Code]]. There are a number of options for linting your Python code.
+
++ [[https://flake8.pycqa.org/en/latest/][Flake8]] - Your Tool For Style Guide Enforcement
++ [[https://pycodestyle.pycqa.org/en/latest/intro.html][pycodestyle]]
++ [[https://prospector.landscape.io/en/master/index.html][Prospector]] - Python Static Analysis
++ [[http://mypy-lang.org/][mypy]] - Optional Static Typing for Python
++ [[https://github.com/psf/black][Black]] - The Uncompromising Code Formatter
+
+Here is a simple example of some code (download the file here)
+  #+BEGIN_SRC python :eval no
+    import numpy as np
+    from pathlib import Path
+    from typing import Union
+    import csv
+
+    def save_Random_Numbers(size: int, seed: int = 87653546, save_as: Union[str, Path] = "./random_numbers.txt") -> None:
+        """Save a list of random numbers (floats) to the given file.
+
+        The stated number of random numbers will be saved to the given target file, if the directory structure
+        doesn't exist it will be created. Output will by default be over-written.
+        Parameters
+        ----------
+        size : int
+            Number of random numbers to generate
+        seed: int
+            Seed for random number generation
+        save_as : Union[str, Path]
+            Directory/file to save numbers to.
+
+
+        """
+        rng = np.random.default_rng()
+        random_numbers = rng.random(size)
+
+        with Path(save_as).open('w') as out:
+            writer = csv.write(out)
+            writer.writerows(random_numbers)
+
+  #+END_SRC
+
+
+* Linting in [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]]
+
+* IDE Integration
+
+When programming it is really useful to use an [[https://en.wikipedia.org/wiki/Integrated_development_environment][Integrated Development Environment (IDE)]] as most allow the integration of
+linting your code automatically.
+
+** Emacs
+
+** VSCode
+
+VSCode supports linting in most languages, both [[https://docs.microsoft.com/en-us/visualstudio/rtvs/linting-r-code?view=vs-2017][R]] and [[https://code.visualstudio.com/docs/python/linting][Python]] are supported.
+
+** PyCharm
+
+* Git Integration
+
+If you are using an IDE then if configured correctly your code should be linted automatically for you, but an additional
+step that can capture anything that hasn't been correctly formatted is to use a [[https://githooks.com/][git hook]] to run linting on your code
+prior to making commits.
+
+
+* Continuous Integration
+
+Including a linting stage in your Continuous Integration (CI) pipeline pays dividends as we all make mistakes and sometimes
+
+* Megalinter
+
+Whilst you can set linting up  on a per language, or even per project basis to work from your IDE or in a given pipeline, but a
+useful approach is to integrate something like [[https://megalinter.github.io/latest/][MegaLinter]] into your pipeline (GitHub Action, CI on GitLab etc.). A
+useful article on doing so is [[https://nicolas.vuillamy.fr/improve-uniformize-and-secure-your-code-base-with-megalinter-62ebab422c1][Limit your technical debt and secure your code base using MegaLinter]].
+
+* Links
+
++ [[https://githooks.com/][Git Hooks | Learn how to use pre-commit hooks, post-commit hooks, post-receive hooks, and more. | Matthew Hudson]]
+
+** Python
+
++ [[https://flake8.pycqa.org/en/latest/][Flake8]] - Your Tool For Style Guide Enforcement
++ [[https://github.com/psf/black][Black]] - The Uncompromising Code Formatter
++ [[https://code.visualstudio.com/docs/python/linting][Linting Python in Visual Studio Code]]
+** R
