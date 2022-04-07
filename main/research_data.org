@@ -15,7 +15,9 @@ in detail so that the content is well described and to make it findable it shoul
 persistent identifier, that makes it possible to retrieve the data
 * Links
 + [[https://theodi.org][The Open Data Institute]]
++ [[http://opendsi.cc][Open Data Science Initiative]]
 + [[https://www.pachyderm.com/][Pachyderm | The Data Foundation for Machine Learning]]
++ [[https://dataverse.scholarsportal.info/][Scholars Portal Dataverse]]
 
 ** Journals
 + [[https://www.nature.com/sdata/][Scientific Data]]

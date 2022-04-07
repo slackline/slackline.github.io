@@ -9,7 +9,7 @@ Open Research seeks to make the practice of scientific method one that has rigou
 this supports the interpretation and re-use of research. Further it promotes the dissemination of work to allow others
 to validate and contribute to the research.
 
-* [[id:4c9eab3d-4ae2-4f48-a32c-925929fe60bf][Research Data]]
+* [[id:4c9eab3d-4ae2-4f48-a32c-925929fe60bf][Open Research Data]]
 * [[id:af7ec14e-3022-4d4b-b05d-101e937569e2][Frameworks]]
 * [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]]
 * [[id:3df9f7ea-12c0-47ab-97a8-e2b3d6c72606][Publishing]]

@@ -119,4 +119,5 @@ useful article on doing so is [[https://nicolas.vuillamy.fr/improve-uniformize-a
 + [[https://flake8.pycqa.org/en/latest/][Flake8]] - Your Tool For Style Guide Enforcement
 + [[https://github.com/psf/black][Black]] - The Uncompromising Code Formatter
 + [[https://code.visualstudio.com/docs/python/linting][Linting Python in Visual Studio Code]]
++ [[https://pylint.pycqa.org/en/latest/messages/messages_list.html][Pylint = Overview of all Pylint messages]]
 ** R

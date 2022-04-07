@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       ec8e7ee9-0316-4de2-98c1-f775c20b0e35
+:END:
+#+TITLE: Python Data Analysis and Visualisation
+#+DATE: [2022-03-23 Wed 11:44]
+#+FILETAGS: :python:programming:statistics:
+
+* Data Analysis
+:PROPERTIES:
+:ID:       f7c491f4-c557-4a68-916a-4e883a15e8ac
+:END:
+** NumPy
+:PROPERTIES:
+:ID:       17a009b4-fb1a-4565-9aec-4e73b3797249
+:END:
+** SciPy
+:PROPERTIES:
+:ID:       56d20ad7-c064-49bd-8ed7-eea6944d84c1
+:END:
+** Pandas
+:PROPERTIES:
+:ID:       28963f75-6411-4e1b-b4d3-1d7e7510052c
+:END:
+** Scikit-Learn
+:PROPERTIES:
+:ID:       fbd601a5-ef1a-415d-a701-ba03fb5218d6
+:END:
+** Statsmodels
+:PROPERTIES:
+:ID:       880b87a3-9bfd-4bc7-9e67-a5ec5f5cde3a
+:END:
+* Visualisation
+:PROPERTIES:
+:ID:       4dc223eb-96f0-4188-a4a0-c5f86e5d89ba
+:END:
+*** Matplotlib
+:PROPERTIES:
+:ID:       43350ae9-bbef-487f-8661-1336974ffecd
+:END:
+*** Seaborn
+:PROPERTIES:
+:ID:       5f252cfd-fe8e-421f-9a51-958aed5da794
+:END:
+*** Plotnine
+:PROPERTIES:
+:ID:       1608b51b-a98e-4ffe-b157-c0ea959faeae
+:END:
+*** Holoviews
+:PROPERTIES:
+:ID:       a026ee5d-c965-4697-81e5-dc5153f6d8b3
+:END:
