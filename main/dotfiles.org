@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       31304184-2fad-4cc5-824b-3ab4b9d2e126
+:END:
+#+TITLE: Dotfiles
+#+DATE: [2022-04-18 Mon 21:13]
+#+FILETAGS: :dotfiles:unix:config
+
+When you spend time working on UNIX like operating systems like GNU/Linux (and including OSX) you end up with a lot of
+configuration files that are customised to your preferences and settings. Keeping these in order and backed up is a
+sensible approach to avoid a lot of pain should they be lost. It also has the advantage that when you get a new computer
+or access to a new system it is easy to deploy your customised settings in the new environment.
+
+This is where the concept of "dotfiles" comes in.
+
+* Setting up a repository
+
+The first step is to create a directory where all your "dotfiles" will be kept and version controlled. Its a pain to
+place your ~${HOME}~ directory under version control because you will likely have innumerable other directories that are
+git repositories and whilst this can be handled via [[https://git-scm.com/book/en/v2/Git-Tools-Submodules][Submodules]] its a bit of a faff. Instead its advisable to keep things
+simple and have a ~\\~/dotfiles~ repository that you keep under Git version control.
+
+#+BEGIN_SRC bash eval: no
+  mkdir ~/dotfiles
+  cd ~/dotfiles
+  git init
+#+END_SRC
+
+Make a repository for yo
+* Automating deployment
+#+TODO: Complete this section.
+
+* Links

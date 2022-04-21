@@ -17,42 +17,49 @@ fluff, linting your code can help...
 + Improve coding skills.
 + Consistent coding style.
 
-All of which help reduce the [[https://en.wikipedia.org/wiki/Technical_debt][technical debt]] which reduces the mount of maintenance required. The main focus of this
-article will be the use of linting to ensure consistent coding style.
+All of which help reduce the [[https://en.wikipedia.org/wiki/Technical_debt][technical debt]] which impacts the amount of time required for maintenance and further
+development of a code base. The main focus of this article is the use of linting to ensure consistent coding style, it
+focuses on Python under Linux but similar tools are available for other operating systems and languages.
 
 * Style Matters
 
-What has style got to do with writing code? Trends come and go in fashion but when coding styles are meant to be
-relatively static and not change each year, although they can and do evolve over time. This is because using a
-consistent and widely used style when writing code makes it easier for other people, and often most likely that will be
-your future self, to read and understand the code you have written. If code is easier to understand then its easier to
-modify, update, improve and generally contribute to.
+What has style got to do with writing code? Trends come and go in fashion but coding styles are meant to be relatively
+static and not change with the season, although they can and do evolve over time. This is because using a consistent and
+widely used style when writing code makes it easier for other people, often your future self, to read and understand the
+code you have written. If code is easier to understand then its easier to modify, update, extend, improve and in general
+maintain.
+
 
 A useful insight from [[https://en.wikipedia.org/wiki/Guido_van_Rossum][Gudio van Rossum]], the creator of [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] is that "/[[https://peps.python.org/pep-0008/#a-foolish-consistency-is-the-hobgoblin-of-little-minds][code is read much more often than it is
 written]]/" and so it should be easy to understand and not obfuscate its intent. Python is quite good for this as it is an
 expressive language which encourages coders to be explicit when naming variables, functions, classes, objects and so
-forth so that their purpose and intention is clear. However, going a step further and using consistent styles helps
-enhance this.
+forth so that their purpose and intention is clear, although the same is true of most languages. However, going a step
+further and using consistent styles to format and layout code helps enhance this.
 
 * Linting in [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]]
 
-Stylistically the most widely used Python style is defined in the long established [[https://pep8.org/][PEP 8: The Style Guide for Python
-Code]]. There are a number of options for linting your Python code.
+The most widely used Python style is defined in the long established [[https://pep8.org/][PEP 8: The Style Guide for Python Code]]. There are a
+number of tools available that will lint your Python code for you and most integrate with your IDE, whether that is
+[[https://code.visualstudio.com/][Visual Studio Code]], [[https://www.jetbrains.com/pycharm/][PyCharm]] or [[https://www.gnu.org/software/emacs/][Emacs]]. Some of the formatting and linting tools available for Python are...
 
+
++ [[https://pylint.pycqa.org/en/latest/index.html][Pylint]] - checks for errors in Python code, tries to enforce a coding standard and looks for code smells.
++ [[https://pypi.org/project/yapf/][YAPF]] - takes the code and reformats it to the best formatting that conforms to the style guide
++ [[https://github.com/psf/black][Black]] - The Uncompromising Code Formatter
 + [[https://flake8.pycqa.org/en/latest/][Flake8]] - Your Tool For Style Guide Enforcement
-+ [[https://pycodestyle.pycqa.org/en/latest/intro.html][pycodestyle]]
++ [[https://pycodestyle.pycqa.org/en/latest/intro.html][pycodestyle]] - check your Python code against some of the style conventions in PEP 8.
 + [[https://prospector.landscape.io/en/master/index.html][Prospector]] - Python Static Analysis
 + [[http://mypy-lang.org/][mypy]] - Optional Static Typing for Python
-+ [[https://github.com/psf/black][Black]] - The Uncompromising Code Formatter
 
-Here is a simple example of some code (download the file here)
+  Here is a simple example of some code (download the file from [[file:save_random_numbers.py][here]]).
+
   #+BEGIN_SRC python :eval no
     import numpy as np
     from pathlib import Path
     from typing import Union
     import csv
 
-    def save_Random_Numbers(size: int, seed: int = 87653546, save_as: Union[str, Path] = "./random_numbers.txt") -> None:
+    def save_random_numbers(size: int, seed: int = 87653546, save_as: Union[str, Path] = "./random_numbers.txt") -> None:
         """Save a list of random numbers (floats) to the given file.
 
         The stated number of random numbers will be saved to the given target file, if the directory structure
@@ -65,8 +72,6 @@ Here is a simple example of some code (download the file here)
             Seed for random number generation
         save_as : Union[str, Path]
             Directory/file to save numbers to.
-
-
         """
         rng = np.random.default_rng()
         random_numbers = rng.random(size)
@@ -74,45 +79,291 @@ Here is a simple example of some code (download the file here)
         with Path(save_as).open('w') as out:
             writer = csv.write(out)
             writer.writerows(random_numbers)
-
   #+END_SRC
 
+** Linting with PyLint
 
-* Linting in [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]]
+   We will lint this file using [[https://pylint.pycqa.org/en/latest/index.html][Pylint]] and find out what errors there are and how its style can be improved to confirm
+   with PEP8 guidelines.
 
-* IDE Integration
+
+   First you need to install ~pylint~, typically in your virtual environment.
+
+   #+BEGIN_SRC bash :eval no
+     pip install pylint
+   #+END_SRC
+
+   Pylint can be configured using a ~\\.pylintrc~ file and over time this will grow as you customise your configuration but
+   for now we will make one simple change from the default which is to increase the accepted line length. Create the file
+   and save it with the following content.
+
+   #+BEGIN_SRC bash
+     [FORMAT]
+     # Maximum number of characters on a single line.
+     max-line-length=120
+   #+END_SRC
+
+   Open a terminal and navigate to the location you saved the example file ~save_random_numer.py~ activate the virtual
+   environment you installed pylint under if its not already being used and then type the following to run Pylint
+   against your code...
+
+   #+BEGIN_SRC bash :eval no
+     pylint save_random_numbers.py
+   #+END_SRC
+
+
+   You should see output similar to the following...
+
+   #+BEGIN_SRC bash :eval no
+     (python3_9) ❱ pylint save_random_numbers.py
+     ************* Module save_random_numbers
+     save_random_numbers.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+     save_random_numbers.py:5:66: E0602: Undefined variable 'Union' (undefined-variable)
+     save_random_numbers.py:5:35: W0613: Unused argument 'seed' (unused-argument)
+     save_random_numbers.py:2:0: C0411: standard import "from pathlib import Path" should be placed before "import numpy as np" (wrong-import-order)
+     save_random_numbers.py:3:0: C0411: standard import "import csv" should be placed before "import numpy as np" (wrong-import-order)
+
+     -------------------------------------------------------------------
+     Your code has been rated at 0.00/10
+   #+END_SRC
+
+
+   The output tells us the module that has been inspected on the first line and at the start of each subsequent line this
+   is repeated, followed by the line the problem has been encountered, then the column followed by a somewhat cryptic error code
+   then a message about the problem before finishing with a more descriptive generic message about the error code. At
+   the moment we are only looking at one file, but when using PyLint against larger code bases this information is
+   vital. At the end PyLint rates your code, ideally you should aim to get a score of ~10.0/10~.
+
+   These are quite informative, taking each in turn we can work through resolving them.
+
+*** ~Missing module docstring (missing-module-docstring)~
+
+   Each Python module should have a docstring as the very first line that describes what it does. In this example it
+   might be considered superflous but its good practice to get in the habit of writing these as it comes in useful when
+   documentation is automatically generated from the docstrings in the code. To fix it we can add a short docstring at
+   the top.
+
+   #+BEGIN_SRC python :eval no
+     """Module for saving randomly generated numbers."""
+     import numpy as np
+     from pathlib import Path
+   #+END_SRC
+
+*** ~Undefined variable 'Union' (undefined-variable)~
+
+    This error arises because the [[https://www.pythontutorial.net/python-basics/python-type-hints/][type hint]] uses ~Union~ but it hasn't been imported. It's from the [[https://www.pythontutorial.net/python-basics/python-type-hints/][typing]] module so we
+    can import it.
+
+    #+BEGIN_SRC python :eval no
+      """Module for saving randomly generated numbers."""
+      import numpy as np
+      from pathlib import Path
+      from typing import Union
+    #+END_SRC
+
+
+*** ~Unused argument 'seed' (unused-argument)~
+
+    This is very useful to be informed about, the ~seed~ argument, according to the docstring, is meant to be used in the
+    call to the random number generator and ensures we will get the same set of random numbers generated each time we
+    call the function, however, as Pylint has informed us we haven't actually used it within the ~save_random_number()~
+    function. We can correct that by adding it when we instantiate the random number generator.
+
+   #+BEGIN_SRC python :eval no
+        rng = np.random.default_rng(seed=seed)
+   #+END_SRC
+
+*** ~standard import "from pathlib import Path" should be placed before "import numpy as np" (wrong-import-order)~
+
+    This message, like the one that follows it, is telling us that the order in which we have imported modules is
+    incorrect, because the PEP8 guide recommends that core modules, which both ~csv~ and ~pathlib~ are, should be
+    imported before other modules. We can correct this by changing the order.
+
+    #+BEGIN_SRC python :eval no
+      """Module for saving randomly generated numbers."""
+      import csv
+      from pathlib import Path
+      from typing import Union
+
+      import numpy as np
+    #+END_SRC
+
+    Once corrected your file should look like this
+
+    #+BEGIN_SRC python :eval no
+      """Module for saving randomly generated numbers."""
+      import csv
+      from pathlib import Path
+      from typing import Union
+      import numpy as np
+
+      def save_random_numbers(size: int, seed: int = 87653546, save_as: Union[str, Path] = "./random_numbers.txt") -> None:
+          """Save a list of random numbers (floats) to the given file.
+
+          The stated number of random numbers will be saved to the given target file, if the directory structure
+          doesn't exist it will be created. Output will by default be over-written.
+
+          Parameters
+          ----------
+          size : int
+              Number of random numbers to generate
+          seed: int
+              Seed for random number generation
+          save_as : Union[str, Path]
+              Directory/file to save numbers to.
+          """
+          rng = np.random.default_rng(seed)
+          random_numbers = rng.random(size)
+
+          with Path(save_as).open('w') as out:
+              writer = csv.write(out)
+              writer.writerows(random_numbers)
+    #+END_SRC
+
+    ...and you can now run PyLint against it to see if you've improved your score.
+
+
+    #+BEGIN_SRC bash :eval no
+      (python3_9) ❱ pylint save_random_numbers_tidy.py
+      ************* Module save_random_numbers_tidy
+      save_random_numbers_tidy.py:7:66: E1136: Value 'Union' is unsubscriptable (unsubscriptable-object)
+
+      ------------------------------------------------------------------
+      Your code has been rated at 5.00/10 (previous run: 4.00/10, +1.00)
+    #+END_SRC
+
+    That is an improvement in score (of ~+1.00~) but we now have another error telling us that ~E1136: Value 'Union' is
+    unsubscriptable (unsubscriptable-object)~. You are unlikely to know what all the error codes mean, but there are a
+    few handy on-line lists [[http://pylint-messages.wikidot.com/all-codes][all PyLint codes]] or [[http://pylint-messages.wikidot.com/all-messages][all PyLint messages]] and what they are telling you are worth consulting
+    ([[https://docs.quantifiedcode.com/python-anti-patterns/index.html][The Little Book of Python Anti-Patterns]] is also useful). In this instance PyLint has returned a false-positive
+    because ~Union~ can and should be subscripted here because it means the argument can be either a string (~str~) or a
+    pathlib Path (~Path~). So how do we get around this complaint?
+
+    You can disable PyLint from complaining about specific error codes/messages on a per-file basis by adding a line
+    that disables them. You can use either codes or messages (the bit in the brackets at the end of the line, in this
+    case ~unsubscriptable-object~) and it is advisable to use the message form as it is more informative to those who
+    read your code subequently.
+
+    If we add the following line...
+
+    #+BEGIN_SRC python :eval no
+      import numpy as np
+
+      # pylint: disable=unsubscriptable-object
+
+      def save_random_numbers(size: int, seed: int = 87653546, save_as: Union[str, Path] = "./random_numbers.txt") -> None:
+    #+END_SRC
+
+    ...and lint our code again we get a much better score.
+
+    #+BEGIN_SRC bash :eval no
+     (python3_9) ❱ pylint save_random_numbers_tidy.py
+
+    -------------------------------------------------------------------
+    Your code has been rated at 10.00/10 (previous run: 5.00/10, +5.00)
+    #+END_SRC
+
+** Configuring PyLint
+
+   The last error we encountered is something that is likely to crop up again if we use Typehints liberally throughout
+   our Python code (and I would encourage you to do so). Rather than having to remember to disable the error in each
+   file/module we create we can configure PyLint via its configuration file ~/.pylintrc~ to always ignore this error. To
+   do so add the following.
+
+
+   #+BEGIN_SRC bash
+     [MESSAGES CONTROL]
+     # Disable the message, report, category or checker with the given id(s). You
+     # can either give multiple identifiers separated by comma (,) or put this
+     # option multiple times (only on the command line, not in the configuration
+     # file where it should appear only once).
+     disable=unsubscriptable-object
+   #+END_SRC
+
+
+   For more on configuriong PyLint refer to the [[https://pylint.pycqa.org/en/latest/user_guide/options.html][configuration documentation]]
+and also details of how to [[https://pylint.pycqa.org/en/latest/user_guide/ide-integration.html][integrate with your editor and IDE]].
+
+** Automated Formatting with Black
+
+[[https://github.com/psf/black][Black]] is /The Uncompromising Code Formatter/ and is very strict about the way in which it formats code. This could be a
+good or bad thing depending on your point of view, but it does result in highly consistent code when applied to all
+files. It formats files in place, so be mindful of this if you run it against one of your files it /will/ change it.
+
+
+Install ~black~ in your virtual environment and make a backup of your ~save_random_number.py~ file that you have just
+tidied up with linting.
+
+#+BEGIN_SRC bash :eval no
+  pip install black
+  cp save_random_numbers.py tidy_save_random_numbers.py
+#+END_SRC
+
+To run black against your code pass it the input file, it will re-write it and you can then compare it against the
+backup you just made
+
+#+BEGIN_SRC bash :eval no
+  black save_random_numbers.py
+  ❱ diff save_random_numbers.py tidy_save_random_numbers.py
+  5,8c5
+  <
+  < def save_random_numbers(
+    <     size: int, seed: int = 87653546, save_as: Union[str, Path] = "./random_numbers.txt"
+    < ) -> None:
+  ---
+  > def save_random_numbers(size: int, seed: int = 87653546, save_as: Union[str, Path] = "./random_numbers.txt") -> None:
+  27c24
+  <     with Path(save_as).open("w") as out:
+  ---
+  >     with Path(save_as).open('w') as out:
+#+END_SRC
+
+Black hasn't changed much but it has reformatted the `def save_random_numbers(...)` line and moved the `with Path()` line.
+
+* Automating
+
+** IDE Integration
 
 When programming it is really useful to use an [[https://en.wikipedia.org/wiki/Integrated_development_environment][Integrated Development Environment (IDE)]] as most allow the integration of
-linting your code automatically.
-
-** Emacs
+linting tools and apply them to your code automatically, whether its using PyLint, YAPF, Black or otherwise.  Setup and
+configuration is beyond the scope of this article but some links are provided to useful resources to get you started.
 
 ** VSCode
 
-VSCode supports linting in most languages, both [[https://docs.microsoft.com/en-us/visualstudio/rtvs/linting-r-code?view=vs-2017][R]] and [[https://code.visualstudio.com/docs/python/linting][Python]] are supported.
+VSCode supports linting in most languages, and both [[https://code.visualstudio.com/docs/python/linting][Python]] and  [[https://docs.microsoft.com/en-us/visualstudio/rtvs/linting-r-code?view=vs-2017][R]] are supported along with other languages.
 
 ** PyCharm
+
+   PyCharm supports automated formatting of code, for more information please refer to [[https://www.jetbrains.com/help/pycharm/reformat-and-rearrange-code.html][Reformat and rearrange code | PyCharm]].
+
+
+** Emacs
+
+   There are various options available for linting within Emacs, which you use depends on your preferences but [[https://emacs-lsp.github.io/lsp-mode/][LSP mode]]
+   integrates with YAPF (via [[https://github.com/JorisE/yapfify][yapfify]]), Flake8 (via [[https://www.flycheck.org/en/latest/][flycheck]]) and Black (via [[https://github.com/pythonic-emacs/blacken][blacken]]).
 
 * Git Integration
 
 If you are using an IDE then if configured correctly your code should be linted automatically for you, but an additional
 step that can capture anything that hasn't been correctly formatted is to use a [[https://githooks.com/][git hook]] to run linting on your code
-prior to making commits.
+prior to making commits. There is [[https://github.com/sebdah/git-pylint-commit-hook][git-pylint-commit-hook]] available on PyPi which runs automatically when you make
+commits to ~.py~ files.
 
 
 * Continuous Integration
 
 Including a linting stage in your Continuous Integration (CI) pipeline pays dividends as we all make mistakes and sometimes
+forgot to lint our code before making pushes.
 
 * Megalinter
 
-Whilst you can set linting up  on a per language, or even per project basis to work from your IDE or in a given pipeline, but a
-useful approach is to integrate something like [[https://megalinter.github.io/latest/][MegaLinter]] into your pipeline (GitHub Action, CI on GitLab etc.). A
-useful article on doing so is [[https://nicolas.vuillamy.fr/improve-uniformize-and-secure-your-code-base-with-megalinter-62ebab422c1][Limit your technical debt and secure your code base using MegaLinter]].
+Perhaps not necessary for everyone but worth mentionin theg beast that is [[https://megalinter.github.io/latest/][MegaLinter]] which will lint code across multiple
+languages and integrates easily into your pipeline (GitHub Action, CI on GitLab, Jenkins etc.). A useful article on doing so is
+[[https://nicolas.vuillamy.fr/improve-uniformize-and-secure-your-code-base-with-megalinter-62ebab422c1][Limit your technical debt and secure your code base using MegaLinter]].
+
 
 * Links
 
-+ [[https://githooks.com/][Git Hooks | Learn how to use pre-commit hooks, post-commit hooks, post-receive hooks, and more. | Matthew Hudson]]
 
 ** Python
 
@@ -120,4 +371,8 @@ useful article on doing so is [[https://nicolas.vuillamy.fr/improve-uniformize-a
 + [[https://github.com/psf/black][Black]] - The Uncompromising Code Formatter
 + [[https://code.visualstudio.com/docs/python/linting][Linting Python in Visual Studio Code]]
 + [[https://pylint.pycqa.org/en/latest/messages/messages_list.html][Pylint = Overview of all Pylint messages]]
+
 ** R
+
++ [[https://github.com/r-lib/lintr][GitHub - r-lib/lintr: Static Code Analysis for R]]
++ [[https://rowannicholls.github.io/R/intro/linting.html][Introduction to R: Linting R (and R Markdown)]]

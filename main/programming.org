@@ -46,6 +46,12 @@ requirements of the software are often hazy at the outset and only crystalise on
 code would often benefit from being refactored. This means re-writing it and simplifying the code, abstracting common
 features out into reusable functions.
 
+* Configuration
+
+You will over time develop customised configurations for your preferred work environment, you can take steps to minimise
+the pain involved when setting up new computers or systems you gain access to by using [[id:31304184-2fad-4cc5-824b-3ab4b9d2e126][dotfiles]] to manage such
+configurations.
+
 * Links
 + [[https://www.catharsisinsight.com/_files/ugd/fce7f8_f9d2fea4f1b9478baeb7e84ab1b63759.pdf]["It's like Coding in the Dark" : The need for learning cultures within coding teams]]
 + [[https://refactoring.guru/refactoring][Refactoring Guru : Refactoring]]

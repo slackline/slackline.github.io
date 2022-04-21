@@ -69,7 +69,7 @@ notes or deleting them if not needed.
 #+BEGIN_SRC elisp
   (setq org-capture-templates
    ("s" "Org-Roam Notes" entry (file "~/work/org-roam/20220206201656-notes.org")
-    "* %U %?\n" :prepend t))
+   "
 #+END_SRC
 
 
@@ -89,6 +89,12 @@ rectify this you can use ~org-roam-db-sync~ to update the database by scanning a
 Org works with [[http://www.bibtex.org/][BibTeX]] citation files and Org-roam is no different, although it has several different ways in which it
 can interact with your citations. Perhaps the most straight-forward is to use [[https://github.com/org-roam/org-roam-bibtex][org-roam-bibtex]] which integrates Org-roam
 with [[https://github.com/jkitchin/org-ref][org-ref]] and the ~cite:~ that is built-in to Org-mode >9.5.
+
+* Exporting Org-roam to Hugo
+
+If you want to export your Org-roam to a static HTML site using [[https://gohugo.io/][Hugo]] (a static site generator) then you can and
+thankfully someone took the time to write-up how to do so. See the post from [[https://sidhartharya.github.io/exporting-org-roam-notes-to-hugo/][Sidharth Arya - Exporting Org Roam notes to
+hugo]].
 
 * Links
 ** Reference

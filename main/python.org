@@ -6,7 +6,8 @@
 #+FILETAGS: :python:programming:statistics:
 
 [[https://www.python.org][Python]] is a general interpreted programming language. Its been around a while and is very mature, you should by all
-accounts be using Python > 3.6 although you may encounter situations where Python 2.* is still in use.
+accounts be using Python > 3.6 although you may encounter situations where Python 2.* is still in use, even though its
+end-of-life was [[https://endoflife.date/python][2010-07-03]].
 
 * Linting
 

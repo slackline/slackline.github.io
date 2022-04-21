@@ -21,3 +21,13 @@ of the Language Server Protocol (LSP) courtesy of which supports [[id:5b5d1562-e
 + [[id:04868965-8413-4d9d-8ecc-573570fec5b1][LSP Mode]]
 
 * Links
+
+** Help
++ [[https://emacs.stackexchange.com/][Emacs Stack Exchange]]
++ [[https://www.reddit.com/r/emacs][M-x emacs-reddit]]
++ [[https://www.reddit.com/r/orgmode/][Reddit Org-mode]]
+
+** Pre-packaged Emacs distributions
++ [[https://github.com/bbatsov/prelude#readme][Prelude is an enhanced Emacs distribution that should make your experience with Emacs both more pleasant and more powerful.]]
++ [[https://github.com/hlissner/doom-emacs][doom-emacs: An Emacs framework for the stubborn martian hacker]]
++ [[https://www.spacemacs.org/][Spacemacs: Emacs advanced Kit focused on Evil]]

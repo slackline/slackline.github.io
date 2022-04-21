@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       9c6257dc-cbef-4291-8369-b3dc6c173cf2
+:END:
+#+TITLE: Python
+#+DATE: [2022-04-21 Thu 10:00]
+#+FILETAGS: :bash:programming:linux:
+
+
+* Links
+
+** ~PS1~ Customisation
++ [[https://bashrcgenerator.com/][.bashrc generator: create your .bashrc PS1 with a drag and drop interface]]
++ [[https://stackoverflow.com/questions/4133904/ps1-line-with-git-current-branch-and-colors][command prompt - PS1 line with Git current branch and colors - Stack Overflow]]
