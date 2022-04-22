@@ -5,7 +5,11 @@
 
 * org-roam
 
-My org-roam files.
+My org-roam files, topics include...
+
++ [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Python]]
++ [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]]
++ [[id:0911a63f-4b82-4bf1-9235-f1e41e93d210][Open Research]]
 
 * Links
 
