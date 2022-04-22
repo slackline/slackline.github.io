@@ -14,6 +14,7 @@ to validate and contribute to the research.
 * [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]]
 * [[id:3df9f7ea-12c0-47ab-97a8-e2b3d6c72606][Publishing]]
 * [[id:04cf68bf-0db2-403e-b0a6-9c94aa662577][Replication / Peer Review]]
+* [[id:49d21f82-887e-4ec7-8963-89460673352a][Research Software Engineering]]
 
 * References
 + [[https://www.nature.com/articles/sdata201618][The FAIR Guiding Principles for scientific data management and stewardship | Scientific Data]]

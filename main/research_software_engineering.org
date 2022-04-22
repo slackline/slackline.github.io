@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       49d21f82-887e-4ec7-8963-89460673352a
+:END:
+#+title: Reseaerch Software Engineering
+#+filetags: :open-research:rse:
+
+* Links
+
++ [[https://rse.shef.ac.uk/][Research Software Engineering Sheffield]] ([[https://rse.shef.ac.uk/blog/][Blog]] | [[https://rse.shef.ac.uk/newsletters/][Newsletters]] | [[https://github.com/orgs/RSE-Sheffield][GitHub]] | [[https://twitter.com/RSE_Sheffield][@RSE_Sheffield]])
++ [[https://society-rse.org/][Society of Research Software Engineering]]
++ [[https://software.ac.uk/][The Software Sustainability Institute]]
+
+** Learning Material
+
++ [[https://merely-useful.tech/py-rse/][Research Software Engineering with Python]]
++ [[https://merely-useful.tech/r-rse/][Research Software Engineering with R]]
