@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       3cca0dfd-0c82-4685-b9ed-6314f7c8b78f
+:END:
+#+TITLE: Pytest
+#+DATE: [2022-04-27 Wed 07:34]
+#+FILETAGS: :python:programming:testing:
+
+* Pytest
+
+As its web-page states [[https://docs.pytest.org/en/7.0.x/][pytest: helps you write better programs]].
+
+Often when writing tests early on you might expect them to fail, you can use the ~@pytest.mark.xfail~ fixture to mark a
+test as "expect to fail" and ~pytest~ will not halt and instead carry on with the rest of the tests.
+
+** Configuration
+
+You can configure pytest within a projects directory via one of a choice of files ~setup.cfg~ is sufficient for simple
+use cases but its recommended more complex configurations are made via ~pyproject.toml~ or ~XXX~.
+
+** Documentation Tests
+
+I came across an article advocating [[https://simonwillison.net/2018/Jul/28/documentation-unit-tests/][Documentation unit tests]] and showing one approach to testing documentation.

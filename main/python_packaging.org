@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       bb57f65e-58f4-45de-9620-901dc998f6d6
+:END:
+#+TITLE: Python Packaging
+#+DATE: [2022-04-27 Wed 07:38]
+#+FILETAGS: :python:programming:packaging:
+
+There are several options for packaging your code in Python, this document focuses on [[https://setuptools.pypa.io/en/latest/index.html][Setuptools]].
+
+* Package Structure
+
+You should place your code within a Git version controlled directory for your project. It is then normal to place all
+files in an organised hierarchy with a sub-directory of the same name for Python code, tests under ~tests~
+
+#+BEGIN_SRC bash eval: no
+  .
+  ├── ./build
+  ├── ./dist
+  ├── ./
+  ├── ./tcx2gpx
+  └── ./tests
+      ├── ./tests/resources
+      └── ./tests/tcx2gpx
+#+END_SRC
+
+* Setup
+
+Traditionally configuration of meta-data such as author, code repository and license was made via ~setup.py~ but under
+the current version of Setuptools that is obsolete. Instead it is essential to have a ~pyproject.toml~ file in the top
+level of your directory with a bare minimum of...
+
+#+BEGIN_SRC conf
+  [build-system]
+  requires = ["setuptools"]
+  build-backend = "setuptools.build_meta"
+#+END_SRC
+
+You can then continue to use this file for additional configuration options or use ~setup.cfg~ or ~setup.py~ (although
+the later is discouraged).
