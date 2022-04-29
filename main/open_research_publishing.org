@@ -2,7 +2,7 @@
 :ID:       3df9f7ea-12c0-47ab-97a8-e2b3d6c72606
 :ROAM_ALIASES: "Open Research : Publishing"
 :END:
-#+title: open-research-publishing
+#+title: Open-research Publishing
 #+filetags: :open-research::publishing:
 
 * Publishing

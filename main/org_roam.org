@@ -17,9 +17,11 @@ for doing so is ~C-c n i~ which is defined by
 #END_SRC
 
 Once defined you can insert a link to an existing node using the key sequence and then typing the name of the node (as
-defined in the ~#TITLE~). If you want to manually insert a link then you can do so using ~C-c l~ (default for
+defined in the ~:ROAM ALIASES: ~). If you want to manually insert a link then you can do so using ~C-c l~ (default for
 inserting a link in Org-mode) and entering a node's ID prefixed with ~id:~ (e.g.
 ~id:136364e7-1a6d-4b28-b284-0e415b860699~) followed by the text you want to appear.
+
+You can insert a node at any point (e.g. under a section heading) using ~C-c n o~.
 
 * Templates
 :PROPERTIES:
@@ -79,7 +81,7 @@ notes or deleting them if not needed.
 :END:
 
 If you decide to delete files you can do so, but the references and links to them will persist in the database. To
-rectify this you can use ~org-roam-db-sync~ to update the database by scanning all files.
+rectify this you can use ~org-roam-db-sync~ to update the database by scanning all files (bound to ~C-n s~).
 
 * Citations
 :PROPERTIES:

@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       8a38a071-9901-4e35-9aec-213a0c65af00
+:ROAM-ALIASES: "Open Research Software"
+:END:
+#+TITLE: Open Research Software
+#+FILETAGS: :open-research:software:
+
+* Links
++
+
+* Bibliography
+
++ [[https://doi.org/10.15497/RDA00068][FAIR Principles for Research Software 1.0]] (supersedes [[https://doi.org/10.15497/RDA00068][FAIR Principles for Research Software]])
