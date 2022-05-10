@@ -28,6 +28,9 @@ of the Language Server Protocol (LSP) courtesy of which supports [[id:5b5d1562-e
 + [[https://www.reddit.com/r/orgmode/][Reddit Org-mode]]
 
 ** Pre-packaged Emacs distributions
-+ [[https://github.com/bbatsov/prelude#readme][Prelude is an enhanced Emacs distribution that should make your experience with Emacs both more pleasant and more powerful.]]
-+ [[https://github.com/hlissner/doom-emacs][doom-emacs: An Emacs framework for the stubborn martian hacker]]
-+ [[https://www.spacemacs.org/][Spacemacs: Emacs advanced Kit focused on Evil]]
++ [[https://github.com/bbatsov/prelude][Prelude]] an enhanced Emacs distribution that should make your experience with Emacs both more pleasant and more powerful.
++ [[https://github.com/hlissner/doom-emacs][doom-emacs]] an Emacs framework for the stubborn martian hacker
++ [[https://www.spacemacs.org/][Spacemacs]] Emacs advanced Kit focused on Evil
+
+** Advocacy
++ [[https://www.fugue.co/blog/2015-11-11-guide-to-emacs.html][A CEO's Guide to Emacs]] - a few dated bits (e.g. ~\~/.config/emacs~ is now supported) but very good.

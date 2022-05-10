@@ -23,3 +23,4 @@ to validate and contribute to the research.
 + [[https://www.sheffield.ac.uk/openresearch/][Open Research | The University of Sheffield]]
 + [[https://open-research-europe.ec.europa.eu/][Open Research Europe | Open Access Publishing Platform]]
 + [[https://www.fosteropenscience.eu/][FOSTER Open Science]]
++ [[https://the-turing-way.netlify.app/welcome][The Turing Way]] a handbook on open and reproducible research
