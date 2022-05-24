@@ -32,5 +32,12 @@ of the Language Server Protocol (LSP) courtesy of which supports [[id:5b5d1562-e
 + [[https://github.com/hlissner/doom-emacs][doom-emacs]] an Emacs framework for the stubborn martian hacker
 + [[https://www.spacemacs.org/][Spacemacs]] Emacs advanced Kit focused on Evil
 
+** Configuration
++ [[https://erickgnavar.github.io/emacs-config/][Emacs config]] by Erick Navarro - a nice neat and clear set of custom configurations.
 ** Advocacy
 + [[https://www.fugue.co/blog/2015-11-11-guide-to-emacs.html][A CEO's Guide to Emacs]] - a few dated bits (e.g. ~\~/.config/emacs~ is now supported) but very good.
+
+** Manuals and Books
++ [[https://emacsdocs.org/docs/Magit/Top][Emacsdocs.org]]
++ [[https://www.masteringemacs.org/][Mastering Emacs]]
++ [[https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][An Introduction to Programming in Emacs Lisp]]

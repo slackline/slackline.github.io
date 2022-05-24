@@ -6,9 +6,14 @@
 #+FILETAGS: :statistics:R:python:bayes:glm:regression:classification:
 
 Statistics is about quantifying variation and apportioning the causes.
+
++ [[id:7ced9fda-ff1e-4ff0-a80b-2193255e511d][Gaussian Process]]
++
 * Classification
 Often the outcome of interest in an analysis is binary (or dichotomous), whether an event occurred or not or whether
 there is the presence of something such as a viral infection.
+
+* [[id:d62fd426-a267-4601-ba41-3340aa789ee3][Regression]]
 
 * Generalised Linear Models
 :PROPERTIES:
