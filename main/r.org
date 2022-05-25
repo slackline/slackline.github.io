@@ -5,165 +5,30 @@
 #+DATE: [2022-02-13 Sun 19:51]
 #+FILETAGS: :r:programming:statistics:
 
-[[https://www.r-project.org][R]] is a statistical programming language, written and developed initially by
+[[https://www.r-project.org][R]] is a statistical programming language, written and developed initially by statisticians for statisticians. It is based
+on the statistical programming S.
 
 * Tidyverse
-:PROPERTIES:
-:ID:       b4510762-8409-4e5e-8ee8-c27574977772
-:END:
 
-The Tidyverse refers to a group of packages that work in unison to simplify the process of writing readable code. I've
-seen it argued that at times it can be inefficient but these are mostly pedantic and outdated arguments by those who do
-not realise nor understand that shaving a few seconds off of what is often exploratory analyses is insignificant
-compared to the time spent by people reading and understanding code (even their own that they wrote a few months or more
-ago).
-
-There are a lot of packages out there in the Tidyverse, I only cover a few here and nowhere near in as much depth as the
-official documentation for each package. An excellent resource if you wish to learn these tools is the [[https://r4ds.had.co.nz/][R for Data
-Science]] book by Hadley Wickham and Garrett Grolemund which is free to read on-line or can be purchased in physical form.
-
-** Pipes
-:PROPERTIES:
-:ID:       a7d25501-fa12-4f13-bbf0-154d850209eb
-:END:
-Pipes are the backbone of what makes the Tidyverse so great. When I started learning R I really struggled reading nested
-functions but with Pipes the grammar is far more intuitive, reading more like a story.
-
-Compare and contrast base R code...
-
-#+NAME: tidyverse-pipes-base-r
-#+CAPTION: Base R code for XXX
-#+BEGIN_SRC R :eval no
-  library(tidyverse)
-#+END_SRC
-
-#+NAME: tidyverse-pipes-tidyverse
-#+CAPTION: Tidyverse R code for XXX
-#BEGIN_SRC R :eval no
-  library(tidyverse)
-#END_SRC
-
-There are two forms of pipes in R, the original was introduced in [[https://magrittr.tidyverse.org/][Magrittr]] but a native pipe was introduced in base R
-v4.1.0. A couple of posts dissecting and comparing the two can be found at [[https://michaelbarrowman.co.uk/post/the-new-base-pipe/][The New Base Pipe]] which is a good exposition
-of the speed associated with the two options and [[https://ivelasq.rbind.io/blog/understanding-the-r-pipe/][Understanding the native R pipe |> | %>% dreams]], which is a great
-exposition of how the two function "in the wild" and how you might get caught out by problems. I highly recommend
-reading both if you are going to use pipes although I'll try and explain each here.
-*** Base Pipe
-:PROPERTIES:
-:ID:       4d45f3f8-61ef-4375-bb27-351c8419635e
-:END:
-*** Magrittr
-:PROPERTIES:
-:ID:       bd93d909-8cb4-4c27-8db2-66df0ca9567f
-:END:
-[[https://magrittr.tidyverse.org/][Magrittr]]
-** ggplot2
-:PROPERTIES:
-:ID:       85c00373-f18d-4c82-939c-f5a1c2770890
-:END:
-
-
-#+NAME: tidyverse-ggplot2
-#+CAPTION: ggplot2
-#+BEGIN_SRC R :eval no
-  library(tidyverse)
-  library(ggplot2)
-#+END_SRC
-
-** forcats
-:PROPERTIES:
-:ID:       e0e5c206-28fb-4c18-b376-4c04a09222ea
-:END:
-
-#+NAME: tidyverse-forcats
-#+CAPTION: forcats
-#BEGIN_SRC R :eval no
-  library(forcats)
-#END_SRC
-
-** dplyr
-:PROPERTIES:
-:ID:       78504ff1-a3cd-4f64-a515-ffa2ab6ac36c
-:END:
-
-#+NAME: tidyverse-dplyr
-#+CAPTION: dplyr
-#BEGIN_SRC R :eval no
-  library(dplyr)
-#END_SRC
-
-** tibble
-:PROPERTIES:
-:ID:       c8693079-9cc9-457a-ab83-16be852963b1
-:END:
-
-#+NAME: tidyverse-tibble
-#+CAPTION: tibble
-#+BEGIN_SRC R :eval no
-  library(tidyverse)
-#+END_SRC
-
-** stringr
-:PROPERTIES:
-:ID:       1eeb28cd-e80f-43b5-ab4b-7b063c1df73d
-:END:
-
-#+NAME: tidyverse-stringt
-#+CAPTION: stringr
-#+BEGIN_SRC R :eval no
-  library(stringr)
-#+END_SRC
-
-** lubridate
-:PROPERTIES:
-:ID:       4cde3c5d-8868-4d4e-ba55-172aa93822f1
-:END:
-
-#+NAME: tidyverse-lubridate
-#+CAPTION: lubridate
-#+BEGIN_SRC R :eval no
-  library(lubridate)
-#+END_SRC
-
-** tidyr
-:PROPERTIES:
-:ID:       14fb5f71-1230-4350-8d26-85f58120545c
-:END:
-
-#+NAME: tidyverse-tidyr
-#+CAPTION: tidyr
-#+BEGIN_SRC R :eval no
-      library(tidyr)
-#+END_SRC
-
-** tidytable
-   :PROPERTIES:
-   :ID:       00e28ab9-3ae3-481b-99ca-7cc143481437
-   :END:
-
-Tidytable provides ~tidyverse~ like syntax built on top of the fast ~data.table package~
-#+NAME: tidyverse-tidyr
-#+CAPTION: tidytable
-#+BEGIN_SRC R :eval no
-      library(tidyr)
-#+END_SRC
+The Tidyverse refers to a group of packages that work in unison to simplify the process of writing readable code. Read
+more on the [[id:b4510762-8409-4e5e-8ee8-c27574977772][Tidyverse]].
 
 * ~data.table~
   :PROPERTIES:
   :ID:       af60974e-e132-48d0-a1ad-8137ee50f4b9
   :END:
+* RStudio
+
+[[https://www.rstudio.com/][RStudio]] is an Integrated Development Environment (IDE) for working with R and more recently other languages. Read more
+on [[id:fbe4e0bc-038d-4aeb-aa48-e312f469678e][RStudio]].
 
 * RMarkdown
-:PROPERTIES:
-:ID:       1db6158d-cb5d-4b73-b926-95e9c09f878b
-:END:
-* Shiny
-:PROPERTIES:
-:ID:       35414407-8fca-420e-a097-aed71e25bbd4
-:END:
+[[https://rmarkdown.rstudio.com/][R Markdown]] is a markup language that weaves [[id:0c371287-128d-4e46-8128-b2d4f5fc604c][markdown]] with code to facilitate producing reproducible workflows. It can
+render to HTML, PDF (via [[id:e1c2cfef-1b43-47a8-a425-94e6ae58d917][latex]]) or produce interactive Shiny applications. Read more on [[id:1db6158d-cb5d-4b73-b926-95e9c09f878b][RMarkdown]].
 
-Shiny provides an interface to creating web-pages from within R. These can take the form of interactive Dashboards where
-users can explore the data.
+* Shiny
+
+Shiny provides a framework for creating interactive web-pages from within R. Read more on [[id:fe1f6380-9217-482c-bb5e-91817ae3e8f8][Shiny]].
 
 There are a few ways in which dashboards can be created. The package [[https://rinterface.github.io/bs4Dash/index.html][bs4Dash]] is /A Bootstrap 4 Version of
 shinydashboard/ and as v2.0.0 its as simple as switching from ~library(shinydashboard)~ to ~library(bs4Dash)~
@@ -248,7 +113,6 @@ help with that. An excellent resource is the [[https://r-pkgs.org/][R Packages b
 + [[https://geocompr.robinlovelace.net/][Geocomputation with R]]
 + [[https://www.bayesrulesbook.com/][Bayes Rules! An Introduction to Applied Bayesian Modeling]]
 + [[https://epirhandbook.com/en/][The Epidemiologist R Handbook : R for applied epidemiology and public health]]
-
 
 ** HowTos
 

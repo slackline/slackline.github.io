@@ -30,7 +30,7 @@
 Extending the unobserved pedigree to the population level allows for population level association analyses to be
 conducted, and underpins the now commonly used approach of Whole Genome Association Scans (WGAS).
 
-* Software
+* Statistical Genetic Software
 :PROPERTIES:
 :ID:       b48ba435-be96-443c-98f4-2baf3fc9596e
 :END:

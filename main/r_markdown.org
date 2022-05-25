@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       1db6158d-cb5d-4b73-b926-95e9c09f878b
+:END:
+#+TITLE: RMarkdown
+#+DATE: [2022-05-24 Tue 20:02]
+#+FILETAGS: :markup:literate programming:R:
+
+* Getting Started
+
+** Code Chunks
+
+** Tables
+
+** Graphs
+
+* Shiny Apps
+
+RMarkdown provides a simple way to start producing Shiny apps before getting stuck into writing them based on code.
+
+* Links
+
++ [[https://rmarkdown.rstudio.com/][R Markdown]]
++ [[https://bookdown.org/yihui/rmarkdown/][R Markdown: The Definitive Guide]]
