@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       fe1f6380-9217-482c-bb5e-91817ae3e8f8
+:END:
+#+TITLE: R Shiny
+#+DATE: [2022-05-24 Tue 20:09]
+#+FILETAGS: :r:programming:statistics:shiny:dashboards:
+
+* Links
+
++ [[https://shiny.rstudio.com/][Shiny]]
+
+** Books
+
++ [[https://mastering-shiny.org/][Mastering Shiny]] - Read this first before progressing
++ [[https://unleash-shiny.rinterface.com/][Outstanding User Interfaces with Shiny]]
++ [[https://engineering-shiny.org/][Engineering Production-Grade Shiny Apps]]
++ [[https://business-science.github.io/shiny-production-with-aws-book/][The Shiny AWS Book]]

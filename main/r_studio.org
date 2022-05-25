@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       fbe4e0bc-038d-4aeb-aa48-e312f469678e
+:END:
+#+TITLE: RStudio
+#+DATE: [2022-05-24 Tue 20:18]
+#+FILETAGS: :r:programming:statistics:
+
+* Links
+
++ [[https://www.rstudio.com/][RStudio]]
++ [[https://support.rstudio.com/hc/en-us/categories/200035113-How-To-Articles][RStudio Support - How To Articles]]
+
+** Version Control
++ [[https://happygitwithr.com/][Happy Git and GitHub for the useR]]
++ [[https://support.rstudio.com/hc/en-us/articles/200532077?version=1.4.1717&mode=desktop][Version Control with Git and SVN – RStudio Support]]
+
+** RStudio Cloud
+
+All the best software runs in the cloud too these days (but it costs you).
+
++ [[https://www.rstudio.com/products/cloud/][RStudio Cloud]]
++ [[https://rstudio.cloud/learn/guide#project-collaborative-editing][RStudio Cloud : Collaborative Editing]]

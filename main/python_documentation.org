@@ -1,0 +1,89 @@
+:PROPERTIES:
+:ID:       7318aee8-c864-40cb-9462-4ce36ac56d35
+:END:
+#+TITLE: Python Documentation
+#+DATE: [2022-02-13 Sun 20:49]
+#+FILETAGS: :python:programming:documentation:
+
+* Docstrings
+
+You should write docstrings for every module, class, method and function that you write. The original specification for
+docstring conventions is [[https://peps.python.org/pep-0257/][PEP 257]]. Personally I find restructured text docstrings cumbersome and dense to read so prefer
+[[https://numpydoc.readthedocs.io/en/latest/format.html][Numpydoc]] docstrings.
+
+** IDE plugins
+
+Many IDEs have plugins that aid with writing docstrings. Since I use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] I use [[https://github.com/douglasdavis/numpydoc.el][numpydoc.el]] to /Insert NumPy style
+docstrings in Python functions./ It makes life considerably less painful as it saves a lot of typing.
+
+* Sphinx
+** Setup
+
+The first step to generating your documentation via Sphinx is to..
+
+** Configuration
+
+There are two key files to configuring Sphinx documentation for your project, ~docs/conf.py~ and ~docs/Makefile~.
+
+*** ~conf.py~
+
+    #+BEGIN_SRC python :eval no
+      #+END_SRC
+
+*** ~Makefile~
+
+#+BEGIN_SRC makefile :eval no
+  # Minimal makefile for Sphinx documentation
+        #
+
+        # You can set these variables from the command line, and also
+        # from the environment for the first two.
+        SPHINXOPTS     ?=
+        SPHINXBUILD    ?= sphinx-build
+        SOURCEDIR      = ./
+        BUILDDIR       = _build
+        SPHINXAPIBUILD ?= sphinx-apidoc
+
+        # Put it first so that "make" without argument is like "make help".
+        help:
+        @$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+        .PHONY: help Makefile
+
+        # Catch-all target: route all unknown targets to Sphinx using the new
+        # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
+        %: Makefile
+        @$(SPHINXAPIBUILD) -o "$(SOURCEDIR)" "../" --separate
+        @$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+#+END_SRC
+
+** Autodoc
+
+** Themes
+
+There are many themes available, a good place to start is the [[https://sphinx-themes.org/][Sphinx Themes Gallery]], although not included there is  [[https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html][The
+PyData Sphinx Theme]].
+
+* ReadTheDocs
+
+You will invariably require somewhere to host your site, and this can be done for free (although consider making a
+donation) using [[https://readthedocs.org/][Read the Docs]].
+
+** Automated Deployment
+
+Documentation can be deployed to ReadTheDocs automatically as part of your Git Workflow or GitLab CI.
+
+*** Git Workflow
+
+*** GitLab CI
+
+* Links
+
+** Docstrings
++ [[https://peps.python.org/pep-0257/][PEP 257]]
++ [[https://numpydoc.readthedocs.io/en/latest/format.html][Numpydoc]]
+
+** Themes
+
++ [[https://sphinx-themes.org/][Sphinx Themes Gallery]]
++ [[https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html][The PyData Sphinx Theme]]

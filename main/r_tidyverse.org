@@ -1,0 +1,141 @@
+:PROPERTIES:
+:ID:       b4510762-8409-4e5e-8ee8-c27574977772
+:END:
+#+TITLE: Tidyverse
+#+DATE: [2022-02-13 Sun 19:51]
+#+FILETAGS: :r:programming:statistics:
+
+I've seen it argued that at times it can be inefficient but these are mostly pedantic and outdated arguments by those
+who do not realise nor understand that shaving a few seconds off of what is often exploratory analyses is insignificant
+compared to the time spent by people reading and understanding code (even their own that they wrote a few months or more
+ago).
+
+There are a lot of packages out there in the Tidyverse, I only cover a few here and nowhere near in as much depth as the
+official documentation for each package. An excellent resource if you wish to learn these tools is the [[https://r4ds.had.co.nz/][R for Data
+Science]] book by Hadley Wickham and Garrett Grolemund which is free to read on-line or can be purchased in physical form.
+
+** Pipes
+:PROPERTIES:
+:ID:       a7d25501-fa12-4f13-bbf0-154d850209eb
+:END:
+Pipes are the backbone of what makes the Tidyverse so great. When I started learning R I really struggled reading nested
+functions but with Pipes the grammar is far more intuitive, reading more like a story.
+
+Compare and contrast base R code...
+
+#+NAME: tidyverse-pipes-base-r
+#+CAPTION: Base R code for XXX
+#+BEGIN_SRC R :eval no
+  library(tidyverse)
+#+END_SRC
+
+#+NAME: tidyverse-pipes-tidyverse
+#+CAPTION: Tidyverse R code for XXX
+#BEGIN_SRC R :eval no
+  library(tidyverse)
+#END_SRC
+
+There are two forms of pipes in R, the original was introduced in [[https://magrittr.tidyverse.org/][Magrittr]] but a native pipe was introduced in base R
+v4.1.0. A couple of posts dissecting and comparing the two can be found at [[https://michaelbarrowman.co.uk/post/the-new-base-pipe/][The New Base Pipe]] which is a good exposition
+of the speed associated with the two options and [[https://ivelasq.rbind.io/blog/understanding-the-r-pipe/][Understanding the native R pipe |> | %>% dreams]], which is a great
+exposition of how the two function "in the wild" and how you might get caught out by problems. I highly recommend
+reading both if you are going to use pipes although I'll try and explain each here.
+*** Base Pipe
+:PROPERTIES:
+:ID:       4d45f3f8-61ef-4375-bb27-351c8419635e
+:END:
+*** Magrittr
+:PROPERTIES:
+:ID:       bd93d909-8cb4-4c27-8db2-66df0ca9567f
+:END:
+[[https://magrittr.tidyverse.org/][Magrittr]]
+** ggplot2
+:PROPERTIES:
+:ID:       85c00373-f18d-4c82-939c-f5a1c2770890
+:END:
+
+
+#+NAME: tidyverse-ggplot2
+#+CAPTION: ggplot2
+#+BEGIN_SRC R :eval no
+  library(tidyverse)
+  library(ggplot2)
+#+END_SRC
+
+** forcats
+:PROPERTIES:
+:ID:       e0e5c206-28fb-4c18-b376-4c04a09222ea
+:END:
+
+#+NAME: tidyverse-forcats
+#+CAPTION: forcats
+#BEGIN_SRC R :eval no
+  library(forcats)
+#END_SRC
+
+** dplyr
+:PROPERTIES:
+:ID:       78504ff1-a3cd-4f64-a515-ffa2ab6ac36c
+:END:
+
+#+NAME: tidyverse-dplyr
+#+CAPTION: dplyr
+#BEGIN_SRC R :eval no
+  library(dplyr)
+#END_SRC
+
+** tibble
+:PROPERTIES:
+:ID:       c8693079-9cc9-457a-ab83-16be852963b1
+:END:
+
+#+NAME: tidyverse-tibble
+#+CAPTION: tibble
+#+BEGIN_SRC R :eval no
+  library(tidyverse)
+#+END_SRC
+
+** stringr
+:PROPERTIES:
+:ID:       1eeb28cd-e80f-43b5-ab4b-7b063c1df73d
+:END:
+
+#+NAME: tidyverse-stringt
+#+CAPTION: stringr
+#+BEGIN_SRC R :eval no
+  library(stringr)
+#+END_SRC
+
+** lubridate
+:PROPERTIES:
+:ID:       4cde3c5d-8868-4d4e-ba55-172aa93822f1
+:END:
+
+#+NAME: tidyverse-lubridate
+#+CAPTION: lubridate
+#+BEGIN_SRC R :eval no
+  library(lubridate)
+#+END_SRC
+
+** tidyr
+:PROPERTIES:
+:ID:       14fb5f71-1230-4350-8d26-85f58120545c
+:END:
+
+#+NAME: tidyverse-tidyr
+#+CAPTION: tidyr
+#+BEGIN_SRC R :eval no
+      library(tidyr)
+#+END_SRC
+
+** tidytable
+   :PROPERTIES:
+   :ID:       00e28ab9-3ae3-481b-99ca-7cc143481437
+   :END:
+
+Tidytable provides ~tidyverse~ like syntax built on top of the fast ~data.table package~
+#+NAME: tidyverse-tidyr
+#+CAPTION: tidytable
+#+BEGIN_SRC R :eval no
+      library(tidyr)
+#+END_SRC

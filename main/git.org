@@ -1,0 +1,57 @@
+:PROPERTIES:
+:ID:       3c905838-8de4-4bb6-9171-98c1332456be
+:END:
+#+TITLE: Git
+#+DATE: <2022-05-24 Tue 22:07>
+#+FILETAGS: :git:programming:documentation:version control:
+
+[[https://git-scm.com][Git]] is the defacto standard for version control of code (and more) these days. Whether you write code in [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]], [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]],
+scripts for [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]], Go, Rust, C++, Java, Bash or want to keep critical files such as your dotfiles,
+~/etc/~, or GPG encrypted passwords backed up you should consider using Git (or some other version control system, but
+Git is the most popular for now).
+
+It can be daunting facing another whole new area to tackle as you are only just getting to grips with a programming
+language having to learn a bunch of unfamiliar concepts that seem of little value, I know I've been there, but it really
+does pay dividends to invest time learning how to use Git.
+
+* Concepts
+
+A repository is placed under version control when you ~git init~ within in but before doing so you need to set some
+variables such as the ~user~ and ~email~. These can be done on a global scale which will apply across all repositories
+you create or a local, per-repository basis (local settings in a repository over-ride global so they don't conflict).
+
+* Setup
+** Global Configuration
+
+** Local Configuration
+
+Each repository is configured via the file ~./.git/config~
+
+* Forges
+
+Forges are places where Git repositories are hosted online for collaborative work. If public then others can view, fork
+(make a copy online), clone (make a local copy) and then change the code themselves and if its useful submit a Pull
+Request to have their changes incorporated into the original body of code for a project.
+
+** GitHub
+
+** GitLab
+
+* IDE Integration
+** Emacs Magit
+
+If you use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] (and why wouldn't you?) then you should use [[https:magit.vc][Magit]] to manage your Git repository and interactions with
+forges such as GitHub and GitLab.
+
+** RStudio
+
+[[id:fbe4e0bc-038d-4aeb-aa48-e312f469678e][RStudio]] has support for Git and GitHub baked in.
+
+** GitKraken
+[[https://www.gitkraken.com/][GitKraken]] is dedicated to working with your Git repositories and interacting with forges. It has some basic IDE features
+for editing your code but it is really focused on helping you work with Git.
+
+* Links
++ [[https://git-scm.com][Git]]
++ [[https:magit.vc][Magit]]
++ [[https://www.gitkraken.com/][GitKraken]]
