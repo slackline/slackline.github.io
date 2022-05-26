@@ -26,4 +26,4 @@ to validate and contribute to the research.
 + [[https://the-turing-way.netlify.app/welcome][The Turing Way]] a handbook on open and reproducible research
 
 ** Blog Posts
- + [[https://www.arj.no/2020/08/27/open-research/][Why is open research better research? – Alexander Refsum Jensenius]]
+ + [[https://www.arj.no/2020/08/27/open-research/][Why is open research better research? – Alexander Refsum Jensenius]

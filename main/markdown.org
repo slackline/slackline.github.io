@@ -3,7 +3,7 @@
 :END:
 #+TITLE: Markdown
 #+DATE: [2022-02-16 Wed 06:36]
-#+FILETAGS: :markup:literate programming:
+#+FILETAGS: :markup:literate programming:mermaid:
 
 In a similar vein to [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]], [[https://daringfireball.net/projects/markdown/][Markdown]] is a markup language for formatting plain text. Its simple yet pretty functional
 and forms the basis of several [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]] frameworks such as [[id:0c371287-128d-4e46-8128-b2d4f5fc604c][RMarkdown]].
@@ -24,8 +24,35 @@ and forms the basis of several [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Litera
 #+BEGIN_SRC R :eval no
 #+END_SRC
 
+* Diagrams
+
+You can include diagrams in many Markdown documents by leveraging [[https://mermaid-js.github.io/mermaid/#/][Javascript Mermaid]] embedded into a code block. It has
+many different types of diagrams including flowcharts, class diagrams, Gantt charts, and Git graphs. It integrates with
+Sphinx in either reStructured Text or Markdown mode and is really quite simple to use (although as with many things
+advanced usage is more intricate). GitHub will [[https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/][include diagraims in your Markdown files with Mermaid]] too.
+
+#+BEGIN_SRC markdown :eval no
+
+  ```{mermaid}
+  graph TD;
+    A[Start] --> B[(Choice)];
+    B -- Yes --> C([Good Choice]);
+    B -- No --> D((Bad Choice));
+    B -- Skip --> E[No Difference];
+    C --> |Let's See| E[No Difference];
+    D --> |Let's See| E[No Difference];
+  ```
+#+END_SRC
+
+A very useful page to help you develop your diagrams is [[https://mermaid.live/edit][Mermaid Live Editor]] just copy and paste your code in and it will
+render it.
+
 * Links
 
 + [[https://www.markdownguide.org/][Markdown Guide]]
 + [[https://markdownlivepreview.com/][Markdown Live Preview]]
 + [[https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/][Include diagrams in your Markdown files with Mermaid | The GitHub Blog]]
+
+** Mermaid
++ [[https://mermaid-js.github.io/mermaid/#/][Mermaid]]
++ [[https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/][GitHib : Include diagraims in your Markdown files with Mermaid]]
