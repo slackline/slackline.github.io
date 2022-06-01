@@ -35,6 +35,7 @@ Request to have their changes incorporated into the original body of code for a 
 
 ** GitHub
 
+Perhaps the largest and most widely used forge, read more
 ** GitLab
 
 * IDE Integration

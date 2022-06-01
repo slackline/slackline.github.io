@@ -376,3 +376,7 @@ languages and integrates easily into your pipeline (GitHub Action, CI on GitLab,
 
 + [[https://github.com/r-lib/lintr][GitHub - r-lib/lintr: Static Code Analysis for R]]
 + [[https://rowannicholls.github.io/R/intro/linting.html][Introduction to R: Linting R (and R Markdown)]]
+
+** Blog Posts
+
++ [[https://medium.com/@lynn-kwong/use-black-mypy-and-pylint-to-make-your-python-code-more-professional-b594512f4362][Use black, mypy, and pylint to make your Python code more professional | by Lynn Kwong | Medium]]
