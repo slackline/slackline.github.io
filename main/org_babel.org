@@ -8,6 +8,33 @@
 [[https://orgmode.org/worg/org-contrib/babel/][Org-Babel]] allows for active code in Org that provides a highly flexible literate programming environment for
 reproducible research.
 
+* Code Chunks
+
+Code chunks allow the evaluation of code in many languages and the resulting tables, figures and variables can then be
+included in-line in text.
+
+** R
+
+** Python
+
+* Org-Reveal
+
+Create [[https://revealjs.com][RevealJS]] slides with [[https://github.com/yjwen/org-reveal/][org-reveal]].
+
+
+* Org-Mermaid
+
+You can include flow diagrams written in [[https://mermaid-js.github.io/mermaid/#/][Mermaid]] using the [[https://github.com/arnm/ob-mermaid][ob-mermaid]] package. You need to install the [[https://github.com/mermaid-js/mermaid-cli][mermaid-cli]] and
+this is easiest to achieve using ~npm~ if you are on GNU/Linux or ~brew~ if you're on OSX.
+
+#+begin_src mermaid :eval no
+
+#+end_src
+
 * Links
 
 + [[https://www.jstatsoft.org/article/view/v046i03][A Multi-Language Computing Environment for Literate Programming and Reproducible Research | Journal of Statistical Software]]
+
+** Packages
++ [[https://github.com/arnm/ob-mermaid][arnm/ob-mermaid: Generate mermaid diagrams within Emacs org-mode babel]]
++ [[https://github.com/yjwen/org-reveal/][yjwen/org-reveal: Exports Org-mode contents to Reveal.js HTML presentation.]]

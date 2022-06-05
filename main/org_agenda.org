@@ -19,7 +19,7 @@ call the Agenda View (~C-c a a~) the resulting view will show these, right down 
 ~[hh:mm]~ in the date/time.
 
 * Repeating Entries
-If you want a task to [[https://orgmode.org/manual/Repeated-tasks.html][repeat tasks]] then you should include include a repeater in the ~SCHEDULED~ or ~DEADLINE~
+If you want a task to [[https://orgmode.org/manual/Repeated-tasks.html][repeat tasks]] then you should include a repeater in the ~SCHEDULED~ or ~DEADLINE~
 timestamp. There are repeaters for ~y~ ear, ~m~ onth, ~w~ eek and ~h~ our. If you need an earlier warning for a deadline
 then include in it a negative period. For example the following repeats monthly but has a warning five days before hand.
 
@@ -33,6 +33,65 @@ To view your Agenda use ~C-c a~ to bring up a menu of options, the weekly agenda
 
 You can mark tasks ~DONE~ with ~C-c t~ to toggle their status. Tasks not completed on-time roll over and are added to
 the end of the next day from where they can be marked as ~DONE~.
+
+* Capturing events
+
+I save notes to ~\~/org/agenda.org~ and have the following ~org-capture-templates~ setup to save things to different
+sections. If something is due to happen or has a deadline then the ~SCHEDULED: <YYYY-MM-DD [hh:mm]>~ or ~DEADLINE:
+<YYYY-MM-DD [hh:mm]>~ and obviously if its going under ~Weekly~ / ~Fortnightly~ / ~Monthly~ / ~Annually~ then the
+appropriate repeater is added.
+
+#+begin_src lisp :eval no
+  (setq org-capture-templates
+    '(;; Agenda
+	    ("a" "Agenda")
+	    ("au" "Things to get Done" entry (file+olp "~/org/agenda.org" "Things to get Done")
+         "** TODO %U %?\n" :prepend t)
+	    ("an" "Not so Urgent" entry (file+olp "~/org/agenda.org" "Not so Urgent")
+         "** TODO %U %?\n" :prepend t)
+	    ("ac" "Computing" entry (file+olp "~/org/agenda.org" "Computing")
+         "** TODO %U %?\n" :prepend t)
+	    ("aw" "Weekly" entry (file+olp "~/org/agenda.org" "Weekly")
+         "** TODO %U %?\n" :prepend t)
+	    ("af" "Fortnightly" entry (file+olp "~/org/agenda.org" "Fortnightly")
+         "** TODO %U %?\n" :prepend t)
+	    ("am" "Monthly" entry (file+olp "~/org/agenda.org" "Monthly")
+         "** TODO %U %?\n" :prepend t)
+	    ("ac" "Annually" entry (file+olp "~/org/agenda.org" "Annually")
+         "** TODO %U %?\n" :prepend t)))
+#+end_src
+
+* Org-gtd
+
+An extension to Org Agenda that implements the[[https://gettingthingsdone.com/what-is-gtd/][Get Things Done]] methodology popularised by David Allen is the [[https://github.com/Trevoke/org-gtd.el][org-gtd]]
+mode. The system is used to capture events, tasks, ideas and so forth quickly, these are stowed for subsequent attention
+and the crux is not to just take copious notes to your ~inbox.org~ but to set aside time to go through and process these
+notes deciding what action needs doing with them. The aim is to minimise you distractions when you come across a new
+topic and not allow yourself to disappear down the new rabbit hole. Instead they are captured quickly and then dealt
+with at a later date/time.
+
+#+begin_src lisp :eval no
+  ;;; Org-gtd
+  ;;; https://github.com/Trevoke/org-gtd.el/blob/master/doc/org-gtd.org
+  ;;;
+  (use-package org-gtd
+    :after org
+    :demand t
+    :custom
+    (setq org-gtd-directory "~/org/gtd")
+    (org-edna-use-inheritance t)
+    :config
+    (org-edna-mode)
+    :bind
+    (("C-c d c" . org-gtd-capture)
+     ("C-c d e" . org-gtd-engage)
+     ("C-c d p" . org-gtd-process-inbox)
+     ("C-c d n" . org-gtd-show-all-next)
+     ("C-c d s" . org-gtd-show-stuck-projects)
+     :map org-gtd-process-map
+     ("C-c d g" . org-gtd-choose)))
+
+#+end_src
 
 * Links
 + [[https://irreal.org/blog/?p=5045][Bulk Rescheduling of Org Agenda Items | Irreal]]
