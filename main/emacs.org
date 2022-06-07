@@ -43,3 +43,4 @@ of the Language Server Protocol (LSP) courtesy of which supports [[id:5b5d1562-e
 + [[https://www.masteringemacs.org/][Mastering Emacs]]
 + [[https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][An Introduction to Programming in Emacs Lisp]]
 + [[https://github.com/emacs-tw/awesome-emacs][Awesome Emacs: A community driven list of useful Emacs packages, libraries and other items.]]
++ [[https://www.masteringemacs.org/article/emacs-builtin-elisp-cheat-sheet][Emacs's Builtin Elisp Cheat Sheet - Mastering Emacs]]

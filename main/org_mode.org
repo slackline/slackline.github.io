@@ -26,3 +26,20 @@ text files. There are diaries and agendas, literate programming, note organisati
 + [[https://blog.jethro.dev/posts/processing_inbox/][Part 2: Processing The Inbox]]
 + [[https://blog.jethro.dev/posts/zettelkasten_with_org/][Part 3: Zettelkasten with Org-mode]]
 + [[https://blog.jethro.dev/posts/automatic_publishing/][Part 4: Automatic Web Publishing]]
+
+** Extensions
+
+There are hundreds!
+
++ [[https://www.orgroam.com/][Org-roam]]
++ [[https://github.com/org-roam/org-roam-ui][org-roam/org-roam-ui: A graphical frontend for exploring your org-roam Zettelkasten]]
++ [[https://github.com/minad/org-modern][minad/org-modern: Modern Org Style]]
++ [[https://github.com/Trevoke/org-gtd.el][Trevoke/org-gtd.el: A package for using GTD using org-mode]]
+
+*** Org Babel
+
++ [[https://github.com/yjwen/org-reveal/][yjwen/org-reveal: Exports Org-mode contents to Reveal.js HTML presentation.]]
++ [[https://ox-hugo.scripter.co/][ox-hugo - Org to Hugo exporter]]
++ [[https://github.com/arnm/ob-mermaid][arnm/ob-mermaid: Generate mermaid diagrams within Emacs org-mode babel]]
++ [[https://github.com/rlister/org-present][rlister/org-present: Ultra-minimalist presentation minor-mode for Emacs org-mode.]]
++ [[https://github.com/dakrone/ox-tufte][dakrone/ox-tufte: Emacs' Org-mode export backend for Tufte HTML]]
