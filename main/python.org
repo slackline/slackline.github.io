@@ -14,6 +14,7 @@ end-of-life was [[https://endoflife.date/python][2010-07-03]].
 + [[id:d7b0fb90-d668-4e31-bc2d-305f6ee14fc9][Numpy]]
 + Pandas
 + SciPy
+
 * Linting
 
 Linting is the process of following a specific coding style. This has many advantages in that it makes the code easier
@@ -44,7 +45,8 @@ In Python there is the built-in [[https://docs.python.org/3/library/unittest.htm
 
 * Packaging
 
-At some point you are likely to want to create a package out of your code, read more on that at [[id:bb57f65e-58f4-45de-9620-901dc998f6d6][python_packaging]].
+At some point you are likely to want to create a package out of your code, read more on that at [[id:bb57f65e-58f4-45de-9620-901dc998f6d6][Python Packaging]].
+
 * Data Structures
 :PROPERTIES:
 :ID:       8da3c4d1-e3ef-40ec-b2bd-1d5685c8fa51

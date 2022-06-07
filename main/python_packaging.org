@@ -23,17 +23,163 @@ files in an organised hierarchy with a sub-directory of the same name for Python
       └── ./tests/tcx2gpx
 #+END_SRC
 
+* Entry Points
+
+It can be useful to provide an entry point to your package so that users can simply type a single command after
+installing the package (typically under a virtual environment) to be able to run it from the command line. An exposition
+of this approach can be read [[https://amir.rachum.com/blog/2017/07/28/python-entry-points/][here]] and the documentation on how to do this with setuptools is [[https://setuptools.pypa.io/en/latest/userguide/entry_point.html][here]]. Add something similar
+to the following to your ~setup.cfg~
+
+#+begin_src conf :eval no
+  [options.entry_points]
+  console_scripts =
+      find_pg = pgfinder:find_pg
+#+end_src
+
+With the function you wish to run defined in ~__init__.py~ and a hook defined in ~__main__.py~.
+
+
 * Setup
 
 Traditionally configuration of meta-data such as author, code repository and license was made via ~setup.py~ but under
 the current version of Setuptools that is obsolete. Instead it is essential to have a ~pyproject.toml~ file in the top
 level of your directory with a bare minimum of...
 
-#+BEGIN_SRC conf
+#+begin_src conf
   [build-system]
   requires = ["setuptools"]
   build-backend = "setuptools.build_meta"
-#+END_SRC
+#+end_src
 
 You can then continue to use this file for additional configuration options or use ~setup.cfg~ or ~setup.py~ (although
-the later is discouraged).
+the later is discouraged). A sample ~setup.cfg~ is shown below, some key fields to note are the
+~long_description_content_type = text/markdown~ which will ensure that if you use Markdown for the ~README.md~ it will
+be correctly rendered.
+
+#+begin_src conf :eval no
+  [metadata]
+  name = pgfinder
+  version = 0.0.1
+  description =
+  long_description = file: README.md
+  long_description_content_type = text/markdown
+  url = https://github.com/Mesnage-Org/pgfinder
+  author = pgfinder Team
+  license = GNU Lesser GPLv3
+  project_urls =
+    Bug Tracker = https://github.com/Mesnage-Org/pgfinder/issues
+    Documentation = https://mesnage-org.github.io/pgfinder/
+
+
+  [options]
+  python_requires = >=3.7
+
+  zip_safe = False
+
+  install_requires =
+    matplotlib
+    numpy
+    pandas
+    ruamel.yaml
+    pysqlite3
+    pyyaml
+
+  packages = find:
+
+  [options.extras_require]
+  tests =
+    pytest>=7.0
+    pytest-cov
+    pytest-mpl
+
+  docs =
+    Sphinx<5.0
+    sphinx_rtd_theme
+    myst_parser
+    sphinx_markdown_tables
+    pydata_sphinx_theme
+    sphinxcontrib-mermaid
+
+  [options.packages.find]
+  exclude = tests*
+
+  [coverage:run]
+  omit =
+    *conftest.py
+    *tests*
+    **/__init__*
+#+end_src
+
+
+* Publishing to PyPi
+
+[[https://pypi.org][PyPi]] is the Python Package Index that provides a central repository for installing packages using [[https://pip.pypa.io/en/stable/][~pip~]] (although ~pip~
+can be configured to work with other such servers such as internal private ones).
+
+To facilitate publishing packages to PyPi there is [[https://test.pypi.org/][TestPyPI]] which is a mirror where you can test deployment. Create
+accounts on both the main PyPi and TestPyPi servers.
+
+** Generate Distribution Archive
+
+In your package you should create an archive of your package with the latest versions of ~setuptools~ and ~wheel~. To do
+this in your virtual environment run the following. The documentation for how to do this is at [[https://setuptools.pypa.io/en/latest/setuptools.html][Building and Distributing
+Packages with Setuptools]].
+
+It is not essential to have a ~setup.py~ which is being deprecated if you are using the newer recommended ~setup.cfg~ /
+~pyproject.toml~  combination to configure your package as ~setuptools~ will create a dummy file with the required
+contents for you providing you have the following in ~pyproject.toml~.
+
+
+#+begin_src :eval no
+  [build-system]
+  requires = [
+    "setuptools >= 40.9.0",
+    "wheel",
+  ]
+  build-backend = "setuptools.build_meta"
+#+end_src
+
+*NB* As of writing I could not find information on how to build the distribution so have opted to include a basic
+~setup.py~ shown below in order to build.
+
+#+begin_src python :eval no
+  """Setup package for building"""
+  import setuptools
+
+  setuptools.setup()
+#+end_src
+
+The package can now be built locally with...
+
+#+begin_src bash :eval no
+  python -m pip install --upgrade setuptools wheel
+  python setup.py sdist bdist_wheel
+#+end_src
+
+* Publishing on [[https://test.pypi.org/][TestPyPI]]
+
+Before pushing the package to the main PyPi server it is prudent to test things out on  [[https://test.pypi.org/][TestPyPI]] first. You must first
+generate an API Token from your account settings page. It needs a name and the scope should be `Entire account (all
+projects)`. This token will be shown once so do *not* navigate away from the page until you have copied it.
+
+pypi-AgENdGVzdC5weXBpLm9yZwIkNzhiNzc0ZjAtNmNjZS00ZWU4LTk2OWItZjVjZDFhYTFkYzBjAAIleyJwZXJtaXNzaW9ucyI6ICJ1c2VyIiwgInZlcnNpb24iOiAxfQAABiAMm9-iuKcpGQsydQBXm7G_doS5wn6CJmnCDtYtaLZRYg
+
+You use [[https://twine.readthedocs.io/en/latest/][twine]] to upload the package and should create a ~.pypirc~ file in the root of the packages directory that
+contains your API key and the username ~__token__~
+
+#+begin_src :eval no
+  [testpypi]
+    username = __token__
+    password = pypi-AgENdGVzdC5weXBpLm9yZwIkNzhiNzc0ZjAtNmNjZS00ZWU4LTk2OWItZjVjZDFhYTFkYzBjAAIleyJwZXJtaXNzaW9ucyI6ICJ1c2VyIiwgInZlcnNpb24iOiAxfQAABiAMm9-iuKcpGQsydQBXm7G_doS5wn6CJmnCDtYtaLZRYg
+#+end_src
+
+Once this is in place you are ready to use ~twine~ to upload the package using the configuration file you have just
+created.
+
+#+begin_src bash :eval no
+  twine upload --config-file ./.pypirc --repository testpypi dist/*
+#+end_src
+
+* Links
+
++ [[https://packaging.python.org/en/latest/tutorials/packaging-projects/][Packaging Python Projects]]
