@@ -32,14 +32,18 @@ text files. There are diaries and agendas, literate programming, note organisati
 There are hundreds!
 
 + [[https://www.orgroam.com/][Org-roam]]
-+ [[https://github.com/org-roam/org-roam-ui][org-roam/org-roam-ui: A graphical frontend for exploring your org-roam Zettelkasten]]
-+ [[https://github.com/minad/org-modern][minad/org-modern: Modern Org Style]]
-+ [[https://github.com/Trevoke/org-gtd.el][Trevoke/org-gtd.el: A package for using GTD using org-mode]]
++ [[https://github.com/org-roam/org-roam-ui][org-roam-ui: A graphical frontend for exploring your org-roam Zettelkasten]]
++ [[https://github.com/Trevoke/org-gtd.el][org-gtd : A package for using GTD using org-mode]]
++ [[https://github.com/jkitchin/org-ref][org-ref: org-mode modules for citations, cross-references, bibliographies in org-mode and useful bibtex tools to go with it.]]
 
 *** Org Babel
 
-+ [[https://github.com/yjwen/org-reveal/][yjwen/org-reveal: Exports Org-mode contents to Reveal.js HTML presentation.]]
-+ [[https://ox-hugo.scripter.co/][ox-hugo - Org to Hugo exporter]]
-+ [[https://github.com/arnm/ob-mermaid][arnm/ob-mermaid: Generate mermaid diagrams within Emacs org-mode babel]]
-+ [[https://github.com/rlister/org-present][rlister/org-present: Ultra-minimalist presentation minor-mode for Emacs org-mode.]]
-+ [[https://github.com/dakrone/ox-tufte][dakrone/ox-tufte: Emacs' Org-mode export backend for Tufte HTML]]
++ [[https://github.com/yjwen/org-reveal/][org-reveal : Exports Org-mode contents to Reveal.js HTML presentation.]]
++ [[https://ox-hugo.scripter.co/][ox-hugo : Org to Hugo exporter]]
++ [[https://github.com/arnm/ob-mermaid][ob-mermaid : Generate mermaid diagrams within Emacs org-mode babel]]
++ [[https://github.com/rlister/org-present][org-present : Ultra-minimalist presentation minor-mode for Emacs org-mode.]]
++ [[https://github.com/dakrone/ox-tufte][ox-tufte : Emacs' Org-mode export backend for Tufte HTML]]
+
+
+*** Themes
++ [[https://github.com/minad/org-modern][org-modern : Modern Org Style]]
