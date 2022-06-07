@@ -167,7 +167,7 @@ pypi-AgENdGVzdC5weXBpLm9yZwIkNzhiNzc0ZjAtNmNjZS00ZWU4LTk2OWItZjVjZDFhYTFkYzBjAAI
 You use [[https://twine.readthedocs.io/en/latest/][twine]] to upload the package and should create a ~.pypirc~ file in the root of the packages directory that
 contains your API key and the username ~__token__~
 
-#+begin_src :eval no
+#+begin_src conf :eval no
   [testpypi]
     username = __token__
     password = pypi-AgENdGVzdC5weXBpLm9yZwIkNzhiNzc0ZjAtNmNjZS00ZWU4LTk2OWItZjVjZDFhYTFkYzBjAAIleyJwZXJtaXNzaW9ucyI6ICJ1c2VyIiwgInZlcnNpb24iOiAxfQAABiAMm9-iuKcpGQsydQBXm7G_doS5wn6CJmnCDtYtaLZRYg
