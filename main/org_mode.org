@@ -16,6 +16,9 @@ text files. There are diaries and agendas, literate programming, note organisati
 * Links
 + [[https://orgmode.org][OrgMode]]
 
+** Zettelkasten
++ [[https://zettelkasten.de/introduction/][Introduction to the Zettelkasten Method • Zettelkasten Method]]
+
 ** Guides
 
 + [[https://github.com/james-stoup/emacs-org-mode-tutorial][A primer for users trying to make sense of Org Mode]]

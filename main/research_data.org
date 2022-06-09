@@ -13,11 +13,17 @@ manner that it is usable by others.
 A major feature therefore lies around what metadata is used to describe the data contained within. This should be rich
 in detail so that the content is well described and to make it findable it should include a globally unique and
 persistent identifier, that makes it possible to retrieve the data
+
+
+
 * Links
 + [[https://theodi.org][The Open Data Institute]]
 + [[http://opendsi.cc][Open Data Science Initiative]]
 + [[https://www.pachyderm.com/][Pachyderm | The Data Foundation for Machine Learning]]
 + [[https://dataverse.scholarsportal.info/][Scholars Portal Dataverse]]
 
+** Articles
++ [[https://www.nature.com/articles/sdata201618][The FAIR Guiding Principles for scientific data management and stewardship | Scientific Data]]
++ [[https://rd-alliance.org/group/fair-research-software-fair4rs-wg/outcomes/fair-principles-research-software-fair4rs-0][FAIR Principles for Research Software (FAIR4RS Principles) | RDA]]
 ** Journals
 + [[https://www.nature.com/sdata/][Scientific Data]]
