@@ -22,6 +22,7 @@ text files. There are diaries and agendas, literate programming, note organisati
 ** Guides
 
 + [[https://github.com/james-stoup/emacs-org-mode-tutorial][A primer for users trying to make sense of Org Mode]]
++ [[https://www.labri.fr/perso/nrougier/GTD/index.html#org0b9def2][Get Things Done with Emacs]]
 
 *** Org-mode Workflow by Jethro Kuan
 + [[https://blog.jethro.dev/posts/org_mode_workflow_preview/][Org-mode Workflow: A Preview · Jethro Kuan]]
