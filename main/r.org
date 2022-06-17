@@ -113,6 +113,7 @@ help with that. An excellent resource is the [[https://r-pkgs.org/][R Packages b
 + [[https://geocompr.robinlovelace.net/][Geocomputation with R]]
 + [[https://www.bayesrulesbook.com/][Bayes Rules! An Introduction to Applied Bayesian Modeling]]
 + [[https://epirhandbook.com/en/][The Epidemiologist R Handbook : R for applied epidemiology and public health]]
++ [[http://hbiostat.org/rflow/][R Workflow for Reproducible Biomedical Research Using Quarto]]
 
 ** HowTos
 
