@@ -56,3 +56,6 @@ for editing your code but it is really focused on helping you work with Git.
 + [[https://git-scm.com][Git]]
 + [[https:magit.vc][Magit]]
 + [[https://www.gitkraken.com/][GitKraken]]
+
+** Learning Resources
++ [[https://onlywei.github.io/explain-git-with-d3/#clean][Explain Git with D3]]
