@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       251b3ae4-4a5c-4c44-909a-dcbc0aef4b45
+:END:
+#+TITLE: Quarto
+#+DATE: <2022-05-24 Tue 22:07>
+#+FILETAGS: :reproducibility:literate programming:
+
+[[https://quarto.org/][Quarto]] is a [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][literate programming]] engine based on [[https://pandoc.org/][Pandoc]] that supports multiple scientific languages ([[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]], [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]], [[id:67f03851-d5bf-46ea-a7f5-14dfbaa7c61c][Julia]]
+and [[https://observablehq.com/@observablehq/observables-not-javascript][Observable]]). Its syntax has a lot in common with other literate programming languages such as [[id:ca27ae38-f187-4a3c-803f-b36ee2cfa374][RMarkdown]] and [[id:6e75f9df-df3d-4402-b5ad-ed98d0834e08][Org
+Babel]] in so much as code chunks have parameters which handle how they are processed and then displayed in the resulting
+document.
+
+* Links
++ [[https://t.co/FDlvjq4qrc][quarto.org]]
++ [[https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/][A Quarto tip a day]]

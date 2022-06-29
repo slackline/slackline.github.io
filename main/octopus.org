@@ -1,0 +1,65 @@
+:PROPERTIES:
+:ID:       5d84509c-5895-4890-b073-5cdfe0ad094f
+:END:
+#+TITLE: Octopus
+#+DATE: <2022-05-24 Tue 22:07>
+#+FILETAGS: :open research:octopus:
+
+Alex Freeman proposed the original idea of Octopus ([[https://octopuspublishing.org/][Prototype Site]]) to address short-comings of the current
+peer-reviewed system.
+
+[[https://www.ukrn.org/][UKRN]] founded 2019, academic collaboration, made up of local networks, informal staff organising groups of researchers
+to share ideas and practice, institutional members, funders and publishers are the third tier of communities.
+Brings these groups together to communicate and improve the area of academic publishing, some ideas may disrupt but some
+may not come to fruition.
+
+UKRN is training in sharing study proposals, designs, results etc.
+
+Protocol registration, publications, data may be spread out across a range of repositories/sites, Octopus aims to bring
+these together to a centralised location. This helps streamline the activity of assessing contributions and impacts, in
+essence improve research integrity.
+
+Internationally reproducbility networks have been growing, often following the template of UKRN. Research is a global
+initiative and so Octopus also seeks to address collaboration around the world.
+
+* Alex Freeman
+
+Cared deeply about the scientific process for understanding the world around us, this was being undermined because all
+the sharing of output was stiffling this process (i.e. journal articles), but these are a "story" but a lot of research
+work is left out of articles and its important that this is captured, shared and learnt/built-on.
+
+There should be no discrimination based on subject area or if the finding is positive, it should be judged on the
+quality of the work done.
+
+To address this Octopus is fast, free and fair this helps remove barriers and makes it open to all contributions. It
+takes a systems approach across disciplines rather than focusing on specific problems.
+
+** Publication Chain
+There are eight types of objects/articles in Octopus...
+
++ Problem
++ Hypothesis
++ Protocol
++ Data
++ Analysis
++ Interpretation
++ Real World Application
++ Reviews
+
+You can't see the first name nor institution of authors. There are quality metrics for reviewing articles these will
+focus on assessing reproducibility, clarity and robustness (currently under review/development). Publications can also
+have red-flags raised against them so an open and public conversation can be had with authors.
+
+Author views pull in [[https://orcid.org/][ORCiD]] information, employment history and their reviews are included in order to understand their
+expertise.
+
+** Writing Publications
+
+Need to login using your [[https://orcid.org/][ORCiD]]. Supports Word and LaTeX, co-authors get added automatically and publication is instant.
+
+Octopus will automatically publish existing publications and we can rate and link between the existing
+literature. Linking gets mentioned on users profile pages.
+
+* Links
++ [[https://reproducibilitea.org/][ReproducibiliTea | ReproducibiliTea - Journal Clubs for Open Science]]
++ [[https://www.octopus.ac/][Octopus (BETA)]]
