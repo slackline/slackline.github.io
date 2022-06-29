@@ -43,6 +43,11 @@ even a popular paradigm of [[https://en.wikipedia.org/wiki/Test-driven_developme
 
 In Python there is the built-in [[https://docs.python.org/3/library/unittest.html][unittest — Unit testing framework]] but a more popular one is [[id:3cca0dfd-0c82-4685-b9ed-6314f7c8b78f][Pytest]]
 
+* Project Management
+
+[[https://hatch.pypa.io/latest/][Hatch]] is a modern, extensible Python project manager that standardises the build system, eases publishing to PyPI and
+helps with environment and version management.
+
 * Packaging
 
 At some point you are likely to want to create a package out of your code, read more on that at [[id:bb57f65e-58f4-45de-9620-901dc998f6d6][Python Packaging]].
