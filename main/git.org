@@ -36,13 +36,15 @@ Request to have their changes incorporated into the original body of code for a 
 ** GitHub
 
 Perhaps the largest and most widely used forge, read more
+
 ** GitLab
 
 * IDE Integration
 ** Emacs Magit
 
 If you use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] (and why wouldn't you?) then you should use [[https:magit.vc][Magit]] to manage your Git repository and interactions with
-forges such as GitHub and GitLab.
+forges such as GitHub and GitLab. It includes the ability to synchronise locally details of issues and pull requests
+from the repositories forge (but this requires a little extra work that is well documented).
 
 ** RStudio
 
@@ -59,3 +61,7 @@ for editing your code but it is really focused on helping you work with Git.
 
 ** Learning Resources
 + [[https://onlywei.github.io/explain-git-with-d3/#clean][Explain Git with D3]]
+
+*** GitHub Blog
++ [[https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/][How to undo (almost) anything with Git]]
++ [[https://github.blog/2022-06-30-write-better-commits-build-better-projects/][Write Better Commits, Build Better Projects]]
