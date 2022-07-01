@@ -38,6 +38,25 @@ to the following to your ~setup.cfg~
 
 With the function you wish to run defined in ~__init__.py~ and a hook defined in ~__main__.py~.
 
+* Resources
+
+Including resources such as default parameters is possible. A useful thread on StackOverflow is [[https://stackoverflow.com/questions/6028000/how-to-read-a-static-file-from-inside-a-python-package][here]] (most useful
+answers I found were [[https://stackoverflow.com/a/58941536][this]] which includes a link to an [[https://github.com/wimglenn/resources-example][example repository]] comparing the different approaches and [[https://stackoverflow.com/a/51724506][this
+exposition of pkgutil]]).
+
+The examples don't quite fit my use case as I typically load parameters and configuration from YAML files, to do this I
+placed the files under ~<package>/config/parameters.yaml~ and then in ~__init__.py~ have the following...
+
+#+begin_src python :eval no
+  import yaml
+  from pkgutil import get_data
+
+  PARAMETERS_FILE = "config/parameters.yaml"
+  PARAMETERS = get_data(__package__, PARAMETERS_FILE)
+  PARAMETERS = yaml.safe_load(PARAMETERS)
+#+end_src
+
+~PARAMETERS~ is now a dictionary that contains the contents of ~config/parameters.yaml~.
 
 * Setup
 
