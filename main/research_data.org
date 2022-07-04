@@ -14,7 +14,11 @@ A major feature therefore lies around what metadata is used to describe the data
 in detail so that the content is well described and to make it findable it should include a globally unique and
 persistent identifier, that makes it possible to retrieve the data
 
+* Data Version Control
 
+Version controlling data is just as important as version controlling your software if you are to make your analysis
+reproducible. To that end tools like [[https://dvc.org/][DVC]] and [[https://dagshub.com/][dagshub]] make life simpler, although with hosting of data on forges care and
+consideration should be given to principles of GDPR.
 
 * Links
 + [[https://theodi.org][The Open Data Institute]]
