@@ -21,6 +21,7 @@
 
 + [[https://merely-useful.tech/py-rse/][Research Software Engineering with Python]]
 + [[https://merely-useful.tech/r-rse/][Research Software Engineering with R]]
++ [[https://goodresearch.dev/index.html][The Good Research Code Handbook]]
 
 ** Papers
 + [[https://openresearchsoftware.metajnl.com/article/10.5334/jors.359/][The Research Software Encyclopedia: A Community Framework to Define Research Software]]
