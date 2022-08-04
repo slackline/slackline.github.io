@@ -61,6 +61,9 @@ viewing the documentation as HTML and is a "landing page". As we are using
 
 *** ~conf.py~
 
+This is the configuration file for Sphinx.
+
+
 #+BEGIN_SRC python :eval no
   import os
 import sys
@@ -277,6 +280,13 @@ epub_exclude_files = ["search.html"]
         @$(SPHINXAPIBUILD) -o "$(SOURCEDIR)" "../" --separate
         @$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 #+END_SRC
+
+**** Mocking
+
+~autodoc_mock_imports = []~ allows a list of modules to be mocked and can be useful if there are errors caused by
+certain modules or they are not available at build time. However, if a module is in the environment where the package is
+being built then you will have to explicitly import it within the ~conf.py~ file before any modules that are being
+documented attempt to import it.
 
 ** Autodoc
 
