@@ -158,21 +158,11 @@ contents for you providing you have the following in ~pyproject.toml~.
   build-backend = "setuptools.build_meta"
 #+end_src
 
-*NB* As of writing I could not find information on how to build the distribution so have opted to include a basic
-~setup.py~ shown below in order to build.
-
-#+begin_src python :eval no
-  """Setup package for building"""
-  import setuptools
-
-  setuptools.setup()
-#+end_src
-
 The package can now be built locally with...
 
 #+begin_src bash :eval no
   python -m pip install --upgrade setuptools wheel
-  python setup.py sdist bdist_wheel
+  python -m build
 #+end_src
 
 * Publishing on [[https://test.pypi.org/][TestPyPI]]
@@ -199,6 +189,35 @@ created.
   twine upload --config-file ./.pypirc --repository testpypi dist/*
 #+end_src
 
+** Testing the Package
+
+After having uploaded your package to the TestPyPI server you should create a clean virtual environment and try
+installing the package from where you have just uploaded it. You can do this using ~pip~ and the ~--index-url~ and
+~--extra-index-url~, the former installs your package from TestPyPI, the later installs dependencies from PyPI.
+
+#+begin_src bash :eval no
+  pip install https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ your-package
+#+end_src
+
+Once installed you can try running the code, scripts or notebooks associated with the package as you would normally.
+
+* Versioning and Automating Releases
+
+Typically the version is defined in the ~__version__~ value or as a value in ~setup.cfg~ or ~pyproject.toml~ but this
+has some downsides in that you have to remember to update the string manually when you are ready for a release and it
+doesn't tie in with using tags in Git to tag versions of your commits.
+
+Enter [[https://github.com/python-versioneer/python-versioneer][versioneer]] which specifically sets out to handle this very problem.
+
+#+BEGIN_QUOTE
+This is a tool for managing a recorded version number in distutils/setuptools-based python projects. The goal is to
+remove the tedious and error-prone "update the embedded version string" step from your release process. Making a new
+release should be as easy as recording a new tag in your version-control system, and maybe making new tarballs.
+#+END_QUOTE
+
+
 * Links
 
 + [[https://packaging.python.org/en/latest/tutorials/packaging-projects/][Packaging Python Projects]]
++ [[https://setuptools.pypa.io/en/latest/setuptools.html][Building and Distributing Packages with Setuptools]]
++ [[https://github.com/wimglenn/resources-example][Packaging Data files in a Python Distribution]]
