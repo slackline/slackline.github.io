@@ -215,7 +215,37 @@ remove the tedious and error-prone "update the embedded version string" step fro
 release should be as easy as recording a new tag in your version-control system, and maybe making new tarballs.
 #+END_QUOTE
 
+The [[https://github.com/python-versioneer/python-versioneer/blob/master/INSTALL.md][installation instructions]] are concise and clear and should be easy to follow.
 
+
+When it comes to building I found that the current version of [[https://pypa-build.readthedocs.io/en/latest/][build]] (0.8.0 as of writing) by default creates a virtual
+environment to build the package under and this resulted in an error about ~versioneer~ not being installed (see [[https://github.com/python-versioneer/python-versioneer/issues/192][related
+issue #192]], although I was using the default ~style = pep440~). My solution was to try using the ~--no-isolation~ (~-n~)
+flag to build so that a virtual environment was not used.
+
+#+BEGIN_CODE bash :eval no
+python -m build -n
+* Getting dependencies for sdist...
+Traceback (most recent call last):
+  File "/home/user/.virtualenvs/pgfinder/lib/python3.10/site-packages/pep517/in_process/_in_process.py", line 351, in <module>
+    main()
+  File "/home/user/.virtualenvs/pgfinder/lib/python3.10/site-packages/pep517/in_process/_in_process.py", line 333, in main
+    json_out['return_val'] = hook(**hook_input['kwargs'])
+  File "/home/user/.virtualenvs/pgfinder/lib/python3.10/site-packages/pep517/in_process/_in_process.py", line 285, in get_requires_for_build_sdist
+    return hook(config_settings)
+  File "/home/user/.virtualenvs/pgfinder/lib/python3.10/site-packages/setuptools/build_meta.py", line 181, in get_requires_for_build_sdist
+    return self._get_build_requires(config_settings, requirements=[])
+  File "/home/user/.virtualenvs/pgfinder/lib/python3.10/site-packages/setuptools/build_meta.py", line 159, in _get_build_requires
+    self.run_setup()
+  File "/home/user/.virtualenvs/pgfinder/lib/python3.10/site-packages/setuptools/build_meta.py", line 174, in run_setup
+    exec(compile(code, __file__, 'exec'), locals())
+  File "setup.py", line 6, in <module>
+    version=versioneer.get_version(),
+AttributeError: module 'versioneer' has no attribute 'get_version'
+
+#+END_CODE
+
+This resulted in an ~AttributeError~
 * Links
 
 + [[https://packaging.python.org/en/latest/tutorials/packaging-projects/][Packaging Python Projects]]
