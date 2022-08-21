@@ -1,10 +1,23 @@
 :PROPERTIES:
 :ID:       9c6257dc-cbef-4291-8369-b3dc6c173cf2
 :END:
-#+TITLE: Python
+#+TITLE: Bash
 #+DATE: [2022-04-21 Thu 10:00]
 #+FILETAGS: :bash:programming:linux:
 
+* Tips and Tricks
+
+** Make a directory for every file
+
+You can use [[http://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion][variable substitution]] to quickly make a directory for every file in a given location (from [[https://unix.stackexchange.com/a/220026/39149][here]]).
+
+#+BEGIN_SRC bash eval:no
+  cd path/to/directory
+  FILE_EXT="txt"
+  for x in *.txt; do
+    mkdir "${x%\.txt}" && mv "$x" "${x%\.}"
+  done
+#+END_SRC
 
 * Links
 
