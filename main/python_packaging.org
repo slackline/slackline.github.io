@@ -129,7 +129,20 @@ be correctly rendered.
     **/__init__*
 #+end_src
 
+** Package Data
 
+Sometimes you will want to include additional files in your package such as a default YAML configuration file that can
+be loaded.
+
+THis is done using the ~[options.package_data]~ section of ~setup.cfg~ and placing your files under the source of your
+package (i.e. the sub-directory that contains the Python code).
+
+#+begin_src conf :eval no
+  [options.package_data]
+  * = *.yaml
+#+end_src
+
+To load the files of a package you should use then [[https://docs.python.org/3.8/library/importlib.html][~importlib.resources~ module]]
 * Publishing to PyPi
 
 [[https://pypi.org][PyPi]] is the Python Package Index that provides a central repository for installing packages using [[https://pip.pypa.io/en/stable/][~pip~]] (although ~pip~
