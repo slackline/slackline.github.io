@@ -238,7 +238,7 @@ flag to build so that a virtual environment was not used.
 
 #+BEGIN_CODE bash :eval no
 python -m build -n
-* Getting dependencies for sdist...
+ * Getting dependencies for sdist...
 Traceback (most recent call last):
   File "/home/user/.virtualenvs/pgfinder/lib/python3.10/site-packages/pep517/in_process/_in_process.py", line 351, in <module>
     main()
@@ -259,8 +259,16 @@ AttributeError: module 'versioneer' has no attribute 'get_version'
 #+END_CODE
 
 This resulted in an ~AttributeError~
+
+* PDM
+
+New kid on the block is [[https://pdm.fming.dev/latest/][PDM]] (Python package and Dependency Manager) which handles all stages of setting up and creating
+a package and managing its dependencies.
+
+
 * Links
 
 + [[https://packaging.python.org/en/latest/tutorials/packaging-projects/][Packaging Python Projects]]
 + [[https://setuptools.pypa.io/en/latest/setuptools.html][Building and Distributing Packages with Setuptools]]
 + [[https://github.com/wimglenn/resources-example][Packaging Data files in a Python Distribution]]
++ [[https://pdm.fming.dev/latest/][PDM - Python package and Dependency Manager]]
