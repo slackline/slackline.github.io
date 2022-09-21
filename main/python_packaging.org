@@ -228,7 +228,13 @@ remove the tedious and error-prone "update the embedded version string" step fro
 release should be as easy as recording a new tag in your version-control system, and maybe making new tarballs.
 #+END_QUOTE
 
-The [[https://github.com/python-versioneer/python-versioneer/blob/master/INSTALL.md][installation instructions]] are concise and clear and should be easy to follow.
+The [[https://github.com/python-versioneer/python-versioneer/blob/master/INSTALL.md][installation instructions]] are concise and clear and should be easy to follow. Configuration is through a section in
+~setup.cfg~ and typically the required style is ~pep440~ but it is worth being aware that ~versioneer~ produces versions
+that indicates if you're ~HEAD~ is ahead of the last ~git tag~ that was applied and that these are not compliant with
+[PEP440](https://peps.python.org/pep-0440/). This has the side effect of this is that you will not be able to upload
+your package to [PyPI](https://pypi.org) either manually or via a GitHub Action (more on this below). If you want to
+force PEP40 compliance then you should use ~style = pep440-pre~ which whilst indicating information about how far ahead
+of the last tag the current commit is it still produces valid PEP440 versions.
 
 
 When it comes to building I found that the current version of [[https://pypa-build.readthedocs.io/en/latest/][build]] (0.8.0 as of writing) by default creates a virtual
@@ -237,34 +243,65 @@ issue #192]], although I was using the default ~style = pep440~). My solution wa
 flag to build so that a virtual environment was not used.
 
 #+BEGIN_CODE bash :eval no
-python -m build -n
- * Getting dependencies for sdist...
-Traceback (most recent call last):
-  File "/home/user/.virtualenvs/pgfinder/lib/python3.10/site-packages/pep517/in_process/_in_process.py", line 351, in <module>
-    main()
-  File "/home/user/.virtualenvs/pgfinder/lib/python3.10/site-packages/pep517/in_process/_in_process.py", line 333, in main
-    json_out['return_val'] = hook(**hook_input['kwargs'])
-  File "/home/user/.virtualenvs/pgfinder/lib/python3.10/site-packages/pep517/in_process/_in_process.py", line 285, in get_requires_for_build_sdist
-    return hook(config_settings)
-  File "/home/user/.virtualenvs/pgfinder/lib/python3.10/site-packages/setuptools/build_meta.py", line 181, in get_requires_for_build_sdist
-    return self._get_build_requires(config_settings, requirements=[])
-  File "/home/user/.virtualenvs/pgfinder/lib/python3.10/site-packages/setuptools/build_meta.py", line 159, in _get_build_requires
-    self.run_setup()
-  File "/home/user/.virtualenvs/pgfinder/lib/python3.10/site-packages/setuptools/build_meta.py", line 174, in run_setup
-    exec(compile(code, __file__, 'exec'), locals())
-  File "setup.py", line 6, in <module>
-    version=versioneer.get_version(),
-AttributeError: module 'versioneer' has no attribute 'get_version'
+  python -m build --no-isolation
+  * Getting dependencies for sdist...
 
 #+END_CODE
 
-This resulted in an ~AttributeError~
+** GitHub Action
+
+The GitHub Action [gh-action-pypi-publish](https://github.com/pypa/gh-action-pypi-publish) is available to automate
+publishing to PyPI. You will have to [generate a PYPI token](https://pypi.org/help/#apitoken) (and similarly one for
+[test PyPI](https://test.pypi.org)) and store these under /Settings > Secrets > Actions/ with the names ~PYPI_API_TOKEN~
+and ~TEST_PYPI_API_TOKEN~ respectively.  You can then include the following GitHub Action under
+~.github/workflow/pypi.yaml~
+
+#+BEGIN_CODE yaml :eval no
+name: Publish package to PyPi
+
+on:
+  push:
+    branches:
+      - master
+      # - test/branch    # Uncomment and replace with the branch you are testing on
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    name: Publish package to PyPi
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.9
+      - name: Installing the package
+        run: |
+          pip3 install versioneer
+          pip3 install .
+          pip3 install .[pypi]
+      - name: Build package
+        run: |
+          python -m build --no-isolation
+      - name: Publish package to Test PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+      - name: Publish package to PyPI
+        if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
+
+#+END_CODE
 
 * PDM
 
 New kid on the block is [[https://pdm.fming.dev/latest/][PDM]] (Python package and Dependency Manager) which handles all stages of setting up and creating
 a package and managing its dependencies.
-
 
 * Links
 
