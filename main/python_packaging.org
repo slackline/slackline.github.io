@@ -220,6 +220,8 @@ Typically the version is defined in the ~__version__~ value or as a value in ~se
 has some downsides in that you have to remember to update the string manually when you are ready for a release and it
 doesn't tie in with using tags in Git to tag versions of your commits.
 
+** Versioneer
+
 Enter [[https://github.com/python-versioneer/python-versioneer][versioneer]] which specifically sets out to handle this very problem.
 
 #+BEGIN_QUOTE
@@ -250,9 +252,8 @@ flag to build so that a virtual environment was not used.
 
 ** GitHub Action
 
-The GitHub Action [gh-action-pypi-publish](https://github.com/pypa/gh-action-pypi-publish) is available to automate
-publishing to PyPI. You will have to [generate a PYPI token](https://pypi.org/help/#apitoken) (and similarly one for
-[test PyPI](https://test.pypi.org)) and store these under /Settings > Secrets > Actions/ with the names ~PYPI_API_TOKEN~
+The GitHub Action [[https://github.com/pypa/gh-action-pypi-publish][gh-action-pypi-publish]] is available to automate
+publishing to PyPI. You will have to [[https://pypi.org/help/#apitoken][generate a PYPI token]] (and similarly one for [[https://test.pypi.org][test PyPI]]) and store these under /Settings > Secrets > Actions/ with the names ~PYPI_API_TOKEN~
 and ~TEST_PYPI_API_TOKEN~ respectively.  You can then include the following GitHub Action under
 ~.github/workflow/pypi.yaml~
 
@@ -298,6 +299,84 @@ jobs:
 
 #+END_CODE
 
+** Step-by-step
+
+1. ~pip install versioneer~
+2. Modify ~pyproject.toml~ or ~setup.cfg~ (I use the later). It is /vital/ that the ~tag_prefix~ is correct.
+   #+BEGIN_SRC python :eval no
+   [versioneer]
+   VCS = git
+   style = pep440
+   versionfile_source = clarity/_version.py
+   versionfile_build = clarity/_version.py
+   tag_prefix = v
+   parentdir_prefix =
+   #+END_SRC
+3. If using non-vendored mode further modify ~pyproject.toml~
+4. Add ~import versioneer~ and additional lines to obtain version to ~setup.py~
+   #+BEGIN_SRC python :eval no
+     """Package setup"""
+     from setuptools import setup
+     import versioneer
+
+     setup(
+         version=versioneer.get_version(),
+         cmdclass=versioneer.get_cmdclass(),
+     )
+   #+END_SRC
+5. Run ~versioneer install --[no-]vendor~ (I have used ~--no-vendor~ so far).
+6. Add ~versioneer~ to the ~[pypi]~ requirements section of ~setup.cfg~
+   #+BEGIN_SRC python :eval no
+   [options.extras_require]
+   pypi =
+     build
+     versioneer
+   #+END_SRC
+7. ~pip install .[pypi]~
+8. Add the ~pypi.yaml~ to ~\~/.github/workflows/~ directory.
+   #+BEGIN_SRC yaml :eval no
+     name: Publish package to PyPi
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    name: Publish package to PyPi
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.9
+      - name: Installing the package
+        run: |
+          pip3 install .
+          pip3 install .[pypi]
+      - name: Build package
+        run: |
+          python -m build --no-isolation
+      - name: Publish package to Test PyPI
+        if: github.event_name == 'push'
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+      - name: Publish package to PyPI
+        if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
+
+   #+END_SRC
+9. Add new repository secrets for [[https://pypi.org/][PYPI_API_TOKEN]] and [[https://test.pypi.org][TEST_PYPI_API_TOKEN]] under /Settings > Secrets > Actions/ you have
+   to generate the tokens on both PyPI and Test PyPI.
 * PDM
 
 New kid on the block is [[https://pdm.fming.dev/latest/][PDM]] (Python package and Dependency Manager) which handles all stages of setting up and creating
