@@ -12,3 +12,4 @@
 
 + [[https://doi.org/10.15497/RDA00068][FAIR Principles for Research Software 1.0]] (supersedes [[https://doi.org/10.15497/RDA00068][FAIR Principles for Research Software]])
 + [[https://content.iospress.com/articles/data-science/ds190026][Towards FAIR principles for research software - IOS Press]]
++ [[https://medium.com/czi-technology/new-data-reveals-the-hidden-impact-of-open-source-in-science-11cc4a16fea2][New data reveals the hidden impact of open source in science]]
