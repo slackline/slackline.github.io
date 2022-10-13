@@ -69,9 +69,9 @@ reading both if you are going to use pipes although I'll try and explain each he
 
 #+NAME: tidyverse-forcats
 #+CAPTION: forcats
-#BEGIN_SRC R :eval no
+#+BEGIN_SRC R :eval no
   library(forcats)
-#END_SRC
+#+END_SRC
 
 ** dplyr
 :PROPERTIES:
@@ -80,9 +80,9 @@ reading both if you are going to use pipes although I'll try and explain each he
 
 #+NAME: tidyverse-dplyr
 #+CAPTION: dplyr
-#BEGIN_SRC R :eval no
+#+BEGIN_SRC R :eval no
   library(dplyr)
-#END_SRC
+#+END_SRC
 
 ** tibble
 :PROPERTIES:

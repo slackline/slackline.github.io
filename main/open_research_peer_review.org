@@ -15,10 +15,17 @@ piece of body of research can be peer reviewed. A pre-requisite is having access
 prepare and analyse is and a first step would be to ensure that the results published can be faithfully reproduced from
 the data and the code.
 
+* CodeCheck / ReproHacks
+
+Two useful initiatives that have been gaining traction in recent years are that of [[https://codecheck.org.uk/][CODECHECK]] and [[https://www.reprohack.org/][ReproHack]] which seek to
+take published papers, or pre-prints, that have been written in an open-source framework where code and data is
+available and check that the results can be reproduced.
+
 * Links
 
 + [[https://i4replication.org/][Institute for Replication]]
 + [[https://pubpeer.com/][PubPeer - Search publications and join the conversation.]]
++ [[https://codecheck.org.uk/][CODECHECK]]
 + [[https://www.reprohack.org/paper/][ReproHack Hub]]
 + [[https://replicationnetwork.com/][The Replication Network | Furthering the Practice of Replication in Economics]]
 + [[https://www.itcrtraining.org/courses#h.ugabyqq1bigx][ITCR Courses]] includes two on reproducibility in Cancer Informatics
