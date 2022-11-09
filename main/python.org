@@ -103,9 +103,9 @@ Reading and writing data and files is fairly key to many things you will wish to
 Logging is essential for reporting to users on the progress of their work. Read more on [[id:345cadc2-52a5-4c91-8de1-a45a98aaa5a8][logging]].
 
 * Parallelisation
-:PROPERTIES:
-:ID:       024c41bd-500b-4362-bd4e-fe27f00e6bdb
-:END:
+
+Python has a host of functionality for parallelisation. Read more on [[id:077cb9b0-a54e-45b0-abdf-1b8a5bb63aa9][Python Parallel Programming]].
+
 * Typing and Validation
 :PROPERTIES:
 :ID:       e42e7d26-345d-4bab-ba48-473ac26f5161

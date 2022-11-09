@@ -1,0 +1,73 @@
+:PROPERTIES:
+:ID:       077cb9b0-a54e-45b0-abdf-1b8a5bb63aa9
+:END:
+#+TITLE: Python Parallel Programming
+#+DATE: [2022-11-09 Wed 09:34]
+#+FILETAGuS: :python:programming:parallel:
+
+[[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] can run processes in parallel and this is really handy when you have multiple items (e.g. images or GPS tracks)
+to process or you want to run a large number of simulations as most CPUs have multiple cores/threads these days.
+
+* Simple Example
+
+You should have a function that you wish to run repeatedly defined. This simple function summarises a random sample of
+size ~n~ using a ~seed~ and returns the count, seed, mean, standard-deviation, minimum, maximum and the specified
+quantiles (default is the median and inter-quartile range).
+
+#+begin_src python :eval yes
+  import numpy as np
+
+  def random_stats(seed: int, n: int, quantiles: list=[0.25, 0.5, 0.75]) -> np.ndarray:
+    """Calculate summary statistics on a random sample of numbers.
+
+    Parameters
+    ----------
+    seed: int
+        Seed for random number generation.
+    n: int
+        Number of samples to generate.
+    quantile: list
+        List of quantiles to calculate (in the range 0 > 1)
+    """
+    rnd = np.random.default_rng(seed)
+    sample = rng.random(n)
+    mean = np.mean(sample)
+    std = np.std(sample)
+    min = np.min(sample)
+    max = np.max(sample)
+    quantiles = np.quantile(sample, quantile)
+    return np.append(np.asarray([n, seed, mean, std, min, max]), quantiles)
+#+end_src
+
+#+RESULTS:
+: None
+
+You want to run this multiple times and to do so you can use the [[https://docs.python.org/3/library/multiprocessing.html][multiprocessing]] library along with a few other
+functions and a neat progress bar courtesy of [[https://tqdm.github.io/][tqdm]].
+
+#+begin_src python :eval no
+    from functools import partial
+    from multiprocessing import Pool, cpu_count
+    from tqdm import tqdm
+
+    N = 1000
+    QUANTILES = [0.05, 0.1, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7, 0.75, 0.8, 0.9, 0.95]
+
+    # Set up a processing_function() using partial and supply all but one argument in this case the seed
+    processing_function = partial(random_stats,
+                                  n=N,
+                                  quantiles=QUANTILES)
+
+    # Set the number of simulations and generate a seed for each
+    n_sim = 100000
+    seeds = rng.integers(low=0, high=100000, size=n_sim)
+    n_cores = cpu_count() - 1
+    with Pool(processes=n_cores) as pool:
+        results = []
+        with tqdm(total=n_sim, desc="Calculating statistics for samples.") as pbar:
+            for x in pool.imap_unordered(processing_function, seeds):
+                results.append(x)
+                pbar.update
+    results = np.stack(results)
+
+#+end_src
