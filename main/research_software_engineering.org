@@ -29,3 +29,9 @@
 
 ** Papers
 + [[https://openresearchsoftware.metajnl.com/article/10.5334/jors.359/][The Research Software Encyclopedia: A Community Framework to Define Research Software]]
+
+** Licensing
++ [[https://firstdonoharm.dev/][The Hippocratic License]]
++ [[https://choosealicense.com/][Choose a License]]
++ [[https://creativecommons.org/choose/][Creative Commons : Choose a License]]
++ [[https://tldrlegal.com/][TLDRLegal - Software Licenses Explained in Plain English]]
