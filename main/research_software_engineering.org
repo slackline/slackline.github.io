@@ -22,6 +22,7 @@
 + [[https://merely-useful.tech/py-rse/][Research Software Engineering with Python]]
 + [[https://merely-useful.tech/r-rse/][Research Software Engineering with R]]
 + [[https://goodresearch.dev/index.html][The Good Research Code Handbook]]
++ [[https://alan-turing-institute.github.io/rse-course/html/index.html][Research Software Engineering with Python — Research Software Engineering with Python]] [[https://github.com/alan-turing-institute/rse-course][The Alan Turing Institute's Research Software Engineering course]]
 
 ** Software
 
