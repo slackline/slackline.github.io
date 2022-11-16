@@ -73,6 +73,15 @@ At some point you are likely to want to create a package out of your code, read 
 :PROPERTIES:
 :ID:       6bb3fd5e-63e3-43de-aecc-7c840f6d9819
 :END:
+
+Dictionaries can be pretty printed using the ~json.dumps()~ method.
+
+#+BEGIN_SRC python :eval no
+  import json
+  sample_dict = {"z": 5, "a": [0, 1, 2], "m": {"e": 3902, "f": 3204}}
+  print(json.dumps(sample_dict, indent=4, sort_keys=True))
+#+END_SRC
+
 ** Tuples
 :PROPERTIES:
 :ID:       508c31b8-cbea-4b69-b134-e9ab50691e8e
