@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       3cca0dfd-0c82-4685-b9ed-6314f7c8b78f
 :END:
-#+TITLE: Pytest
+#+TITLE: Python Pytest
 #+DATE: [2022-04-27 Wed 07:34]
 #+FILETAGS: :python:programming:testing:
 
@@ -17,6 +17,85 @@ test as "expect to fail" and ~pytest~ will not halt and instead carry on with th
 You can configure pytest within a projects directory via one of a choice of files ~setup.cfg~ is sufficient for simple
 use cases but its recommended more complex configurations are made via ~pyproject.toml~ or ~XXX~.
 
-** Documentation Tests
+** Usage
+
+By default ~pytest~ looks for the ~tests~ directory and runs all tests in files starting with ~test_*~ found within. A
+special file ~tests/conftest.py~ can be written that defines Fixtures that are to be used across tests.
+
+** Fixtures
+
+PyTest provides the [[https://docs.pytest.org/en/7.1.x/how-to/fixtures.html][~@pytest.fixture~]] decorator.
+
+#+BEGIN_SRC python :eval no
+  @pytest.fixture
+  def circle_coordinates() -> np.ndarray:
+      """A circle for testing curvature class and methods."""
+      radius = float(1)
+      coordinates = np.zeros([100, 2])
+      for i in np.arange(100):
+          theta = 2 * math.pi / 100 * i
+          x = -math.cos(theta) * radius
+          y = math.sin(theta) * radius
+          coordinates[i][0] = x
+          coordinates[i][1] = y
+      return coordinates
+#+END_SRC
+
+** Parameterisation
+
+It is possible to write one test and [[https://docs.pytest.org/en/7.1.x/how-to/parametrize.html][paramterise]] it, that is pass it a set of different parameters for input and
+expectation. It is a very simple method of increasing the coverage and range of scenarios that you are testing.
+
+#+BEGIN_SRC python :eval no
+def multiply(a, b):
+    return a * b
+
+@pytest.mark.parameterize("a, b, expected",
+    [(2, 4, 8),
+     (3, 9, 27),
+     (12, 10, 120)
+    ])
+def test_multiply(a, b, expected):
+    assert multiply(a, b) == expected
+#+END_SRC
+
+*** Fixture Parameterisation
+
+It is also possible to [[https://docs.pytest.org/en/7.1.x/how-to/fixtures.html#fixture-parametrize][parametrise fixtures]].
+
+#+BEGIN_SRC python :eval no
+@pytest.fixture(params=[4, 10, 100])
+def circle_coordinates(request) -> np.ndarray:
+    """A circle for testing curvature class and methods."""
+    radius = float(1)
+    coordinates = np.zeros([request.param, 2])
+    for i in np.arange(request.param):
+        theta = 2 * math.pi / request.param * i
+        x = -math.cos(theta) * radius
+        y = math.sin(theta) * radius
+        coordinates[i][0] = x
+        coordinates[i][1] = y
+    return coordinates
+#+END_SRC
+
+* Documentation Tests
 
 I came across an article advocating [[https://simonwillison.net/2018/Jul/28/documentation-unit-tests/][Documentation unit tests]] and showing one approach to testing documentation.
+
+* Plugins
+
+There are lots of PyTest plugins/extensions.
+
+** pytest-mpl
+
+** pytest-regtest
+
+** pytest-benchmark
+
+** pytest-check
+
+* Links
+
++ [[https://docs.pytest.org/en/7.0.x/][pytest: helps you write better programs]]
++ [[https://docs.pytest.org/en/7.1.x/how-to/parametrize.html][How to parametrize fixtures and test functions]]
++ [[https://docs.pytest.org/en/7.1.x/how-to/fixtures.html][How to use fixtures — pytest documentation]]
