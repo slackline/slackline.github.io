@@ -143,6 +143,9 @@ package (i.e. the sub-directory that contains the Python code).
 #+end_src
 
 To load the files of a package you should use then [[https://docs.python.org/3.8/library/importlib.html][~importlib.resources~ module]]
+
+Specific files can be included and excluded on a per package basis see [[https://jwodder.github.io/kbits/posts/pypkg-data/][examples]] and the [[https://setuptools.pypa.io/en/latest/userguide/datafiles.html][official documentation]].
+
 * Publishing to PyPi
 
 [[https://pypi.org][PyPi]] is the Python Package Index that provides a central repository for installing packages using [[https://pip.pypa.io/en/stable/][~pip~]] (although ~pip~
@@ -302,16 +305,17 @@ You may wish to exclude the ~<package>/_version.py~ from some of your linting if
 [[https://ns-rse.github.io/posts/pre-commit][pre-commit]].  At the command line you can exclude a file from being included in ~flake8~ analyses with
 ~--exclude=<patterns>~ and so at the command line you would.
 
-<p class="codeblock-label">flake8 excluding _version.py</p>
-~~~bash
+<p class="codeblock-label"></p>
+#+CAPTION: ~flake8~ excluding ~_version.py~
+#+BEGIN_SRC bash :eval no
 flake8 --exclude=<package>/_version.py
-~~~
+#+END_SRC
 
 If you are using ~flake8~ in ~pre-commit~ then you can add and ~args~ entry to the ~.pre-commit-config.yaml~
 configuration file as shown below.
 
-<p class="codeblock-label">.pre-commit-config.yaml excluding _version.py</p>
-```yaml
+#+CAPTION: ~.pre-commit-config.yaml~ excluding ~_version.py~
+#+BEGIN_SRC yaml :eval no
   - repo: https://gitlab.com/pycqa/flake8.git
     rev: 3.9.2
     hooks:
@@ -319,7 +323,7 @@ configuration file as shown below.
         args: ["--exclude=topostats/_version.py"]
         additional_dependencies: [flake8-print]
         types: [python]
-```
+#+END_SRC
 
 ** GitHub Action
 
