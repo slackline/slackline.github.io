@@ -23,6 +23,24 @@ files in an organised hierarchy with a sub-directory of the same name for Python
       └── ./tests/tcx2gpx
 #+END_SRC
 
+* Configuration
+
+** setup.py
+
+This is the traditional method of configuring a package, but has been deprecated in favour of ~setup.cfg~ and/or
+~pyproject.toml~
+
+** setup.cfg
+
+*** Metadata
+*** Requirements
+**** Extras
+
+** pyproject.toml
+
+The new kid on the block ~pyproject.toml~ support is still under development although its already highly functional.
+
+
 * Entry Points
 
 It can be useful to provide an entry point to your package so that users can simply type a single command after
@@ -36,7 +54,8 @@ to the following to your ~setup.cfg~
       find_pg = pgfinder:find_pg
 #+end_src
 
-With the function you wish to run defined in ~__init__.py~ and a hook defined in ~__main__.py~.
+With the function you wish to run defined in ~__init__.py~ and a hook defined in ~__main__.py~. Typically you would want
+to include a Command Line Interface that leverages [[id:5f7b632b-bb5b-48dd-b389-d8fcef406a19][Argparse]] to provide command line arguments.
 
 * Resources
 
