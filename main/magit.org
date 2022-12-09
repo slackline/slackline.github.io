@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       220d7ba9-d30e-4149-a25b-03796e098b0d
+:END:
+#+TITLE: Magit
+#+DATE: [2022-12-09 Fri 21:28]
+#+FILETAGS: :emacs:magit:git:github:gitlab:
+
+* Forge
+
+You can interact with forges such as [[https://gitlab.com][GitLab]], [[https://github.com][GitHub]] and so forth although support is limited beyond these main two.
+
+* Configuration
+
+My configuration of Magit is below.
+
+#+INCLUDE: "~/.config/emacs/settings/magit-settings.el" src emacs-lisp
+
+* Links
+
++ [[https://magit.vc/][It's Magit! A Git Porcelain inside Emacs]]
+
+** Repositories
+
++ [[https://github.com/magit/magit][magit/magit: It's Magit! A Git porcelain inside Emacs.]]
++ [[https://github.com/magit/ghub][magit/ghub: Client libraries for the APIs of various Git forges]]
++ [[https://github.com/magit/forge][magit/forge: Work with Git forges from the comfort of Magit]]

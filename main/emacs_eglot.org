@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       efe4e098-d7e6-42cd-90bd-234a25806c3a
+:END:
+#+TITLE: Emacs Eglot
+#+DATE: [2022-12-09 Fri 21:21]
++FILETAGS: :emacs:lsp:eglot
+
+* Links
+
++ [[https://joaotavora.github.io/eglot/][Eglot: The Emacs Client for the Language Server Protocol]]
++ [[https://github.com/joaotavora/eglot][GitHub : joaotavora/eglot]]

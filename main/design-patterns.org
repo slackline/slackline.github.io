@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       3e56e3e8-5409-4971-8ef3-fe7c6e0dd9d6
+:END:
+#+TITLE: Design Patterns
+#+DATE: [2022-12-09 Fri 22:19]
+#+FILETAGS: :programming:design patterns:
+
+
+* Links
+
++ [[https://refactoring.guru/design-patterns][Refactoring Guru : Design Patterns]]
+  + [[https://refactoring.guru/design-patterns/python][Design Patterns in Python]]
++ [[https://realpython.com/factory-method-python/][The Factory Method Pattern and Its Implementation in Python – Real Python]]

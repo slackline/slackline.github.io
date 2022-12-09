@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       97d138e1-015a-406a-b7ec-c046f01246d2
+:END:
+#+TITLE: Reproducible Research
+#+DATE: [2022-02-13 Sun 20:49]
+#+FILETAGS: :reproducible research:programming:open science:
+
+* Reproducible Environments
+
+** Docker
+
+** Ansible
+
+** Devenv
+
+** GUIX
+
+[[https://guix.gnu.org/][GNU Guix]] is /GNU's advanced distro and transactional package manager/ and allows declarative system configuration which
+means the configured systems are transparent and reproducible.
+
+* Links
+
++ [[https://devenv.sh/][devenv - Fast, Declarative, Reproducible, and Composable Developer Environments]]

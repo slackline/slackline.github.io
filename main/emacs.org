@@ -5,6 +5,17 @@
 #+DATE: [2022-02-14 Mon 06:59]
 #+FILETAGS: :emacs:literate programming:
 
+* Packages
+
+Packages are what makes Emacs so great, there is literally a [[https://xkcd.com/378/][package for everything.]]
+
+[[https://imgs.xkcd.com/comics/real_programmers.png]]
+
+There are a number of ways of repositories that host repositories (see [[#packages]])
+
+* Magit
+
+[[id:220d7ba9-d30e-4149-a25b-03796e098b0d][magit]]
 * Org-mode
 
 Org-mode is a powerful suite of packages that allow you to organise your work and life.
@@ -16,9 +27,25 @@ Org-mode is a powerful suite of packages that allow you to organise your work an
 
 * Programming IDE
 
-Emacs can be used as a powerful Integrated Development Environment (IDE) for a range of languages thanks to its support
-of the Language Server Protocol (LSP) courtesy of which supports [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]], [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]], Bash and many others.
+Emacs can be used as a powerful Integrated Development Environment (IDE) for a range of [[id:ea1499ab-dab2-49b1-8479-cb5a2fbd38bc][Programming]] languages thanks to
+its support of the Language Server Protocol (LSP) courtesy of which supports [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]], [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]], [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] and many others. This is
+achieved through one of two packages.
+
 + [[id:04868965-8413-4d9d-8ecc-573570fec5b1][LSP Mode]]
++ [[id:efe4e098-d7e6-42cd-90bd-234a25806c3a][Eglot]]
+
+* Emacs Lisp
+
+[[id:708f5d99-6040-4306-a323-306d39ce45c3][Emacs Lisp]] is the language which gives Emacs its power and extensibility. Understanding just the basics makes
+configuring and using Emacs considerably easier, going deeper you can then develop your own functions to extend existing
+packages or even develop your own packages and share them with the community.
+
+
+* Configuration
+
+My configuration is, well, sprawling. The main initialisation file resides at ~/config/emacs/init.el~ but I split it
+configuration over a number of individual files for each package or group of packages.
+
 
 * Links
 
@@ -44,3 +71,10 @@ of the Language Server Protocol (LSP) courtesy of which supports [[id:5b5d1562-e
 + [[https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][An Introduction to Programming in Emacs Lisp]]
 + [[https://github.com/emacs-tw/awesome-emacs][Awesome Emacs: A community driven list of useful Emacs packages, libraries and other items.]]
 + [[https://www.masteringemacs.org/article/emacs-builtin-elisp-cheat-sheet][Emacs's Builtin Elisp Cheat Sheet - Mastering Emacs]]
+
+#+CUSTOM_ID: packages
+** Packages
++ [[https://melpa.org/#/][MELPA]]
++ [[https://stable.melpa.org/#/][MELPA Stable]]
++ [[https://elpa.gnu.org/][GNU Emacs Lisp Package Archive]]
++ [[https://elpa.nongnu.org/][NonGNU Emacs Lisp Package Archive]]

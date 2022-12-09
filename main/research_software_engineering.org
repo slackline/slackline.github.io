@@ -4,6 +4,8 @@
 #+title: Research Software Engineering
 #+filetags: :open-research:rse:
 
+Research Software Engineering covers many areas of software development such as version control (typically via [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]]),
+[[id:0911a63f-4b82-4bf1-9235-f1e41e93d210][Open Research]], good coding practices (e.g. [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linting]], [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]]) and at the more technical end
 * Links
 
 + [[https://rse.shef.ac.uk/][Research Software Engineering Sheffield]] ([[https://rse.shef.ac.uk/blog/][Blog]] | [[https://rse.shef.ac.uk/newsletters/][Newsletters]] | [[https://github.com/orgs/RSE-Sheffield][GitHub]] | [[https://twitter.com/RSE_Sheffield][@RSE_Sheffield]])
@@ -31,6 +33,14 @@
 ** Papers
 + [[https://openresearchsoftware.metajnl.com/article/10.5334/jors.359/][The Research Software Encyclopedia: A Community Framework to Define Research Software]]
 
+
+** Code Reviews
+
++ [[https://mtlynch.io/human-code-reviews-1/][How to Do Code Reviews Like a Human (Part One) · mtlynch.io]]
++ [[https://mtlynch.io/human-code-reviews-2/][How to Do Code Reviews Like a Human (Part Two) · mtlynch.io]]
++ [[https://www.software.ac.uk/resources/online-sustainability-evaluation][Online sustainability evaluation | Software Sustainability Institute]]
++ [[https://joss.readthedocs.io/en/latest/review_criteria.html][Review criteria — JOSS documentation]]
++ [[https://codecheck.org.uk/][CODECHECK]]  a process for independent execution of computations underlying scholarly research articles.
 
 ** Licensing
 + [[https://firstdonoharm.dev/][The Hippocratic License]]

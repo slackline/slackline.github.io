@@ -17,7 +17,7 @@ for doing so is ~C-c n i~ which is defined by
 #END_SRC
 
 Once defined you can insert a link to an existing node using the key sequence and then typing the name of the node (as
-defined in the ~:ROAM ALIASES: ~). If you want to manually insert a link then you can do so using ~C-c l~ (default for
+defined in the ~:ROAM ALIASES:~). If you want to manually insert a link then you can do so using ~C-c l~ (default for
 inserting a link in Org-mode) and entering a node's ID prefixed with ~id:~ (e.g.
 ~id:136364e7-1a6d-4b28-b284-0e415b860699~) followed by the text you want to appear.
 
