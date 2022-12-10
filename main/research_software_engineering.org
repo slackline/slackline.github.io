@@ -55,3 +55,7 @@ Research Software Engineering covers many areas of software development such as 
 + [[https://spectrum.ieee.org/functional-programming][Why Functional Programming Should Be the Future of Software Development - IEEE Spectrum]]
 
 *** Object-Orientated Programming
+
+** Miscellaneous
+
++ [[https://www.theverge.com/22684730/students-file-folder-directory-structure-education-gen-z][File Not Found - Kids who grew up with search engines could change STEM education forever]]
