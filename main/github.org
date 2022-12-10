@@ -5,6 +5,10 @@
 #+DATE: <2022-05-24 Tue 22:07>
 #+FILETAGS: :git:programming:documentation:version control:github:
 
+[[https://github.com][GitHub]] is an online service for sharing and collaborating on your [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] version controlled projects. It is not the only
+"forge" as such repositories are sometimes known that is available as there are other services available such as [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][gitlab]]
+
+
 * GitHub Pages
 * GitHub Actions
 
@@ -30,6 +34,9 @@ created by Sphinx. You now need to configure your repository to use [[https://pa
 the ~gh-pages~ branch and select the ~root~ directory and then ~Save~. You will get a link to the pages appear just
 above these options. You can click on this and it may take a little while to build the pages but the will appear.
 
+** Publishing to PyPI
+
+It is possible to use a GitHub Action to automate [[id:5e1f167e-5c0c-4206-b2ac-6694e08524d8][publishing to PyPI from GitHub]].
 
 * Links
 ** GitHub Pages

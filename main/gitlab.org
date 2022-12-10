@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       7cbd61f2-d6a5-4e67-af72-2a13a5e86faa
+:END:
+#+TITLE: GitLab
+#+DATE: [2022-12-10 Sat 17:39]
+#+FILETAGS: :git:gitlab:version control:

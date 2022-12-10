@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       5f7b632b-bb5b-48dd-b389-d8fcef406a19
+:END:
+#+TITLE: Python Argparse
+#+DATE: [2022-12-09 Fri 23:03]
+#_FILETAGS: :python:programming:
+
+
+* Links
+
++ [[https://realpython.com/command-line-interfaces-python-argparse/][Build Command-Line Interfaces With Python's argparse – Real Python]]_

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       1ffb126f-a7aa-4d26-a4d1-a7bfa8085abe
+:END:
+#+TITLE: grep
+#+DATE: [2022-12-10 Sat 17:23]
+#+FILETAGS: :bash:grep:unix:

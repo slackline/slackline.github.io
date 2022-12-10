@@ -12,13 +12,16 @@ to validate and contribute to the research.
 * [[id:4c9eab3d-4ae2-4f48-a32c-925929fe60bf][Open Research Data]]
 * [[id:af7ec14e-3022-4d4b-b05d-101e937569e2][Frameworks]]
 * [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]]
+* [[id:97d138e1-015a-406a-b7ec-c046f01246d2][Reproducible Research]]
 * [[id:3df9f7ea-12c0-47ab-97a8-e2b3d6c72606][Publishing]]
 * [[id:04cf68bf-0db2-403e-b0a6-9c94aa662577][Replication / Peer Review]]
 * [[id:49d21f82-887e-4ec7-8963-89460673352a][Research Software Engineering]]
+* [[id:5d84509c-5895-4890-b073-5cdfe0ad094f][Octopus]]
 
 * References
 + [[https://www.nature.com/articles/sdata201618][The FAIR Guiding Principles for scientific data management and stewardship | Scientific Data]]
 + [[https://www.nature.com/articles/s41562-016-0021][A manifesto for reproducible science | Nature Human Behaviour]]
+
 * Links
 + [[https://www.sheffield.ac.uk/openresearch/][Open Research | The University of Sheffield]]
 + [[https://open-research-europe.ec.europa.eu/][Open Research Europe | Open Access Publishing Platform]]

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       16c65320-e19d-4bdc-ab55-c410860cddfa
+:END:
+#+TITLE: sed
+#+DATE: [2022-12-10 Sat 17:20]
+#+FILETAGS: :bash:sed:unix:
+
+* Links

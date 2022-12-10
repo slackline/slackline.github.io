@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       950174e1-c936-463a-b4a2-702ca516d95e
+:END:
+#+TITLE: JSON
+#+DATE: [2022-12-10 Sat 17:16]
+#+FILETAGS: :json:data:
+
+[[https://www.json.org/json-en.html][JSON]] (JavaScript Object Notation) is a common format for data exchange that is language agnostic.
+
+A super-set of JSON is [[id:fac7a695-9bdf-4a79-9ec3-9945e9a0cba4][YAML]].
+
+
+* jq
+:PROPERTIES:
+:ID:       a23966d2-0e34-4ebd-8a66-5d40c2ce6a43
+:END:
+
+[[https://stedolan.github.io/jq/][~jq~]] is a lightweight and flexible command-line JSON processor, its the [[id:4d64ea2c-b91a-4162-8d79-889b05b5ba80][awk]] / [[id:1ffb126f-a7aa-4d26-a4d1-a7bfa8085abe][grep]] / [[id:16c65320-e19d-4bdc-ab55-c410860cddfa][sed]] tool for JSON files.
+
+It is a really powerful tool for manipulating and extracting data from JSON files.
+
+** Example
+Here we pull data from GitHub using the [[id:9a9076c8-7698-47b9-9cd3-c8b9e06d6694][GitHub Command Line Interface]] which returns data in JSON and then parse selected fields
+to JSON.
+
+#+BEGIN_SRC bash eval: no
+$ gh issue list -L 100 --json "number,id,title,author,labels,state" > github_issues_$(date +%Y%m%d).json
+$ jq -r '.[] | [.number, .title, .author.login, .state, (.labels[]| .name )] | @csv'
+#+END_SRC
+
+
+* Links
+
++ [[https://www.json.org/json-en.html][JSON]]

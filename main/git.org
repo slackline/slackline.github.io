@@ -6,7 +6,7 @@
 #+FILETAGS: :git:programming:documentation:version control:
 
 [[https://git-scm.com][Git]] is the defacto standard for version control of code (and more) these days. Whether you write code in [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]], [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]],
-scripts for [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]], Go, Rust, C++, Java, Bash or want to keep critical files such as your dotfiles,
+scripts for [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]], Go, Rust, C++, Java, [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] or want to keep critical files such as your dotfiles,
 ~/etc/~, or GPG encrypted passwords backed up you should consider using Git (or some other version control system, but
 Git is the most popular for now).
 
@@ -33,11 +33,14 @@ Forges are places where Git repositories are hosted online for collaborative wor
 (make a copy online), clone (make a local copy) and then change the code themselves and if its useful submit a Pull
 Request to have their changes incorporated into the original body of code for a project.
 
-** GitHub
+| Forge    | Description                                                                                                                      |
+|----------+----------------------------------------------------------------------------------------------------------------------------------|
+| [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]]   | Perhaps the largest and most widely used forge. Purchased my Micro$oft a few years ago.                                          |
+| [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]]   | Comparable services with strong CI/CD functionality. Its also a free, open source piece of software so you can host it yourself. |
+| Codeberg |                                                                                                                                  |
+| Gitea    |                                                                                                                                  |
 
-Perhaps the largest and most widely used forge, read more
 
-** GitLab
 
 * IDE Integration
 ** Emacs Magit
@@ -59,9 +62,23 @@ for editing your code but it is really focused on helping you work with Git.
 + [[https:magit.vc][Magit]]
 + [[https://www.gitkraken.com/][GitKraken]]
 
+** Tools
+
++ [[http://gitignore.io/][gitignore.io]]
+
 ** Learning Resources
+
++ [[http://blog.anvard.org/conversational-git/][Conversational Git]]
++ [[https://git-scm.com/book/en/v2][Pro Git]]
++ [[https://gitbetter.substack.com/archive?sort=new][Git Better]]
++ [[https://ohshitgit.com/][Oh Shit, Git!?!]]
++ [[https://ohmygit.org/][Oh My Git!]] - a game for learning Git.
 + [[https://onlywei.github.io/explain-git-with-d3/#clean][Explain Git with D3]]
 
 *** GitHub Blog
 + [[https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/][How to undo (almost) anything with Git]]
 + [[https://github.blog/2022-06-30-write-better-commits-build-better-projects/][Write Better Commits, Build Better Projects]]
+
+**  Alternatives
+
++ [[https://www.monotone.ca/][Monotone]]

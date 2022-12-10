@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       fac7a695-9bdf-4a79-9ec3-9945e9a0cba4
+:END:
+#+TITLE: YAML
+#+DATE: [2022-12-10 Sat 17:13]
+#+FILETAGS: :yaml:json:
+
+[[https://yaml.org][YAML]] (Yaml Ain't Markup Language) is a JSON super-set that is commonly used for configuration files, particularly in
+Python (at least by me!).
+
+* Structure
+
+** Lists
+
+** Tables
+
+* Links
+
++ [[https://yaml.org][YAML]]

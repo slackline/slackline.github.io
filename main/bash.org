@@ -19,6 +19,28 @@ You can use [[http://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-
   done
 #+END_SRC
 
+* Command Line Tools
+
+** awk
+
+[[id:4d64ea2c-b91a-4162-8d79-889b05b5ba80][awk]]
+
+** sed
+
+[[id:16c65320-e19d-4bdc-ab55-c410860cddfa][sed]] is a ~s~tring ~ed~itor for processing text files at the command line.
+
+** grep
+
+[[id:1ffb126f-a7aa-4d26-a4d1-a7bfa8085abe][grep]]
+
+** jq
+
+[[id:a23966d2-0e34-4ebd-8a66-5d40c2ce6a43][jq]] is the awk/sed/grep tool for working with JSON files.
+
+** gh
+
+[[id:9a9076c8-7698-47b9-9cd3-c8b9e06d6694][gh_cli]]
+
 * Links
 
 ** ~PS1~ Customisation

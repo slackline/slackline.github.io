@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       4d64ea2c-b91a-4162-8d79-889b05b5ba80
+:END:
+#+TITLE: awk
+#+DATE: [2022-12-10 Sat 17:22]
+#+FILETAGS: :bash:awk:unix:
