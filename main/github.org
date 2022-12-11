@@ -9,7 +9,15 @@
 "forge" as such repositories are sometimes known that is available as there are other services available such as [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][gitlab]]
 
 
+* Configuration
+
+** Adding SSH Keys
+
+** GPG Keys
+
+
 * GitHub Pages
+
 * GitHub Actions
 
 GitHub Actions allow you to perform Continuous Integration (CI)/Continuous Development (CD) actions, triggering certain
@@ -29,7 +37,7 @@ action is triggered on the branch and you can view the results. Stage, commit an
 able to find the build being made by going to the commits page on the branch you are working on, initially there is a
 yellow dot next to the commit you've just pushed which you can click on to see the actions being run.
 
-When complete this creates a new branch called ~gh-ages~ which contains all of the HTML documentation that has been
+When complete this creates a new branch called ~gh-pages~ which contains all of the HTML documentation that has been
 created by Sphinx. You now need to configure your repository to use [[https://pages.github.com/][GitHub Pages]]. Go to ~Settings > Pages~ and select
 the ~gh-pages~ branch and select the ~root~ directory and then ~Save~. You will get a link to the pages appear just
 above these options. You can click on this and it may take a little while to build the pages but the will appear.
@@ -37,6 +45,11 @@ above these options. You can click on this and it may take a little while to bui
 ** Publishing to PyPI
 
 It is possible to use a GitHub Action to automate [[id:5e1f167e-5c0c-4206-b2ac-6694e08524d8][publishing to PyPI from GitHub]].
+
+* GitHub Blog
+
+GitHub has an active blog and many of the articles are worth reading. I keep links to those I've read and think
+worthwhile below.
 
 * Links
 ** GitHub Pages
@@ -50,3 +63,24 @@ It is possible to use a GitHub Action to automate [[id:5e1f167e-5c0c-4206-b2ac-6
 
 *** GitHub Actions
 - [[https://github.com/marketplace/actions/sphinx-docs-to-github-pages][Sphinx Docs to GitHub Pages]]
+
+** GitHub Blog
+
+*** OpenSource
+
++ [[https://github.blog/2022-09-02-gits-database-internals-v-scalability/][Git’s database internals V: scalability]]
++ [[https://github.blog/2022-09-01-gits-database-internals-iv-distributed-synchronization/][Git’s database internals IV: distributed synchronization]]
++ [[https://github.blog/2022-08-31-gits-database-internals-iii-file-history-queries/][Git’s database internals III: file history queries]]
++ [[https://github.blog/2022-08-30-gits-database-internals-ii-commit-history-queries/][Git’s database internals II: commit history queries]]
++ [[https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store/][Git’s database internals I: packed object store]]
++ [[https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/][Include diagrams in your Markdown files with Mermaid]]
++ [[https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/][How to undo (almost) anything with Git]]
+
+*** Engineering
+
++ [[https://github.blog/2022-06-30-write-better-commits-build-better-projects/][Write Better Commits, Build Better Projects]]
+
+*** ReadME
+
++ [[https://github.com/readme/featured/open-source-minimalism][Open Source Minimalism]]
++ [[https://github.com/readme/featured/why-the-lucky-stiff][What we can learn from “_why”, the long lost open source developer]]

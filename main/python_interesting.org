@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       4ca15b37-1436-45fc-8a81-7f1f03b0ee64
+:END:
+#+NAME: Python : Useful and Interesting Packages
+#+DATE: [2022-12-11 Sun 22:51]
+#+FILETAGS: :python:packages:tqdm:textual:loguru:
+
+
+* loguru
+
+* textual
+
+* tqdm
+
+* Links
+
++ [[https://github.com/Delgan/loguru][loguru]]
++ [[https://requests.readthedocs.io/en/latest/][requests]]
++ [[https://textual.textualize.io][textual]]
++ [[https://tqdm.github.io][tqdm]]

@@ -131,6 +131,8 @@ using typehints and checked using mypy. Validation can be extended using [[id:ba
 At some point you will want to package your code up and make it available for others to use. There are many approaches
 to this and whilst it requires a little more learning the [[https://setuptools.pypa.io/en/latest/#][setuptools]] package offers many advantages in the long run.
 
+There are also a ton of useful and interesting packages out there. I've documented some at[[id:4ca15b37-1436-45fc-8a81-7f1f03b0ee64][python_interesting]]
+
 * Documentation
 
 Python has a powerful and flexible ecosystem for creating documentation called Sphinx, read more about [[id:7318aee8-c864-40cb-9462-4ce36ac56d35][documentation]].

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       47543a76-a873-4c07-b30d-926f50b31fca
+:END:
+#+TITLE: Python PIP
+#+DATE: [2022-12-11 Sun 19:42]
+#+FILETAGS: :python:packages:pip:

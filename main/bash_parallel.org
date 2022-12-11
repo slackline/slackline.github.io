@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       a8927dc4-a237-463c-a41e-3b884da4f784
+:END:
+#+NAME: Bash Parallel
+#+DATE: [2022-12-11 Sun 22:57]
+#+FILETAGS: :bash:parallel:shell:
+
+* Links
+
++ [[https://www.gnu.org/software/parallel/][GNU : Parallel]]

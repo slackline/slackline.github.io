@@ -3,7 +3,7 @@
 :END:
 #+TITLE: Emacs
 #+DATE: [2022-02-14 Mon 06:59]
-#+FILETAGS: :emacs:literate programming:
+#+FILETAGS: :emacs:literate programming:elisp:lsp:
 
 * Packages
 
@@ -16,11 +16,12 @@ There are a number of ways of repositories that host repositories (see [[#packag
 * Magit
 
 [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][magit]]
+
 * Org-mode
 
 Org-mode is a powerful suite of packages that allow you to organise your work and life.
 
-+ [[https://orgmode.org/][Org-mode]]
++ [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Org-mode]]
 + [[id:fc9974d4-2a26-4bf7-9360-c828bfaeed1d][Org Agenda]]
 + [[id:6e75f9df-df3d-4402-b5ad-ed98d0834e08][Org Babel]]
 + [[id:136364e7-1a6d-4b28-b284-0e415b860699][Org-roam]]

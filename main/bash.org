@@ -5,6 +5,13 @@
 #+DATE: [2022-04-21 Thu 10:00]
 #+FILETAGS: :bash:programming:linux:
 
+Bash is the default shell on most GNU/Linux systems and its well worth learning how to use it as it is a powerful
+scripting language. Day-to-day I actually use [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][zsh]] to drive my command prompt as it contains a bunch of additional
+functionality such as customised command prompts and a ton of built-in aliases that I find useful. But I still use Bash
+scripts to accomplish small tasks.
+
+* Bash Scripts
+
 * Tips and Tricks
 
 ** Make a directory for every file
@@ -20,6 +27,9 @@ You can use [[http://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-
 #+END_SRC
 
 * Command Line Tools
+
+The power of the command line comes from pipping the output of one command to another. To which end there are a bunch of
+useful command line tools for working with files.
 
 ** awk
 
@@ -41,6 +51,9 @@ You can use [[http://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-
 
 [[id:9a9076c8-7698-47b9-9cd3-c8b9e06d6694][gh_cli]]
 
+** parallel
+
+Bash has its own tool for
 * Links
 
 ** ~PS1~ Customisation

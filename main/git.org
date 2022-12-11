@@ -23,11 +23,80 @@ you create or a local, per-repository basis (local settings in a repository over
 * Setup
 ** Global Configuration
 
+First thing to do is setup Git with your name and email address and a
+few other common default settings.
+
+#+begin_src sh
+git config user.name 'My Username'
+git config user.email 'my@email.org'
+git config --global push.default upstream # Syncs pull/push to the same branch (https://stackoverflow.com/a/42642628/1444043)
+#+end_src
+
 ** Local Configuration
 
 Each repository is configured via the file ~./.git/config~
 
+** .gitignore
+
+You can tell Git to automatically ignore certain files by adding file blobs to the file ~.gitignore~ in the root of your
+repositories directory (i.e. the highest level). This is useful as you can exclude temporary files that your test editor
+might create (e.g. Emacs leaves behind ~*~~ files) and if you're working with patient data then its quite likely that
+this shouldn't be shared in a public repository such as GitHub. The [[https://github.com/github/gitignore][github/gitignore]] repository has a number of
+skeleton/example files for different languages including [[https://github.com/github/gitignore/blob/master/R.gitignore][R]], I modify this to include all ~*.RData~ files to exclude any
+and all R Data objects and also Emacs temporary files ~*~~. There is also [[https://www.gitignore.io/][gitignore.io]] which generates configs
+automatically.
+
+* Usage
+
+** Initialise a repository
+
+How you initialise a repository depends on whether you are doing it locally first or cloning a repository from a
+[[#git-forge]]. If you bring a directory under git version control before setting up an online repository you can always
+configure the remote (~origin~) afterwards.
+
+*** Cloning a Remote Repository
+
+Cloning a remote repository is straight-forward. On the front page of all forges (GitHub, GitLab, Codeberg etc.) is a
+button above the listing of files to **Clone**. There are two methods of cloning, one uses ~https~ the other ~ssh~. To
+use the later you will have had to add your SSH credentials to your user account on that forge.
+
+#+begin_src sh :eval no
+  git clone
+#+end_src
+
+*** Locally
+
+It is straight-forward to initialise a directory to be under git version control simply...
+
+#+begin_src sh :eval no
+  git init
+#+end_src
+
+** Adding Files
+
+** Making a commit
+
+** Pushing to origin
+
+** Fetch v Pull
+
+Whether you work on a project collaboratively or simply use GitHub/GitLab to keep personal repositories in sync between
+systems you will at some point have to use ~git pull~ to get your changes onto your local computer. But what is ~git
+fetch~ and how does it differ from ~git pull~? The simplest answer to this is provided by this excellent cartoon from
+[[https://allisonhorst.com/git-github][Allison Horst]].
+
+#+CAPTION: ~git fetch~ v ~git pull~ by [[https://allisonhorst.com/git-github][Allison Horst]]
+#+NAME: fig:git-fetch-v-git-pull
+[[https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/7f2a398a-3351-49e4-8430-5d1793c5a775.png]]
+
+
+* Hooks
+
+
 * Forges
+:PROPERTIES:
+:CUSTOM_ID: git-forge
+:END:
 
 Forges are places where Git repositories are hosted online for collaborative work. If public then others can view, fork
 (make a copy online), clone (make a local copy) and then change the code themselves and if its useful submit a Pull
@@ -39,6 +108,27 @@ Request to have their changes incorporated into the original body of code for a 
 | [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]]   | Comparable services with strong CI/CD functionality. Its also a free, open source piece of software so you can host it yourself. |
 | Codeberg |                                                                                                                                  |
 | Gitea    |                                                                                                                                  |
+
+
+* Commit History
+
+Git keeps a detailed history of commits that contain metadata and other useful information.
+
+** Git Log
+
+There are many options for viewing and formatting the log history.
+*** Contributors
+
+A simple way to get the list of contributors is to
+
+#+begin_src sh :eval no
+  git shortlog -s -n -e
+#+end_src
+
+
+
+** Blame
+
 
 
 
@@ -74,10 +164,8 @@ for editing your code but it is really focused on helping you work with Git.
 + [[https://ohshitgit.com/][Oh Shit, Git!?!]]
 + [[https://ohmygit.org/][Oh My Git!]] - a game for learning Git.
 + [[https://onlywei.github.io/explain-git-with-d3/#clean][Explain Git with D3]]
++ [[https://learngitbranching.js.org/][Learn Git Branching]]
 
-*** GitHub Blog
-+ [[https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/][How to undo (almost) anything with Git]]
-+ [[https://github.blog/2022-06-30-write-better-commits-build-better-projects/][Write Better Commits, Build Better Projects]]
 
 **  Alternatives
 

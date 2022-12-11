@@ -1,0 +1,53 @@
+:PROPERTIES:
+:ID:       a1b78518-31e8-4fd3-a36f-d8f152832138
+:END:
+#+TITLE: ZSH
+#+DATE: [2022-12-11 Sun 19:36]
+#+FILETAG: :shell:zsh:
+
+[[https://www.zsh.org/][ZSH]] is a shell
+
+* Oh-my-zsh
+
+* Tips & Tricks
+
+** Pip install optional extras
+
+I found the hard way that ZSH uses square brackets (~[ ]~) for globbing when I was trying to install optional additional
+packages using [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] package manager [[id:47543a76-a873-4c07-b30d-926f50b31fca][pip]] which takes the format.
+
+#+begin_src sh :eval no
+  pip install .[optional_extra]
+#+end_src
+
+To get round this you can either quote the target
+
+#+begin_src sh :eval no
+  pip install ".[optional_extra]"
+#+end_src
+
+Or put an alias in ~/.zshrc~
+
+#+begin_src sh :eval no
+  pip='pip noglob'
+#+end_src
+
+** zmv
+
+This is a neat extension to ~mv~ that facilitates [[https://blog.smittytone.net/2021/04/03/how-to-use-zmv-z-shell-super-smart-file-renamer/][batch file renaming]].
+
+To enable it add the following to ~.zshrc~
+
+#+begin_src sh :eval no
+  autoload zmv
+#+end_src
+
+* Links
+
++ [[https://www.zsh.org/][ZSH]]
++ [[https://grml.org/zsh/zsh-lovers.html][ZSH Lovers]]
++ [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]
+
+** Extensions
+
++ [[https://github.com/zsh-users/zsh-completions][zsh-completions]]

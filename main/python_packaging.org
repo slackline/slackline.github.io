@@ -3,7 +3,7 @@
 :END:
 #+TITLE: Python Packaging
 #+DATE: [2022-04-27 Wed 07:38]
-#+FILETAGS: :python:programming:packaging:
+#+FILETAGS: :python:programming:packaging:pip:
 
 [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] packaging is it seems in a constant state of flux. There is the official [[https://packaging.python.org/en/latest/][Python Packaging User Guide]] from the
 [[https://www.pypa.io/en/latest/][Python Packaging Authority]] which is probably the best resource to read but things change, and often quickly. This
@@ -15,16 +15,41 @@ advantages but with additional learning.
 You should place your code within a Git version controlled directory for your project. It is then normal to place all
 files in an organised hierarchy with a sub-directory of the same name for Python code, tests under ~tests~
 
-#+BEGIN_SRC bash eval: no
+#+BEGIN_SRC sh eval: no
   .
   ├── ./build
   ├── ./dist
   ├── ./
-  ├── ./tcx2gpx
+  ├── ./topostats
+  ├── ./topostats/__init__.py
+  ├── ./topostats/filters.py
+  ├── ./topostats/grains.py
   └── ./tests
+      ├── ./tests/conftest.py
       ├── ./tests/resources
-      └── ./tests/tcx2gpx
+      └── ./tests/tracing
 #+END_SRC
+
+** __init__.py
+
+In older versions of Python (<3.3) a ~__init__.py~ was required in every directory and sub-directory that was to be a
+module/sub-module. In more recent versions of Python (>\=3.3) they are not essential though as Python uses [[https://docs.python.org/3/reference/import.html#namespace-packages][namespace
+packages]]. But in most cases its simpler to include such a file in the top level of your directory.  ~__init__.py~ files
+can be completely empty or they can contain code that is used throughout your package, such as setting up a logger or
+setting the package version.
+
+#+CAPTION: Example ~__init__.py~ that sets up logging and sets the ~__version__~
+#+BEGIN_SRC python :eval no
+  """Topostats"""
+  from .logs.logs import setup_logger
+  from . import _version
+
+  LOGGER = setup_logger()
+
+  __version__ = _version.get_versions()["version"]
+#+END_SRC
+
+
 
 * Configuration
 
@@ -57,12 +82,12 @@ either specify some (or most) of this in ~pyproject.toml~ or a concurrent ~setup
 
 A sample ~setup.cfg~ is shown below (its from the [[github.com/AFM-SPM/TopoStats/][TopoStats]] project).
 
-Some key fields to note are the
-~long_description_content_type = text/markdown~ which will ensure that if you use Markdown for the ~README.md~ it will
-be correctly rendered.
-
 
 *** Metadata
+
+Metadata is important as it provides key information about your package and is used by different services such as PyPI
+or for adding badges to your project. If you write your ~README.md~ in [[id:0c371287-128d-4e46-8128-b2d4f5fc604c][Markdown]] then be sure to include the fields
+~long_description_content_type = text/markdown~ which will ensure that it is correctly rendered on PyPI.
 
 #+CAPTION: Sample ~metadata~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
 #+BEGIN_SRC conf :eval no
@@ -86,6 +111,11 @@ classifiers =
 #+END_SRC
 
 *** Options
+
+The ~options~ section defines the minimum version of Python and the packages that it depends on. The directive ~package
+= find:~ tells the tools that use this configuration file (e.g. ~build~ for building packages) to look for directories
+that contain ~__init__.py~ files which indicate the directory is a module (or sub-module) and should be included in the
+package.
 
 #+CAPTION: Sample ~options~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
 #+BEGIN_SRC conf :eval no
@@ -115,6 +145,11 @@ packages = find:
 #+END_SRC
 
 *** Extras Requirements
+
+These are additional packages that are /not/ installed by default when a package is ~pip install~ because they are not
+directly required for the package to run/function (i.e. they are not "runtime dependencies"). They can be divided into
+sub-groups such as dependencies that are required for ~tests~, building ~docs~ or ~dev~ (development).
+
 #+CAPTION: Sample ~options.extras_require~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
 #+BEGIN_SRC conf :eval no
   [options.extras_require]
@@ -150,7 +185,10 @@ pypi =
 
 *** Packages Find
 
-#+CAPTION: Sample ~options.extras_require~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
+Because packages are detected using the ~find:~ directive (see above) you may want to exclude certain directories such
+as ~tests/~
+
+#+CAPTION: Sample ~options.packages.find~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
 #+BEGIN_SRC conf :eval no
 [options.packages.find]
 exclude = tests*
@@ -159,7 +197,10 @@ exclude = tests*
 
 *** Coverage
 
-#+CAPTION: Sample ~options.extras_require~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
+This section is used to define the metrics for code coverage by tests. The example below excludes certain directories
+and files (e.g. ~tests/~).
+
+#+CAPTION: Sample ~options.coverage:run~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
 #+BEGIN_SRC conf :eval no
 [coverage:run]
 omit =
@@ -171,6 +212,7 @@ omit =
 
 *** Flake8
 
+[[https://flake8.pycqa.org/en/latest/][Flake8]] is a [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linter]]
 #+CAPTION: Sample ~options.extras_require~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
 #+BEGIN_SRC conf :eval no
 [flake8]
@@ -238,7 +280,7 @@ console_scripts =
 *** Full Config
 
 
-#+CAPTION: Sample ~metadata~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
+#+CAPTION: Sample ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
 #+begin_src conf :eval no
 [metadata]
 name = topostats
@@ -367,7 +409,11 @@ To load the files of a package you should use then [[https://docs.python.org/3.8
 
 Specific files can be included and excluded on a per package basis see [[https://jwodder.github.io/kbits/posts/pypkg-data/][examples]] and the [[https://setuptools.pypa.io/en/latest/userguide/datafiles.html][official documentation]].
 
-** Entry Points
+*** Metadata
+
+
+
+*** Entry Points
 
 It can be useful to provide an entry point to your package so that users can simply type a single command after
 installing the package (typically under a virtual environment) to be able to run it from the command line. An exposition
@@ -441,15 +487,17 @@ The package can now be built locally with...
 
 * Versioning and Automating Releases
 
-Typically the version is defined in the ~__version__~ value or as a value in ~setup.cfg~ or ~pyproject.toml~ but this
-has some downsides in that you have to remember to update the string manually when you are ready for a release and it
-doesn't tie in with using tags in Git to tag versions of your commits.
+Typically the version is defined in the ~__version__~ value or as a value in ~[metadata]~ of ~setup.cfg~ or
+~pyproject.toml~ but this has some downsides in that you have to remember to update the string manually when you are
+ready for a release and it doesn't tie in with using tags in Git to tag versions of your commits.
 
 It is worth taking a moment to read and understand about [[https://semver.org/][Semantic Versioning]] which you are likely to use in versioning
 your software.
 
 ** Versioneer
-#+CUSTOM_ID: versioneer
+:PROPERTIES:
+:CUSTOM_ID: versioneer
+:END:
 
 Enter [[https://github.com/python-versioneer/python-versioneer][versioneer]] which specifically sets out to handle this very problem.
 
@@ -531,7 +579,6 @@ You may wish to exclude the ~<package>/_version.py~ from some of your linting if
 [[https://ns-rse.github.io/posts/pre-commit][pre-commit]].  At the command line you can exclude a file from being included in ~flake8~ analyses with
 ~--exclude=<patterns>~ and so at the command line you would.
 
-<p class="codeblock-label"></p>
 #+CAPTION: ~flake8~ excluding ~_version.py~
 #+BEGIN_SRC bash :eval no
 flake8 --exclude=<package>/_version.py
@@ -561,8 +608,6 @@ ignore=CVS,
 #+END_SRC
 
 * Publishing to [[https://pypi.org][PyPI]]
-
-
 
 Before pushing the package to the main PyPi server it is prudent to test things out on  [[https://test.pypi.org/][TestPyPI]] first. You must first
 generate an API Token from your account settings page. It needs a name and the scope should be `Entire account (all
@@ -697,16 +742,34 @@ jobs:
 9. Add new repository secrets for [[https://pypi.org/][PYPI_API_TOKEN]] and [[https://test.pypi.org][TEST_PYPI_API_TOKEN]] under /Settings > Secrets > Actions/ you have
    to generate the tokens on both PyPI and Test PyPI.
 
+** Releasing via GitHub
 
+With [[#versioneer][versioneer]] in place and a [[id:5e1f167e-5c0c-4206-b2ac-6694e08524d8][GitHub Action]] setup and configured it is now possible to make a release to PyPI via
+GitHub Releases.
+
+1) Go to the Releases page (its linked from the right-hand side of the front-page).
+2) Draft a New release.
+3) Create a new tag using semantic versioning and select "Create new tag v#.#.# on publish".
+4) Click the "Generate Release Notes" button, this adds all the titles for all Pull Requests, I'll often remove all
+   these but leave the link to the ~ChangeLog~ that is generated for the release.
+5) Write your release notes.
+6) Select "Set as latest release".
+7) Select "Create a discussion for this releases" and select "Announcements".
+8) Click on "Publish Release".
 
 * PDM
-#+CUSTOM_ID: pdm
+:PROPERTIES:
+:CUSTOM_ID: pdm
+:END:
 
 New kid on the block is [[https://pdm.fming.dev/latest/][PDM]] (Python package and Dependency Manager) which handles all stages of setting up and creating
 a package and managing its dependencies.
 
 * Poetry
-#+CUSTOM_ID: poetry
+:PROPERTIES:
+:CUSTOM_ID: poetry
+:END:
+
 * Links
 
 + [[https://packaging.python.org/en/latest/tutorials/packaging-projects/][Packaging Python Projects]]
