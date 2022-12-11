@@ -53,16 +53,17 @@ worthwhile below.
 
 * Links
 ** GitHub Pages
-- [[https://pages.github.com/][Websites for you and your projects, hosted directly from your GitHub repository.]]
++ [[https://pages.github.com/][Websites for you and your projects, hosted directly from your GitHub repository.]]
 
 ** Automation
-- [[https://docs.github.com/en/actions][GitHub Actions Documentation]]
-- [[https://github.com/actions][GitHub Actions Library]]
-- [[https://github.com/marketplace?type=actions][GitHub Actions  Marketplace]]
-- [[https://ropensci.org/blog/2022/05/31/chatops-review-system-github/][Editorial Automation: Why & How to Set Up Chat-Ops for your Own Review System on GitHub]]
++ [[https://docs.github.com/en/actions][GitHub Actions Documentation]]
++ [[https://github.com/actions][GitHub Actions Library]]
++ [[https://github.com/marketplace?type=actions][GitHub Actions  Marketplace]]
++ [[https://ropensci.org/blog/2022/05/31/chatops-review-system-github/][Editorial Automation: Why & How to Set Up Chat-Ops for your Own Review System on GitHub]]
 
 *** GitHub Actions
-- [[https://github.com/marketplace/actions/sphinx-docs-to-github-pages][Sphinx Docs to GitHub Pages]]
++ [[https://github.com/marketplace/actions/sphinx-docs-to-github-pages][Sphinx Docs to GitHub Pages]]
++ [[https://github.com/KanHarI/gpt-commit-summarizer][GPT Commit Summarizer]]
 
 ** GitHub Blog
 
