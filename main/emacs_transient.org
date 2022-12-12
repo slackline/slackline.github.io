@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d6626ec2-1e95-4d42-b06e-ae45268f2b58
 :END:
-#+NAME: Emacs Transient
+#+TITLE: Emacs Transient
 #+DATE: [2022-12-11 Sun 22:08]
 #+FILETAGS: :emacs:transient:magit:

@@ -1,9 +1,11 @@
 :PROPERTIES:
 :ID:       a8927dc4-a237-463c-a41e-3b884da4f784
 :END:
-#+NAME: Bash Parallel
+#+TITLE: Bash Parallel
 #+DATE: [2022-12-11 Sun 22:57]
 #+FILETAGS: :bash:parallel:shell:
+
+[[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] has its own tool for running commands in parallel called... [[https://www.gnu.org/software/parallel/][parallel]]!!
 
 * Links
 

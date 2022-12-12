@@ -12,15 +12,15 @@ and forms the basis of several [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Litera
 
 * Tables
 
-#+NAME: markdown-tables
 #+CAPTION: Markdown Tables
+#+NAME: markdown-tables
 #+BEGIN_SRC R :eval no
 #+END_SRC
 
 * Figures
 
-#+NAME: markdown-figures
 #+CAPTION: Markdown Figures
+#+NAME: markdown-figures
 #+BEGIN_SRC R :eval no
 #+END_SRC
 
@@ -31,6 +31,8 @@ many different types of diagrams including flowcharts, class diagrams, Gantt cha
 Sphinx in either reStructured Text or Markdown mode and is really quite simple to use (although as with many things
 advanced usage is more intricate). GitHub will [[https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/][include diagraims in your Markdown files with Mermaid]] too.
 
+#+CAPTION: Mermaid diagrams in Markdown
+#+NAME: markdown-mermain
 #+BEGIN_SRC markdown :eval no
 
   ```{mermaid}

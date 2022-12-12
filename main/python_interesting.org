@@ -1,10 +1,11 @@
 :PROPERTIES:
 :ID:       4ca15b37-1436-45fc-8a81-7f1f03b0ee64
 :END:
-#+NAME: Python : Useful and Interesting Packages
+#+TITLE: Useful Python Packages
 #+DATE: [2022-12-11 Sun 22:51]
 #+FILETAGS: :python:packages:tqdm:textual:loguru:
 
+[[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] has a /lot/ of packages available I've even written and published one myself. The main resource is the Python Package Index (PyPI)
 
 * loguru
 

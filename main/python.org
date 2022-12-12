@@ -90,14 +90,8 @@ Dictionaries can be pretty printed using the ~json.dumps()~ method.
 :PROPERTIES:
 :ID:       13fb7bc5-0226-4071-b03b-08ca01fba5f0
 :END:
-** Types
-:PROPERTIES:
-:ID:       0325ed22-c17e-4c30-a8c6-bee38a2a74cc
-:END:
-Python is "dynamically typed" which for some time I thought meant you just type it out, but that is not the case. The
-term means you do not /have/ to declare whether something is a string, integer, float, list and so forth up-front,
-rather the type of an object is determined dynamically. This has some advantages, but it is also worth being explicit
-about the types of data functions are expected to accept in order to avoid problems.
+
+
 * I/O
 :PROPERTIES:
 :ID:       c821f0a2-07d8-4713-907d-d4916b998fdc
@@ -108,6 +102,7 @@ Reading and writing data and files is fairly key to many things you will wish to
 :PROPERTIES:
 :ID:       a74a48ce-a5a5-4368-8301-f1d965527993
 :END:
+
 * Logging
 Logging is essential for reporting to users on the progress of their work. Read more on [[id:345cadc2-52a5-4c91-8de1-a45a98aaa5a8][logging]].
 
@@ -120,18 +115,19 @@ Python has a host of functionality for parallelisation. Read more on [[id:077cb9
 :ID:       e42e7d26-345d-4bab-ba48-473ac26f5161
 :END:
 Whilst Python is a dynamically typed language, which means that the type of [[id:8da3c4d1-e3ef-40ec-b2bd-1d5685c8fa51][data structure]] is determined on the fly when
-running code, the typing of arguments and their subsequent validation can be invaluable. Basic typing can be achieved by
-using typehints and checked using mypy. Validation can be extended using [[id:ba02ecdf-c35f-4deb-8308-28341922c096][pydantic]].
+running code, the typing of arguments and their subsequent validation can be invaluable. This is achieved by adding [[https://docs.python.org/3/library/typing.html][type
+hints]] to your code, typically whenever a new variable is defined, whether that is in the main body of code or in a
+function/method definition. For the later it is also sensible to add a type hint as to the type of object(s) that are
+returned.  The consistency of type hints can be checked using [[http://mypy-lang.org/][mypy]] and input can be validated on the fly by using
+[[id:ba02ecdf-c35f-4deb-8308-28341922c096][pydantic]].
+
 
 * Packages
-:PROPERTIES:
-:ID:       b428a706-f9d4-44d9-9525-a28dd01be167
-:END:
 
 At some point you will want to package your code up and make it available for others to use. There are many approaches
 to this and whilst it requires a little more learning the [[https://setuptools.pypa.io/en/latest/#][setuptools]] package offers many advantages in the long run.
 
-There are also a ton of useful and interesting packages out there. I've documented some at[[id:4ca15b37-1436-45fc-8a81-7f1f03b0ee64][python_interesting]]
+There are also a ton of useful and interesting packages out there. I've documented some at [[id:4ca15b37-1436-45fc-8a81-7f1f03b0ee64][Useful Python Packages]].
 
 * Documentation
 
