@@ -17,7 +17,7 @@ This is where the concept of "dotfiles" comes in.
 The first step is to create a directory where all your "dotfiles" will be kept and version controlled. Its a pain to
 place your ~${HOME}~ directory under version control because you will likely have innumerable other directories that are
 git repositories and whilst this can be handled via [[https://git-scm.com/book/en/v2/Git-Tools-Submodules][Submodules]] its a bit of a faff. Instead its advisable to keep things
-simple and have a ~\\~/dotfiles~ repository that you keep under Git version control.
+simple and have a ~\\~/dotfiles~ repository that you keep under [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] version control.
 
 #+BEGIN_SRC bash eval: no
   mkdir ~/dotfiles

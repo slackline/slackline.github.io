@@ -3,7 +3,7 @@
 :END:
 #+TITLE: Emacs Eglot
 #+DATE: [2022-12-09 Fri 21:21]
-+FILETAGS: :emacs:lsp:eglot
++FILETAGS: :emacs:lsp:eglot:
 
 * Links
 
