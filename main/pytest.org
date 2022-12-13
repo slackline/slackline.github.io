@@ -46,6 +46,8 @@ PyTest provides the [[https://docs.pytest.org/en/7.1.x/how-to/fixtures.html][~@p
 It is possible to write one test and [[https://docs.pytest.org/en/7.1.x/how-to/parametrize.html][paramterise]] it, that is pass it a set of different parameters for input and
 expectation. It is a very simple method of increasing the coverage and range of scenarios that you are testing.
 
+#+CAPTION: Parameterising a test using ~pytest~ fixtures.
+#+NAME: pytest-fixture
 #+BEGIN_SRC python :eval no
 def multiply(a, b):
     return a * b
@@ -58,6 +60,28 @@ def multiply(a, b):
 def test_multiply(a, b, expected):
     assert multiply(a, b) == expected
 #+END_SRC
+
+A neat use of parameterisation is to allow some tests to pass and some to fail.
+
+#+CAPTION: Parameterising tests, some of which pass, others fail.
+#+NAME: pytest-fixture-pass-fail
+#+BEGIN_SRC python :eval no
+  from typing import Union
+
+  def divide(a: Union[int, float], b: Union[int, float]) -> float:
+      try:
+          return a / b
+      except ZeroDivisionError as e:
+          raise e
+
+  @pytest.mark.parameterize("a, b, expected")
+  [(10.0, 5.0, 2.0),
+   (10.0, 0.0, ZeroDivisionError())]
+  def test_divide(a, b, expected):
+      with a, b:
+          assert divide(a, b) == expected
+#+END_SRC
+
 
 *** Fixture Parameterisation
 

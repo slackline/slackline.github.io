@@ -33,9 +33,6 @@ structured before it goes out to peer-review.
 You can also use the "AI" [[https://sourcery.ai/][Sourcery]] to "/Automatically Improve Python Code Quality/". For more on linting see [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linting]].
 
 * Testing
-:PROPERTIES:
-:ID:       8f921470-1ed4-4f20-8520-5f8274f0bc3d
-:END:
 
 Testing is something I came across late in my programming adventure, but it is really something that should be learnt or
 taught from the beginning as it has huge benefits as you progress through developing your code. It is so useful there is

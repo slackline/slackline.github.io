@@ -60,6 +60,8 @@ Cloning a remote repository is straight-forward. On the front page of all forges
 button above the listing of files to **Clone**. There are two methods of cloning, one uses ~https~ the other ~ssh~. To
 use the later you will have had to add your SSH credentials to your user account on that forge.
 
+#+CAPTION: Clonging a Git repository
+#+NAME: git-clone
 #+begin_src sh :eval no
   git clone
 #+end_src
@@ -68,15 +70,37 @@ use the later you will have had to add your SSH credentials to your user account
 
 It is straight-forward to initialise a directory to be under git version control simply...
 
+
+#+CAPTION: Initialising a local repository to bring it under Git version contorl.
+#+NAME: git-local-init
 #+begin_src sh :eval no
   git init
 #+end_src
 
 ** Adding Files
 
+#+CAPTION: Adding files within a git repository
+#+NAME: git-add
+#+begin_src sh :eval no
+  git add file1.py tests/file2.py
+#+end_src
+
 ** Making a commit
 
-** Pushing to origin
+Typically a commit message should complete the sentence /This commit.../ and be succinct and informative. You can always
+add additional information to commits but the title should be short /and/ informative.
+
+#+CAPTION: Git commit with a message
+#+NAME: git-commit
+#+begin_src sh :eval no
+  git commit -m "Adding first files to the repository"
+#+end_src
+
+** Pushing and Pulling
+
+#+CAPTION: Git Workflow by [[https://nikkiandchris.io][nikkiandchris.io]]
+[[./img/git/git_pull_push.jpg]]
+
 
 ** Fetch v Pull
 
@@ -87,8 +111,8 @@ fetch~ and how does it differ from ~git pull~? The simplest answer to this is pr
 
 #+CAPTION: ~git fetch~ v ~git pull~ by [[https://allisonhorst.com/git-github][Allison Horst]]
 #+NAME: fig:git-fetch-v-git-pull
-[[https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/7f2a398a-3351-49e4-8430-5d1793c5a775.png]]
 
+[[./img/git/git_fetch_v_pull.png]]
 
 * Hooks
 
@@ -117,7 +141,8 @@ Git keeps a detailed history of commits that contain metadata and other useful i
 ** Git Log
 
 There are many options for viewing and formatting the log history.
-*** Contributors
+
+*** Git Short Log
 
 A simple way to get the list of contributors is to
 
@@ -125,10 +150,19 @@ A simple way to get the list of contributors is to
   git shortlog -s -n -e
 #+end_src
 
+It can also be used to summarise contributions by combining with come command [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][command line utilities]]. The following
+formats commits by date (~YYYY-MM~), ~sorts~ them and then counts the number of ~uniq~ observations (from [[https://github.blog/2022-12-12-highlights-from-git-2-39/][here]]).
+
+#+begin_src sh :eval no
+  $ git log v2.38.0.. --date='format:%Y-%m' --format='%cd' | sort | uniq -c
+#+end_src
+
 
 
 ** Blame
 
+
+** Git Rebase
 
 
 
@@ -166,6 +200,9 @@ for editing your code but it is really focused on helping you work with Git.
 + [[https://onlywei.github.io/explain-git-with-d3/#clean][Explain Git with D3]]
 + [[https://learngitbranching.js.org/][Learn Git Branching]]
 
+** HowTos
+
++ [[https://www.howtogeek.com/849210/git-rebase/][Git rebase: Everything You Need to Know]]
 
 **  Alternatives
 
