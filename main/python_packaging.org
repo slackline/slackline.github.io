@@ -692,3 +692,4 @@ dependencies. In essence its a tool for interactively generating the configurati
 + [[https://packaging.python.org/en/latest/tutorials/packaging-projects/][Packaging Python Projects]]
 + [[https://github.com/wimglenn/resources-example][Packaging Data files in a Python Distribution]]
 + [[https://pdm.fming.dev/latest/][PDM - Python package and Dependency Manager]]
++ [[https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html][Why you shouldn't invoke setup.py directly]]
