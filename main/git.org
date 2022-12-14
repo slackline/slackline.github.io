@@ -130,6 +130,7 @@ Request to have their changes incorporated into the original body of code for a 
 |----------+----------------------------------------------------------------------------------------------------------------------------------|
 | [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]]   | Perhaps the largest and most widely used forge. Purchased my Micro$oft a few years ago.                                          |
 | [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]]   | Comparable services with strong CI/CD functionality. Its also a free, open source piece of software so you can host it yourself. |
+| [[https://xethub.com/][XetHub]]   | /A collaboration platform for accessing, exploring and iterating on large-scale repositories, backed by the power of Git./       |
 | Codeberg |                                                                                                                                  |
 | Gitea    |                                                                                                                                  |
 
@@ -200,9 +201,15 @@ for editing your code but it is really focused on helping you work with Git.
 + [[https://onlywei.github.io/explain-git-with-d3/#clean][Explain Git with D3]]
 + [[https://learngitbranching.js.org/][Learn Git Branching]]
 
+<<<<<<< HEAD
 ** HowTos
 
 + [[https://www.howtogeek.com/849210/git-rebase/][Git rebase: Everything You Need to Know]]
+=======
+*** Branching
+
++ [[https://datasift.github.io/gitflow/IntroducingGitFlow.html][Introducing GitFlow]]
+>>>>>>> 00e1b7e (Adding xethub link)
 
 **  Alternatives
 

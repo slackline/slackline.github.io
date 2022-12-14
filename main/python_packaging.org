@@ -7,8 +7,8 @@
 
 [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] packaging is it seems in a constant state of flux. There is the official [[https://packaging.python.org/en/latest/][Python Packaging User Guide]] from the
 [[https://www.pypa.io/en/latest/][Python Packaging Authority]] which is probably the best resource to read but things change, and often quickly. This
-document focuses on [[https://setuptools.pypa.io/en/latest/index.html][Setuptools]], but you may wish to consider other packages such as [[#poetry][Poetry]] or [[#pdm][PDM]] which offer some
-advantages but with additional learning.
+document focuses on [[https://setuptools.pypa.io/en/latest/index.html][Setuptools]] which works with Python >= 3.7, but you may wish to consider other packages such as
+[[id:8aed2c14-86e7-4b0e-bfe6-e783831bfca2][Poetry]] or [[id:37748065-f956-4d0c-9301-c4d51439b1b4][PDM]] which offer some advantages but with additional learning.
 
 * Package Structure
 
@@ -30,7 +30,7 @@ files in an organised hierarchy with a sub-directory of the same name for Python
       └── ./tests/tracing
 #+END_SRC
 
-** __init__.py
+** \__init\__.py
 
 In older versions of Python (<3.3) a ~__init__.py~ was required in every directory and sub-directory that was to be a
 module/sub-module. In more recent versions of Python (>\=3.3) they are not essential though as Python uses [[https://docs.python.org/3/reference/import.html#namespace-packages][namespace
@@ -59,6 +59,20 @@ This is the traditional method of configuring a package in conjunction with a ~r
 deprecated in favour of ~setup.cfg~ and/or ~pyproject.toml~. The remainder of this document does not therefore describe
 detailed usage of this approach (although it is required by [[#versioneer][Versioneer]]).
 
+#+CAPTION: ~setup.py~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/pyproject.toml][TopoStats]].
+#+begin_src conf
+"""Setup package for building"""
+import setuptools
+import sys
+import versioneer
+
+sys.path.insert(0, ".")
+setuptools.setup(
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
+)
+
+#+end_src
 
 ** pyproject.toml
 
@@ -68,7 +82,8 @@ highly functional. Its written in [[https://toml.io/en/][Tom's Obvious Minimal L
 
 A bare-bones ~pyproject.toml~ file should reside in the top level of your directory with the following...
 
-
+*** Build System
+#+CAPTION: ~build-system~ section of ~pyproject.toml~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/pyproject.toml][TopoStats]].
 #+begin_src conf
   [build-system]
   requires = ["setuptools"]
@@ -77,6 +92,57 @@ A bare-bones ~pyproject.toml~ file should reside in the top level of your direct
 
 Traditionally configuration of meta-data such as author, code repository and license was made via ~setup.py~ but you can
 either specify some (or most) of this in ~pyproject.toml~ or a concurrent ~setup.cfg~.
+
+*** Pytest Options
+
+#+CAPTION: ~tool.versioneer~ section of ~pyproject.toml~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/pyproject.toml][TopoStats]].
+#+begin_src conf
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "--cov --mpl"
+testpaths = [
+    "tests",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning"
+]
+
+#+end_src
+
+*** Black Options
+
+#+CAPTION: ~tool.black~ section of ~pyproject.toml~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/pyproject.toml][TopoStats]].
+#+begin_src conf
+[tool.black]
+line-length = 120
+target-version = ['py38']
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.venv
+  )/
+)
+'''
+
+#+end_src
+
+
+*** Versioneer Options
+
+#+CAPTION: ~build-system~ section of ~pyproject.toml~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/pyproject.toml][TopoStats]].
+#+begin_src conf
+[tool.versioneer]
+VCS = "git"
+style = "pep440"
+versionfile_source = "topostats/_version.py"
+versionfile_build = "topostats/_version.py"
+tag_prefix = "v"
+parentdir_prefix = ""
+#+end_src
 
 ** setup.cfg
 
@@ -152,7 +218,7 @@ sub-groups such as dependencies that are required for ~tests~, building ~docs~ o
 
 #+CAPTION: Sample ~options.extras_require~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
 #+BEGIN_SRC conf :eval no
-  [options.extras_require]
+[options.extras_require]
 tests =
   py
   pytest
@@ -252,6 +318,10 @@ Sometimes you want to include more than ~.py~ files in your package, for example
 options or [[id:950174e1-c936-463a-b4a2-702ca516d95e][json]] files with data. This can be achieved by adding an ~options.package_data~ section to your file. This can
 be done across all package directories if ~* =~ is used.
 
+To load the files of a package in your code you should use the [[https://docs.python.org/3.8/library/importlib.html][~importlib.resources~ module]]
+
+Specific files can be included and excluded on a per package basis see [[https://jwodder.github.io/kbits/posts/pypkg-data/][examples]] and the [[https://setuptools.pypa.io/en/latest/userguide/datafiles.html][official documentation]].
+
 #+CAPTION: Sample ~options.extras_require~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
 #+BEGIN_SRC conf :eval no
 [options.package_data]
@@ -268,7 +338,25 @@ module2 = *.json
   *.csv
 #+END_SRC
 
+A useful thread on StackOverflow is [[https://stackoverflow.com/questions/6028000/how-to-read-a-static-file-from-inside-a-python-package][here]] (most useful answers I found were [[https://stackoverflow.com/a/58941536][this]] which includes a link to an [[https://github.com/wimglenn/resources-example][example
+repository]] comparing the different approaches and [[https://stackoverflow.com/a/51724506][this exposition of pkgutil]]). You can load a YAML file with the
+following which loads the file ~topostats/default_config.yaml~
+
+#+CAPTION: Loading a YAML file from Package Data.
+#+BEGIN_SRC python :eval no
+import importlib.resources as pkg_resources
+default_config = pkg_resources.open_text(__package__, "default_config.yaml")
+config = yaml.safe_load(default_config.read())
+#+END_SRC
+
+
 *** Entry Points
+
+It can be useful to provide an entry point to your package so that users can simply type a single command after
+installing the package (typically under a virtual environment) to be able to run it from the command line. Typically you
+would want to include a Command Line Interface that leverages [[id:5f7b632b-bb5b-48dd-b389-d8fcef406a19][Argparse]] to provide command line arguments. An exposition
+of this approach can be read [[https://amir.rachum.com/blog/2017/07/28/python-entry-points/][here]] and the documentation on how to do this with setuptools is [[https://setuptools.pypa.io/en/latest/userguide/entry_point.html][here]]. Add something similar
+to the following to your ~setup.cfg~
 
 #+CAPTION: Sample ~options.extras_require~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
 #+BEGIN_SRC conf :eval no
@@ -279,199 +367,22 @@ console_scripts =
 
 *** Full Config
 
-
-#+CAPTION: Sample ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
-#+begin_src conf :eval no
-[metadata]
-name = topostats
-description = Automated Analysis for Atomic Force Microscopy Images of Biomolecules
-long_description = file: README.md
-long-description-content-type: text/markdown; charset=UTF-8; variant=GFM
-url = https://github.com/AFM-SPM/TopoStats
-project_urls =
-  Bug Tracker = https://github.com/AFM-SPM/TopoStats/issues
-  Documentation = https://AFM-SPM.github.io/TopoStats
-author = TopoStats Team
-author_email = topostats@sheffield.ac.uk
-license = GNU Lesser GPLv3
-classifiers =
-  Programming Language :: Python :: 3
-  Programming Language :: Python :: 3.8
-  Programming Language :: Python :: 3.9
-  Programming Language :: Python :: 3.10
-
-[options]
-python_requires = >=3.8
-
-zip_safe = False
-
-install_requires =
-  igor
-  matplotlib
-  numpy
-  pandas
-  pySPM
-  pyyaml
-  ruamel.yaml
-  schema
-  scikit-image==0.19.2
-  scipy
-  seaborn
-  tifffile
-  tqdm
-
-
-packages = find:
-
-[options.extras_require]
-tests =
-  py
-  pytest
-  pytest-cov
-  pytest-mpl
-  pytest-regtest
-
-docs =
-  Sphinx
-  sphinx_rtd_theme
-  numpydoc
-  myst_parser
-  pydata_sphinx_theme
-  sphinx_markdown_tables
-  sphinxcontrib-mermaid
-  sphinxcontrib-napoleon
-  sphinx-autodoc-typehints
-
-dev =
-  black
-  pre-commit
-  pylint
-  flake8
-
-pypi =
-  build
-  wheel
-
-[options.packages.find]
-exclude = tests*
-
-[coverage:run]
-omit =
-  *conftest.py
-  *tests*
-  **/__init__*
-
-[flake8]
-max_line_length=120
-docstring-convention=numpy
-exclude =
-    .git,
-    __pycache__,
-    docs/conf.py,
-    build,
-    dist,
-    pygwytracing.py,
-    topostats/plotting.py,
-    topostats/tracing/tracingfuncs.py,
-    topostats/tracing/dnatracing.py,
-    topostats/tracing/tracing_dna.py,
-    tests/tracing/test_dnatracing.py,
-extend-ignore =
-    E501,
-    T201
-
-[yapf]
-based_on_style = pep8
-column_limit = 120
-
-[options.package_data]
- * = *.yaml
-
-[options.entry_points]
-console_scripts =
-  run_topostats = topostats.run_topostats:main
-#+end_src
-
-** Package Data
-
-Sometimes you will want to include additional files in your package such as a default YAML configuration file that can
-be loaded.
-
-THis is done using the ~[options.package_data]~ section of ~setup.cfg~ and placing your files under the source of your
-package (i.e. the sub-directory that contains the Python code).
-
-#+begin_src conf :eval no
-  [options.package_data]
-  * = *.yaml
-#+end_src
-
-To load the files of a package you should use then [[https://docs.python.org/3.8/library/importlib.html][~importlib.resources~ module]]
-
-Specific files can be included and excluded on a per package basis see [[https://jwodder.github.io/kbits/posts/pypkg-data/][examples]] and the [[https://setuptools.pypa.io/en/latest/userguide/datafiles.html][official documentation]].
-
-*** Metadata
-
-
-
-*** Entry Points
-
-It can be useful to provide an entry point to your package so that users can simply type a single command after
-installing the package (typically under a virtual environment) to be able to run it from the command line. An exposition
-of this approach can be read [[https://amir.rachum.com/blog/2017/07/28/python-entry-points/][here]] and the documentation on how to do this with setuptools is [[https://setuptools.pypa.io/en/latest/userguide/entry_point.html][here]]. Add something similar
-to the following to your ~setup.cfg~
-
-#+begin_src conf :eval no
-  [options.entry_points]
-  console_scripts =
-      find_pg = pgfinder:find_pg
-#+end_src
-
-With the function you wish to run defined in ~__init__.py~ and a hook defined in ~__main__.py~. Typically you would want
-to include a Command Line Interface that leverages [[id:5f7b632b-bb5b-48dd-b389-d8fcef406a19][Argparse]] to provide command line arguments.
-
-** Resources
-
-Including resources such as default parameters is possible. A useful thread on StackOverflow is [[https://stackoverflow.com/questions/6028000/how-to-read-a-static-file-from-inside-a-python-package][here]] (most useful
-answers I found were [[https://stackoverflow.com/a/58941536][this]] which includes a link to an [[https://github.com/wimglenn/resources-example][example repository]] comparing the different approaches and [[https://stackoverflow.com/a/51724506][this
-exposition of pkgutil]]).
-
-The examples don't quite fit my use case as I typically load parameters and configuration from YAML files, to do this I
-placed the files under ~<package>/config/parameters.yaml~ and then in ~__init__.py~ have the following...
-
-#+begin_src python :eval no
-  import yaml
-  from pkgutil import get_data
-
-  PARAMETERS_FILE = "config/parameters.yaml"
-  PARAMETERS = get_data(__package__, PARAMETERS_FILE)
-  PARAMETERS = yaml.safe_load(PARAMETERS)
-#+end_src
-
-~PARAMETERS~ is now a dictionary that contains the contents of ~config/parameters.yaml~.
+To see the full config please refer to  [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
 
 * Building your Package
 
-[[https://pypi.org][PyPi]] is the Python Package Index that provides a central repository for installing packages using [[https://pip.pypa.io/en/stable/][~pip~]] (although ~pip~
-can be configured to work with other such servers such as internal private ones).
-
-To facilitate publishing packages to PyPi there is [[https://test.pypi.org/][TestPyPI]] which is a mirror where you can test deployment. Create
-accounts on both the main PyPi and TestPyPi servers.
-
 ** Generate Distribution Archive
 
-In your package you should create an archive of your package with the latest versions of ~setuptools~ and ~wheel~. To do
+In your package directory you can create a distribution of your package with the latest versions of ~setuptools~ and ~wheel~. To do
 this in your virtual environment run the following. The documentation for how to do this is at [[https://setuptools.pypa.io/en/latest/setuptools.html][Building and Distributing
 Packages with Setuptools]].
 
-It is not essential to have a ~setup.py~ which is being deprecated if you are using the newer recommended ~setup.cfg~ /
-~pyproject.toml~  combination to configure your package as ~setuptools~ will create a dummy file with the required
-contents for you providing you have the following in ~pyproject.toml~.
-
+You should as mentioned above have the following in ~pyproject.toml~
 
 #+begin_src :eval no
   [build-system]
   requires = [
-    "setuptools >= 40.9.0",
+    "setuptools >= 65.6.3",
     "wheel",
   ]
   build-backend = "setuptools.build_meta"
@@ -484,12 +395,13 @@ The package can now be built locally with...
   python -m build
 #+end_src
 
+...and the resulting package will be generated in the ~dist/~ directory.
 
-* Versioning and Automating Releases
+* Versioning
 
-Typically the version is defined in the ~__version__~ value or as a value in ~[metadata]~ of ~setup.cfg~ or
-~pyproject.toml~ but this has some downsides in that you have to remember to update the string manually when you are
-ready for a release and it doesn't tie in with using tags in Git to tag versions of your commits.
+Typically the version is defined in the ~__version__~ value in the top-level ~__init__.py~ or as a value in ~[metadata]~
+of either ~setup.cfg~ or ~pyproject.toml~ but this has some downsides in that you have to remember to update the string
+manually when you are ready for a release and it doesn't tie in with using tags in Git to tag versions of your commits.
 
 It is worth taking a moment to read and understand about [[https://semver.org/][Semantic Versioning]] which you are likely to use in versioning
 your software.
@@ -607,102 +519,6 @@ ignore=CVS,
        _version.py
 #+END_SRC
 
-* Publishing to [[https://pypi.org][PyPI]]
-
-Before pushing the package to the main PyPi server it is prudent to test things out on  [[https://test.pypi.org/][TestPyPI]] first. You must first
-generate an API Token from your account settings page. It needs a name and the scope should be `Entire account (all
-projects)`. This token will be shown once so do *not* navigate away from the page until you have copied it.
-
-
-You use [[https://twine.readthedocs.io/en/latest/][twine]] to upload the package and should create a ~.pypirc~ file in the root of the packages directory that
-contains your API key and the username ~__token__~
-
-#+begin_src conf :eval no
-  [testpypi]
-    username = __token__
-    password = pypi-dfkjh9384hdszfkjnkjahkjfhd3YAJKSHE0089asdf0lkjsjJLLS_-0942358JKHDKjhkljna39o854yurlaoisdvnzli8yw459872jkhlkjsdfkjhdfJZZZZZF
-#+end_src
-
-Once this is in place you are ready to use ~twine~ to upload the package using the configuration file you have just
-created.
-
-#+begin_src bash :eval no
-  twine upload --config-file ./.pypirc --repository testpypi dist/*
-#+end_src
-
-** Testing Download
-
-After having uploaded your package to the TestPyPI server you should create a clean virtual environment and try
-installing the package from where you have just uploaded it. You can do this using ~pip~ and the ~--index-url~ and
-~--extra-index-url~, the former installs your package from TestPyPI, the later installs dependencies from PyPI.
-
-#+begin_src bash :eval no
-  pip install https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ your-package
-#+end_src
-
-Once installed you can try running the code, scripts or notebooks associated with the package as you would normally.
-
-** Repeat for PyPI
-
-Once you are happy this is working you can repeat the process on the main [[https://pypi.org][PyPI]] server. You can add the token that you
-generate to ~/.pypirc~ under a separate heading.
-
-#+begin_src conf :eval no
-  [testpypi]
-    username = __token__
-    password = pypi-dfkjh9384hdszfkjnkjahkjfhd3YAJKSHE0089asdf0lkjsjJLLS_-0942358JKHDKjhkljna39o854yurlaoisdvnzli8yw459872jkhlkjsdfkjhdfJZZZZZF
-  [pypi]
-    username = __token__
-    password = pypi-dfkjh9384hdszfkjnkjahkjfhd3YAJKSHE0089asdf0lkjsjJLLS_-0942358JKHDKjhkljna39o854yurlaoisdvnzli8yw459872jkhlkjsdfkjhdfJZZZZZF
-#+end_src
-
-
-** GitHub Action
-:PROPERTIES:
-:ID:       5e1f167e-5c0c-4206-b2ac-6694e08524d8
-:END:
-
-Manually uploading is somewhat time consuming and tedious. Fortunately though with versioneer in place and tokens
-generated we can automate the process of building and uploading packages using the GitHub Action [[https://github.com/pypa/gh-action-pypi-publish][gh-action-pypi-publish]]
-is available to automate publishing to PyPI. You will have already generated [[https://pypi.org/help/#apitoken][generate a PYPI token]] (and similarly one
-for [[https://test.pypi.org][test PyPI]]) and these can stored on the projects GitHub account under /Settings > Secrets > Actions/ with the names
-~PYPI_API_TOKEN~ and ~TEST_PYPI_API_TOKEN~ respectively.  You can then include the following GitHub Action under
-~.github/workflow/pypi.yaml~.
-
-#+BEGIN_SRC yaml :eval no
-name: Publish package to PyPi
-
-on:
-  push:
-    tags:
-      - v*
-jobs:
-  build-release:
-    runs-on: ubuntu-latest
-    name: Publish package to PyPi
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Setup Python
-        uses: actions/setup-python@v4.3.0
-        with:
-          python-version: 3.9
-      - name: Installing the package
-        run: |
-          pip3 install versioneer
-          pip3 install .
-          pip3 install .[pypi]
-      - name: Build package
-        run: |
-          python -m build --no-isolation
-      - name: Publish package to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
-#+END_SRC
-
 ** Step-by-step
 
 1. ~pip install versioneer~
@@ -742,6 +558,101 @@ jobs:
 9. Add new repository secrets for [[https://pypi.org/][PYPI_API_TOKEN]] and [[https://test.pypi.org][TEST_PYPI_API_TOKEN]] under /Settings > Secrets > Actions/ you have
    to generate the tokens on both PyPI and Test PyPI.
 
+
+* Publishing to [[https://pypi.org][PyPI]]
+
+Before pushing the package to the main PyPi server it is prudent to test things out on  [[https://test.pypi.org/][TestPyPI]] first. You must first
+generate an API Token from your account settings page. It needs a name and the scope should be `Entire account (all
+projects)`. This token will be shown once so do *not* navigate away from the page until you have copied it.
+
+
+You use [[https://twine.readthedocs.io/en/latest/][twine]] to upload the package and should create a ~.pypirc~ file in the root of the packages directory that
+contains your API key and the username ~__token__~
+
+#+begin_src conf :eval no
+  [testpypi]
+    username = __token__
+    password = pypi-dfkjh9384hdszfkjnkjahkjfhd3YAJKSHE0089asdf0lkjsjJLLS_-0942358JKHDKjhkljna39o854yurlaoisdvnzli8yw459872jkhlkjsdfkjhdfJZZZZZF
+#+end_src
+
+Once this is in place you are ready to use ~twine~ to upload the package using the configuration file you have just
+created.
+
+#+begin_src bash :eval no
+  twine upload --config-file ./.pypirc --repository testpypi dist/*
+#+end_src
+
+** Testing Download
+
+After having uploaded your package to the TestPyPI server you should create a clean virtual environment and try
+installing the package from where you have just uploaded it. You can do this using ~pip~ and the ~--index-url~ and
+~--extra-index-url~, the former installs your package from TestPyPI, the later installs dependencies from PyPI.
+
+#+begin_src bash :eval no
+  pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ your-package
+#+end_src
+
+Once installed you can try running the code, scripts or notebooks associated with the package as you would normally.
+
+** Repeat for PyPI
+
+Once you are happy this is working you can repeat the process on the main [[https://pypi.org][PyPI]] server. You can add the token that you
+generate to ~/.pypirc~ under a separate heading.
+
+#+begin_src conf :eval no
+  [testpypi]
+    username = __token__
+    password = pypi-dfkjh9384hdszfkjnkjahkjfhd3YAJKSHE0089asdf0lkjsjJLLS_-0942358JKHDKjhkljna39o854yurlaoisdvnzli8yw459872jkhlkjsdfkjhdfJZZZZZF
+  [pypi]
+    username = __token__
+    password = pypi-dfkjh9384hdszfkjnkjahkjfhd3YAJKSHE0089asdf0lkjsjJLLS_-0942358JKHDKjhkljna39o854yurlaoisdvnzli8yw459872jkhlkjsdfkjhdfJZZZZZF
+#+end_src
+
+
+** GitHub Action
+
+Manually uploading is somewhat time consuming and tedious. Fortunately though with versioneer in place and tokens
+generated we can automate the process of building and uploading packages to PyPI using the GitHub Action
+[[https://github.com/pypa/gh-action-pypi-publish][gh-action-pypi-publish]] (read more about [[id:e19b6eb6-46b2-440a-ba35-be29feb33407][GitHub Actions]]). You will have already generated [[https://pypi.org/help/#apitoken][generate a PYPI token]] (and
+similarly one for [[https://test.pypi.org][test PyPI]]) and these can stored on the projects GitHub account under /Settings > Secrets > Actions/
+with the names ~PYPI_API_TOKEN~ and ~TEST_PYPI_API_TOKEN~ respectively.  You can then include the following GitHub
+Action under ~.github/workflow/pypi.yaml~.
+
+#+BEGIN_SRC yaml :eval no
+name: Publish package to PyPi
+
+on:
+  push:
+    tags:
+      - v*
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    name: Publish package to PyPi
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup Python
+        uses: actions/setup-python@v4.3.0
+        with:
+          python-version: 3.9
+      - name: Installing the package
+        run: |
+          pip3 install versioneer
+          pip3 install .
+          pip3 install .[pypi]
+      - name: Build package
+        run: |
+          python -m build --no-isolation
+      - name: Publish package to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
+#+END_SRC
+
+
 ** Releasing via GitHub
 
 With [[#versioneer][versioneer]] in place and a [[id:5e1f167e-5c0c-4206-b2ac-6694e08524d8][GitHub Action]] setup and configured it is now possible to make a release to PyPI via
@@ -759,20 +670,25 @@ GitHub Releases.
 
 * PDM
 :PROPERTIES:
-:CUSTOM_ID: pdm
+:ID:       37748065-f956-4d0c-9301-c4d51439b1b4
 :END:
 
-New kid on the block is [[https://pdm.fming.dev/latest/][PDM]] (Python package and Dependency Manager) which handles all stages of setting up and creating
-a package and managing its dependencies.
+
+[[https://pdm.fming.dev/latest/][PDM]] (Python package and Dependency Manager) handles all stages of setting up and creating a package and managing its
+dependencies. In essence its a tool for interactively generating the configuration files described above.
+
 
 * Poetry
 :PROPERTIES:
-:CUSTOM_ID: poetry
+:ID:       8aed2c14-86e7-4b0e-bfe6-e783831bfca2
 :END:
+
+[[https://python-poetry.org/][Poetry]] is another package for managing packaging and dependencies.
 
 * Links
 
++ [[https://setuptools.pypa.io/en/latest/userguide/index.html][PyPA : Building and Distributing Packages with Setuptools]]
++ [[https://packaging.python.org/en/latest/specifications/][PyPA : Specifications]]
 + [[https://packaging.python.org/en/latest/tutorials/packaging-projects/][Packaging Python Projects]]
-+ [[https://setuptools.pypa.io/en/latest/setuptools.html][Building and Distributing Packages with Setuptools]]
 + [[https://github.com/wimglenn/resources-example][Packaging Data files in a Python Distribution]]
 + [[https://pdm.fming.dev/latest/][PDM - Python package and Dependency Manager]]
