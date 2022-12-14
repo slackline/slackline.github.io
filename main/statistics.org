@@ -7,8 +7,7 @@
 
 Statistics is about quantifying variation and apportioning the causes.
 
-+ [[id:7ced9fda-ff1e-4ff0-a80b-2193255e511d][Gaussian Process]]
-+
+
 * Classification
 Often the outcome of interest in an analysis is binary (or dichotomous), whether an event occurred or not or whether
 there is the presence of something such as a viral infection.
@@ -21,6 +20,8 @@ there is the presence of something such as a viral infection.
 :END:
 
 * Bayesian Statistics
+
+More than deserving of its own section, read more at [[id:38feb454-ee1e-440b-939c-c413009c609d][Bayesian Statistics]].
 
 * Software
 :PROPERTIES:
@@ -72,9 +73,3 @@ pertains to events which have not happened based on observations of those that h
 + [[https://www.statlearning.com/][An Introduction to Statistical Learning]]
 + [[https://hastie.su.domains/ElemStatLearn/][Elements of Statistical Learning: data mining, inference, and prediction. 2nd Edition.]]
 + [[https://hastie.su.domains/CASI/][Computer Age Statistical Inference: Algorithms, Evidence and Data Science]]
-*** Bayesian
-+ [[http://www.stat.columbia.edu/~gelman/book/][Bayesian Data Analysis | Gelman et al.]]
-+ [[https://allendowney.github.io/ThinkBayes2/][Think Bayes 2 | Allen Downey]]
-+ [[https://xcelab.net/rm/statistical-rethinking/][Statistical Rethinking | Richard McElreath]] ([[https://github.com/rmcelreath/stat_rethinking_2022][Statistical Rethinking 2022]] | [[https://bookdown.org/content/4857/][Statistical Rethinking (Second Edition) with
-  brms, ggplot2, and the tidyverse]] | [[https://vincentarelbundock.github.io/rethinking2/][Rethinking2 using Stan, R, rstan, tidybayes, and ggplot2]] | [[https://github.com/pymc-devs/resources/tree/master/Rethinking_2][PyMC3 Rethinking 2]])
-+ [[https://www.bayesrulesbook.com/][Bayes Rules! An Introduction to Applied Bayesian Modeling | Alicia Johnson, Miles Ott, Mine Dogucu]]

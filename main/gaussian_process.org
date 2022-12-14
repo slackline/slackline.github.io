@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       7ced9fda-ff1e-4ff0-a80b-2193255e511d
 :END:
-#+TITLE: Gaussian Process
+#+TITLE: Gaussian Processes
 #+DATE: [2022-03-01 Tue 18:55]
 #+FILETAGS: :statistics:bayesian:
 

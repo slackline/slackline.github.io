@@ -17,6 +17,29 @@ My configuration of Magit is below.
 
 #+INCLUDE: "~/.config/emacs/settings/magit-settings.el" src emacs-lisp
 
+** Forge
+
+You can configure Magit to work with forges such as [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]] and [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]] using the [[https://magit.vc/manual/forge.html][Forge]] package. Its a little tricky to
+setup but you should read the [[https://magit.vc/manual/forge.html#Getting-Started][Getting Started]] instructions and if it doesn't work first time persevere and try again.
+
+* Usage
+
+** Branching
+
+** Rebasing
+
+Rebasing in Magit is super easy, for a simple walk-through see [[https://chainsawriot.com/postmannheim/2022/12/12/aoe12.html][here]].
+
+** Forge
+:PROPERTIES:
+:ID:       052e079f-d42b-4e19-adff-811335a2c852
+:END:
+
+Once you've setup and configured Forge you can pull all issues and pull requests with ~M-x forge-pull~ or from a ~magit~
+buffer use ~f n~. You can then create issues when the cursor is on the "~Issues~" section with ~N c i~ or similarly pull
+requests (~N c p~). You can comment and edit existing topics, whether that is Issues or Pull Requests by hitting
+~Return~ to view it and ~C-c C-e~ to edit a given section when the cursor is over that section.
+
 * Links
 
 + [[https://magit.vc/][It's Magit! A Git Porcelain inside Emacs]]
@@ -26,3 +49,7 @@ My configuration of Magit is below.
 + [[https://github.com/magit/magit][magit/magit: It's Magit! A Git porcelain inside Emacs.]]
 + [[https://github.com/magit/ghub][magit/ghub: Client libraries for the APIs of various Git forges]]
 + [[https://github.com/magit/forge][magit/forge: Work with Git forges from the comfort of Magit]]
+
+** HowTos
+
++ [[https://chainsawriot.com/postmannheim/2022/12/12/aoe12.html][Advent of emacs #12: How I do version control in emacs]]

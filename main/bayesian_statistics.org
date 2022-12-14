@@ -25,6 +25,9 @@ before I started to rectify the situation.
 :ID:       57fc9276-c335-47e4-97fc-a00494ca294c
 :END:
 
+* Gaussian Processes
+
+Read more on [[id:7ced9fda-ff1e-4ff0-a80b-2193255e511d][Gaussian Processes]]
 * Learning Resources
 :PROPERTIES:
 :ID:       bdfa2000-29b5-4147-b7f1-0b78f6138064
@@ -48,11 +51,17 @@ excellent book which is available on-line for free as well as in print.
 
 * Links
 
++ [[https://www.intuitivebayes.com][Intuitive Bayes]]
+
 ** Books
-+ [[https://xcelab.net/rm/statistical-rethinking/][Statistical Rethinking : A Bayesian Course with Examples in R and Stan by Richard McElreath]]
-+ [[https://www.bayesrulesbook.com/][Bayes Rules! An Introduction to Applied Bayesian Modeling by Alicia Johnson, Miles Ott and Mine Dogucu]]
++ [[http://www.stat.columbia.edu/~gelman/book/][Bayesian Data Analysis | Gelman et al.]]
++ [[https://allendowney.github.io/ThinkBayes2/][Think Bayes 2 | Allen Downey]]
++ [[https://xcelab.net/rm/statistical-rethinking/][Statistical Rethinking | Richard McElreath]] ([[https://github.com/rmcelreath/stat_rethinking_2022][Statistical Rethinking 2022]] | [[https://bookdown.org/content/4857/][Statistical Rethinking (Second Edition) with
+  brms, ggplot2, and the tidyverse]] | [[https://vincentarelbundock.github.io/rethinking2/][Rethinking2 using Stan, R, rstan, tidybayes, and ggplot2]] | [[https://github.com/pymc-devs/resources/tree/master/Rethinking_2][PyMC3 Rethinking 2]])
++ [[https://www.bayesrulesbook.com/][Bayes Rules! An Introduction to Applied Bayesian Modeling | Alicia Johnson, Miles Ott, Mine Dogucu]]
 
 ** Blog
 + [[https://www.learnbayesstats.com/][The "Learning Bayesian Statistics" podcast]]
+
 ** Miscellaneous
 + [[https://neurallikelihoodfreeinference.github.io/about][Neural Likelihood Free Inference]] - a list of papers using neural networks for Bayesian Likelihood-free Inference.

@@ -79,3 +79,6 @@ configuration over a number of individual files for each package or group of pac
 + [[https://stable.melpa.org/#/][MELPA Stable]]
 + [[https://elpa.gnu.org/][GNU Emacs Lisp Package Archive]]
 + [[https://elpa.nongnu.org/][NonGNU Emacs Lisp Package Archive]]
+
+** Misc
++ [[https://chainsawriot.com/postmannheim/2022/12/01/aoe1.html][Advent of Emacs 2022 by Chung-hong Chan]] - some really useful examples.
