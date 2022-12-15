@@ -68,6 +68,9 @@ often subject specific and I can not cover all areas here, only those that I'm f
 pertains to events which have not happened based on observations of those that have.
 
 * Links
+
++ [[https://www.wzchen.com/probability-cheatsheet][The Probability Cheat Sheat]]
+
 ** Books
 + [[https://lakens.github.io/statistical_inferences/index.html][Improving Your Statistical Inferences | Daniël Lakens]]
 + [[https://www.statlearning.com/][An Introduction to Statistical Learning]]
