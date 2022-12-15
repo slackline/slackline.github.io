@@ -48,6 +48,29 @@ skeleton/example files for different languages including [[https://github.com/gi
 and all R Data objects and also Emacs temporary files ~*~~. There is also [[https://www.gitignore.io/][gitignore.io]] which generates configs
 automatically.
 
+** Shell Autocompletion
+
+Git (>2.37.3 at least, perhaps before) ships with the file that automates git completion. Under Gentoo this installs at
+~/usr/share/bash-completion/completions/git~ and it includes instructions on how to use it.
+
+* Forges
+:PROPERTIES:
+:CUSTOM_ID: git-forge
+:END:
+
+Forges are places where Git repositories are hosted online for collaborative work. If public then others can view, fork
+(make a copy online), clone (make a local copy) and then change the code themselves and if its useful submit a Pull
+Request to have their changes incorporated into the original body of code for a project. Read more about each Forge at
+the linked pages.
+
+| Forge    | Description                                                                                                                      |
+|----------+----------------------------------------------------------------------------------------------------------------------------------|
+| [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]]   | Perhaps the largest and most widely used forge. Purchased my Micro$oft a few years ago.                                          |
+| [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]]   | Comparable services with strong CI/CD functionality. Its also a free, open source piece of software so you can host it yourself. |
+| [[https://xethub.com/][XetHub]]   | /A collaboration platform for accessing, exploring and iterating on large-scale repositories, backed by the power of Git./       |
+| Codeberg |                                                                                                                                  |
+| Gitea    |                                                                                                                                  |
+
 * Usage
 
 ** Initialise a repository
@@ -79,12 +102,85 @@ It is straight-forward to initialise a directory to be under git version control
   git init
 #+end_src
 
+If you then want to bring this under version control for an ~origin~ you create at a Forge you can do so with...
+
+#+begin_src sh
+git remote add origin git@work.github.com:work/new-project.git
+git push -u origin master
+#+end_src
+
 ** Adding Files
 
 #+CAPTION: Adding files within a git repository
 #+NAME: git-add
 #+begin_src sh :eval no
   git add file1.py tests/file2.py
+#+end_src
+
+** Ignoring Files
+
+You can tell Git to automatically ignore certain files by adding file blobs to the file ~.gitignore~ in the root of your
+repositories directory (i.e. the highest level). This is useful as you can exclude temporary files that your test editor
+might create (e.g. Emacs leaves behind ~*~~ files) and if you're working with patient data then its quite likely that
+this shouldn't be shared in a public repository such as GitHub. The [[https://github.com/github/gitignore][github/gitignore]] repository has a number of
+skeleton/example files for different languages including [[https://github.com/github/gitignore/blob/master/R.gitignore][R]], I modify this to include all ~*.RData~ files to exclude any
+and all R Data objects and also Emacs temporary files ~*~~. There is also [[https://www.gitignore.io/][gitignore.io]] which generates configs
+automatically.
+
+#+begin_src sh
+# History files
+.Rhistory
+.Rapp.history
+
+# All Data files
+*.RData
+
+# Example code in package build process
+*-Ex.R
+
+# RStudio files
+.Rproj.user/
+
+# Emacs tmp files
+*~
+
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
+
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+#+end_src
+
+** Moving Files
+You might rename a file and want delete the original, how to do this in Git? The solution is to ~mv~ your file just as
+you would for a normal.
+file.
+
+#+begin_src sh
+git mv file1.txt file2.txt
+git commit -m "Renaming file1.txt > file2.txt"
+git push
+#+end_src
+
+** Deleting Files
+To remove a file complete from a repository *and* delete it locally then use ~rm~.
+
+#+begin_src sh
+git rm file1.txt
+git commit -m "remove file1.txt"
+git push -u origin master
+#+end_src
+
+** Removing Files
+Sometimes you will want to remove a file from a Git repository but not delete it, to do this use the ~rm --cached~
+option.
+
+#+begin_src sh
+# Remove a file
+git rm --cached file.txt
+# Remove a directory
+git rm --cached -r directory
 #+end_src
 
 ** Making a commit
@@ -116,28 +212,156 @@ fetch~ and how does it differ from ~git pull~? The simplest answer to this is pr
 
 [[./img/git/git_fetch_v_pull.png]]
 
-* Hooks
-
-
-* Forges
+*** Forcing pulls
 :PROPERTIES:
-:CUSTOM_ID: git-forge
+:CUSTOM_ID: forcing-pulls
+:END:
+Sometimes you want to manually force a pull, and whilst it might be
+tempting to use =git pull -f= this is not the best approach, rather you
+should [[https://stackoverflow.com/a/9589927/1444043][use fetch and
+reset]].
+
+#+CAPTION:
+#+NAME:
+#+begin_src sh
+git fetch origin master
+git reset --hard FETCH_HEAD
+git clean -df
+#+end_src
+
+* Branches
+The beauty of Git is that it allows multiple people to work on the same software project without interfering with each
+others work.  This is done through [[https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging][]branching and merging]].
+
+
+On GitHub/GitLab/BitBucket you will find the option to make a branch of a repository, but its generally cleaner to make
+branches on your local machine and then have them pushed and updated to your remote (`origin`).  Create a branch and
+switch to it in one step using...
+
+
+#+begin_src sh :eval no
+git checkout -b new_branch
+#+end_src
+
+You can see what branches there are now locally and which you are currently on using...
+
+#+begin_src sh :eval no
+git branch --list
+ * new_branch
+  master
+#+end_src
+
+If you create a branch locally it will not exist on the remote ~origin~. How does the remote repository know/become
+aware of this new branch? If you try to push a ~local~ branch that doesn't exist on ~orogin~ then ~git~ will helpfully
+tell you how to push from your ~local~ branch to ~origin~ and create the branch there.
+
+#+begin_src sh :eval no
+  git push --set-upstream origin new_branch
+#+end_src
+
+ You can push and update all branches on the remote
+=origin= with...
+
+
+#+begin_src sh
+git push --all -u
+#+end_src
+
+** Branching from a specified branch
+Sometimes you may be working on a problem with others simultaneously and wish to develop you work together /before/
+merging to master. In such an instance you could create a ~development~ branch and push your work to this to ensure
+changes you and your colleague make are consistent and work before you merge that to master.
+
+#+begin_sic sh
+git branch --list
+ development
+ master
+#+end_src
+
+I want branch from ~development~ rather than ~master~ and so you...
+
+#+begin_src sh
+git checkout -b my_new_branch development
+#+end_src
+
+** Move Most Recent Commit to a New Branch
+From [[https://stackoverflow.com/a/1628584/1444043][here]]...
+
+#+begin_src sh
+git branch a_new_branch     # This creates a new branch from the existing.
+git reset --hard ad1290ai   # Remove the last commit from the current branch
+git checkout a_new_branch   # Moves to the new branch which includes the last commit
+#+end_src
+
+** Tidying up Merged Branches
+
+Lots of articles out there on [[https://railsware.com/blog/git-housekeeping-tutorial-clean-up-outdated-branches-in-local-and-remote-repositories/][Git housekeeping]] one simple thing to do is use...
+
+#+begin_src sh
+git fetch -p
+#+end_src
+
+...which will prune branches that have been merged on fetching.
+
+* Git Stash
+:PROPERTIES:
+:ID:       f5784a68-fc79-4151-8737-28e6e43445de
 :END:
 
-Forges are places where Git repositories are hosted online for collaborative work. If public then others can view, fork
-(make a copy online), clone (make a local copy) and then change the code themselves and if its useful submit a Pull
-Request to have their changes incorporated into the original body of code for a project.
 
-| Forge    | Description                                                                                                                      |
-|----------+----------------------------------------------------------------------------------------------------------------------------------|
-| [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]]   | Perhaps the largest and most widely used forge. Purchased my Micro$oft a few years ago.                                          |
-| [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]]   | Comparable services with strong CI/CD functionality. Its also a free, open source piece of software so you can host it yourself. |
-| [[https://xethub.com/][XetHub]]   | /A collaboration platform for accessing, exploring and iterating on large-scale repositories, backed by the power of Git./       |
-| Codeberg |                                                                                                                                  |
-| Gitea    |                                                                                                                                  |
+Sometimes if you've work in progress (WIP) you may end up stashing your changes when you ~git pull~ as you'll be
+informed that doing so would over-write unsaved changes and you should either ~git commit~ or ~git stash~. This later
+strategy of [[https://www.git-scm.com/docs/git-stash][stashing]] is useful when you are not ready to ~git commit~ as you intend on coming back to your work. Its
+straight-forward to make a stash...
+
+#+begin_src sh :eval no
+  git stash
+#+end_src
+
+You can view the list of stashes, which are specific to the branches on which they were created with either of the
+following (~show~ gives greater detail).
+
+#+begin_src sh :eval no
+  git stash list
+  stash@{0}: WIP on master: 70de7ca youtube-dl configuration
+  stash@{1}: WIP on master: 6a8cdb0 Updating gitconfig/authinfo and install.R
+#+end_src
+
+** Applying Stashed Changes
+
+When you return to your Work In Progress on the branch you are working on you likely want to restore the last saved
+stash or another stash in from the history. This is achieved using the ~pop~ directive. Without any arguments it applies
+the last stash, but its possible to specify the stash you wish to restore.
+
+#+begin_src sh :eval no
+  git stash pop
+  git stash pop 6a8cdb0
+  git stash pop stash@{1}
+#+end_src
+
+** Discarding Stashes
+
+Sometimes you may not want to keep your stashes, you can discard the most recent or a specific stash with ~drop
+[<stash>]~ or you can clear all stashes with ~clear~
+
+#+begin_src sh :eval no
+  git stash drop
+  git stash drop stash@{1}
+  git stash clear
+#+end_src
+
+* Hooks
+:PROPERTIES:
+:ID:       3e2b5f0c-2dff-45c1-ae9c-7cc43b5c81ae
+:END:
+
+
 
 
 * Commit History
+:PROPERTIES:
+:ID:       612ae69f-f001-43cb-be32-fe5051e7368f
+:END:
 
 Git keeps a detailed history of commits that contain metadata and other useful information.
 
@@ -165,11 +389,15 @@ formats commits by date (~YYYY-MM~), ~sorts~ them and then counts the number of 
 ** Blame
 
 
-** Git Rebase
+* Git Rebase
+:PROPERTIES:
+:ID:       b379fa51-feb4-48a8-a509-7700f67500e1
+:END:
 
 
 
 * IDE Integration
+
 ** Emacs Magit
 
 If you use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] (and why wouldn't you?) then you should use [[https:magit.vc][Magit]] to manage your Git repository and interactions with
@@ -210,6 +438,12 @@ for editing your code but it is really focused on helping you work with Git.
 *** Branching
 
 + [[https://datasift.github.io/gitflow/IntroducingGitFlow.html][Introducing GitFlow]]
+
+** Related
+
++ [[https://github.com/dolthub/dolt][Dolt]] - Git for Data
++ [[https://dvc.org/][DVC]] - Data Version Control
++ [[https://xethub.com/][XetHub]] - Large file/data storage with version control
 
 **  Alternatives
 

@@ -55,6 +55,12 @@ will be more likely to learn statistical analysis with Python than they are with
 
 Read more on [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]].
 
+** Stata
+
+[[https://www.stata.com][Stata]] is another statistical programming language (do-files and ado-files). It was what I cut my teeth on when studying
+Genetic Epidemiology and [[id:3899f7f8-bc4a-4228-b922-5b9bb361106c][Statistical Genetics]] many years ago and was really good. I liked the UNIX like interface to
+using it but made a conscious choice to move to [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]] as it had better integration for literate programming (at the time via
+Sweave but now there is [[id:1db6158d-cb5d-4b73-b926-95e9c09f878b][RMarkdown]] and [[id:251b3ae4-4a5c-4c44-909a-dcbc0aef4b45][Quarto]]).
 
 * Community
 

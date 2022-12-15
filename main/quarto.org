@@ -10,6 +10,59 @@ and [[https://observablehq.com/@observablehq/observables-not-javascript][Observa
 Babel]] in so much as code chunks have parameters which handle how they are processed and then displayed in the resulting
 document.
 
+* Blogging
+:PROPERTIES:
+:ID:       25c4a623-fc4c-4902-8f28-f54949e26299
+:END:
+
+* Presentations
+:PROPERTIES:
+:ID:       29a2113e-484c-42f3-b200-76a569066c3b
+:END:
+
+** RevealJS
+:PROPERTIES:
+:ID:       0cfcd756-03fa-4150-a685-4a31d8197c54
+:END:
+
+* Websites
+:PROPERTIES:
+:ID:       2a6ded3a-68ba-4f05-ac0c-f1fa29fdcec4
+:END:
+
+* Books
+:PROPERTIES:
+:ID:       0ce8dca8-d0c7-40e9-a629-01e03a8d7a44
+:END:
+
+* Previewing
+:PROPERTIES:
+:ID:       8e0f1277-6058-4135-8483-20b1ace75161
+:END:
+
+You can preview documents easily, from within [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] bind the following.
+
+#+begin_src lisp :eval no
+  (use-package quarto-mode
+	     :mode (("\\.Rmd" . poly-quarto-mode))
+	     :bind (("C-c q" . quarto-preview)))
+#+end_src
+
+ You can set [[https://quarto.org/docs/reference/projects/options.html#preview][options for ~preview~ ]] in the YAML header, most usefully is fixing the ~host~ and/or ~port~ so you don't
+  get a new browser tab each time you preview.
+
+#+begin_src yaml :eval no
+  ---
+  project:
+    ...
+    preview:
+      port: 9999
+      host: 127.0.0.1
+      browser: true
+      watch-inputs: true
+      navigate: true
+#+end_src
+
 * Links
 + [[https://t.co/FDlvjq4qrc][quarto.org]]
 + [[https://hbiostat.org/rflow/][R Workflow]] : Reproducible Biomedical Research using Quarto
