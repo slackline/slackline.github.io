@@ -4,3 +4,10 @@
 #+TITLE: GitLab
 #+DATE: [2022-12-10 Sat 17:39]
 #+FILETAGS: :git:gitlab:version control:
+
+[[https://gitlab.com][GitLab]] is another forge and not only is it a service online it is also a free open-source software project so you can
+install and host it yourself.
+
+* Links
+
++ [[https://gitlab.com][GitLab]]

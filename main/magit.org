@@ -5,8 +5,8 @@
 #+DATE: [2022-12-09 Fri 21:28]
 #+FILETAGS: :emacs:magit:git:github:gitlab:
 
-Magit is a porcelain for Git. This means its a container and simply provides access to all the functionality of Git but
-from directly within Emacs via a series of easy to use[[id:d6626ec2-1e95-4d42-b06e-ae45268f2b58][emacs_transient]]
+Magit is a porcelain for [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]]. This means its a container and simply provides access to all the functionality of Git but
+from directly within Emacs via a series of easy to use [[id:d6626ec2-1e95-4d42-b06e-ae45268f2b58][emacs_transient]]
 * Forge
 
 You can interact with forges such as [[https://gitlab.com][GitLab]], [[https://github.com][GitHub]] and so forth although support is limited beyond these main two.

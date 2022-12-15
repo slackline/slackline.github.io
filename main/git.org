@@ -14,6 +14,8 @@ It can be daunting facing another whole new area to tackle as you are only just 
 language having to learn a bunch of unfamiliar concepts that seem of little value, I know I've been there, but it really
 does pay dividends to invest time learning how to use Git.
 
+If you use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] then you should definitely be using [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]].
+
 * Concepts
 
 A repository is placed under version control when you ~git init~ within in but before doing so you need to set some
