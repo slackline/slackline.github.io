@@ -9,7 +9,7 @@
 
 Packages are what makes Emacs so great, there is literally a [[https://xkcd.com/378/][package for everything.]]
 
-[[https://imgs.xkcd.com/comics/real_programmers.png]]
+[[./img/emacs/real_programmers.png]]
 
 There are a number of ways of repositories that host repositories (see [[#packages]])
 
