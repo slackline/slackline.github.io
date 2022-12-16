@@ -28,7 +28,7 @@ has been [[id:55581960-395e-443c-bd5d-bc00c496b6ae][linted]] to conform to a par
 masks who made the changes and why.  Its possible to ignore specific commits on the command line with ~--ignore-revs
 <hash> <file>~, but it will quickly become tedious to remember to ignore all blame across multiple commits. Fortunately
 you can save the commits to ignore to the file ~.git-blame-ignore-revs~ (along with comments) so that they are
-stored. The full commit (40 characters) of hashes should be uses.
+stored. The full commit (40 characters) of hashes should be used. I used the article [[https://www.moxio.com/blog/43/ignoring-bulk-change-commits-with-git-blame][here]] as a basis for implementing this.
 
 #+begin_src sh :eval no
   # PEP8 compliance for module X
@@ -37,3 +37,19 @@ stored. The full commit (40 characters) of hashes should be uses.
   # PEP8 compliance for module Y
   db27fa5f18299ca631efc430512a3f358c2b154f
 #+end_src
+
+Now that you have the revisions in place to be ignored when reporting blame you can choose not to use it.
+
+#+begin_src sh :eval no
+  git blame --ignore-revs-file .gitblame-ignore-revs git_blame.org
+#+end_src
+
+...but this is tedious to remember to have to do each time and ideally others on your team should use this file too. You
+can configure Git to use this file by modifying the local configuration.
+
+#+begin_src sh :eval no
+  git config blame.ignoreRevsFile .git-blame-ignore-revs
+#+end_src
+
+As of [[https://github.com/orgs/community/discussions/5033#discussioncomment-2318478][2022-03-08]] GitHub will also [[https://docs.github.com/en/repositories/working-with-files/using-files/viewing-a-file#ignore-commits-in-the-blame-view][ignore commits in the blame view]] that are listed in ~.git-blame-ignore-revs~
+(providing this file is in the root of your project folder).

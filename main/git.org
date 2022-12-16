@@ -436,9 +436,14 @@ for editing your code but it is really focused on helping you work with Git.
 ** HowTos
 
 + [[https://www.howtogeek.com/849210/git-rebase/][Git rebase: Everything You Need to Know]]
++ [[https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/#praise-people][Little Things I Like to Do with Git – CSS Wizardry – Web Performance Optimisation]]
 
 *** Branching
 
++ [[https://www.atlassian.com/git/tutorials/comparing-workflows][Atlassian : Comapring Workflows]]
++ [[https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow][Atlassian : Feature Branching]]
++ [[https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow][Atlassian : Gitflow Workflow]]
++ [[https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow][Atlassian : Forking Workflow]]
 + [[https://datasift.github.io/gitflow/IntroducingGitFlow.html][Introducing GitFlow]]
 
 ** Related
