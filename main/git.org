@@ -388,19 +388,21 @@ formats commits by date (~YYYY-MM~), ~sorts~ them and then counts the number of 
 
 ** Blame
 
+[[https://www.git-scm.com/docs/git-blame][Git Blame]] shows who was responsible for changes to which lines of code, read more [[id:d8b70d14-06bd-46c5-97fc-5c8e4f2c3503][Git Blame]].
 
 * Git Rebase
 :PROPERTIES:
 :ID:       b379fa51-feb4-48a8-a509-7700f67500e1
 :END:
 
+Git rebase is a powerful tool as it allows you to re-write history (i.e. the commit log). Read more at[[id:57ba7f41-cf41-493c-bbf4-9d1e05a0602d][git_rebase]]
 
 
 * IDE Integration
 
 ** Emacs Magit
 
-If you use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] (and why wouldn't you?) then you should use [[https:magit.vc][Magit]] to manage your Git repository and interactions with
+If you use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] (and why wouldn't you?) then you should use [[https:magit.vc][Magit]] to manage your Git repositorclarity/evaluator/haspi/y and interactions with
 forges such as GitHub and GitLab. It includes the ability to synchronise locally details of issues and pull requests
 from the repositories forge (but this requires a little extra work that is well documented).
 

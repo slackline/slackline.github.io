@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       e19b6eb6-46b2-440a-ba35-be29feb33407
+:END:
+#+TITLE: GitHub Actions
+#+DATE: [2022-12-14 Wed 13:42]
+#+FILETAGS: :git:github:actions:github actions:
