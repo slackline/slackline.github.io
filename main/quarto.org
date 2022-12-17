@@ -15,6 +15,8 @@ document.
 :ID:       25c4a623-fc4c-4902-8f28-f54949e26299
 :END:
 
+Logging is simple with Quarto.
+
 * Presentations
 :PROPERTIES:
 :ID:       29a2113e-484c-42f3-b200-76a569066c3b

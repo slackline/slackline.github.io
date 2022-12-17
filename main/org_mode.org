@@ -13,6 +13,33 @@ text files. There are diaries and agendas, literate programming, note organisati
 + [[id:6e75f9df-df3d-4402-b5ad-ed98d0834e08][Org Babel]]
 + [[id:136364e7-1a6d-4b28-b284-0e415b860699][Org-roam]]
 
+* Editing Files
+
+** Structure Templates
+
+[[https://orgmode.org/manual/Structure-Templates.html][Structure Templates]] facilitate the insertion of structural blocks such as ~#+BEGIN_SRC ... #+END_SRC~ into documents. It
+is accessed via ~C-c C-,~ which brings up a buffer that tells you what keys to press for the different options. Most
+commonly I will use ~s~ to insert a Source codeblock.
+
+** Structure
+
+Orgmode has a wide arrange of [[https://orgmode.org/manual/Markup-for-Rich-Contents.html][markup]] that determines the structure and presentation of text.
+
+*** Source Codeblock
+
+Adding the ~-n~ option numbers the lines, if you want to continue from the previous numbering use ~+n~, both take a
+numerical argument which sets the number explicitly although if you are using ~+n 10~ it will add 10 to the previous
+last number.
+
+#+begin_src org
+  ,#+BEGIN_SRC emacs-lisp -n
+        (use-package ess
+          :ensure t
+          :defer t)
+  ,#+END_SRC
+#+end_src
+
+
 * Links
 + [[https://orgmode.org][OrgMode]]
 

@@ -89,6 +89,18 @@ Dictionaries can be pretty printed using the ~json.dumps()~ method.
 :END:
 
 
+* Decorators
+:PROPERTIES:
+:ID:       eb1027f2-0e37-4e60-9c41-d27de3e01243
+:END:
+Decorators are really useful, they save you time and effort by handling a lot of functionality that would take time to
+write yourself. As you might expect there are a lot of decorators out there, for example [[id:3cca0dfd-0c82-4685-b9ed-6314f7c8b78f][Python Pytest]] has a bunch of
+its own which make using certain functionality in writing tests simple.
+
+** @property
+
+The ~@property~ decorator facilitates adding properties to your class (see [[https://www.pythontutorial.net/python-oop/python-property-decorator/][this tutorial]]).
+
 * I/O
 :PROPERTIES:
 :ID:       c821f0a2-07d8-4713-907d-d4916b998fdc

@@ -5,14 +5,14 @@
 #+DATE: <2022-12-16 Fri 11:25>
 #+FILETAGS: :git:blame:
 
-[[https://www.git-scm.com/docs/git-blame][Git blame]] shows who made changes to which line of code last.
+[[https://www.git-scm.com/docs/git-blame][Git blame]] shows who made changes to which line of code associated with a particular commit.
 
 * Alias
 
-Some people don't like the pejorative nature of the world /blame/. That's ok though, with a tweak to our configuration
-its possible to alias /praise/ people or simply as /who/ (from [[https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/#praise-people][here]]).
+Some people don't like the pejorative nature of the world ~blame~. That's ok though, with a tweak to our configuration
+its possible to alias ~praise~ people or simply as ~who~ (from [[https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/#praise-people][here]]).
 
-#+begin_src sh :eval no
+#+begin_src sh
   # blame alias
   git config --global alias.praise blame
   git praise -L1,30 git_blame.org
@@ -21,6 +21,17 @@ its possible to alias /praise/ people or simply as /who/ (from [[https://csswiza
   git who -L1,30 git_blame.org
 #+end_src
 
+* Usage
+
+Git blame works on individual files and so requires a filename, there are a host of options, for example ~-e~ prints the
+authors email address ~-w~ ignores changes to white space and ~-L 10,20~ restricts output to the specified line range
+
+#+begin_src sh
+  git blame -e -w -L 10,20 git_blame.org
+#+end_src
+
+
+For more detailed information on the array of options refer to the [[https://www.git-scm.com/docs/git-blame][official documentation]] or see ~git blame --help~
 * Ignoring blame
 
 Sometimes the case arises where you want to ignore blame. Perhaps the most common example is when an existing code base
@@ -30,7 +41,7 @@ masks who made the changes and why.  Its possible to ignore specific commits on 
 you can save the commits to ignore to the file ~.git-blame-ignore-revs~ (along with comments) so that they are
 stored. The full commit (40 characters) of hashes should be used. I used the article [[https://www.moxio.com/blog/43/ignoring-bulk-change-commits-with-git-blame][here]] as a basis for implementing this.
 
-#+begin_src sh :eval no
+#+begin_src sh
   # PEP8 compliance for module X
   c00177a6121f86c001f338feff3280fd576fdbf3
 
@@ -40,16 +51,26 @@ stored. The full commit (40 characters) of hashes should be used. I used the art
 
 Now that you have the revisions in place to be ignored when reporting blame you can choose not to use it.
 
-#+begin_src sh :eval no
+#+begin_src sh
   git blame --ignore-revs-file .gitblame-ignore-revs git_blame.org
 #+end_src
 
 ...but this is tedious to remember to have to do each time and ideally others on your team should use this file too. You
 can configure Git to use this file by modifying the local configuration.
 
-#+begin_src sh :eval no
+#+begin_src sh
   git config blame.ignoreRevsFile .git-blame-ignore-revs
 #+end_src
 
 As of [[https://github.com/orgs/community/discussions/5033#discussioncomment-2318478][2022-03-08]] GitHub will also [[https://docs.github.com/en/repositories/working-with-files/using-files/viewing-a-file#ignore-commits-in-the-blame-view][ignore commits in the blame view]] that are listed in ~.git-blame-ignore-revs~
 (providing this file is in the root of your project folder).
+
+* Links
+
+** General
++ [[https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-blame][Atlassian | git blame]]
+
+** Resources
++ [[https://www.moxio.com/blog/43/ignoring-bulk-change-commits-with-git-blame][Ignoring bulk change commits with Git blame]]
++ [[https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/#praise-people][Little things I like to do with Git]]
++ [[https://stackoverflow.com/a/3959409/1444043][Is there a way to customize the output of git blame?]]
