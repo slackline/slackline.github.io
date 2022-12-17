@@ -56,10 +56,12 @@ Now that you have the revisions in place to be ignored when reporting blame you 
 #+end_src
 
 ...but this is tedious to remember to have to do each time and ideally others on your team should use this file too. You
-can configure Git to use this file by modifying the local configuration.
+can configure Git to use this file by modifying the local configuration.  Make sure to add it to your repository so that
+others can use it.
 
 #+begin_src sh
   git config blame.ignoreRevsFile .git-blame-ignore-revs
+  git add .git-blame-ignore-revs
 #+end_src
 
 As of [[https://github.com/orgs/community/discussions/5033#discussioncomment-2318478][2022-03-08]] GitHub will also [[https://docs.github.com/en/repositories/working-with-files/using-files/viewing-a-file#ignore-commits-in-the-blame-view][ignore commits in the blame view]] that are listed in ~.git-blame-ignore-revs~
