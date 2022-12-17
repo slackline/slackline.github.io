@@ -68,8 +68,9 @@ the linked pages.
 | [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]]   | Perhaps the largest and most widely used forge. Purchased my Micro$oft a few years ago.                                          |
 | [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]]   | Comparable services with strong CI/CD functionality. Its also a free, open source piece of software so you can host it yourself. |
 | [[https://xethub.com/][XetHub]]   | /A collaboration platform for accessing, exploring and iterating on large-scale repositories, backed by the power of Git./       |
-| Codeberg |                                                                                                                                  |
-| Gitea    |                                                                                                                                  |
+| [[https://codeberg.org/][Codeberg]] | /Codeberg is a collaboration platform and Git hosting for Free and Open Source Software, content and projects./                  |
+| [[https://gitea.io][Gitea]]    | A self-hosted Git Forge                                                                                                          |
+| [[https://forgejo.org/][Forgejo]]  | A fork of                                                                                                                        |
 
 * Usage
 
@@ -390,6 +391,10 @@ formats commits by date (~YYYY-MM~), ~sorts~ them and then counts the number of 
 
 [[https://www.git-scm.com/docs/git-blame][Git Blame]] shows who was responsible for changes to which lines of code, read more [[id:d8b70d14-06bd-46c5-97fc-5c8e4f2c3503][Git Blame]].
 
+** Reset and Revert
+
+Useful article [[https://www.datacamp.com/tutorial/git-reset-revert-tutorial][here]].
+
 * Git Rebase
 :PROPERTIES:
 :ID:       b379fa51-feb4-48a8-a509-7700f67500e1
@@ -432,13 +437,15 @@ for editing your code but it is really focused on helping you work with Git.
 + [[https://ohmygit.org/][Oh My Git!]] - a game for learning Git.
 + [[https://onlywei.github.io/explain-git-with-d3/#clean][Explain Git with D3]]
 + [[https://learngitbranching.js.org/][Learn Git Branching]]
++ [[https://srse-git-github-zero2hero.netlify.app/][Git & GitHub through GitKraken Client - From Zero to Hero]]
 
 ** HowTos
 
 + [[https://www.howtogeek.com/849210/git-rebase/][Git rebase: Everything You Need to Know]]
 + [[https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/#praise-people][Little Things I Like to Do with Git – CSS Wizardry – Web Performance Optimisation]]
++ [[https://www.scmgalaxy.com/tutorials/git-commands-tutorials-and-example-git-reset-git-revert/][Git Reset and Revert Tutorial for Beginners]]
 
-*** Branching
+** Workflows
 
 + [[https://www.atlassian.com/git/tutorials/comparing-workflows][Atlassian : Comapring Workflows]]
 + [[https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow][Atlassian : Feature Branching]]

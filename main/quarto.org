@@ -69,3 +69,7 @@ You can preview documents easily, from within [[id:754f25a5-3429-4504-8a17-4efea
 + [[https://t.co/FDlvjq4qrc][quarto.org]]
 + [[https://hbiostat.org/rflow/][R Workflow]] : Reproducible Biomedical Research using Quarto
 + [[https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/][A Quarto tip a day]]
+
+** GitHub
+
++ [[https://github.com/quarto-dev/quarto-actions/][quarto-dev/quarto-actions]]
