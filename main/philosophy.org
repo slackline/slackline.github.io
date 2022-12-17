@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       75a9e631-547f-4f6b-9f8a-e916fdbe6309
+:END:
+#+TITLE: Philosophy
+#+DATE: [2022-12-17 Sat 22:03]
+#+FILETAGS: :philosphy:science:epistemiology:philosophy of science:
+
+I've a passing interest in philosophy, particularly the philosophy of science.
+
+
+* Links
+
++ [[https://closertotruth.com/contributor/daniel-dennett/#episodes][Closer to the Truth : Dnaiel Dennett]]
