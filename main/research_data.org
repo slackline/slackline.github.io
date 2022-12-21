@@ -30,5 +30,9 @@ consideration should be given to principles of GDPR.
 ** Articles
 + [[https://www.nature.com/articles/sdata201618][The FAIR Guiding Principles for scientific data management and stewardship | Scientific Data]]
 + [[https://rd-alliance.org/group/fair-research-software-fair4rs-wg/outcomes/fair-principles-research-software-fair4rs-0][FAIR Principles for Research Software (FAIR4RS Principles) | RDA]]
+
+** Tools
++ [[https://opentelemetry.io/][OpenTelemetry]]
+
 ** Journals
 + [[https://www.nature.com/sdata/][Scientific Data]]

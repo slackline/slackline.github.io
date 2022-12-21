@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       b39ebc4e-3351-45e3-80b8-9780c76dbbb6
+:END:
+#+TITLE: SSH
+#+DATE: [2022-12-21 Wed 09:27]
+#+FILETAGS: ssh:protocol:remote:linux:unix

@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       b9961a9e-e833-4160-aa8f-1c69b9cbb397
+:END:
+#+TITLE: Emacs TRAMP
+#+DATE: [2022-12-21 Wed 09:10]
+#+FILETAGS: emacs:tramps:editing
+
+[[https://www.gnu.org/software/tramp/][TRAMP]] is a protocol for editing files either as another user on your own files system or on a remote file system over SSH
+(providing you have permission to access the system!).
+
+* General Syntax
+
+The general syntax for opening a file is.
+
+#+begin_src emacs_lisp
+  C-x C-f /[method/user]:[@remotehost]]:/filename
+#+end_src
+
+* Editing as root
+
+You can open a file on the same system as ~root~ using.
+
+#+begin_src emacs_lisp
+C-x C-f /su::/etc/resolv.conf
+C-x C-f /sudo::/etc/resolv.conf
+#+end_src
+
+You may find you'll be asked for your GPG key if you have that configured and then the ~root~ password or user password
+depending on whether you are using using ~su~ or ~sudo~
+
+* SSH
+
+To open files over SSH you should have access (obviously!) and ideally setup a SSH keys with keychain to ease the
+process.
+
+#+begin_src emacs_lisp
+  C-x C-f /ssh:user@remote/
+#+end_src
+
+* Links
+
++ [[https://www.gnu.org/software/tramp/][GNU TRAMP]]
++ [[https://www.emacswiki.org/emacs/TrampMode][EmacsWiki : Tramp Mode]]

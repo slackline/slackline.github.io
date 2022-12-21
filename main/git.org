@@ -444,6 +444,7 @@ for editing your code but it is really focused on helping you work with Git.
 + [[https://www.howtogeek.com/849210/git-rebase/][Git rebase: Everything You Need to Know]]
 + [[https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/#praise-people][Little Things I Like to Do with Git – CSS Wizardry – Web Performance Optimisation]]
 + [[https://www.scmgalaxy.com/tutorials/git-commands-tutorials-and-example-git-reset-git-revert/][Git Reset and Revert Tutorial for Beginners]]
++ [[https://about.gitlab.com/blog/2022/11/08/rebase-in-real-life/][GitLab Blog | How to use Git rebase in real life]]
 
 ** Workflows
 
