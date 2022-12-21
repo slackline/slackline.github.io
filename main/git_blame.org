@@ -7,10 +7,19 @@
 
 [[https://www.git-scm.com/docs/git-blame][Git blame]] shows who made changes to which line of code associated with a particular commit.
 
+* Usage
+
+Git blame works on individual files and so requires a filename, there are a host of options, for example `-e` prints the		￼Git blame works on individual files and so requires a filename, there are a host of options, for example `-e` prints the
+authors email address `-w` ignores changes to white space and `-L 10,20` restricts output to the specified line		authors email address `-w` ignores changes to white space and `-L 10,20` restricts output to the specified line
+range. If you want a the blame for a specific revision then you must include the hash.		range. If you want a the blame for a specific revision then you must include the hash.
+#+begin_src bash
+  git blame -e -w -L 10,20 f923la git_blame.org
+#+end_src
+
 * Alias
 
-Some people don't like the pejorative nature of the world ~blame~. That's ok though, with a tweak to our configuration
-its possible to alias ~praise~ people or simply as ~who~ (from [[https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/#praise-people][here]]).
+Some people don't like the pejorative nature of the word ~blame~. That's ok though, with a tweak to our configuration
+its possible to use the alias ~praise~ or simply ~who~ (from [[https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/#praise-people][here]]).
 
 #+begin_src sh
   # blame alias
