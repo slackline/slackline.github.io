@@ -3,7 +3,7 @@
 :ROAM_ALIASES: "Open Research : Peer Review"
 :END:
 #+title: Open Research : Peer Review
-#+filetags: :open-research::peer review:
+#+filetags: :open-research:peer review:
 
 An extension to reproducibility is peer review of code ensuring that code runs as described in other environments. This
 can be facilitated by using containers such as Docker to provide reproducible environments.

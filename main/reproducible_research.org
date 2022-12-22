@@ -18,6 +18,27 @@
 [[https://guix.gnu.org/][GNU Guix]] is /GNU's advanced distro and transactional package manager/ and allows declarative system configuration which
 means the configured systems are transparent and reproducible.
 
+* Data Version Control
+
+In the same way [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] is important for controlling source code development it is also important to control the data and
+models that are used in development and deployment pipelines. This is where Data Version Control comes in.  There are a
+few different options.
+
+** DVC
+
+[[https://dvc.org/][DVC]] (Data Version Control) is designed for tracking version control of Machine Learning Projects.
+
+
+** Dolt
+
+[[https://github.com/dolthub/dolt][Dolt]] is Git for Data and has an SQL database in the background that can be forked, cloned, branched, merged, pushed to
+and pulled from just like a Git repository.
+
 * Links
 
+** Reproducible Environments
 + [[https://devenv.sh/][devenv - Fast, Declarative, Reproducible, and Composable Developer Environments]]
+
+** Data Version Control
++ [[https://github.com/dolthub/dolt][Dolt]]
++ [[https://dvc.org/][DVC : Data Version Control]]
