@@ -64,6 +64,9 @@ packages or even develop your own packages and share them with the community.
 My configuration is, well, sprawling. The main initialisation file resides at ~/config/emacs/init.el~ but I split it
 configuration over a number of individual files for each package or group of packages.
 
+* EmacsConf
+
+Read more about [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]].
 
 * Links
 

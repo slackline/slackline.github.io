@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       cc3612e7-3ed5-4cca-b36d-0a4b20e8669d
+:END:
+#+TITLE: NormConf
+#+DATE: <2022-12-22 Thu 12:11>
+#+FILETAGS: normconf:conferences
+
+[[https://normconf.com/][NormConf]] arose from the desire to talk about some of the more common but less exciting aspects of software development,
+ machine learning, MLOps, DevOps and [[id:ea1499ab-dab2-49b1-8479-cb5a2fbd38bc][programming]] in general. There were interesting talks covering [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]], [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]] and lots
+ more.
+
+* 2022 Highlights
+All the videos are online (minus Q&A) [[https://www.youtube.com/playlist?list=PLYXaKIsOZBsu3h2SSKEovRn7rGy7wkUAV][here]] as well as the [[https://www.youtube.com/watch?v=&list=PLYXaKIsOZBstGUTXZXp2azDk8UJhpVVq3][Lightning Talks]]. Some of the talks I found particularly
+interesting (in no particular order).
+
++ [[https://www.youtube.com/watch?v=HiF83i1OLOM][Chris Albon : Don't Do Invisible Work]]
++ [[https://www.youtube.com/watch?v=6gzEKQnFSCA][Rose Wiegley : Data-Driven Promotions]]
++ [[https://www.youtube.com/watch?v=Pm9C-Cz4bXE][JD Long : I'd have Written a Shorter Solution But I Didn't Have the Time]]
++ [[https://www.youtube.com/watch?v=ES1LTlnpLMk][Jenny Bryan : How to Name Files]]
++ [[https://www.youtube.com/watch?v=kx-SeGbkNPU][Matthijs Brouns : How Small Can I Get That Docker Container?]]
++ [[https://www.youtube.com/watch?v=MW9oVxjJHEw][What's the Simplest Possible Thing That Might Work, and Why Didn't you Try That First?]]

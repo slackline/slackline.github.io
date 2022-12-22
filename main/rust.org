@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       3469c33e-7c61-46c7-b01e-655695f3b93c
+:END:
+#+TITLE: Rust
+#+DATE: <2022-12-22 Thu 11:46>
+#+FILETAGS: programming:rust
+
+* Links
+
++ [[https://google.github.io/comprehensive-rust/][Welcome to Comprehensive Rust - Comprehensive Rust]]

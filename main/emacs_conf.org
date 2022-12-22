@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       f76ac811-6c1a-4aa6-9492-8cbae7cb50ca
+:END:
+#+TITLE: Emacs Conf
+#+DATE: <2022-12-22 Thu 12:10>
+#+FILETAGS: emacs:conferences
+
+
+I use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] as my primary IDE (and more besides) and there are some great talks across the years from [[https://emacsconf.org/][EmacsConf]]
+
+* Conferences
++ [[https://emacsconf.org/2022/][2022]]
++ [[https://emacsconf.org/2021/][2021]]
++ [[https://emacsconf.org/2020/][2020]]
++ [[https://emacsconf.org/2019/][2019]]
++ [[https://emacsconf.org/2015/][2015]]
++ [[https://emacsconf.org/2013/][2013]]
+
+* 2022 Highlights

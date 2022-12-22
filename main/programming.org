@@ -3,7 +3,7 @@
 :END:
 #+TITLE: Programming
 #+DATE: [2022-02-15 Tue 21:07]
-#+FILETAGS: %?
+#+FILETAGS: :programming:theory:design patterns:refactoring
 
 Programming can be abstracted from the language in which it is written and the [[id:526272b2-904f-4656-b24c-fdefc4492fdc][Software]] which results.
 
@@ -51,6 +51,23 @@ features out into reusable functions.
 You will over time develop customised configurations for your preferred work environment, you can take steps to minimise
 the pain involved when setting up new computers or systems you gain access to by using [[id:31304184-2fad-4cc5-824b-3ab4b9d2e126][dotfiles]] to manage such
 configurations.
+
+* Languages
+
+There are a lot of languages out there to learn, in the past I've learnt some very basic C and Fortran but have mainly
+worked with interpreted languages which don't require compiling.
+
++ [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]]
++ [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]]
++ [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]]
+
+* Conferences
+
+I am unlikely to attend any conferences specifically on programming but these days you don't have to physically go
+somewhere to attend conferences when they are often available online (either live or retrospectively).
+
++ [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]]
++ [[id:cc3612e7-3ed5-4cca-b36d-0a4b20e8669d][NormConf]]
 
 * Links
 + [[https://www.catharsisinsight.com/_files/ugd/fce7f8_f9d2fea4f1b9478baeb7e84ab1b63759.pdf]["It's like Coding in the Dark" : The need for learning cultures within coding teams]]
