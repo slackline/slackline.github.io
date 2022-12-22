@@ -419,6 +419,9 @@ from the repositories forge (but this requires a little extra work that is well 
 [[https://www.gitkraken.com/][GitKraken]] is dedicated to working with your Git repositories and interacting with forges. It has some basic IDE features
 for editing your code but it is really focused on helping you work with Git.
 
+* Data Version Control
+
+It is often important to version control your data too, for more on this see [[id:2013cd50-f008-422a-ade1-b97d6bfc3a2a][Data Version Control]].
 * Links
 + [[https://git-scm.com][Git]]
 + [[https:magit.vc][Magit]]
