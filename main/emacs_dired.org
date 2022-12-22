@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       e2a2ead1-4348-4cc6-9ef1-dd96777aaec8
+:END:
+#+TITLE: Emacs Dired
+#+DATE: <2022-12-22 Thu 09:14>
+#+FILETAGS: emacs:dired:files:browsing

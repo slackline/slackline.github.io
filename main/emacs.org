@@ -13,13 +13,25 @@ Packages are what makes Emacs so great, there is literally a [[https://xkcd.com/
 
 There are a number of ways of repositories that host repositories (see [[#packages]])
 
+* Dired
+
+[[id:e2a2ead1-4348-4cc6-9ef1-dd96777aaec8][Dired]]
+
+* Buffers
+
+[[id:4451966f-b810-4a9d-905b-e2b682578c62][Buffers]] are the basis of Emacs, the window through which you view files and processes, understanding how they work and
+navigating between the vastly improves your productivity.
+
 * Magit
 
-[[id:220d7ba9-d30e-4149-a25b-03796e098b0d][magit]]
+[[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] is an amazing package, its a porcelain to Git which means it gives access to all of the functions on the command
+line. It is widely considered a killer feature of Emacs (along with Org-mode). Learn to use it and you'll find your use
+of and productivity using Git dramatically increases.
 
 * Org-mode
 
-Org-mode is a powerful suite of packages that allow you to organise your work and life.
+Org-mode is a powerful suite of packages that allow you to organise your work and life. Org-mode is another killer
+feature of Emacs (along with Magit).
 
 + [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Org-mode]]
 + [[id:fc9974d4-2a26-4bf7-9360-c828bfaeed1d][Org Agenda]]

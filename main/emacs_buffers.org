@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       4451966f-b810-4a9d-905b-e2b682578c62
+:END:
+#+TITLE: Emacs Buffers
+#+DATE: <2022-12-22 Thu 09:06>
+#+FILETAGS: emacs:buffers:productivity
+
+Buffers are the windows through which you view files and processes in Emacs.
+
+* Switching Buffers
+
+~C-x b~ will switch buffers, a default is offered but if this isn't right you can either start typing the name of the
+buffer you want to switch to or hit ~<Tab>~ to get a list of those available. You can then use the Up and Down arrow
+keys to navigate through the available buffers. Hit ~<Return>~ when done to switch.
+
+* Killing Buffers
+
+A simple way to kill a single buffer is ~C-x k~ you will be asked which buffer you want to kill, by default it will be
+the current buffer that you are visiting, but if you hit ~<Tab>~ you'll get a list.
+
+** Multiple Buffers
+
+You can kill multiple buffers using Helm (from [[https://www.emacswiki.org/emacs/KillingBuffers#h5o-13][here]]). Start ~M-x helm-mini~ and start typing a pattern against which to
+match buffers, e.g. ~magit~ a buffer(!) then appears with the buffers that exist which match, select each you want to
+kill with ~C-SPACE~ and kill the selected ones with ~M-D~.
+
+*** Kill all Dired buffers
+
+[[id:e2a2ead1-4348-4cc6-9ef1-dd96777aaec8][Dired]] by default opens each directory in a new buffer, as a consequence you can quickly rack up a lot of Dired buffers
+you can kill them all quickly with ~IbufferMode~ using ~C-x C-b * / D yes Ret~ (from [[https://www.emacswiki.org/emacs/KillingBuffers#h5o-6][here]]).
