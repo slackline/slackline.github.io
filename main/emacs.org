@@ -83,6 +83,13 @@ Read more about [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]].
 ** Configuration
 + [[https://erickgnavar.github.io/emacs-config/][Emacs config]] by Erick Navarro - a nice neat and clear set of custom configurations.
 
+** Research Articles
++ [[https://arxiv.org/abs/2004.02504][[2004.02504] Bringing GNU Emacs to Native Code]]
++ [[https://onlinelibrary.wiley.com/doi/10.1002/spe.4380181006][GNU Emacs as a dynamically extensible programming environment]]
++ [[https://dl.acm.org/doi/10.1145/3386324][Evolution of Emacs Lisp]]
++ [[https://biostats.bepress.com/uwbiostat/paper173/][Emacs Speaks Statistics: A Universal Interface for Statistical Analysis]]
++ [[https://www.tandfonline.com/doi/abs/10.1198/1061860042985][Emacs Speaks Statistics: A Multiplatform, Multipackage Development Environment for Statistical Analysis]]
+
 ** Advocacy
 + [[https://www.fugue.co/blog/2015-11-11-guide-to-emacs.html][A CEO's Guide to Emacs]] - a few dated bits (e.g. ~\~/.config/emacs~ is now supported) but very good.
 
@@ -92,6 +99,7 @@ Read more about [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]].
 + [[https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][An Introduction to Programming in Emacs Lisp]]
 + [[https://github.com/emacs-tw/awesome-emacs][Awesome Emacs: A community driven list of useful Emacs packages, libraries and other items.]]
 + [[https://www.masteringemacs.org/article/emacs-builtin-elisp-cheat-sheet][Emacs's Builtin Elisp Cheat Sheet - Mastering Emacs]]
++ [[https://www.ingentaconnect.com/content/matthey/jmtr/2022/00000066/00000002/art00002;jsessionid=5o2da922fbmbh.x-ic-live-02][Emacs as a Tool for Modern Science : The use of open source tools to immprove scientific workflows]]
 
 #+CUSTOM_ID: packages
 ** Packages
