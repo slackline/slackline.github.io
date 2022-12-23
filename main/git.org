@@ -396,9 +396,6 @@ formats commits by date (~YYYY-MM~), ~sorts~ them and then counts the number of 
 Useful article [[https://www.datacamp.com/tutorial/git-reset-revert-tutorial][here]].
 
 * Git Rebase
-:PROPERTIES:
-:ID:       b379fa51-feb4-48a8-a509-7700f67500e1
-:END:
 
 Git rebase is a powerful tool as it allows you to re-write history (i.e. the commit log). Read more at[[id:57ba7f41-cf41-493c-bbf4-9d1e05a0602d][git_rebase]]
 
@@ -456,6 +453,10 @@ It is often important to version control your data too, for more on this see [[i
 + [[https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow][Atlassian : Gitflow Workflow]]
 + [[https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow][Atlassian : Forking Workflow]]
 + [[https://datasift.github.io/gitflow/IntroducingGitFlow.html][Introducing GitFlow]]
+
+** Miscellaneous
+
++ [[https://arialdomartini.github.io/no-reason-to-squash][No Reason to Squash]]
 
 ** Related
 

@@ -4,3 +4,19 @@
 #+TITLE: Git Rebase
 #+DATE: <2022-12-16 Fri 11:34>
 #+FILETAGS: :git:rebase:
+
+* Overview
+
+* Git Rebase in Magit
+
+[[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] is really useful for holding your hand through the rebasing process, read more [[id:1f4a3e9c-900d-4f73-b2e0-ac4e8c4037e9][here]].
+
+
+* Links
+
+** HowTos
+
++ [[https://www.howtogeek.com/849210/git-rebase/][Git rebase: Everything You Need to Know]]
++ [[https://www.scmgalaxy.com/tutorials/git-commands-tutorials-and-example-git-reset-git-revert/][Git Reset and Revert Tutorial for Beginners]]
++ [[https://about.gitlab.com/blog/2022/11/08/rebase-in-real-life/][GitLab Blog | How to use Git rebase in real life]]
++ [[https://about.gitlab.com/blog/2022/10/06/take-advantage-of-git-rebase/][GitLab Blog | Take advantage of Git rebase]]

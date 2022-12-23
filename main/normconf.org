@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       cc3612e7-3ed5-4cca-b36d-0a4b20e8669d
 :END:
-#+TITLE: NormConf
+#+TITLE: Normconf
 #+DATE: <2022-12-22 Thu 12:11>
 #+FILETAGS: normconf:conferences
 
@@ -18,4 +18,6 @@ interesting (in no particular order).
 + [[https://www.youtube.com/watch?v=Pm9C-Cz4bXE][JD Long : I'd have Written a Shorter Solution But I Didn't Have the Time]]
 + [[https://www.youtube.com/watch?v=ES1LTlnpLMk][Jenny Bryan : How to Name Files]]
 + [[https://www.youtube.com/watch?v=kx-SeGbkNPU][Matthijs Brouns : How Small Can I Get That Docker Container?]]
-+ [[https://www.youtube.com/watch?v=MW9oVxjJHEw][What's the Simplest Possible Thing That Might Work, and Why Didn't you Try That First?]]
++ [[https://www.youtube.com/watch?v=MW9oVxjJHEw][Joel Grus : What's the Simplest Possible Thing That Might Work, and Why Didn't you Try That First?]]
++ [[https://www.youtube.com/watch?v=KgxKJjzh-Y4][Juulia Suvilehto : Trying to convince academics to use git]]
++ [[https://www.youtube.com/watch?v=t6m9z874SLM][Sean J Taylor : When not to use SQL]]
