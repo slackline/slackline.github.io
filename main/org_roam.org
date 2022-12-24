@@ -114,3 +114,8 @@ hugo]].
 ** Zettelkasten
 
 + [[https://zenkit.com/en/blog/a-beginners-guide-to-the-zettelkasten-method/][A Beginner’s Guide to the Zettelkasten Method - Zenkit]]
+
+** Alternatives
+
++ [[https://logseq.com/][logseq]]
++ [[https://obsidian.md/][Obsidian]]

@@ -11,3 +11,5 @@ and more. Thanks to integration with [[id:1db6158d-cb5d-4b73-b926-95e9c09f878b][
 literate documents in [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]].
 
 * Links
+
++ [[https://detexify.kirelabs.org/classify.html][Detexify]] draw the symbol you seek in LaTeX.
