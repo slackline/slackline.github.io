@@ -304,6 +304,30 @@ git fetch -p
 
 ...which will prune branches that have been merged on fetching.
 
+** Keep up with ~main~
+
+As you work on your feature branch development will likely be on-going in other branches which are merged into ~main~
+when complete. To avoid headaches when you commit to submit a Pull Request for your completed feature you should
+regularly merge main into your branch.
+
+#+begin_src sh
+  git pull origin main        # Pulls the latest changes from origin/main
+  git merge main --squash     # Merge the changes into your feature branch and squash commits
+#+end_src
+
+This may result in merge conflicts that you'll have to resolve, as you are likely to continue working on your branch it
+is worthwhile enabling the [[https://git-scm.com/docs/git-rerere][Reuse Recorded Resolution (~rerere~)]] option so that you do not have to resolve such conflicts
+in the future (from [[https://samwize.com/2022/12/15/tips-to-resolve-merge-conflicts-for-long-lived-branches/][here]]).
+
+#+begin_src sh
+  git config --global rerere.enabled true
+#+end_src
+
+* Merge Conflicts
+:PROPERTIES:
+:ID:       eea4a7d2-76b0-4328-9eca-cad7b6e1ff41
+:END:
+
 * Git Stash
 :PROPERTIES:
 :ID:       f5784a68-fc79-4151-8737-28e6e43445de
@@ -441,10 +465,17 @@ It is often important to version control your data too, for more on this see [[i
 
 ** HowTos
 
+*** Rebase
+
 + [[https://www.howtogeek.com/849210/git-rebase/][Git rebase: Everything You Need to Know]]
++ [[https://about.gitlab.com/blog/2022/11/08/rebase-in-real-life/][GitLab Blog | How to use Git rebase in real life]]
++ [[https://about.gitlab.com/blog/2022/10/06/take-advantage-of-git-rebase/][GitLab Blog | Take advantage of Git rebase]]
+
+*** Misc
+
++ [[https://samwize.com/2022/12/15/tips-to-resolve-merge-conflicts-for-long-lived-branches/][How to resolve merge conflicts for long-lived branches | @samwize]]
 + [[https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/#praise-people][Little Things I Like to Do with Git – CSS Wizardry – Web Performance Optimisation]]
 + [[https://www.scmgalaxy.com/tutorials/git-commands-tutorials-and-example-git-reset-git-revert/][Git Reset and Revert Tutorial for Beginners]]
-+ [[https://about.gitlab.com/blog/2022/11/08/rebase-in-real-life/][GitLab Blog | How to use Git rebase in real life]]
 
 ** Workflows
 
