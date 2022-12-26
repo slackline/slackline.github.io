@@ -12,6 +12,13 @@ scripts to accomplish small tasks.
 
 * Bash Scripts
 
+* Configuration
+
+** Aliases
+:PROPERTIES:
+:ID:       c7d811f9-5e9f-43b9-9b0b-d647a399756c
+:END:
+
 * Tips and Tricks
 
 ** Make a directory for every file

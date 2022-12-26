@@ -10,19 +10,32 @@ scripts for [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]], G
 ~/etc/~, or GPG encrypted passwords backed up you should consider using Git (or some other version control system, but
 Git is the most popular for now).
 
-It can be daunting facing another whole new area to tackle as you are only just getting to grips with a programming
+It can be daunting facing yet another new area to tackle as you are only just getting to grips with a programming
 language having to learn a bunch of unfamiliar concepts that seem of little value, I know I've been there, but it really
-does pay dividends to invest time learning how to use Git.
+does pay dividends to invest time learning how to use Git. You will benefit from having your code backed up off-site,
+the ability to work across multiple computers on the same code base, collaborate with others on code development, know
+what changes have been made at which point in the history of the code development and in turn benefit from being able to
+revert changes that are not required.
 
 If you use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] then you should definitely be using [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]].
 
 * Concepts
+:PROPERTIES:
+:ID:       292f6e62-a56e-4e71-9801-05c96b950af5
+:END:
 
 A repository is placed under version control when you ~git init~ within in but before doing so you need to set some
 variables such as the ~user~ and ~email~. These can be done on a global scale which will apply across all repositories
 you create or a local, per-repository basis (local settings in a repository over-ride global so they don't conflict).
 
+#+CAPTION: Git Workflow by [[https://nikkiandchris.io][nikkiandchris.io]]
+[[./img/git/git_pull_push.jpg]]
+
 * Setup
+:PROPERTIES:
+:ID:       75050201-e41c-40a4-bd65-cd1c0592951c
+:END:
+
 ** Global Configuration
 
 First thing to do is setup Git with your name and email address and a
@@ -73,6 +86,9 @@ the linked pages.
 | [[https://forgejo.org/][Forgejo]]  | A fork of                                                                                                                        |
 
 * Usage
+:PROPERTIES:
+:ID:       2e8feb62-b0b0-43d9-9da3-bfba3c9af848
+:END:
 
 ** Initialise a repository
 
@@ -197,11 +213,9 @@ add additional information to commits but the title should be short /and/ inform
 
 ** Pushing and Pulling
 
-#+CAPTION: Git Workflow by [[https://nikkiandchris.io][nikkiandchris.io]]
-[[./img/git/git_pull_push.jpg]]
 
 
-** Fetch v Pull
+*** Fetch v Pull
 
 Whether you work on a project collaboratively or simply use GitHub/GitLab to keep personal repositories in sync between
 systems you will at some point have to use ~git pull~ to get your changes onto your local computer. But what is ~git
@@ -240,12 +254,16 @@ branches on your local machine and then have them pushed and updated to your rem
 switch to it in one step using...
 
 
+#+CAPTION:
+#+NAME:
 #+begin_src sh :eval no
 git checkout -b new_branch
 #+end_src
 
 You can see what branches there are now locally and which you are currently on using...
 
+#+CAPTION:
+#+NAME:
 #+begin_src sh :eval no
 git branch --list
  * new_branch
@@ -256,14 +274,17 @@ If you create a branch locally it will not exist on the remote ~origin~. How doe
 aware of this new branch? If you try to push a ~local~ branch that doesn't exist on ~orogin~ then ~git~ will helpfully
 tell you how to push from your ~local~ branch to ~origin~ and create the branch there.
 
+#+CAPTION:
+#+NAME:
 #+begin_src sh :eval no
   git push --set-upstream origin new_branch
 #+end_src
 
- You can push and update all branches on the remote
-=origin= with...
+ You can push and update all branches on the remote ~origin~ with...
 
 
+#+CAPTION:
+#+NAME:
 #+begin_src sh
 git push --all -u
 #+end_src
@@ -273,7 +294,9 @@ Sometimes you may be working on a problem with others simultaneously and wish to
 merging to master. In such an instance you could create a ~development~ branch and push your work to this to ensure
 changes you and your colleague make are consistent and work before you merge that to master.
 
-#+begin_sic sh
+#+CAPTION:
+#+NAME:
+#+begin_src sh
 git branch --list
  development
  master
@@ -281,6 +304,8 @@ git branch --list
 
 I want branch from ~development~ rather than ~master~ and so you...
 
+#+CAPTION:
+#+NAME:
 #+begin_src sh
 git checkout -b my_new_branch development
 #+end_src
@@ -288,6 +313,8 @@ git checkout -b my_new_branch development
 ** Move Most Recent Commit to a New Branch
 From [[https://stackoverflow.com/a/1628584/1444043][here]]...
 
+#+CAPTION: Move most recent commit from existing branch to a new branch.
+#+NAME:
 #+begin_src sh
 git branch a_new_branch     # This creates a new branch from the existing.
 git reset --hard ad1290ai   # Remove the last commit from the current branch
@@ -298,6 +325,7 @@ git checkout a_new_branch   # Moves to the new branch which includes the last co
 
 Lots of articles out there on [[https://railsware.com/blog/git-housekeeping-tutorial-clean-up-outdated-branches-in-local-and-remote-repositories/][Git housekeeping]] one simple thing to do is use...
 
+#+CAPTION: Prune branches that have been merged on fetching.
 #+begin_src sh
 git fetch -p
 #+end_src
@@ -327,6 +355,17 @@ in the future (from [[https://samwize.com/2022/12/15/tips-to-resolve-merge-confl
 :PROPERTIES:
 :ID:       eea4a7d2-76b0-4328-9eca-cad7b6e1ff41
 :END:
+
+Merge conflicts arise when you have edited a file and someone else has edited the same point in the same file and their
+changes have been merged before your Pull Request was made/approved. Git, whilst smart, doesn't know what to do in such
+situations and so defers to the humans, asking them to resolve the conflict.
+
+** Anatomy
+
+Git conflicts are clearly marked in files.
+
+** Resolving
+
 
 * Git Stash
 :PROPERTIES:
@@ -380,6 +419,11 @@ Sometimes you may not want to keep your stashes, you can discard the most recent
 :ID:       3e2b5f0c-2dff-45c1-ae9c-7cc43b5c81ae
 :END:
 
+Hooks are incredibly useful (not just in Git, but in general and form the basis of many [[id:3b6a27c8-6ef9-4133-95b9-302d2e4dbea3][CI/CD]] pipelines), but they also
+run locally on various Git actions such as ~pre-commit~, ~post-commit~, ~pre-push~ or ~pre-pull~. Hooks are simple [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]]
+scripts that reside in ~.git/hooks~ with specific filenames that indicate at which stage they are to be run. Typically
+this directory will be populated with various examples for the different hooks that are available if you have created
+your repository locally.
 
 
 
@@ -409,7 +453,13 @@ formats commits by date (~YYYY-MM~), ~sorts~ them and then counts the number of 
   $ git log v2.38.0.. --date='format:%Y-%m' --format='%cd' | sort | uniq -c
 #+end_src
 
+*** Aliases
 
+It's useful to be aware of the options that are available to you for formatting your logs, but it can be cumbersome to
+memorise them, particularly so when often your primary focus is on getting work done rather than becoming an expert in
+the tools you use. To which end using [[id:c7d811f9-5e9f-43b9-9b0b-d647a399756c][Bash aliases]] to provide shortcuts to the formatting you want is invaluable. The
+[[id:a1b78518-31e8-4fd3-a36f-d8f152832138][zsh]] shell comes with a bundle of aliases pre-configured, typically I just use ~glod~ which shows the graph in short
+form, but you may find others to be more suited to your preferences, and if not you can always specify your own.
 
 ** Blame
 

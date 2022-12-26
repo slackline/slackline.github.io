@@ -121,6 +121,10 @@ help with that. An excellent resource is the [[https://r-pkgs.org/][R Packages b
 
 + [[https://www.tidyverse.org/blog/2019/09/callr-task-q/][Multi Process Task Queue in 100 Lines of R Code]]
 
+*** Videos
+
++ [[https://www.youtube.com/@brodriguesco/videos][brodriguesco on YouTube]] - lots of useful tips and tricks.
+
 ** Packages and Documentation
 
 + [[https://r-universe.dev/search/][ROpenSci : R-universe]]

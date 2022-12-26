@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       3b6a27c8-6ef9-4133-95b9-302d2e4dbea3
+:END:
+#+TITLE: Continuous Integration/Development
+#+DATE: <2022-12-25 Sun 18:41>
+#+FILETAGS: github:gitlab:continuous:integration:development
+
+* Links
+
++ [[https://docs.github.com/en/actions][GitHub Docs | GitHub Actions Documentation]]
++ [[https://docs.gitlab.com/ee/ci/][GitLab | GitLab CI/CD]]
