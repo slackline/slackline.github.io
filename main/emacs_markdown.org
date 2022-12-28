@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       100c80ce-2299-4d0f-a6a2-03fed94a4cc7
+:END:
+#+TITLE: Emacs Markdown
+#+DATE: <2022-12-28 Wed 10:24>
+#+FILETAGS: emacs:config:markdown
+
+#+INCLUDE: "~/.config/emacs/settings/markdown-settings.el" example emacs-lisp
+
+* Links
+
++ [[https://github.com/jrblevin/markdown-mode][jrblevin/markdown-mode: Emacs Markdown Mode]]

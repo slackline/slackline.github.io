@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       4668a662-27ab-4015-aaa0-6e356b6bc165
+:END:
+#+TITLE: Emacs vterm
+#+DATE: <2022-12-28 Wed 10:54>
+#+FILETAGS: emacs:config:vterm
+
+* Configuration
+
+#+INCLUDE: "~/.config/emacs/settings/vterm-settings.el" example emacs-lisp
+
+* Usage
+
+Start with `M-x vterm`
+
+* Links
+
++ [[https://github.com/akermu/emacs-libvterm][akermu/emacs-libvterm: Emacs libvterm integration]]

@@ -7,6 +7,9 @@
 
 * Overview
 
+Rebasing is a very powerful tool as it allows you to "re-write history", that is you can change the history of commits
+in the log.
+
 * Git Rebase in Magit
 
 [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] is really useful for holding your hand through the rebasing process, read more [[id:1f4a3e9c-900d-4f73-b2e0-ac4e8c4037e9][here]].
@@ -20,3 +23,4 @@
 + [[https://www.scmgalaxy.com/tutorials/git-commands-tutorials-and-example-git-reset-git-revert/][Git Reset and Revert Tutorial for Beginners]]
 + [[https://about.gitlab.com/blog/2022/11/08/rebase-in-real-life/][GitLab Blog | How to use Git rebase in real life]]
 + [[https://about.gitlab.com/blog/2022/10/06/take-advantage-of-git-rebase/][GitLab Blog | Take advantage of Git rebase]]
++ [[https://itnext.io/advantages-of-git-rebase-af3b5f5448c6][Advantages of Git Rebase by Alessio Pieruccetti]]

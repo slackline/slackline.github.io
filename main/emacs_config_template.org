@@ -1,0 +1,7 @@
+#+TITLE: Emacs <pkg>
+#+DATE:
+#+FILETAGS: emacs:config:<pkgname>
+
+#+INCLUDE: "~/.config/emacs/settings/-settings.el" example emacs-lisp
+
+* Links

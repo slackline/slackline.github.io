@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       35c72a31-2beb-4dcf-98c9-0254b05bcb86
+:END:
+#+TITLE: Emacs EIN
+#+DATE: <2022-12-28 Wed 11:03>
+#+FILETAGS: emacs:config:ein
+
+[[https://github.com/millejoh/emacs-ipython-notebook][Emacs IPython Notebook]] allows you to run Jupyter Notebooks under Emacs, really handy if you are used to navigating with
+Emacs and don't want to learn all the Jupyter Notebook shortcuts.
+
+* Configuration
+
+#+INCLUDE: "~/.config/emacs/settings/ein-settings.el" example emacs-lisp
+
+* Links
+
++ [[https://github.com/millejoh/emacs-ipython-notebook][millejoh/emacs-ipython-notebook: Jupyter notebook client in Emacs]]

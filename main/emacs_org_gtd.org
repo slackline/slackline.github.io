@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       42dd7a3e-d6bf-4e22-b564-f159fcbeb460
+:END:
+#+TITLE: Emacs GTD
+#+DATE: <2022-12-28 Wed 11:12>
+#+FILETAGS: emacs:config:gtd
+
+I try to organise myself a bit better using the Getting Things Done method implemented in a nice Emacs package.
+
+* Configuration
+
+#+INCLUDE: "~/.config/emacs/settings/org-gtd-settings.el" example emacs-lisp
+
+* Usage
+
+The idea being GTD is that you don't get distracted. When tasks crop up throughout the day you don't investigate them
+and instead capture them in a short note. Each day you have a dedicated period of time, say half an hour or so, to go
+through the previous day(s) captured notes and sort them into projects if they are part of a larger task, action them if
+they are very short tasks.
+
+A transient buffer can be brought up with ~C-c d~
+
+** Capturing
+
+This is bound to ~C-c d c~ which adds a few entries to your Org-capture (if defined), one for ~[i] Inbox~ and another for
+~[I] Inbox with link~
+
+** Processing
+
+This is the daily(-ish) task of processing the captured notes and organising them into priority and you get started with
+~C-c d p~.
+
+** Engaging
+
+When you wish to engage with your list of items its ~C-c d e~ this brings up an Org-agenda like file showing your ~NEXT~
+items across various projects.
+
+You can always open the ~org-gtd-tasks.org~ file and interact with tasks under projects there.
+
+* Links
+
++ [[https://github.com/Trevoke/org-gtd.el][Trevoke/org-gtd.el: A package for using GTD using org-mode]] ([[https://github.com/Trevoke/org-gtd.el/blob/master/doc/org-gtd.org][Manual]])
++

@@ -15,7 +15,7 @@ You can interact with forges such as [[https://gitlab.com][GitLab]], [[https://g
 
 My configuration of Magit is below.
 
-#+INCLUDE: "~/.config/emacs/settings/magit-settings.el" src emacs-lisp
+#+INCLUDE: "~/.config/emacs/settings/magit-settings.el" example emacs-lisp
 
 ** Forge
 

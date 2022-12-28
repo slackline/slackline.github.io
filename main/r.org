@@ -8,15 +8,22 @@
 [[https://www.r-project.org][R]] is a statistical programming language, written and developed initially by statisticians for statisticians. It is based
 on the statistical programming S.
 
-* Tidyverse
+* Data Manipulations
+
+** Tidyverse
 
 The Tidyverse refers to a group of packages that work in unison to simplify the process of writing readable code. Read
 more on the [[id:b4510762-8409-4e5e-8ee8-c27574977772][Tidyverse]].
 
-* ~data.table~
-  :PROPERTIES:
-  :ID:       af60974e-e132-48d0-a1ad-8137ee50f4b9
-  :END:
+** data.table
+
+[[https://rdatatable.gitlab.io/data.table/][data.table]] is an extension of base `data.frame` that has a consistent syntax and is very fast. Its well worth learning
+this framework, read more [[id:78838e73-e7de-4a41-a0a9-69861a3f4abe][here]].
+
+** Dates
+
+Working with dates/times is key to a lot of data analysis. Learn more [[id:5b5b5396-0e90-4b2e-bd6a-67e7112207f8][here]].
+
 * RStudio
 
 [[https://www.rstudio.com/][RStudio]] is an Integrated Development Environment (IDE) for working with R and more recently other languages. Read more
@@ -85,6 +92,7 @@ There are a lot of R user groups and there is no single definitive list, below a
   for an R user group.
 + [[https://www.meetup.com/pro/r-user-groups/][R User Groups - Meetup]]
 + [[https://jumpingrivers.github.io/meetingsR/r-user-groups.html][R User Groups]] curated by
+
 * Development
 :PROPERTIES:
 :ID:       61a19339-e706-4f93-b98c-f5b336d0f280

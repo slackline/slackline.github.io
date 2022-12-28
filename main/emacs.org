@@ -62,7 +62,9 @@ packages or even develop your own packages and share them with the community.
 * Configuration
 
 My configuration is, well, sprawling. The main initialisation file resides at ~/config/emacs/init.el~ but I split it
-configuration over a number of individual files for each package or group of packages.
+over a number of individual files for each package or group of packages. Unsurprisingly there are a lot of packages that
+I use (yet to settle down), you can read more about configuration
+[[id:938af6af-7a0e-46d1-ae76-6157e948151b][Emacs Configuration]].
 
 * EmacsConf
 

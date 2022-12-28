@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       0f5d8919-1769-492d-b0e0-e9e8c738190e
+:END:
+#+TITLE: Emacs <pkg>
+#+DATE:
+#+FILETAGS: emacs:config:<pkgname>
+
+* Configuration
+
+#+INCLUDE: "~/.config/emacs/settings/centaur-tabs-settings.el" example emacs-lisp
+
+** Grouping Tabs
+
+Grouping similar tabs together is a really useful feature and aids cycling through them.
+
+
+* Links
+
++ [[https://github.com/ema2159/centaur-tabs][ema2159/centaur-tabs: Emacs plugin aiming to become an aesthetic, modern looking tabs plugin]]

@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       c5b2b8ae-46fc-4d91-8227-7116c7885de4
+:END:
+#+TITLE: Emacs Elfeed
+#+DATE: <2022-12-28 Wed 10:56>
+#+FILETAGS: emacs:config:elfeed
+
+* Configuration
+
+#+INCLUDE: "~/.config/emacs/settings/elfeed-settings.el" example emacs-lisp
+
+* Usage
+
+I use [[https://github.com/remyhonig/elfeed-org][elfeed-org]] to simplify defining the feeds I want to follow. This means I keep an org-file with the feeds I want to
+follow.
+
+#+INCLUDE: ~/org/elfeed.org~ example orgmode
+
+I want to be able to read my RSS feeds from anywhere and so I've configured ~elfeed-web-start~ to load after loading
+~simple-httpd~ (see above configuration). I also have a timer set to run at 07:00 and 19:00 to run a custom command that
+updates elfeed.  As a consequence I run Emacs as a daemon service on my VPS and can access the Elfeed web-page to view
+my RSS feeds.
+
+* Links
+
++ [[https://github.com/skeeto/elfeed][skeeto/elfeed: An Emacs web feeds client]]
++ [[https://github.com/remyhonig/elfeed-org][remyhonig/elfeed-org: Configure the Elfeed RSS reader with an Orgmode file]]

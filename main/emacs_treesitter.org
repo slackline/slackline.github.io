@@ -1,0 +1,65 @@
+:PROPERTIES:
+:ID:       3070e6ed-1788-44ff-8498-8af6c84f588f
+:END:
+#+TITLE: Emacs Tree-Sitter
+#+DATE: <2022-12-28 Wed 08:44>
+#+FILETAGS: emacs:configuration:elisp
+
+[[https://tree-sitter.github.io/tree-sitter/][Tree-Sitter]] provides consistent syntax highlighting for a range of languages. Its written in C and there is, naturally,
+an Emacs package. In Emacs 29 tree-sitter is built-in, in the mean time though it can be installed from MELPA along with
+the [[https://github.com/emacs-tree-sitter/tree-sitter-langs][tree-sitter-langs]] package which provides binaries for all the supported languages for three OS's.
+
+* Emacs Configuration
+
+
+By installing and using ~tree-sitter-langs~ you only need to set hooks for ~tree-sitter~ to work with the given
+language.
+
+#+INCLUDE: "~/.config/emacs/settings/tree-sitter-settings.el" example emacs-lisp
+
+
+* System Configuration
+
+You need to install parsers for each of the languages you wish to use Tree-sitter with. Some of these are available in
+package managers and can be installed. But not all are yet (e.g. [[https://github.com/r-lib/tree-sitter-r][tree-sitter-r]])
+
+** Gentoo
+
+#+begin_src sh
+  emerge -av tree-sitter-{python,json,julia,html,javascript,rust,regex}
+#+end_src
+
+** Arch
+
+#+begin_src sh
+  pacman -Syu
+#+end_src
+** OSX
+#+begin_src sh
+  brew install
+#+end_src
+
+** Building from Source
+
+To build and install a parser that isn't available in your package manager you need to do the following.
+
+1. Clone the repository.
+2. Build and install the binary somewhere it can be found.
+
+**TODO** Finish off this section
+
+* Code Folding
+
+The excellent [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]] presentation by Abin Simon [[https://emacsconf.org/2022/talks/treesitter/][Tree-sitter beyond syntax highlighting]] demonstrates additional
+features available with Tree-Sitter, one of which is [[https://github.com/emacs-tree-sitter/ts-fold][Code folding with Tree-Sitter]].
+
+* Links
++ [[https://emacs-tree-sitter.github.io/installation/][Emacs Tree-Sitter]] ([[https://github.com/emacs-tree-sitter/elisp-tree-sitter][GitHub]])
++ [[https://tree-sitter.github.io/tree-sitter/][Tree-Sitter]]
++ [[https://github.com/emacs-tree-sitter/ts-fold][Emacs Code folding with Tree-Sitter]]
++ [[https://emacsconf.org/2022/talks/treesitter/][Emacs Conf 2022 : Tree-sitter beyond syntax highlighting Abin Simon]]
+
+
+** Configuration
+
++ [[https://www.reddit.com/r/emacs/comments/zbpa42/how_to_use_emacs_29_treesitter/][/r/emacs : How to use Emacs 29 Tree-sitter?]]

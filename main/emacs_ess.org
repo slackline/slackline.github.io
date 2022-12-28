@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       a2ff20a8-46cd-4123-9931-722925e0af19
+:END:
+#+TITLE: Emacs ESS
+#+DATE: <2022-12-28 Wed 10:19>
+#+FILETAGS: emacs:ess:statistics:r
+
+If you use [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]] and [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] then the chances are you already know about and use [[https://ess.r-project.org/][Emacs Speaks Statistics]].
+
+#+INCLUDE: "~/.config/emacs/settings/ess-settings.el" example emacs-lisp
+
+* Links
+
++ [[https://ess.r-project.org/][Emacs Speaks Statistics]]

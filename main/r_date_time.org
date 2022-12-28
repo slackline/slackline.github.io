@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       5b5b5396-0e90-4b2e-bd6a-67e7112207f8
+:END:
+#+TITLE: R Date/Time
+#+DATE: <2022-12-27 Tue 08:22>
+#+FILETAGS: r:date:time:datetime:lubridate:clock
+
+Much data these days is of a time-series nature, repeated observations over time, think GPS tracking, activity trackers,
+log-files from systems and so forth. Being able to plot these in time order is important. Computers and software have
+little innate sense of time and in order to determine the date or time at any given point it is determined as the
+elapsed period from a specific point in history. Under UNIX systems these are known as epochs and the base time in
+which it is counted from is [1970-01-01 Thu 00:00], this is time ~0~ (zero) and each second passing adds 1 to the counter.
+
+* Converting Strings
+
+Typically you will receive data where dates and times are formatted as strings rather than a format that [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]] recognises as
+a date/time object. It therefore needs converting. The base R function for doing this is ~as.POSIXct()~ but the
+[[https://lubridate.tidyverse.org/][lubridate]] package (part of the [[id:b4510762-8409-4e5e-8ee8-c27574977772][Tidyverse]]) is much more convenient to use.
+
+
+* Formatting
+
+You can format strings using [[https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/strptime][strptime]] from base R.
+
+#+begin_src R
+  strptime(x, format, tz="")
+#+end_src
+
+~POSIXct~ objects have an S3 method
+* Links
+
++ [[https://clock.r-lib.org/][clock • Date-Time Types and Tools]]
++ [[https://hms.tidyverse.org/][hms • Pretty Time of Day]]
++ [[https://lubridate.tidyverse.org/articles/lubridate.html][lubridate • Do more with dates and times in R]]
+
+** Miscellaneous
+
++ [[https://www.newyorker.com/tech/annals-of-technology/the-thorny-problem-of-keeping-the-internets-time][The Thorny Problem of Keeping the Internet’s Time | The New Yorker]]

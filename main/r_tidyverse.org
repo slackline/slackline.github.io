@@ -54,6 +54,7 @@ reading both if you are going to use pipes although I'll try and explain each he
 :ID:       85c00373-f18d-4c82-939c-f5a1c2770890
 :END:
 
+Really useful place for learning features is [[https://ggplot2tor.com/][ggplot2tor+]]
 
 #+NAME: tidyverse-ggplot2
 #+CAPTION: ggplot2
@@ -116,6 +117,18 @@ reading both if you are going to use pipes although I'll try and explain each he
 #+BEGIN_SRC R :eval no
   library(lubridate)
 #+END_SRC
+
+** clock
+:PROPERTIES:
+:ID:       f4816af1-39be-48ae-a68d-e50b7507bdca
+:END:
+
+#+NAME: tidyverse-clock
+#+CAPTION: clock
+#+BEGIN_SRC R :eval no
+  library(clock)
+#+END_SRC
+
 
 ** tidyr
 :PROPERTIES:

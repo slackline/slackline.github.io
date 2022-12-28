@@ -5,6 +5,11 @@
 #+DATE: [2022-12-09 Fri 21:21]
 +FILETAGS: :emacs:lsp:eglot:
 
+My current configuration for Eglot is as follows.
+
+#+INCLUDE: "~/.config/emacs/settings/eglot-settings.el" example emacs-lisp
+
+
 * Links
 
 + [[https://joaotavora.github.io/eglot/][Eglot: The Emacs Client for the Language Server Protocol]]

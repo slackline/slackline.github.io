@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       78838e73-e7de-4a41-a0a9-69861a3f4abe
+:END:
+#+TITLE: R data.table
+#+DATE: <2022-12-26 Mon 21:28>
+#+FILETAGS: r:data:data manipulation:
+
+* Links
+
++ [[https://rdatatable.gitlab.io/data.table/][data.table  • extension of data.frame]]

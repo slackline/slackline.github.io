@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       d0cd450a-2c1e-44da-b185-a9b27d0f0012
+:END:
+#+TITLE: Emacs <pkg>
+#+DATE:
+#+FILETAGS: emacs:config:<pkgname>
+
+* Configuration
+
+#+INCLUDE: "~/.config/emacs/settings/flycheck-settings.el" example emacs-lisp
+
+* Link
+
++ [[https://www.flycheck.org/en/latest/][Flycheck - Syntax checking for GNU Emacs]]

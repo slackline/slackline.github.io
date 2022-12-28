@@ -8,6 +8,10 @@
 [[https://www.gnu.org/software/tramp/][TRAMP]] is a protocol for editing files either as another user on your own files system or on a remote file system over SSH
 (providing you have permission to access the system!).
 
+* Configuration
+
+#+INCLUDE: "~/.config/emacs/settings/tramp-settings.el" example emacs-lisp
+
 * General Syntax
 
 The general syntax for opening a file is.
