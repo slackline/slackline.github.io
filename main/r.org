@@ -33,6 +33,12 @@ on [[id:fbe4e0bc-038d-4aeb-aa48-e312f469678e][RStudio]].
 [[https://rmarkdown.rstudio.com/][R Markdown]] is a markup language that weaves [[id:0c371287-128d-4e46-8128-b2d4f5fc604c][markdown]] with code to facilitate producing reproducible workflows. It can
 render to HTML, PDF (via [[id:e1c2cfef-1b43-47a8-a425-94e6ae58d917][latex]]) or produce interactive Shiny applications. Read more on [[id:1db6158d-cb5d-4b73-b926-95e9c09f878b][RMarkdown]].
 
+* Quarto
+
+[[id:251b3ae4-4a5c-4c44-909a-dcbc0aef4b45][Quarto]] is a new offering from Posit (nee RStudio) that builds on RMarkdown and use Pandoc to produce output. Its
+brilliant and you should definitely learn how to use it. Anything you do in RMarkdown can be done in Quarto and a whole
+lot more.
+
 * Shiny
 
 Shiny provides a framework for creating interactive web-pages from within R. Read more on [[id:fe1f6380-9217-482c-bb5e-91817ae3e8f8][Shiny]].
@@ -112,7 +118,12 @@ help with that. An excellent resource is the [[https://r-pkgs.org/][R Packages b
 :END:
 
 * Links
+
 ** Books
+:PROPERTIES:
+:ID:       3c8ec7de-ab7e-40cd-9c7e-58d3ed0a81bb
+:END:
+
 + [[https://r-pkgs.org/][R Packages]]
 + [[https://r4ds.had.co.nz/][R for Data Science]]
 + [[https://rstudio-education.github.io/hopr/][Hands-On Programming with R]]
@@ -144,6 +155,7 @@ help with that. An excellent resource is the [[https://r-pkgs.org/][R Packages b
 + [[https://www.slendr.net/][A Simulation Framework for Spatiotemporal Population Genetics • slendr]]
 
 ** ROpenSci
+
 + [[https://docs.ropensci.org/occCite/][Querying and Managing Large Biodiversity Occurrence Datasets • occCite]]
 + [[https://docs.ropensci.org/osmextract/][Download and Import Open Street Map Data Extracts • osmextract]]
 + [[https://docs.ropensci.org/jqr/][Client for jq, a JSON Processor • jqr]]

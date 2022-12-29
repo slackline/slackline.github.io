@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       0f5d8919-1769-492d-b0e0-e9e8c738190e
 :END:
-#+TITLE: Emacs <pkg>
+#+TITLE: Emacs Centaurtabs
 #+DATE:
-#+FILETAGS: emacs:config:<pkgname>
+#+FILETAGS: emacs:config:centaurtabs
 
 * Configuration
 

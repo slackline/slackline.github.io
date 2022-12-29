@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       a54eeb0c-ffd1-4002-8a15-7c1f0c0a6a9b
+:END:
+#+TITLE: OnlyKey Duo
+#+DATE: [2022-12-29 Thu 21:01]
+#+FILETAGS: security:onlykey:
+
+I bought several [[https://onlykey.io/collections/all/products/onlykey-duo-dual-usb-c-and-usb-a-security-key?variant=40529423040698][OnlyKey Duo]]
+
+* Install Software
+
+I use Gentoo, no ebuild is available and I couldn't suss out the sourcecode. Instead I downloaded the Debian package
+(see [[https://docs.onlykey.io/duousersguide.html#initial-setup][here]]) and converted to ~.tar.xz~ with ~deb2targz~
+
+#+begin_example sh
+  emerge -av deb2targz
+  deb2targz OnlyKey_5.3.6_amd64.deb
+  tar xvf OnlyKey_5.3.6_amd64.xz
+  cp etc/udev/rules.d/49-onlykey.rules /etc/udev/rules.d/.
+  cp -r opt/OnlyKey /opt/.
+  cp usr/share/applications/OnlyKey.desktop /usr/share/applications/.
+#+end_example
+
+I then had /Other > OnlyKey App/ present under my Xfce4 menu. On starting your asked to "/Please connect your OnlyKey/".
+
+* Configuration
+
+The advanced wizard then asks you to set a Device PIN that is 7-10 digits using **only** the numbers 1-6.
+
+* Links
+
++ [[https://docs.crp.to/][OnlyKey Docs]]
++ [[https://docs.crp.to/command-line.html#idletimeout-num][OnlyKey Command-Line Utility]]
++ [[https://docs.crp.to/linux.html][Using OnlyKey with Linux]]

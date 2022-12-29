@@ -11,6 +11,8 @@ configurations from ~~/.config/emacs/settings/<pkgnmae>-settings.el~ as I find l
 
 * Main Configuration
 
+#+INCLUDE: "~/.config/emacs/init.el" example emacs-lisp
+
 * Package Specifics
 
 Details of each package specific configuration are found on their own pages.
@@ -26,5 +28,6 @@ Details of each package specific configuration are found on their own pages.
 + [[id:42dd7a3e-d6bf-4e22-b564-f159fcbeb460][Org GTD]]
 + [[id:301c717a-c9f6-4490-9620-491762db4343][OSM]]
 + [[id:b9961a9e-e833-4160-aa8f-1c69b9cbb397][Tramp]]
++ [[id:d6626ec2-1e95-4d42-b06e-ae45268f2b58][Transient]]
 + [[id:3070e6ed-1788-44ff-8498-8af6c84f588f][Tree-Sitter]]
 + [[id:4668a662-27ab-4015-aaa0-6e356b6bc165][Vterm]]

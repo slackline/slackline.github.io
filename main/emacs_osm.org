@@ -5,6 +5,8 @@
 #+DATE: <2022-12-28 Wed 10:21>
 #+FILETAGS: emacs:config:osm:openstreetmaps
 
+* Configuration
+
 #+INCLUDE: "~/.config/emacs/settings/osm-settings.el" example emacs-lisp
 
 * Links

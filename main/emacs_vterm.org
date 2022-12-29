@@ -5,13 +5,16 @@
 #+DATE: <2022-12-28 Wed 10:54>
 #+FILETAGS: emacs:config:vterm
 
+[[https://github.com/akermu/emacs-libvterm][vterm]] is a terminal emulator that runs within Emacs. I prefer it to shell buffers as it appears to work just like a
+terminal.
+
 * Configuration
 
 #+INCLUDE: "~/.config/emacs/settings/vterm-settings.el" example emacs-lisp
 
 * Usage
 
-Start with `M-x vterm`
+Start with ~M-x vterm~.
 
 * Links
 

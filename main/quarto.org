@@ -15,7 +15,7 @@ document.
 :ID:       25c4a623-fc4c-4902-8f28-f54949e26299
 :END:
 
-Logging is simple with Quarto.
+Blogging is simple with Quarto.
 
 * Presentations
 :PROPERTIES:
@@ -37,6 +37,23 @@ Logging is simple with Quarto.
 :ID:       0ce8dca8-d0c7-40e9-a629-01e03a8d7a44
 :END:
 
+* Code
+:PROPERTIES:
+:ID:       db0e802e-d990-40c0-9c29-6bd067f4f546
+:END:
+
+There are a number of options you can apply to code blocks. The ~code_fold: true~ options will hide code blocks in the
+rendered HTML but with a little arrow to expand them. ~code_tools: true~ will put links to the documentation of
+functions used in a code block. ~code_link: true~
+
+#+begin_example yaml
+  execute:
+    code_fold: true
+    code_link: true
+    code_tools: true
+#+end_example
+
+I found these global options didn't work under blogs, although
 * Previewing
 :PROPERTIES:
 :ID:       8e0f1277-6058-4135-8483-20b1ace75161
@@ -44,16 +61,16 @@ Logging is simple with Quarto.
 
 You can preview documents easily, from within [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] bind the following.
 
-#+begin_src lisp :eval no
+#+begin_example emacs-lisp
   (use-package quarto-mode
 	     :mode (("\\.Rmd" . poly-quarto-mode))
 	     :bind (("C-c q" . quarto-preview)))
-#+end_src
+#+end_example
 
  You can set [[https://quarto.org/docs/reference/projects/options.html#preview][options for ~preview~ ]] in the YAML header, most usefully is fixing the ~host~ and/or ~port~ so you don't
   get a new browser tab each time you preview.
 
-#+begin_src yaml :eval no
+#+begin_example yaml
   ---
   project:
     ...
@@ -63,7 +80,7 @@ You can preview documents easily, from within [[id:754f25a5-3429-4504-8a17-4efea
       browser: true
       watch-inputs: true
       navigate: true
-#+end_src
+#+end_example
 
 * Links
 + [[https://t.co/FDlvjq4qrc][quarto.org]]

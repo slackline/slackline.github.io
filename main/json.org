@@ -9,7 +9,6 @@
 
 A super-set of JSON is [[id:fac7a695-9bdf-4a79-9ec3-9945e9a0cba4][YAML]].
 
-
 * jq
 :PROPERTIES:
 :ID:       a23966d2-0e34-4ebd-8a66-5d40c2ce6a43
@@ -28,7 +27,12 @@ $ gh issue list -L 100 --json "number,id,title,author,labels,state" > github_iss
 $ jq -r '.[] | [.number, .title, .author.login, .state, (.labels[]| .name )] | @csv'
 #+END_SRC
 
+* R
+
+The [[https://docs.ropensci.org/jqr/][jqr]] package that wraps the functionality of ~jq~ making it available within [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]].
 
 * Links
 
++ [[https://stedolan.github.io/jq/][jq]]
 + [[https://www.json.org/json-en.html][JSON]]
++ [[https://docs.ropensci.org/jqr/][jqr • Client for jq, a JSON Processor]]

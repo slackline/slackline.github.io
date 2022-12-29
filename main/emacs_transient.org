@@ -3,4 +3,12 @@
 :END:
 #+TITLE: Emacs Transient
 #+DATE: [2022-12-11 Sun 22:08]
-#+FILETAGS: :emacs:transient:magit:
+#+FILETAGS: :emacs:config:transient:magit:
+
+* Configuration
+
+#+INCLUDE: "~/.config/emacs/settings/" example emacs-lisp
+
+* Links
+
++ [[https://github.com/positron-solutions/transient-showcase][positron-solutions/transient-showcase: Example forms for transient UI's in Emacs]]

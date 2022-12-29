@@ -5,6 +5,9 @@
 #+DATE: [2022-04-27 Wed 07:38]
 #+FILETAGS: :python:programming:packaging:pip:
 
+This page describes steps in creating a [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] package. If you are looking for information on installing packages this
+is done using [[id:47543a76-a873-4c07-b30d-926f50b31fca][Python PIP]].
+
 [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] packaging is it seems in a constant state of flux. There is the official [[https://packaging.python.org/en/latest/][Python Packaging User Guide]] from the
 [[https://www.pypa.io/en/latest/][Python Packaging Authority]] which is probably the best resource to read but things change, and often quickly. This
 document focuses on [[https://setuptools.pypa.io/en/latest/index.html][Setuptools]] which works with Python >= 3.7, but you may wish to consider other packages such as

@@ -4,3 +4,35 @@
 #+TITLE: Python PIP
 #+DATE: [2022-12-11 Sun 19:42]
 #+FILETAGS: :python:packages:pip:
+
+* Usage
+
+Usage is fairly straight-forward, by default ~pip~ uses the main [[https://pypi.org][Python Package Index (PyPI)]].
+
+#+begin_src sh
+  pip install <pkgname
+#+end_src
+
+** Installing from other Repositories
+
+** Installing from Cloned Source
+
+Some projects haven't made it to a PyPI and are provided as source code on a forge such as [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]], [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]]. These can be
+cloned to your computer and installed.
+
+#+begin_src sh
+  git clone git@github.com:<pkg>
+  cd <pkg>
+  pip install .
+#+end_src
+
+** Installing from GitHub
+
+You can also install packages directly from GitHub
+
+*** Installing Specific Branches
+
+
+* Links
+
++ [[https://pypi.org][PyPI]]

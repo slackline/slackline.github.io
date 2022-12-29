@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       ce08bd82-0146-49cb-8a64-048ffe7210f2
+:END:
+#+TITLE: GPG
+#+DATE: <2022-12-29 Thu 20:48>
+#+FILETAGS: security:gpg
+
+
+* Links

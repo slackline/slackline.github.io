@@ -22,6 +22,12 @@ There are a number of ways of repositories that host repositories (see [[#packag
 [[id:4451966f-b810-4a9d-905b-e2b682578c62][Buffers]] are the basis of Emacs, the window through which you view files and processes, understanding how they work and
 navigating between the vastly improves your productivity.
 
+* GPG
+
+Emacs works easily with [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GPG]]. As long as you have your keys available you can create a file and save it with the
+extensions ~.gpg~ and Emacs will encrypt it automatically. Open the file and its decrypted. There is of course more to
+it if you are sharing files and encrypting with others public keys. Read more in the [[id:d1ce8192-41ce-4073-9fe8-654fd17fdadb][Security]] pages.
+
 * Magit
 
 [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] is an amazing package, its a porcelain to Git which means it gives access to all of the functions on the command
@@ -95,6 +101,11 @@ Read more about [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]].
 ** Advocacy
 + [[https://www.fugue.co/blog/2015-11-11-guide-to-emacs.html][A CEO's Guide to Emacs]] - a few dated bits (e.g. ~\~/.config/emacs~ is now supported) but very good.
 
+*** Video Tutorials
+
++ [[https://www.youtube.com/@SystemCrafters][SystemCrafters]] - lots of really useful video tutorials on configuring Emacs.
++ [[https://www.youtube.com/@skybert/videos][Skybert Hacks]] - not all are Emacs but there are a lot of useful videos.
+
 ** Manuals and Books
 + [[https://emacsdocs.org/docs/Magit/Top][Emacsdocs.org]]
 + [[https://www.masteringemacs.org/][Mastering Emacs]]
@@ -103,7 +114,7 @@ Read more about [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]].
 + [[https://www.masteringemacs.org/article/emacs-builtin-elisp-cheat-sheet][Emacs's Builtin Elisp Cheat Sheet - Mastering Emacs]]
 + [[https://www.ingentaconnect.com/content/matthey/jmtr/2022/00000066/00000002/art00002;jsessionid=5o2da922fbmbh.x-ic-live-02][Emacs as a Tool for Modern Science : The use of open source tools to immprove scientific workflows]]
 
-#+CUSTOM_ID: packages
+
 ** Packages
 + [[https://melpa.org/#/][MELPA]]
 + [[https://stable.melpa.org/#/][MELPA Stable]]
