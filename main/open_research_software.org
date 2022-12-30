@@ -6,7 +6,11 @@
 #+FILETAGS: :open-research:software:
 
 * Links
-+
+
+** Reproducibility/Code Review
+
++ [[https://codecheck.org.uk/][CODECHECK]] is a process for independent execution of computations underlying scholarly research articles.
++ [[https://www.reprohack.org/][ReproHack Hub]]
 
 * Bibliography
 
