@@ -7,6 +7,12 @@
 
 * Links
 
+** Journals
+
++ [[https://joss.theoj.org/][Journal of Open Source Software]]
++ [[https://jose.theoj.org/][Journal of Open Source Education]]
++ [[https://jolts.world/index.php/jolts][Journal of Open Law, Technology & Society]] (defunct as of 2022-08-27)
+
 ** Reproducibility/Code Review
 
 + [[https://codecheck.org.uk/][CODECHECK]] is a process for independent execution of computations underlying scholarly research articles.
