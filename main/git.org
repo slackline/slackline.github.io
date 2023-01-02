@@ -401,6 +401,12 @@ A useful article/tutorial on [[https://gist.github.com/ThomasFrans/ab1cb531410ab
 you want to have multiple branches checked out simultaneously. It helps avoid the need to ~git stash~ before switching
 branches.
 
+More info at...
+
++ [[https://www.gitkraken.com/learn/git/git-worktree][How to Use Git Worktree | Add, List, Remove]]
++ [[https://dev.to/yankee/practical-guide-to-git-worktree-58o0][Practical Guide to Git Worktree - DEV Community]]
++ [[https://medium.com/ngconf/git-worktrees-in-use-f4e516512feb][Git Worktrees in Use. Most of us use Git every day, but… | by Preston Lamb]] << This seems good, clearest so far.
++ [[https://git-scm.com/docs/git-worktree][Git - git-worktree Documentation]]
 
 * Merge Conflicts
 :PROPERTIES:
