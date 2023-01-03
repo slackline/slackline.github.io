@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       077cb9b0-a54e-45b0-abdf-1b8a5bb63aa9
+:mtime:    20230103103308 20221110233138
+:ctime:    20221110233138
 :END:
 #+TITLE: Python Parallel Programming
 #+DATE: [2022-11-09 Wed 09:34]

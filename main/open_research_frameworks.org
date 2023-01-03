@@ -1,6 +1,8 @@
 :PROPERTIES:
 :ID:       af7ec14e-3022-4d4b-b05d-101e937569e2
 :ROAM_ALIASES: "Open Research : Frameworks"
+:mtime:    20230103103312 20220215175249
+:ctime:    20220215175249
 :END:
 #+title: Research Frameworks
 #+filetags: :open-research::frameworks:

@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       ea1499ab-dab2-49b1-8479-cb5a2fbd38bc
+:mtime:    20230103103314 20221224191223 20230103103313 20230103103309 20230103103308
+:ctime:    20221224191223 20230103103308
 :END:
 #+TITLE: Programming
 #+DATE: [2022-02-15 Tue 21:07]
@@ -10,16 +12,22 @@ Programming can be abstracted from the language in which it is written and the [
 * Data Structures
 :PROPERTIES:
 :ID:       347000ec-6cec-4187-a998-9a96ad6f3946
+:mtime:    20221224191223
+:ctime:    20221224191223
 :END:
 
 * Algorithms
 :PROPERTIES:
 :ID:       c7298d65-4e43-447b-b6fd-968b8eef03db
+:mtime:    20230103103309
+:ctime:    20230103103309
 :END:
 
 * SOLID Principles
 :PROPERTIES:
 :ID:       4d2971f0-9dc1-4a51-b022-2b586c735fd2
+:mtime:    20221224191223
+:ctime:    20221224191223
 :END:
 
 * Design Patterns
@@ -28,12 +36,18 @@ Programming can be abstracted from the language in which it is written and the [
 :END:
 
 * [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linting]]
+:PROPERTIES:
+:mtime:    20221224191223
+:ctime:    20221224191223
+:END:
 
 Linting is a process of static code analysis that aims to improve the quality of your code. Read more about [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linting]].
 
 * Test Driven Development
 :PROPERTIES:
 :ID:       119d0863-1d66-4fda-ac42-5806243f9c99
+:mtime:    20230103103308 20221224191223
+:ctime:    20221224191223
 :END:
 
 * Refactoring

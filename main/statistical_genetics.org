@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       3899f7f8-bc4a-4228-b922-5b9bb361106c
+:mtime:    20230103103310 20220524211841 20230103103309
+:ctime:    20220524211841
 :END:
 #+TITLE: Statistical Genetics
 #+DATE: [2022-02-19 Sat 13:19]
@@ -8,6 +10,8 @@
 * Linkage Analysis
 :PROPERTIES:
 :ID:       543f41e3-63ba-45c7-963c-6a01ec45cd5d
+:mtime:    20230103103312 20220524211841
+:ctime:    20220524211841
 :END:
 
  Linkage analysis focuses on pedigrees (families) where a disease segregates and occurs more frequently than the
@@ -25,6 +29,8 @@
 * Association Analysis
 :PROPERTIES:
 :ID:       5346ee87-dee7-45a0-81ff-51d0fe03d047
+:mtime:    20220524211841
+:ctime:    20220524211841
 :END:
 
 Extending the unobserved pedigree to the population level allows for population level association analyses to be

@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       fdd7fac9-d26d-4338-b9f0-a3748fda7c54
+:mtime:    20230103103314 20220315220837 20230103103313 20230103103312
+:ctime:    20220315220837 20230103103312
 :END:
 #+TITLE: Evolution
 #+DATE: [2022-03-15 Tue 21:09]
@@ -42,6 +44,8 @@ genes produce organisms on which selection then acts.
 * Evolutionary Game Theory
 :PROPERTIES:
 :ID:       99849034-2ca6-4abc-80b4-eeea7dc60bb3
+:mtime:    20230103103312 20220315220837
+:ctime:    20220315220837
 :END:
 
 [[https://en.wikipedia.org/wiki/John_Maynard_Smith][John Maynard Smith]] along with George Price applied the [[https://en.wikipedia.org/wiki/Game_theory][game theory]] principles to biological/evolution scenarios and

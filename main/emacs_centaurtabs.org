@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       0f5d8919-1769-492d-b0e0-e9e8c738190e
+:mtime:    20230103103308 20221228112408
+:ctime:    20221228112408
 :END:
 #+TITLE: Emacs Centaurtabs
 #+DATE:

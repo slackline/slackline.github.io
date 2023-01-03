@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       7318aee8-c864-40cb-9462-4ce36ac56d35
+:mtime:    20230103103311 20220806065259
+:ctime:    20220806065259
 :END:
 #+TITLE: Python Documentation
 #+DATE: [2022-02-13 Sun 20:49]

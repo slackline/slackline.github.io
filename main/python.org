@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       5b5d1562-ecb4-4199-b530-e7993723e112
+:mtime:    20230103103310 20221217185215 20230103103308
+:ctime:    20221217185215 20230103103308
 :END:
 #+TITLE: Python
 #+DATE: [2022-02-13 Sun 20:49]
@@ -46,17 +48,25 @@ In Python there is the built-in [[https://docs.python.org/3/library/unittest.htm
 helps with environment and version management.
 
 * Packaging
+:PROPERTIES:
+:mtime:    20221217185215 20230103103309
+:ctime:    20221217185215 20230103103309
+:END:
 
 At some point you are likely to want to create a package out of your code, read more on that at [[id:bb57f65e-58f4-45de-9620-901dc998f6d6][Python Packaging]].
 
 * Data Structures
 :PROPERTIES:
 :ID:       8da3c4d1-e3ef-40ec-b2bd-1d5685c8fa51
+:mtime:    20230103103314 20221217185215
+:ctime:    20221217185215
 :END:
 
 ** Strings
 :PROPERTIES:
 :ID:       21faef08-02b9-4a88-9db5-87e40a5d524a
+:mtime:    20221217185215 20230103103310
+:ctime:    20221217185215 20230103103310
 :END:
 ** Numbers
 :PROPERTIES:
@@ -69,6 +79,8 @@ At some point you are likely to want to create a package out of your code, read 
 ** Dictionaries
 :PROPERTIES:
 :ID:       6bb3fd5e-63e3-43de-aecc-7c840f6d9819
+:mtime:    20221217185215 20230103103312
+:ctime:    20221217185215
 :END:
 
 Dictionaries can be pretty printed using the ~json.dumps()~ method.
@@ -86,12 +98,16 @@ Dictionaries can be pretty printed using the ~json.dumps()~ method.
 ** Sets
 :PROPERTIES:
 :ID:       13fb7bc5-0226-4071-b03b-08ca01fba5f0
+:mtime:    20230103103308 20221217185215
+:ctime:    20221217185215
 :END:
 
 
 * Decorators
 :PROPERTIES:
 :ID:       eb1027f2-0e37-4e60-9c41-d27de3e01243
+:mtime:    20230103103313 20221217185215
+:ctime:    20221217185215
 :END:
 Decorators are really useful, they save you time and effort by handling a lot of functionality that would take time to
 write yourself. As you might expect there are a lot of decorators out there, for example [[id:3cca0dfd-0c82-4685-b9ed-6314f7c8b78f][Python Pytest]] has a bunch of
@@ -104,6 +120,8 @@ The ~@property~ decorator facilitates adding properties to your class (see [[htt
 * I/O
 :PROPERTIES:
 :ID:       c821f0a2-07d8-4713-907d-d4916b998fdc
+:mtime:    20221217185215
+:ctime:    20221217185215
 :END:
 Reading and writing data and files is fairly key to many things you will wish to do.
 

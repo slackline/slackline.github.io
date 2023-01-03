@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       e78362b2-3b99-4810-a9dc-7ffedf436289
+:mtime:    20230103103314 20220213172629
+:ctime:    20220213172629
 :END:
 #+title: cryptocurrencies
 #+date: [2022-02-13 Sun 11:38]

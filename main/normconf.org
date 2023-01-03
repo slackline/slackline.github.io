@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       cc3612e7-3ed5-4cca-b36d-0a4b20e8669d
+:mtime:    20230103103313 20221224191223
+:ctime:    20221224191223
 :END:
 #+TITLE: Normconf
 #+DATE: <2022-12-22 Thu 12:11>

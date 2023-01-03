@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       b2043729-1e38-4b92-95ce-e89c106d7db8
+:mtime:    20230103103312 20220206202607
+:ctime:    20220206202607
 :END:
 #+title: notes
 #+date: [2022-02-06 Sun 20:16]

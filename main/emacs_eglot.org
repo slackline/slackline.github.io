@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       efe4e098-d7e6-42cd-90bd-234a25806c3a
+:mtime:    20230103103314 20221228103600
+:ctime:    20221228103600
 :END:
 #+TITLE: Emacs Eglot
 #+DATE: [2022-12-09 Fri 21:21]

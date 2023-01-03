@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       d62fd426-a267-4601-ba41-3340aa789ee3
+:mtime:    20230103103313 20220511163412
+:ctime:    20220511163412
 :END:
 #+TITLE: [[Generalised Linear Models]]
 #+DATE: [2022-03-01 Tue 19:14]

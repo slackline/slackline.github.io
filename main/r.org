@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       de9a18a7-b4ef-4a9f-ac99-68f3c76488e5
+:mtime:    20230103103313 20221228150524 20230103103308
+:ctime:    20221228150524 20230103103308
 :END:
 #+TITLE: R
 #+DATE: [2022-02-13 Sun 19:51]
@@ -40,6 +42,10 @@ brilliant and you should definitely learn how to use it. Anything you do in RMar
 lot more.
 
 * Shiny
+:PROPERTIES:
+:mtime:    20221228150524 20230103103312
+:ctime:    20221228150524 20230103103312
+:END:
 
 Shiny provides a framework for creating interactive web-pages from within R. Read more on [[id:fe1f6380-9217-482c-bb5e-91817ae3e8f8][Shiny]].
 
@@ -50,6 +56,8 @@ shinydashboard/ and as v2.0.0 its as simple as switching from ~library(shinydash
 :PROPERTIES:
 :TITLE: R community
 :ID:       e7011db4-16fc-4cde-bb81-4d172cb0db14
+:mtime:    20230103103313 20221228150524
+:ctime:    20221228150524
 :END:
 
 There is a wonderful community around R online. Gone are the days of trepidation about posting on [[https://stat.ethz.ch/mailman/listinfo/r-help][R-help]] only to get
@@ -58,6 +66,8 @@ chided for not being clear enough about the problem. These days there is [[https
 ** Seeking Help
 :PROPERTIES:
 :ID:       bbe26fc4-9c87-477b-ab93-eeec4449bc4b
+:mtime:    20221228150524 20230103103311
+:ctime:    20221228150524 20230103103311
 :END:
 
 It can be daunting asking questions about something you don't feel you understand particularly well. Often a seed of
@@ -90,6 +100,8 @@ this advice is based, although that article is heavily orientated towards Comput
 ** R User Groups
 :PROPERTIES:
 :ID:       d76ffaee-8e40-4d36-a901-80401a4cc836
+:mtime:    20221228150524 20230103103308
+:ctime:    20221228150524 20230103103308
 :END:
 
 There are a lot of R user groups and there is no single definitive list, below are links to some.
@@ -102,6 +114,8 @@ There are a lot of R user groups and there is no single definitive list, below a
 * Development
 :PROPERTIES:
 :ID:       61a19339-e706-4f93-b98c-f5b336d0f280
+:mtime:    20230103103309 20221228150524
+:ctime:    20221228150524
 :END:
 At some point you may want to delve further into writing more structured code in R and write your own package. This can
 be a good way of organising your work and making it reproducible and available to others, but for this to be effective
@@ -111,10 +125,14 @@ help with that. An excellent resource is the [[https://r-pkgs.org/][R Packages b
 ** testthat
 :PROPERTIES:
 :ID:       206d377a-f739-4cb9-afa7-8f3956ca2e38
+:mtime:    20221228150524
+:ctime:    20221228150524
 :END:
 ** roxygen2
 :PROPERTIES:
 :ID:       02920384-18c3-4e27-8a63-29a693ab16d0
+:mtime:    20230103103308 20221228150524
+:ctime:    20221228150524
 :END:
 
 * Links

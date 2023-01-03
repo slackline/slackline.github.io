@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       9aa32f65-144f-4c52-aab6-afebd17c1e5b
+:mtime:    20230103103312 20221211200227
+:ctime:    20221211200227
 :END:
 #+TITLE: Genetics
 #+DATE: [2022-03-15 Tue 22:07]

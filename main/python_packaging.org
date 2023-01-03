@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       bb57f65e-58f4-45de-9620-901dc998f6d6
+:mtime:    20230103103312 20221228113913 20230103103309
+:ctime:    20221228113913 20230103103309
 :END:
 #+TITLE: Python Packaging
 #+DATE: [2022-04-27 Wed 07:38]
@@ -657,6 +659,10 @@ jobs:
 
 
 ** Releasing via GitHub
+:PROPERTIES:
+:mtime:    20230103103311
+:ctime:    20230103103311
+:END:
 
 With [[#versioneer][versioneer]] in place and a [[id:5e1f167e-5c0c-4206-b2ac-6694e08524d8][GitHub Action]] setup and configured it is now possible to make a release to PyPI via
 GitHub Releases.
@@ -674,6 +680,8 @@ GitHub Releases.
 * PDM
 :PROPERTIES:
 :ID:       37748065-f956-4d0c-9301-c4d51439b1b4
+:mtime:    20221228113913 20230103103309
+:ctime:    20221228113913
 :END:
 
 

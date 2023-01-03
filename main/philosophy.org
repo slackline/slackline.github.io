@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       75a9e631-547f-4f6b-9f8a-e916fdbe6309
+:mtime:    20230103103311 20221217225841
+:ctime:    20221217225841
 :END:
 #+TITLE: Philosophy
 #+DATE: [2022-12-17 Sat 22:03]

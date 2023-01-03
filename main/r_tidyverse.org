@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       b4510762-8409-4e5e-8ee8-c27574977772
+:mtime:    20230103103312 20221228151013 20230103103312 20230103103308
+:ctime:    20221228151013 20230103103308
 :END:
 #+TITLE: Tidyverse
 #+DATE: [2022-02-13 Sun 19:51]
@@ -17,6 +19,8 @@ Science]] book by Hadley Wickham and Garrett Grolemund which is free to read on-
 ** Pipes
 :PROPERTIES:
 :ID:       a7d25501-fa12-4f13-bbf0-154d850209eb
+:mtime:    20221228151013 20230103103311
+:ctime:    20221228151013
 :END:
 Pipes are the backbone of what makes the Tidyverse so great. When I started learning R I really struggled reading nested
 functions but with Pipes the grammar is far more intuitive, reading more like a story.
@@ -43,15 +47,21 @@ reading both if you are going to use pipes although I'll try and explain each he
 *** Base Pipe
 :PROPERTIES:
 :ID:       4d45f3f8-61ef-4375-bb27-351c8419635e
+:mtime:    20230103103313
+:ctime:    20230103103313
 :END:
 *** Magrittr
 :PROPERTIES:
 :ID:       bd93d909-8cb4-4c27-8db2-66df0ca9567f
+:mtime:    20221228151013
+:ctime:    20221228151013
 :END:
 [[https://magrittr.tidyverse.org/][Magrittr]]
 ** ggplot2
 :PROPERTIES:
 :ID:       85c00373-f18d-4c82-939c-f5a1c2770890
+:mtime:    20221228151013 20230103103311
+:ctime:    20221228151013 20230103103311
 :END:
 
 Really useful place for learning features is [[https://ggplot2tor.com/][ggplot2tor+]]
@@ -66,6 +76,8 @@ Really useful place for learning features is [[https://ggplot2tor.com/][ggplot2t
 ** forcats
 :PROPERTIES:
 :ID:       e0e5c206-28fb-4c18-b376-4c04a09222ea
+:mtime:    20221228151013
+:ctime:    20221228151013
 :END:
 
 #+NAME: tidyverse-forcats
@@ -86,6 +98,10 @@ Really useful place for learning features is [[https://ggplot2tor.com/][ggplot2t
 #+END_SRC
 
 *** Summarising data
+:PROPERTIES:
+:mtime:    20221228151013 20230103103308
+:ctime:    20221228151013 20230103103308
+:END:
 
 Often you want to produce a table of summary statistics to display. There are many tools out there such as ~summary()~
 or ~Hmisc::describe()~ but not all return a data frame/tible that is conduscive to formatting (or accessing the values
@@ -132,6 +148,8 @@ summary_df <- df |>
 ** tibble
 :PROPERTIES:
 :ID:       c8693079-9cc9-457a-ab83-16be852963b1
+:mtime:    20230103103310 20221228151013
+:ctime:    20221228151013
 :END:
 
 #+NAME: tidyverse-tibble
@@ -143,6 +161,8 @@ summary_df <- df |>
 ** stringr
 :PROPERTIES:
 :ID:       1eeb28cd-e80f-43b5-ab4b-7b063c1df73d
+:mtime:    20221228151013
+:ctime:    20221228151013
 :END:
 
 [[https://stringr.tidyverse.org/][stringr]] is a package for working with strings in R, its fast as under the hood it uses the ICU library (via the
@@ -169,6 +189,8 @@ df  |>
 ** lubridate
 :PROPERTIES:
 :ID:       4cde3c5d-8868-4d4e-ba55-172aa93822f1
+:mtime:    20230103103308
+:ctime:    20230103103308
 :END:
 
 [[https://lubridate.tidyverse.org][lubridate]] is a library for working with dates and times.
@@ -182,6 +204,8 @@ df  |>
 ** clock
 :PROPERTIES:
 :ID:       f4816af1-39be-48ae-a68d-e50b7507bdca
+:mtime:    20221228151013
+:ctime:    20221228151013
 :END:
 
 #+NAME: tidyverse-clock
@@ -205,6 +229,8 @@ df  |>
 ** tidytable
    :PROPERTIES:
    :ID:       00e28ab9-3ae3-481b-99ca-7cc143481437
+   :mtime:    20230103103308 20221228151013
+   :ctime:    20221228151013
    :END:
 
 Tidytable provides ~tidyverse~ like syntax built on top of the fast ~data.table package~

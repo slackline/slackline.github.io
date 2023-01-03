@@ -1,6 +1,8 @@
 :PROPERTIES:
 :ID:       136364e7-1a6d-4b28-b284-0e415b860699
 :ROAM-ALIASES: "Org Roam : Overview"
+:mtime:    20230103103313 20221224191223 20230103103308
+:ctime:    20221224191223
 :END:
 #+TITLE: Org-roam
 #+FILETAGS: :orgroam:zettelkasten:org:
@@ -8,6 +10,8 @@
 * Linking Nodes
 :PROPERTIES:
   :ID:       e02fac30-1d8a-47ea-a91f-3c0b993ca2a3
+:mtime:    20221224191223 20230103103311
+:ctime:    20221224191223 20230103103311
   :END:
 
 The power of the Zettelkasten approach comes from linking nodes. To achieve this in Org-roam the common keybinding
@@ -51,6 +55,10 @@ of the file...
 #+END_SRC
 
 ** Daily Captures
+:PROPERTIES:
+:mtime:    20230103103313 20221224191223
+:ctime:    20221224191223
+:END:
 
 You may want to capture notes daily and process them, this can be done by customising the
 ~org-roam-dailies-capture-templates~. The example below saves to the directory defined by
@@ -78,6 +86,8 @@ notes or deleting them if not needed.
 * Keeping up to Date
 :PROPERTIES:
 :ID:       68374984-d0f4-46de-8d3d-004fa9a82886
+:mtime:    20221224191223
+:ctime:    20221224191223
 :END:
 
 If you decide to delete files you can do so, but the references and links to them will persist in the database. To

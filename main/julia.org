@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       67f03851-d5bf-46ea-a7f5-14dfbaa7c61c
+:mtime:    20230103103311 20220322193953
+:ctime:    20220322193953
 :END:
 
 [[https://julialang.org/][Julia]] is the new kid on the block and I've heard good things about it in terms of speed and its support for Bayesian

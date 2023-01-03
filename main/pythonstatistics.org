@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       ec8e7ee9-0316-4de2-98c1-f775c20b0e35
+:mtime:    20230103103314 20220323114739 20230103103314 20230103103308
+:ctime:    20220323114739 20230103103308
 :END:
 #+TITLE: Python Data Analysis and Visualisation
 #+DATE: [2022-03-23 Wed 11:44]
@@ -8,26 +10,38 @@
 * Data Analysis
 :PROPERTIES:
 :ID:       f7c491f4-c557-4a68-916a-4e883a15e8ac
+:mtime:    20230103103311 20220323114739 20230103103309
+:ctime:    20220323114739
 :END:
 ** NumPy
 :PROPERTIES:
 :ID:       17a009b4-fb1a-4565-9aec-4e73b3797249
+:mtime:    20220323114739 20230103103310
+:ctime:    20220323114739
 :END:
 ** SciPy
 :PROPERTIES:
 :ID:       56d20ad7-c064-49bd-8ed7-eea6944d84c1
+:mtime:    20230103103312 20220323114739
+:ctime:    20220323114739
 :END:
 ** Pandas
 :PROPERTIES:
 :ID:       28963f75-6411-4e1b-b4d3-1d7e7510052c
+:mtime:    20220323114739
+:ctime:    20220323114739
 :END:
 ** Scikit-Learn
 :PROPERTIES:
 :ID:       fbd601a5-ef1a-415d-a701-ba03fb5218d6
+:mtime:    20220323114739
+:ctime:    20220323114739
 :END:
 ** Statsmodels
 :PROPERTIES:
 :ID:       880b87a3-9bfd-4bc7-9e67-a5ec5f5cde3a
+:mtime:    20220323114739
+:ctime:    20220323114739
 :END:
 * Visualisation
 :PROPERTIES:
@@ -44,6 +58,8 @@
 *** Plotnine
 :PROPERTIES:
 :ID:       1608b51b-a98e-4ffe-b157-c0ea959faeae
+:mtime:    20230103103308 20220323114739
+:ctime:    20220323114739
 :END:
 *** Holoviews
 :PROPERTIES:

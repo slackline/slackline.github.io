@@ -1,6 +1,8 @@
 :PROPERTIES:
 :ID:       ab2f5dfb-e355-4dbb-8ca0-12845b82e38a
 :ROAM_ALIASES: "Open Research : Literate Programming"
+:mtime:    20230103103312 20220216195357 20230103103311
+:ctime:    20220216195357 20230103103311
 :END:
 #+TITLE: Literate Programming
 #+FILETAGS: :open-research:literate programming:reproducibility:
@@ -12,6 +14,8 @@ processed in human language with text inter-weaved with code that is compiled in
 * Frameworks
 :PROPERTIES:
 :ID:       90eb6015-6a7b-4a52-870d-bd8457da171d
+:mtime:    20230103103311 20220216195357
+:ctime:    20220216195357
 :END:
 There are many options available, only some of which I cover here.
 

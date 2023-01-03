@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       97d138e1-015a-406a-b7ec-c046f01246d2
+:mtime:    20230103103311 20221224191223 20230103103308
+:ctime:    20221224191223 20230103103308
 :END:
 #+TITLE: Reproducible Research
 #+DATE: [2022-02-13 Sun 20:49]
@@ -21,6 +23,8 @@ means the configured systems are transparent and reproducible.
 * Data Version Control
 :PROPERTIES:
 :ID:       2013cd50-f008-422a-ade1-b97d6bfc3a2a
+:mtime:    20230103103308 20221224191223
+:ctime:    20221224191223
 :END:
 
 In the same way [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] is important for controlling source code development it is also important to control the data and

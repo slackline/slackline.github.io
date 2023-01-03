@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       251b3ae4-4a5c-4c44-909a-dcbc0aef4b45
+:mtime:    20230103103309 20221228151331 20230103103309 20230103103308
+:ctime:    20221228151331 20230103103308
 :END:
 #+TITLE: Quarto
 #+DATE: <2022-05-24 Tue 22:07>
@@ -13,6 +15,8 @@ document.
 * Blogging
 :PROPERTIES:
 :ID:       25c4a623-fc4c-4902-8f28-f54949e26299
+:mtime:    20230103103313 20221228151331 20230103103308
+:ctime:    20221228151331 20230103103308
 :END:
 
 Blogging is simple with Quarto.
@@ -20,6 +24,8 @@ Blogging is simple with Quarto.
 * Presentations
 :PROPERTIES:
 :ID:       29a2113e-484c-42f3-b200-76a569066c3b
+:mtime:    20221228151331 20230103103311
+:ctime:    20221228151331
 :END:
 
 ** RevealJS
@@ -35,11 +41,15 @@ Blogging is simple with Quarto.
 * Books
 :PROPERTIES:
 :ID:       0ce8dca8-d0c7-40e9-a629-01e03a8d7a44
+:mtime:    20230103103308 20221228151331
+:ctime:    20221228151331
 :END:
 
 * Code
 :PROPERTIES:
 :ID:       db0e802e-d990-40c0-9c29-6bd067f4f546
+:mtime:    20221228151331
+:ctime:    20221228151331
 :END:
 
 There are a number of options you can apply to code blocks. The ~code_fold: true~ options will hide code blocks in the
