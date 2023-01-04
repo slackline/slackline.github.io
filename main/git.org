@@ -401,6 +401,11 @@ main~ all conflicts have to be dealt with in one go, however with ~git rebase ma
 is merged with your branch in turn and requires any conflicts to be resolved before merging the next commit. This can
 make resolving conflicts a lot easier.
 
+** Trees instead of branches
+
+One of the challenges of working on branches is that whilst its easy to switch between them if you have work in progress
+you either need to ~git commit~ or ~git stash~ (and the ~git stash pop~ on returning to the branch) in order to
+switch. An alternative model to this is to use [[id:ad99d902-5005-481e-95d2-e91ba0dcc859][Git Worktree]].
 
 * Merge Conflicts
 :PROPERTIES:
@@ -608,3 +613,4 @@ It is often important to version control your data too, for more on this see [[i
 ** Alternatives
 
 + [[https://www.monotone.ca/][Monotone]]
++ [[https://forgefed.org/][ForgeFed]]
