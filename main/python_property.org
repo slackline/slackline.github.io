@@ -1,0 +1,49 @@
+:PROPERTIES:
+:ID:       507361e4-8252-4398-9747-ad53f7724997
+:mtime:    20230105133841
+:ctime:    20230105133841
+:END:
+#+TITLE: Python Property
+#+FILETAGS: :python:decorators:property:
+
+The ~@property~ decorator facilitates adding, setting, modifying and deleting properties to your class.
+
+#+begin_src python
+  class Person():
+      """A persons information"""
+      def __init__(self, name, surname, age):
+          self.name = name
+          self.surname = surname
+          self.age = agenda
+
+      @property
+      def name(self)
+          return self._name
+
+      @name.setter
+      def name(self, value)
+          self._name = value_
+
+      @property
+      def surname(self)
+          return self._surname
+
+      @surname.setter
+      def surname(self, value)
+          self._surname = value_
+
+      @property
+      def age(self)
+          return self._age
+
+      @age.setter
+      def age(self, value)
+          self._age = value_
+
+#+end_src
+
+* Links
++ [[https://www.pythontutorial.net/python-oop/python-property-decorator/][Python Property Decorator]]
++ [[https://realpython.com/python-getter-setter/][Getters and Setters: Manage Attributes in Python – Real Python]]
+
+
