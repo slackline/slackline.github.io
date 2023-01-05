@@ -29,15 +29,15 @@ Compare and contrast base R code...
 
 #+NAME: tidyverse-pipes-base-r
 #+CAPTION: Base R code for XXX
-#+BEGIN_SRC R :eval no
+#+BEGIN_EXAMPLE R
   library(tidyverse)
-#+END_SRC
+#+END_EXAMPLE
 
 #+NAME: tidyverse-pipes-tidyverse
 #+CAPTION: Tidyverse R code for XXX
-#BEGIN_SRC R :eval no
+#BEGIN_EXAMPLE R
   library(tidyverse)
-#END_SRC
+#END_EXAMPLE
 
 There are two forms of pipes in R, the original was introduced in [[https://magrittr.tidyverse.org/][Magrittr]] but a native pipe was introduced in base R
 v4.1.0. A couple of posts dissecting and comparing the two can be found at [[https://michaelbarrowman.co.uk/post/the-new-base-pipe/][The New Base Pipe]] which is a good exposition
@@ -68,10 +68,10 @@ Really useful place for learning features is [[https://ggplot2tor.com/][ggplot2t
 
 #+NAME: tidyverse-ggplot2
 #+CAPTION: ggplot2
-#+BEGIN_SRC R :eval no
+#+BEGIN_EXAMPLE R
   library(tidyverse)
   library(ggplot2)
-#+END_SRC
+#+END_EXAMPLE
 
 ** forcats
 :PROPERTIES:
@@ -82,9 +82,9 @@ Really useful place for learning features is [[https://ggplot2tor.com/][ggplot2t
 
 #+NAME: tidyverse-forcats
 #+CAPTION: forcats
-#+BEGIN_SRC R :eval no
+#+BEGIN_EXAMPLE R
   library(forcats)
-#+END_SRC
+#+END_EXAMPLE
 
 ** dplyr
 :PROPERTIES:
@@ -93,9 +93,9 @@ Really useful place for learning features is [[https://ggplot2tor.com/][ggplot2t
 
 #+NAME: tidyverse-dplyr
 #+CAPTION: dplyr
-#+BEGIN_SRC R :eval no
+#+BEGIN_EXAMPLE R
   library(dplyr)
-#+END_SRC
+#+END_EXAMPLE
 
 *** Summarising data
 :PROPERTIES:
@@ -109,7 +109,7 @@ of). But ~dplyr::summarise()~ can be leveraged to do this.
 
 #+NAME: tidyverse-dplyr-summarise-single
 #+CAPTION: Summarising a single variable (~distance~) by month.
-#+begin_src R :eval no
+#+begin_src R
   summary_df <- df |>
     dplyr::select(distance) |>  # Exclude the text_description variable from the summary
     dplyr::groupby(month) |>
@@ -127,7 +127,7 @@ If you have lots of variables then you can summarise all of them by leveraging t
 
 #+NAME: tidyverse-dplyr-summarise-single
 #+CAPTION: Summarising a multiple variables (~distance~, ~pace~ and ~time~, excluding ~text_description~).
-#+begin_src R :eval no
+#+begin_src R
 summary_df <- df |>
     dplyr::select(-text_description) |>  # Exclude the text_description variable from the summary
     dplyr::groupby(month) |>
@@ -154,9 +154,9 @@ summary_df <- df |>
 
 #+NAME: tidyverse-tibble
 #+CAPTION: tibble
-#+BEGIN_SRC R :eval no
+#+BEGIN_EXAMPLE R
   library(tidyverse)
-#+END_SRC
+#+END_EXAMPLE
 
 ** stringr
 :PROPERTIES:
@@ -170,20 +170,20 @@ summary_df <- df |>
 
 #+NAME: tidyverse-stringr-basic
 #+CAPTION: Basic stringr usage.
-#+BEGIN_SRC R :eval no
+#+BEGIN_EXAMPLE R
   library(stringr)
-#+END_SRC
+#+END_EXAMPLE
 
 If you are using ~stringr~ functions as part of a [[id:78504ff1-a3cd-4f64-a515-ffa2ab6ac36c][dplyr]] pipeline then typically this will be done within a call to
 ~mutate()~.
 
 #+NAME: tidyverse-stringr-pipeline
 #+CAPTION: Using stringr as part of a dplyr pipeline.
-#+BEGIN_SRC R :eval no
+#+BEGIN_EXAMPLE R
 df  |>
     mutate(length_of_string = str_length(longer_string),
            smaller_string = str_sub(longer_string, 1, 3))
-#+END_SRC
+#+END_EXAMPLE
 
 
 ** lubridate
@@ -197,9 +197,9 @@ df  |>
 
 #+NAME: tidyverse-lubridate
 #+CAPTION: lubridate
-#+BEGIN_SRC R :eval no
+#+BEGIN_EXAMPLE R
   library(lubridate)
-#+END_SRC
+#+END_EXAMPLE
 
 ** clock
 :PROPERTIES:
@@ -210,9 +210,9 @@ df  |>
 
 #+NAME: tidyverse-clock
 #+CAPTION: clock
-#+BEGIN_SRC R :eval no
+#+BEGIN_EXAMPLE R
   library(clock)
-#+END_SRC
+#+END_EXAMPLE
 
 
 ** tidyr
@@ -222,9 +222,9 @@ df  |>
 
 #+NAME: tidyverse-tidyr
 #+CAPTION: tidyr
-#+BEGIN_SRC R :eval no
+#+BEGIN_EXAMPLE R
       library(tidyr)
-#+END_SRC
+#+END_EXAMPLE
 
 ** tidytable
    :PROPERTIES:
@@ -236,6 +236,6 @@ df  |>
 Tidytable provides ~tidyverse~ like syntax built on top of the fast ~data.table package~
 #+NAME: tidyverse-tidyr
 #+CAPTION: tidytable
-#+BEGIN_SRC R :eval no
+#+BEGIN_EXAMPLE R
       library(tidyr)
-#+END_SRC
+#+END_EXAMPLE

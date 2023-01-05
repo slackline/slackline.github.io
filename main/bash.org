@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9c6257dc-cbef-4291-8369-b3dc6c173cf2
-:mtime:    20230103103313 20221231194258 20230103103312
+:mtime:    20230105145245 20230103103313 20221231194258 20230103103312
 :ctime:    20221231194258
 :END:
 #+TITLE: Bash
@@ -73,27 +73,27 @@ The key points are...
 
 1. All FLAC files within the specified directory are located using ~find~.
 
-#+begin_example sh
+#+begin_src sh
 FILES=$(find "${INPUT_DIR}" -type f -name "*.flac")
-#+end_example
+#+end_src
 
 2. A function ~_convert~ is defined and exported that takes a single argument (in this case a FLAC file path) and
    converts it to MP£ using ~ffmpeg~
 
-#+begin_example sh
+#+begin_src sh
 _convert()
 {
     echo "Converting file ${1}"
     ffmpeg -hide_banner -loglevel panic -i "${1}" -ab "${2}" -map_metadata 0 -id3v2_version 3 "${1}".mp3
 }
 export -f _convert
-#+end_example
+#+end_src
 
 3. The list of files is then pipped into the ~parallel~ command that is called with the ~_convert~ function.
 
-#+begin_example sh
+#+begin_src sh
 echo "${FILES}" | parallel -q -j ${JOBS} _convert {} $BITRATE
-#+end_example
+#+end_src
 
 * Links
 

@@ -58,7 +58,7 @@ Each repository is configured via the file ~./.git/config~. Sometimes though you
 separate directories (e.g. ~~/work/~ and ~~/personal~). Define a separate ~~/work/.gitconfig-work~ and
 ~~/personal/.gitconfig-personal~  such as...
 
-#+begin_example
+#+begin_src
 [user]
 email = your.personal@email.com
 name = Your Name
@@ -68,9 +68,9 @@ user = "personal_github_username"
 
 [core]
 sshCommand = "ssh -i ~/.ssh/<personal_ssh_key>"
-#+end_example
+#+end_src
 
-#+begin_example
+#+begin_src
 [user]
 email = your.work@email.com
 name = Your Name
@@ -80,17 +80,17 @@ user = "work_github_username"
 
 [core]
 sshCommand = "ssh -i ~/.ssh/<work_ssh_key>"
-#+end_example
+#+end_src
 
 In your global ~~/.gitconfig~ you then set the following.
 
-#+begin_example
+#+begin_src
 [includeIf “gitdir:~/personal/”] # include for all .git projects under personnal/
 path = ~/personal/.gitconfig-personal
 
 [includeIf “gitdir:~/work/”]
 path = ~/work/.gitconfig-work
-#+end_example
+#+end_src
 
 I've written more on using per-repository SSH keys at [[https://ns-rse.github.io/posts/git-ssh/][Git: Custom SSH credentials for git repositories]].
 ** .gitignore
@@ -148,9 +148,9 @@ use the later you will have had to add your SSH credentials to your user account
 
 #+CAPTION: Clonging a Git repository
 #+NAME: git-clone
-#+begin_example sh
+#+begin_src sh
   git clone
-#+end_example
+#+end_src
 
 *** Locally
 
@@ -159,24 +159,24 @@ It is straight-forward to initialise a directory to be under git version control
 
 #+CAPTION: Initialising a local repository to bring it under Git version contorl.
 #+NAME: git-local-init
-#+begin_example sh
+#+begin_src sh
   git init
-#+end_example
+#+end_src
 
 If you then want to bring this under version control for an ~origin~ you create at a Forge you can do so with...
 
-#+begin_example sh
+#+begin_src sh
 git remote add origin git@work.github.com:work/new-project.git
 git push -u origin master
-#+end_example
+#+end_src
 
 ** Adding Files
 
 #+CAPTION: Adding files within a git repository
 #+NAME: git-add
-#+begin_example sh
+#+begin_src sh
   git add file1.py tests/file2.py
-#+end_example
+#+end_src
 
 ** Ignoring Files
 
@@ -188,7 +188,7 @@ skeleton/example files for different languages including [[https://github.com/gi
 and all R Data objects and also Emacs temporary files ~*~~. There is also [[https://www.gitignore.io/][gitignore.io]] which generates configs
 automatically.
 
-#+begin_example sh
+#+begin_src sh
 # History files
 .Rhistory
 .Rapp.history
@@ -211,38 +211,38 @@ vignettes/*.pdf
 
 # OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
 .httr-oauth
-#+end_example
+#+end_src
 
 ** Moving Files
 You might rename a file and want delete the original, how to do this in Git? The solution is to ~mv~ your file just as
 you would for a normal.
 file.
 
-#+begin_example sh
+#+begin_src sh
 git mv file1.txt file2.txt
 git commit -m "Renaming file1.txt > file2.txt"
 git push
-#+end_example
+#+end_src
 
 ** Deleting Files
 To remove a file complete from a repository *and* delete it locally then use ~rm~.
 
-#+begin_example sh
+#+begin_src sh
 git rm file1.txt
 git commit -m "remove file1.txt"
 git push -u origin master
-#+end_example
+#+end_src
 
 ** Removing Files
 Sometimes you will want to remove a file from a Git repository but not delete it, to do this use the ~rm --cached~
 option.
 
-#+begin_example sh
+#+begin_src sh
 # Remove a file
 git rm --cached file.txt
 # Remove a directory
 git rm --cached -r directory
-#+end_example
+#+end_src
 
 ** Making a commit
 
@@ -251,9 +251,9 @@ add additional information to commits but the title should be short /and/ inform
 
 #+CAPTION: Git commit with a message
 #+NAME: git-commit
-#+begin_example sh
+#+begin_src sh
   git commit -m "Adding first files to the repository"
-#+end_example
+#+end_src
 
 ** Pushing and Pulling
 
@@ -282,11 +282,11 @@ reset]].
 
 #+CAPTION:
 #+NAME:
-#+begin_example sh
+#+begin_src sh
 git fetch origin master
 git reset --hard FETCH_HEAD
 git clean -df
-#+end_example
+#+end_src
 
 * Branches
 The beauty of Git is that it allows multiple people to work on the same software project without interfering with each
@@ -300,19 +300,19 @@ switch to it in one step using...
 
 #+CAPTION:
 #+NAME:
-#+begin_example sh
+#+begin_src sh
 git checkout -b new_branch
-#+end_example
+#+end_src
 
 You can see what branches there are now locally and which you are currently on using...
 
 #+CAPTION:
 #+NAME:
-#+begin_example sh
+#+begin_src sh
 git branch --list
  * new_branch
   master
-#+end_example
+#+end_src
 
 If you create a branch locally it will not exist on the remote ~origin~. How does the remote repository know/become
 aware of this new branch? If you try to push a ~local~ branch that doesn't exist on ~orogin~ then ~git~ will helpfully
@@ -320,18 +320,18 @@ tell you how to push from your ~local~ branch to ~origin~ and create the branch 
 
 #+CAPTION:
 #+NAME:
-#+begin_example sh
+#+begin_src sh
   git push --set-upstream origin new_branch
-#+end_example
+#+end_src
 
  You can push and update all branches on the remote ~origin~ with...
 
 
 #+CAPTION:
 #+NAME:
-#+begin_example sh
+#+begin_src sh
 git push --all -u
-#+end_example
+#+end_src
 
 ** Branching from a specified branch
 Sometimes you may be working on a problem with others simultaneously and wish to develop you work together /before/
@@ -340,39 +340,39 @@ changes you and your colleague make are consistent and work before you merge tha
 
 #+CAPTION:
 #+NAME:
-#+begin_example sh
+#+begin_src sh
 git branch --list
  development
  master
-#+end_example
+#+end_src
 
 I want branch from ~development~ rather than ~master~ and so you...
 
 #+CAPTION:
 #+NAME:
-#+begin_example sh
+#+begin_src sh
 git checkout -b my_new_branch development
-#+end_example
+#+end_src
 
 ** Move Most Recent Commit to a New Branch
 From [[https://stackoverflow.com/a/1628584/1444043][here]]...
 
 #+CAPTION: Move most recent commit from existing branch to a new branch.
 #+NAME:
-#+begin_example sh
+#+begin_src sh
 git branch a_new_branch     # This creates a new branch from the existing.
 git reset --hard ad1290ai   # Remove the last commit from the current branch
 git checkout a_new_branch   # Moves to the new branch which includes the last commit
-#+end_example
+#+end_src
 
 ** Tidying up Merged Branches
 
 Lots of articles out there on [[https://railsware.com/blog/git-housekeeping-tutorial-clean-up-outdated-branches-in-local-and-remote-repositories/][Git housekeeping]] one simple thing to do is use...
 
 #+CAPTION: Prune branches that have been merged on fetching.
-#+begin_example sh
+#+begin_src sh
 git fetch -p
-#+end_example
+#+end_src
 
 ...which will prune branches that have been merged on fetching.
 
@@ -382,18 +382,18 @@ As you work on your feature branch development will likely be on-going in other 
 when complete. To avoid headaches when you commit to submit a Pull Request for your completed feature you should
 regularly merge main into your branch.
 
-#+begin_example sh
+#+begin_src sh
   git pull origin main        # Pulls the latest changes from origin/main
   git merge main --squash     # Merge the changes into your feature branch and squash commits
-#+end_example
+#+end_src
 
 This may result in merge conflicts that you'll have to resolve, as you are likely to continue working on your branch it
 is worthwhile enabling the [[https://git-scm.com/docs/git-rerere][Reuse Recorded Resolution (~rerere~)]] option so that you do not have to resolve such conflicts
 in the future (from [[https://samwize.com/2022/12/15/tips-to-resolve-merge-conflicts-for-long-lived-branches/][here]]).
 
-#+begin_example sh
+#+begin_src sh
   git config --global rerere.enabled true
-#+end_example
+#+end_src
 
 However, there is another option to merging  ~main~ onto your branch that may be preferable and that is [[id:57ba7f41-cf41-493c-bbf4-9d1e05a0602d][Git Rebase]]. The
 main reason for using ~git rebase main~ over ~git merge main~ is the resolution of conflicts. When using ~git merge
@@ -405,7 +405,7 @@ make resolving conflicts a lot easier.
 
 One of the challenges of working on branches is that whilst its easy to switch between them if you have work in progress
 you either need to ~git commit~ or ~git stash~ (and the ~git stash pop~ on returning to the branch) in order to
-switch. An alternative model to this is to use [[id:ad99d902-5005-481e-95d2-e91ba0dcc859][Git Worktree]].
+switch. An alternative model to this is to use [[id:ddcfed69-2ba5-442a-99b4-eaa5c7a9fe40][Git Worktree]].
 
 * Merge Conflicts
 :PROPERTIES:
@@ -436,18 +436,18 @@ informed that doing so would over-write unsaved changes and you should either ~g
 strategy of [[https://www.git-scm.com/docs/git-stash][stashing]] is useful when you are not ready to ~git commit~ as you intend on coming back to your work. Its
 straight-forward to make a stash...
 
-#+begin_example sh
+#+begin_src sh
   git stash
-#+end_example
+#+end_src
 
 You can view the list of stashes, which are specific to the branches on which they were created with either of the
 following (~show~ gives greater detail).
 
-#+begin_example sh
+#+begin_src sh
   git stash list
   stash@{0}: WIP on master: 70de7ca youtube-dl configuration
   stash@{1}: WIP on master: 6a8cdb0 Updating gitconfig/authinfo and install.R
-#+end_example
+#+end_src
 
 ** Applying Stashed Changes
 
@@ -455,11 +455,11 @@ When you return to your Work In Progress on the branch you are working on you li
 stash or another stash in from the history. This is achieved using the ~pop~ directive. Without any arguments it applies
 the last stash, but its possible to specify the stash you wish to restore.
 
-#+begin_example sh
+#+begin_src sh
   git stash pop
   git stash pop 6a8cdb0
   git stash pop stash@{1}
-#+end_example
+#+end_src
 
 ** Discarding Stashes
 :PROPERTIES:
@@ -470,11 +470,11 @@ the last stash, but its possible to specify the stash you wish to restore.
 Sometimes you may not want to keep your stashes, you can discard the most recent or a specific stash with ~drop
 [<stash>]~ or you can clear all stashes with ~clear~
 
-#+begin_example sh
+#+begin_src sh
   git stash drop
   git stash drop stash@{1}
   git stash clear
-#+end_example
+#+end_src
 
 * Hooks
 :PROPERTIES:
@@ -506,16 +506,16 @@ There are many options for viewing and formatting the log history.
 
 A simple way to get the list of contributors is to
 
-#+begin_example sh
+#+begin_src sh
   git shortlog -s -n -e
-#+end_example
+#+end_src
 
 It can also be used to summarise contributions by combining with come command [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][command line utilities]]. The following
 formats commits by date (~YYYY-MM~), ~sorts~ them and then counts the number of ~uniq~ observations (from [[https://github.blog/2022-12-12-highlights-from-git-2-39/][here]]).
 
-#+begin_example sh
+#+begin_src sh
   $ git log v2.38.0.. --date='format:%Y-%m' --format='%cd' | sort | uniq -c
-#+end_example
+#+end_src
 
 *** Aliases
 

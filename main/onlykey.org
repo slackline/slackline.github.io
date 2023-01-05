@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a54eeb0c-ffd1-4002-8a15-7c1f0c0a6a9b
-:mtime:    20230103103312 20221229210127
+:mtime:    20230105145222 20230103103312 20221229210127
 :ctime:    20221229210127
 :END:
 #+TITLE: OnlyKey Duo
@@ -14,14 +14,14 @@ I bought several [[https://onlykey.io/collections/all/products/onlykey-duo-dual-
 I use Gentoo, no ebuild is available and I couldn't suss out the sourcecode. Instead I downloaded the Debian package
 (see [[https://docs.onlykey.io/duousersguide.html#initial-setup][here]]) and converted to ~.tar.xz~ with ~deb2targz~
 
-#+begin_example sh
+#+begin_src sh
   emerge -av deb2targz
   deb2targz OnlyKey_5.3.6_amd64.deb
   tar xvf OnlyKey_5.3.6_amd64.xz
   cp etc/udev/rules.d/49-onlykey.rules /etc/udev/rules.d/.
   cp -r opt/OnlyKey /opt/.
   cp usr/share/applications/OnlyKey.desktop /usr/share/applications/.
-#+end_example
+#+end_src
 
 I then had /Other > OnlyKey App/ present under my Xfce4 menu. On starting your asked to "/Please connect your OnlyKey/".
 

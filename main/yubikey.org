@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       95d35596-cbf9-408a-b296-d3c79019cfd1
-:mtime:    20230103103311 20221229205432
+:mtime:    20230105145212 20230103103311 20221229205432
 :ctime:    20221229205432
 :END:
 #+TITLE: Yubikey
@@ -13,25 +13,25 @@
 
 The [[https://wiki.archlinux.org/index.php/YubiKey][YubiKey - ArchWiki]] is useful.
 
-#+begin_example sh
+#+begin_src sh
   pacman -Syu yubikey-manager yubico-pam pam-u2f yubioath-desktop libfido2
   systemctl enable --now pcscd.service
-#+end_example
+#+end_src
 
 ** Gentoo
 
 The necessary packages are...
 
-#+begin_example sh
+#+begin_src sh
   emerge -avt yubikey-manager pam_yubico pcsc-lite
-#+end_example
+#+end_src
 
 You then need to enable ~pcscd~ (see [[https://wiki.gentoo.org/wiki/PCSC-Lite][PCSC-Lite - Gentoo Wiki]])
 
-#+begin_example sh
+#+begin_src sh
   rc-update add pcscd default
   rc-service pcscd start
-#+end_example
+#+end_src
 
 * Configuration
 
@@ -47,7 +47,7 @@ Yubico and recommend you read and follow these yourself.
        │ -3-4-Support][1]] [[https://developers.yubico.com/PGP/YubiKey_5.2.3_Enhancements_to_OpenPGP_3.4.html][2]]  |
 | > 5.2.6 | ~E~, ~S~, ~A~ | ~E~, ~S~, ~A~ | ~E~, ~S~, ~A~ | [[https://www.reddit.com/r/yubikey/comments/i2c36b/full_ed25519_support/][2]]    |
 
-#+begin_example sh
+#+begin_src sh
 Device type: YubiKey 5 NFC
 Serial number: 1234567
 Firmware version: 5.2.7
@@ -62,7 +62,7 @@ OpenPGP     Enabled Enabled
 PIV         Enabled Enabled
 OATH        Enabled Enabled
 FIDO2       Enabled Enabled
-#+end_example
+#+end_src
 
 First thing was to change the PIN (~123456~) and PUK and Admin PIN (~12345678~) on the device (see [[https://developers.yubico.com/PIV/Introduction/Admin_access.html][here]] for
 defaults). This is described [[https://developers.yubico.com/PIV/Guides/Device_setup.html][here]] but see ~ykman piv --help~ for more information.
@@ -92,7 +92,7 @@ It is important to note that the GPG PIN and Admin PIN for managing your Yubikey
 
 The defaults are the same as for the YubiKey PIN is =123456= and Admin PIN is =12345678=
 
-#+begin_example sh
+#+begin_src sh
 gpg --card-edit
 
 gpg/card> admin
@@ -135,12 +135,12 @@ PIN changed.
 Q - quit
 
 Your selection? Q
-#+end_example
+#+end_src
 
 You have now changed the GPG passwords for the YubiKey card.
 
 ** Add Info
-#+begin_example sh
+#+begin_src sh
 gpg --card-edit
 
 gpg/card> admin
@@ -180,7 +180,7 @@ Signature key ....: [none]
 Encryption key....: [none]
 Authentication key: [none]
 General key info..: [none]
-#+end_example
+#+end_src
 
 ** Transferring GPG Keys to Cards
 
@@ -188,12 +188,12 @@ I wasn't quite ready to jump in with both feet and move my [[id:ce08bd82-0146-49
 the card destroys the local copy. I ~rsync~d mine to another computer and made a back up of the private key to my
 password manager.
 
-#+begin_example sh
+#+begin_src sh
 # Show Secret part of key
 gpg --export-secret-key --armor your@email.address
 # Create and paste in the secret key to pass password manager
 pass edit Personal/gpg/your@email.address
-#+end_example
+#+end_src
 
 Then fire up ~gpg --edit-keys your@email.address.com~ and follow the instructions [[https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP][here]] to transfer primary and subkeys
 across to the Yubikey.
@@ -205,9 +205,9 @@ across to the Yubikey.
 If you mess up entering the PIN or Admin PIN three or more times you'll get locked out, in which case you will need to
 reset the PIN, this can be done using ~ykman~. It can also be done using gpg, see [[https://support.yubico.com/hc/en-us/articles/360013761339-Resetting-the-OpenPGP-Applet-on-the-YubiKey][article]].
 
-#+begin_example sh
+#+begin_src sh
 ykman openpgp reset
-#+end_example
+#+end_src
 
 ** Troubleshooting
 
@@ -219,7 +219,7 @@ on a laptop).
 
 I found the Yubikey was recognised as a USB device...
 
-#+begin_example sh
+#+begin_src sh
 dmesg | tail -n8
 [ 1610.158557] usb 1-6.4.2: new full-speed USB device number 98 using xhci_hcd
 [ 1610.240347] usb 1-6.4.2: New USB device found, idVendor=1050, idProduct=0407, bcdDevice= 5.27
@@ -400,19 +400,19 @@ put39
         bInterval              32
 Device Status:     0x0000
   (Bus Powered)
-#+end_example
+#+end_src
 
 And whilst ~ykman~ could ~list~ the key it couldn't gain access to get any information about it...
 
-#+begin_example sh
+#+begin_src sh
   (Bus Powered)
   ❱ ykman list
 YubiKey 5 NFC (5.2.7) [OTP+FIDO+CCID] Serial: 13679817
-#+end_example
+#+end_src
 
 But if I try to get info about it..
 
-#+begin_example sh
+#+begin_src sh
 ykman info
 Traceback (most recent call last):
 File "/usr/lib/python3.9/site-packages/ykman/cli/__main__.py", line 104, in retrying_connect
@@ -469,19 +469,19 @@ super(LinuxCtapHidConnection, self).write_packet(b"\0" + packet)
 File "/usr/lib/python3.9/site-packages/fido2/hid/base.py", line 73, in write_packet
 if os.write(self.handle, packet) != len(packet):
 OSError: [Errno 71] Protocol error
-#+end_example
+#+end_src
 
 There are error messages in dmesg with error code 71...
 
-#+begin_example sh
+#+begin_src sh
 dmesg | grep '71$'
 [ 1885.607659] usb 1-3.1.2: device descriptor read/64, error -71
 [ 1891.435568] usb 1-3.1.2: device not accepting address 121, error -71
-#+end_example
+#+end_src
 
 ...and both ~gpg --card-status~ and ~gpg --card-edit~ failed to detect the card...
 
-#+begin_example sh
+#+begin_src sh
 ❱ gpg --card-status
 gpg: selecting card failed: No such device
 gpg: OpenPGP card not available: No such device
@@ -489,12 +489,12 @@ gpg: OpenPGP card not available: No such device
 
 gpg: selecting card failed: No such device
 gpg: OpenPGP card not available: No such device
-#+end_example
+#+end_src
 
 A bit of searching led to some threads on Reddit and the suggestion [[https://www.reddit.com/r/yubikey/comments/mzvlt0/comment/gwwdo78/][here]] (see also [[https://www.reddit.com/r/yubikey/comments/n4n96r/fix_gpg_to_recognize_your_yubikey_again_after/][here]]) appeared to do the trick as
 adding the following to ~~/.gnupg/scdaemon.conf~ got the card working again...
 
-#+begin_example sh
+#+begin_src sh
 ❱ gpg --card-status
 Reader ...........: Yubico YubiKey OTP FIDO CCID 00 00
 Application ID ...: ################################
@@ -528,7 +528,7 @@ ssb>  cv25519/95437AC864ECE7F9  created: 2020-11-20  expires: ####-##-##
 ssb>  ed25519/1B704D7D93B8DC1C  created: 2020-12-02  expires: ####-##-##
                                 card-no: 0006 ########
 ssb   ed25519/ADA9F17409C4D726  created: 2020-12-13  expires: ####-##-##
-#+end_example
+#+end_src
 
 What the problem is or how it occurred I do not know, I did email Yubico support but as of writing am yet to hear back from them.
 

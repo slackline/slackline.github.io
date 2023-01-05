@@ -1,15 +1,14 @@
-Worktree
 :PROPERTIES:
-:ID:       ad99d902-5005-481e-95d2-e91ba0dcc859
+:ID:       ddcfed69-2ba5-442a-99b4-eaa5c7a9fe40
 :mtime:    20230103103314 20230102213516
 :ctime:    20230102213516
 :END:
 #+TITLE: Git Worktree
 #+DATE: <2023-01-03 Tue 15:07>
-#+FILETAGS: git:worktree:branching:
+#+FILETAGS: :git:worktree:branching:
 
-Worktrees provide a method of working on multiple branches simultaneously and avoid the need to use ~git stash~ before
-switching.
+Worktrees are a [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] feature that provide a method of working on multiple branches simultaneously and avoid the need to
+use ~git stash~ before switching.
 
 * Clone a bare repository
 
@@ -17,7 +16,7 @@ If you don't explicitly include a ~repository_name~ when cloning with the ~--bar
 to which the clone is made carries the ~.git~ suffix. There isn't much in this repository, its pretty much the contents
 of the ~.git~ directory with the configuration, ~objects~ and so forth
 
-#+begin_example sh
+#+begin_src sh
   git clone --bare <repository_url> <repository_name>
   cd <repository_name>
   ls -lha
@@ -31,14 +30,14 @@ of the ~.git~ directory with the configuration, ~objects~ and so forth
   drwxr-xr-x neil neil 4.0 KB Tue Jan  3 14:44:27 2023  objects
   .rw-r--r-- neil neil 2.9 KB Tue Jan  3 14:47:20 2023  packed-refs
   drwxr-xr-x neil neil 4.0 KB Tue Jan  3 14:44:27 2023  refs
-#+end_example
+#+end_src
 
 * Create the ~main~ worktree
 
 First thing is to create a worktree for the ~main~ branch, once created you will see there is now a ~main~ directory
 present...
 
-#+begin_example sh
+#+begin_src sh
   git worktree add main
   ls -lha
    l
@@ -54,7 +53,7 @@ present...
    .rw-r--r-- neil neil 2.9 KB Tue Jan  3 14:47:20 2023  packed-refs
    drwxr-xr-x neil neil 4.0 KB Tue Jan  3 14:44:27 2023  refs
    drwxr-xr-x neil neil 4.0 KB Tue Jan  3 14:55:32 2023  worktrees
-#+end_example
+#+end_src
 
 * Create a new worktree on a new branch
 
@@ -62,23 +61,24 @@ A new worktree with a new branch is created by including the ~-b <branch_name>~ 
 name as the branch. Once you've made changes to your branch and are ready to push them you will want to set the upstream
 branch using the ~--set-upstream~
 
-#+begin_example sh
+#+begin_src sh
   git worktree add -b 208-new-feature 208-new-feature
   cd 208-new-feature
   git add README.md
   git commit -m "Updated the README with contact details"
   git push --set-upstream origin 208-new-feature
-#+end_example
+#+end_src
 
 * Create a Worktree based on remote branches
    
 Sometimes you will want to add a worktree based on a remote branch if for example there is a pull request that you have
-been asked to review.
+been asked to review. You must first ~git fetch origin <remote-branch>:<local-branch>~ to get a ~fetch~ a copy of that
+remote branch. Only then can you make a ~worktree~ based on it.
 
-#+begin_example sh
-  git fetch
-  git worktree add <worktree-name> <branch-name>
-#+end_example
+#+begin_src sh
+  git fetch origin <remote-branch>:<local-branch>
+  git worktree add <worktree-name> <local-branch>
+#+end_src
 
 
 

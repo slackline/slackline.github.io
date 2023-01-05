@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5b5d1562-ecb4-4199-b530-e7993723e112
-:mtime:    20230103175234 20230103103310 20221217185215 20230103103308
+:mtime:    20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
 :ctime:    20221217185215 20230103103308
 :END:
 #+TITLE: Python
@@ -106,16 +106,16 @@ Dictionaries can be pretty printed using the ~json.dumps()~ method.
 * Decorators
 :PROPERTIES:
 :ID:       eb1027f2-0e37-4e60-9c41-d27de3e01243
-:mtime:    20230103103313 20221217185215
+:mtime:    20230105135432 20230103103313 20221217185215
 :ctime:    20221217185215
 :END:
 Decorators are really useful, they save you time and effort by handling a lot of functionality that would take time to
 write yourself. As you might expect there are a lot of decorators out there, for example [[id:3cca0dfd-0c82-4685-b9ed-6314f7c8b78f][Python Pytest]] has a bunch of
 its own which make using certain functionality in writing tests simple.
 
-** @property
++ [[id:507361e4-8252-4398-9747-ad53f7724997][@property]]
++ @staticmethod
 
-The ~@property~ decorator facilitates adding properties to your class (see [[https://www.pythontutorial.net/python-oop/python-property-decorator/][this tutorial]]).
 
 * I/O
 :PROPERTIES:

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       251b3ae4-4a5c-4c44-909a-dcbc0aef4b45
-:mtime:    20230103103309 20221228151331 20230103103309 20230103103308
+:mtime:    20230105145232 20230103103309 20221228151331 20230103103309 20230103103308
 :ctime:    20221228151331 20230103103308
 :END:
 #+TITLE: Quarto
@@ -56,31 +56,33 @@ There are a number of options you can apply to code blocks. The ~code_fold: true
 rendered HTML but with a little arrow to expand them. ~code_tools: true~ will put links to the documentation of
 functions used in a code block. ~code_link: true~
 
-#+begin_example yaml
+#+begin_src yaml
   execute:
     code_fold: true
     code_link: true
     code_tools: true
-#+end_example
+#+end_src
 
 I found these global options didn't work under blogs, although
 * Previewing
 :PROPERTIES:
 :ID:       8e0f1277-6058-4135-8483-20b1ace75161
+:mtime:    20230105145232
+:ctime:    20230105145232
 :END:
 
 You can preview documents easily, from within [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] bind the following.
 
-#+begin_example emacs-lisp
+#+begin_src emacs-lisp
   (use-package quarto-mode
 	     :mode (("\\.Rmd" . poly-quarto-mode))
 	     :bind (("C-c q" . quarto-preview)))
-#+end_example
+#+end_src
 
  You can set [[https://quarto.org/docs/reference/projects/options.html#preview][options for ~preview~ ]] in the YAML header, most usefully is fixing the ~host~ and/or ~port~ so you don't
   get a new browser tab each time you preview.
 
-#+begin_example yaml
+#+begin_src yaml
   ---
   project:
     ...
@@ -90,7 +92,7 @@ You can preview documents easily, from within [[id:754f25a5-3429-4504-8a17-4efea
       browser: true
       watch-inputs: true
       navigate: true
-#+end_example
+#+end_src
 
 * Links
 + [[https://t.co/FDlvjq4qrc][quarto.org]]
