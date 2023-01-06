@@ -1,0 +1,165 @@
+:PROPERTIES:
+:ID:       36a83dd6-7535-43a9-9b68-15dc135c86fd
+:mtime:    20230106185855 20230106174506
+:ctime:    20230106174506
+:END:
+#+TITLE: Emacs Getting Started
+#+FILETAGS: :emacs:config:
+
+[[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] is an amazing piece of software, its almost 50 years old but still going strong. Its more than just a text editor,
+its a fully Integrated Development Environment (IDE) for many languages, a note and calendar organiser courtesy of
+[[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]], an interface to Git via [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] and many, many more things besides.  Because of this it can seem a bit
+bewildering as to where to start and how to get going with Emacs. There are many excellent resources out there and many
+others have already written on this topic before me, this is my attempt to explain how to get started and approach
+learning Emacs.
+
+* Pick One Thing at a Time
+
+There is so much you may want to do with Emacs but trying to do everything to start with will only make things
+confusing. Instead pick one topic or package that you want to start using and get that setup and configured and become
+comfortable using it before doing the next thing.
+
+Some popular configurations to get started using Emacs are.
+
++ IDE configuration
++ TRAMP
++ 
+
+* Start with the Emacs Tutorial
+
+Emacs has a short but wonderfully helpful built-in tutorial that I would recommend everyone getting started works their
+way through first. Access it with ~C-h t~.
+
+** The Help system
+
+The help system is...really helpful, its accessed with a few short key-strokes
+
++ ~C-h f~ help for a function.
++ ~C-h k~ help for a key-binding (you'll be prompted to press the key-binding you want to know about).
++ ~C-h v~ help for a variable.
+  
+* Version control your configuration files
+
+It makes sense to version control your Emacs configuration file, this is easily done using [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] and from within Emacs
+using [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]].
+
+* You don't need to learn Emacs LISP (but a little helps)
+
+Emacs is so flexible because it is extensible and this is achieved because it implements its own dialect of LISP in the
+form of Emacs LISP. Configurations are written in this language and so knowing some basics of how the language is
+structured makes working with your configuration easier. That said you don't need to know everything about the language
+to be able to use it effectively.
+
+Emacs comes with a built-in tutorial to get you going [[https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][An Introduction to Programming in Emacs Lisp]] and this can be
+accessed from within Emacs with ~C-h i m Emacs Lisp Intro~.
+
+
+* Basic Configuration
+
+Here I provide some very simple configuration options to get you started. Emacs will look for configuration files in
+~~/.emacs.d~ or (at least under recent versions) ~~/.config/~. I like to keep things neat and tidy and not have
+too many files in a single location, instead nesting them so I use the later. The following file is a sample
+~~/.config/emacs/init.el~ which will be processed each time you start Emacs, I also include a simple example for
+~quarto-settings.el~ which should be placed under ~~/.config/emacs/settings/~.
+
+The [[https://github.com/jwiegley/use-package][use-package]] package makes installing and using packages simple. Once defined in your configuration if a package
+isn't available on a system it will download and install it automatically. The following configuration sets the priority
+of four popular ELPA (Emacs Lisp Package Archive), with [[https://melpa.org/][MELPA]] being the highest as this is where new features and bug
+fixes appear earliest for many packages. It then sets up ~use-package~ before loading the configuration options defined
+in ~quarto-settings.el~.
+
+#+begin_src emacs-lisp
+  (package-initialize)
+  (require 'package)
+
+  ;; Adding repositories along with priority https://emacs.stackexchange.com/a/2989/10100
+  (setq package-archives
+        '(("GNU ELPA"	. "https://elpa.gnu.org/packages/")
+          ("NonGNU ELPA"  . "https://elpa.nongnu.org/nongnu/")
+          ("MELPA Stable" . "https://stable.melpa.org/packages/")
+          ("MELPA"	. "https://melpa.org/packages/"))
+        package-archive-priorities
+        '(("MELPA" . 10)
+          ("GNU ELPA"	. 5)
+          ("NonGNU ELPA"	. 5)
+          ("MELPA Stable"	. 0)))
+  
+  ;; On some systems we have problems communicating with ELPA (https://emacs.stackexchange.com/a/62210)
+  (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+  
+  ;; Setup use-package
+  (unless (package-installed-p 'use-package)
+    (package-refresh-contents)
+    (package-install 'use-package))
+  (eval-and-compile
+    (setq use-package-always-ensure t
+          use-package-expand-minimally t))
+
+  ;; Load Package Specific Configurations
+  (load "~/.config/emacs/settings/quarto-settings.el")
+#+end_src
+
+#+begin_src emacs-lisp
+  ;; Quarto mode https://github.com/quarto-dev/quarto-emacs
+;; By default associated with .qmd files
+  (use-package quarto-mode
+    :ensure t
+    :defer t
+    :mode (("\\.Rmd" . poly-quarto-mode))
+    :bind (("C-c q" . quarto-preview)))
+#+end_src
+
+* IDE Configuration
+
+For a long time Emacs has had various packages that support writing code in different languages with features such
+syntax highlighting, auto-completion, code navigation and refactoring and more. In the last few years the development
+and popularity of Language Servers mean the paradigm has shifted somewhat. The heavy work of doing all the magic things
+IDEs do has been off-loaded into programmes that run in the background and clients such as Emacs interface with these in
+a consistent manner via the Language Server Protocol.
+
+** Language Server Protocols
+
+In Emacs there are two frameworks for LSP, LSP mode and eglot. With the later being incorporated into base Emacs with
+release 29 the recommendation I'm making is to go with that.
+
+*** Tree Sitter
+
+Whilst Emacs' different programming modes provide syntax highlighting it is not always consistent. This is where the
+Tree Sitter programme comes to the rescue, providing a fast, smooth and consistent experience for syntax
+highlighting. Just as with eglot its included in Emacs 29 and upwards.
+
+* Links
+
+Lots of people have written on this matter before, here are links to others material that you may find useful.
+
+** Sites
+
++ [[https://www.emacswiki.org/][Emacs Wiki]]
++ [[https://sachachua.com/blog/category/emacs-news/][Sacha Chua - Emacs News]] weekly summary of useful articles on all aspects of Emacs (also writes insightful [[https://sachachua.com/blog/][blogs]]).
+  
+*** System Crafters
+
+Excellent video tutorials and accompanying notes on Emacs configuration.
+
++ [[https://systemcrafters.cc/emacs-desktop-environment/][Emacs Desktop Environment]]
+
+**** Videos
++ [[https://www.youtube.com/watch?v=OaF-N-FuGtc&list=PLEoMzSkcN8oNmd98m_6FoaJseUsa6QGm2][Emacs From Scratch]]
++ [[https://www.youtube.com/watch?v=AyhPmypHDEw&list=PLEoMzSkcN8oN3x3XaZQ-AXFKv52LZzjqD][Build a Second Brain in Emacs]]
++ [[https://www.youtube.com/watch?v=E-NAM9U5JYE&list=PLEoMzSkcN8oNvsrtk_iZSb94krGRofFjN][IDE Setup and Configuration]]
++ [[https://www.youtube.com/watch?v=_zfvQkJsYwI&list=PLEoMzSkcN8oMc34dTjyFmTUWbXTKrNfZA][Mastering Git with Magit]]
++ [[https://www.youtube.com/watch?v=wKTKmE1wLyw&list=PLEoMzSkcN8oMHJ6Xil1YdnYtlWd5hHZql][Emacs Tips]]
++ [[https://www.youtube.com/watch?v=UmbVeqphGlc&list=PLEoMzSkcN8oO1n2eRfsg6qDtGY1XlTBjE][Advanced Emacs Package Management]]
+
+  
+** Asking for Help
+
+Invariably you'll get stuck and want to ask questions. There are a couple of useful places to ask for questions.
+
++ [[https://emacs.stackexchange.com][Emacs Stack Exchange]]
++ [[https://www.reddit.com/r/emacs][/r/emacs]]
++ [[https://www.reddit.com/r/orgroam][/r/orgroam]]
+
+** emacs lisp
+
++ [[https://emacs.stackexchange.com/questions/47318/how-can-i-start-learning-emacs-lisp][Emacs Stack Exchange : How can I start learning Emacs Lisp?]]

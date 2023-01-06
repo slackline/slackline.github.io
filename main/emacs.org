@@ -1,11 +1,14 @@
 :PROPERTIES:
 :ID:       754f25a5-3429-4504-8a17-4efea1568eba
-:mtime:    20230103103311 20221229203153
+:mtime:    20230106185900 20230103103311 20221229203153
 :ctime:    20221229203153
 :END:
 #+TITLE: Emacs
 #+DATE: [2022-02-14 Mon 06:59]
 #+FILETAGS: :emacs:literate programming:elisp:lsp:
+
+I'm forever trying to convince people to try out Emacs and figured it would be worthwhile writing a short guide to
+getting started [[id:36a83dd6-7535-43a9-9b68-15dc135c86fd][Emacs Getting Started]].
 
 * Packages
 

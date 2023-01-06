@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       55581960-395e-443c-bd5d-bc00c496b6ae
-:mtime:    20230103103310 20220531111803
+:mtime:    20230106165332 20230103103310 20220531111803
 :ctime:    20220531111803
 :END:
 #+TITLE: Linting
@@ -55,7 +55,7 @@ number of tools available that will lint your Python code for you and most integ
 
   Here is a simple example of some code (download the file from [[file:save_random_numbers.py][here]]).
 
-  #+BEGIN_SRC python :eval no
+  #+BEGIN_SRC python
     import numpy as np
     from pathlib import Path
     from typing import Union
@@ -91,7 +91,7 @@ number of tools available that will lint your Python code for you and most integ
 
    First you need to install ~pylint~, typically in your virtual environment.
 
-   #+BEGIN_SRC bash :eval no
+   #+BEGIN_SRC bash
      pip install pylint
    #+END_SRC
 
@@ -109,14 +109,14 @@ number of tools available that will lint your Python code for you and most integ
    environment you installed pylint under if its not already being used and then type the following to run Pylint
    against your code...
 
-   #+BEGIN_SRC bash :eval no
+   #+BEGIN_SRC bash
      pylint save_random_numbers.py
    #+END_SRC
 
 
    You should see output similar to the following...
 
-   #+BEGIN_SRC bash :eval no
+   #+BEGIN_SRC bash
      (python3_9) ❱ pylint save_random_numbers.py
      ************* Module save_random_numbers
      save_random_numbers.py:1:0: C0114: Missing module docstring (missing-module-docstring)
@@ -145,7 +145,7 @@ number of tools available that will lint your Python code for you and most integ
    documentation is automatically generated from the docstrings in the code. To fix it we can add a short docstring at
    the top.
 
-   #+BEGIN_SRC python :eval no
+   #+BEGIN_SRC python
      """Module for saving randomly generated numbers."""
      import numpy as np
      from pathlib import Path
@@ -156,7 +156,7 @@ number of tools available that will lint your Python code for you and most integ
     This error arises because the [[https://www.pythontutorial.net/python-basics/python-type-hints/][type hint]] uses ~Union~ but it hasn't been imported. It's from the [[https://www.pythontutorial.net/python-basics/python-type-hints/][typing]] module so we
     can import it.
 
-    #+BEGIN_SRC python :eval no
+    #+BEGIN_SRC python
       """Module for saving randomly generated numbers."""
       import numpy as np
       from pathlib import Path
@@ -171,7 +171,7 @@ number of tools available that will lint your Python code for you and most integ
     call the function, however, as Pylint has informed us we haven't actually used it within the ~save_random_number()~
     function. We can correct that by adding it when we instantiate the random number generator.
 
-   #+BEGIN_SRC python :eval no
+   #+BEGIN_SRC python
         rng = np.random.default_rng(seed=seed)
    #+END_SRC
 
@@ -181,7 +181,7 @@ number of tools available that will lint your Python code for you and most integ
     incorrect, because the PEP8 guide recommends that core modules, which both ~csv~ and ~pathlib~ are, should be
     imported before other modules. We can correct this by changing the order.
 
-    #+BEGIN_SRC python :eval no
+    #+BEGIN_SRC python
       """Module for saving randomly generated numbers."""
       import csv
       from pathlib import Path
@@ -192,7 +192,7 @@ number of tools available that will lint your Python code for you and most integ
 
     Once corrected your file should look like this
 
-    #+BEGIN_SRC python :eval no
+    #+BEGIN_SRC python
       """Module for saving randomly generated numbers."""
       import csv
       from pathlib import Path
@@ -225,7 +225,7 @@ number of tools available that will lint your Python code for you and most integ
     ...and you can now run PyLint against it to see if you've improved your score.
 
 
-    #+BEGIN_SRC bash :eval no
+    #+BEGIN_SRC bash
       (python3_9) ❱ pylint save_random_numbers_tidy.py
       ************* Module save_random_numbers_tidy
       save_random_numbers_tidy.py:7:66: E1136: Value 'Union' is unsubscriptable (unsubscriptable-object)
@@ -248,7 +248,7 @@ number of tools available that will lint your Python code for you and most integ
 
     If we add the following line...
 
-    #+BEGIN_SRC python :eval no
+    #+BEGIN_SRC python
       import numpy as np
 
       # pylint: disable=unsubscriptable-object
@@ -258,7 +258,7 @@ number of tools available that will lint your Python code for you and most integ
 
     ...and lint our code again we get a much better score.
 
-    #+BEGIN_SRC bash :eval no
+    #+BEGIN_SRC bash
      (python3_9) ❱ pylint save_random_numbers_tidy.py
 
     -------------------------------------------------------------------
@@ -296,7 +296,7 @@ files. It formats files in place, so be mindful of this if you run it against on
 Install ~black~ in your virtual environment and make a backup of your ~save_random_number.py~ file that you have just
 tidied up with linting.
 
-#+BEGIN_SRC bash :eval no
+#+BEGIN_SRC bash
   pip install black
   cp save_random_numbers.py tidy_save_random_numbers.py
 #+END_SRC
@@ -304,7 +304,7 @@ tidied up with linting.
 To run black against your code pass it the input file, it will re-write it and you can then compare it against the
 backup you just made
 
-#+BEGIN_SRC bash :eval no
+#+BEGIN_SRC bash
   black save_random_numbers.py
   ❱ diff save_random_numbers.py tidy_save_random_numbers.py
   5,8c5
