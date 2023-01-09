@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       754f25a5-3429-4504-8a17-4efea1568eba
-:mtime:    20230106185900 20230103103311 20221229203153
+:mtime:    20230109075443 20230106185900 20230103103311 20221229203153
 :ctime:    20221229203153
 :END:
 #+TITLE: Emacs
@@ -95,6 +95,7 @@ Read more about [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]].
 
 ** Configuration
 + [[https://erickgnavar.github.io/emacs-config/][Emacs config]] by Erick Navarro - a nice neat and clear set of custom configurations.
++ 
 
 ** Research Articles
 + [[https://arxiv.org/abs/2004.02504][[2004.02504] Bringing GNU Emacs to Native Code]]

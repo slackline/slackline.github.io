@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       345cadc2-52a5-4c91-8de1-a45a98aaa5a8
-:mtime:    20230103103309 20221212181558
+:mtime:    20230108140200 20230103103309 20221212181558
 :ctime:    20221212181558
 :END:
 #+TITLE: Python Logging
@@ -104,8 +104,20 @@ In each module I wish to use logging I setup a new logger with the ~LOGGER_NAME~
 
 * loguru
 
-An alternative to this is the package [[https://github.com/Delgan/loguru][loguru]].
+An alternative to this is the package [[https://github.com/Delgan/loguru][loguru]] which aims to massively simplify the process of logging, making it as
+simple as using ~print()~.
+
+* structlog
+
+The aim of [[https://www.structlog.org/en/stable/][structlog]] is to make log files both human /and/ machine readable. Its designed around functions that take as
+input dictionaries and return dictionaries.
 
 * Links
 
+** Software
+
++ [[https://loguru.readthedocs.io/en/stable/index.html][loguru]]
++ [[https://www.structlog.org/en/stable/][structlog]]
+** Articles
 + [[https://realpython.com/python-logging/][Logging in Python – Real Python]]
++ [[https://bitestreams.com/blog/structured_logging/][Structured Logging with Structlog | BiteStreams]]

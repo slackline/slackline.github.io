@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       169b9c5f-df34-46ab-b64f-8ee98946ee69
-:mtime:    20230103103308 20221217184411
+:mtime:    20230107085901 20230103103308 20221217184411
 :ctime:    20221217184411
 :END:
 #+TITLE: Orgmode
@@ -10,11 +10,24 @@
 [[https://orgmode.org][OrgMode]] is an incredibly powerful and well developed system for managing all manner of tasks and activities in plain
 text files. There are diaries and agendas, literate programming, note organisation, and lots more.
 
+
 * Topics
 + [[id:fc9974d4-2a26-4bf7-9360-c828bfaeed1d][Agenda]]
 + [[id:6e75f9df-df3d-4402-b5ad-ed98d0834e08][Org Babel]]
 + [[id:136364e7-1a6d-4b28-b284-0e415b860699][Org-roam]]
 
+* Customisation
+
+Setting up org-mode it's wise to set ~org-directory~
+
+** Tags
+
+Globally these are saved in ~org-tag-alist~ but you can add tags to a specific file with...
+
+#+begin_src
+  #+TAGS: work(w) home(h)
+  #+end_src
+  
 * Editing Files
 
 ** Structure Templates
@@ -44,7 +57,8 @@ last number.
 
 * Links
 + [[https://orgmode.org][OrgMode]]
-
++ [[https://orgmode.org/worg/org-configs/org-customization-guide.html][Org Customisation Guide]]
+  
 ** Zettelkasten
 + [[https://zettelkasten.de/introduction/][Introduction to the Zettelkasten Method • Zettelkasten Method]]
 

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       36a83dd6-7535-43a9-9b68-15dc135c86fd
-:mtime:    20230106185855 20230106174506
+:mtime:    20230108125643 20230107171311 20230107093916 20230106214209 20230106185855 20230106174506
 :ctime:    20230106174506
 :END:
 #+TITLE: Emacs Getting Started
@@ -21,37 +21,25 @@ comfortable using it before doing the next thing.
 
 Some popular configurations to get started using Emacs are.
 
-+ IDE configuration
-+ TRAMP
-+ 
++ IDE configuration for code development.
++ TRAMP.
++ Access [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GPG]] encrypted passwords
++ Control [[https://www.musicpd.org][Music Player Daemon]].
++ Takes notes in Orgmode.
++ Manage your Agenda in Orgmode.
++ Write literate documents in Orgmode or [[https://www.quarto.org/][Quarto]].
 
 * Start with the Emacs Tutorial
 
 Emacs has a short but wonderfully helpful built-in tutorial that I would recommend everyone getting started works their
 way through first. Access it with ~C-h t~.
 
-** The Help system
-
-The help system is...really helpful, its accessed with a few short key-strokes
-
-+ ~C-h f~ help for a function.
-+ ~C-h k~ help for a key-binding (you'll be prompted to press the key-binding you want to know about).
-+ ~C-h v~ help for a variable.
   
 * Version control your configuration files
 
 It makes sense to version control your Emacs configuration file, this is easily done using [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] and from within Emacs
 using [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]].
 
-* You don't need to learn Emacs LISP (but a little helps)
-
-Emacs is so flexible because it is extensible and this is achieved because it implements its own dialect of LISP in the
-form of Emacs LISP. Configurations are written in this language and so knowing some basics of how the language is
-structured makes working with your configuration easier. That said you don't need to know everything about the language
-to be able to use it effectively.
-
-Emacs comes with a built-in tutorial to get you going [[https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][An Introduction to Programming in Emacs Lisp]] and this can be
-accessed from within Emacs with ~C-h i m Emacs Lisp Intro~.
 
 
 * Basic Configuration
@@ -61,12 +49,6 @@ Here I provide some very simple configuration options to get you started. Emacs 
 too many files in a single location, instead nesting them so I use the later. The following file is a sample
 ~~/.config/emacs/init.el~ which will be processed each time you start Emacs, I also include a simple example for
 ~quarto-settings.el~ which should be placed under ~~/.config/emacs/settings/~.
-
-The [[https://github.com/jwiegley/use-package][use-package]] package makes installing and using packages simple. Once defined in your configuration if a package
-isn't available on a system it will download and install it automatically. The following configuration sets the priority
-of four popular ELPA (Emacs Lisp Package Archive), with [[https://melpa.org/][MELPA]] being the highest as this is where new features and bug
-fixes appear earliest for many packages. It then sets up ~use-package~ before loading the configuration options defined
-in ~quarto-settings.el~.
 
 #+begin_src emacs-lisp
   (package-initialize)
@@ -95,19 +77,85 @@ in ~quarto-settings.el~.
     (setq use-package-always-ensure t
           use-package-expand-minimally t))
 
+  ;; which-key : https://github.com/justbur/emacs-which-key
+  (use-package which-key
+	  :config (which-key-mode))
+
+  ;; helpful : https://github.com/Wilfred/helpful
+  (use-package helpful
+	  :config
+    ;; Note that the built-in `describe-function' includes both functions
+	  ;; and macros. `helpful-function' is functions only, so we provide
+	  ;; `helpful-callable' as a drop-in replacement.
+	  (global-set-key (kbd "C-h f") #'helpful-callable)
+	  (global-set-key (kbd "C-h v") #'helpful-variable)
+	  (global-set-key (kbd "C-h k") #'helpful-key)
+	  ;; Lookup the current symbol at point. C-c C-d is a common keybinding
+	  ;; for this in lisp modes.
+	  (global-set-key (kbd "C-c C-d") #'helpful-at-point)
+    ;; Look up *F*unctions (excludes macros).
+	  ;; By default, C-h F is bound to `Info-goto-emacs-command-node'. Helpful
+	  ;; already links to the manual, if a function is referenced there.
+	  (global-set-key (kbd "C-h F") #'helpful-function)
+	  ;; Look up *C*ommands.
+	  ;; By default, C-h C is bound to describe `describe-coding-system'. I
+	  ;; don't find this very useful, but it's frequently useful to only
+	  ;; look at interactive functions.
+	  (global-set-key (kbd "C-h C") #'helpful-command))
+
+  ;; modus-themes : https://github.com/protesilaos/modus-themes
+  (use-package modus-themes
+	     :ensure t  ; omit this to use the built-in themes
+	     :init
+	     ;; Add all your customizations prior to loading the themes
+	     (setq modus-themes-italic-constructs t
+               modus-themes-bold-constructs t
+               modus-themes-org-blocks '(tinted-background))
+	     :config
+	     ;; Load the theme of your choice:
+             (modus-themes-select 'modus-vivendi) ;; OR modus-operandi
+             :bind
+             ("<f12>" . modus-themes-toggle))
+
   ;; Load Package Specific Configurations
   (load "~/.config/emacs/settings/quarto-settings.el")
 #+end_src
 
+This configuration sets up ELPA (Emacs Lisp Package Archive) repositories with different priorities, with [[https://melpa.org/][MELPA]] being
+the highest as this is where new features and bug fixes appear earliest for many packages. It then loads the [[https://github.com/jwiegley/use-package][use-package]]
+package which makes installing and using other packages simpler and more consistent. When you use it to load and
+configure a package if it isn't already available on your system it will be downloaded and install it automatically.
+
+The ~which-key~ and ~helpful~ packages are then loaded and configured, the later with some specific global keybindings
+that work in any mode, before the Modus Operandi theme is loaded. Finally the configuration file ~quarto-settings.el~,
+shown below, is loaded.
+
++ [[https://github.com/Wilfred/helpful][helpful]] - with customisations that make it easy to interact with the built-in help system.
++ [[https://github.com/justbur/emacs-which-key][which-key]] - enables a buffer to appear when you start using key-bindings that show the next options.
++ [[https://github.com/protesilaos/modus-themes][modus-themes]] - excellent, high-contrast themes to make things easier on the eye.
+
+
 #+begin_src emacs-lisp
   ;; Quarto mode https://github.com/quarto-dev/quarto-emacs
-;; By default associated with .qmd files
+  ;; By default associated with .qmd files
   (use-package quarto-mode
     :ensure t
     :defer t
     :mode (("\\.Rmd" . poly-quarto-mode))
     :bind (("C-c q" . quarto-preview)))
 #+end_src
+
+** helpful and which-key
+
+With the above configuration of ~helpful~ all aspects of the help system, functions, variables, keybindings, commands
+can be accessed with a few short key-strokes. Pause after pressing ~C-h~ and ~which-key~ kicks in and shows you what
+keys you can press next and what action they are bound to.
+
++ ~C-h f~ help for a callable.
++ ~C-h F~ help for a function.
++ ~C-h k~ help for a key-binding (you'll be prompted to press the key-binding you want to know about).
++ ~C-h v~ help for a variable.
++ ~C-h C~ help for a command.
 
 * IDE Configuration
 
@@ -122,11 +170,45 @@ a consistent manner via the Language Server Protocol.
 In Emacs there are two frameworks for LSP, LSP mode and eglot. With the later being incorporated into base Emacs with
 release 29 the recommendation I'm making is to go with that.
 
+*** eglot
+
+[[https://joaotavora.github.io/eglot/][Eglot]] is an Emacs client for the Language Server Protocol
+
 *** Tree Sitter
 
 Whilst Emacs' different programming modes provide syntax highlighting it is not always consistent. This is where the
 Tree Sitter programme comes to the rescue, providing a fast, smooth and consistent experience for syntax
 highlighting. Just as with eglot its included in Emacs 29 and upwards.
+
+* You don't need to learn Emacs LISP (but a little helps)
+
+Emacs is so flexible because it is extensible and this is achieved because it implements its own dialect of LISP in the
+form of Emacs LISP. Configurations are written in this language and so knowing some basics of how the language is
+structured makes working with your configuration easier. That said you don't need to know everything about the language
+to be able to use it effectively.
+
+Emacs comes with a built-in tutorial to get you going [[https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][An Introduction to Programming in Emacs Lisp]] and this can be
+accessed from within Emacs with ~C-h i m Emacs Lisp Intro~.
+
+** Quotes
+
+Symbols in LISP are quoted by preceding them with a single quote ~'~.
+
+** Comments
+
+Comments in LISP are preceded by ~;~ and can be on their own line or at the end of a line. Use them librealy your
+configuration to remind you why you have done or set something. Including links to pages where you read solutions for
+future reference is a good practice to (it's your configuration not a public facing open source project).
+
+** setq
+
+Knowing how ~setq~ works is really useful when it comes to customising your configuration, the basic notation is that it
+has a variable followed by a quoted argument which gets quoted automatically (that is the purpose of ~setq~ compared to
+~set~).
+
+#+begin_src emacs-lisp
+  (setq inhibit-startup-message t) 
+#+end_src
 
 * Links
 
@@ -160,6 +242,6 @@ Invariably you'll get stuck and want to ask questions. There are a couple of use
 + [[https://www.reddit.com/r/emacs][/r/emacs]]
 + [[https://www.reddit.com/r/orgroam][/r/orgroam]]
 
-** emacs lisp
+** Emacs Lisp
 
 + [[https://emacs.stackexchange.com/questions/47318/how-can-i-start-learning-emacs-lisp][Emacs Stack Exchange : How can I start learning Emacs Lisp?]]
