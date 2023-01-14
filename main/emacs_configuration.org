@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       938af6af-7a0e-46d1-ae76-6157e948151b
-:mtime:    20230103103311 20221229094021
+:mtime:    20230114083319 20230103103311 20221229094021
 :ctime:    20221229094021
 :END:
 #+TITLE: Emacs Configuration
@@ -14,6 +14,19 @@ configurations from ~~/.config/emacs/settings/<pkgnmae>-settings.el~ as I find l
 * Main Configuration
 
 #+INCLUDE: "~/.config/emacs/init.el" example emacs-lisp
+
+* Gentoo
+
+[[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][gentoo]]Under Gentoo it is possible to install packages at the system level using [[https://github.com/jauhien/gs-elpa][gs-elpa]] which compiles and installs Lisp
+packages from ELPA repositories. It works with Layman.
+
+#+begin_src bash
+  emerge -av gs-elpa
+  layman -L
+  layman -a melpa
+  layman -a gnu-elpa
+  emerge -va
+#+end_src
 
 * Package Specifics
 

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b9961a9e-e833-4160-aa8f-1c69b9cbb397
-:mtime:    20230103103312 20221228105320
+:mtime:    20230114083258 20230103103312 20221228105320
 :ctime:    20221228105320
 :END:
 #+TITLE: Emacs TRAMP
@@ -19,7 +19,7 @@
 The general syntax for opening a file is.
 
 #+begin_src emacs_lisp
-  C-x C-f /[method/user]:[@remotehost]]:/filename
+  C-x C-f /[method/user]::[@remotehost]]::/filename
 #+end_src
 
 * Editing as root
@@ -36,11 +36,11 @@ depending on whether you are using using ~su~ or ~sudo~
 
 * SSH
 
-To open files over SSH you should have access (obviously!) and ideally setup a SSH keys with keychain to ease the
+To open files over SSH you should have access (obviously!) and ideally have setup SSH keys with keychain to ease the
 process.
 
 #+begin_src emacs_lisp
-  C-x C-f /ssh:user@remote/
+  C-x C-f /ssh::user@remote/
 #+end_src
 
 * Links

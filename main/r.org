@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       de9a18a7-b4ef-4a9f-ac99-68f3c76488e5
-:mtime:    20230103103313 20221228150524 20230103103308
+:mtime:    20230112120722 20230103103313 20221228150524 20230103103308
 :ctime:    20221228150524 20230103103308
 :END:
 #+TITLE: R
@@ -153,6 +153,10 @@ help with that. An excellent resource is the [[https://r-pkgs.org/][R Packages b
 + [[https://epirhandbook.com/en/][The Epidemiologist R Handbook : R for applied epidemiology and public health]]
 + [[http://hbiostat.org/rflow/][R Workflow for Reproducible Biomedical Research Using Quarto]]
 + [[https://argoshare.is.ed.ac.uk/healthyr_book/][R for Health Data Science]]
+
+** Learning Resources
+
++ [[https://www.stephaniehicks.com/jhustatcomputing2022/schedule][Statistical Computing]]
 
 ** HowTos
 

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a2ff20a8-46cd-4123-9931-722925e0af19
-:mtime:    20230103103312 20221228103719
+:mtime:    20230114084829 20230103103312 20221228103719
 :ctime:    20221228103719
 :END:
 #+TITLE: Emacs ESS
@@ -11,6 +11,24 @@ If you use [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]] and [[id:754f25a5-3429
 
 #+INCLUDE: "~/.config/emacs/settings/ess-settings.el" example emacs-lisp
 
+Install the ~lintr~ and ~languageserver~ R packages on your system
+
+#+begin_src R
+  install.packages(c("lintr", "languageserver"))
+#+end_src
+
+To use [[id:a29a1e50-3cf2-4d88-a71d-7c600fdf8f65][Emacs LSP]] or [[id:efe4e098-d7e6-42cd-90bd-234a25806c3a][Emacs Eglot]] you must configure ESS's ~ess-r-backend~ to use ~lsp~
+
+**TODO** Check this works
+
+#+begin_src elisp
+  (use-package ess
+    configure:
+    (setq ess-r-backend . lsp))
+#+end_src
+
+
 * Links
 
 + [[https://ess.r-project.org/][Emacs Speaks Statistics]]
++ [[https://nonvalet.com/posts/20211011_emacs_ess_lsp/][Emacs ESS and LSP - Non valet]]
