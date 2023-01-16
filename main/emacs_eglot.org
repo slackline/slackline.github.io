@@ -1,15 +1,15 @@
 :PROPERTIES:
 :ID:       efe4e098-d7e6-42cd-90bd-234a25806c3a
-:mtime:    20230103103314 20221228103600
+:mtime:    20230114190036 20230103103314 20221228103600
 :ctime:    20221228103600
 :END:
 #+TITLE: Emacs Eglot
 #+DATE: [2022-12-09 Fri 21:21]
-+FILETAGS: :emacs:lsp:eglot:
+#+FILETAGS: :emacs:lsp:eglot:
 
 My current configuration for Eglot is as follows.
 
-#+INCLUDE: "~/.config/emacs/settings/eglot-settings.el" example emacs-lisp
+#+INCLUDE: "~/.config/emacs/settings/eglot-settings.el" src emacs-lisp
 
 
 * Links
