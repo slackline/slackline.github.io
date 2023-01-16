@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       136364e7-1a6d-4b28-b284-0e415b860699
 :ROAM-ALIASES: "Org Roam : Overview"
-:mtime:    20230103103313 20221224191223 20230103103308
+:mtime:    20230116172234 20230103103313 20221224191223 20230103103308
 :ctime:    20221224191223
 :END:
 #+TITLE: Org-roam
@@ -120,6 +120,7 @@ hugo]].
 + [[https://jethrokuan.github.io/org-roam-guide/][How I Take Notes with Org-roam · Jethro Kuan]]
 + [[https://systemcrafters.net/build-a-second-brain-in-emacs/][Build a Second Brain in Emacs - System Crafters]]
 + [[https://www.eigenbahn.com/2021/09/15/org-roam][Graphing my External Brain with Org-Roam | Eigenbahn blog]] (includes deleting articles from the database)
++ [[https://honnef.co/articles/my-org-roam-workflows-for-taking-notes-and-writing-articles/][My org-roam workflows for taking notes and writing articles — Dominik Honnef]]
 
 ** Zettelkasten
 
