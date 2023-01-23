@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3c905838-8de4-4bb6-9171-98c1332456be
-:mtime:    20230121175735 20230103150851 20230103103309 20230102213516 20230103103309
+:mtime:    20230123090405 20230121175735 20230103150851 20230103103309 20230102213516 20230103103309
 :ctime:    20230102213516 20230103103309
 :END:
 #+TITLE: Git
@@ -578,6 +578,7 @@ It is often important to version control your data too, for more on this see [[i
 ** Tools
 
 + [[http://gitignore.io/][gitignore.io]]
++ [[https://initialcommit.com/blog/git-sim][git-sim: Visually simulate Git operations in your own repos]]
 
 ** Learning Resources
 
