@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0f5d8919-1769-492d-b0e0-e9e8c738190e
-:mtime:    20230103103308 20221228112408
+:mtime:    20230124220631 20230103103308 20221228112408
 :ctime:    20221228112408
 :END:
 #+TITLE: Emacs Centaurtabs
@@ -19,3 +19,4 @@ Grouping similar tabs together is a really useful feature and aids cycling throu
 * Links
 
 + [[https://github.com/ema2159/centaur-tabs][ema2159/centaur-tabs: Emacs plugin aiming to become an aesthetic, modern looking tabs plugin]]
++ [[https://amitp.blogspot.com/2020/06/emacs-prettier-tab-line.html][Amit's Thoughts: Emacs: prettier tab-line]]
