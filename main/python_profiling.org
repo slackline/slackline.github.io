@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       dd7c615f-cd8b-426d-aec0-cfd3803437cc
-:mtime:    20230125155927
+:mtime:    20230125190111 20230125155927
 :ctime:    20230125155927
 :END:
 #+TITLE: Python Profiling
@@ -9,4 +9,9 @@
 
 * Links
 
++ [[https://docs.python.org/3/library/profile.html][Python Profiling (Standard Library)]]
++ [[https://docs.python.org/3/library/profile.html#module-cProfile][cProfile]]
++ [[https://docs.python.org/3/library/profile.html#module-profile][profile]]
++ [[https://docs.python.org/3/library/profile.html#module-pstats][pstats]]
 + [[https://pypi.org/project/scalene/][Scalene]] ([[https://github.com/plasma-umass/scalene][GitHub]])
++ [[https://jiffyclub.github.io/snakeviz/][SnakeViz]]
