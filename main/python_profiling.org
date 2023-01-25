@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       dd7c615f-cd8b-426d-aec0-cfd3803437cc
+:mtime:    20230125155927
+:ctime:    20230125155927
+:END:
+#+TITLE: Python Profiling
+#+FILETAGS: :python:profiling:
+
+
+* Links
+
++ [[https://pypi.org/project/scalene/][Scalene]] ([[https://github.com/plasma-umass/scalene][GitHub]])

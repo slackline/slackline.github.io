@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5b5d1562-ecb4-4199-b530-e7993723e112
-:mtime:    20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
+:mtime:    20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
 :ctime:    20221217185215 20230103103308
 :END:
 #+TITLE: Python
@@ -147,6 +147,10 @@ hints]] to your code, typically whenever a new variable is defined, whether that
 function/method definition. For the later it is also sensible to add a type hint as to the type of object(s) that are
 returned.  The consistency of type hints can be checked using [[http://mypy-lang.org/][mypy]] and input can be validated on the fly by using
 [[id:ba02ecdf-c35f-4deb-8308-28341922c096][pydantic]].
+
+* Profiling
+
+[[id:dd7c615f-cd8b-426d-aec0-cfd3803437cc][Python profiling]] can be leveraged to find where the bottlenecks are in your workflow and where things can be sped up.
 
 
 * Packages
