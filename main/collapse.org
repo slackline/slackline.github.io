@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       8a79b410-bc31-458e-824f-11c92eaa4f22
+:mtime:    20230125072616
+:ctime:    20230125072616
+:END:
+#+TITLE: Collapse
+#+FILETAGS: :r:programming:statistics:data:
+
+[[https://sebkrantz.github.io/collapse/index.html][collapse]] is library for fast and flexible data transformations of computing tasks in R. It works in harmony with [[id:78504ff1-a3cd-4f64-a515-ffa2ab6ac36c][dplyr]]
+and [[https://rdatatable.gitlab.io/data.table/][data.table]]  but offers significant speed increases over both.
+
+
+* Links
+
++ [[https://sebkrantz.github.io/collapse/index.html][collapse]]
++ [[https://sebkrantz.github.io/collapse/articles/collapse_and_dplyr.html][~collapse~ and ~dplyr~]]
++ [[https://sebkrantz.github.io/collapse/articles/collapse_and_data.table.html][~collapse~ and ~data.table~]]

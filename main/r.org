@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       de9a18a7-b4ef-4a9f-ac99-68f3c76488e5
-:mtime:    20230112120722 20230103103313 20221228150524 20230103103308
+:mtime:    20230125072709 20230112120722 20230103103313 20221228150524 20230103103308
 :ctime:    20221228150524 20230103103308
 :END:
 #+TITLE: R
@@ -21,6 +21,11 @@ more on the [[id:b4510762-8409-4e5e-8ee8-c27574977772][Tidyverse]].
 
 [[https://rdatatable.gitlab.io/data.table/][data.table]] is an extension of base `data.frame` that has a consistent syntax and is very fast. Its well worth learning
 this framework, read more [[id:78838e73-e7de-4a41-a0a9-69861a3f4abe][here]].
+
+** collapse
+
+[[id:8a79b410-bc31-458e-824f-11c92eaa4f22][collapse]] is a fast and flexible framework for complex data transformations in R. Well worth learning to use if you are
+working with large datasets (or even small as then you know how to use it when you come to handling large datasets!),
 
 ** Dates
 
