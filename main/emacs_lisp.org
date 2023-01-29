@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       708f5d99-6040-4306-a323-306d39ce45c3
-:mtime:    20230114084505 20230103103311 20221209211925
+:mtime:    20230129085036 20230114084505 20230103103311 20221209211925
 :ctime:    20221209211925
 :END:
 #+TITLE: Emacs Lisp
@@ -18,6 +18,7 @@ Emacs Lisp/ that is available from within Emacs using ~C-h i m Emacs Lisp Intro~
 ** Learning Resrouces
 
 + [[https://emacs.stackexchange.com/a/47320/10100][How Can I Start Learning Emacs Lisp]] - useful answers on [[https://emacs.stackexchange.com/][emacs.stackexchange.com]]
++ [[https://craft-of-emacs.kebab-ca.se/index.html][The Craft of Emacs]]
 
 ** Documentation
 

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ddcfed69-2ba5-442a-99b4-eaa5c7a9fe40
-:mtime:    20230103103314 20230102213516
+:mtime:    20230128144326 20230103103314 20230102213516
 :ctime:    20230102213516
 :END:
 #+TITLE: Git Worktree
@@ -70,7 +70,7 @@ branch using the ~--set-upstream~
 #+end_src
 
 * Create a Worktree based on remote branches
-   
+
 Sometimes you will want to add a worktree based on a remote branch if for example there is a pull request that you have
 been asked to review. You must first ~git fetch origin <remote-branch>:<local-branch>~ to get a ~fetch~ a copy of that
 remote branch. Only then can you make a ~worktree~ based on it.

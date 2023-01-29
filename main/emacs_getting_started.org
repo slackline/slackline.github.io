@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       36a83dd6-7535-43a9-9b68-15dc135c86fd
-:mtime:    20230110111806 20230109113920 20230108125643 20230107171311 20230107093916 20230106214209 20230106185855 20230106174506
+:mtime:    20230129183436 20230110111806 20230109113920 20230108125643 20230107171311 20230107093916 20230106214209 20230106185855 20230106174506
 :ctime:    20230106174506
 :END:
 #+TITLE: Emacs Getting Started
@@ -15,9 +15,9 @@ learning Emacs.
 
 * Pick One Thing at a Time
 
-There is so much you may want to do with Emacs but trying to do everything to start with will only make things
-confusing. Instead pick one topic or package that you want to start using and get that setup and configured and become
-comfortable using it before doing the next thing.
+There is so much you may want to do with Emacs, but probably aren't even aware is possible, but trying to do everything
+to start with will only make things confusing. Instead pick one topic or package that you want to start using and get
+that setup and configured and become comfortable using it before doing the next thing.
 
 Some popular configurations to get started using Emacs are.
 
@@ -26,20 +26,23 @@ Some popular configurations to get started using Emacs are.
 + Access [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GPG]] encrypted passwords
 + Control [[https://www.musicpd.org][Music Player Daemon]].
 + Takes notes in Orgmode.
++ Using [[id:136364e7-1a6d-4b28-b284-0e415b860699][Org-roam]] for a second brain.
 + Manage your Agenda in Orgmode.
 + Write literate documents in Orgmode or [[https://www.quarto.org/][Quarto]].
+
+But much of that is running before you can walk, the very best thing you can do is learn to navigate and do the very
+basic things in Emacs, which is best achieved via...
 
 * Start with the Emacs Tutorial
 
 Emacs has a short but wonderfully helpful built-in tutorial that I would recommend everyone getting started works their
 way through first. Access it with ~C-h t~.
 
-  
+
 * Version control your configuration files
 
 It makes sense to version control your Emacs configuration file, this is easily done using [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] and from within Emacs
 using [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]].
-
 
 
 * Basic Configuration
@@ -65,10 +68,10 @@ too many files in a single location, instead nesting them so I use the later. Th
           ("GNU ELPA"	. 5)
           ("NonGNU ELPA"	. 5)
           ("MELPA Stable"	. 0)))
-  
+
   ;; On some systems we have problems communicating with ELPA (https://emacs.stackexchange.com/a/62210)
   (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
-  
+
   ;; Setup use-package
   (unless (package-installed-p 'use-package)
     (package-refresh-contents)
@@ -163,18 +166,18 @@ For a long time Emacs has had various packages that support writing code in diff
 syntax highlighting, auto-completion, code navigation and refactoring and more. In the last few years the development
 and popularity of Language Servers mean the paradigm has shifted somewhat. The heavy work of doing all the magic things
 IDEs do has been off-loaded into programmes that run in the background and clients such as Emacs interface with these in
-a consistent manner via the Language Server Protocol.
+a consistent manner via the [[https://en.wikipedia.org/wiki/Language_Server_Protocol][Language Server Protocol]].
 
 ** Language Server Protocols
 
-In Emacs there are two frameworks for LSP, LSP mode and eglot. With the later being incorporated into base Emacs with
+In Emacs there are two frameworks for LSP, [[https://emacs-lsp.github.io/lsp-mode/][LSP mode]] and eglot. With the later being incorporated into base Emacs with
 release 29 the recommendation I'm making is to go with that.
 
 *** eglot
 
 [[https://joaotavora.github.io/eglot/][Eglot]] is an Emacs client for the Language Server Protocol
 
-*** Tree Sitter
+** Tree Sitter
 
 Whilst Emacs' different programming modes provide syntax highlighting it is not always consistent. This is where the
 Tree Sitter programme comes to the rescue, providing a fast, smooth and consistent experience for syntax
@@ -207,7 +210,7 @@ has a variable followed by a quoted argument which gets quoted automatically (th
 ~set~).
 
 #+begin_src emacs-lisp
-  (setq inhibit-startup-message t) 
+  (setq inhibit-startup-message t)
 #+end_src
 
 * Links
@@ -219,7 +222,7 @@ Lots of people have written on this matter before, here are links to others mate
 + [[https://www.emacswiki.org/][Emacs Wiki]]
 + [[https://sachachua.com/blog/category/emacs-news/][Sacha Chua - Emacs News]] weekly summary of useful articles on all aspects of Emacs (also writes insightful [[https://sachachua.com/blog/][blogs]]).
 + [[https://lucidmanager.org/categories/productivity/][Lucid Manager - More productive with Emacs: Write websites, articles and books]]
-  
+
 *** System Crafters
 
 Excellent video tutorials and accompanying notes on Emacs configuration.
@@ -234,7 +237,7 @@ Excellent video tutorials and accompanying notes on Emacs configuration.
 + [[https://www.youtube.com/watch?v=wKTKmE1wLyw&list=PLEoMzSkcN8oMHJ6Xil1YdnYtlWd5hHZql][Emacs Tips]]
 + [[https://www.youtube.com/watch?v=UmbVeqphGlc&list=PLEoMzSkcN8oO1n2eRfsg6qDtGY1XlTBjE][Advanced Emacs Package Management]]
 
-  
+
 ** Asking for Help
 
 Invariably you'll get stuck and want to ask questions. There are a couple of useful places to ask for questions.

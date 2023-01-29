@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       169b9c5f-df34-46ab-b64f-8ee98946ee69
-:mtime:    20230119212624 20230107085901 20230103103308 20221217184411
+:mtime:    20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
 :ctime:    20221217184411
 :END:
 #+TITLE: Orgmode
@@ -27,7 +27,7 @@ Globally these are saved in ~org-tag-alist~ but you can add tags to a specific f
 #+begin_src
   #+TAGS: work(w) home(h)
   #+end_src
-  
+
 * Editing Files
 
 ** Structure Templates
@@ -58,7 +58,7 @@ last number.
 * Links
 + [[https://orgmode.org][OrgMode]]
 + [[https://orgmode.org/worg/org-configs/org-customization-guide.html][Org Customisation Guide]]
-  
+
 ** Zettelkasten
 + [[https://zettelkasten.de/introduction/][Introduction to the Zettelkasten Method • Zettelkasten Method]]
 
@@ -94,6 +94,9 @@ There are hundreds!
 
 *** Themes
 + [[https://github.com/minad/org-modern][org-modern : Modern Org Style]]
+
+*** YASnippet
++ [[http://yummymelon.com/devnull/beautifying-org-plot-with-yasnippet-and-context-menus.html][Beautifying org plot with YASnippet]]
 
 ** Articles
 + [[https://www.howardism.org/Technical/Emacs/org-find-file.html][Find Org Files]]

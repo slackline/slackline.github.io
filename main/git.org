@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3c905838-8de4-4bb6-9171-98c1332456be
-:mtime:    20230124163440 20230123090405 20230121175735 20230103150851 20230103103309 20230102213516 20230103103309
+:mtime:    20230129165730 20230124163440 20230123090405 20230121175735 20230103150851 20230103103309 20230102213516 20230103103309
 :ctime:    20230102213516 20230103103309
 :END:
 #+TITLE: Git
@@ -590,6 +590,7 @@ It is often important to version control your data too, for more on this see [[i
 + [[https://onlywei.github.io/explain-git-with-d3/#clean][Explain Git with D3]]
 + [[https://learngitbranching.js.org/][Learn Git Branching]]
 + [[https://srse-git-github-zero2hero.netlify.app/][Git & GitHub through GitKraken Client - From Zero to Hero]]
++ [[https://initialcommit.com/blog/git-sim][git-sim : visually simulate Git operations in your own repos]]
 
 ** HowTos
 
