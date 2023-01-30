@@ -1,8 +1,15 @@
 :PROPERTIES:
 :ID:       e2a2ead1-4348-4cc6-9ef1-dd96777aaec8
-:mtime:    20230103103313 20221224191223
+:mtime:    20230130170006 20230103103313 20221224191223
 :ctime:    20221224191223
 :END:
 #+TITLE: Emacs Dired
 #+DATE: <2022-12-22 Thu 09:14>
 #+FILETAGS: emacs:dired:files:browsing
+
+* Working with Files
+
+** Filename Editing
+
+You can edit filenames using ~C-x C-q~ and edit the filename in place (e.g. ~M-$~ to spellcheck), when done you confirm
+the filename change with ~C-c C-c~ ([[https://mbork.pl/2023-01-30_The_benefits_of_everything_being_a_buffer][source]]).
