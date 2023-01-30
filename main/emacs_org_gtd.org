@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       42dd7a3e-d6bf-4e22-b564-f159fcbeb460
-:mtime:    20230103103309 20221228151511
+:mtime:    20230130170749 20230103103309 20221228151511
 :ctime:    20221228151511
 :END:
 #+TITLE: Emacs GTD
@@ -42,3 +42,8 @@ You can always open the ~org-gtd-tasks.org~ file and interact with tasks under p
 * Links
 
 + [[https://github.com/Trevoke/org-gtd.el][Trevoke/org-gtd.el: A package for using GTD using org-mode]] ([[https://github.com/Trevoke/org-gtd.el/blob/master/doc/org-gtd.org][Manual]])
+
+** Hand rolled GTD
+
++ [[https://daryl.wakatara.com/emacs-gtd-flow-evolved/][Daryl Manning | Emacs GTD flow evolved]]
++ [[https://karl-voit.at/2019/09/25/using-orgmode/][Blog Series: Using Org Mode Features (UOMF)]]
