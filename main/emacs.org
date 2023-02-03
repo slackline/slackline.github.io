@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       754f25a5-3429-4504-8a17-4efea1568eba
-:mtime:    20230120215724 20230114080430 20230109075443 20230106185900 20230103103311 20221229203153
+:mtime:    20230203235526 20230120215724 20230114080430 20230109075443 20230106185900 20230103103311 20221229203153
 :ctime:    20221229203153
 :END:
 #+TITLE: Emacs
@@ -77,6 +77,9 @@ over a number of individual files for each package or group of packages. Unsurpr
 I use (yet to settle down), you can read more about configuration
 [[id:938af6af-7a0e-46d1-ae76-6157e948151b][Emacs Configuration]].
 
+** Templates
+
+Emacs has built-int templates but they can also be provided by Yasnippets. For more see [[id:a8c134c6-bb0f-408d-96ee-48b02da8cffe][emacs_templates]]
 * EmacsConf
 
 Read more about [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]].
@@ -95,7 +98,7 @@ Read more about [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]].
 
 ** Configuration
 + [[https://erickgnavar.github.io/emacs-config/][Emacs config]] by Erick Navarro - a nice neat and clear set of custom configurations.
-+ 
++
 
 ** Research Articles
 + [[https://arxiv.org/abs/2004.02504][[2004.02504] Bringing GNU Emacs to Native Code]]

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3070e6ed-1788-44ff-8498-8af6c84f588f
-:mtime:    20230103103309 20221228103630
+:mtime:    20230203235516 20230103103309 20221228103630
 :ctime:    20221228103630
 :END:
 #+TITLE: Emacs Tree-Sitter
@@ -65,3 +65,4 @@ features available with Tree-Sitter, one of which is [[https://github.com/emacs-
 ** Configuration
 
 + [[https://www.reddit.com/r/emacs/comments/zbpa42/how_to_use_emacs_29_treesitter/][/r/emacs : How to use Emacs 29 Tree-sitter?]]
++ [[https://mastodon.social/@spaceotter@mastodon.online/109774686483526367][@spaceotter : Using tree-sitter to write docstrings]]
