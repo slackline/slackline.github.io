@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       754f25a5-3429-4504-8a17-4efea1568eba
-:mtime:    20230203235526 20230120215724 20230114080430 20230109075443 20230106185900 20230103103311 20221229203153
+:mtime:    20230205122258 20230205081022 20230203235526 20230120215724 20230114080430 20230109075443 20230106185900 20230103103311 20221229203153
 :ctime:    20221229203153
 :END:
 #+TITLE: Emacs
@@ -123,6 +123,9 @@ Read more about [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]].
 + [[https://www.masteringemacs.org/article/emacs-builtin-elisp-cheat-sheet][Emacs's Builtin Elisp Cheat Sheet - Mastering Emacs]]
 + [[https://www.ingentaconnect.com/content/matthey/jmtr/2022/00000066/00000002/art00002;jsessionid=5o2da922fbmbh.x-ic-live-02][Emacs as a Tool for Modern Science : The use of open source tools to immprove scientific workflows]]
 
+*** Mastering Emacs Articles
++ [[https://www.masteringemacs.org/article/polymode-multiple-major-modes-how-to-use-sql-python-in-one-buffer][Polymode: Multiple Major Modes and How to Use SQL and Python in one Buffer]]
++ [[https://www.masteringemacs.org/article/keeping-secrets-in-emacs-gnupg-auth-sources][Keeping Secrets in Emacs with GnuPG and Auth Sources]]
 
 ** Packages
 + [[https://melpa.org/#/][MELPA]]
