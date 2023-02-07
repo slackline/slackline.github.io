@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3cca0dfd-0c82-4685-b9ed-6314f7c8b78f
-:mtime:    20230103103309 20221212233350
+:mtime:    20230207144419 20230103103309 20221212233350
 :ctime:    20221212233350
 :END:
 #+TITLE: Python Pytest
@@ -41,6 +41,18 @@ PyTest provides the [[https://docs.pytest.org/en/7.1.x/how-to/fixtures.html][~@p
           coordinates[i][0] = x
           coordinates[i][1] = y
       return coordinates
+#+END_SRC
+
+** Testing Exceptions
+
+You can [[https://docs.pytest.org/en/stable/reference/reference.html#pytest.raises][test for exceptions being raised]].
+
+#+CAPTION: Testing for exceptions
+#+NAME: pytest-exceptions
+#+BEGIN_SRC python :eval no
+  def test_exceptions() -> None:
+      with pytest.raises(KeyError):
+          assert "a" in {"b": 1, "c": 2}.keys()
 #+END_SRC
 
 ** Parameterisation
