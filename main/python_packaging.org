@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       bb57f65e-58f4-45de-9620-901dc998f6d6
-:mtime:    20230103103312 20221228113913 20230103103309
+:mtime:    20230207111629 20230103103312 20221228113913 20230103103309
 :ctime:    20221228113913 20230103103309
 :END:
 #+TITLE: Python Packaging
@@ -704,3 +704,5 @@ dependencies. In essence its a tool for interactively generating the configurati
 + [[https://github.com/wimglenn/resources-example][Packaging Data files in a Python Distribution]]
 + [[https://pdm.fming.dev/latest/][PDM - Python package and Dependency Manager]]
 + [[https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html][Why you shouldn't invoke setup.py directly]]
++ [[https://github.com/python-versioneer/python-versioneer][python-versioneer/python-versioneer: version-string management for VCS-controlled trees]]
++ [[https://github.com/pypa/setuptools_scm][pypa/setuptools_scm: the blessed package to manage your versions by scm tags]]
