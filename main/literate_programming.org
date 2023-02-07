@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       ab2f5dfb-e355-4dbb-8ca0-12845b82e38a
 :ROAM_ALIASES: "Open Research : Literate Programming"
-:mtime:    20230103103312 20220216195357 20230103103311
+:mtime:    20230205165301 20230103103312 20220216195357 20230103103311
 :ctime:    20220216195357 20230103103311
 :END:
 #+TITLE: Literate Programming
@@ -30,3 +30,4 @@ There are many options available, only some of which I cover here.
 + [[https://orgmode.org/worg/org-contrib/babel/][Org Babel]]
 + [[https://quarto.org/][Quarto]]
 + [[https://rmarkdown.rstudio.com/][R Markdown]]
++ [[https://simfish.dev/projects/gix/][Gix: Literate Programming with Emacs org-mode & GNU/Guix]]
