@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       251b3ae4-4a5c-4c44-909a-dcbc0aef4b45
-:mtime:    20230105145232 20230103103309 20221228151331 20230103103309 20230103103308
+:mtime:    20230208071742 20230105145232 20230103103309 20221228151331 20230103103309 20230103103308
 :ctime:    20221228151331 20230103103308
 :END:
 #+TITLE: Quarto
@@ -15,11 +15,66 @@ document.
 * Blogging
 :PROPERTIES:
 :ID:       25c4a623-fc4c-4902-8f28-f54949e26299
-:mtime:    20230103103313 20221228151331 20230103103308
+:mtime:    20230208071742 20230103103313 20221228151331 20230103103308
 :ctime:    20221228151331 20230103103308
 :END:
 
-Blogging is simple with Quarto.
+Blogging is simple with Quarto. I've written my own which you can view at [[https://ns-rse.github.io/][ns-rse.github.io]] ([[https://github.com/ns-rse/ns-rse.github.io][repo]]). The ~index.qmd~
+should only include the [[id:fac7a695-9bdf-4a79-9ec3-9945e9a0cba4][YAML]] header as the content is automatically generated from the posts.
+
+** About
+
+The ~about.qmd~ is an important file as it tells people about you and allows easy links to be added to your profile on
+other sites.
+
+#+begin_src yaml
+---
+title: "About"
+image: img/profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/nshephardRSE
+      rel: me
+    - icon: github
+      text: Github
+      href: https://github.com/ns-rse
+      rel: me
+    - icon: mastodon
+      text: Mastodon
+      href: https://fosstodon.org/@nshephard
+      rel: me
+
+---
+
+#+end_src
+** Posts
+
+New posts are created under the ~posts/<slug>~ directory (where ~slug~ will be the URL of the page). A typical header I
+will use looks like the following.
+
+#+begin_src yaml
+---
+title: "<title>"
+author: "nshephard"
+date: "<date>"
+categories: [code, analysis, linting, git, github, gitlab]
+image: <url to one of my flickr pics>
+from: markdown+emoji
+toc: true
+toc-depth: 3
+toc-location: right
+execute:
+  code_fold: true
+  code_link: true
+  code_tools: true
+  fig-cap-location: top
+  tbl-cap-location: top
+  warning: false
+---
+#+end_src
 
 * Presentations
 :PROPERTIES:
@@ -32,6 +87,45 @@ Blogging is simple with Quarto.
 :PROPERTIES:
 :ID:       0cfcd756-03fa-4150-a685-4a31d8197c54
 :END:
+
+Incredibly useful system and its highly flexible. My typical header looks like
+
+#+begin_src yaml
+---
+title: "<title>"
+author: "Neil Shephard"
+email: "n.shephard@sheffield.ac.uk"
+from: markdown+emoji
+format:
+  revealjs:
+    theme: sky
+    chalkboard: true
+    slide-number: true
+    show-slide-number: speaker
+    # embed-resources: true
+    # standalone: true
+footer: "[**ns-rse.github.io/**](https://ns-rse.github.io/)"
+---
+#+end_src
+
+*** Extensions
+
+There are a fair few extensions out there but a really useful one for slides (and in general) that cuts down on the
+amount of images you need to include is the [[https://github.com/jmbuhr/quarto-qrcode][QRcode Extension]] which automatically embeds a QR code for a given URL via
+shortcodes.
+
+#+begin_src bash
+  quarto install extensions jmbhur/quarto-qrcode
+#+end_src
+
+Usage is simple {{< qrcode https://ns-rse.github.io/ >}}.
+
+*** Hosting Pages
+
+If you write your slides as a file called ~index.qmd~ and add it to the top level of a [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] repository that is hosted on
+[[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]] then you can use a GitHub Action to build this as a web-page on pushes to ~main~. I did this with my slides for a
+talk I gave at University of Leeds Research Computing on ~pre-commit~ ([[https://ns-rse.github.io/pre-commit/#/title-slide][slides]]; [[https://github.com/ns-rse/pre-commit][repo]]) and the host, Alex Coleman liked
+the idea and setup a useful [[https://github.com/Sparrow0hawk/quarto-revealjs-template][quarto-revealjs-template]] which includes the required workflow.
 
 * Websites
 :PROPERTIES:
@@ -96,6 +190,7 @@ You can preview documents easily, from within [[id:754f25a5-3429-4504-8a17-4efea
 
 * Links
 + [[https://t.co/FDlvjq4qrc][quarto.org]]
++ [[https://quarto.org/docs/extensions/][Quarto Extensions]]
 + [[https://hbiostat.org/rflow/][R Workflow]] : Reproducible Biomedical Research using Quarto
 + [[https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/][A Quarto tip a day]]
 
