@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3c905838-8de4-4bb6-9171-98c1332456be
-:mtime:    20230205130316 20230204200706 20230129165730 20230124163440 20230123090405 20230121175735 20230103150851 20230103103309 20230102213516 20230103103309
+:mtime:    20230210080322 20230205130316 20230204200706 20230129165730 20230124163440 20230123090405 20230121175735 20230103150851 20230103103309 20230102213516 20230103103309
 :ctime:    20230102213516 20230103103309
 :END:
 #+TITLE: Git
@@ -489,6 +489,16 @@ scripts that reside in ~.git/hooks~ with specific filenames that indicate at whi
 this directory will be populated with various examples for the different hooks that are available if you have created
 your repository locally.
 
+** Pre-commit
+
+[[https://pre-commit.com][Pre-commit]] and the associated service [[https://pre-commit.ci][pre-commit.ci]] are wonderful tools. I've written about them in a few blog posts and
+even given a talk to the Research Computing group at the University of Leeds.
+
++ [[https://ns-rse.github.io/posts/pre-commit/][Pre-Commit : Protecting your future self]]
++ [[https://ns-rse.github.io/posts/pre-commit-updates/][Pre-Commit : Customising and Updating]]
++ [[https://ns-rse.github.io/posts/pre-commit-ci/][Pre-Commit.ci : Integrating Pre-Commit into CI/CD]]
++ [[https://ns-rse.github.io/pre-commit/#/title-slide][Slides]] ([[https://github.com/ns-rse/pre-commit][source]])
+
 
 
 * Commit History
@@ -514,24 +524,35 @@ It can also be used to summarise contributions by combining with come command [[
 formats commits by date (~YYYY-MM~), ~sorts~ them and then counts the number of ~uniq~ observations (from [[https://github.blog/2022-12-12-highlights-from-git-2-39/][here]]).
 
 #+begin_src sh
-  $ git log v2.38.0.. --date='format:%Y-%m' --format='%cd' | sort | uniq -c
+  git log v2.38.0.. --date='format:%Y-%m' --format='%cd' | sort | uniq -c
 #+end_src
 
-*** Aliases
+
+** Blame
+
+[[https://www.git-scm.com/docs/git-blame][Git Blame]] shows who was responsible for changes to which lines of code, read more [[id:d8b70d14-06bd-46c5-97fc-5c8e4f2c3503][Git Blame]]. Sometimes though you don't
+always want to use or acknowledge the blame. For example if you lint a bunch of pre-existing code you don't want the
+blame applied to you, rather it should be applied to the original author. This is achieved using a
+~.gitblame-ignore-revs~ file. I've written about that in the following article.
+
++ [[https://ns-rse.github.io/posts/whos_to_blame/][Who’s to Blame]]
+
+** Reset and Revert
+
+Useful article [[https://www.datacamp.com/tutorial/git-reset-revert-tutorial][here]].
+
+* Git Aliases
+
+Git has its own system for aliasing common commands, for now refer to the article on Git Blame ([[https://ns-rse.github.io/posts/whos_to_blame/][Who’s to Blame]]) for
+examples of how to use aliases.
+
+** Shell Aliases
 
 It's useful to be aware of the options that are available to you for formatting your logs, but it can be cumbersome to
 memorise them, particularly so when often your primary focus is on getting work done rather than becoming an expert in
 the tools you use. To which end using [[id:c7d811f9-5e9f-43b9-9b0b-d647a399756c][Bash aliases]] to provide shortcuts to the formatting you want is invaluable. The
 [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][zsh]] shell comes with a bundle of aliases pre-configured, typically I just use ~glod~ which shows the graph in short
 form, but you may find others to be more suited to your preferences, and if not you can always specify your own.
-
-** Blame
-
-[[https://www.git-scm.com/docs/git-blame][Git Blame]] shows who was responsible for changes to which lines of code, read more [[id:d8b70d14-06bd-46c5-97fc-5c8e4f2c3503][Git Blame]].
-
-** Reset and Revert
-
-Useful article [[https://www.datacamp.com/tutorial/git-reset-revert-tutorial][here]].
 
 * Git Rebase
 
