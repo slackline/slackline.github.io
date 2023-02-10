@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       de9a18a7-b4ef-4a9f-ac99-68f3c76488e5
-:mtime:    20230125072709 20230112120722 20230103103313 20221228150524 20230103103308
+:mtime:    20230210005221 20230125072709 20230112120722 20230103103313 20221228150524 20230103103308
 :ctime:    20221228150524 20230103103308
 :END:
 #+TITLE: R
@@ -170,6 +170,7 @@ help with that. An excellent resource is the [[https://r-pkgs.org/][R Packages b
 *** Videos
 
 + [[https://www.youtube.com/@brodriguesco/videos][brodriguesco on YouTube]] - lots of useful tips and tricks.
++ [[https://www.youtube.com/watch?v=hpudxAmxHSM][Tuning XGBoost using tidymodels - Julia Silge]]
 
 ** Packages and Documentation
 
