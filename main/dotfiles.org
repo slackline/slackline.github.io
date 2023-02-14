@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       31304184-2fad-4cc5-824b-3ab4b9d2e126
-:mtime:    20230103103309 20221212181558
+:mtime:    20230214231111 20230103103309 20221212181558
 :ctime:    20221212181558
 :END:
 #+TITLE: Dotfiles
@@ -32,3 +32,12 @@ Make a repository for yo
 #+TODO: Complete this section.
 
 * Links
+
++ [[https://dotfiles.github.io/][GitHub does dotfiles - dotfiles.github.io]]
++ [[https://www.atlassian.com/git/tutorials/dotfiles][How to Store Dotfiles - A Bare Git Repository | Atlassian Git Tutorial]]
++ [[https://wiki.archlinux.org/title/Dotfiles][Dotfiles - ArchWiki]]
+
+** Frameworks
+
++ [[https://dotfiles.io/][Dotfiles - Simply designed to fit your shell life (UK)]]
++ [[https://www.chezmoi.io/][chezmoi - chezmoi]]
