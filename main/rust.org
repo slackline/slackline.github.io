@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3469c33e-7c61-46c7-b01e-655695f3b93c
-:mtime:    20230103103309 20221224191223
+:mtime:    20230215001041 20230103103309 20221224191223
 :ctime:    20221224191223
 :END:
 #+TITLE: Rust
@@ -10,3 +10,7 @@
 * Links
 
 + [[https://google.github.io/comprehensive-rust/][Welcome to Comprehensive Rust - Comprehensive Rust]]
+
+** Miscellaneous
+
++ [[https://www.technologyreview.com/2023/02/14/1067869/rust-worlds-fastest-growing-programming-language/][How Rust went from a side project to the world's most-loved programming language | MIT Technology Review]]
