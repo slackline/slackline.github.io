@@ -78,6 +78,15 @@ image.
   qemu-system-x86_64 -boot order=d -drive file=ubuntu22,format=raw -m 4G -enable-kvm
 #+end_src
 
+** Post Installation
+
+You may want to install some useful programes.
+
+#+begin_src bash
+  sudo su
+  apt-get upgrade
+  apt-get install git
+#+end_src
 
 * Links
 

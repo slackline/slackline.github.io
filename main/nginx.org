@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       3774439d-af75-453e-b3e9-9d578b6bec46
+:mtime:    20230215120711
+:ctime:    20230215120711
+:END:
+#+TITLE: Nginx
+#+FILETAGS: :gnu:linux:nginx:web:
+
+* Installation
+
+Available across packages install as appropriate to your OS.
+
+#+begin_src bash
+  emerge -av nginx        # Gentoo
+  pacman -Syu nginx       # Arch
+  apt-get install nginx   # Ubuntu
+#+end_src
+
+
+* Links
+
++ [[https://nginx.org/en/docs/][nginx docs]]

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       88fc1e91-d928-485e-83b4-1991663fa267
-:mtime:    20230215101424
+:mtime:    20230215120451 20230215101424
 :ctime:    20230215101424
 :END:
 #+TITLE: GNU/Linux
@@ -18,3 +18,8 @@ work machines as I don't have time to tinker/maintain them in addition to my lon
 
 + [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]]
 + [[id:fab2461a-c95a-47e3-9e5d-64af083c92e0][KVM]]
+
+** Web Services
+
++ [[id:3774439d-af75-453e-b3e9-9d578b6bec46][nginx]]
++[[id:13de4e0e-4c14-48c8-897e-42862be8cfc1][discourse]]

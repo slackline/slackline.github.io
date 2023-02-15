@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       13de4e0e-4c14-48c8-897e-42862be8cfc1
+:mtime:    20230215121954
+:ctime:    20230215121954
+:END:
+#+TITLE: Discourse
+#+FILETAGS: :gnu:linus:foss:web:
+
+Easiest to use Docker images. If you've followed the [[id:fab2461a-c95a-47e3-9e5d-64af083c92e0][Linux KVM]] instructions you need to install a few tools to get
+going.
+
+#+begin_src bash
+  sudo su
+  apt-get upgrade # Upgrade all packages
+  apt autoremove # Remove old packages
+  apt-get install git docker
+#+end_src
+
+
+* Links
+
++ [[https://www.discourse.org/][Discourse]]
++ [[https://github.com/discourse/discourse/blob/main/docs/INSTALL.md][discourse/INSTALL.md · GitHub]]
