@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       a53fa3c5-f091-4715-a1a4-a94071407abf
+:mtime:    20230215101306
+:ctime:    20230215101306
+:END:
+#+TITLE: Arch Linux
+#+FILETAGS: :gnu:linux:arch:

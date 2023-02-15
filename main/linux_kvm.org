@@ -1,0 +1,85 @@
+:PROPERTIES:
+:ID:       fab2461a-c95a-47e3-9e5d-64af083c92e0
+:mtime:    20230215115830 20230215101403
+:ctime:    20230215101403
+:END:
+#+TITLE: Linux KVM
+#+FILETAGS: :gnu:linux:virtualmachine:vm:
+
+KVM ([[https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine][Kernel-based Virtual Machine]]) is a kernel level approach to running Virtual Machines (an operating system running
+under an existing OS). KVM utilises [[https://wiki.qemu.org/Main_Page][QEMU]] for creating and managing images.
+
+* Setup
+
+** Pre-requisites
+
+You need to have kernel level support for KVM see the  [[https://wiki.archlinux.org/title/KVM][KVM - ArchWiki - Arch Linux]] for details. You also need to install
+~qemu~. Under [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] there are two options ~qemu-full~ or ~qemu-base~ which excludes a GUI.
+
+** User Permissions
+
+To be able to use ~qemu~ as a user you need to ensure your user account is a member of the group ~qemu~. Either edit
+~/etc/group~ directly adding your username to the group or as using ~sudo~ / as ~root~.
+
+#+begin_src bash
+  sudo usermod -a -G qemu <username> # using sudo
+  usermod -a -G qemu <username>      # as root
+#+end_src
+
+** Create a Hard Disk Images
+
+The virtual machine requires somewhere to reside on the operating system that is in essence a ring-fenced section of the
+hard disk that only it reads and writes to. Here we create a disk with 16Gb called ~ubuntu22~ (as the example installs
+the Ubuntu 22.0.4.1 image).
+
+#+begin_src bash
+  mkdir -p ~/vm/{iso,disk}
+  cd ~/vm/disk
+  qemu-img create -f raw <image_file> 16G
+  ls -lha
+  drwxr-xr-x neil neil 4.0 KB Wed Feb 15 10:22:13 2023  .
+drwxr-xr-x neil neil 4.0 KB Wed Feb 15 10:21:39 2023  ..
+.rw-r--r-- neil neil  16 GB Wed Feb 15 10:22:13 2023  ubuntu22
+#+end_src
+
+** Obtain a disk image
+
+Many distributions provide ~.iso~ images for installation download one.
+
++ [[https://www.gentoo.org/downloads/][Gentoo]] - includes a LiveUSB with desktop
++ [[https://archlinux.org/download/][Arch]] - Fairly basic
++ [[https://ubuntu.com/download/desktop][Ubuntu]] - I prefer [[https://xubuntu.org/download/][Xubuntu]] if I'm going to be using a desktop environment.
+
+Save this to the ~~/vm/disk~ directory.
+
+** Install the operating system
+
+Now install the operating system (i.e. the ~.iso~ image) onto the hard disk using the following. We use the ~-m 4G~
+switch to allocate 4GB of RAM and the ~-enable-kvm~ to enable Kernel-based Virtual Machine (KVM) (you can also
+use ~-accel kvm~).
+
+#+begin_src bash
+  cd ~/vm/disk/
+  qemu-system-x86_64 -cdrom ~/vm/iso/ubuntu-22.04.1-desktop-amd64.iso -boot order=d -drive file=ubuntu22,format=raw \
+                     -m 4G -enable-kvm
+#+end_src
+
+This starts the operating system, a window appears and you should see a GRUB boot menu from where you can launch the OS
+and install it. Go through the installation steps but at the end do /not/ reboot, instead shut it down by using ~Ctrl-c~
+on the host (i.e. killing the process from the command line).
+
+** Boot newly installed VM
+
+Now when you start the image you can exclude the ~-cdrom~ option since you have already installed the OS into the disk
+image.
+
+#+begin_src bash
+  cd ~/vm/disk/
+  qemu-system-x86_64 -boot order=d -drive file=ubuntu22,format=raw -m 4G -enable-kvm
+#+end_src
+
+
+* Links
+
++ [[https://wiki.archlinux.org/title/KVM][KVM - ArchWiki - Arch Linux]]
++ [[https://wiki.archlinux.org/title/QEMU][QEMU - ArchWiki - Arch Linux]]
