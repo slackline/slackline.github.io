@@ -92,7 +92,7 @@ Read more about [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]].
 + [[https://www.reddit.com/r/orgmode/][Reddit Org-mode]]
 
 ** Pre-packaged Emacs distributions
-+ [[https://github.com/bbatsov/prelude][Prelude]] an enhanced Emacs distribution that should make your experience with Emacs both more pleasant and more powerful.
++ [[https://github.com/bbatsov/preldu
 + [[https://github.com/hlissner/doom-emacs][doom-emacs]] an Emacs framework for the stubborn martian hacker
 + [[https://www.spacemacs.org/][Spacemacs]] Emacs advanced Kit focused on Evil
 
@@ -109,6 +109,7 @@ Read more about [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]].
 
 ** Advocacy
 + [[https://www.fugue.co/blog/2015-11-11-guide-to-emacs.html][A CEO's Guide to Emacs]] - a few dated bits (e.g. ~\~/.config/emacs~ is now supported) but very good.
++ [[https://lucidmanager.org/productivity/][Lucid Manager - Productivity]] - lots of clear articles on Emacs.
 
 *** Video Tutorials
 
