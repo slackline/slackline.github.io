@@ -17,9 +17,9 @@ work machines as I don't have time to tinker/maintain them in addition to my lon
 * Topics
 
 + [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]]
-+ [[id:fab2461a-c95a-47e3-9e5d-64af083c92e0][KVM]]
++ [[id:fab2461a-c95a-47e3-9e5d-64af083c92e0][QEMU]]
 
 ** Web Services
 
 + [[id:3774439d-af75-453e-b3e9-9d578b6bec46][nginx]]
-+[[id:13de4e0e-4c14-48c8-897e-42862be8cfc1][discourse]]
++ [[id:13de4e0e-4c14-48c8-897e-42862be8cfc1][discourse]]

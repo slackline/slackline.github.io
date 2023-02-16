@@ -13,8 +13,30 @@ going.
   sudo su
   apt-get upgrade # Upgrade all packages
   apt autoremove # Remove old packages
-  apt-get install git docker
+  apt-get install git curl emacs
 #+end_src
+
+Now clone the Discourse Docker repository and run the install script. This will probably inform you that Docker isn't
+installed but that is ok, the script will add the Docker repository for you, then download and install Docker for you
+(as described in [[https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04][this article]] but without you having to do anything).
+
+#+begin_src
+  git clone https://github.com/discourse/discourse_docker.git /var/discourse
+  cd /var/discourse
+  chmod 700 containers
+  ./discourse-setup
+#+end_src
+
+You are now prompted for information about where the service will be running. You need a valid ~Hostname~ and email
+address for administrator, an SMTP server and ideally a [[https://letsencrypt.org/][Let's Encrypt account]] so you can run the server on
+~https~. **NB** If things go wrong remove the ~/var/discourse/containers/app.yaml~ file and start again.disc
+
+* Questions/Problems
+
++ Need a valid domain (~discourse.curbar.shef.ac.uk~?).
++ Need to have ports ~80~/~443~ open (ideally the later), need to configure firewall to do so.
++ Need an SMTP server on the host (or elsewhere?) to handle sending emails, possibly [[https://marlam.de/msmtp/][msmtp]]?
+
 
 
 * Links
