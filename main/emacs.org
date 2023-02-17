@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       754f25a5-3429-4504-8a17-4efea1568eba
-:mtime:    20230217113056 20230216205143 20230205122258 20230205081022 20230203235526 20230120215724 20230114080430 20230109075443 20230106185900 20230103103311 20221229203153
+:mtime:    20230217165509 20230217113056 20230216205143 20230205122258 20230205081022 20230203235526 20230120215724 20230114080430 20230109075443 20230106185900 20230103103311 20221229203153
 :ctime:    20221229203153
 :END:
 #+TITLE: Emacs
@@ -19,7 +19,7 @@ Packages are what makes Emacs so great, there is literally a [[https://xkcd.com/
 There are a number of ways of repositories that host repositories (see [[#packages]])
 
 Sometimes packages need to be byte-compiled again, this can be achievdw using ~M-: (byte-recompile-directory
-package-user-dir nil 'force')~.
+package-user-dir nil 'force)~.
 
 * Dired
 
