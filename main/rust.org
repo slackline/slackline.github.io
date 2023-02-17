@@ -1,15 +1,16 @@
 :PROPERTIES:
 :ID:       3469c33e-7c61-46c7-b01e-655695f3b93c
-:mtime:    20230215001041 20230103103309 20221224191223
+:mtime:    20230217212451 20230215001041 20230103103309 20221224191223
 :ctime:    20221224191223
 :END:
 #+TITLE: Rust
 #+DATE: <2022-12-22 Thu 11:46>
-#+FILETAGS: programming:rust
+#+FILETAGS: :programming:rust:
+
 
 * Links
 
-+ [[https://google.github.io/comprehensive-rust/][Welcome to Comprehensive Rust - Comprehensive Rust]]
++ [[https://google.github.io/comprehensive-rust/][Welcome to Comprehensive Rust - Comprehensive Rust]] ([[id:9445ca44-1e8a-4b58-92b7-5f43894f4ff3][rust_comprehensive]])
 
 ** Miscellaneous
 
