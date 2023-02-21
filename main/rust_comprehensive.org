@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       9445ca44-1e8a-4b58-92b7-5f43894f4ff3
+:mtime:    20230217214057
+:ctime:    20230217214057
+:END:
+#+TITLE: Rust Comprehensive
+#+FILETAGS: :programming:rust:learning:
+
+These are my notes from working through the [[https://google.github.io/comprehensive-rust/][Comprehensive Rust]] course.
+
++ [[https://gitlab.com/nshephard/rust][GitLab · rust]]
+
+* Links
+
++ [[https://google.github.io/comprehensive-rust/][Comprehensive Rust]]
++ [[https://doc.rust-lang.org/book/title-page.html][The Rust Programming Language]]

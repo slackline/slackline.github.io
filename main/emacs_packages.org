@@ -1,0 +1,55 @@
+:PROPERTIES:
+:ID:       ff8ee302-7518-4179-9bcb-63b13199f897
+:mtime:    20230221192929
+:ctime:    20230221192929
+:END:
+#+TITLE: Emacs Packages
+#+FILETAGS: :emacs:packages:elpa:melpa:usepackage:elpaca:
+
+Packages for [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] are distributed via Emacs Lisp Package Archives (ELPA) and there are a few different
+repositories. The following sets these in order of preference.
+
+#+begin_src elisp
+  (setq package-archives
+      '(("GNU ELPA"	. "https://elpa.gnu.org/packages/")
+        ("NonGNU ELPA"  . "https://elpa.nongnu.org/nongnu/")
+        ("MELPA Stable" . "https://stable.melpa.org/packages/")
+        ("MELPA"	. "https://melpa.org/packages/"))
+      package-archive-priorities
+      '(("MELPA" . 10)
+        ("GNU ELPA"	. 5)
+        ("NonGNU ELPA"	. 5)
+        ("MELPA Stable"	. 0)))
+#+end_src
+
+* Managing Packages
+
+There are a few different package management systems, I tend to use [[https://github.com/jwiegley/use-package][use-package]] as it is simple and
+declarative. Recently I came across the new [[https://github.com/progfolio/elpaca][elpaca: An elisp package manager]]. The following from [[https://ianyepan.github.io/posts/setting-up-use-package/][A Quick Tutorial on
+Use-package for Emacs | Ian Y.E. Pan]] ensures ~use-package~ is installed, if not it will install and then load it.
+
+** ~use-package~
+
+#+begin_src elisp
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(eval-and-compile
+  (setq use-package-always-ensure t
+        use-package-expand-minimally t))
+#+end_src
+
+Best resource for learning is the [[https://github.com/jwiegley/use-package][official documentation]] which covers everything. What follows is my understanding and I
+may have missed or misunderstood some things.
+
+One of the nice features of ~use-package~ is that it will install a package for you if its not present on a system.
+
+
+* Links
+
++ [[https://github.com/jwiegley/use-package][jwiegley/use-package: A use-package declaration for simplifying your .emacs]]
++ [[https://github.com/progfolio/elpaca][progfolio/elpaca: An elisp package manager]]
+
+** Resources
+
++ [[https://ianyepan.github.io/posts/setting-up-use-package/][A Quick Tutorial on Use-package for Emacs | Ian Y.E. Pan]]
