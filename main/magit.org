@@ -34,7 +34,8 @@ Rebasing in Magit is super easy, for a simple walk-through see [[https://chainsa
 
 ** Bisecting
 
-[[id:323647af-4d22-4b24-9763-320da9a1d76d][Bisecting]] can be done in Magit, see
+[[id:323647af-4d22-4b24-9763-320da9a1d76d][Bisecting]] can be done in Magit, see [[id:ebb1b921-f075-47ba-a21f-90666b6acfec][Magit Bisect]].
+
 ** Forge
 :PROPERTIES:
 :ID:       052e079f-d42b-4e19-adff-811335a2c852
