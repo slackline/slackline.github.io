@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3c905838-8de4-4bb6-9171-98c1332456be
-:mtime:    20230221192943 20230215114358 20230211152529 20230210121042 20230210080322 20230205130316 20230204200706 20230129165730 20230124163440 20230123090405 20230121175735 20230103150851 20230103103309 20230102213516 20230103103309
+:mtime:    20230222123220 20230221192943 20230215114358 20230211152529 20230210121042 20230210080322 20230205130316 20230204200706 20230129165730 20230124163440 20230123090405 20230121175735 20230103150851 20230103103309 20230102213516 20230103103309
 :ctime:    20230102213516 20230103103309
 :END:
 #+TITLE: Git
@@ -288,6 +288,7 @@ git reset --hard FETCH_HEAD
 git clean -df
 #+end_src
 
+
 * Branches
 The beauty of Git is that it allows multiple people to work on the same software project without interfering with each
 others work.  This is done through [[https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging][]branching and merging]].
@@ -477,6 +478,30 @@ Sometimes you may not want to keep your stashes, you can discard the most recent
   git stash clear
 #+end_src
 
+* Git Bisect
+:PROPERTIES:
+:ID:       323647af-4d22-4b24-9763-320da9a1d76d
+:mtime:    20230222123220
+:ctime:    20230222123220
+:END:
+
+[[https://git-scm.com/docs/git-bisect][git bisect]] is a useful tool for debugging where an error has been introduced into a pipeline. It requires a starting
+commit where code worked, and an end commit where it does.  A useful article is [[https://www.git-tower.com/learn/git/faq/git-bisect/][Using "git bisect" to Quickly Find Bugs]]
+and this serves as a template for the following examples.
+
+#+begin_src sh
+  git bisect start
+  git bisect bad HEAD
+  git bisect good <hash>
+#+end_src
+
+Git will then automatically checkout the revisions in the middle of this range and we have to run our tests or builds to
+check if things work, marking the commit as ~git bisect good~ or ~git bisect bad~. Git then repeats this process
+splitting the commit range again. This is repeated until a bad commit is found and we have our problem.
+
+On completion ~git bisect reset~ restores ~HEAD~.
+
+This can be done in [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] of course!
 * Hooks
 :PROPERTIES:
 :ID:       3e2b5f0c-2dff-45c1-ae9c-7cc43b5c81ae

@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       ebb1b921-f075-47ba-a21f-90666b6acfec
+:mtime:    20230222123817
+:ctime:    20230222123817
+:END:
+#+TITLE: Magit Bisect
+#+FILETAGS: :magit:git:bisect:
+
+[[id:323647af-4d22-4b24-9763-320da9a1d76d][Bisecting]] in [[https://magit.vc/manual/magit/Bisecting.html][Magit]] is started with ~B~ to set the start (i.e. the good commit), the bad is taken to be the ~HEAD~ of the
+current branch. When bisecting is in progress there are transient suffixes to mark commits as "Bad" (~b~), "Good" (~g~)
+"Mark" (~m~) which allows the use of terms other than "Bad" and "good", "Skip" (~k~) and when complete to "Reset" (~r~).

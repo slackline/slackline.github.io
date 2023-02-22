@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       220d7ba9-d30e-4149-a25b-03796e098b0d
-:mtime:    20230103103309 20221228103404 20230103103308
+:mtime:    20230222123344 20230103103309 20221228103404 20230103103308
 :ctime:    20221228103404 20230103103308
 :END:
 #+TITLE: Magit
@@ -32,6 +32,9 @@ setup but you should read the [[https://magit.vc/manual/forge.html#Getting-Start
 
 Rebasing in Magit is super easy, for a simple walk-through see [[https://chainsawriot.com/postmannheim/2022/12/12/aoe12.html][here]].
 
+** Bisecting
+
+[[id:323647af-4d22-4b24-9763-320da9a1d76d][Bisecting]] can be done in Magit, see
 ** Forge
 :PROPERTIES:
 :ID:       052e079f-d42b-4e19-adff-811335a2c852
