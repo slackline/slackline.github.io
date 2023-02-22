@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5b5d1562-ecb4-4199-b530-e7993723e112
-:mtime:    20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
+:mtime:    20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
 :ctime:    20221217185215 20230103103308
 :END:
 #+TITLE: Python
@@ -106,16 +106,14 @@ Dictionaries can be pretty printed using the ~json.dumps()~ method.
 * Decorators
 :PROPERTIES:
 :ID:       eb1027f2-0e37-4e60-9c41-d27de3e01243
-:mtime:    20230105135432 20230103103313 20221217185215
+:mtime:    20230222142114 20230105135432 20230103103313 20221217185215
 :ctime:    20221217185215
 :END:
 Decorators are really useful, they save you time and effort by handling a lot of functionality that would take time to
 write yourself. As you might expect there are a lot of decorators out there, for example [[id:3cca0dfd-0c82-4685-b9ed-6314f7c8b78f][Python Pytest]] has a bunch of
 its own which make using certain functionality in writing tests simple.
 
-+ [[id:507361e4-8252-4398-9747-ad53f7724997][@property]]
-+ @staticmethod
-
+Read more on different decorators at [[id:7303cb84-7406-43ed-81d0-bbd3c4961faa][python_decorators]]
 
 * I/O
 :PROPERTIES:
@@ -188,7 +186,7 @@ code and wisdom, whether that is via [[https://www.reddit.com/r/python][/r/pytho
 Really good set of resources
 
 + [[https://realpython.com/][Python Tutorials]]
-  
+
 **** Design Patterns
 
 + [[https://realpython.com/inheritance-composition-python/][Inheritance and Composition: A Python OOP Guide]]
@@ -203,4 +201,3 @@ Really good set of resources
 
 + [[https://pythonspeed.com/performance/][Speed up your code]]
 + [[https://pythonspeed.com/articles/json-memory-streaming/][Processing large JSON files in Python without running out of memory]]
-

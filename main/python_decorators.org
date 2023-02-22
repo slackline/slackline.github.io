@@ -1,0 +1,263 @@
+:PROPERTIES:
+:ID:       7303cb84-7406-43ed-81d0-bbd3c4961faa
+:mtime:    20230222161526 20230222141423
+:ctime:    20230222141423
+:END:
+#+TITLE: Python Decorators
+#+FILETAGS: :python:decorators:
+
+Decorators wrap one function inside another, because this can be done explicitly this is sometimes referred to as
+"syntactic sugar". See [[https://realpython.com/primer-on-python-decorators/][Primer on Python Decorators - Real Python]].
+
+
+
+* Common Decorators
+
+** Property
+
++ [[id:507361e4-8252-4398-9747-ad53f7724997][@property]]
+
+The ~@property~ decorator facilitates adding, setting, modifying and deleting properties to your class.
+
+From  [[https://realpython.com/python-getter-setter/][Getters and Setters: Manage Attributes in Python – Real Python]]
+
+#+begin_src python
+  class Person():
+      """A persons information"""
+      def __init__(self, name, surname, age):
+          self.name = name
+          self.surname = surname
+          self.age = agenda
+
+      @property
+      def name(self)
+          return self._name
+
+      @name.setter
+      def name(self, value)
+          self._name = value_
+
+      @property
+      def surname(self)
+          return self._surname
+
+      @surname.setter
+      def surname(self, value)
+          self._surname = value_
+
+      @property
+      def age(self)
+          return self._age
+
+      @age.setter
+      def age(self, value)
+          self._age = value_
+
+#+end_src
+
+
+** <type>method
+
+[[https://stackoverflow.com/a/12179752/1444043][@classmethod and @staticmethod (StackOverflow)]]
+
+*** @staticmethod
+
+Used within a class when a method does not use any ~self~ properties.
+
+#+begin_src python
+    @staticmethod
+    def calc_diff(array: np.ndarray) -> np.ndarray:
+        """Calculate the difference of an array."""
+        return array[-1] - array[0]
+#+end_src
+
+
+** numba
+
+[[https://numba.pydata.org/][Numba]] is a Just In Time (JIT) compiler that compiles Python code on execution and makes it run faster.
+
+*** @njit
+
+The ~@njit~ decorator is simple to use, in its most basic form all you need to do is decorate your function with it.
+
+#+begin_src python
+  from numba import njit
+  import random
+
+  @njit
+  def monte_carlo_pi(nsamples):
+      acc = 0
+      for i in range(nsamples):
+          x = random.random()
+          y = random.random()
+          if (x ** 2 + y ** 2) < 1.0:
+              acc += 1
+      return 4.0 * acc / nsamples
+#+end_src
+
+** Pytest
+
+[[id:3cca0dfd-0c82-4685-b9ed-6314f7c8b78f][Python Pytest]] has a number of decorators that make life easier.
+
+*** @pytest.fixture()
+
+The most common decorator in Pytest this makes the results of the function that is decorated available to be used in
+other test functions. The neat thing is its only evaluated once so if for example you have a bunch of tests that require
+a Numpy Array you define a fixture and then use it repeatedly.  Typically I'd define fixtures within the
+~tests/conftest.py~ which is used for setting things up for tests
+
+#+begin_src python
+...
+
+@pytest.fixture
+def image_random() -> np.ndarray:
+    """Random image as NumPy array."""
+    rng = np.random.default_rng(seed=1000)
+    return rng.random((1024, 1024))
+
+@pytest.fixture
+def test_filters(load_scan: LoadScans, filter_config: dict) -> Filters:
+    """Filters class for testing."""
+    load_scan.get_data()
+    filters = Filters(
+        image=load_scan.image,
+        filename=load_scan.filename,
+        pixel_to_nm_scaling=load_scan.pixel_to_nm_scaling,
+        **filter_config,
+    )
+    return filters
+
+@pytest.fixture
+def test_filters_random(test_filters: Filters, image_random: np.ndarray) -> Filters:
+    """Filters class for testing with pixels replaced by random image."""
+    test_filters.images["pixels"] = image_random
+    return test_filters
+
+def test_calc_diff(test_filters_random: Filters, image_random: np.ndarray) -> None:
+    """Test calculation of difference in array."""
+    target = image_random[-1] - image_random[0]
+    calculated = test_filters_random.calc_diff(test_filters_random.images["pixels"])
+
+    np.testing.assert_array_equal(target, calculated)
+
+#+end_src
+
+*** @pytest.mark.parametrize()
+
+This is really useful for parametrizing tests.
+
+#+begin_src python
+"""Test validation function."""
+from contextlib import nullcontext as does_not_raise
+from pathlib import Path
+from schema import Or, Schema, SchemaError
+import pytest
+
+from topostats.validation import validate_config
+
+TEST_SCHEMA = Schema(
+    {
+        "a": Path,
+        "b": Or("aa", "bb", error="Invalid value in config, valid values are 'aa' or 'bb"),
+        "positive_integer": lambda n: 0 < n,
+        "absolute_threshold": Or(int, float, error=("Invalid value in config should be type int or float")),
+    }
+)
+
+
+@pytest.mark.parametrize(
+    "config, expectation",
+    [
+        # A valid configuration
+        ({"a": Path(), "b": "aa", "positive_integer": 4, "absolute_threshold": 10.0}, does_not_raise()),
+        # Invalid value for a (string instead of Path)
+        ({"a": "path", "b": "aa", "positive_integer": 4, "absolute_threshold": 10.0}, pytest.raises(SchemaError)),
+        # Invalid value for b (int instead of str)
+        ({"a": Path(), "b": 3, "positive_integer": 4, "absolute_threshold": 10.0}, pytest.raises(SchemaError)),
+        # Invalid value for positive_integer (-ve instead +ve)
+        ({"a": Path(), "b": 3, "positive_integer": -4, "absolute_threshold": 10.0}, pytest.raises(SchemaError)),
+        # Invalid value for absolute_threshold (str instead of int/float)
+        ({"a": Path(), "b": 3, "positive_integer": -4, "absolute_threshold": "five"}, pytest.raises(SchemaError)),
+    ],
+)
+def test_validate(config, expectation) -> None:
+    """Test various configurations."""
+    with expectation:
+        validate_config(config, schema=TEST_SCHEMA, config_type="Test YAML")
+#+end_src
+
+*** @pytest.mark.skipif()
+
+Conditionally skip tests. Used this on a project where floating point results were conditional on the CPU Architecture
+so we set up two sets of tests, one to run on the quirky CPU another to run on all others.
+
+#+begin_src python
+@pytest.mark.skipif(
+    re.search("E5-2673", CPUINFO["brand_raw"]),
+    reason="Xeon E5-2673 CPU arch gives a different value",
+)
+def test_torch_msbg_stoi_non_xeon_e5_2673_cpu(regtest):
+    torch.manual_seed(0)
+    torch.set_num_threads(1)
+    stoi_loss = NegSTOILoss(sample_rate=44100)
+    estoi_loss = NegSTOILoss(sample_rate=44100, extended=True)
+
+    audiogram = [45, 35, 30, 45, 50, 50]
+    audiometric = [250, 500, 1000, 2000, 4000, 6000]
+    msbg = MSBGHearingModel(audiogram=audiogram, audiometric=audiometric, device="cpu")
+
+    x = torch.randn(2, 44100)
+    y = msbg(x)
+    stoi_loss = stoi_loss.forward(x.cpu(), y.cpu()).mean()
+    estoi_loss = estoi_loss.forward(x.cpu(), y.cpu()).mean()
+
+    regtest.write(
+        f"Torch MSBG STOILoss {stoi_loss:0.5f}, ESTOILoss {estoi_loss:0.5f}\n"
+    )
+
+
+@pytest.mark.skipif(
+    not re.search("E5-2673", CPUINFO["brand_raw"]),
+    reason="Test value obtained with Xeon E5-2673",
+)
+def test_torch_msbg_stoi_xeon_e5_2673_cpu(regtest):
+    torch.manual_seed(0)
+    torch.set_num_threads(1)
+    stoi_loss = NegSTOILoss(sample_rate=44100)
+    estoi_loss = NegSTOILoss(sample_rate=44100, extended=True)
+
+    audiogram = [45, 35, 30, 45, 50, 50]
+    audiometric = [250, 500, 1000, 2000, 4000, 6000]
+    msbg = MSBGHearingModel(audiogram=audiogram, audiometric=audiometric, device="cpu")
+
+    x = torch.randn(2, 44100)
+    y = msbg(x)
+    stoi_loss = stoi_loss.forward(x.cpu(), y.cpu()).mean()
+    estoi_loss = estoi_loss.forward(x.cpu(), y.cpu()).mean()
+
+    regtest.write(
+        f"Torch MSBG STOILoss {stoi_loss:0.5f}, ESTOILoss {estoi_loss:0.5f}\n"
+    )
+#+end_src
+
+** Dataclass
+
+[[https://docs.python.org/3/library/dataclasses.html][dataclass]] provisions a number special methods to a class so they don't need writing. You can choose which ones to
+provision when decorating e.g.
+
+#+begin_src python
+  from dataclasses import dataclass
+  @dataclass(init=True, repr=True, eq=False, order=True)
+#+end_src
+
+Some of these actually add multiple methods, e.g. ~order~ add ~__lt__()~, ~__le__()~, ~__gt__()~ and ~__ge__()~.
+** Pydantic
+
+Pydantic, which is used for enforcing typing of objects, has a [[https://docs.pydantic.dev/usage/validation_decorator/][validation_decorator]].
+
+* Links
+
++ [[https://www.pythontutorial.net/python-oop/python-property-decorator/][Python Property Decorator]]
++ [[https://realpython.com/primer-on-python-decorators/][Primer on Python Decorators - Real Python]]
++ [[https://realpython.com/python-getter-setter/][Getters and Setters: Manage Attributes in Python – Real Python]]
++ [[https://stackoverflow.com/a/12179752/1444043][Meaning of @staticmethod and @classmethod decorators]]
