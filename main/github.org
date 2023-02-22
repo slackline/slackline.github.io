@@ -57,6 +57,8 @@ worthwhile below.
 ** GitHub Pages
 + [[https://pages.github.com/][Websites for you and your projects, hosted directly from your GitHub repository.]]
 
+** Configuration
++ [[https://github.com/repository-settings/app][repisotyr-settings/app]] Configure repositories via a config file.
 ** Automation
 + [[https://docs.github.com/en/actions][GitHub Actions Documentation]]
 + [[https://github.com/actions][GitHub Actions Library]]
