@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5b5d1562-ecb4-4199-b530-e7993723e112
-:mtime:    20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
+:mtime:    20230223120221 20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
 :ctime:    20221217185215 20230103103308
 :END:
 #+TITLE: Python
@@ -12,10 +12,13 @@ accounts be using Python > 3.6 although you may encounter situations where Pytho
 end-of-life was [[https://endoflife.date/python][2010-07-03]].
 
 * Packages
+
 + MatplotLib
 + [[id:d7b0fb90-d668-4e31-bc2d-305f6ee14fc9][Numpy]]
 + Pandas
 + SciPy
++ [[id:d9176707-8c60-4557-a181-7780d3215cbe][python_pickle]]
+
 
 * Linting
 
@@ -161,6 +164,7 @@ There are also a ton of useful and interesting packages out there. I've document
 * Documentation
 
 Python has a powerful and flexible ecosystem for creating documentation called Sphinx, read more about [[id:7318aee8-c864-40cb-9462-4ce36ac56d35][documentation]].
+
 * [[id:ec8e7ee9-0316-4de2-98c1-f775c20b0e35][Data Analysis and Visualisation]]
 
 Python has a very mature and well developed set of packages for statistical computing, data analysis and visualisation.

@@ -18,8 +18,8 @@ Packages are what makes Emacs so great, there is literally a [[https://xkcd.com/
 
 There are a number of ways of repositories that host repositories (see [[id:ff8ee302-7518-4179-9bcb-63b13199f897][emacs_packages]])
 
-Sometimes packages need to be byte-compiled again, this can be achievdw using ~M-: (byte-recompile-directory
-package-user-dir nil 'force)~.
+Sometimes packages need to be byte-compiled again, this can be achieved using ~M-: (byte-recompile-directory
+package-user-dir nil 'force)~ which will [[https://stackoverflow.com/a/1217249][force compilation]] of existing ~.elc~ files.
 
 * Dired
 

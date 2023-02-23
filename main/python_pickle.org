@@ -1,0 +1,40 @@
+:PROPERTIES:
+:ID:       d9176707-8c60-4557-a181-7780d3215cbe
+:mtime:    20230223120312
+:ctime:    20230223120312
+:END:
+#+TITLE: Python Pickle
+#+FILETAGS: :python:pickle:
+
+Pickles are Pythons way of serialising and saving to disk objects, whether they are dictionaries, lists, arrays, Pandas
+DataFrames, Matplotlib Images or any other type of Python object (and everything in Python is an object!). These are
+saved to disk and can be loaded again in the future for subsequent usage and modification.
+
+* Saving Pickles
+
+#+begin_src python
+  import pickle as pkl
+  from pathlib import Path
+
+  import numpy as np
+
+  dummy_array = np.random.rand(1024, 1024)
+
+  out_dir = Path().cwd()
+  outfile = out_dir / "my.pkl"
+  with outfile.open(mode="wb", encoding="utf-8") as f:
+      pkl.dump(dummy_array, f)
+#+end_src
+
+* Loading Pickles
+
+#+begin_src python
+  pkl_path = Path("./my.pkl")
+  with pkl_path.open("rb", encoding="utf-8") as f:
+      dummy_array = pkl.load(f)
+#+end_src
+
+* Links
+
++ [[https://docs.python.org/3/library/pickle.html][pickle Module]]
++ [[https://realpython.com/python-pickle-module/][Real Python - Python Pickle Module]]
