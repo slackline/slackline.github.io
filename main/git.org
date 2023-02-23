@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3c905838-8de4-4bb6-9171-98c1332456be
-:mtime:    20230222123220 20230221192943 20230215114358 20230211152529 20230210121042 20230210080322 20230205130316 20230204200706 20230129165730 20230124163440 20230123090405 20230121175735 20230103150851 20230103103309 20230102213516 20230103103309
+:mtime:    20230223115655 20230222123220 20230221192943 20230215114358 20230211152529 20230210121042 20230210080322 20230205130316 20230204200706 20230129165730 20230124163440 20230123090405 20230121175735 20230103150851 20230103103309 20230102213516 20230103103309
 :ctime:    20230102213516 20230103103309
 :END:
 #+TITLE: Git
@@ -402,6 +402,19 @@ main~ all conflicts have to be dealt with in one go, however with ~git rebase ma
 is merged with your branch in turn and requires any conflicts to be resolved before merging the next commit. This can
 make resolving conflicts a lot easier.
 
+** Copy files between branches
+
+This isn't particularly advisable as you lose history which is the antithesis of Git, but sometimes you may wish to pull
+a file from one branch to another. This can be done by checking out the destination branch (e.g. ~new_feature~) and the
+using ~git checkout~ to pull from the branch where the file exists. **WARNING** This can be destructive as it will
+over-write the file on ~new_feature~ with what ever is on the other branch. It is therefore only wise to do this with
+new files or if you are absolutely certain that you have made no changes to the file on your ~new_feature~ branch and
+are not going to lose anything.
+
+#+begin_src sh
+  git checkout -b new_feature    # Create and checkout a new branch
+  git checkout old_feature_branch -- path/to/file/in/old_feature_branch
+#+end_src
 ** Trees instead of branches
 
 One of the challenges of working on branches is that whilst its easy to switch between them if you have work in progress
