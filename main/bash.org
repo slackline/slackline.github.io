@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9c6257dc-cbef-4291-8369-b3dc6c173cf2
-:mtime:    20230105145245 20230103103313 20221231194258 20230103103312
+:mtime:    20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
 :ctime:    20221231194258
 :END:
 #+TITLE: Bash
@@ -14,8 +14,64 @@ scripts to accomplish small tasks.
 
 * Bash Scripts
 
+** Setting Flags
+
+Scripts can store options using the following pattern.
+
+#+begin_src sh
+set -e
+set -o pipefail
+
+usage()
+{
+    echo "usage : flac2mp3 [ -d DIR ] [ -j JOBS ] [ -b BITRATE ]"
+}
+
+while getopts "d:j:b:?h" option
+do
+    case $option in
+	d)
+	    INPUT_DIR=${OPTARG};;
+	j)
+	    JOBS=${OPTARG};;
+	b)
+	    BITRATE=${OPTARG};;
+	h|?)
+            usage
+            exit 0;;
+    esac
+done
+#+end_src
+
+** Coloured Messages
+
+Get coloured ~echo~ from a script using the following function.
+
+
+#+begin_src sh
+  function print_stage() {
+    echo -e " \e[33m*\e[39m \e[94m$1\e[39m"
+}
+#+end_src
+
+** Asking for Input
+
+A script can ask for input from users using the following ([[https://wiki.gentoo.org/wiki/LiveUSB#Automatic_drive-wide_installation_script][source]])
+
+#+begin_src sh
+  #!/bin/bash
+  set -e
+  FAVOURITE_COLOUR=${1:?Tell me your favouirite colour?}
+  FAVOURITE_FOOD=%{2:?What is your favourite food?}
+#+end_src
+
+** Lint your Scripts
+
+Lint your scripts with [[https://www.shellcheck.net/][shellcheck]] and of course you can use [[id:a29a1e50-3cf2-4d88-a71d-7c600fdf8f65][Emacs LSP]] to do so on the fly.
+
 * Configuration
 
+Configuration of Bash on a per-user basis is via ~\~/.bashrc~ / ~\~/.bash_profile~ / ~\~/.bash_aliases~
 ** Aliases
 :PROPERTIES:
 :ID:       c7d811f9-5e9f-43b9-9b0b-d647a399756c

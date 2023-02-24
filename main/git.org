@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0859ef9e-834d-4e84-8e67-fa7593a61e0b
-:mtime:    20230222225246
+:mtime:    20230224093757 20230222225246
 :ctime:    20230222225246
 :END:
 
@@ -646,6 +646,7 @@ It is often important to version control your data too, for more on this see [[i
 + [[http://gitignore.io/][gitignore.io]]
 + [[https://initialcommit.com/blog/git-sim][git-sim: Visually simulate Git operations in your own repos]]
 + [[https://github.com/wfxr/forgit][forgit]] eases use of Git at the command line
++ [[https://github.com/o2sh/onefetch][onefetch]] - command line utility for fast overview of a repository.
 
 ** Learning Resources
 
