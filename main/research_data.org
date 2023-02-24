@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       4c9eab3d-4ae2-4f48-a32c-925929fe60bf
-:mtime:    20230103103310 20221220065948
+:mtime:    20230224183541 20230103103310 20221220065948
 :ctime:    20221220065948
 :END:
 #+title: Open Research Data
@@ -32,6 +32,10 @@ consideration should be given to principles of GDPR.
 ** Articles
 + [[https://www.nature.com/articles/sdata201618][The FAIR Guiding Principles for scientific data management and stewardship | Scientific Data]]
 + [[https://rd-alliance.org/group/fair-research-software-fair4rs-wg/outcomes/fair-principles-research-software-fair4rs-0][FAIR Principles for Research Software (FAIR4RS Principles) | RDA]]
+
+** Resources
+
++ [[https://think.f1000research.com/open-data/toolkit/?utm_source=twitter&utm_medium=social&utm_campaign=JQB18930&utm_term=post][Open Data Toolkit - F1000 Research]]
 
 ** Tools
 + [[https://opentelemetry.io/][OpenTelemetry]]
