@@ -64,7 +64,7 @@ achieved through one of two packages.
 * TRAMP
 
 [[id:b9961a9e-e833-4160-aa8f-1c69b9cbb397][Emacs TRAMP]] is a really useful feature that allows you to open files as other users (e.g. ~root~) on your local file
-system or over [[id:b39ebc4e-3351-45e3-80b8-9780c76dbbb6][SSH]] to systems you have access to so you can edit files remotely.
+system or over [[id:b39ebc4e-3351-45e3-80b8-9780c76dbbb6][SSH]] to systems you have access to so you can edit files remotely. For more on this see [[id:b9961a9e-e833-4160-aa8f-1c69b9cbb397][Emacs TRAMP]].
 
 * Emacs Lisp
 
