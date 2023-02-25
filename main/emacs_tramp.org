@@ -40,7 +40,7 @@ To open files over SSH you should have access (obviously!) and ideally have setu
 process.
 
 #+begin_src emacs_lisp
-  C-x C-f /ssh::user@remote/
+  C-x C-f /ssh:user@remote:~/path/to/file
 #+end_src
 
 ** Shell Prompts
