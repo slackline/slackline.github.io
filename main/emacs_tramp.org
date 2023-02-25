@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b9961a9e-e833-4160-aa8f-1c69b9cbb397
-:mtime:    20230114083258 20230103103312 20221228105320
+:mtime:    20230225220747 20230114083258 20230103103312 20221228105320
 :ctime:    20221228105320
 :END:
 #+TITLE: Emacs TRAMP
@@ -42,6 +42,29 @@ process.
 #+begin_src emacs_lisp
   C-x C-f /ssh::user@remote/
 #+end_src
+
+** Shell Prompts
+
+One of the issues encountered was that the [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]] prompt that I use messes up with the ~ssh~ connection. To [[https://emacs.stackexchange.com/a/48089][disable this]]
+you should add the following to your ~\~/.zshrc~` to ensure many of the ZSH features are disabled when logging in.
+
+#+begin_src sh
+if [[ $TERM == "dumb" ]]; then
+│   unsetopt zle
+│   unsetopt prompt_cr
+│   unsetopt promppt_subst
+│   unfunction precmd
+│   unfunction preexec
+│   export PS1="$ "
+│   return
+fi
+#+end_sh
+
+This should be on the remote host so that the [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]] shell does not get initialised with all the bells and whistles that
+are otherwise enabled which prevents Emacs TRAMP from opening the file. If you have ~\~/.zshrc~ setup as a symbolic link
+to your ~dotfiles~ repository that is under version control then you only need to do this once and synchronise each
+repository so the changes propagate and you can then use TRAMP to open files across machines regardless of which you
+are actually sat at.
 
 * Links
 
