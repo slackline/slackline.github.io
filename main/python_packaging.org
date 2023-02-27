@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       bb57f65e-58f4-45de-9620-901dc998f6d6
-:mtime:    20230207111629 20230103103312 20221228113913 20230103103309
+:mtime:    20230227221806 20230207111629 20230103103312 20221228113913 20230103103309
 :ctime:    20221228113913 20230103103309
 :END:
 #+TITLE: Python Packaging
@@ -84,6 +84,8 @@ setuptools.setup(
 Setuptools is shifting towards using ~pyproject.toml~ and whilst it is still under development although its already
 highly functional. Its written in [[https://toml.io/en/][Tom's Obvious Minimal Language]] and isn't too dissimilar in structure to ~setup.cfg~.
 
+A useful reference for writing your configuration in ~pyproject.toml~ is [[https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html][Configuring setuptools using pyproject.toml
+files]].
 
 A bare-bones ~pyproject.toml~ file should reside in the top level of your directory with the following...
 
@@ -410,6 +412,10 @@ manually when you are ready for a release and it doesn't tie in with using tags 
 
 It is worth taking a moment to read and understand about [[https://semver.org/][Semantic Versioning]] which you are likely to use in versioning
 your software.
+
+** Setuptools_scm
+[[https://github.com/pypa/setuptools_scm][pypa/setuptools_scm]] is a newer tool compared to [[id:versioneer][Versioneer]] but appears to do the same thing. It relies on
+~pyproject.toml~.
 
 ** Versioneer
 :PROPERTIES:
