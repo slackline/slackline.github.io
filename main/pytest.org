@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3cca0dfd-0c82-4685-b9ed-6314f7c8b78f
-:mtime:    20230207144419 20230103103309 20221212233350
+:mtime:    20230227155044 20230207144419 20230103103309 20221212233350
 :ctime:    20221212233350
 :END:
 #+TITLE: Python Pytest
@@ -120,6 +120,46 @@ def circle_coordinates(request) -> np.ndarray:
 
 I came across an article advocating [[https://simonwillison.net/2018/Jul/28/documentation-unit-tests/][Documentation unit tests]] and showing one approach to testing documentation.
 
+** Logging
+
+Pytest has good support for testing logging and provides the fixture ~caplog~. You can set the level at which logs are
+captured by ~caplog~ on the default root logger by setting ~caplog.set_level(logging.INFO)~ but you can also do this on
+a specific logger with ~caplog.set_level(logging.DEBUG, logger=LOGGER_NAME)~. Found a useful note about this on a [[https://github.com/pytest-dev/pytest/issues/7335#issuecomment-1319008772][thread
+on GitHub]].
+
+A simple example using [[https://github.com/AFM-SPM/TopoStats/blob/main/topostats/logs/logs.py][TopoStats setup_logger()]] to check debug levels is.
+
+#+begin_src python
+"""Tests for logging"""
+import logging
+from topostats.logs.logs import setup_logger, LOGGER_NAME
+
+
+LOGGER = setup_logger(LOGGER_NAME)
+
+
+def test_setup_logger(caplog) -> None:
+    """Test logger setup"""
+    test_info = "This is a test message"
+    LOGGER.info(test_info)
+    assert isinstance(LOGGER, logging.Logger)
+    assert test_info in caplog.text
+
+
+def test_debug(caplog) -> None:
+    """Test logging debug messages."""
+    test_debug = "This is a debug message"
+    # Set the level of logging to DEBUG in the topostats logger
+    caplog.set_level(logging.DEBUG, logger=LOGGER_NAME)
+    LOGGER.debug(test_debug)
+    with caplog.at_level(logging.DEBUG):
+        assert isinstance(LOGGER, logging.Logger)
+        assert test_debug in caplog.text
+#+end_src
+
+These tests pass.
+
+
 * Plugins
 
 There are lots of PyTest plugins/extensions.
@@ -137,3 +177,5 @@ There are lots of PyTest plugins/extensions.
 + [[https://docs.pytest.org/en/7.0.x/][pytest: helps you write better programs]]
 + [[https://docs.pytest.org/en/7.1.x/how-to/parametrize.html][How to parametrize fixtures and test functions]]
 + [[https://docs.pytest.org/en/7.1.x/how-to/fixtures.html][How to use fixtures — pytest documentation]]
++ [[https://docs.pytest.org/en/7.1.x/how-to/logging.html][How to manage logging — pytest documentation]]
++ [[https://docs.pytest.org/en/latest/how-to/capture-stdout-stderr.html][How to capture stdout/stderr output — pytest documentation]]
