@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b9961a9e-e833-4160-aa8f-1c69b9cbb397
-:mtime:    20230225220747 20230114083258 20230103103312 20221228105320
+:mtime:    20230228201359 20230225220747 20230114083258 20230103103312 20221228105320
 :ctime:    20221228105320
 :END:
 #+TITLE: Emacs TRAMP
@@ -32,7 +32,9 @@ C-x C-f /sudo::/etc/resolv.conf
 #+end_src
 
 You may find you'll be asked for your GPG key if you have that configured and then the ~root~ password or user password
-depending on whether you are using using ~su~ or ~sudo~
+depending on whether you are using using ~su~ or ~sudo~. You will be prompted whether to save to
+~local-temporary-directory~ which by default is the value stored in ~temporary-file-directory~ and defaults to ~/tmp~
+unless configured otherwise.
 
 * SSH
 
@@ -65,6 +67,9 @@ are otherwise enabled which prevents Emacs TRAMP from opening the file. If you h
 to your ~dotfiles~ repository that is under version control then you only need to do this once and synchronise each
 repository so the changes propagate and you can then use TRAMP to open files across machines regardless of which you
 are actually sat at.
+
+The [[https://www.emacswiki.org/emacs/TrampMode#h5o-9=0][Emacs Wiki : TrampMode]] page also suggests you can set the
+variable ~tramp-terminal-type~ to ~tramp~ and use that in the above snippet too.
 
 * Links
 
