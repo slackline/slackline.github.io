@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       8d52f6c2-84ba-4fa4-9755-7168e3b0b229
+:mtime:    20230228205112
+:ctime:    20230228205112
+:END:
+#+TITLE: Open Science Community Incubator Program
+
+* Vision and Mission
+
++ [[https://docs.google.com/presentation/d/1309W760p8x1yBPgAPB0y8bVrZS88q43pi6rNiVWpQjE/edit?usp=sharing][Who are we?]]
+
+* Community Engagement
+
+* Communication Strategy
+
+* Stakeholder Engagement
+
+* Monitoring and Sustainability
+
+* Open!
+
+* Links
+
++ [[https://osc-international.com][International Network of Open Science & Scholarship Communities]]
++
