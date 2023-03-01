@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       bb57f65e-58f4-45de-9620-901dc998f6d6
-:mtime:    20230227221806 20230207111629 20230103103312 20221228113913 20230103103309
+:mtime:    20230301095721 20230227221806 20230207111629 20230103103312 20221228113913 20230103103309
 :ctime:    20221228113913 20230103103309
 :END:
 #+TITLE: Python Packaging
@@ -85,7 +85,7 @@ Setuptools is shifting towards using ~pyproject.toml~ and whilst it is still und
 highly functional. Its written in [[https://toml.io/en/][Tom's Obvious Minimal Language]] and isn't too dissimilar in structure to ~setup.cfg~.
 
 A useful reference for writing your configuration in ~pyproject.toml~ is [[https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html][Configuring setuptools using pyproject.toml
-files]].
+files]]. It is based around [[https://peps.python.org/pep-0621/][PEP 621 – Storing project metadata in pyproject.toml | peps.python.org]]
 
 A bare-bones ~pyproject.toml~ file should reside in the top level of your directory with the following...
 

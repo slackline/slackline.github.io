@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8d52f6c2-84ba-4fa4-9755-7168e3b0b229
-:mtime:    20230228205112
+:mtime:    20230301113149 20230301100853 20230301090816 20230228205112
 :ctime:    20230228205112
 :END:
 #+TITLE: Open Science Community Incubator Program
@@ -8,6 +8,105 @@
 * Vision and Mission
 
 + [[https://docs.google.com/presentation/d/1309W760p8x1yBPgAPB0y8bVrZS88q43pi6rNiVWpQjE/edit?usp=sharing][Who are we?]]
++ [[https://docs.google.com/document/d/10WmoNgb5TIwr_fy7WaXKmyLyvTX_ycV3wCwPUIxlGL4/edit][Program Notes of Module 0]]
++ [[https://docs.google.com/presentation/d/17dKDuuTOM5RWtWu87107FRJ2wJVKoFlDY717ilzrXlA/edit#slide=id.g141eb73b852_1_5][Link to slides]]
+** Part I: Getting to know each other (10.00 - 10.40 CET)
+
+** Break (10.40 -10.50 CET)
+
+** Part II: Open Science: Establishing common ground (10.50 - 11.25 CET)
+*** Why?
++ It is a means of achieving various different goals. No poverty, zero hunger, good health and well-being, quality
+  educaiton, gender equality, clean water and sanitation, affordable clean energy, decent work and economic growth,
+  industry, innovation, etc. (see [[https://docs.google.com/presentation/d/17dKDuuTOM5RWtWu87107FRJ2wJVKoFlDY717ilzrXlA/edit#slide=id.g13cef509449_0_557][slides]]).
++ UNESCO Recommendation on Open Science
+
+  #+begin_quote
+  ...open science is defined as an inclusive construct that combines various movements and practices aiming to make
+  multilingual scientific knowledge openly available, accessible and reusable for everyone, to increase scientific
+  collaborations and sharing of information for the benefits of science and society, and to open the processes of
+  scientific knowledge creation, evaluation and communication to societal actors beyond the traditional scientific
+  community. It comprises all scientific disciplines and aspects of scholarly practices, including basic and applied
+  sciences, natural and social sciences and the humanities, …
+  #+end_quote
++ Process /and/ open with working practices and results.
++ Not just about open access, we need to communicate the results as well as have well defined infrastructures to support
+  the processes.
++ Discovery, Analysis, Writing, Publication, Outreach, Assessment, all of these phases of the research cycle have their
+  defined and growing set of tools to support the process of making science open.
++ Five different schools of open science with different reasons...
+  + Infrastructure
+  + Public
+  + Measurement
+  + Democratic
+  + Pragmatic
++ Shouldn't be too judgemental of others, whilst Open Science is "Just Science Done Right" we should encourage and not
+  derided others for not fitting with our mental model of what it means.
+
+*** Break out
+
+**** What
++ Ines
+Phases of research cycle should be open at all stages so that the creation of knowledge allows people to assess
+research. Different people can have different roles and we work together as teams to accelerate the creation of
+knowledge. Open collaboration.
+
++ Maya
+Familiar with the Open Scientific knowledge, but keen to have open dialogue with other knowledge systems as this is
+important to relate to others outside and within Science. Building bridges between the areas, finding common ground.
+
+**** Why?
++ Maya
+Wanting to bring the best of what we've experienced. Open Science is perhaps niche at the moment, but is growing, has
+challenges though. Want to encourage the practice beyond the academic sphere.
+
++ Ines
+Open Science results in more solid knowledge, it helps with introspection rather than focusing on the outputs. Being
+aware of how we do science, and improving how we evaluate and assess research.
+** Silent note-taking: Part II
+See [[https://docs.google.com/document/d/10WmoNgb5TIwr_fy7WaXKmyLyvTX_ycV3wCwPUIxlGL4/edit][notes]]
+** Break (11.25 -11.35 CET)
+
+** Part III: Introduction to the OSC Incubator Program (11.35 - 11.55 CET)
+
++ Start our own Open Science and Scholarship Communities (Sheffield OSC).
++ Plan to foster and sustain OSC.
++ Become part of INOSC
++ Process of developing and open science community
+  + Prepare and Launch Community
+  + Grow and Inspire
+  + Foster and Maintain, connect and interact with other stakeholders
+  + Dream and Scheme
++ 6 modules, two weeks each
++ Minimum Viable OSC
+  + Core Team
+  + Logo
+  + Initial Members
+  + OSC Website
+  + Community Activities
+  + Launch Event
+** Silent note-taking: Part III
++ Hope to Learn : Aspects of open science that I'm not so familiar with such as community engagement, science communication, greater
+  transparency of the research process.
++ Looking forward to : Spending time learning something new, getting to know new people.
++ What did you like : Good pace to the introduction module, nice to have a breakout early and start getting to know
+  others on the course.
++ What inspired you : Everyone's enthusiasm.
++ What did you dislike : Nothing
+
+** Assignment/Homework
+
+Make a copy of the Master plan template, rename the document to our own OSC
+
+Complete the tasks on [[https://docs.google.com/presentation/d/17dKDuuTOM5RWtWu87107FRJ2wJVKoFlDY717ilzrXlA/edit#slide=id.g2132aa56ba2_2_139][slide]]...
+
++ [ ] [[https://vimeo.com/510808878][Open Science Community promo video]]
++ [ ] Read Section I of [[http://www.startyourosc.com/][Open Science Community Starter Kit]]
++ [ ] Read the [[https://osf.io/vz2sy/][OSC Guiding Principles and Code of Conduct]]
++ [ ] [[https://academic.oup.com/spp/article/48/5/605/6313404][Towards wide-scale adoption of Open Science Practices]]
++ [ ] [[https://www.cos.io/blog/strategy-for-culture-change][Strategy for Culture Change]]
++ [ ] [[https://en.unesco.org/science-sustainable-future/open-science/recommendation][UNESCO Recommendation on Open Science]]
++ [ ] [[https://www.youtube.com/watch?v=u4ZoJKF_VuA][Start with Why]]
 
 * Community Engagement
 
@@ -22,4 +121,6 @@
 * Links
 
 + [[https://osc-international.com][International Network of Open Science & Scholarship Communities]]
-+
+** Module 0
++ [[https://docs.google.com/document/d/10WmoNgb5TIwr_fy7WaXKmyLyvTX_ycV3wCwPUIxlGL4/edit][Program Notes of Module 0]]
++ [[https://docs.google.com/presentation/d/17dKDuuTOM5RWtWu87107FRJ2wJVKoFlDY717ilzrXlA/edit#slide=id.g141eb73b852_1_5][Slides]]
