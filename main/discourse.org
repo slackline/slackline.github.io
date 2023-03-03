@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       13de4e0e-4c14-48c8-897e-42862be8cfc1
-:mtime:    20230307195327 20230215121954
+:mtime:    20230308095908 20230302104209 20230215121954
 :ctime:    20230215121954
 :END:
 #+TITLE: Discourse
@@ -61,3 +61,4 @@ address for administrator, an SMTP server and ideally a [[https://letsencrypt.or
 
 + [[https://www.discourse.org/][Discourse]]
 + [[https://github.com/discourse/discourse/blob/main/docs/INSTALL.md][discourse/INSTALL.md · GitHub]]
++ [[https://meta.discourse.org/t/setup-discourseconnect-official-single-sign-on-for-discourse-sso/13045][DiscourseConnect]] - offers single sign-on.

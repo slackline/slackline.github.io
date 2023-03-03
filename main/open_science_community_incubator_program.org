@@ -1,12 +1,15 @@
 :PROPERTIES:
 :ID:       8d52f6c2-84ba-4fa4-9755-7168e3b0b229
-:mtime:    20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
+:mtime:    20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
 :ctime:    20230228205112
 :END:
 #+TITLE: Open Science Community Incubator Program
 
-* Vision and Mission
+[[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#][Syllabus]]
 
+* Vision and Mission Module 0
+
++ [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#][Syllabus]]
 + [[https://docs.google.com/presentation/d/1309W760p8x1yBPgAPB0y8bVrZS88q43pi6rNiVWpQjE/edit?usp=sharing][Who are we?]]
 + [[https://docs.google.com/document/d/10WmoNgb5TIwr_fy7WaXKmyLyvTX_ycV3wCwPUIxlGL4/edit][Program Notes of Module 0]]
 + [[https://docs.google.com/presentation/d/17dKDuuTOM5RWtWu87107FRJ2wJVKoFlDY717ilzrXlA/edit#slide=id.g141eb73b852_1_5][Link to slides]]
@@ -103,12 +106,127 @@ Complete the tasks on [[https://docs.google.com/presentation/d/17dKDuuTOM5RWtWu8
 + [X] [[https://vimeo.com/510808878][Open Science Community promo video]]
 + [X] Read Section I of [[http://www.startyourosc.com/][Open Science Community Starter Kit]]
 + [X] Read the [[https://osf.io/vz2sy/][OSC Guiding Principles and Code of Conduct]]
-+ [ ] [[https://academic.oup.com/spp/article/48/5/605/6313404][Towards wide-scale adoption of Open Science Practices]]
++ [X] [[https://academic.oup.com/spp/article/48/5/605/6313404][Towards wide-scale adoption of Open Science Practices]]
 + [ ] [[https://www.cos.io/blog/strategy-for-culture-change][Strategy for Culture Change]]
 + [ ] [[https://en.unesco.org/science-sustainable-future/open-science/recommendation][UNESCO Recommendation on Open Science]]
 + [ ] [[https://www.youtube.com/watch?v=u4ZoJKF_VuA][Start with Why]]
 
-* Community Engagement
+*** [[https://www.cos.io/blog/strategy-for-culture-change][Strategy for Culture Change]]
+
++ [[http://cos.io/][Centre for Open Science]] mission is to increase openness, integrity and reproducibility of research.
++ Behaviour change targets are to get researchers to show their work and to share.
++ Teams operate in isolation and don't share with each other what fails, this is to the detriment of Science.
++ Researchers should by default share materials, protocols and data for others to confirm, challenge, extend or reuse.
++ Values encapsulated by transparency, self-skepticism and reproducibility.
++ Current system maintains dysfunctional constellation of incentives and policies that are blocking widespread chnage
+  toward showing and sharing work.
++ Bias in the reward system of science for...
+  + Novel rather than incrementally build on or affirming existing findings.
+  + Positive results rather than negative.
+  + Fitting in with existing paradigms.
++ COS's strategy for culture and behaviour change requires five levels of intervention...
+
+
+  [[./img/osc/COS_Culture_and_Behavior_Change_model.png]]
+
++ Higher levels build on lower levels
++ Tools need to be easy to use, [[https://osf.io][Open Science Framework (OSF)]] works with many popular services (e.g. GitHub). Can be
+  private during work and integrates seamlessly with then being transparent and accessible (i.e. open).
++ Communities normalise behaviour, e.g. marking papers in journals that share their data and materials. When others see
+  the behaviour they are more likely to adopt it.
++ Incentives and policy address the reward systems. Promote [[http://cos.io/rr/][Registered Reports]] where publication rests on the
+  importance of the research question and the quality of the methodology. Encouraging existing journals to do this.
+
+** **QUESTION** Open Science is perhaps excluding to humanities, is there scope for alternative names e.g. Open Research
+
+** Week 2
+
+* Mission and Vission Module 1
++ [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#][Syllabus]]
++ [[https://docs.google.com/document/d/140fIWasFC8Hf__zUUW6SDcUDyH48Kb3pDS0ibE-LNGQ/edit][Program Notes of Module 1]]
++ [[https://docs.google.com/presentation/d/1hlcd91XUNINR-K-TcKmhvx06dF_EcebW60T54jNb2lY/edit#slide=id.g13cef509449_0_534][Slides]]
+
+** Talk 1
++ What is a community, "_a dynamic, social grouping where members align around a shared (or multiple overlapping)
+  purposes and participate in a shared culture. Active community participation frequently aligns with a sense of
+  belinging and affiliation to the community. IN a community the flow of information is multi-directional with members
+  able to do something as a result of being connected to one another that they would not be able to do alone._"
+  + Shared goals
+  + Sense of belonging
+  + Connections
+  + Opportunity
+  The above encourage and enable people to take action.
+
+*** What communities are you part of?
+**** Me
+  I go rock climbing and have a group of friends who I do this with that constitutes a small community.
+  + Shared Purpose : Get outdoors and go and do pointless but fun things in unusual places. Learn from each other to
+    improve safety and about techniques and places to go.
+  + Belonging : very close bonds
+  + Connected : metaphorically and literally (by the rope), putting your life in each others hands.
+
+**** Maya
++ Non-profit community for PhD career development, taken a long time to get recognition.
++ Support group, multiple channels for interaction, MOOC, Discord, WhatsApp
++ Helps reduce and break out of isolation.
++ Shared purpose, support group
++ Belonging string during MOOC needs regular updating lot of work but sharing builds sense of community.
++ 12-15 people but have reach to a couple of thousand
++ Run every year (for seven years) keeps on growing, policy makers now interested.
+**** Fuschia
++ Plant care community
++ Showing plants, passing on those that need specific care.
++ Share information and knowledge.
++ Meet people when passing/swapping plants.
++ Welcoming to immigrants who may have left plants behind
+**** Vinodh
++ Online community with role models for LGBTQ+ scientists as not many role models.
++ Had been trying to organise an event in Edinburgh
++ Had to get visa to meet
++ More people able to join online as a consequence of pandemic.
++ Large groups have more influence on policy at institutions.
++ Develop documents.
+
+*** Why Open Science Comunity
++ Need to change research culture to achieve open science
+
+
+  [[./img/osc/COS_Culture_and_Behavior_Change_model.png]]
+
++ Communites make normative the process of Open Science, when people see others undertaking practices it encourages them
+  to do so too.
++ Communities can't be built on their own by a few people. They are by researchers for researchers, support staff,
+  policy makers, the builk is researchers themselves from all disciplines and career stages.
++ No need to have experience, willingness to learn is important as people share their experiences.
++ Can meet develop and articulate requirements and develop transitioning within the institution.
++ Also requires interacting with wider community and society.
++ Innovation adoption always takes time, small group of innovators, some early adopters, the early majority, but reach
+  towards the late majority and laggards. Different strategies required to get the early/late majority on-board.
++ Aims of OSC
+  + Reach and engage researchers to learn about OS. Make people aware of the community.
+  + Inspire and enable them to adopt OS.
+  + Empower and support to shape transition and participate.
++ Science is international so need to build worldwide network.
+
+**Question** Why "Science" rather than "Research" when humanities could benefit from this.
+
+** Five minutes of silent note taking
+What aspects of talk are inspiring, did you like/dislike and hope to learn.
+
++ Hope to learn how to connect to people. Its clear that there is motivation to move towards open science but research
+  groups are small and often work in isolation, what sort of events can be undertaken to start encouraging change? I
+  guess one possible might be to hold local seminars showcasing a particular piece of work that has been done in an open
+  manner to show how it can be done. This demonstrates the sharing of information and moves towards normalising the
+  practice (Neil)
++ I liked the emphasis on including the wider community/society in the process. There is little point in hacking away at
+  research if its utility and value to society can not be conveyed to those who might benefit. (Neil)
+
++ I like the pyramid from Brian Nosek's paper, its well thought out and structured and shows how community building fits
+  into the wider framework (Neil).
++ One minor concern is the focus on Open _Science_ as it may make those engaged in non-scientific research such as
+  humanities feel unwelcome. Perhaps a focus on Open _Research_ would be more welcoming and all-encompassing.
++
+* Community Engagement / Module 1 Mission and Vission
 
 * Communication Strategy
 
