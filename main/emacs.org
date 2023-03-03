@@ -122,6 +122,7 @@ Read more about [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]].
 ** Manuals and Books
 + [[https://emacsdocs.org/docs/Magit/Top][Emacsdocs.org]]
 + [[https://www.masteringemacs.org/][Mastering Emacs]]
++ [[https://www2.lib.uchicago.edu/keith/emacs/][An Introduction to Emacs]]
 + [[https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][An Introduction to Programming in Emacs Lisp]]
 + [[https://github.com/emacs-tw/awesome-emacs][Awesome Emacs: A community driven list of useful Emacs packages, libraries and other items.]]
 + [[https://www.masteringemacs.org/article/emacs-builtin-elisp-cheat-sheet][Emacs's Builtin Elisp Cheat Sheet - Mastering Emacs]]
