@@ -1,0 +1,44 @@
+:PROPERTIES:
+:ID:       e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5
+:mtime:    20230304230340
+:ctime:    20230304230340
+:END:
+#+TITLE: Artificial Intelligence
+#+FILETAGS: :statistics:machinelearning:ai:
+
+An extensions of [[id:9f72e8bd-2dbe-4a95-9517-c0c94bc995a0][Statistics]] Artificial Intelligence (AI) uses many methods to give the impression of human
+intelligence. Its a tricky area, what defines "human intelligence" is a basic axiom that needs defining before it is
+possible to define whether anything "artificial" can mimic it.
+
+* Applications
+
+** Code Generation
+
+Notionally ChatGPT can be used to generate code samples such as [[https://twitter.com/jfernandez__/status/1599470590405976064][Shiny Apps]] but it's not perfect and typically results in
+more bugs than a human might produce (although clearly no one has ever looked at my code!). [[https://meta.stackoverflow.com/questions/421831/temporary-policy-chatgpt-is-banned][StackOverflow have banned
+ChatGPT]] answers for the time being, although I wonder if the poor quality is a reflection of the corpus within SO itself.
+
+
+* Links
+
+** Examples
+
++ [[https://chat.openai.com/][ChatGPT]] - Large Language Model
++ [[https://labs.openai.com/][DALL-E]] - Generative AI for images.
+
+** Misc
+
++ [[https://writings.stephenwolfram.com/2023/01/wolframalpha-as-the-way-to-bring-computational-knowledge-superpowers-to-chatgpt/][Wolfram|Alpha as the Way to Bring Computational Knowledge Superpowers to ChatGPT—Stephen Wolfram Writings]]
++ [[https://www.theguardian.com/technology/2023/feb/08/biased-ai-algorithms-racy-women-bodies][‘There is no standard’: investigation finds AI algorithms objectify women’s bodies | Artificial intelligence (AI) | The Guardian]]
++ [[https://www.reddit.com/r/ChatGPT/comments/10s79h2/new_jailbreak_just_dropped/][New jailbreak just dropped! : ChatGPT]]
++ [[https://www.technologyreview.com/2023/02/14/1068498/why-you-shouldnt-trust-ai-search-engines/][Why you shouldn’t trust AI search engines | MIT Technology Review]]
++ [[https://www.theguardian.com/technology/2023/feb/08/biased-ai-algorithms-racy-women-bodies][‘There is no standard’: investigation finds AI algorithms objectify women’s bodies | Artificial intelligence (AI) |
+  The Guardian]]
++ [[https://vickiboykis.com/2023/02/26/what-should-you-use-chatgpt-for/][What should you use ChatGPT for? | ★❤✰ Vicki Boykis ★❤✰]]
+
+** Papers
+
++ [[https://arxiv.org/abs/2212.03551][[2212.03551] Talking About Large Language Models]]
+
+** Reading
++ [[https://nymag.com/intelligencer/article/ai-artificial-intelligence-chatbots-emily-m-bender.html][On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?]]
