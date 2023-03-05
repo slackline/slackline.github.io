@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ff8ee302-7518-4179-9bcb-63b13199f897
-:mtime:    20230221192929
+:mtime:    20230305214004 20230221192929
 :ctime:    20230221192929
 :END:
 #+TITLE: Emacs Packages
@@ -44,6 +44,10 @@ may have missed or misunderstood some things.
 
 One of the nice features of ~use-package~ is that it will install a package for you if its not present on a system.
 
+** elpaca
+
+A new kid on the block [[https://github.com/progfolio/elpaca][elpaca]] is an asynchronous package manager which means that unlike others it can be started and
+then run in the background, freeing you to use Emacs as desired whilst it updates/installs.
 
 * Links
 
