@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5
-:mtime:    20230304230340
+:mtime:    20230305175434 20230305082620 20230304230340
 :ctime:    20230304230340
 :END:
 #+TITLE: Artificial Intelligence
@@ -18,13 +18,31 @@ Notionally ChatGPT can be used to generate code samples such as [[https://twitte
 more bugs than a human might produce (although clearly no one has ever looked at my code!). [[https://meta.stackoverflow.com/questions/421831/temporary-policy-chatgpt-is-banned][StackOverflow have banned
 ChatGPT]] answers for the time being, although I wonder if the poor quality is a reflection of the corpus within SO itself.
 
+* API
 
+There are [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] [[id:ff8ee302-7518-4179-9bcb-63b13199f897][packages]] available for interacting with some of these services.
+
++ [[https://github.com/stuhlmueller/gpt.el][gpt]]
++ [[https://github.com/antonhibl/gptai][gptai]]
++ [[https://github.com/joshcho/ChatGPT.el][ChatGPT]] and built on it [[https://github.com/suonlight/ob-chatgpt][ob-chatgpt]] which allows you to query GPT-3 directly from within org-babel chunks and insert
+  the ~RESULTS:~.
++
 * Links
 
 ** Examples
 
 + [[https://chat.openai.com/][ChatGPT]] - Large Language Model
 + [[https://labs.openai.com/][DALL-E]] - Generative AI for images.
+
+** Blogs
+
++ [[https://ai.googleblog.com/][GoogleBlog : AI]]
++ [[https://aiguide.substack.com/][AI: A Guide for Thinking Humans | Melanie Mitchell | Substack]]
+
+** OpenSource Projects
+
++ [[https://github.com/google-research/bert][google-research/bert]] : TensorFlow code and pre-trained models for BERT
++ [[https://github.com/google-research/optformer][google-research/optformer]] : Transformer-based framework for Hyperparameter Optimization
 
 ** Misc
 
