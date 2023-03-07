@@ -126,8 +126,8 @@ Complete the tasks on [[https://docs.google.com/presentation/d/17dKDuuTOM5RWtWu8
   + Fitting in with existing paradigms.
 + COS's strategy for culture and behaviour change requires five levels of intervention...
 
+[[img/osc/COS_Culture_and_Behavior_Change_model.png]]
 
-  [[./img/osc/COS_Culture_and_Behavior_Change_model.png]]
 
 + Higher levels build on lower levels
 + Tools need to be easy to use, [[https://osf.io][Open Science Framework (OSF)]] works with many popular services (e.g. GitHub). Can be
@@ -226,7 +226,8 @@ What aspects of talk are inspiring, did you like/dislike and hope to learn.
 + One minor concern is the focus on Open _Science_ as it may make those engaged in non-scientific research such as
   humanities feel unwelcome. Perhaps a focus on Open _Research_ would be more welcoming and all-encompassing.
 +
-* Community Engagement / Module 1 Mission and Vission
+
+* Community Engagement
 
 * Communication Strategy
 
