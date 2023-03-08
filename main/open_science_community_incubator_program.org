@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8d52f6c2-84ba-4fa4-9755-7168e3b0b229
-:mtime:    20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
+:mtime:    20230308133737 20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
 :ctime:    20230228205112
 :END:
 #+TITLE: Open Science Community Incubator Program
@@ -210,6 +210,9 @@ Complete the tasks on [[https://docs.google.com/presentation/d/17dKDuuTOM5RWtWu8
 
 **Question** Why "Science" rather than "Research" when humanities could benefit from this.
 
+Its the most broadly used term internationality but its meant in the broader sense of including those who aren't
+traditionally seen as "science" stick to scholarship/ research otherwise the acronym doesn't work.
+
 ** Five minutes of silent note taking
 What aspects of talk are inspiring, did you like/dislike and hope to learn.
 
@@ -225,8 +228,38 @@ What aspects of talk are inspiring, did you like/dislike and hope to learn.
   into the wider framework (Neil).
 + One minor concern is the focus on Open _Science_ as it may make those engaged in non-scientific research such as
   humanities feel unwelcome. Perhaps a focus on Open _Research_ would be more welcoming and all-encompassing.
-+
 
+** Mission and Vision
+[[https://docs.google.com/presentation/d/1hlcd91XUNINR-K-TcKmhvx06dF_EcebW60T54jNb2lY/edit#slide=id.g13cef509449_0_534][Slides]]
++ Vision : Ideal, where you want to go (mission accomplished), focused on the Why
++ Mission : Purpose, how to get there, focused on the How
+
++  Vision is where, mission is how to get there.
+*** Co-create
+Vision : Open science is the norm for researchers at The University of Sheffield (and beyond!)
+Mission : Develop and share good working practices that enable open science to be undertaken by anyone. Providing a
+support network for participants so they can embrace these practices and produce open research,
+
+We have many resources available for undertaking open research but not everyone is familiar with or comfortable with the
+tools, for example using Git/GitHub for developing and sharing code for software or statistical analysis, using HPC
+systems to undertake large scaling computer modelling.
+
+By building a community to share information between those who are already familiar with different aspects of the
+process we teach and learn from each other and enable the process of moving towards open science.
+
+[[https://docs.google.com/document/d/1mBqrcVxLk4NhIsdK4lcybn9vmAB7ANVlMe1RVcWDwzE/edit][Shared document refined]]
+
+** Homework (Due [2023-03-15 Wed])
+
+*** OSC Master Plan (Deadline: 1 week after the meet-up)
+**** Minimal Viable Community Checklist
++ Fill in the status column of your ‘Minimal Viable Community Checklist’ in your OSC Master Plan and formulate and plan actions towards your Minimal Viable Community (actions go in the ‘List of Milestones and Actions’ in your OSC Master Plan).
+**** Vision and Mission
++ Revisit the Vision and Mission statements that you collectively drafted during the online meet-up. Does it fit your
+  local context? Make adjustments where necessary.
++ Break-down your Mission statement into a set of actionable goals or aims. For an example, see the Open Science
+  Community Starter Kit, section I.II.
++ Add the Vision and Mission statement to your OSC Master Plan
 * Community Engagement
 
 * Communication Strategy
@@ -237,6 +270,10 @@ What aspects of talk are inspiring, did you like/dislike and hope to learn.
 
 * Open!
 
+* [[https://docs.google.com/document/d/1-yCmShwV0l9SeOEkXpED1idx0X8KK1nZaZXU2QuNaR8/edit][OSC Master Plan]]
+
+
+
 * Links
 
 + [[https://osc-international.com][International Network of Open Science & Scholarship Communities]]
@@ -244,3 +281,6 @@ What aspects of talk are inspiring, did you like/dislike and hope to learn.
 ** Module 0
 + [[https://docs.google.com/document/d/10WmoNgb5TIwr_fy7WaXKmyLyvTX_ycV3wCwPUIxlGL4/edit][Program Notes of Module 0]]
 + [[https://docs.google.com/presentation/d/17dKDuuTOM5RWtWu87107FRJ2wJVKoFlDY717ilzrXlA/edit#slide=id.g141eb73b852_1_5][Slides]]
+** Module 1
++ [[https://docs.google.com/presentation/d/1hlcd91XUNINR-K-TcKmhvx06dF_EcebW60T54jNb2lY/edit#slide=id.g13cef509449_0_534][Slides]]
++ [[https://docs.google.com/document/d/1mBqrcVxLk4NhIsdK4lcybn9vmAB7ANVlMe1RVcWDwzE/edit][Drafting Mission and Vision Statements]]

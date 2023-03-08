@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       13de4e0e-4c14-48c8-897e-42862be8cfc1
-:mtime:    20230308095908 20230302104209 20230215121954
+:mtime:    20230308133735 20230308095908 20230302104209 20230215121954
 :ctime:    20230215121954
 :END:
 #+TITLE: Discourse
@@ -43,6 +43,15 @@ installed but that is ok, the script will add the Docker repository for you, the
   cd /var/discourse
   chmod 700 containers
   ./discourse-setup
+
+# Setup is saved to a file, need to set the following correctly
+#DISCOURSE_SMTP_ADDRESS: mailhost.shef.ac.uk
+#DISCOURSE_SMTP_PORT: 587
+#DISCOURSE_SMTP_USER_NAME: n.shephard@sheffield.ac.uk
+#DISCOURSE_SMTP_PASSWORD: "pa$$word"
+##DISCOURSE_SMTP_ENABLE_START_TLS: true           # (optional, default true)
+#DISCOURSE_SMTP_DOMAIN: sheffield.ac.uk
+#DISCOURSE_NOTIFICATION_EMAIL: n.shephard@sheffield.ac.uk
 #+end_src
 
 You are now prompted for information about where the service will be running. You need a valid ~Hostname~ and email
