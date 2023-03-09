@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8d52f6c2-84ba-4fa4-9755-7168e3b0b229
-:mtime:    20230308133737 20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
+:mtime:    20230308204702 20230308133737 20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
 :ctime:    20230228205112
 :END:
 #+TITLE: Open Science Community Incubator Program
@@ -107,7 +107,7 @@ Complete the tasks on [[https://docs.google.com/presentation/d/17dKDuuTOM5RWtWu8
 + [X] Read Section I of [[http://www.startyourosc.com/][Open Science Community Starter Kit]]
 + [X] Read the [[https://osf.io/vz2sy/][OSC Guiding Principles and Code of Conduct]]
 + [X] [[https://academic.oup.com/spp/article/48/5/605/6313404][Towards wide-scale adoption of Open Science Practices]]
-+ [ ] [[https://www.cos.io/blog/strategy-for-culture-change][Strategy for Culture Change]]
++ [X] [[https://www.cos.io/blog/strategy-for-culture-change][Strategy for Culture Change]]
 + [ ] [[https://en.unesco.org/science-sustainable-future/open-science/recommendation][UNESCO Recommendation on Open Science]]
 + [ ] [[https://www.youtube.com/watch?v=u4ZoJKF_VuA][Start with Why]]
 
@@ -139,7 +139,6 @@ Complete the tasks on [[https://docs.google.com/presentation/d/17dKDuuTOM5RWtWu8
 
 ** **QUESTION** Open Science is perhaps excluding to humanities, is there scope for alternative names e.g. Open Research
 
-** Week 2
 
 * Mission and Vission Module 1
 + [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#][Syllabus]]

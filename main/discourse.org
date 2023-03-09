@@ -1,10 +1,10 @@
 :PROPERTIES:
 :ID:       13de4e0e-4c14-48c8-897e-42862be8cfc1
-:mtime:    20230309065755 20230307195327 20230215121954
+:mtime:    20230309214237 20230308212843 20230308133735 20230308095908 20230302104209 20230215121954
 :ctime:    20230215121954
 :END:
 #+TITLE: Discourse
-#+FILETAGS: :gnu:linus:foss:web:
+#+FILETAGS: :gnu:linux:foss:web:
 
 Easiest to use Docker images. If you've followed the [[id:fab2461a-c95a-47e3-9e5d-64af083c92e0][Linux KVM]] instructions you need to install a few tools to get
 going.
@@ -13,7 +13,8 @@ going.
   sudo su
   apt-get upgrade # Upgrade all packages
   apt autoremove # Remove old packages
-  apt-get install git curl emacs
+  apt install git curl emacs
+  apt install fail2ban #Blocks email addresses that fail 3 login attempts for 10 minutes
 #+end_src
 
 Now update Docker following the instructions [[https://docs.docker.com/engine/install/ubuntu/][here]].
@@ -65,7 +66,13 @@ address for administrator, an SMTP server and ideally a [[https://letsencrypt.or
 + Need an SMTP server on the host (or elsewhere?) to handle sending emails, possibly [[https://marlam.de/msmtp/][msmtp]]?
 
 
+* Upgrading
 
+#+begin_src bash
+  cd /var/discourse
+  git pull
+  ./launcher rebuild app
+#+end_src
 * Links
 
 + [[https://www.discourse.org/][Discourse]]

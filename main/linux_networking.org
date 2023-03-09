@@ -1,0 +1,55 @@
+:PROPERTIES:
+:ID:       4dd02747-0388-488b-9297-ba81dbff1581
+:mtime:    20230309185747
+:ctime:    20230309185747
+:END:
+#+TITLE: Linux Networking
+#+FILETAGS: :linux:networking:
+
+Networking is essential to modern computing and GNU/Linux servers sit behind the backbone of a significant majority of
+the internet. But its complicated, not that many people understand quite how complicated it is, but then they shouldn't
+have to.
+
+This page details some of the issues I've encountered and in most cases solved.
+
+* Examples
+
+** Forticlient VPN at University of Sheffield
+
+Install the following...
+
+#+begin_src bash
+  cd ~/aur && cd ~/aur
+  git clone https://aur.archlinux.org/networkmanager-fortisslvpn-git.git
+  cd networkmanager-fortisslvpn
+  makepkg -sri
+  sudo pacman -Syu openfortivpn  # If not pulled in by the above
+#+end_src
+
+Set a temporary shell variable for your username and use ~nmcli~ to define a new configuration using the following...
+
+#+begin_src bash
+  REMOTEUSERNAME=ab1cde
+  sudo nmcli connection add \
+       connection.id tuos-ssl-vpn \
+       connection.type vpn \
+       connection.autoconnect false \
+       connection.permissions "user:$USER" \
+       vpn.service-type org.freedesktop.NetworkManager.fortisslvpn \
+       +vpn.data gateway=remoteaccess.shef.ac.uk \
+       +vpn.data otp-flags=0 \
+       +vpn.data password-flags=2 \
+       +vpn.data trusted-cert=81581724477d04096c8407119adf7d18d48e4ff6fcecf02b6aa8ce20ae88ae25 \
+       +vpn.data user="$REMOTEUSERNAME" \
+       ipv4.dns "143.167.185.64 143.167.185.65" \
+       ipv4.dns-search "shef.ac.uk" \
+       ipv4.ignore-auto-dns true \
+       ipv4.method auto \
+       ipv4.never-default true \
+       ipv6.never-default true \
+       ipv6.method disabled
+#+end_src
+
+When you activate the connection either via the NetworkManager applet/GUI/CLI (~nmcli conn up tuos-ssl-vpn~) you will be
+prompted for the password associated with your ~$REMOTEUSERNAME~ and once entered will receive a Duo Push notification
+to sign in. My gratitude to my colleague Will Furnass for this solution.
