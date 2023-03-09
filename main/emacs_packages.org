@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ff8ee302-7518-4179-9bcb-63b13199f897
-:mtime:    20230305214004 20230221192929
+:mtime:    20230309070314 20230305214004 20230221192929
 :ctime:    20230221192929
 :END:
 #+TITLE: Emacs Packages
@@ -42,13 +42,26 @@ Use-package for Emacs | Ian Y.E. Pan]] ensures ~use-package~ is installed, if no
 Best resource for learning is the [[https://github.com/jwiegley/use-package][official documentation]] which covers everything. What follows is my understanding and I
 may have missed or misunderstood some things.
 
-One of the nice features of ~use-package~ is that it will install a package for you if its not present on a system.
+One of the nice features of ~use-package~ is that it will install a package for you if its not present on a
+system. Common commands that speed up loading are ~:defer t~.
 
 ** elpaca
 
 A new kid on the block [[https://github.com/progfolio/elpaca][elpaca]] is an asynchronous package manager which means that unlike others it can be started and
 then run in the background, freeing you to use Emacs as desired whilst it updates/installs.
 
+* Binaries
+
+Some packages (e.g. EmacSQL) build and install binaries from source code. With EmacSQL in particular this sometimes
+fails. The following is the sort of call made to build the binary and may be run manually to do so.
+
+#+begin_src bash
+  /usr/bin/cc -I/home/neil/.config/emacs/elpa/emacsql-sqlite-20230225.2205/sqlite -O2 -DSQLITE_THREADSAFE=0 \
+  -DSQLITE_DEFAULT_FOREIGN_KEYS=1 -DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_FTS3_PARENTHESIS \
+  -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_JSON1 -DSQLITE_SOUNDEX /home/neil/.config/emacs/elpa/ \
+  emacsql-sqlite-20230225.2205/sqlite/sqlite3.c /home/neil/.config/emacs/elpa/emacsql-sqlite-20230225.2205/sqlite/ \
+  emacsql.c -lm -ldl -o /home/neil/.config/emacs/elpa/emacsql-sqlite-20230225.2205/sqlite/emacsql-sqlite
+#+end_src
 * Links
 
 + [[https://github.com/jwiegley/use-package][jwiegley/use-package: A use-package declaration for simplifying your .emacs]]
