@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9c6257dc-cbef-4291-8369-b3dc6c173cf2
-:mtime:    20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
+:mtime:    20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
 :ctime:    20221231194258
 :END:
 #+TITLE: Bash
@@ -104,6 +104,10 @@ useful command line tools for working with files.
 
 [[id:16c65320-e19d-4bdc-ab55-c410860cddfa][sed]] is a ~s~tring ~ed~itor for processing text files at the command line.
 
+** gh
+
+[[id:9a9076c8-7698-47b9-9cd3-c8b9e06d6694][gh_cli]]
+
 ** grep
 
 [[id:1ffb126f-a7aa-4d26-a4d1-a7bfa8085abe][grep]]
@@ -112,9 +116,17 @@ useful command line tools for working with files.
 
 [[id:a23966d2-0e34-4ebd-8a66-5d40c2ce6a43][jq]] is the awk/sed/grep tool for working with JSON files.
 
-** gh
+** most
 
-[[id:9a9076c8-7698-47b9-9cd3-c8b9e06d6694][gh_cli]]
+An alternative Pager, install it on your system and you can test it with ~PAGER=most man ls~. If you want to make this
+permanent you can add the following to ~/.bashrc~ / ~/.zshrc~
+
+#+begin_src bash
+  if command -v most > /dev/null 2>&1; then
+    export PAGER="most"
+  fi
+#+end_src
+
 
 ** parallel
 
