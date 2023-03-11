@@ -1,0 +1,257 @@
+:PROPERTIES:
+:ID:       9187a00f-e287-4e1c-9f33-bd439e7f6cf2
+:mtime:    20230311130108
+:ctime:    20230311130108
+:END:
+#+TITLE: Python Packaging : setup.py
+#+FILETAGS: :python:packaging:
+
+** setup.py
+This is the traditional method of configuring a package in conjunction with a ~requirements.txt~, but has been
+deprecated in favour of ~setup.cfg~ and/or ~pyproject.toml~. The remainder of this document does not therefore describe
+detailed usage of this approach (although it is required by [[#versioneer][Versioneer]]).
+
+#+CAPTION: ~setup.py~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/pyproject.toml][TopoStats]].
+#+begin_src conf
+"""Setup package for building"""
+import setuptools
+import sys
+import versioneer
+
+sys.path.insert(0, ".")
+setuptools.setup(
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
+)
+
+#+end_src
+
+** setup.cfg
+:PROPERTIES:
+:ID:       7cc9d18e-e161-4eec-8e03-c99968294a9f
+:mtime:    20230311130312
+:ctime:    20230311130312
+:END:
+
+A sample ~setup.cfg~ is shown below (its from the [[github.com/AFM-SPM/TopoStats/][TopoStats]] project).
+
+
+*** Metadata
+
+Metadata is important as it provides key information about your package and is used by different services such as PyPI
+or for adding badges to your project. If you write your ~README.md~ in [[id:0c371287-128d-4e46-8128-b2d4f5fc604c][Markdown]] then be sure to include the fields
+~long_description_content_type = text/markdown~ which will ensure that it is correctly rendered on PyPI.
+
+#+CAPTION: Sample ~metadata~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
+#+BEGIN_SRC conf :eval no
+[metadata]
+name = topostats
+description = Automated Analysis for Atomic Force Microscopy Images of Biomolecules
+long_description = file: README.md
+long-description-content-type: text/markdown; charset=UTF-8; variant=GFM
+url = https://github.com/AFM-SPM/TopoStats
+project_urls =
+  Bug Tracker = https://github.com/AFM-SPM/TopoStats/issues
+  Documentation = https://AFM-SPM.github.io/TopoStats
+author = TopoStats Team
+author_email = topostats@sheffield.ac.uk
+license = GNU Lesser GPLv3
+classifiers =
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+#+END_SRC
+
+*** Options
+
+The ~options~ section defines the minimum version of Python and the packages that it depends on. The directive ~package
+= find:~ tells the tools that use this configuration file (e.g. ~build~ for building packages) to look for directories
+that contain ~__init__.py~ files which indicate the directory is a module (or sub-module) and should be included in the
+package.
+
+#+CAPTION: Sample ~options~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
+#+BEGIN_SRC conf :eval no
+[options]
+python_requires = >=3.8
+
+zip_safe = False
+
+install_requires =
+  igor
+  matplotlib
+  numpy
+  pandas
+  pySPM
+  pyyaml
+  ruamel.yaml
+  schema
+  scikit-image==0.19.2
+  scipy
+  seaborn
+  tifffile
+  tqdm
+
+
+packages = find:
+
+#+END_SRC
+
+*** Extras Requirements
+
+These are additional packages that are /not/ installed by default when a package is ~pip install~ because they are not
+directly required for the package to run/function (i.e. they are not "runtime dependencies"). They can be divided into
+sub-groups such as dependencies that are required for ~tests~, building ~docs~ or ~dev~ (development).
+
+#+CAPTION: Sample ~options.extras_require~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
+#+BEGIN_SRC conf :eval no
+[options.extras_require]
+tests =
+  py
+  pytest
+  pytest-cov
+  pytest-mpl
+  pytest-regtest
+
+docs =
+  Sphinx
+  sphinx_rtd_theme
+  numpydoc
+  myst_parser
+  pydata_sphinx_theme
+  sphinx_markdown_tables
+  sphinxcontrib-mermaid
+  sphinxcontrib-napoleon
+  sphinx-autodoc-typehints
+
+dev =
+  black
+  pre-commit
+  pylint
+  flake8
+
+pypi =
+  build
+  wheel
+
+#+END_SRC
+
+*** Packages Find
+
+Because packages are detected using the ~find:~ directive (see above) you may want to exclude certain directories such
+as ~tests/~
+
+#+CAPTION: Sample ~options.packages.find~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
+#+BEGIN_SRC conf :eval no
+[options.packages.find]
+exclude = tests*
+
+#+END_SRC
+
+*** Coverage
+
+This section is used to define the metrics for code coverage by tests. The example below excludes certain directories
+and files (e.g. ~tests/~).
+
+#+CAPTION: Sample ~options.coverage:run~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
+#+BEGIN_SRC conf :eval no
+[coverage:run]
+omit =
+  *conftest.py
+  *tests*
+  **/__init__*
+#+END_SRC
+
+
+*** Flake8
+
+[[https://flake8.pycqa.org/en/latest/][Flake8]] is a [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linter]]
+#+CAPTION: Sample ~options.extras_require~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
+#+BEGIN_SRC conf :eval no
+[flake8]
+max_line_length=120
+docstring-convention=numpy
+exclude =
+    .git,
+    __pycache__,
+    docs/conf.py,
+    build,
+    dist,
+    pygwytracing.py,
+    topostats/plotting.py,
+    topostats/tracing/tracingfuncs.py,
+    topostats/tracing/dnatracing.py,
+    topostats/tracing/tracing_dna.py,
+    tests/tracing/test_dnatracing.py,
+extend-ignore =
+    E501,
+    T201
+#+END_SRC
+
+*** Yapf
+
+#+CAPTION: Sample ~options.extras_require~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
+#+BEGIN_SRC conf :eval no
+[yapf]
+based_on_style = pep8
+column_limit = 120
+
+
+#+END_SRC
+
+*** Package Data
+
+Sometimes you want to include more than ~.py~ files in your package, for example [[id:fac7a695-9bdf-4a79-9ec3-9945e9a0cba4][yaml]] files that contain configuration
+options or [[id:950174e1-c936-463a-b4a2-702ca516d95e][json]] files with data. This can be achieved by adding an ~options.package_data~ section to your file. This can
+be done across all package directories if ~* =~ is used.
+
+To load the files of a package in your code you should use the [[https://docs.python.org/3.8/library/importlib.html][~importlib.resources~ module]]
+
+Specific files can be included and excluded on a per package basis see [[https://jwodder.github.io/kbits/posts/pypkg-data/][examples]] and the [[https://setuptools.pypa.io/en/latest/userguide/datafiles.html][official documentation]].
+
+#+CAPTION: Sample ~options.extras_require~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
+#+BEGIN_SRC conf :eval no
+[options.package_data]
+ * = *.yaml
+#+END_SRC
+
+Alternatively it can be done on a per-directory basis if you have more than one module within your package.
+
+#+CAPTION: Sample ~options.extras_require~ section of ~setup.cfg~ with per module options.
+#+BEGIN_SRC conf :eval no
+[options.package_data]
+module1 = *.yaml
+module2 = *.json
+  *.csv
+#+END_SRC
+
+A useful thread on StackOverflow is [[https://stackoverflow.com/questions/6028000/how-to-read-a-static-file-from-inside-a-python-package][here]] (most useful answers I found were [[https://stackoverflow.com/a/58941536][this]] which includes a link to an [[https://github.com/wimglenn/resources-example][example
+repository]] comparing the different approaches and [[https://stackoverflow.com/a/51724506][this exposition of pkgutil]]). You can load a YAML file with the
+following which loads the file ~topostats/default_config.yaml~
+
+#+CAPTION: Loading a YAML file from Package Data.
+#+BEGIN_SRC python :eval no
+import importlib.resources as pkg_resources
+default_config = pkg_resources.open_text(__package__, "default_config.yaml")
+config = yaml.safe_load(default_config.read())
+#+END_SRC
+
+
+*** Entry Points
+
+It can be useful to provide an entry point to your package so that users can simply type a single command after
+installing the package (typically under a virtual environment) to be able to run it from the command line. Typically you
+would want to include a Command Line Interface that leverages [[id:5f7b632b-bb5b-48dd-b389-d8fcef406a19][Argparse]] to provide command line arguments. An exposition
+of this approach can be read [[https://amir.rachum.com/blog/2017/07/28/python-entry-points/][here]] and the documentation on how to do this with setuptools is [[https://setuptools.pypa.io/en/latest/userguide/entry_point.html][here]]. Add something similar
+to the following to your ~setup.cfg~
+
+#+CAPTION: Sample ~options.extras_require~ section of ~setup.cfg~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
+#+BEGIN_SRC conf :eval no
+[options.entry_points]
+console_scripts =
+  run_topostats = topostats.run_topostats:main
+#+END_SRC
+
+*** Full Config
+
+To see the full config please refer to  [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].

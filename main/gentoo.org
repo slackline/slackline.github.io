@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       44b32b4e-1bef-49eb-b53c-86d9129cb29a
-:mtime:    20230304204837 20230215101210 20230114082312
+:mtime:    20230311154912 20230304204837 20230215101210 20230114082312
 :ctime:    20230114082312
 :END:
 #+TITLE: Gentoo
@@ -58,6 +58,37 @@ package.
 by ~emerge~ when asked to install a package.
 
 There is a useful [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] [[id:938af6af-7a0e-46d1-ae76-6157e948151b][package]] for editing ebuilds ~app-emacs/ebuild-mode~.
+
+* OpenRC
+
+** Runlevels
+
+Runlevels determine the stage at which services are started, there is ~boot~, ~sysinit~, ~default~, ~shutdown~ and you
+can define your own custom runlevels.
+
+** Add service
+
+To add a service to a particular run-level (typically ~default~ for most services)
+
+#+begin_src bash
+  rc-update add <service> <runlevel>
+#+end_src
+
+*** Check service status
+
+To check the status of a particular service use ~rc-service~
+
+#+begin_src bash
+  rc-service <service> status
+#+end_src
+
+*** Start/Stop/Restart service
+
+You can start/stop/restart services
+
+#+begin_src bash
+  rc-service <service> [start|stop|restart]
+#+end_src
 
 * Links
 
