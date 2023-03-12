@@ -191,7 +191,10 @@ You can preview documents easily, from within [[id:754f25a5-3429-4504-8a17-4efea
 
 * Extensions
 
-There are a bunch of [[https://quarto.org/docs/extensions/][Quarto Extensions]] that add additional functionality. Some I've found useful are described below.
+There are a bunch of [[https://quarto.org/docs/extensions/][Quarto Extensions]] that add additional functionality. Some I've found useful are described
+below. Each extension needs to be installed individually and if you use any in pages that are published using CI/CD such
+as GitHub/GitLab pages you should make sure they are installed in the pipeline there too so that they work in your
+rendered pages.
 
 ** [[https://github.com/jmbuhr/quarto-qrcode][quarto-qrcode]]
 
@@ -200,6 +203,7 @@ A simple method for embedding QR-codes for URLs.
 ** [[https://github.com/coatless/quarto-webr][quarto-webr]]
 
 Leverages [[https://docs.r-wasm.org/webr/latest/][webR]] to embed interactive R sessions within HTML rendered pages which makes them interactive.
+
 
 * Links
 + [[https://t.co/FDlvjq4qrc][quarto.org]]
