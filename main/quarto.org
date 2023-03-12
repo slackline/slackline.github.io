@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       251b3ae4-4a5c-4c44-909a-dcbc0aef4b45
-:mtime:    20230208071742 20230105145232 20230103103309 20221228151331 20230103103309 20230103103308
+:mtime:    20230312225146 20230208071742 20230105145232 20230103103309 20221228151331 20230103103309 20230103103308
 :ctime:    20221228151331 20230103103308
 :END:
 #+TITLE: Quarto
@@ -158,6 +158,7 @@ functions used in a code block. ~code_link: true~
 #+end_src
 
 I found these global options didn't work under blogs, although
+
 * Previewing
 :PROPERTIES:
 :ID:       8e0f1277-6058-4135-8483-20b1ace75161
@@ -187,6 +188,18 @@ You can preview documents easily, from within [[id:754f25a5-3429-4504-8a17-4efea
       watch-inputs: true
       navigate: true
 #+end_src
+
+* Extensions
+
+There are a bunch of [[https://quarto.org/docs/extensions/][Quarto Extensions]] that add additional functionality. Some I've found useful are described below.
+
+** [[https://github.com/jmbuhr/quarto-qrcode][quarto-qrcode]]
+
+A simple method for embedding QR-codes for URLs.
+
+** [[https://github.com/coatless/quarto-webr][quarto-webr]]
+
+Leverages [[https://docs.r-wasm.org/webr/latest/][webR]] to embed interactive R sessions within HTML rendered pages which makes them interactive.
 
 * Links
 + [[https://t.co/FDlvjq4qrc][quarto.org]]
