@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       13de4e0e-4c14-48c8-897e-42862be8cfc1
-:mtime:    20230309214237 20230308212843 20230308133735 20230308095908 20230302104209 20230215121954
+:mtime:    20230314153055 20230309214237 20230308212843 20230308133735 20230308095908 20230302104209 20230215121954
 :ctime:    20230215121954
 :END:
 #+TITLE: Discourse
@@ -73,6 +73,11 @@ address for administrator, an SMTP server and ideally a [[https://letsencrypt.or
   git pull
   ./launcher rebuild app
 #+end_src
+
+* Postfix for SMTP server
+
++ [[https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-22-04][How To Install and Configure Postfix as a Send-Only SMTP Server on Ubuntu 22.04 | DigitalOcean]]
+
 * Links
 
 + [[https://www.discourse.org/][Discourse]]
