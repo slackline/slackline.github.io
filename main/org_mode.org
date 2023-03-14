@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       169b9c5f-df34-46ab-b64f-8ee98946ee69
-:mtime:    20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
+:mtime:    20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
 :ctime:    20221217184411
 :END:
 #+TITLE: Orgmode
@@ -53,6 +53,11 @@ last number.
           :defer t)
   ,#+END_SRC
 #+end_src
+
+* Tables
+
+A fairly fundamental structure in documents is tables and these are well supported, with [[https://emacs.stackexchange.com/a/38140/10100][cell wrapping]], functions,
+acting as input to code blocks in literate documents.
 
 
 * Links
