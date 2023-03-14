@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       57ba7f41-cf41-493c-bbf4-9d1e05a0602d
-:mtime:    20230103103310 20221226212438
+:mtime:    20230314223425 20230103103310 20221226212438
 :ctime:    20221226212438
 :END:
 #+TITLE: Git Rebase
@@ -26,3 +26,4 @@ in the log.
 + [[https://about.gitlab.com/blog/2022/11/08/rebase-in-real-life/][GitLab Blog | How to use Git rebase in real life]]
 + [[https://about.gitlab.com/blog/2022/10/06/take-advantage-of-git-rebase/][GitLab Blog | Take advantage of Git rebase]]
 + [[https://itnext.io/advantages-of-git-rebase-af3b5f5448c6][Advantages of Git Rebase by Alessio Pieruccetti]]
++ [[https://dev.to/jenc/git-rebase-for-preventing-merge-commits-2len][Git Rebase for Preventing Merge Commits - DEV Community]]
