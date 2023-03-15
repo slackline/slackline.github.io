@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9187a00f-e287-4e1c-9f33-bd439e7f6cf2
-:mtime:    20230311130108
+:mtime:    20230315210046 20230311130108
 :ctime:    20230311130108
 :END:
 #+TITLE: Python Packaging : setup.py
@@ -255,3 +255,47 @@ console_scripts =
 *** Full Config
 
 To see the full config please refer to  [[https://github.com/AFM-SPM/TopoStats/blob/main/setup.cfg][TopoStats]].
+
+** versioneer
+:PROPERTIES:
+:ID:       6eac0573-f8e1-4014-92b3-2ba786ec8937
+:mtime:    20230315210046
+:ctime:    20230315210046
+:END:
+
+1. ~pip install versioneer~
+2. Modify ~pyproject.toml~ or ~setup.cfg~ (I use the later). It is /vital/ that the ~tag_prefix~ is correct.
+   #+BEGIN_SRC python :eval no
+   [versioneer]
+   VCS = git
+   style = pep440
+   versionfile_source = clarity/_version.py
+   versionfile_build = clarity/_version.py
+   tag_prefix = v
+   parentdir_prefix =
+   #+END_SRC
+3. If using non-vendored mode further modify ~pyproject.toml~
+4. Add ~import versioneer~ and additional lines to obtain version to ~setup.py~
+   #+BEGIN_SRC python :eval no
+     """Package setup"""
+     from setuptools import setup
+     import versioneer
+
+     setup(
+         version=versioneer.get_version(),
+         cmdclass=versioneer.get_cmdclass(),
+     )
+   #+END_SRC
+5. Run ~versioneer install --[no-]vendor~ (I have used ~--no-vendor~ so far).
+6. Add ~versioneer~ to the ~[pypi]~ requirements section of ~setup.cfg~
+   #+BEGIN_SRC python :eval no
+   [options.extras_require]
+   pypi =
+     build
+     versioneer
+   #+END_SRC
+7. ~pip install .[pypi]~
+8. Add the ~pypi.yaml~ to ~\~/.github/workflows/~ directory.
+
+9. Add new repository secrets for [[https://pypi.org/][PYPI_API_TOKEN]] and [[https://test.pypi.org][TEST_PYPI_API_TOKEN]] under /Settings > Secrets > Actions/ you have
+   to generate the tokens on both PyPI and Test PyPI.
