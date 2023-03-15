@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8d52f6c2-84ba-4fa4-9755-7168e3b0b229
-:mtime:    20230314103337 20230311213600 20230309220209 20230308204702 20230308133737 20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
+:mtime:    20230315094159 20230314103337 20230311213600 20230309220209 20230308204702 20230308133737 20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
 :ctime:    20230228205112
 :END:
 #+TITLE: Open Science Community Incubator Program
@@ -262,6 +262,36 @@ process we teach and learn from each other and enable the process of moving towa
 + Break-down your Mission statement into a set of actionable goals or aims. For an example, see the Open Science
   Community Starter Kit, section I.II.
 + Add the Vision and Mission statement to your OSC Master Plan
+** Check-in [2023-03-15 Wed 09:00]
+Questions to discuss...
++ Easy or difficult?
++ Any obstacles? How to overcome
++ Any new insights?
+
+  [[https://www.sheffield.ac.uk/is/people/academic/andrew-cox][Andrew Cox]] - Lecturer in Information Studies, author of /Exploring Research Data Management/ may be worth contacting.
+  [[https://www.sheffield.ac.uk/is/people/academic/stephen-pinfield][Stephen Pinfield]]
+  [[https://www.sheffield.ac.uk/scharr/people/staff/andy-tattersall][Andy Tattersall]]
+
+*** Neil
++ Not an easy task as thinking about community building and organising people isn't something that I normally do.
++ I found expanding on the vision to a mission statement somewhat tricky and have somewhat stalled on that at present.
+*** Vinodh
++ Contacting people who are interested in this may be tricky.
++ Clear communication plan is important.
+*** Sanna
++ Many researchers don't have the time to work on/be involved whilst the Library is trying to form policy and have it
+  informed from the Open Science Community
+*** Fostis
++ Librarian by background and understands the challenge between the library and research community.
++ Practical issues of who runs the social media profiles.
++ An Open Science award for the community.
++ Tagged things into groups/areas : Motivation, Skills, Training, Environment, Governance
+
+*** Anita
+
+Vision > Mission > Aims
+
+Aims are a tool to get you to your mission statement(s) and mission should lead to vision.
 * Module 2 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.hfpbcmnncxve][Community Engagement]]
 
 * Module 3 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.k5ezdbcfizen][Member Recruitment]]

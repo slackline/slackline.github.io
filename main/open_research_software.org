@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       8a38a071-9901-4e35-9aec-213a0c65af00
 :ROAM-ALIASES: "Open Research Software"
-:mtime:    20230103103311 20221231171719
+:mtime:    20230315120054 20230103103311 20221231171719
 :ctime:    20221231171719
 :END:
 #+TITLE: Open Research Software
@@ -19,6 +19,7 @@
 
 + [[https://codecheck.org.uk/][CODECHECK]] is a process for independent execution of computations underlying scholarly research articles.
 + [[https://www.reprohack.org/][ReproHack Hub]]
++ [[https://www.mediawiki.org/wiki/Guidelines_for_a_healthy_code_review_culture][Guidelines for a healthy code review culture - MediaWiki]]
 
 * Bibliography
 
