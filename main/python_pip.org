@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       47543a76-a873-4c07-b30d-926f50b31fca
-:mtime:    20230103103310 20221228151415
+:mtime:    20230316193310 20230103103310 20221228151415
 :ctime:    20221228151415
 :END:
 #+TITLE: Python PIP
@@ -34,6 +34,10 @@ You can also install packages directly from GitHub
 
 *** Installing Specific Branches
 
+** Cleaning Virtual Environments
+
+Sometimes your environments can get cluttered with unnecessary packages. [[https://github.com/fredrikaverpil/creosote][creosote]] can help here as it analyses a virtual
+environment and removes unnecessary packages.
 
 * Links
 
