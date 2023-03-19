@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9f72e8bd-2dbe-4a95-9517-c0c94bc995a0
-:mtime:    20230103103312 20221215204145 20230103103310
+:mtime:    20230319111642 20230103103312 20221215204145 20230103103310
 :ctime:    20221215204145 20230103103310
 :END:
 #+TITLE: Statistics
@@ -32,7 +32,7 @@ More than deserving of its own section, read more at [[id:38feb454-ee1e-440b-939
 * Software
 :PROPERTIES:
 :ID:       526272b2-904f-4656-b24c-fdefc4492fdc
-:mtime:    20230103103310 20221215204145
+:mtime:    20230319111642 20230103103310 20221215204145
 :ctime:    20221215204145
 :END:
 
@@ -69,6 +69,9 @@ Read more on [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]].
 Genetic Epidemiology and [[id:3899f7f8-bc4a-4228-b922-5b9bb361106c][Statistical Genetics]] many years ago and was really good. I liked the UNIX like interface to
 using it but made a conscious choice to move to [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]] as it had better integration for literate programming (at the time via
 Sweave but now there is [[id:1db6158d-cb5d-4b73-b926-95e9c09f878b][RMarkdown]] and [[id:251b3ae4-4a5c-4c44-909a-dcbc0aef4b45][Quarto]]).
+
+** Julia
+
 
 * Community
 

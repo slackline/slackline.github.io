@@ -1,8 +1,10 @@
 :PROPERTIES:
 :ID:       67f03851-d5bf-46ea-a7f5-14dfbaa7c61c
-:mtime:    20230103103311 20220322193953
+:mtime:    20230319111636 20230103103311 20220322193953
 :ctime:    20220322193953
 :END:
+#+TITLE: Julia
+#+FILETAGS: :statistics:programming:julia:
 
 [[https://julialang.org/][Julia]] is the new kid on the block and I've heard good things about it in terms of speed and its support for Bayesian
 analyses.
@@ -20,3 +22,5 @@ packages I've selected.
 + [[https://juliapackages.com/][Julia Packages]]
 + [[https://juliahub.com/ui/Packages][JuliaHub · Packages]]
 + [[https://openmendel.github.io/][OpenMendel Project | OpenMendel]]
++ [[https://kdpsingh.github.io/Tidier.jl/dev/][Tidier.jl]] - [[id:b4510762-8409-4e5e-8ee8-c27574977772][Tidyverse]] implementation in Julia.
++ [[https://dataframes.juliadata.org/stable/][DataFrames.jl]] - ~pd.DataFrame~/~data.table~/~data.frame~ like tabular data in Julia.
