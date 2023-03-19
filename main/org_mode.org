@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       169b9c5f-df34-46ab-b64f-8ee98946ee69
-:mtime:    20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
+:mtime:    20230319195017 20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
 :ctime:    20221217184411
 :END:
 #+TITLE: Orgmode
@@ -106,3 +106,4 @@ There are hundreds!
 ** Articles
 + [[https://www.howardism.org/Technical/Emacs/org-find-file.html][Find Org Files]]
 + [[https://wmealing.github.io/emacs-org-babel-analysis.html][Emacs and Org-babel for flaw analysis.]]
++ [[https://baty.net/2022/book-logging-in-emacs][Book logging in Emacs – Baty.net]]

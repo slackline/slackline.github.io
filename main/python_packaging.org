@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       bb57f65e-58f4-45de-9620-901dc998f6d6
-:mtime:    20230316065623 20230312225913 20230311130516 20230301211740 20230301095721 20230227221806 20230207111629 20230103103312 20221228113913 20230103103309
+:mtime:    20230319195324 20230319124004 20230318215853 20230318205506 20230316065623 20230312225913 20230311130516 20230301211740 20230301095721 20230227221806 20230207111629 20230103103312 20221228113913 20230103103309
 :ctime:    20221228113913 20230103103309
 :END:
 #+TITLE: Python Packaging
@@ -10,10 +10,10 @@
 This page describes steps in creating a [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] package. If you are looking for information on installing packages this
 is done using [[id:47543a76-a873-4c07-b30d-926f50b31fca][Python PIP]].
 
-[[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] packaging is it seems in a constant state of flux. There is the official [[https://packaging.python.org/en/latest/][Python Packaging User Guide]] from the
-[[https://www.pypa.io/en/latest/][Python Packaging Authority]] which is probably the best resource to read but things change, and often quickly. This
-document focuses on [[https://setuptools.pypa.io/en/latest/index.html][Setuptools]] which works with Python >= 3.7, but you may wish to consider other packages such as
-[[id:8aed2c14-86e7-4b0e-bfe6-e783831bfca2][Poetry]] or [[id:37748065-f956-4d0c-9301-c4d51439b1b4][PDM]] which offer some advantages but with additional learning.
+[[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] packaging is in a constant state of flux. There is the official [[https://packaging.python.org/en/latest/][Python Packaging User Guide]] and the
+[[https://www.pypa.io/en/latest/][Python Packaging Authority]] (PyPA) which is probably the best resource to read but things change, and often quickly. The
+focus here is on the PyPA [[https://setuptools.pypa.io/en/latest/index.html][Setuptools]] using ~pyproject.toml~ which works with Python >= 3.7, but you may wish to consider
+other packages such as [[id:8aed2c14-86e7-4b0e-bfe6-e783831bfca2][Poetry]] or [[id:37748065-f956-4d0c-9301-c4d51439b1b4][PDM]] which offer some advantages but with additional learning.
 
 A few examples of Python packages that I have packaged are listed below, most have also been released to [[https://pypi.org/][PyPI]].
 
@@ -47,34 +47,19 @@ to the flat structure.
       └── ./tests/something/test_module_c.py
 #+END_SRC
 
-** \__init\__.py
+** ~__init__.py~
 
 In older versions of Python (<3.3) a ~__init__.py~ was required in every directory and sub-directory that was to be a
-module/sub-module. In more recent versions of Python (>\=3.3) they are not essential though as Python uses [[https://docs.python.org/3/reference/import.html#namespace-packages][namespace
-packages]]. But in most cases its simpler to include such a file in the top level of your directory.  ~__init__.py~ files
-can be completely empty or they can contain code that is used throughout your package, such as setting up a logger or
-setting the package version.
+module/sub-module. In more recent versions of Python (\>\\=3.3) they are not essential though as Python uses [namespace
+packages](https://docs.python.org/3/reference/import.html#namespace-packages). But in most cases its simpler to include
+such a file in the top level of your directory. ~__init__.py~ files can be completely empty or they can contain code
+that is used throughout your package, such as setting up a logger.
 
-#+CAPTION: Example ~__init__.py~ that sets up logging and sets the ~__version__~ dynamically.
-#+BEGIN_SRC python :eval no
-  """Topostats"""
-  from .logs.logs import setup_logger
-  from . import _version
-
-  LOGGER = setup_logger()
-
-  __version__ = _version.get_versions()["version"]
-#+END_SRC
-
-
-
-* Configuration
+* Configuration ~pyproject.toml~
 
 Package configuration has been and is in a state of flux, there was original [[id:9187a00f-e287-4e1c-9f33-bd439e7f6cf2][setup.py]] which was then complemented and
 gradually replaced by [[id:7cc9d18e-e161-4eec-8e03-c99968294a9f][setup.cfg]]. The new method on the block though is ~pyproject.toml~ which, with a little tweaking
 and judicious choice of packages can handle everything.
-
-** pyproject.toml
 
 Setuptools is shifting towards using ~pyproject.toml~ and whilst it is still under development although its already
 highly functional. Its written in [[https://toml.io/en/][Tom's Obvious Minimal Language]] and isn't too dissimilar in structure to ~setup.cfg~.
@@ -85,106 +70,49 @@ files]]. It is based around [[https://peps.python.org/pep-0621/][PEP 621 – Sto
 A bare-bones ~pyproject.toml~ file should reside in the top level of your directory with the following (**NB** This
 includes the minimum versions and ~setuptools_scm~ extension for dynamically setting package version)...
 
-*** Build System
+** ~build-system~
+
 #+CAPTION: ~build-system~ section of ~pyproject.toml~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/pyproject.toml][TopoStats]].
 #+begin_src conf
   [build-system]
-  requires = ["setuptools>=45", "setuptools_scm[tools]>=6.2"]
+  requires = ["setuptools>=65.6.3", "setuptools_scm[tools]>=6.2", "wheel"]
   build-backend = "setuptools.build_meta"
 #+end_src
 
 Traditionally configuration of meta-data such as author, code repository and license was made via ~setup.py~ but you can
 either specify some (or most) of this in ~pyproject.toml~ or a concurrent ~setup.cfg~.
 
-*** Project
+** ~project~
 
 This is the main body of the project description detailing ~name~, ~authors~, ~description~, ~readme~, ~license~,
 ~keywords~, ~classifiers~, ~dependencies~ and ~version~ amongst other things.
 
-All other sections are considered tools and are defined under their own heading with ~tool.<package>[.<options>]~.
+The type of ~license~ you have chosen to apply to your package. For guidance see [[https://choosealicense.com/][Choose an Open Source License]].
 
-**** ~name~
+~readme~ defines the ~README~ of your package which may be in [[id:0c371287-128d-4e46-8128-b2d4f5fc604c][Markdown]] or Restructured Text.
 
-The name of your package is a string
+Sets the components of your package which are set dynamically. In this example we only set the version dynamically using
+~setuptools_scm~.
 
-#+CAPTION: ~name~ section of ~project~
+Your package ~dependencies~ are those that are required for running the code. They should not include packages that are
+required for development (e.g. ~black~. ~flake8~, ~ruff~, ~pre-comit~, ~pylint~ etc.), nor those required for testing
+(e.g. ~pytest~, ~pytest-regtest~, ~pytest-cov~ etc.), documentation (e.g. ~Sphinx~, ~numpydoc~, ~sphinx_markdown_table~,
+~sphinx-autodoc-typehints~, ~sphinxcontrib-mermaid~ etc.) as these are defined in a separate section.
+
+#+CAPTION: ~project~ section of ~pyproject.toml~
 #+begin_src conf
   [project]
   ...
   name = "my_package"
-#+end_src
-
-**** ~authors~
-
-Authors is a list or table in TOML parlance
-
-#+CAPTION: ~authors~ section of ~project~
-#+begin_src conf
-  [project]
-  ...
   authors = [
     {name = "Author 1", email="author1@somewhere.com"},
     {name = "Author 2", email="author2@somewhere.com"},
     {name = "Author 3", email="author3@somewhere.com"},
   ]
-#+end_src
-
-**** ~description~
-
-A single line description of your package
-
-#+CAPTION: ~description~ section of ~project~
-#+begin_src conf
-  [project]
-  ...
   description = "A package that does some magic!"
-#+end_src
-
-**** ~license~
-
-The type of license you have chosen to apply to your package. For guidance see [[https://choosealicense.com/][Choose an Open Source License]].
-
-#+CAPTION: ~license~ of ~project~
-#+begin_src conf
-  [project]
-  ...
   license = "GNU GPLv3 only"
-#+end_src
-
-**** ~readme~
-
-Defines the ~README~ of your package which may be in [[id:0c371287-128d-4e46-8128-b2d4f5fc604c][Markdown]] or Restructured Text.
-
-#+CAPTION: ~readme~ section of ~project~
-#+begin_src conf
-  [project]
-  ...
   readme = "README.md"
-#+end_src
-
-**** ~dynamic~
-
-Sets the components of your package which are set dynamically. In this example we only set the version dynamically using
-~setuptools_scm~.
-
-#+CAPTION: ~dynamic~ section of ~project~
-#+begin_src conf
-  [project]
-  ...
   dynamic = ["version"]
-#+end_src
-
-**** ~dependencies~
-
-These are your package dependencies that are require for running the code. They should not include packages that are
-required for development (e.g. ~black~. ~flake8~, ~ruff~, ~pre-comit~, ~pylint~ etc.), nor those required for testing
-(e.g. ~pytest~, ~pytest-regtest~, ~pytest-cov~ etc.), documentation (e.g. ~Sphinx~, ~numpydoc~, ~sphinx_markdown_table~,
-~sphinx-autodoc-typehints~, ~sphinxcontrib-mermaid~ etc.) as these are defined in a separate section.
-
-#+CAPTION: ~dependencies~ of ~project~ required for the package to run.
-#+begin_src conf
-  [project]
-  ...
   dependencies = [
     "numpy",
     "pandas",
@@ -192,7 +120,12 @@ required for development (e.g. ~black~. ~flake8~, ~ruff~, ~pre-comit~, ~pylint~ 
   ]
 #+end_src
 
-*** ~project.urls~
+All other sections are considered subsections, either of ~project~ or ~tools~ and are defined under their own heading
+with ~[project|tool].<package>[.<options>]~.
+
+
+
+** ~project.urls~
 
 These are important as they define where people can find the ~Source~, ~Documentation~ and ~Bug_Tracker~ amongst other
 things. There may be more fields that can be configured here but I've not used the yet. Substitute these to reflect
@@ -251,17 +184,58 @@ such as development, documentation, publishing to PyPI, additional Notebooks and
   ]
 #+end_src
 
-*** ~tools~
+*** ~project.scripts~ (Entry Points)
 
-**** ~setuptools~
+Entry points or ~scripts~ are a neat method of providing a simple command line interface to your package that links
+directly into a specific module to provide a command line interface to your programme.
+
+These are defined under ~project.scripts~ section.
+
+#+CAPTION: Defining entry points in ~pyproject.toml~
+#+begin_src toml
+  [project.scripts]
+  tcx2gpx = "tcx2gpx:process"
+#+end_src
+
+** ~tool~
+
+*** ~tool.setuptools~
 
 [[https://setuptools.pypa.io/en/latest/index.html][setuptools]] is perhaps the most common package for configuring
 Python packages and is the one that is being exposed here. Its configuration is multi-level depending on which
 component you are configuring.
 
-**** ~pytest~
+**** ~tool.setuptools.packages.find~
 
-#+CAPTION: ~tool.versioneer~ section of ~pyproject.toml~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/pyproject.toml][TopoStats]].
+
+Uses the ~find~ utility to search for packages to include, based on my understanding it looks for ~__init__.py~ in a
+directory and includes it (see above note about these no longer being required in every directory). Typically you would
+want to exclude ~tests/~ from a package you are making as most users won't need to run the test suite (if they do they
+would clone from the source repository).
+
+#+CAPTION: ~tool.setuptools.packages.find~ of ~pyproject.toml~
+#+begin_src toml
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tcx2gpx"]
+exclude = ["tests"]
+#+end_src
+
+**** ~tool.setuptools.package-data~
+
+This allows additional, non ~.py~ files to be included, they are listed on a per package basis and are a table (in toml
+parlance, list in Python terms).
+
+#+CAPTION: ~tool.setuptools.packages-data~ of ~pyproject.toml~
+#+begin_src toml
+  [tool.setuptools.packages-data]
+  tcx2gpx = ["*.yaml", "*.json"]
+#+end_src
+
+
+*** ~tool.pytest~
+
+#+CAPTION: ~tool.pytest~ section of ~pyproject.toml~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/pyproject.toml][TopoStats]].
 #+begin_src conf
 [tool.pytest.ini_options]
 minversion = "7.0"
@@ -276,7 +250,7 @@ filterwarnings = [
 
 #+end_src
 
-**** ~tools.black~
+*** ~tool.black~
 
 #+CAPTION: ~tool.black~ section of ~pyproject.toml~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/pyproject.toml][TopoStats]].
 #+begin_src toml
@@ -296,11 +270,11 @@ exclude = '''
 
 #+end_src
 
-**** ~tools.flake8~
+*** ~tool.flake8~
 
 The developers of Flake8 will not be supporting ~pyproject.toml~ for configuration. This is a shame but a work around is
-available in the form of [[https://github.com/john-hen/Flake8-pyproject][Flake8-pyproject]]. Make sure to add this to
-your requirements section to ensure it is installed when people use ~pre-commit~.
+available in the form of [[https://github.com/john-hen/Flake8-pyproject][Flake8-pyproject]]. Make sure to add this to your requirements section to ensure it is installed
+when people use ~pre-commit~.
 
 #+CAPTION: ~tools.flake8~ configuration example.
 #+begin_src conf
@@ -313,7 +287,7 @@ your requirements section to ensure it is installed when people use ~pre-commit~
   count = true
 #+end_src
 
-**** ~tool.setuptools_scm~
+*** ~tool.setuptools_scm~
 
 [[https://github.com/pypa/setuptools_scm/][setuptools_scm]] is a simple to use extension to setuptools that dynamically
 sets the package version based on the version control data.
@@ -326,7 +300,7 @@ You _must_
   write_to = "tcx2gpx/_version.py"
 #+end_src
 
-**** ~tool.ruff~
+*** ~tool.ruff~
 
 [[https://github.com/charliermarsh/ruff][ruff]] is a Python linter written in
 [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]] which is therefore very fast. It provides the same functionality as
@@ -341,64 +315,8 @@ You _must_
 #+end_src
 
 
-**** ~project.scripts~ (Entry Points)
-
-Entry points or ~scripts~ are a neat method of providing a simple command line interface to your package that links
-directly into a specific module to provide a command line interface to your programme.
-
-These are defined under ~project.scripts~ section.
-
-#+CAPTION: Defining entry points in ~pyproject.toml~
-#+begin_src toml
-  [project.scripts]
-  tcx2gpx = "tcx2gpx:process"
-#+end_src
-
-*** Versioneer Options [DEPRECATED]
-
-You can configure Versioneer from ~pyproject.toml~ but I would highly recommend using ~setuptools_scm~ instead, its far
-simpler.
-
-#+CAPTION: ~build-system~ section of ~pyproject.toml~ from [[https://github.com/AFM-SPM/TopoStats/blob/main/pyproject.toml][TopoStats]].
-#+begin_src toml
-[tool.versioneer]
-VCS = "git"
-style = "pep440"
-versionfile_source = "topostats/_version.py"
-versionfile_build = "topostats/_version.py"
-tag_prefix = "v"
-parentdir_prefix = ""
-#+end_src
 
 
-
-* Building your Package
-
-** Generate Distribution Archive
-
-In your package directory you can create a distribution of your package with the latest versions of ~setuptools~ and ~wheel~. To do
-this in your virtual environment run the following. The documentation for how to do this is at [[https://setuptools.pypa.io/en/latest/setuptools.html][Building and Distributing
-Packages with Setuptools]].
-
-You should as mentioned above have the following in ~pyproject.toml~
-
-#+begin_src :eval no
-  [build-system]
-  requires = [
-    "setuptools >= 65.6.3",
-    "wheel",
-  ]
-  build-backend = "setuptools.build_meta"
-#+end_src
-
-The package can now be built locally with...
-
-#+begin_src bash :eval no
-  python -m pip install --upgrade setuptools wheel
-  python -m build --no-isolation
-#+end_src
-
-...and the resulting package will be generated in the ~dist/~ directory.
 
 * Versioning
 
@@ -411,8 +329,34 @@ It is worth taking a moment to read and understand about [[https://semver.org/][
 versions of your software to work with ~setuptools_scm~
 
 ** Setuptools_scm
-[[https://github.com/pypa/setuptools_scm][pypa/setuptools_scm]] is a newer tool compared to [[id:32bdd209-92be-454e-9741-b1d453d1c0e2][versioneer]] but is simpler as it relies solely on configuration via
-~pyproject.toml~ rather than being dependent on now deprecated ~setup.py~.
+[[https://github.com/pypa/setuptools_scm][setuptools_scm]] is a newer tool compared to [[id:32bdd209-92be-454e-9741-b1d453d1c0e2][versioneer]] but is simpler as it relies solely on configuration via
+~pyproject.toml~ rather than being dependent on now deprecated ~setup.py~. As shown above you should have set the
+minimum versions of ~"setuptools>=45"~ and ~"setuptools_scm[toml]>=6.2"~, ~dynamic = ["version"]~ under ~project~ and
+set the ~write_to = "pkg/_version.py"~ (**NB** substitute ~pkg~ for your package directory, whether its ~src~ or the
+package name).
+
+#+CAPTION: Minimum requirements for using ~setuptools_scm~
+#+begin_src toml
+  [build-system]
+  requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+
+  [project]
+  dynamic = ["version"]
+
+  [tool.setuptools_scm]
+  write_to "pkg/_version.py"
+#+end_src
+
+*** Including Version in Sphinx Documentation
+
+If you have Sphinx documentation you can add the following to ~docs/conf.py~
+
+#+CAPTION: Configuring Sphinx ~docs/conf.py~ to use ~setuptools_scm~.
+#+begin_src python
+  from importlib.metadata import version
+  release = version("myproject")
+  version = ".".join(release.split(".")[:2])
+#+end_src
 
 ** Versioneer
 
@@ -420,17 +364,47 @@ The first time I went through this process I was unaware of ~setuptools_scm~ and
 used that. Old notes are archived [[id:6eac0573-f8e1-4014-92b3-2ba786ec8937][here]].
 
 
+* Building your Package
+
+** Generate Distribution Archive
+
+In your package directory you can create a distribution of your package with the latest versions of ~setuptools~ and
+~wheel~. To do this in your virtual environment run the following. The documentation for how to do this is at [[https://setuptools.pypa.io/en/latest/setuptools.html][Building and Distributing
+Packages with Setuptools]].
+
+You should as mentioned above have the following in ~pyproject.toml~
+
+#+begin_src toml
+  [build-system]
+  requires = [
+    "setuptools >= 65.6.3",
+    "wheel",
+  ]
+  build-backend = "setuptools.build_meta"
+#+end_src
+
+The package can now be built locally with...
+
+#+begin_src bash
+  python -m pip install --upgrade setuptools wheel
+  python -m build --no-isolation
+#+end_src
+
+...and the resulting package will be generated in the ~dist/~ directory.
+
+
+
 * Publishing to [[https://pypi.org][PyPI]]
 
 Before pushing the package to the main PyPi server it is prudent to test things out on  [[https://test.pypi.org/][TestPyPI]] first. You must first
-generate an API Token from your account settings page. It needs a name and the scope should be `Entire account (all
-projects)`. This token will be shown once so do *not* navigate away from the page until you have copied it.
+generate an API Token from your account settings page. It needs a name and the scope should be ~Entire account (all
+projects)~. This token will be shown once so do *not* navigate away from the page until you have copied it.
 
 
 You use [[https://twine.readthedocs.io/en/latest/][twine]] to upload the package and should create a ~.pypirc~ file in the root of the package directory that
 contains your API key and the username ~__token__~. For the TestPyPI server it follows the following format.
 
-#+begin_src conf :eval no
+#+begin_src conf
   [testpypi]
     username = __token__
     password = pypi-dfkjh9384hdszfkjnkjahkjfhd3YAJKSHE0089asdf0lkjsjJLLS_-0942358JKHDKjhkljna39o854yurlaoisdvnzli8yw459872jkhlkjsdfkjhasdfadsfasdf
@@ -439,7 +413,7 @@ contains your API key and the username ~__token__~. For the TestPyPI server it f
 Once this is in place you are ready to use ~twine~ to upload the package using the configuration file you have just
 created.
 
-#+begin_src bash :eval no
+#+begin_src bash
   twine upload --config-file ./.pypirc --repository testpypi dist/*
 #+end_src
 
@@ -449,7 +423,7 @@ After having uploaded your package to the TestPyPI server you should create a cl
 installing the package from where you have just uploaded it. You can do this using ~pip~ and the ~--index-url~ and
 ~--extra-index-url~, the former installs your package from TestPyPI, the later installs dependencies from PyPI.
 
-#+begin_src bash :eval no
+#+begin_src bash
   pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ your-package
 #+end_src
 
@@ -460,7 +434,7 @@ Once installed you can try running the code, scripts or notebooks associated wit
 Once you are happy this is working you can repeat the process on the main [[https://pypi.org][PyPI]] server. You can add the token that you
 generate to ~/.pypirc~ under a separate heading.
 
-#+begin_src conf :eval no
+#+begin_src conf
   [testpypi]
     username = __token__
     password = pypi-dfkjh9384hdszfkjnkjahkjfhd3YAJKSHE0089asdf0lkjsjJLLS_-0942358JKHDKjhkljna39o854yurlaoisdvnzli8yw459872jkhlkjsdfkjhdfJZZZZZF
@@ -471,6 +445,10 @@ generate to ~/.pypirc~ under a separate heading.
 
 
 ** GitHub Action
+:PROPERTIES:
+:mtime:    20230319200113
+:ctime:    20230319200113
+:END:
 
 Manually uploading is somewhat time consuming and tedious. Fortunately though with ~setuptools_scm~ in place and tokens
 generated we can automate the process of building and uploading packages to PyPI can be automated using the GitHub Action
@@ -479,7 +457,7 @@ similarly one for [[https://test.pypi.org][test PyPI]]) and these can stored on 
 with the names ~PYPI_API_TOKEN~ and ~TEST_PYPI_API_TOKEN~ respectively.  You can then add the following GitHub Action
 under ~.github/workflow/pypi.yaml~.
 
-#+BEGIN_SRC yaml :eval no
+#+BEGIN_SRC yaml
 name: Publish package to PyPi
 
 on:
@@ -498,9 +476,9 @@ jobs:
         uses: actions/setup-python@v4.3.0
         with:
           python-version: 3.9
+          cache: 'pip'
       - name: Installing the package
         run: |
-          pip3 install versioneer
           pip3 install .
           pip3 install .[pypi]
       - name: Build package
