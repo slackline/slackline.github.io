@@ -1,11 +1,11 @@
 :PROPERTIES:
 :ID:       55581960-395e-443c-bd5d-bc00c496b6ae
-:mtime:    20230106165332 20230103103310 20220531111803
+:mtime:    20230321120643 20230106165332 20230103103310 20220531111803
 :ctime:    20220531111803
 :END:
-#+TITLE: Linting
+#+TITLE: Python Linting
 #+DATE: [2022-04-02 Sat 08:32]
-#+FILETAGS: %?
+#+FILETAGS: :python:linting:style:pre-commit:
 
 * What is all the fluff about?
 
@@ -52,6 +52,7 @@ number of tools available that will lint your Python code for you and most integ
 + [[https://pycodestyle.pycqa.org/en/latest/intro.html][pycodestyle]] - check your Python code against some of the style conventions in PEP 8.
 + [[https://prospector.landscape.io/en/master/index.html][Prospector]] - Python Static Analysis
 + [[http://mypy-lang.org/][mypy]] - Optional Static Typing for Python
++ [[https://github.com/asottile/pyupgrade][asottile/pyupgrade]] : A tool (and pre-commit hook) to automatically upgrade syntax for newer versions of the language.
 
   Here is a simple example of some code (download the file from [[file:save_random_numbers.py][here]]).
 
@@ -324,6 +325,11 @@ Black hasn't changed much but it has reformatted the `def save_random_numbers(..
 
 * Automating
 
+** pre-commit
+
+Since your code will typically be under [[id:0859ef9e-834d-4e84-8e67-fa7593a61e0b][Git]] version control you should really use [[https://ns-rse.github.io/posts/pre-commit/][pre-commit]] to lint your code
+automatically and [[https://ns-rse.github.io/posts/pre-commit-ci/][pre-commit-ci]] in your CI/CD pipeline.
+
 ** IDE Integration
 
 When programming it is really useful to use an [[https://en.wikipedia.org/wiki/Integrated_development_environment][Integrated Development Environment (IDE)]] as most allow the integration of
@@ -373,6 +379,7 @@ languages and integrates easily into your pipeline (GitHub Action, CI on GitLab,
 + [[https://github.com/psf/black][Black]] - The Uncompromising Code Formatter
 + [[https://code.visualstudio.com/docs/python/linting][Linting Python in Visual Studio Code]]
 + [[https://pylint.pycqa.org/en/latest/messages/messages_list.html][Pylint = Overview of all Pylint messages]]
++ [[https://github.com/asottile/pyupgrade][asottile/pyupgrade]] : A tool (and pre-commit hook) to automatically upgrade syntax for newer versions of the language.
 
 ** R
 
