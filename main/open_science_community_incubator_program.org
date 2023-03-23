@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8d52f6c2-84ba-4fa4-9755-7168e3b0b229
-:mtime:    20230315094159 20230314103337 20230311213600 20230309220209 20230308204702 20230308133737 20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
+:mtime:    20230323095006 20230322103502 20230322092056 20230315094159 20230314103337 20230311213600 20230309220209 20230308204702 20230308133737 20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
 :ctime:    20230228205112
 :END:
 #+TITLE: Open Science Community Incubator Program
@@ -293,7 +293,185 @@ Vision > Mission > Aims
 
 Aims are a tool to get you to your mission statement(s) and mission should lead to vision.
 * Module 2 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.hfpbcmnncxve][Community Engagement]]
+[[https://docs.google.com/document/d/1clV_gk0IV3jKsUSN0_M1C4uohz7_V0SsQZpn1p7RsxY/edit][Program and Notes]]
+** [[https://docs.google.com/presentation/d/1UXe3nCcVCO4wkmYqiaugp29A2iQFIXOnxPc2kaw1aA8/edit?usp=share_link][Community Engagement : Target Groups]]
++ Communities are where people interact.
++ Different target audiences for Open Science Communities with different levels of engagement.
++ Who are our members, what type of groups?
++ A community has...
+  + Shared Goals
+  + Sense of Belonging
+  + Connections
+  + Opportunity
+  + ...all lead to Action.
++ Helps to have a heterogenous community so that people do not feel excluded.
+  + Open Science expertise varies
+  + Professional roles
+  + Disciplines (Science, Humanities, Maths)
+  + Bear in mind the mission and vision statements.
 
+*** Exercise 1
+
+| Characteristic               | Levels (description)                                                                                               | Levels (N) | Distribution of Levels (%) |
+|------------------------------+--------------------------------------------------------------------------------------------------------------------+------------+----------------------------|
+| All discipllines             | Faculty Level                                                                                                      |            | Equal                      |
+| Open Science Experience      | Beginner, Intermediate, Expertise                                                                                  |          3 | 1:2:1                      |
+| Career Stage                 | Early (postdoc), Mid, Senior                                                                                       |          3 | 5:3:2                      |
+| Research Sector              | Private, Public, Independent                                                                                       |          3 | Variable                   |
+| Support Staff/Administration | Legal, Knowledge Transfer, Licensing, Libray, Funding Support, Lab Researchers, Data Stewards, Educational Support |          8 | Equal                      |
+| Student Involvement          | (Undergraduate once community has launched and consolidated), Graduate level                                       |          1 |                            |
+
+Split these as across each faculty there are Beginner/Intermediate/ Expertise, Early/Mid/Senior
+
+| Target Group | Discipline                   | Open Science Experience | Career Stage |
+|--------------+------------------------------+-------------------------+--------------|
+|            1 | Science                      | Beginner                | Early        |
+|            2 | Science                      | Beginner                | Mid          |
+|            3 | Science                      | Beginner                | Senior       |
+|            4 | Science                      | Intermediate            | Early        |
+|            5 | Science                      | Intermediate            | Mid          |
+|            6 | Science                      | Intermediate            | Senior       |
+|            7 | Science                      | Expert                  | Early        |
+|            8 | Science                      | Expert                  | Mid          |
+|            9 | Science                      | Expert                  | Senior       |
+|           10 | Engineering                  | Beginner                | Early        |
+|           11 | Engineering                  | Beginner                | Mid          |
+|           12 | Engineering                  | Beginner                | Senior       |
+|           13 | Engineering                  | Intermediate            | Early        |
+|           14 | Engineering                  | Intermediate            | Mid          |
+|           15 | Engineering                  | Intermediate            | Senior       |
+|           16 | Engineering                  | Expert                  | Early        |
+|           17 | Engineering                  | Expert                  | Mid          |
+|           18 | Engineering                  | Expert                  | Senior       |
+|           19 | Medicine, Dentistry & Health | Beginner                | Early        |
+|           20 | Medicine, Dentistry & Health | Beginner                | Mid          |
+|           21 | Medicine, Dentistry & Health | Beginner                | Senior       |
+|           22 | Medicine, Dentistry & Health | Intermediate            | Early        |
+|           23 | Medicine, Dentistry & Health | Intermediate            | Mid          |
+|           24 | Medicine, Dentistry & Health | Intermediate            | Senior       |
+|           25 | Medicine, Dentistry & Health | Expert                  | Early        |
+|           26 | Medicine, Dentistry & Health | Expert                  | Mid          |
+|           27 | Medicine, Dentistry & Health | Expert                  | Senior       |
+|           28 | Arts and Humanities          | Beginner                | Early        |
+|           29 | Arts and Humanities          | Beginner                | Mid          |
+|           30 | Arts and Humanities          | Beginner                | Senior       |
+|           31 | Arts and Humanities          | Intermediate            | Early        |
+|           32 | Arts and Humanities          | Intermediate            | Mid          |
+|           33 | Arts and Humanities          | Intermediate            | Senior       |
+|           34 | Arts and Humanities          | Expert                  | Early        |
+|           35 | Arts and Humanities          | Expert                  | Mid          |
+|           36 | Arts and Humanities          | Expert                  | Senior       |
+|           37 | Social Sciences              | Beginner                | Early        |
+|           38 | Social Sciences              | Beginner                | Mid          |
+|           39 | Social Sciences              | Beginner                | Senior       |
+|           40 | Social Sciences              | Intermediate            | Early        |
+|           41 | Social Sciences              | Intermediate            | Mid          |
+|           42 | Social Sciences              | Intermediate            | Senior       |
+|           43 | Social Sciences              | Expert                  | Early        |
+|           44 | Social Sciences              | Expert                  | Mid          |
+|           45 | Social Sciences              | Expert                  | Senior       |
+
+** Mountain of Engagement
+People can be active and participate in different manners within a community.
++ Want to make the community such that people can move up the mountain of engagement, don't want people just attending,
+  we want people to then get involved and share/teach others.
++ 5 steps of Mountain engagement...
+  1. A list of peoples interactions within your community.
+  2. 3-5 deepening bands/levels of engagement
+  3. Group interactions into bands and give each band a name.
+  4. Identify what works and what doesn't work.
+  5. Prioritise your work to create more opportunities.
+
+*** Levels of Community Interaction (Brainstorming)
+See [[https://docs.google.com/document/d/1clV_gk0IV3jKsUSN0_M1C4uohz7_V0SsQZpn1p7RsxY/edit][Group Notes]]
+
+| Levels of Engagement | Description                                                   | Community Interactions |
+|----------------------+---------------------------------------------------------------+------------------------|
+| Leader               | Those running the community                                   |                        |
+| Initiator            | Starts things themselves, good idea to have a workshop/group. | Organising OS Workshops for their research group |
+| Participator         | Active in discussion, member of working group.                | Share exepereinces, setting up infrastructure |
+| Learner              | Attends events, but is passive.                               |                        |
+| Endorser             | Agrees and supports the community.                            |                        |
+
+
+Useful to monitor how people have engaged
+
++ Who has moved up, how they moved up, what worked for them?
++ Who gets stuck and why?
+
+**** Community Interactions
++ **Gifting** - Information is shared
++ **Creating Together** - People come together to create something.
++ **Soliciting Ideas** - Input from others to develop
++ **Learning Through Use** Doing, practical examples.
++ **Networking Common Interests** - Meeting with stakeholders.
+
+
+| Levels of Engagement | Community Interactions                                                                                                              |   |
+|----------------------+-------------------------------------------------------------------------------------------------------------------------------------+---|
+| Leader               | Realiser (person who makes things happen and makes sure the organisation follows through)                                           |   |
+|                      | Knowing how the organisation works and keeping it on track (Mission + Vision all the way down to practicalities and formalities)    |   |
+|                      | Ideas and making suggestions                                                                                                        |   |
+|                      | Roundtable to discuss open data practices                                                                                           |   |
+|                      | Leading meetings (chair:ing)                                                                                                        |   |
+|                      | Acting as secretary                                                                                                                 |   |
+|                      | Tech responsibility                                                                                                                 |   |
+|                      | Setting up infrastructure                                                                                                           |   |
+|                      | Leaving comments in active documents (giving text feedback)                                                                         |   |
+|                      | HelpDesk : Sending out reminders and answering questions to welcome and orient newcomers                                            |   |
+|                      | Including clauses for code of conduct or community participation guidelines                                                         |   |
+|----------------------+-------------------------------------------------------------------------------------------------------------------------------------+---|
+| Initiator            | Realiser (person who makes things happen and makes sure the organisation follows through)                                           |   |
+|                      | Leading meetings (chair:ing)                                                                                                        |   |
+|                      | Acting as secretary                                                                                                                 |   |
+|                      | Organising Awards - Incentivising individuals to engage with OS                                                                     |   |
+|                      | HelpDesk : Sending out reminders and answering questions to welcome and orient newcomers                                            |   |
+|                      | Event organising and hosting                                                                                                        |   |
+|                      | Ideas and making suggestions                                                                                                        |   |
+|                      | Developing / contributing to policy                                                                                                 |   |
+|                      | Roundtable to discuss open data practices                                                                                           |   |
+|                      | Showcasing experience and best practices in OS with others via special events                                                       |   |
+|                      | People register in a platform their OS initiative that they are willing to share their experience (mid OS expertise)                |   |
+|                      | Tech responsibility                                                                                                                 |   |
+|                      | Setting up infrastructure                                                                                                           |   |
+|                      | Leaving comments in active documents (giving text feedback)                                                                         |   |
+|                      | OS in Proposal Writing                                                                                                              |   |
+|                      | Knowing how the organisation works and keeping it on track                                                                          |   |
+|                      | Communications (being responsible for the website, social media…)                                                                   |   |
+|----------------------+-------------------------------------------------------------------------------------------------------------------------------------+---|
+| Participator         | People register in a platform their OS initiative (if any) or what type of OS practice they already engaged with (mid OS expertise) |   |
+|                      | Going to meetings                                                                                                                   |   |
+|                      | Ideas and making suggestions                                                                                                        |   |
+|                      | Presenting on their experiences                                                                                                     |   |
+|                      | Leaving comments in active documents (giving text feedback)                                                                         |   |
+|                      | Talks on OS activities in the Research Lifecycle: solutions and implementation tactics                                              |   |
+|----------------------+-------------------------------------------------------------------------------------------------------------------------------------+---|
+| Learner              | People sharing best practices with others                                                                                           |   |
+|                      | People suggesting topics they would like to be addressed (low OS expertise)                                                         |   |
+|                      | Leaving comments in active documents (giving text feedback)                                                                         |   |
+|                      | Ideas and making suggestions                                                                                                        |   |
+|                      | Presenting on their experiences                                                                                                     |   |
+|----------------------+-------------------------------------------------------------------------------------------------------------------------------------+---|
+| Endorser             | Communications (website, social media…)                                                                                             |   |
+|                      | Going to meetings                                                                                                                   |   |
+|                      | Leaving comments in active documents (giving text feedback)                                                                         |   |
+|                      | “Recruitment” of potential community members                                                                                        |   |
+|                      | Ideas and making suggestions                                                                                                        |   |
+|                      | Knowing how the organisation/community works.                                                                                       |   |
+|----------------------+-------------------------------------------------------------------------------------------------------------------------------------+---|
+
+
+*** The Power of Peer-to-Peer
++ Less intimidating to learn from others and lowers threshold to ask for help.
++ Experience is more important than expertise.
++ Practical aspect is often more beneficial than theoretical.
++ More specific the more useful. Give examples of how to deposit data in a specific repository. (e.g. workshop on using
+  ORDA).
++ Members are more important than you, they are what makes the community.
++ OpenFest2023 will be really important, its a forum where people are sharing their experiences.
++ Are people sharing their experiences of things like publishing?
++ Reuse material (if licensed to do so), see resources at [[https://osf.io/vz2sy/][International Network of Open Science & Scholarship Communities]]
++ Looking for a speaker, use INOSC to look for a speaker
 * Module 3 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.k5ezdbcfizen][Member Recruitment]]
 * Module 4 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.9vhgjot2qoq][Stakeholder Engagement]]
 
