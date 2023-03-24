@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3cca0dfd-0c82-4685-b9ed-6314f7c8b78f
-:mtime:    20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
+:mtime:    20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
 :ctime:    20221212233350
 :END:
 #+TITLE: Python Pytest
@@ -177,6 +177,11 @@ There are lots of PyTest plugins/extensions.
 ** pytest-benchmark
 
 ** pytest-check
+
+** pytest-monkeytype
+
+[[https://github.com/mariusvniekerk/pytest-monkeytype][pytest-monkeytype]] is a plugin that facilitates running [[https://github.com/Instagram/MonkeyType][MonkeyType]] which generates run-time types of function arguments
+and return values.  These can be applied to existing code to apply Typehints.
 
 * Links
 
