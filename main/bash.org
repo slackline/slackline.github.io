@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9c6257dc-cbef-4291-8369-b3dc6c173cf2
-:mtime:    20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
+:mtime:    20230326125853 20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
 :ctime:    20221231194258
 :END:
 #+TITLE: Bash
@@ -100,6 +100,9 @@ useful command line tools for working with files.
 
 [[id:4d64ea2c-b91a-4162-8d79-889b05b5ba80][awk]]
 
+** find
+
+[[id:af0aba11-91a9-4e79-89fb-1ae6ca55f3c8][find]]
 ** sed
 
 [[id:16c65320-e19d-4bdc-ab55-c410860cddfa][sed]] is a ~s~tring ~ed~itor for processing text files at the command line.

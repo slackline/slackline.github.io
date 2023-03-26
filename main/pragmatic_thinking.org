@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       937bc8f5-019f-471d-b674-5b2eb8048246
+:mtime:    20230322074204
+:ctime:    20230322074204
+:END:
+#+TITLE: Pragmatic Thinking
+#+FILETAGS: :pragmatic:learning:programming:
+
+Notes for the book [[https://pragprog.com/titles/ahptl/pragmatic-thinking-and-learning/][Pragmatic Thinking and Learning: Refactor Your Wetware by Andy Hunt]]

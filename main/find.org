@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       af0aba11-91a9-4e79-89fb-1ae6ca55f3c8
+:mtime:    20230326125840
+:ctime:    20230326125840
+:END:
+#+TITLE: find
+#+FILETAGS: :linux:bash:find:script:
+
+
+* Examples
+
+** Remove files that _do not_ match a pattern
+
+#+begin_src bash
+  find . -type f -not -name '*.flac' exect rm {} \;
+#+end_src
+
+* Links
+
++ [[https://alvinalexander.com/unix/edu/examples/find.shtml][Dozens of UNIX/Linux 'find' command examples]]
