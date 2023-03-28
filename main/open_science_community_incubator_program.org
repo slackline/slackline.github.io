@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8d52f6c2-84ba-4fa4-9755-7168e3b0b229
-:mtime:    20230323095006 20230322103502 20230322092056 20230315094159 20230314103337 20230311213600 20230309220209 20230308204702 20230308133737 20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
+:mtime:    20230328091212 20230323095006 20230322103502 20230322092056 20230315094159 20230314103337 20230311213600 20230309220209 20230308204702 20230308133737 20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
 :ctime:    20230228205112
 :END:
 #+TITLE: Open Science Community Incubator Program
@@ -147,9 +147,9 @@ Complete the tasks on [[https://docs.google.com/presentation/d/17dKDuuTOM5RWtWu8
 + [[https://docs.google.com/presentation/d/1hlcd91XUNINR-K-TcKmhvx06dF_EcebW60T54jNb2lY/edit#slide=id.g13cef509449_0_534][Slides]]
 
 ** Talk 1
-+ What is a community, "_a dynamic, social grouping where members align around a shared (or multiple overlapping)
-  purposes and participate in a shared culture. Active community participation frequently aligns with a sense of
-  belinging and affiliation to the community. IN a community the flow of information is multi-directional with members
++ What is a community, "_a dynamic, social grouping where members align around a shared purposes (or multiple overlapping
+  purposes) and participate in a shared culture. Active community participation frequently aligns with a sense of
+  belonging and affiliation to the community. IN a community the flow of information is multi-directional with members
   able to do something as a result of being connected to one another that they would not be able to do alone._"
   + Shared goals
   + Sense of belonging
