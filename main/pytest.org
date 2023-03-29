@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3cca0dfd-0c82-4685-b9ed-6314f7c8b78f
-:mtime:    20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
+:mtime:    20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
 :ctime:    20221212233350
 :END:
 #+TITLE: Python Pytest
@@ -42,6 +42,47 @@ PyTest provides the [[https://docs.pytest.org/en/7.1.x/how-to/fixtures.html][~@p
           coordinates[i][1] = y
       return coordinates
 #+END_SRC
+
+*** Fixtures in parametrize
+
+You can use ~@pytest.fixture~ in ~@pytest.mark.parametrize~, there are two ways to do so (see [[https://stackoverflow.com/questions/42014484/pytest-using-fixtures-as-arguments-in-parametrize][here]]).
+
+#+CAPTION: Using fixtures in parametrized tests
+#+NAME: pytest-fixture-parametrize
+#+begin_src python
+  import pytest
+
+  @pytest.mark.parametrize(
+    "api_key,event_data,expected",
+    [
+        (API_KEY, "event_data_online", 1),
+        (API_KEY, "event_data_onsite", 1),
+    ],
+)
+def test_create_event(api_key: str, event_data: dict, expected: int) -> None:
+    """Test create_event function"""
+    assert isinstance(request.getfixturevalue(event_data), dict)
+
+#+end_src
+
+I couldn't get this to work for me, despite having imported ~pytest~. So I gave the second solution a whirl using the
+[[https://github.com/tvorog/pytest-lazy-fixture][pytest-lazy-fixture]] plugin and it worked like a charm.
+
+#+CAPTION: Using pytest-lazy-fixture in parametrized tests
+#+NAME: pytest-lazyfixture-parametrize
+#+begin_src python
+import pytest
+@pytest.mark.parametrize(
+    "api_key,event_data,expected",
+    [
+        (API_KEY, pytest.lazy_fixture("event_data_online"), 1),
+        (API_KEY, pytest.lazy_fixture("event_data_onsite"), 1),
+    ],
+)
+def test_create_event(api_key: str, event_data: dict, expected: int) -> None:
+    """Test create_event function"""
+    assert isinstance(event_data, dict)
+#+end_src
 
 ** Testing Exceptions
 
