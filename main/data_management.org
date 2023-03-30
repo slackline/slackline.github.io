@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       60748503-8e7d-42af-ab36-b67a8b3858d0
+:mtime:    20230330144615
+:ctime:    20230330144615
+:END:
+#+TITLE: Data Management
+#+FILETAGS: :data:management:databases:sql:sqlite3:
+
+Most data needs managing, if you don't it ends up messy and wasting time. It therefore pays to think about what sort of
+data you are going to collect and how to manage it.
+
+* SQLite3
+
+A simple and lightweight database.
+
+** List Tables and Schemas
+
+#+begin_src sqlite
+  # List tables
+  .tables
+  # List schema of a table
+  .schema <tablename>
+#+end_src
+
+** Select from a table
+
+#+begin_src sqlite
+  SELECT * FROM <table> WHERE <condition>;
+  SELECT * FROM <table> WHERE <condition> LIMIT 10;
+  # distinct values from a table
+  SELECT DISTINCT <columns> FROM <table>;
+#+end_src
+
+** Replace values
+
+~REPLACE(<string>, <pattern>, <replacement>)~ is a fairly common pattern across languages and SQLite is no different. But
+you typically want to apply it to elements of a given table which is where things get slightly more complicated.
+
+#+begin_src sqlite
+  UPDATE <table> SET <column> = REPLACE(<column>, <pattern>, <replacement>)
+
+#+end_src
+* Links
+
++ [[https://www.sqlitetutorial.net/][SQLite Tutorial]]

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9c6257dc-cbef-4291-8369-b3dc6c173cf2
-:mtime:    20230326125853 20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
+:mtime:    20230330135624 20230326125853 20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
 :ctime:    20221231194258
 :END:
 #+TITLE: Bash
@@ -130,7 +130,6 @@ permanent you can add the following to ~/.bashrc~ / ~/.zshrc~
   fi
 #+end_src
 
-
 ** parallel
 
 Bash has its own tool for parallel processing courtesy of [[https://www.gnu.org/software/parallel/][parallel]]. As with many parallelisation processes you need to
@@ -165,6 +164,10 @@ export -f _convert
 #+begin_src sh
 echo "${FILES}" | parallel -q -j ${JOBS} _convert {} $BITRATE
 #+end_src
+
+** xarg
+
+[[id:48c0d280-8330-4f65-a5da-098ea186c6b6][xarg]] is a wonderful and simple tool for repeating actions on lists of objects.
 
 * Links
 
