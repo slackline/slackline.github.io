@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0c371287-128d-4e46-8128-b2d4f5fc604c
-:mtime:    20230103103308 20221212181558
+:mtime:    20230331125517 20230103103308 20221212181558
 :ctime:    20221212181558
 :END:
 #+TITLE: Markdown
@@ -34,7 +34,7 @@ Sphinx in either reStructured Text or Markdown mode and is really quite simple t
 advanced usage is more intricate). GitHub will [[https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/][include diagraims in your Markdown files with Mermaid]] too.
 
 #+CAPTION: Mermaid diagrams in Markdown
-#+NAME: markdown-mermain
+#+NAME: markdown-mermaid
 #+BEGIN_SRC markdown :eval no
 
   ```{mermaid}
@@ -50,6 +50,81 @@ advanced usage is more intricate). GitHub will [[https://github.blog/2022-02-14-
 
 A very useful page to help you develop your diagrams is [[https://mermaid.live/edit][Mermaid Live Editor]] just copy and paste your code in and it will
 render it.
+
+** Git Graphs
+
+You can generate Git Graphs using Mermaid too. Here is one example I knocked up.
+
+#+CAPTION: Mermaid Git Graph
+#+NAME: mermaid-git-graph
+#+begin_src javascript
+%%{init: {'theme': 'base', 'gitGraph': {'rotateCommitLabel': true}
+         }
+}%%
+    gitGraph
+       commit id: "Last feature"
+       commit id: "v0.1.0"
+       branch "v0.1 fixes"
+       commit "This branch is for fixes to v0.1"
+       branch "Missing JSON files for v0.1"
+       commit id: "Add missing JSON to v0.1.0 branch"
+       checkout "v0.1 fixes"
+       merge "Missing JSON files for v0.1"
+       commit id: "v0.1.1"
+       checkout main
+       commit id: "Feature1 for v0.2.0"
+       commit id: "Feature2 for v0.2.0"
+       commit id: "v0.2.0"
+       branch "v0.2 fixes"
+       commit id: "This branch is for fixes to v0.2"
+       branch "Missing JSON files for v0.2"
+       commit id: "Add missing JSON to v0.2.0 branch"
+       checkout "v0.2 fixes"
+       merge "Missing JSON files for v0.2"
+       branch "More changes for v0.2"
+       commit id: "Update Cadenza logo"
+       commit id: "Update README"
+       checkout "v0.2 fixes"
+       merge "More changes for v0.2"
+       commit id: "v0.2.1"
+       checkout main
+       commit id: "Cadenza Baseline"
+       commit id: "Unit Tests for evaluators"
+       commit id: "Unit Tests for enhancers"
+       commit id: "v0.3.0"
+       branch "v0.3 fixes"
+       commit id: "This branch is for fixes to v0.3"
+       branch "Fixing something in the future on v0.3"
+       commit id: "Fix something in the future"
+       checkout "v0.3 fixes"
+       merge "Fixing something in the future on v0.3"
+       checkout "v0.2 fixes"
+       branch "Fixing something in the future on v0.2"
+       commit id: "Fix the same problem on v0.2 branch"
+       checkout "v0.2 fixes"
+       merge "Fixing something in the future on v0.2"
+       commit id: "v0.2.2"
+       checkout "v0.3 fixes"
+       commit id: "v0.3.1"
+       checkout main
+       commit id: "Refactor HAAQI"
+       commit id: "Refactor HASQI"
+       commit id: "Refactor HASPI"
+       commit id: "v0.4.0"
+       branch "v0.4 fixes"
+       commit id: "This branch is for fixes to v0.4"
+       checkout "main"
+       commit id: "First of many new features"
+       checkout "v0.4 fixes"
+       branch "Fix something in v0.4"
+       commit id: "Fix problem 1 on v0.4"
+       commit id: "Fix problem 2 on v0.4"
+       checkout "v0.4 fixes"
+       merge "Fix something in v0.4"
+       commit id: "v0.4.1"
+       checkout main
+       commit id: "Lots more enhancements"
+#+end_src
 
 * Links
 
