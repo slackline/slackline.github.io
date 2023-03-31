@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ea1499ab-dab2-49b1-8479-cb5a2fbd38bc
-:mtime:    20230103103314 20221224191223 20230103103313 20230103103309 20230103103308
+:mtime:    20230331230614 20230103103314 20221224191223 20230103103313 20230103103309 20230103103308
 :ctime:    20221224191223 20230103103308
 :END:
 #+TITLE: Programming
@@ -87,3 +87,7 @@ somewhere to attend conferences when they are often available online (either liv
 + [[https://www.catharsisinsight.com/_files/ugd/fce7f8_f9d2fea4f1b9478baeb7e84ab1b63759.pdf]["It's like Coding in the Dark" : The need for learning cultures within coding teams]]
 + [[https://refactoring.guru/refactoring][Refactoring Guru : Refactoring]]
 + [[https://refactoring.guru/design-patterns][Refactoring Guru : Design Patterns]]
+
+Misc
+
++ [[https://norasandler.com/2017/11/29/Write-a-Compiler.html][Writing a C Compiler, Part 1]]
