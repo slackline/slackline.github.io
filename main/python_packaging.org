@@ -289,8 +289,9 @@ when people use ~pre-commit~.
 
 *** ~tool.setuptools_scm~
 
-[[https://github.com/pypa/setuptools_scm/][setuptools_scm]] is a simple to use extension to setuptools that dynamically
-sets the package version based on the version control data.
+[[https://github.com/pypa/setuptools_scm/][setuptools_scm]] is a simple to use extension to setuptools that dynamically sets the package version based on the version
+control data. It is important to note that by default ~setuptools_scm~ will attempt to bump the version of the
+release. The following configuration forces the use of the current ~git tag~.
 
 You _must_
 
