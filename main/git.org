@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0859ef9e-834d-4e84-8e67-fa7593a61e0b
-:mtime:    20230224093757 20230222225246
+:mtime:    20230331194520 20230224093757 20230222225246
 :ctime:    20230222225246
 :END:
 
@@ -680,6 +680,7 @@ It is often important to version control your data too, for more on this see [[i
 + [[https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/#praise-people][Little Things I Like to Do with Git – CSS Wizardry – Web Performance Optimisation]]
 + [[https://blog.trunk.io/minimum-viable-git-for-trunk-based-development-81a5da7a77a7][Minimize Git for maximum value]]
 + [[https://myme.no/posts/2023-01-22-git-commands-you-do-not-need.html][Git Commands You Probably Do Not Need]]
++ [[https://www.admin-magazine.com/Archive/2022/72/Versioned-backups-of-local-drives-with-Git][Git Versioned Backups » ADMIN Magazine]]
 
 ** Commits
 + [[https://dev.to/hornet_daemon/git-commit-patterns-5dm7][Git Commit Patterns]]
