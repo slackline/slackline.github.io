@@ -570,6 +570,7 @@ used it yet as I wanted
 + [[https://setuptools.pypa.io/en/latest/userguide/index.html][PyPA : Building and Distributing Packages with Setuptools]]
 + [[https://packaging.python.org/en/latest/specifications/][PyPA : Specifications]]
 + [[https://packaging.python.org/en/latest/tutorials/packaging-projects/][Packaging Python Projects]]
++ [[https://www.pyopensci.org/python-package-guide/package-structure-code/intro.html][Python package structure information — pyOpenSci Python Packaging Guide]]
 + [[https://github.com/wimglenn/resources-example][Packaging Data files in a Python Distribution]]
 + [[https://pdm.fming.dev/latest/][PDM - Python package and Dependency Manager]]
 + [[https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html][Why you shouldn't invoke setup.py directly]]
