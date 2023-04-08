@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       169b9c5f-df34-46ab-b64f-8ee98946ee69
-:mtime:    20230319195017 20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
+:mtime:    20230408213646 20230319195017 20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
 :ctime:    20221217184411
 :END:
 #+TITLE: Orgmode
@@ -96,6 +96,10 @@ There are hundreds!
 + [[https://github.com/rlister/org-present][org-present : Ultra-minimalist presentation minor-mode for Emacs org-mode.]]
 + [[https://github.com/dakrone/ox-tufte][ox-tufte : Emacs' Org-mode export backend for Tufte HTML]]
 
+
+*** Misc
+
++ [[https://github.com/sp1ff/indie-org][sp1ff/indie-org : Org mode on the Indieweb]]
 
 *** Themes
 + [[https://github.com/minad/org-modern][org-modern : Modern Org Style]]
