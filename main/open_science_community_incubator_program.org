@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8d52f6c2-84ba-4fa4-9755-7168e3b0b229
-:mtime:    20230328091212 20230323095006 20230322103502 20230322092056 20230315094159 20230314103337 20230311213600 20230309220209 20230308204702 20230308133737 20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
+:mtime:    20230412124327 20230412100747 20230412090502 20230328091212 20230323095006 20230322103502 20230322092056 20230315094159 20230314103337 20230311213600 20230309220209 20230308204702 20230308133737 20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
 :ctime:    20230228205112
 :END:
 #+TITLE: Open Science Community Incubator Program
@@ -140,11 +140,9 @@ Complete the tasks on [[https://docs.google.com/presentation/d/17dKDuuTOM5RWtWu8
 
 ** **QUESTION** Open Science is perhaps excluding to humanities, is there scope for alternative names e.g. Open Research
 
-
 * Module 1 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.a9snr669cgwk][Mission and Vision]]
-+ [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#][Syllabus]]
-+ [[https://docs.google.com/document/d/140fIWasFC8Hf__zUUW6SDcUDyH48Kb3pDS0ibE-LNGQ/edit][Program Notes of Module 1]]
-+ [[https://docs.google.com/presentation/d/1hlcd91XUNINR-K-TcKmhvx06dF_EcebW60T54jNb2lY/edit#slide=id.g13cef509449_0_534][Slides]]
+[[https://docs.google.com/presentation/d/1hlcd91XUNINR-K-TcKmhvx06dF_EcebW60T54jNb2lY/edit#slide=id.g13cef509449_0_534][Slides]]
+[[https://docs.google.com/document/d/140fIWasFC8Hf__zUUW6SDcUDyH48Kb3pDS0ibE-LNGQ/edit][Notes]]
 
 ** Talk 1
 + What is a community, "_a dynamic, social grouping where members align around a shared purposes (or multiple overlapping
@@ -293,7 +291,8 @@ Vision > Mission > Aims
 
 Aims are a tool to get you to your mission statement(s) and mission should lead to vision.
 * Module 2 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.hfpbcmnncxve][Community Engagement]]
-[[https://docs.google.com/document/d/1clV_gk0IV3jKsUSN0_M1C4uohz7_V0SsQZpn1p7RsxY/edit][Program and Notes]]
+[[https://docs.google.com/presentation/d/1UXe3nCcVCO4wkmYqiaugp29A2iQFIXOnxPc2kaw1aA8/edit][Slides]]
+[[https://docs.google.com/document/d/1clV_gk0IV3jKsUSN0_M1C4uohz7_V0SsQZpn1p7RsxY/edit][Notes]]
 ** [[https://docs.google.com/presentation/d/1UXe3nCcVCO4wkmYqiaugp29A2iQFIXOnxPc2kaw1aA8/edit?usp=share_link][Community Engagement : Target Groups]]
 + Communities are where people interact.
 + Different target audiences for Open Science Communities with different levels of engagement.
@@ -473,9 +472,107 @@ Useful to monitor how people have engaged
 + Reuse material (if licensed to do so), see resources at [[https://osf.io/vz2sy/][International Network of Open Science & Scholarship Communities]]
 + Looking for a speaker, use INOSC to look for a speaker
 * Module 3 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.k5ezdbcfizen][Member Recruitment]]
+[[https://docs.google.com/presentation/d/1EuHL-OIbFqyBLhAlTNh-0mBw5a3mvitfywDOM5t0Icc/edit][Slides]]
+[[https://docs.google.com/document/d/1tm9AobrMJ6AaU99s7W8eodO0WpTb0hepIWZFxToD_p4/edit][Notes]]
+Communicating with members as well as communicating and attracting new members.
+
+Aims
++ Establish Community Identity
++ Complete plan to attract members having formulated a plan to reach out to target groups
++ Describe the pathway of reaching and on-boarding new members.
+
+** Exercise 1
+
++ Picked Volkswagen.
++ Found them more subtle rather than Pepsi which were more brash.
++ Better story telling, brand was almost an aside.
++ Volkswagen adverts had dogs in, perhaps trying to appeal to a particular demographic. In a similar vein Pepsi was
+  appealing to healthy lifestyle.
++ Identifying values of the target group and work out how to communicate and appeal to these groups.
+
+*** What worked
++ Focus on the brand itself
++ Try to connect to people who you are targetting.
++ Connection with climate crisis
++ Who controls the power
++ More subtle
++ Storytelling elements
++ Values were clearly communicated
++ Humor
++ Counterintuitive messaging, flipping things around, surprise elements.
+
+** Getting people to sign up to OSC
+*** Receiver
+the person getting the message, and the intended response is that they will join your OSC
+*** Sender
++ Who is sending it.
++ What is the message
++ What is the medium
+
+Identity (Branding)
+
+| Intended Associations                     | Associations you want to avoid   |
+|-------------------------------------------+----------------------------------|
+| Welcoming                                 | Elitism                          |
+| Inclusive                                 | Expensive (time as well as cost) |
+| Knowledgeable, skills building            | Being esoteric                   |
+| Reproducibility, sharing data and methods | Highly technical/complicated     |
+| Supportive of learning                    | OS experts                       |
+| Ownership, empowerment                    |                                  |
+| Collaborative                             |                                  |
+| Fun, community feeling                    |                                  |
+| Useful                                    |                                  |
+
+Incorporate the above associations in the branding and messages we put out. Always check what others reactions are when
+they read or see messages.
+
++ Online and Offline visibility.
++ Tone of voice.
++ Familiarity and reputation (comes with time as community grows and evolves).
+
+Choice of events to be included is important as it sets the brand of your community and could deter people from
+thinking it its relevant to them and reduce inclusive. Its about telling a story of your mission statement.
+
+*** Message
+
+Value Proposition - what do you have to offer?
++ Sense of belonging
++ Power to be heard
++ Access to knowledge
++ Networking
++ Statement or status (being visible as part of the community)
+
+*** Medium
++ Word of mouth
++ Flyers
++ Presentations
++ Website
++ Blog/vlog
++ Social media
+
+**** AIDA
+Steps of message, medium, receiver...
+
++ Attention/Awareness
++ Interest
++ Desire
++ Action
+
+*** Marketing by community members
+Word of mouth is very powerful.
++ Add note in email signature.
++ Mention OSC in meetings
++ Mail department(s)/colleagues.
++ Mailing lists
+
+Important to remember that the landscape of science is changing internationally and the movement towards Open Science is
+growing.
+
+Remember to get participants to promote the Open Science Community as its the most effective method (word of mouth)
 * Module 4 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.9vhgjot2qoq][Stakeholder Engagement]]
 
 * Module 5 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.1ko6e2yv6y8i][Monitoring and Sustainability]]
+
 * Module 6 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.m9354iwrqh1t][Open!]]
 
 
