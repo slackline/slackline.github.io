@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       de9a18a7-b4ef-4a9f-ac99-68f3c76488e5
-:mtime:    20230210005221 20230125072709 20230112120722 20230103103313 20221228150524 20230103103308
+:mtime:    20230411223218 20230210005221 20230125072709 20230112120722 20230103103313 20221228150524 20230103103308
 :ctime:    20221228150524 20230103103308
 :END:
 #+TITLE: R
@@ -187,3 +187,7 @@ help with that. An excellent resource is the [[https://r-pkgs.org/][R Packages b
 + [[https://docs.ropensci.org/occCite/][Querying and Managing Large Biodiversity Occurrence Datasets • occCite]]
 + [[https://docs.ropensci.org/osmextract/][Download and Import Open Street Map Data Extracts • osmextract]]
 + [[https://docs.ropensci.org/jqr/][Client for jq, a JSON Processor • jqr]]
+
+** Blogs
+
++ [[https://sebkrantz.github.io/Rblog/2023/04/12/collapse-and-the-fastverse-reflecting-the-past-present-and-future/][collapse and the fastverse: Reflections on the Past, Present and Future - With Examples from Geospatial Data Science - R, Econometrics, High Performance]]

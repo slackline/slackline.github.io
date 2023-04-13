@@ -1,8 +1,66 @@
 :PROPERTIES:
 :ID:       4d64ea2c-b91a-4162-8d79-889b05b5ba80
-:mtime:    20230103103310 20221210172245
+:mtime:    20230413072342 20230103103310 20221210172245
 :ctime:    20221210172245
 :END:
 #+TITLE: awk
 #+DATE: [2022-12-10 Sat 17:22]
 #+FILETAGS: :bash:awk:unix:
+
+* Sort on a Column
+
+If you want to sort a file or list based on a particular column you can [[[[https://stackoverflow.com/questions/17048188/how-to-use-awk-sort-by-column-3][place the desired column at the start, pipe to sort and then remove the column]]
+
+#+begin_src bash
+awk -F, '{ print $3, $0 }' user.csv | sort | sed 's/^.* //'
+#+end_src
+
+Alternatively you can use sort directly...
+
+#+begin_src bash
+sort -t, -nk3 user.csv
+#+end_src
+* Extract a Column
+
+#+begin_src bash
+# Print the 12th column ('{print $12}') of a comma separated file (-F,) called my_file.csv
+awk -F, '{print $12}' my_file.csv
+# As above but for multiple files and include the filename (FILENAME)
+awk -F, '{print FILENAME,$12}' *.csv
+#+end_src
+
+* Multiple Delimiters
+
+#+begin_src bash
+# Search for two delimiters (can be regular expressions, hence escaping the period)
+awk -F'.|,' '{print $1 "\t" $13}' my_file.csv
+#+end_src
+
+
+* Switch Columns
+
+[Source](https://stackoverflow.com/questions/11967776/swap-two-columns-awk-sed-python-perl)
+
+#+begin_src bash
+awk -F $'\t' ' { t = $1; $1 = $2; $2 = t; print; } ' OFS=$'\t' input_file
+#+end_src
+
+* Mean of the third column
+
+#+begin_src bash
+cat foo.txt | awk '{SUM+=$3} END {print SUM/NR}'
+#+end_src
+
+
+* Links
+
++ [[https://twitter.com/b0rk/status/1000604334026055681][@bork awk]]
++ [[http://www.catonmat.net/blog/awk-one-liners-explained-part-one/][awk One-Liners Explained (Part One)]]
++ [[http://www.catonmat.net/blog/awk-one-liners-explained-part-two/][awk One-Liners Explained (Part Two)]]
++ [[http://www.catonmat.net/blog/awk-one-liners-explained-part-three/][awk One-Liners Explained (Part Three)]]
++ [[http://www.catonmat.net/blog/update-on-famous-awk-one-liners-explained/][awk One-Liners Explained (Bonus)]]
++ [[https://www.gnu.org/software/gawk/manual/gawk.html][The GNU Awk User’s Guide]]
+
+* HowTo's
+
++ [[https://ketancmaheshwari.github.io/posts/2020/05/24/SMC18-Data-Challenge-4.html][Running Awk in parallel to process 256M records]]
