@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       169b9c5f-df34-46ab-b64f-8ee98946ee69
-:mtime:    20230408213646 20230319195017 20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
+:mtime:    20230413154310 20230408213646 20230319195017 20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
 :ctime:    20221217184411
 :END:
 #+TITLE: Orgmode
@@ -63,6 +63,7 @@ acting as input to code blocks in literate documents.
 * Links
 + [[https://orgmode.org][OrgMode]]
 + [[https://orgmode.org/worg/org-configs/org-customization-guide.html][Org Customisation Guide]]
++ [[https://leanpub.com/lit-config/read][Literate Configuration]]
 
 ** Zettelkasten
 + [[https://zettelkasten.de/introduction/][Introduction to the Zettelkasten Method • Zettelkasten Method]]
