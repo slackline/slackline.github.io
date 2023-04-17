@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ff8ee302-7518-4179-9bcb-63b13199f897
-:mtime:    20230309070314 20230305214004 20230221192929
+:mtime:    20230412135517 20230309070314 20230305214004 20230221192929
 :ctime:    20230221192929
 :END:
 #+TITLE: Emacs Packages
@@ -62,6 +62,11 @@ fails. The following is the sort of call made to build the binary and may be run
   emacsql-sqlite-20230225.2205/sqlite/sqlite3.c /home/neil/.config/emacs/elpa/emacsql-sqlite-20230225.2205/sqlite/ \
   emacsql.c -lm -ldl -o /home/neil/.config/emacs/elpa/emacsql-sqlite-20230225.2205/sqlite/emacsql-sqlite
 #+end_src
+
+* ~.elc~ byte compiled files
+
+Emacs byte-compiles ~.el~ files to ~.elc~ which are binaries and run faster. You can force compilation of a specific
+directory with using ~M-: (byte-recompile-directory package-user-dir nil 'force)~ which will [[https://stackoverflow.com/a/1217249][force compilation]].
 * Links
 
 + [[https://github.com/jwiegley/use-package][jwiegley/use-package: A use-package declaration for simplifying your .emacs]]
