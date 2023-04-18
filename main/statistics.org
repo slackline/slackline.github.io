@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9f72e8bd-2dbe-4a95-9517-c0c94bc995a0
-:mtime:    20230319111642 20230103103312 20221215204145 20230103103310
+:mtime:    20230418223817 20230319111642 20230103103312 20221215204145 20230103103310
 :ctime:    20221215204145 20230103103310
 :END:
 #+TITLE: Statistics
@@ -93,3 +93,4 @@ pertains to events which have not happened based on observations of those that h
 + [[https://www.statlearning.com/][An Introduction to Statistical Learning]]
 + [[https://hastie.su.domains/ElemStatLearn/][Elements of Statistical Learning: data mining, inference, and prediction. 2nd Edition.]]
 + [[https://hastie.su.domains/CASI/][Computer Age Statistical Inference: Algorithms, Evidence and Data Science]]
++ [[https://statproofbook.github.io/][The Book of Statistical Proofs]]
