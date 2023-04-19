@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       999b9e86-681f-459d-a951-a0f4d48e1926
+:mtime:    20230419123251
+:ctime:    20230419123251
+:END:
+#+TITLE: Carpentries
+#+FILETAGS: :teaching:carpentries:
+
+I've undertaken [[https://carpentries.github.io/instructor-training/][The Carpentries Instructor Training]] and have kept my notes here.
+
+
+* Day 1 <2023-06-13 Tue 09:00>
+* Day 2 <2023-06-14 Wed 09:00>
+* Day 3 <2023-06-15 Thu 09:00>
+* Day 4 <2023-06-16 Fri 09:00>
+
+* Links
+
++ [[https://carpentries.github.io/instructor-training/][The Carpentries Instructor Training]] - course material.
++ [[https://carpentries.github.io/instructor-training/checkout#][Checkout]] - tasks to complete within three months of undertaking training.
