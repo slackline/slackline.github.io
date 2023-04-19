@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       a7d4eb40-0983-4cdc-a526-27493ee9125e
+:mtime:    20230415125252
+:ctime:    20230415125252
+:END:
+#+TITLE: Retirement
+#+FILETAGS: :personal:retirement:
+
+* Links
+
+** Pension Advice
+
++ [[https://www.theguardian.com/money/2023/apr/15/uk-pensions-how-much-retire-cost-of-living-inflation-income][UK pensions: how much do you need to retire as the cost of living soars? | Pensions | The Guardian]] ([[https://www.retirementlivingstandards.org.uk/developing_rls_research_report.pdf][retirement living standards]])
