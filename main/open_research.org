@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       0911a63f-4b82-4bf1-9235-f1e41e93d210
 :ROAM_ALIASES: "Open Research Overview"
-:mtime:    20230420112016 20230228205121 20230103103308 20221228113013
+:mtime:    20230421104923 20230420112016 20230228205121 20230103103308 20221228113013
 :ctime:    20221228113013
 :END:
 #+title: Open Research
@@ -32,6 +32,11 @@ to validate and contribute to the research.
 + [[https://www.fosteropenscience.eu/][FOSTER Open Science]]
 + [[https://the-turing-way.netlify.app/welcome][The Turing Way]] a handbook on open and reproducible research
 + [[https://open-science-freelancers.gitlab.io][Open Science Freelancers]]
+
+** Resources
+
++ [[https://zenodo.org/record/7818768][Open Science: Principles and Practices | Zenodo]] - resources for implementing Open Science into formal education (see
+  also [[https://heidiseibold.ck.page/posts/bringing-open-science-to-formal-education][here]]).
 
 ** Blog Posts
  + [[https://www.arj.no/2020/08/27/open-research/][Why is open research better research? – Alexander Refsum Jensenius]]
