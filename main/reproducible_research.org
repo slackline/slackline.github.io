@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       97d138e1-015a-406a-b7ec-c046f01246d2
-:mtime:    20230103103311 20221224191223 20230103103308
+:mtime:    20230421130128 20230103103311 20221224191223 20230103103308
 :ctime:    20221224191223 20230103103308
 :END:
 #+TITLE: Reproducible Research
@@ -49,3 +49,7 @@ and pulled from just like a Git repository.
 ** Data Version Control
 + [[https://github.com/dolthub/dolt][Dolt]]
 + [[https://dvc.org/][DVC : Data Version Control]]
+
+** Teaching Reproducibility
+
++ [[https://www.tandfonline.com/toc/ujse21/30/3?nav=tocList][Journal of Statisics and Data Science Education 30(3) - Teaching Reproducibility]]
