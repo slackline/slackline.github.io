@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c006a2dc-166b-44c7-9473-6eb8ef6e7ec8
-:mtime:    20230423204459
+:mtime:    20230423214547 20230423204459
 :ctime:    20230423204459
 :END:
 #+TITLE: A Common Sense Guide to Data Structures and Algorithms
@@ -53,20 +53,143 @@ N
 5 - Split in half (1) and we get the match (luckily!)
 *** 3. What is the maximum number of steps it would take to perform a binary search on an array of size 100,000?
 * 03 O Yes! Big O Notation
+** Exercises
+*** 1. Use Big O Notation to describe the time complexity of the following function that determines whether a given year is a leap year:
+
+#+begin_src
+function isLeapYear(year) {
+    return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+}
+#+end_src
+
+*** 2. Use Big O Notation to describe the time complexity of the following function that sums up all the numbers from a given array:
+
+#+begin_src
+function arraySum(array) {
+    let sum = 0;
+    for(let i = 0; i < array.length; i++) {
+        sum += array[i];
+    }
+    return sum;
+}
+#+end_src
+
+*** 3. The following function is based on the age-old analogy used to describe the power of compounding interest:
+Imagine you have a chessboard and put a single grain of rice on one square. On the second square, you put 2 grains of
+rice, since that is double the amount of rice on the previous square. On the third square, you put 4 grains. On the
+fourth square, you put 8 grains, and on the fifth square, you put 16 grains, and so on. The following function
+calculates which square you’ll need to place a certain number of rice grains. For example, for 16 grains, the function
+will return 5, since you will place the 16 grains on the fifth square. Use Big O Notation to describe the time
+complexity of this function, which is below:
+
+#+begin_src
+function chessboardSpace(numberOfGrains) {
+    let chessboardSpaces = 1;
+    let placedGrains = 1;
+    while (placedGrains < numberOfGrains) {
+        placedGrains *= 2;
+        chessboardSpaces += 1;
+    }
+    return chessboardSpaces;
+}
+#+end_src
+4. The following function accepts an array of strings and returns a new array
+that only contains the strings that start with the character "a". Use Big O
+Notation to describe the time complexity of the function:
+
+#+begin_src
+function selectAStrings(array) {
+    let newArray = [];
+    for(let i = 0; i < array.length; i++) {
+        if (array[i].startsWith("a")) {
+            newArray.push(array[i]);
+        }
+    }
+    return newArray;
+}
+#+end_src
+*** 5. The following function calculates the median from an ordered array. Describe its time complexity in terms of Big O Notation:
+
+#+begin_src
+function median(array) {
+    const middle = Math.floor(array.length / 2);
+    // If array has even amount of numbers:
+    if (array.length % 2 === 0) {
+        return (array[middle - 1] + array[middle]) / 2;
+    } else { // If array has odd amount of numbers:
+        return array[middle];
+    }
+}
+#+end_src
+
 * 04 Speeding Up Your Code with Big O
+** Exercises
+*** 1. Replace the question marks in the following table to describe how many steps occur for a given number of data elements across various types of Big O:
+| NElements | O(N) | O(log N) | O(N2) |
+|-----------+------+----------+-------|
+|       100 | 100  | ?        | ?     |
+|      2000 | ?    | ?        | ?     |
+
+*** 2. If we have an O(N2) algorithm that processes an array and find that it takes 256 steps, what is the size of the array?
+*** 3. Use Big O Notation to describe the time complexity of the following function. It finds the greatest product of any pair of two numbers within a given array:
+
+#+begin_src
+def greatestProduct(array):
+    greatestProductSoFar = array[0] * array[1]
+    for i, iVal in enumerate(array):
+        for j, jVal in enumerate(array):
+            if i != j and iVal * jVal > greatestProductSoFar:
+                greatestProductSoFar = iVal * jVal
+return greatestProductSoFar
+#+end_src
+
+*** 4. The following function finds the greatest single number within an array, but has an efficiency of O(N2). Rewrite the function so that it becomes a speedy O(N):
+
+#+begin_src
+def greatestNumber(array):
+    for i in array:
+    # Assume for now that i is the greatest:
+    isIValTheGreatest = True
+        for j in array:
+        # If we find another value that is greater than i,
+        # i is not the greatest:
+        if j > i:
+        isIValTheGreatest = False
+    # If, by the time we checked all the other numbers, i
+    # is still the greatest, it means that i is the greatest number:
+    if isIValTheGreatest:
+        return i
+#+end_src
+
 * 05 Optimising Code with and without Big O
+** Exercises
 * 06 Optimising to for Optimistic Scenarios
+** Exercises
 * 07 Big O in Everyday Code
+** Exercises
 * 08 Blazing Fast Lookup Tables
+** Exercises
 * 09 Crafting Elegant Code with Stacks and Queues
+** Exercises
 * 10 Recursively Recurse with Recursion
+** Exercises
 * 11 Learning to Write in Recursive
+** Exercises
 * 12 Dynamic Programming
+** Exercises
 * 13 Recursive Algorithms for Speed
+** Exercises
 * 14 Node-Based Data Structures
+** Exercises
 * 15 Speeding Up All Things with Binary Search Trees
+** Exercises
 * 16 Keeping Your Priorities Straight with Heaps
+** Exercises
 * 17 It Doesn't Hurt to Trie
+** Exercises
 * 18 Connecting Everything with Graphs
+** Exercises
 * 19 Dealing With Space Constraints
+** Exercises
 * 20 Techniques for Code Optimisation
+** Exercises
