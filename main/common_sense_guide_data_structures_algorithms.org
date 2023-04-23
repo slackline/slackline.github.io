@@ -1,0 +1,72 @@
+:PROPERTIES:
+:ID:       c006a2dc-166b-44c7-9473-6eb8ef6e7ec8
+:mtime:    20230423204459
+:ctime:    20230423204459
+:END:
+#+TITLE: A Common Sense Guide to Data Structures and Algorithms
+#+FILETAGS: :data:algorithms:programming:efficiency:
+
+I purchased [[https://pragprog.com/titles/jwdsal2/a-common-sense-guide-to-data-structures-and-algorithms-second-edition/][A Common-Sense Guide to Data Structures and Algorithms, Second Edition]] by Jay Wengrow from the excellent
+publishers [[https://pragprog.com/][The Pragmatic Bookshelf]] with a view to improving my understanding of data structures and the algorithms I
+write. There are various exercises throughout the book these are my solutions to them (in [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] and perhaps [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]]) along
+with notes I've made whilst reading.
+
+* 01 Why Data Structures Matter
+** Exercise
+*** For an array containing 100 elements, provide the number of steps the following operations would take:
+**** a. Reading
+1 - just need to know the start.
+**** b. Searching for a value not contained within the array
+100 - have to search all elements to ensure its not there.
+**** c. Insertion at the beginning of the array
+101 - shift all elements right-wards then insert at the start.
+**** d. Insertion at the end of the array
+1 - just adding one to the end.
+**** e. Deletion at the beginning of the array
+100 - delete and shift remaining elements left.
+**** f. Deletion at the end of the array
+1 just cut off the last element
+*** For an array-based set containing 100 elements, provide the number of steps the following operations would take:
+**** a. Reading
+1 - just need to know the start.
+**** b. Searching for a value not contained within the array
+100 - have to search all elements to ensure its not there.
+**** c. Insertion of a new value at the beginning of the set
+201 - Full search of the set (100) to ensure new value not there, then shift everything right (100) before inserting
+(1).
+**** d. Insertion of a new value at the end of the set
+101 - Full search of the set (100) to ensure new value not there, then insert (1).
+**** e. Deletion at the beginning of the set
+100
+**** f. Deletion at the end of the set
+1
+*** Normally the search operation in an array looks for the first instance of a given value.
+But sometimes we may want to look for every instance of a given value. For example, say we want to count how many times
+the value “apple” is found inside an array. How many steps would it take to find all the “apples”? Give your answer in
+terms of N.
+N
+* 02 Why Algorithms Matter
+** Exercises
+*** 1. How many steps would it take to perform a linear search for the number 8 in the ordered array, [2, 4, 6, 8, 10, 12, 13]?
+4 - Straight search of 4 steps.
+*** 2. How many steps would binary search take for the previous example?
+5 - Split in half (1) and we get the match (luckily!)
+*** 3. What is the maximum number of steps it would take to perform a binary search on an array of size 100,000?
+* 03 O Yes! Big O Notation
+* 04 Speeding Up Your Code with Big O
+* 05 Optimising Code with and without Big O
+* 06 Optimising to for Optimistic Scenarios
+* 07 Big O in Everyday Code
+* 08 Blazing Fast Lookup Tables
+* 09 Crafting Elegant Code with Stacks and Queues
+* 10 Recursively Recurse with Recursion
+* 11 Learning to Write in Recursive
+* 12 Dynamic Programming
+* 13 Recursive Algorithms for Speed
+* 14 Node-Based Data Structures
+* 15 Speeding Up All Things with Binary Search Trees
+* 16 Keeping Your Priorities Straight with Heaps
+* 17 It Doesn't Hurt to Trie
+* 18 Connecting Everything with Graphs
+* 19 Dealing With Space Constraints
+* 20 Techniques for Code Optimisation
