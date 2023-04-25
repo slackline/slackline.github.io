@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       251b3ae4-4a5c-4c44-909a-dcbc0aef4b45
-:mtime:    20230312225146 20230208071742 20230105145232 20230103103309 20221228151331 20230103103309 20230103103308
+:mtime:    20230425225904 20230312225146 20230208071742 20230105145232 20230103103309 20221228151331 20230103103309 20230103103308
 :ctime:    20221228151331 20230103103308
 :END:
 #+TITLE: Quarto
@@ -214,3 +214,7 @@ Leverages [[https://docs.r-wasm.org/webr/latest/][webR]] to embed interactive R 
 ** GitHub
 
 + [[https://github.com/quarto-dev/quarto-actions/][quarto-dev/quarto-actions]]
+
+** Misc
+
++ [[https://eliocamp.github.io/codigo-r/en/2023/04/knitr-rmarkdown-tricks/][11 tricks to level up your rmarkdown documents]]
