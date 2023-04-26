@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0859ef9e-834d-4e84-8e67-fa7593a61e0b
-:mtime:    20230413161814 20230331194520 20230224093757 20230222225246
+:mtime:    20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
 :ctime:    20230222225246
 :END:
 
@@ -44,6 +44,8 @@ you create or a local, per-repository basis (local settings in a repository over
 * Setup
 :PROPERTIES:
 :ID:       75050201-e41c-40a4-bd65-cd1c0592951c
+:mtime:    20230426111505
+:ctime:    20230426111505
 :END:
 
 ** Global Configuration
@@ -108,6 +110,10 @@ this shouldn't be shared in a public repository such as GitHub. The [[https://gi
 skeleton/example files for different languages including [[https://github.com/github/gitignore/blob/master/R.gitignore][R]], I modify this to include all ~*.RData~ files to exclude any
 and all R Data objects and also Emacs temporary files ~*~~. There is also [[https://www.gitignore.io/][gitignore.io]] which generates configs
 automatically.
+
+Another solution is to have an alias that prefixes the call to Git with the SSH credentials specific to the directory
+which is matched based on a regular expression of directories (see [[https://hermitage.utsob.me/writings/technical/how-tos/how-to-manage-multiple-git-credential-for-the-same-provider/][How to Manage Multiple Git Credential for the Same
+Provider]]).
 
 ** Shell Autocompletion
 

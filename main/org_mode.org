@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       169b9c5f-df34-46ab-b64f-8ee98946ee69
-:mtime:    20230413154310 20230408213646 20230319195017 20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
+:mtime:    20230424102336 20230413154310 20230408213646 20230319195017 20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
 :ctime:    20221217184411
 :END:
 #+TITLE: Orgmode
@@ -96,7 +96,7 @@ There are hundreds!
 + [[https://github.com/arnm/ob-mermaid][ob-mermaid : Generate mermaid diagrams within Emacs org-mode babel]]
 + [[https://github.com/rlister/org-present][org-present : Ultra-minimalist presentation minor-mode for Emacs org-mode.]]
 + [[https://github.com/dakrone/ox-tufte][ox-tufte : Emacs' Org-mode export backend for Tufte HTML]]
-
++ [[https://github.com/takaxp/org-tree-slide][org-tree-slide: A presentation tool for org-mode based on the visibility of outline trees]]
 
 *** Misc
 

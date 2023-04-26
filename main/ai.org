@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5
-:mtime:    20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
+:mtime:    20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
 :ctime:    20230304230340
 :END:
 #+TITLE: Artificial Intelligence
@@ -60,6 +60,10 @@ There are [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] [[id:ff8ee302-7518-
 ** Papers
 
 + [[https://arxiv.org/abs/2212.03551][[2212.03551] Talking About Large Language Models]]
+
+** Tools
+
++ [[https://glaze.cs.uchicago.edu/guide.html][Glaze: Protecting Artists from Style Mimicry]]
 
 ** Reading
 + [[https://nymag.com/intelligencer/article/ai-artificial-intelligence-chatbots-emily-m-bender.html][On the Dangers of  Stochastic Parrots: Can Language Models Be Too Big?]]
