@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5
-:mtime:    20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
+:mtime:    20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
 :ctime:    20230304230340
 :END:
 #+TITLE: Artificial Intelligence
@@ -53,6 +53,11 @@ OpenAI"]].
 
 + [[https://ai.googleblog.com/][GoogleBlog : AI]]
 + [[https://aiguide.substack.com/][AI: A Guide for Thinking Humans | Melanie Mitchell | Substack]]
+
+
+** Detection
+
++ [[https://www.zerogpt.com][ZeroGPT]] GPT detector.
 
 ** OpenSource Projects
 
