@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ea1499ab-dab2-49b1-8479-cb5a2fbd38bc
-:mtime:    20230331230614 20230103103314 20221224191223 20230103103313 20230103103309 20230103103308
+:mtime:    20230503073018 20230331230614 20230103103314 20221224191223 20230103103313 20230103103309 20230103103308
 :ctime:    20221224191223 20230103103308
 :END:
 #+TITLE: Programming
@@ -12,9 +12,12 @@ Programming can be abstracted from the language in which it is written and the [
 * Data Structures
 :PROPERTIES:
 :ID:       347000ec-6cec-4187-a998-9a96ad6f3946
-:mtime:    20221224191223
+:mtime:    20230503073018 20221224191223
 :ctime:    20221224191223
 :END:
+
+I picked up the book [[id:c006a2dc-166b-44c7-9473-6eb8ef6e7ec8][A Common Sense Guide to Data Structures and Algorithms (2nd Edition)]] to help improve my
+understanding of these important aspects of programming.
 
 * Algorithms
 :PROPERTIES:
