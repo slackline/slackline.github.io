@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5
-:mtime:    20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
+:mtime:    20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
 :ctime:    20230304230340
 :END:
 #+TITLE: Artificial Intelligence
@@ -56,6 +56,8 @@ There are [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] [[id:ff8ee302-7518-
 + [[https://www.theguardian.com/technology/2023/feb/08/biased-ai-algorithms-racy-women-bodies][‘There is no standard’: investigation finds AI algorithms objectify women’s bodies | Artificial intelligence (AI) |
   The Guardian]]
 + [[https://vickiboykis.com/2023/02/26/what-should-you-use-chatgpt-for/][What should you use ChatGPT for? | ★❤✰ Vicki Boykis ★❤✰]]
++ [[https://www.semianalysis.com/p/google-we-have-no-moat-and-neither][Google "We Have No Moat, And Neither Does OpenAI"]] - leaked internal article on how closed source AI systems are losing
+  the "race" to open-source systems.
 
 ** Papers
 
