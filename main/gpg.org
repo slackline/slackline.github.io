@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ce08bd82-0146-49cb-8a64-048ffe7210f2
-:mtime:    20230103103313 20221229210308
+:mtime:    20230504101907 20230103103313 20221229210308
 :ctime:    20221229210308
 :END:
 #+TITLE: GPG
@@ -9,3 +9,5 @@
 
 
 * Links
+
++ [[https://rgoulter.com/blog/posts/programming/2022-06-10-a-visual-explanation-of-gpg-subkeys.html][A Visual Explanation of GPG Subkeys - Richard Goulter's Blog]]
