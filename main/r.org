@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       de9a18a7-b4ef-4a9f-ac99-68f3c76488e5
-:mtime:    20230423231605 20230411223218 20230210005221 20230125072709 20230112120722 20230103103313 20221228150524 20230103103308
+:mtime:    20230506201917 20230423231605 20230411223218 20230210005221 20230125072709 20230112120722 20230103103313 20221228150524 20230103103308
 :ctime:    20221228150524 20230103103308
 :END:
 #+TITLE: R
@@ -57,6 +57,10 @@ Shiny provides a framework for creating interactive web-pages from within R. Rea
 There are a few ways in which dashboards can be created. The package [[https://rinterface.github.io/bs4Dash/index.html][bs4Dash]] is /A Bootstrap 4 Version of
 shinydashboard/ and as v2.0.0 its as simple as switching from ~library(shinydashboard)~ to ~library(bs4Dash)~
 
+* Parallelisation
+
+It's possible to parallelise conducive code using R, one such package is [[https://www.futureverse.org/][Futureverse]] but there are other options some of
+which are summarised in this [[https://bookdown.org/rdpeng/rprogdatascience/parallel-computation.html][Chapter 22 Parallel]] of Roger Peng's [[https://bookdown.org/rdpeng/rprogdatascience/][R Programming for Data Science]].
 * Community
 :PROPERTIES:
 :TITLE: R community
@@ -119,7 +123,7 @@ There are a lot of R user groups and there is no single definitive list, below a
 * Development
 :PROPERTIES:
 :ID:       61a19339-e706-4f93-b98c-f5b336d0f280
-:mtime:    20230103103309 20221228150524
+:mtime:    20230506201917 20230103103309 20221228150524
 :ctime:    20221228150524
 :END:
 At some point you may want to delve further into writing more structured code in R and write your own package. This can
@@ -162,6 +166,7 @@ help with that. An excellent resource is the [[https://r-pkgs.org/][R Packages b
 + [[https://argoshare.is.ed.ac.uk/healthyr_book/][R for Health Data Science]]
 + [[https://skeydan.github.io/Deep-Learning-and-Scientific-Computing-with-R-torch/][Deep Learning and Scientific Computing with R torch]]
 + [[https://raps-with-r.dev/][Building reproducible analytical pipelines with R]]
++ [[https://bookdown.org/rdpeng/rprogdatascience/][R Programming for Data Science]]
 
 ** Learning Resources
 

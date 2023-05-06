@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5
-:mtime:    20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
+:mtime:    20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
 :ctime:    20230304230340
 :END:
 #+TITLE: Artificial Intelligence
@@ -28,6 +28,18 @@ There are [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] [[id:ff8ee302-7518-
   the ~RESULTS:~.
 + [[https://github.com/xenodium/chatgpt-shell][chatgpt-shell]]
 
+
+* Open Systems
+
+One of the problems of systems like ChatGPT, Dall-E and Googles Bard is that they are closed source and services offered
+(sometimes with APIs) by private companies. They control what data the system is trained on and how the model is built
+and they can choose to retract their availability, particularly for free, at any point in time.
+
+This is noted in the blog post [[https://dindi.garjola.net/ai-assistants.html][AI assistants in Emacs. Don't use ChatGPT. Help Open Science.]] which links to some
+interesting projects such as the [[https://bigscience.huggingface.co/][BigScience Project]] and their [[https://huggingface.co/bigscience/bloom][Bloom]] model which can be connected to from [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]]. Tying in
+with the need to open source aspect and the advantage it provides to not just software development but also AI research
+is the article based on purportedly leaked by content from a Google employ at [[https://www.semianalysis.com/p/google-we-have-no-moat-and-neither][Google "We Have No Moat, And Neither Does
+OpenAI"]].
 
 * Links
 
