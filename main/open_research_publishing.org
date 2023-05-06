@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       3df9f7ea-12c0-47ab-97a8-e2b3d6c72606
 :ROAM_ALIASES: "Open Research : Publishing"
-:mtime:    20230103103309 20220429104307
+:mtime:    20230506081901 20230103103309 20220429104307
 :ctime:    20220429104307
 :END:
 #+title: Open-research Publishing
@@ -12,7 +12,14 @@
 Many journals have adopted open access research policies in recent years, although many push the cost for this onto the
 author, something that then has to be budgeted in the grant application.
 
+* Digital Object Identifiers (DOIs)
+
+Digital Object Identifiers (DOIs) make it easy to cite and find papers, data, software and other material. You can even
+obtain a DOI for yourself via [[https://orcid.org/][ORCiD]].
+
 * Links
 
 + [[https://octopuspublishing.org/][Octopus Publishing]]
 + [[https://joss.theoj.org/][Journal of Open Source Software]]
++ [[https://datacite.org/index.html][DataCite]]
++ [[https://zenodo.org/][Zenodo - Research. Shared.]]
