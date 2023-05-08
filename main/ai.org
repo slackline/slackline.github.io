@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5
-:mtime:    20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
+:mtime:    20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
 :ctime:    20230304230340
 :END:
 #+TITLE: Artificial Intelligence
@@ -82,3 +82,4 @@ OpenAI"]].
 ** Reading
 + [[https://nymag.com/intelligencer/article/ai-artificial-intelligence-chatbots-emily-m-bender.html][On the Dangers of  Stochastic Parrots: Can Language Models Be Too Big?]]
 + [[https://www.newyorker.com/magazine/2023/04/03/the-data-delusion][The Data Delusion | The New Yorker]]
++ [[https://time.com/6273743/thinking-that-could-doom-us-with-ai/?][The 'Don't Look Up' Thinking That Could Doom Us With AI | Time]]
