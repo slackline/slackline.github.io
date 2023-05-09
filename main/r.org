@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       de9a18a7-b4ef-4a9f-ac99-68f3c76488e5
-:mtime:    20230506201917 20230423231605 20230411223218 20230210005221 20230125072709 20230112120722 20230103103313 20221228150524 20230103103308
+:mtime:    20230508223533 20230506201917 20230423231605 20230411223218 20230210005221 20230125072709 20230112120722 20230103103313 20221228150524 20230103103308
 :ctime:    20221228150524 20230103103308
 :END:
 #+TITLE: R
@@ -56,6 +56,9 @@ Shiny provides a framework for creating interactive web-pages from within R. Rea
 
 There are a few ways in which dashboards can be created. The package [[https://rinterface.github.io/bs4Dash/index.html][bs4Dash]] is /A Bootstrap 4 Version of
 shinydashboard/ and as v2.0.0 its as simple as switching from ~library(shinydashboard)~ to ~library(bs4Dash)~
+
+You can also [[https://shiny.rstudio.com/blog/shiny-on-hugging-face.html][deploy Shiny on Hugging Face]] via both R and Python Shiny Docker images which gives a simple interface to
+Machine Learning interfaces.
 
 * Parallelisation
 
