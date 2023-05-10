@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ec8e7ee9-0316-4de2-98c1-f775c20b0e35
-:mtime:    20230330143114 20230103103314 20220323114739 20230103103314 20230103103308
+:mtime:    20230510155356 20230330143114 20230103103314 20220323114739 20230103103314 20230103103308
 :ctime:    20220323114739 20230103103308
 :END:
 #+TITLE: Python Data Analysis and Visualisation
@@ -9,7 +9,12 @@
 
 All data requires [[id:60748503-8e7d-42af-ab36-b67a8b3858d0][Data Management]] before you can set about effective and reproducible [[id:f7c491f4-c557-4a68-916a-4e883a15e8ac][Data Analysis]] and [[id:4dc223eb-96f0-4188-a4a0-c5f86e5d89ba][Visualisation]].
 
-* Python
+* Project Structure
+
+It is beneficial to you, your future self and others to use a consistent directory structure across your projects. A
+package for that provides a sensible structure and creates it for you is [[https://drivendata.github.io/cookiecutter-data-science/][Cookiecutter]].
+
+* Packages
 ** Data Analysis
 :PROPERTIES:
 :ID:       f7c491f4-c557-4a68-916a-4e883a15e8ac
@@ -68,3 +73,5 @@ All data requires [[id:60748503-8e7d-42af-ab36-b67a8b3858d0][Data Management]] b
 :PROPERTIES:
 :ID:       a026ee5d-c965-4697-81e5-dc5153f6d8b3
 :END:
+
+* Links
