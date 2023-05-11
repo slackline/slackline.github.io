@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       57ba7f41-cf41-493c-bbf4-9d1e05a0602d
-:mtime:    20230314223425 20230103103310 20221226212438
+:mtime:    20230509150839 20230314223425 20230103103310 20221226212438
 :ctime:    20221226212438
 :END:
 #+TITLE: Git Rebase
@@ -10,9 +10,32 @@
 * Overview
 
 Rebasing is a very powerful tool as it allows you to "re-write history", that is you can change the history of commits
-in the log.
+in the log, compressing them (or "squashing" in Git parlance). Rebasing can also be used to bring a divergent branch
+up-to-date with another (typically ~main~/~master~) although often it is easier to use ~git merge~ to achieve this.
 
-* Git Rebase in Magit
+* Git Merge
+
+Before getting into the details of rebasing lets first go through bringing a feature branch upto date with the main
+branch that has moved ahead since the feature branch was created.
+
+At the command line you would
+
+#+begin_src bash
+  # Bring main up-to-date locally
+  git checkout main
+  git pull
+  git checkout <feature_branch>
+  git merge main
+  # Or combine the last two in one line with
+  git merge <feature_branch> main
+#+end_src
+
+** Git Merge in Magit
+
+Of course [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] allows this to be done relatively easily too.
+* Git Rebase
+
+** Git Rebase in Magit
 
 [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] is really useful for holding your hand through the rebasing process, read more [[id:1f4a3e9c-900d-4f73-b2e0-ac4e8c4037e9][here]].
 
@@ -23,6 +46,7 @@ in the log.
 
 + [[https://www.howtogeek.com/849210/git-rebase/][Git rebase: Everything You Need to Know]]
 + [[https://www.scmgalaxy.com/tutorials/git-commands-tutorials-and-example-git-reset-git-revert/][Git Reset and Revert Tutorial for Beginners]]
++ [[https://www.atlassian.com/git/tutorials/merging-vs-rebasing][Merging vs. Rebasing | Atlassian Git Tutorial]]
 + [[https://about.gitlab.com/blog/2022/11/08/rebase-in-real-life/][GitLab Blog | How to use Git rebase in real life]]
 + [[https://about.gitlab.com/blog/2022/10/06/take-advantage-of-git-rebase/][GitLab Blog | Take advantage of Git rebase]]
 + [[https://itnext.io/advantages-of-git-rebase-af3b5f5448c6][Advantages of Git Rebase by Alessio Pieruccetti]]
