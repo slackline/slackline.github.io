@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       60748503-8e7d-42af-ab36-b67a8b3858d0
-:mtime:    20230330144615
+:mtime:    20230426122337 20230330144615
 :ctime:    20230330144615
 :END:
 #+TITLE: Data Management
@@ -39,6 +39,15 @@ you typically want to apply it to elements of a given table which is where thing
 #+begin_src sqlite
   UPDATE <table> SET <column> = REPLACE(<column>, <pattern>, <replacement>)
 
+#+end_src
+
+** Dump a table toCSV
+#+begin_src
+.headers on
+.mode csv
+.output a_table.csv
+SELECT * FROM ATable;
+.quit
 #+end_src
 * Links
 
