@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0859ef9e-834d-4e84-8e67-fa7593a61e0b
-:mtime:    20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
+:mtime:    20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
 :ctime:    20230222225246
 :END:
 
@@ -30,7 +30,7 @@ If you use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] then you should de
 * Concepts
 :PROPERTIES:
 :ID:       292f6e62-a56e-4e71-9801-05c96b950af5
-:mtime:    20230102213516 20230103103309
+:mtime:    20230513073211 20230102213516 20230103103309
 :ctime:    20230102213516
 :END:
 
@@ -101,7 +101,19 @@ path = ~/work/.gitconfig-work
 #+end_src
 
 I've written more on using per-repository SSH keys at [[https://ns-rse.github.io/posts/git-ssh/][Git: Custom SSH credentials for git repositories]].
-** .gitignore
+
+** Repository Configuration
+*** Remote push defaults
+
+Adding the following to your ~.git/config~ will means the first time you attempt to push a new branch from [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] you
+will not be asked where you want to push to, it will automatically be the ~origin/<branch-name>~.
+
+#+begin_src
+[remote]
+  pushDefault = origin
+
+#+end_src
+*** .gitignore
 
 You can tell Git to automatically ignore certain files by adding file blobs to the file ~.gitignore~ in the root of your
 repositories directory (i.e. the highest level). This is useful as you can exclude temporary files that your test editor
