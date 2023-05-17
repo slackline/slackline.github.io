@@ -638,31 +638,52 @@ Purpose of OSC website
 * Module 5 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.1ko6e2yv6y8i][Monitoring and Sustainability]]
 :PROPERTIES:
 :ID:       aab164df-fcdf-461f-9e46-296d99019b2f
+:mtime:    20230517103850
+:ctime:    20230517103850
 :END:
 [[https://docs.google.com/presentation/d/1QmhL0xQsHzxFgiD9Bsw2lmk37IEVYa4Mi-3IuAFFbEg/edit?usp=share_link][Slides 5a]]
+[[https://docs.google.com/presentation/d/103xN_ZHbxIqOQMXwEECuoeGmPU_V5yu0FE52Wl3ssn8/edit#slide=id.p][Slides 5b]]
 [[https://docs.google.com/document/d/1E18Ucd_KTAanaKc0vYGJAgbWduXppEq-eEfGEaj_X6s/edit][Program Notes]]
-** Why Monitor?
+** Monitoring
+*** Why Monitor?
 + Check whether you are doing a good job, assess success and identify areas for improvement.
 + Feedback and adjust engagement ([[id:b867820e-85f0-4666-b572-84ac2dead954][Module 2]]) and communication strategies ([[id:cda2f6a6-bbc1-4a04-9eab-5611699a23d4][Module 3]])
 + Sets out what is important.
 + Makes external communication easier (i.e. funders).
-** What to Monitor?
+*** What to Monitor?
 + Key Performance Indicators (KPI)
-  + Quantification of success.
-  + Linked to the aims ([[id:8b8c0382-09f1-442c-a1c4-b7ea179638f9][Module 1]])
-  + Number of members
-  + Event attendance
-  + Interactions with stakeholders/members
-  + Behaviour change (normalisation is hard to quantify), so use proxies.
-** How to Monitor?
++ Quantification of success.
++ Linked to the aims ([[id:8b8c0382-09f1-442c-a1c4-b7ea179638f9][Module 1]])
++ Number of members
++ Event attendance
++ Interactions with stakeholders/members
++ Behaviour change (normalisation is hard to quantify), so use proxies.
+*** How to Monitor?
 + Sign-up information (diversity, area, expertise experience).
 + Interviews and focus groups.
 + Feedback forms and surveys
 + Important to talk to members.
-** Annual Reports
+*** Annual Reports
 + Useful to re-iterate the goals and aims of the community, what has been learnt and where new directions will be
   going.
+** Sustainability
++ Make OSC future proof.
++ Success is when a project continues after you leave.
++ Where is your community in 1, 5 years?
++ How to turn potential into reality?
++ Secure capacity (funding) for subsequent stages.
++ Be ambitious but realistic, /with our resources I can do.../ these should be linked to the aims and KPI.
++ Important to make effective use of the time people are willing to commit to the community and "manage" them (the
+  /Mountain of Engagement/)
+*** Funding
++ Can be challenging, ideally support from local institute.
++ Contingent on local context.
++ Collaborate in joint grant proposals.
++ OSC Masterplan and an introduction with clear goals and aims of what is to be achieved is pretty much the structure of
+  a grant proposal and provides an excellent starting point.
 
+*** Plan
+Align the KPI with the aspects of Engagement, attracting members, stakeholders, monitoring and so forth.
 * Module 6 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.m9354iwrqh1t][Open!]]
 :PROPERTIES:
 :ID:       35b09100-f418-430e-9a8c-a5fbad9915f9
