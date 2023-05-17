@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8d52f6c2-84ba-4fa4-9755-7168e3b0b229
-:mtime:    20230511092328 20230427142234 20230426102257 20230419122422 20230419095811 20230412124327 20230412100747 20230412090502 20230328091212 20230323095006 20230322103502 20230322092056 20230315094159 20230314103337 20230311213600 20230309220209 20230308204702 20230308133737 20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
+:mtime:    20230517102413 20230511092328 20230427142234 20230426102257 20230419122422 20230419095811 20230412124327 20230412100747 20230412090502 20230328091212 20230323095006 20230322103502 20230322092056 20230315094159 20230314103337 20230311213600 20230309220209 20230308204702 20230308133737 20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
 :ctime:    20230228205112
 :END:
 #+TITLE: Open Science Community Incubator Program
@@ -141,6 +141,9 @@ Complete the tasks on [[https://docs.google.com/presentation/d/17dKDuuTOM5RWtWu8
 ** **QUESTION** Open Science is perhaps excluding to humanities, is there scope for alternative names e.g. Open Research
 
 * Module 1 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.a9snr669cgwk][Mission and Vision]]
+:PROPERTIES:
+:ID:       8b8c0382-09f1-442c-a1c4-b7ea179638f9
+:END:
 [[https://docs.google.com/presentation/d/1hlcd91XUNINR-K-TcKmhvx06dF_EcebW60T54jNb2lY/edit#slide=id.g13cef509449_0_534][Slides]]
 [[https://docs.google.com/document/d/140fIWasFC8Hf__zUUW6SDcUDyH48Kb3pDS0ibE-LNGQ/edit][Notes]]
 
@@ -291,7 +294,10 @@ Vision > Mission > Aims
 
 Aims are a tool to get you to your mission statement(s) and mission should lead to vision.
 * Module 2 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.hfpbcmnncxve][Community Engagement]]
-[[https://docs.google.com/presentation/d/1UXe3nCcVCO4wkmYqiaugp29A2iQFIXOnxPc2kaw1aA8/edit][Slides]]
+:PROPERTIES:
+:ID:       b867820e-85f0-4666-b572-84ac2dead954
+:END:
+[[https://docs.google.com/presentation/d/1UXe3nCcVCO4wkmYqiaugp29A2iQFIXOnxPc2kaw1aA8/edit][Slides 2]]
 [[https://docs.google.com/document/d/1clV_gk0IV3jKsUSN0_M1C4uohz7_V0SsQZpn1p7RsxY/edit][Notes]]
 ** [[https://docs.google.com/presentation/d/1UXe3nCcVCO4wkmYqiaugp29A2iQFIXOnxPc2kaw1aA8/edit?usp=share_link][Community Engagement : Target Groups]]
 + Communities are where people interact.
@@ -472,7 +478,10 @@ Useful to monitor how people have engaged
 + Reuse material (if licensed to do so), see resources at [[https://osf.io/vz2sy/][International Network of Open Science & Scholarship Communities]]
 + Looking for a speaker, use INOSC to look for a speaker
 * Module 3 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.k5ezdbcfizen][Member Recruitment]]
-[[https://docs.google.com/presentation/d/1EuHL-OIbFqyBLhAlTNh-0mBw5a3mvitfywDOM5t0Icc/edit][Slides]]
+:PROPERTIES:
+:ID:       cda2f6a6-bbc1-4a04-9eab-5611699a23d4
+:END:
+[[https://docs.google.com/presentation/d/1EuHL-OIbFqyBLhAlTNh-0mBw5a3mvitfywDOM5t0Icc/edit][Slides 3]]
 [[https://docs.google.com/document/d/1tm9AobrMJ6AaU99s7W8eodO0WpTb0hepIWZFxToD_p4/edit][Notes]]
 Communicating with members as well as communicating and attracting new members.
 
@@ -570,9 +579,11 @@ growing.
 
 Remember to get participants to promote the Open Science Community as its the most effective method (word of mouth)
 * Module 4 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.9vhgjot2qoq][Stakeholder Engagement]]
+:PROPERTIES:
+:ID:       6d8e9fcd-d4b1-4125-88e5-f7cefb156008
+:END:
 [[https://docs.google.com/presentation/d/1iujmSbl8iNcwfBkHN38UgZqjIeVOzVdeFtrUSg6l3wE/edit#slide=id.p][Slides]]
 [[https://docs.google.com/document/d/18fHZFMsA5PJohTOzYsTVjun-eESyw51ZQgefENCJc-4/edit][Notes]]
-
 ** Stakeholder mapping
 + Who are they
   + Local, national and international.
@@ -625,8 +636,37 @@ Purpose of OSC website
   **QUESTION** Can this host the pages of peoples profiles that shows who at a given institution has what knowledge/experience
   **QUESTION** How does INOSC pages link in with institution advertising?
 * Module 5 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.1ko6e2yv6y8i][Monitoring and Sustainability]]
+:PROPERTIES:
+:ID:       aab164df-fcdf-461f-9e46-296d99019b2f
+:END:
+[[https://docs.google.com/presentation/d/1QmhL0xQsHzxFgiD9Bsw2lmk37IEVYa4Mi-3IuAFFbEg/edit?usp=share_link][Slides 5a]]
+[[https://docs.google.com/document/d/1E18Ucd_KTAanaKc0vYGJAgbWduXppEq-eEfGEaj_X6s/edit][Program Notes]]
+** Why Monitor?
++ Check whether you are doing a good job, assess success and identify areas for improvement.
++ Feedback and adjust engagement ([[id:b867820e-85f0-4666-b572-84ac2dead954][Module 2]]) and communication strategies ([[id:cda2f6a6-bbc1-4a04-9eab-5611699a23d4][Module 3]])
++ Sets out what is important.
++ Makes external communication easier (i.e. funders).
+** What to Monitor?
++ Key Performance Indicators (KPI)
+  + Quantification of success.
+  + Linked to the aims ([[id:8b8c0382-09f1-442c-a1c4-b7ea179638f9][Module 1]])
+  + Number of members
+  + Event attendance
+  + Interactions with stakeholders/members
+  + Behaviour change (normalisation is hard to quantify), so use proxies.
+** How to Monitor?
++ Sign-up information (diversity, area, expertise experience).
++ Interviews and focus groups.
++ Feedback forms and surveys
++ Important to talk to members.
+** Annual Reports
++ Useful to re-iterate the goals and aims of the community, what has been learnt and where new directions will be
+  going.
 
 * Module 6 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.m9354iwrqh1t][Open!]]
+:PROPERTIES:
+:ID:       35b09100-f418-430e-9a8c-a5fbad9915f9
+:END:
 
 
 * Links
@@ -655,7 +695,7 @@ Purpose of OSC website
 + [[https://www.eur.nl/sites/corporate/files/dilemmagame-mrg.pdf][Research Integrity Game]] ([[https://play.google.com/store/apps/details?id=nl.eur.dilemmagame][Android Dilemma Game]] / [[https://apps.apple.com/us/app/dilemma-game/id1494087665][iOS Dilemma Game]])
 + [[https://vimeo.com/510808878][Open Science Community Video]]
 + [[https://www.ukri.org/publications/enhancing-research-culture-funding-allocations-2022-to-2023/][Enhancing Research Culture Funding Allocations 2022 to 2023]]
-
++ [[https://101innovations.wordpress.com/][Innovations in Scholarly Communication | Changing Research Workflows]]
 
 Launch at OpenFest2023 followup a month or two later with Open Conversation
 OpenResearch/Access Week in October
