@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       52b4db29-ba21-4a8a-9b83-6e9a8dc02f41
-:mtime:    20230103103310 20221211233405
+:mtime:    20230519193813 20230519143618 20230103103310 20221211233405
 :ctime:    20221211233405
 :END:
 #+TITLE: GitHub
@@ -44,6 +44,12 @@ created by Sphinx. You now need to configure your repository to use [[https://pa
 the ~gh-pages~ branch and select the ~root~ directory and then ~Save~. You will get a link to the pages appear just
 above these options. You can click on this and it may take a little while to build the pages but the will appear.
 
+** Environment Variables
+
+[[https://docs.github.com/en/github-ae@latest/actions/learn-github-actions/environment-variables#default-environment-variables][GitHub Actions environment variables]] make some variables available automatically. I had recourse to require the user and
+the repository separetly and spent some time scratching my head how to do this until I came across [[https://www.cazzulino.com/github-actions-repository.html][this short post]] that
+uses [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] parameter expansion.
+
 ** Publishing to PyPI
 
 It is possible to use a GitHub Action to automate [[id:5e1f167e-5c0c-4206-b2ac-6694e08524d8][publishing to PyPI from GitHub]].
@@ -66,6 +72,7 @@ worthwhile below.
 + [[https://ropensci.org/blog/2022/05/31/chatops-review-system-github/][Editorial Automation: Why & How to Set Up Chat-Ops for your Own Review System on GitHub]]
 
 *** GitHub Actions
++ [[https://github.com/nektos/act][act - run GitHub Actions locally]]
 + [[https://github.com/marketplace/actions/sphinx-docs-to-github-pages][Sphinx Docs to GitHub Pages]]
 + [[https://github.com/KanHarI/gpt-commit-summarizer][GPT Commit Summarizer]]
 

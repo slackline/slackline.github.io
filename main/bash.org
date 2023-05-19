@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9c6257dc-cbef-4291-8369-b3dc6c173cf2
-:mtime:    20230330135624 20230326125853 20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
+:mtime:    20230519194008 20230330135624 20230326125853 20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
 :ctime:    20221231194258
 :END:
 #+TITLE: Bash
@@ -91,6 +91,15 @@ You can use [[http://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-
   done
 #+END_SRC
 
+** Parameter Expansion
+
+You can use [[https://stackoverflow.com/questions/19482123/extract-part-of-a-string-using-bash-cut-split/19482947#19482947][parameter expansion]] to extract components of strings.
+
+#+begin_src bash
+  TEST="user/repository"
+  USER=${TEST%/*} # Retains everything BEFORE /
+  REPO=${TEST#*/} # Retains everyting AFTER /
+#+end_src
 * Command Line Tools
 
 The power of the command line comes from pipping the output of one command to another. To which end there are a bunch of
