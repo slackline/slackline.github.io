@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5b5d1562-ecb4-4199-b530-e7993723e112
-:mtime:    20230525100413 20230319231255 20230224095542 20230223120221 20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
+:mtime:    20230526200945 20230520211006 20230319231255 20230224095542 20230223120221 20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
 :ctime:    20221217185215 20230103103308
 :END:
 #+TITLE: Python
@@ -145,6 +145,8 @@ Python has a host of functionality for parallelisation. Read more on [[id:077cb9
 * Typing and Validation
 :PROPERTIES:
 :ID:       e42e7d26-345d-4bab-ba48-473ac26f5161
+:mtime:    20230520211006
+:ctime:    20230520211006
 :END:
 Whilst Python is a dynamically typed language, which means that the type of [[id:8da3c4d1-e3ef-40ec-b2bd-1d5685c8fa51][data structure]] is determined on the fly when
 running code, the typing of arguments and their subsequent validation can be invaluable. This is achieved by adding [[https://docs.python.org/3/library/typing.html][type
@@ -152,6 +154,9 @@ hints]] to your code, typically whenever a new variable is defined, whether that
 function/method definition. For the later it is also sensible to add a type hint as to the type of object(s) that are
 returned.  The consistency of type hints can be checked using [[http://mypy-lang.org/][mypy]] and input can be validated on the fly by using
 [[id:ba02ecdf-c35f-4deb-8308-28341922c096][pydantic]].
+
+I found [[https://kobzol.github.io/rust/python/2023/05/20/writing-python-like-its-rust.html][Writing Python like its Rust]] a really insightful read and will be endeavour to use this as well as pydantic in
+future work.
 
 * Profiling
 
