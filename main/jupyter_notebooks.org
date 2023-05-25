@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       c3712eee-d30f-4dd4-b894-4721d094edd1
+:mtime:    20230525100359
+:ctime:    20230525100359
+:END:
+#+TITLE: Jupyter Notebooks
+#+FILETAGS: :python:jupyter:notebooks:
+
+* Links
+
++ [[https://martibosch.github.io/jupyter-emacs-universe/][Jupyter in the Emacs universe | Martí Bosch]]

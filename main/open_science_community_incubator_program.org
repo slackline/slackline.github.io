@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8d52f6c2-84ba-4fa4-9755-7168e3b0b229
-:mtime:    20230517102413 20230511092328 20230427142234 20230426102257 20230419122422 20230419095811 20230412124327 20230412100747 20230412090502 20230328091212 20230323095006 20230322103502 20230322092056 20230315094159 20230314103337 20230311213600 20230309220209 20230308204702 20230308133737 20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
+:mtime:    20230524104011 20230524090925 20230517102413 20230511092328 20230427142234 20230426102257 20230419122422 20230419095811 20230412124327 20230412100747 20230412090502 20230328091212 20230323095006 20230322103502 20230322092056 20230315094159 20230314103337 20230311213600 20230309220209 20230308204702 20230308133737 20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
 :ctime:    20230228205112
 :END:
 #+TITLE: Open Science Community Incubator Program
@@ -638,7 +638,7 @@ Purpose of OSC website
 * Module 5 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.1ko6e2yv6y8i][Monitoring and Sustainability]]
 :PROPERTIES:
 :ID:       aab164df-fcdf-461f-9e46-296d99019b2f
-:mtime:    20230517103850
+:mtime:    20230524090925 20230517103850
 :ctime:    20230517103850
 :END:
 [[https://docs.google.com/presentation/d/1QmhL0xQsHzxFgiD9Bsw2lmk37IEVYa4Mi-3IuAFFbEg/edit?usp=share_link][Slides 5a]]
@@ -684,11 +684,23 @@ Purpose of OSC website
 
 *** Plan
 Align the KPI with the aspects of Engagement, attracting members, stakeholders, monitoring and so forth.
+
+
+
+** Catch up week
++ Add the associations to the list of things that people contribute to when joining the community.
++ Can instead write community overviews rather than aim and vision statement, see [[https://www.cscce.org/profiles/][CSCCE Profiles]] for examples.
++ Get buyout funding for faculty representatives (0.1FTE) as well as community management (minimum 0.2FTE, some upto
+  0.8FTE).
++ See CSCCE for details of community life-cycle and what happens when things go dormant.
 * Module 6 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.m9354iwrqh1t][Open!]]
 :PROPERTIES:
 :ID:       35b09100-f418-430e-9a8c-a5fbad9915f9
 :END:
 
+** Questions
+
++ How did they deal with funding? How much and how did they go about it.
 
 * Links
 
@@ -717,6 +729,9 @@ Align the KPI with the aspects of Engagement, attracting members, stakeholders, 
 + [[https://vimeo.com/510808878][Open Science Community Video]]
 + [[https://www.ukri.org/publications/enhancing-research-culture-funding-allocations-2022-to-2023/][Enhancing Research Culture Funding Allocations 2022 to 2023]]
 + [[https://101innovations.wordpress.com/][Innovations in Scholarly Communication | Changing Research Workflows]]
++ [[https://www.cscce.org/][Center for Scientific Collaboration and Community Engagement - CSCCE]]
++ [[https://www.f-uji.net/index.php?action=test][F-UJI - FAIR assessment]]
++ [[https://fairaware.dans.knaw.nl/][FAIR Aware]]
 
 Launch at OpenFest2023 followup a month or two later with Open Conversation
 OpenResearch/Access Week in October
