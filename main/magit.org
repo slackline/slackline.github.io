@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       220d7ba9-d30e-4149-a25b-03796e098b0d
-:mtime:    20230331095952 20230329110200 20230222123344 20230103103309 20221228103404 20230103103308
+:mtime:    20230528203919 20230331095952 20230329110200 20230222123344 20230103103309 20221228103404 20230103103308
 :ctime:    20221228103404 20230103103308
 :END:
 #+TITLE: Magit
@@ -76,5 +76,9 @@ requests (~N c p~). You can comment and edit existing topics, whether that is Is
 
 + [[https://chainsawriot.com/postmannheim/2022/12/12/aoe12.html][Advent of emacs #12: How I do version control in emacs]]
 + [[https://tsdh.org/posts/2022-08-01-difftastic-diffing-with-magit.html][Difftastic diffing with Magit]] (see also [[https://shivjm.blog/better-magit-diffs/][Better Magit Diffs ― A Place For My Head]] for tweaking colours)
+
+** Diffing
+
++ [[https://oremacs.com/2015/01/17/setting-up-ediff/][Setting up Ediff · (or emacs]]
 
 ** Rebasing

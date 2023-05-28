@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       754f25a5-3429-4504-8a17-4efea1568eba
-:mtime:    20230513161935 20230309220249 20230221192022 20230217165509 20230217113056 20230216205143 20230205122258 20230205081022 20230203235526 20230120215724 20230114080430 20230109075443 20230106185900 20230103103311 20221229203153
+:mtime:    20230527184757 20230527082330 20230513161935 20230309220249 20230221192022 20230217165509 20230217113056 20230216205143 20230205122258 20230205081022 20230203235526 20230120215724 20230114080430 20230109075443 20230106185900 20230103103311 20221229203153
 :ctime:    20221229203153
 :END:
 #+TITLE: Emacs
@@ -152,3 +152,5 @@ Read more about [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]].
 + [[https://github.com/natrys/whisper.el][whisper.el]] - speech to text.
 + [[https://www.emacswiki.org/emacs/SkeletonMode][EmacsWiki : Skeleton Mode]]
 + [[https://tilvids.com/w/9XsA4pbcE4fFz867VYGBYx][The History of Emacs]]
++ [[https://karthinks.com/software/batteries-included-with-emacs/][Batteries Included with Emacs]]
++ [[https://eshelyaron.com/posts/2023-05-26-extending-emacs-s-dictionary-library.html][Extending Emacs's Dictionary Library]]

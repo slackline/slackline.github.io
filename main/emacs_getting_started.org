@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       36a83dd6-7535-43a9-9b68-15dc135c86fd
-:mtime:    20230129183436 20230110111806 20230109113920 20230108125643 20230107171311 20230107093916 20230106214209 20230106185855 20230106174506
+:mtime:    20230527083357 20230129183436 20230110111806 20230109113920 20230108125643 20230107171311 20230107093916 20230106214209 20230106185855 20230106174506
 :ctime:    20230106174506
 :END:
 #+TITLE: Emacs Getting Started
@@ -159,6 +159,9 @@ keys you can press next and what action they are bound to.
 + ~C-h k~ help for a key-binding (you'll be prompted to press the key-binding you want to know about).
 + ~C-h v~ help for a variable.
 + ~C-h C~ help for a command.
+
+If you want to search for topics in Emacs help system then you can use ~C-h i d m emacs RET [i|s] topic RET~ which will
+search indices (~i~) or the full text (~s~) of the Emacs Info manual.
 
 * IDE Configuration
 
