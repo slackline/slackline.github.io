@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       0a5f391b-0f61-48d8-a4c3-a204d55538de
+:mtime:    20230528222034
+:ctime:    20230528222034
+:END:
+#+TITLE: OpenStreetMap
+#+FILETAGS: :gis:maps:database:opensource:
+
+[[https://openstreetmap.org][OpenStreetMap]] is an amazing free, open source resource.
+
+* Links

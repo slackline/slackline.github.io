@@ -1,0 +1,57 @@
+:PROPERTIES:
+:ID:       bc096b27-5f0e-426c-9722-7798e12ca2dc
+:mtime:    20230528222315
+:ctime:    20230528222315
+:END:
+#+TITLE: Dokuwiki
+#+FILETAGS: :gnu:php:wiki:linux:web:
+
+
+[[https://www.splitbrain.org/projects/dokuwiki][Dokuwiki]] is a simple Wiki that uses plain text files to store all information in a hierarchical structure. It doesn't
+require any database to store the page information at all. I've used it for years and really like it. Originally I
+installed and ran it from a Raspberry Pi but later switched to hosting it on a VPS service that I pay for as that is
+more likely to stay online (although I did lose some edits when the data centre burnt down, fortunately I kept manual
+backups fairly regularly, my budget doesn't stretch to automated backups).
+
+* Sites
+
+I run two sites...
+
++ [[https://kimura.no-up.info][kimura.no-ip.info]] - a personal Wiki where I document a lot of the computing stuff I do, although lately I've moved
+  towards using [[id:136364e7-1a6d-4b28-b284-0e415b860699][Org-roam]]. One day I might migrate /en masse/ all of the pages but would like to take the opportunity to
+  edit and rework many of the pages, which takes time and that is something I don't have a great deal of these days.
++ [[https://sheffieldboulder.uk/][sheffieldboulder.uk]] - a site about the free and public artificial boulders that are dotted around [[id:60bd7406-c4c2-4316-8517-cb9d1cac8f35][Sheffield]].
+
+* Plugins
+
+I use a fair few plugins, in particular I find the ability to write the pages in Markdown really useful as I then don't
+have the cognitive burden of remembering yet another set of syntax.
+
++ [[https://www.dokuwiki.org/plugin:blog][Blog]] - simple blogging functionality
++ [[https://dokuwiki.org/plugin:config][Configuration Manager]] - simplifies configuration
++ [[https://www.dokuwiki.org/plugin:logviewer][Logviewer]] - view logs
++ [[https://www.dokuwiki.org/plugin:markdowku][Markdowku]] - Write pages in [[id:0c371287-128d-4e46-8128-b2d4f5fc604c][Markdown]].
++ [[https://www.dokuwiki.org/plugin:openlayersmap][OpenLayesr map plugin]] - embed and annotate [[id:0a5f391b-0f61-48d8-a4c3-a204d55538de][openstreetmap]]
+
+* Upgrading
+
+From [[https://www.dokuwiki.org/install:upgrade][Official Upgrade guide]] these are the steps I take to upgrade my install manually. I use the manual install method
+because I have two wiki's served on the same machine.
+
+#+begin_src bash
+  cd /srv/http
+  tar zcpfv kimura-$(date +%Y-%m-%d).tar.gz kimura
+  tar zcpfv sheffieldboulder-$(date +%Y-%m-%d).tar.gz sheffieldboulder
+  wget https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz
+  tar xzvf dokuwiki-stable.tgz
+  'cp' -af dokuwiki-xxxx-xx-xx/* sheffieldboulder/ # Quotes ignore any alias set on cp
+  chown -R http:http sheffieldboulder
+  grep -Ev '^($|#)' sheffieldboulder/data/deleted.files | xargs -n 1 rm -vf
+  'cp' -af dokuwiki-xxxx-xx-xx/* kimura/ # Quotes ignore any alias set on cp
+  chown -R http:http kimura
+  grep -Ev '^($|#)' kimura/data/deleted.files | xargs -n 1 rm -vf
+#+end_src
+
+* Links
+
++ [[https://www.splitbrain.org/projects/dokuwiki][DokuWiki [splitbrain.org]​]]

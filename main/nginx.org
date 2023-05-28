@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3774439d-af75-453e-b3e9-9d578b6bec46
-:mtime:    20230215120711
+:mtime:    20230528222513 20230215120711
 :ctime:    20230215120711
 :END:
 #+TITLE: Nginx
@@ -16,6 +16,21 @@ Available across packages install as appropriate to your OS.
   apt-get install nginx   # Ubuntu
 #+end_src
 
+
+* Configuration
+
+** Dokuwiki
+
+I use [[id:bc096b27-5f0e-426c-9722-7798e12ca2dc][Dokuwiki]] to host a couple of wiki's as its simple and doesn't require a database.
+
+** Wordpress
+
+I also (used to) host a Wordpress site with the intention of monetising my photography. Never got a single sale but I
+keep the domain and one day I might update the installation and get it working again.
+
+** LetsEncrypt
+
+I use LetsEncrypt to provide certificates for my sites so they are secure.
 
 * Links
 

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9c6257dc-cbef-4291-8369-b3dc6c173cf2
-:mtime:    20230519194008 20230330135624 20230326125853 20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
+:mtime:    20230528213012 20230519194008 20230330135624 20230326125853 20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
 :ctime:    20221231194258
 :END:
 #+TITLE: Bash
@@ -77,6 +77,11 @@ Configuration of Bash on a per-user basis is via ~\~/.bashrc~ / ~\~/.bash_profil
 :ID:       c7d811f9-5e9f-43b9-9b0b-d647a399756c
 :END:
 
+*** Ignoring Aliases
+
+Sometimes you /don't/ want an alias to be used, even if you have set it. You can access the unaliased form of a command
+by encapsulating it in single quotes e.g. ~'ls'~
+
 * Tips and Tricks
 
 ** Make a directory for every file
@@ -99,6 +104,20 @@ You can use [[https://stackoverflow.com/questions/19482123/extract-part-of-a-str
   TEST="user/repository"
   USER=${TEST%/*} # Retains everything BEFORE /
   REPO=${TEST#*/} # Retains everyting AFTER /
+#+end_src
+
+** Getting dates dynamically
+
+You can get dates dynamically in output files courtesy of the ~date~ command...
+
+#+begin_src bash
+  touch new-file-$(date +%F)
+  # Different formats
+  $(date +%Y-%m-%d)
+  $(date +%F) # equivalent to above
+  $(date +$s) # seconds since epoch
+  $(date +%Y-%m-%d-%H:%M:%S)
+  $(date +%F-%X) # equivalent to above
 #+end_src
 * Command Line Tools
 
