@@ -1,11 +1,26 @@
 :PROPERTIES:
 :ID:       c3712eee-d30f-4dd4-b894-4721d094edd1
-:mtime:    20230525100359
+:mtime:    20230602095831 20230525100359
 :ctime:    20230525100359
 :END:
 #+TITLE: Jupyter Notebooks
 #+FILETAGS: :python:jupyter:notebooks:
 
+* JupyterLite
+
+
+[[https://jupyterlite.readthedocs.io/en/latest/][JupyterLite]] allows Notebooks to be run completely in browsers without the need for a server to be started locally. It
+uses the [[https://webassembly.org][WebAssembly]] framework to achieve this.
+
+**Caveats** JupyterLite makes heavy use of caching the Notebook and Python environment in which it runs in your
+browser. You should make sure you reset this each and every time you make changes to your Notebook or if you want to
+install new packages.
+
 * Links
 
 + [[https://martibosch.github.io/jupyter-emacs-universe/][Jupyter in the Emacs universe | Martí Bosch]]
+
+** JupyterLite
+
++ [[https://github.com/jupyterlite/jupyterlite][GitHub | JupyterLite]]
++ [[https://jtp.io/jupytercon-2023-jupyterlite/files/index.html#1][JupyterCon 2023 | Create interactive Jupyter websites with JupyterLite]]
