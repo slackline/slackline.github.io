@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       8d52f6c2-84ba-4fa4-9755-7168e3b0b229
-:mtime:    20230524104011 20230524090925 20230517102413 20230511092328 20230427142234 20230426102257 20230419122422 20230419095811 20230412124327 20230412100747 20230412090502 20230328091212 20230323095006 20230322103502 20230322092056 20230315094159 20230314103337 20230311213600 20230309220209 20230308204702 20230308133737 20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
+:mtime:    20230607112951 20230607101604 20230607090749 20230531111705 20230524104011 20230524090925 20230517102413 20230511092328 20230427142234 20230426102257 20230419122422 20230419095811 20230412124327 20230412100747 20230412090502 20230328091212 20230323095006 20230322103502 20230322092056 20230315094159 20230314103337 20230311213600 20230309220209 20230308204702 20230308133737 20230308095307 20230307193139 20230302115737 20230301134758 20230301113149 20230301100853 20230301090816 20230228205112
 :ctime:    20230228205112
 :END:
+#+TODO: NEXT(n) TODO(t) WAIT(w@) IN-PROGRESS(i@/!) BLOCKED(b@) ON-GOING(o) | DONE(d) CNCL(c@) WONT-DO(W@/!)
 #+TITLE: Open Science Community Incubator Program
 
 [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#][Syllabus]]
@@ -688,6 +689,10 @@ Align the KPI with the aspects of Engagement, attracting members, stakeholders, 
 
 
 ** Catch up week
+:PROPERTIES:
+:mtime:    20230607094316
+:ctime:    20230607094316
+:END:
 + Add the associations to the list of things that people contribute to when joining the community.
 + Can instead write community overviews rather than aim and vision statement, see [[https://www.cscce.org/profiles/][CSCCE Profiles]] for examples.
 + Get buyout funding for faculty representatives (0.1FTE) as well as community management (minimum 0.2FTE, some upto
@@ -696,11 +701,140 @@ Align the KPI with the aspects of Engagement, attracting members, stakeholders, 
 * Module 6 - [[https://docs.google.com/document/d/19NVTAjsecw7CtwttK_wY6kEs-rIGHpOKoE9L-vhYRL8/edit#heading=h.m9354iwrqh1t][Open!]]
 :PROPERTIES:
 :ID:       35b09100-f418-430e-9a8c-a5fbad9915f9
+:mtime:    20230607090749 20230531111705
+:ctime:    20230531111705
 :END:
 
-** Questions
+[[https://docs.google.com/document/d/1dv1qbeRKv29GcXyOiun_sdu5_FU4cQBcAMRmXyHeoLI/edit][Module 6 Notes]]
 
-+ How did they deal with funding? How much and how did they go about it.
+** Locals OSCs and International Networks
++ Each OSC is unique but there is a lot of overlap.
++ Waste of time and energy reinventing the wheel, therefore worthwhile collaborating.
++ Want to facilitate collaboration and sharing of experiences and increase impact.
++ Governance structure to accommodate local communities to work with each other. There are by-laws in place.
++ Communities have OSC Representatives who meet during the INOSC Meeting with the INOSC Board. The INOSC Board is
+  advised by an Advisory Board.
++ Board members (upto 6) elected every two years...
+  + 3-4 meetings a year of the Community Meeting (45 minutes) multiple members from each community.
+  + 3-4 meetings a year for the Representatives (45 minutes) discuss and share ideas, funding, activities etc.
+  + Project Groups proposed by representatives
++ Every local OSC can join the network after...
+  + Meeting with the INOSC Board Member
+  + Acceptance of Code of Conduct
+  + Acceptance of Guiding Principles
+  + Acceptance of By-laws
+  + Appointing an OSC Representative
+
+*** National Networks
+
++ Can have a national network if there are more local OSCs within a country.
++ Two models "Dutch" and "Swedish"
+  + Dutch - lot of OSCs who then banded together.
+  + Swedish - Single OSC Sweden which is helping establish local chapters
+
+** Final Presentation
++ Explain where we are.
++ Concrete goals, e.g. within six months
++ Slides optional
++ Where we are, what we've learned and plans for the future.
++ Reunion meeting in six months or so.
+** Questions and Answers for Community Co-ordinators
+
+Raul Zuritta-Milla (OSC Twente)
+Tanya Yankelevich (OSC Delft)
+Tereza Motalova (OSC Olomouc)
+
+*** How did they deal with funding? How much and how did they go about it, what activities did you fund?
+*** Were there any areas that you wanted to provide talks/training on that you found there was a lack of people with relevant experience?
+
+Often found digital competences to be challenging.
+
+*** What have you found most rewarding about the experience of establishing the Open Science Community?
+
+*** Do you find you get much volunteering from those who are engaged and enthusiastic about OSC?
+
+  Raul : chases people to volunteer and present work and what they have done, they are often keen to share their work,
+  knowledge and experience.
+
+  Tereza : Haven't got much buy in from people in this manner yet.
+
+  Tanya Yankelevich : At least two events per year, including discussions, tries to get community members to co-organise with so
+  she does the organising and the content is presented by others. Gets contact from others and facilitates
+  others. Sometimes it just happens, people self-organise.
+
+*** How much time do you spend on the community management?
+
+Raul : No official buy out, time varies a lot and depends on effort wants to put in roughly four hours a week, but done
+in own time. Has colleagues who help.
+
+Tereza : Part of role, can't spend as much time as she'd like to on this but amount of time dictates rate/pace of
+movement. Can vary if events are coming up. Several hours a week, could easily spend half a week.
+
+Tanya : Employed as a community manager and also as a core member of the open science programme and works hard
+connecting the two. Also works on citizen community. Spends however much time is required for each task. Aside from
+administration (1hr to a week) roughly three days on organising, talking to people, promoting the community, specific
+practices.
+
+*** Raul
+Hired an officer with a faculty plan, asked one representative from each faculty to join, monthly meetings distributed
+throughout faculties, advertised via library. Some people like Open Science, some are more hesitant.
+
+Focusing on PhD students didn't work well for Raul, set up Open Science course for core training (five mornings) had
+only four people apply. Readvertised and hoping to run again.
+
+*** Tereza (directors office of open research)
+
+Preparing a strategy already, working group for strategy, research posts with one representative from each
+faculty. Expert group with people from computing, library and so forth. Bottom up approach focusing on PhD students as
+they are very open to the topic. Co-operation with doctoral space with one student per-faculty represented too. Tricky
+to find people who are interested. Tereza uses existing connections to help with the networking.
+
+Challenging to explain why open science is important, often personal approach works better. For example its high on
+the agenda of the Horizon Europe project so if you're working in that its important.
+
+*** Tanya
+
+Rewarding? : Enjoys finding other people to work with and has liked seeing others shine and grow. Has a skillset that
+helps people grow.
+
+
+** <2023-06-07 Wed 09:00>
+
+[[https://docs.google.com/presentation/d/1x4QpNkNkkQmPY2L2lnIvb8N_0SmXDxny8hTFObWHldM/edit#slide=id.p][Slide Template]] for feedback (10 minutes presentation 5 minutes questions)
+
++ Title
++ Describe Community
++ Current Status
++ Three (concrete) things for the coming half year
++ Three lessons learned during the OSC Incubator Program
++ Invitation to kick-off meeting
+
+* Website
+** Tasks
+*** DONE Change Title to Scholarship
+- State "DONE"       from              [2023-06-07 Wed 10:05]
+  CLOSED: [2023-06-07 Wed 10:05]
+*** TODO Allow users to register
+Need to allow users to register, features should include...
++ Ask those joining to indicate the areas of experience.
+*** TODO Discussion Forum
+Add a discussion forum to the site with various sections...
++ FAIR (ORDA) / FAIR4RS
++ Grant Application
++ Reproducibility
++ Up-coming events
+
+Lots of options (as its a plugin!) see starting list [[https://wpastra.com/plugins/wordpress-forum-plugins/][here]].
+*** TODO Links Page
+Add a links page to include
++ Library Resources
++ Sheffield Reproducibilitea
++ Sheffield SMART
++ Creative Coding
++ [[https://www.aske-skeptics.org.uk/sheffield.html][Sheffield Skeptics in the Pub]]
+*** ON-GOING Posts
+**** OpenFest2023
+**** Subsequent Events
 
 * Links
 
