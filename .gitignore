@@ -4,5 +4,6 @@ org-roam.db
 *.html
 *.md
 vps-wiki*
+.\#*
 
 *_template.org
