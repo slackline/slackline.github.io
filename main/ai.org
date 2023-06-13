@@ -41,6 +41,15 @@ with the need to open source aspect and the advantage it provides to not just so
 is the article based on purportedly leaked by content from a Google employ at [[https://www.semianalysis.com/p/google-we-have-no-moat-and-neither][Google "We Have No Moat, And Neither Does
 OpenAI"]].
 
+* Ethics and Morals
+
+** Moral Outsourcing
+
+Something I first came across in the article [[https://www.theguardian.com/technology/2023/may/29/rumman-chowdhury-interview-artificial-intelligence-accountability][‘I do not think ethical surveillance can exist’: by Rumman Chowdhury]] is the
+idea that we absolve the humans involved in the development, implementation, deployment and use of AI when talking about
+"bad algorithms". We should be aware that our choice of input data results in bias, we can choose not to use AI and
+instead employ people to do jobs.
+
 * Links
 
 ** Examples

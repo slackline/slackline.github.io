@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       169b9c5f-df34-46ab-b64f-8ee98946ee69
-:mtime:    20230515080140 20230513163615 20230424102336 20230413154310 20230408213646 20230319195017 20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
+:mtime:    20230613223232 20230515080140 20230513163615 20230424102336 20230413154310 20230408213646 20230319195017 20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
 :ctime:    20221217184411
 :END:
 #+TITLE: Orgmode
@@ -72,6 +72,7 @@ acting as input to code blocks in literate documents.
 
 + [[https://github.com/james-stoup/emacs-org-mode-tutorial][A primer for users trying to make sense of Org Mode]]
 + [[https://www.labri.fr/perso/nrougier/GTD/index.html#org0b9def2][Get Things Done with Emacs]]
++ [[https://www.youtube.com/watch?v=e9ucb1jhufq][emacs: org mode basics - Prot]]
 
 *** Org-mode Workflow by Jethro Kuan
 + [[https://blog.jethro.dev/posts/org_mode_workflow_preview/][Org-mode Workflow: A Preview · Jethro Kuan]]
