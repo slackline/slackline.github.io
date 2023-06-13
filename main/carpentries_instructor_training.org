@@ -1,0 +1,229 @@
+:PROPERTIES:
+:ID:       0607e15e-3ebc-402b-ad12-c9e9bbd41592
+:mtime:    20230613114248 20230613080653 20230613070414
+:ctime:    20230613070414
+:END:
+#+TITLE: Carpentries Instructor Training
+#+FILETAGS: :work:teaching:learning:training:
+
+* Preparation
+
++ [[https://carpentries.github.io/instructor-training/files/papers/science-of-learning-2015.pdf][The Science of Learning]] ([[file:pdf/science-of-learning-2015.pdf][local copy]])
++ [[https://carpentries.org/files/reports/2021%20Carpentries%20Annual%20Report_Final.pdf][The Carpentries 2021 Annual Report]]
+
+* Four Day Overview
++ Research based Teaching Principles
++ Respectful and Inclusive Classroom Environment
++ Practice and Develop Teaching Skills
++ The Carpentries Organization
+
+
+* [[https://pad.carpentries.org/2023-06-13-ttt-online-cest][Day 1]] ([2023-06-13 Tue])
+
+Questions
++ How do people learn?
++ Who is a typical Carpentries learner?
++ How can we help
+
+** Carpentries Pedagogical Model
++ Teach applied computational competence.
++ Lay foundation for future learning.
++ Interactive workshops for all participants.
+
+** Slides
+*** Skill Acquisition
++ Novice - I'm not sure what questions to ask.
++ Competent Practitioner - I'm pretty confident but I still look stuff up a lot.
++ Expert - I've been doing this on a daily basis for years!
+
+Novices are *not* "empty vessels" they have knowledge and skills from their domain and these provide hooks into learning
+new material.
+
+*** Mental Models
++ Internal representation of knowledge : *mental model*
++ models are never perfect, they are used for recognition and extrapolation.
++ Mental models change over time, gain complexity through learning.
+
+*** Power and limitations of analogies
++ Good analogies can help learning.
++ They provide scaffolding for the knowledge based on pre-existing knowledge
++ Be careful about fostering misconceptions.
+
+** Exercise 1
+
+Think of an analogy for something you work with or do as a hobby that would help teach the topic. What does it teach,
+how is it useful and how is it wrong.
+
+Atomic force microscopy record on a needle
+Genome assembly - cut up a book randomly several times over and find overlapping sections.
+Atomic forces - boats on a lake throwing balls to each other repel, but falls down when they attract.
+
+*** Concept Map
+
+When a ball is put into a container with water the [Ball]  --pushes out--> [ Water]
+
+Repeat with different size balls, large balls push out more water than smaller balls.
+
++ Useful as you can work out what the order of material should be
+
+*** Formative Assessment to Identify Misconceptions
+
+Formative Assessment
++ Feedback through assessment
++ While we teach gives immediate feedback
+
+  + Polls during the class
+  + Asking questions - works better in small groups, large groups may require polls.
+  + Doing exercises
+
+Multiple choice questions are more summative, but can be well structured if the alternatives are diagnostic and
+demonstrate how a process may have failed. E.g.
+
+What is 27 + 15
+
+a) 42
+b) 32
+c) 312
+d) 33
+
+Each wrong answer shows a methodological error.
+
+Summative Assessment
+
++ At the end of a lesson or class (doesn't help the learner much)
+
+*** The Importance of Going Slowly
+
++ Take time for formative assessment.
++ Many facts early on are counter productive for novices as they've not linked ideas.
+
+*** Key Points
++ Goal when teaching novices is to help them construct useful mental models.
++ Explore our own mental models via concept maps can help us prepare to convey them.
++ Constructing a useful mental model requires practice and corrective feedback.
++ Formative assessment provide practice for learners and feedback to instructor.
+
+*** Examining Our Expertise
++ Pitfalls of teaching as an expert are that you can often assume a level of knowledge or familiarity with the content.
++ Expert awareness gap (/blind spot).
+
+*** Language
++ Words like "just" or "obviously" are demotivating, it implies that the learner should have got things first time,
+  which isn't necessarily the case, they may have mis-heard or the explanation might not have been clear.
++ Saying things are too complicated can also be demotivating.
++ People's motivations differ widely, some are enthusiastic to learn, others less so and see it as a requirement to get
+  what they want to get done done.
+
+*** Memory and Cognitive Load
++ What is cognitive load and how does it affect learning.
++ How can we design teaching material to work with rather than against memory constraints?
+
+*** Type of Memory
++ Long term memory: essnetially unbounded, slow to access.
++ Short term memory: 7 -/+ items at a time (or less) but fast.
++ How to shift information from short term memory to long term.
++ [[https://miku.github.io/activememory/][Short term memory test]]
+
+*** Strategies for memory management
++ Don't overload learns by only introducing a few new concepts at once.
++ Group and connect concepts in chunks
++ Consolidate concepts through practice
++ By connecting information it allows for more things in short-term memory and helps move concepts into long-term memory.
+
+*** Strategies for Supporting Memory Consolidation
++ Formative Assessment (see above) helps move knowledge into long-term memory. Should be frequent because short-term
+  memory is limited in space and time.
++ Group Work - active discussion of information also helps consolidation. Can feel uncomfortable at first, but in
+  retrospect it is usually a highly rated learning experience that people enjoy.
++ Opportunities for Reflection - asking learners for feedback (see later episodes).
+
+*** Cognitive Load
++ Attention is constrained as well, there is no such thing as multi-tasking, performance degrades and actually tasks are
+  performed one after the other.
++ Learning Attention
+  + Intrinsic - performance of a task.
+  + Germane - connect the task.
+  + Distractions - extraneous.
++ Some cognitive load is good, and the difficulty can help improve learning, but don't overdo it and avoid overload.
++ Manage Cognitive Load with guided practice, exercises with a skeleton solution, then build on this.
+  + Reduces intrinsic load
+  + Avoid extraneous load
++ Contrast with Minimal Guidance
+  + Guided practice is better for novices.
+  + Minimal guidance may foster independence of advanced learners.
+
+*** Attention Management
+Formative Assessment
++ Multiple Choice questions
++ Faded Examples
++ Parson's problems (select and sort code fragments, see [[https://codio.github.io/parsons-puzzle-ui/][generator]])
++ Labelling diagrams or flow charts.
+
+What to Display
++ Do /not/ show the carpentries curriculum material (people will read them!)
++ Prevent split-attention effect, talk around slides
++ For participatory live coding
+  + mirror learners environment
+  + speak commands as you type
+*** Key Points
++ Most adults only store a few items in short-term memory for a few seconds before the lose them again.
++ Things seen together are remembered together in chunks
++ Cognitive load should be managed through guided practice.
++ Formative assessment helps move things from short to long term memory.
+
+*** Building Skills with Feedback
++ How can I get feedback from learners?
++ How can I use this feedback to improve my teaching?
+
+*** Surveys
++ Conduct prior and post workshop surveys to get an idea of prior experience of knowledge and in turn improve your
+  feedback.
++ Timing matters most likely to be completed if still at the workshop, plan for time during the last 15 minutes.
+*** Minute Cards
++ Before long breaks or between days, private and anonymous feedback.
++ One positive/one constructive feedback.
++ Look for patterns/problems and use feedback to adadpt workshop.
++ Be explicit about what the feedback will be used for as it helps motivate people to give things.
++ More specific questions get better feedback.
+
+Examples
+
+**** Positive
++ One thing you liked.
++ Most important thing you learned today.
++ What are skill are you most excited about using.
+
+**** Constructive
++ What was confusing
++ What questions do you have
+
+*** One-up, One-down
++ Go round the group, one person positive, next negative, no repetition allowed.
++ Forces people to say things they may not otherwise say.
++ Collect but don't discuss feedback.
++ Instructors discuss feedback afterwards and respond the next day.
+
+** Homework
+
++ Prepare an episode!
+* [[https://pad.carpentries.org/2023-06-13-ttt-online-cest-day2][Day 2]] ([2023-06-14 Wed])
+
+* [[https://pad.carpentries.org/2023-06-13-ttt-online-cest-day3][Day 3]] ([2023-06-15 Thu])
+
+
+* [[https://pad.carpentries.org/2023-06-13-ttt-online-cest-day4][Day 4]] ([2023-06-16 Fri])
+
+
+* Links
+
++ [[https://zedif.github.io/2023-06-13-ttt-online-CEST/][Instructor Training 2023-06-13 to 2023-06-16]]
+
+** Pads
++ [[https://pad.carpentries.org/2023-06-13-ttt-online-cest][Day 1]]
++ [[https://pad.carpentries.org/2023-06-13-ttt-online-cest-day2][Day 2]]
++ [[https://pad.carpentries.org/2023-06-13-ttt-online-cest-day3][Day 3]]
++ [[https://pad.carpentries.org/2023-06-13-ttt-online-cest-day4][Day 4]]
+
+** Preparation
++ [[https://carpentries.github.io/instructor-training/files/papers/science-of-learning-2015.pdf][The Science of Learning]]
++ [[https://carpentries.org/files/reports/2021%20Carpentries%20Annual%20Report_Final.pdf][The Carpentries 2021 Annual Report]]
