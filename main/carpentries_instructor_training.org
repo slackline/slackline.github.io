@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0607e15e-3ebc-402b-ad12-c9e9bbd41592
-:mtime:    20230613114248 20230613080653 20230613070414
+:mtime:    20230614123407 20230614110555 20230613114248 20230613080653 20230613070414
 :ctime:    20230613070414
 :END:
 #+TITLE: Carpentries Instructor Training
@@ -205,8 +205,194 @@ Examples
 
 ** Homework
 
-+ Prepare an episode!
++ Prepare an episode! Pick one from
 * [[https://pad.carpentries.org/2023-06-13-ttt-online-cest-day2][Day 2]] ([2023-06-14 Wed])
+
+** Slides
+*** Motivation and Demotivation
++ Why is motivation important?
++ How can we create a motivating environment for learners?+ Identify authentic tasks and explain why teaching them is
+  important.
++ Develop strategies to avoid demotivating learners.
++ Distinguish praise based feedback and the type of mindset it promotes.
+
+*** Motivation
++ Important pre-requisite for learning, without being motivated its hard or even impossible.
++ Partly influenced by factors beyond instructors control, but instructors can cultivate motivation and should avoid
+  demotivating behaviour.
++ Most learners come eager to learn.
++ Carpentries workshop are a starting point for self-training
+
+*** How Can Content Influence Motivation
++ People learn best when they care about a topic and believe they can master it.
++ Encouraging learners to interact with each other is a useful motivator as people talk and help each other out to
+  learn.
+
+**** Exercise
+
+Describe one or two situations where you found it demotivating.
+
+*** Mindsets
++ Encourage a growth mindset.
++ Present yourself as a learner, not a problem, it engenders people to understand that everyone is still learning.
++ Still a learner with respect to teaching and showing that is useful too as its expected.
+
+Refer to KJ Walton
+
+*** Choosing our Pharses
++ That’s exactly how you do it – you haven’t gotten it right yet, but you’ve tried two different strategies to solve
+  that problem. Keep it up! *Effort*
++ You’re getting to be really good at that. See how it pays to keep at it? *Effort*
++ Wow, you did that perfectly without any help. Have you thought about taking more computing classes? *Performance*
++ That was a hard problem. You didn’t get the right answer, but look at what you learned trying to solve it!
+  *Effort*/*Improvement*
++ Look at that - you’re a natural! *Performance*
+
+As with general principles in Growth Mindset you should praise the effort and improvement rather than performance.
+
+*** Keeping up Motivation
++ Try and avoid talking about tools that sit alongside those we are teaching (e.g. don't disparage Excel).
++ If there are advanced learners should try and avoid talking to them about things that are beyond the level at which
+  the lesson is being pitched at. It detracts from the focus of the lesson and can be demotivating to others.
++ Don't pretend to know more than you do, will lose confidence in you as an instructor.
++ Don't use /just/ / /trivial/ / /obvious/.
++ Don't take over from the learner, let them do it themselves.
+
+*** Staying Motivated
++ Important to stay motivated yourself as it will show to learners.
+
+**** Exercise
+
+Think about why do you want to teach?
+
+I've learnt a lot and know a fair bit about a lot of technical tasks but don't consider myself an expert in anything
+("Jack of all trades master of none"). I'm keen to share my knowledge and help others as I found in my education/career
+a lot of the technical aspects such as data wrangling, programming, version control etc. weren't formally taught in the
+domains I've worked in. I came across the phrase "/When one person teaches two people learn/" and have
+found it to be true because whenever I have helped individuals or taught in the past it really helps me solidify my
+understanding of the subject matter.
+
+[[https://teachtogether.tech/en/index.html#s:finale][Why I Teach]] by Greg Wilson one of the Carpentries founders.
+
+*** Key Points
++ Positive learning environment helps people concentrate on learning.
++ People learn best when they see the utility in what they're learning and believe it can be accomplished with
+  reasonable effort.
++ Encouraging participation.
+
+*** Equity, Inclusion and Accessibility
++ Why are they important.
++ What can I do to enhance these aspects.
++ Identify instructional strategies that are consistent with universal design.
+ + Systemic factors that can distrac and demotivate
++ Code of COnduct
+
+*** Definitions
++ *Equity*The proportional distribution of desirable outcomes across groups. Sometime confused with equality, equity
+  refers to outcomes while equality connotes equal treatment.
++ *Inclusion* - actively engaging traditionally excluded individuals and/or groups in processes, activities and decisions
+  in a way that shares power. Inclusion promotes broad engagement, shared participation and advances authentic sense of
+  belonging through safe, positive and nurturing environments.
++ *Accessibility* the intentional design or redesign of technology, policies, products and services that increase
+  one'#s ability to use access and obtain the respective item. Each person is afforded the opportunity to acquire the
+  same information, engage i the same interactions and enjoy the same services in an equally effective and equally
+  integrated manner with substantially equivalent ease of use.
+
+**** Exercise
+
+Carpentries Core Values
+
+Think of a time when I or others have been affected by accessibility.
+
+*** Accessibility
++ Important to ensure material is accessible, colour-blindness, size of text etc. all have impact.
+
+*** Universal Design in Learning
++ Content is maximally usable by as many people without requiring adaptation.
++ May be beneficial to people beyond the group you are making things accessible for (e.g. drop kerb example).
++ Provide multiple options in how to receive, engage and share information (describing pictures/slides).
+
+**** Exercise
+
+*** Stereotypes
++ Generally bad and can be a barrier not just to teaching but learning.
++ By knowing a diverse group of people we expand our experience and breakdown our preconceptiosn and prejudices around
+  stereotypes.
++ Don't let learners reinforce their own biases that they don't think certain things can be done.
++ See Chapter 6 of How Learning Works.
+
+*** Never Teach Alone
++ Japanese students consistently ranked higher than US students (James Stigler 1980/90s)
++ US teachers met at most once a year to exchange ideas about teaching and only reported on their methods.
++ Japanese teachers met weekly or even daily and undertook lesson study where they observe each other at work, discuss
+  lessons afterwards and study the curriculum together.
++ With little exchange teachers have to invent teaching on their own and have to figure out how to combine available
+  materials with learned theory. They take their innovations with them into retirement!
++ Carpentries support lesson study where we have exercises in the workshop, teaching demonstrations and always teach at
+  least in pairs.
+
+*** Receiving and Giving Feedback
++ We are often susceptible to negative bias whereby we focus on the negative feedback rather than the positive.
++ 2x2 paradigm for feedback, say at least on positive and negative thing each for content and delivery. Avoids usual
+  focus on content and bias of only focusing on positive or negative feedback.
+
+*** Receiving Feedback
++ Initiate feedback rather than waiting for it.
++ Frame the feedback by specific questions rather than "/Please give us feedback/".
++ Communicate ways and expectations for giving feedback and use a feedback translator.
++ Be kind to yourself.
+  + Feedback is not personal.
+  + Always positives along with negatives.
+  + Save your favourite feedback for regular review.
+  + View criticism as an opportunity (i.e. growth mindset).
+
+*** Giving Feedback
++ Be positive, be specific, give a next step
+
+**** Exercise
+
+Good morning and welcome to the class, today we're going to be going through an introduction to the UNIX shell.
+
+My name is Neil Shephard and I'm a Research Software Engineer at the University of Sheffield.
+
+We'll be covering what the shell is and explaining what a Command Line Interface is, why you would use this over a
+Graphical interface and then moving on to more specific topics covering navigating and working with files and
+directories,  and then introducing the concepts of pipes and filtering, programming loops and writing shell scripts.
+
+If at any point throughout the course you have any questions please do not hesitate to raise your hand and ask, I don't
+mind being interrupted at all. The aim is for everyone to progress through the course and we don't want to leave anyone
+behind.
+
+
+Before we get started I'd like to ensure everyone was able to complete the setup requirements that we asked you to
+undertake. If anyone hasn't been able to complete those please let us know now and we can get you set up.
+
+***** Feedback
+
++ Like the order of content at the beginning and learning objectives able to see the specific content.
++ Open to questions
++ Looking at the camera showing engagement
++ Intro about self liked but too long.
+
+***** Andree
++ Good to start with a visual aim of what people are going to achieve.
++ No explanation of what the data is
+
+***** Jia
+
++ Using a point of reference that people will be familiar with and contrasted.
++ Introduced new terminology by way of reference/association.
++ Navigating is fundamental to using the shell.
++ Possibly confusing
+
+**** Reflection Exercise
+
+
+Cognitive Load really stuck out to me as an important factor there are too many distractions these days and often
+difficult to focus on one topic. Making time to focus on a specific task
+** Homework
++ Reading about centrally organised and self-ogranised workshops from the handbook Teaching and Hosting Workshops.
++ Prepare three minutes of a live coding exercise from an existing carpentry workshop.
 
 * [[https://pad.carpentries.org/2023-06-13-ttt-online-cest-day3][Day 3]] ([2023-06-15 Thu])
 
@@ -217,7 +403,7 @@ Examples
 * Links
 
 + [[https://zedif.github.io/2023-06-13-ttt-online-CEST/][Instructor Training 2023-06-13 to 2023-06-16]]
-
++ [[https://teachtogether.tech/en/index.html][Teaching Tech Together : How to Make Lessons That Work and Build a Teaching Community Around Them]] - Greg Wilson
 ** Pads
 + [[https://pad.carpentries.org/2023-06-13-ttt-online-cest][Day 1]]
 + [[https://pad.carpentries.org/2023-06-13-ttt-online-cest-day2][Day 2]]
