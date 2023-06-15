@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0607e15e-3ebc-402b-ad12-c9e9bbd41592
-:mtime:    20230614123407 20230614110555 20230613114248 20230613080653 20230613070414
+:mtime:    20230615120551 20230615104247 20230615091530 20230615081016 20230614123407 20230614110555 20230613114248 20230613080653 20230613070414
 :ctime:    20230613070414
 :END:
 #+TITLE: Carpentries Instructor Training
@@ -391,11 +391,217 @@ undertake. If anyone hasn't been able to complete those please let us know now a
 Cognitive Load really stuck out to me as an important factor there are too many distractions these days and often
 difficult to focus on one topic. Making time to focus on a specific task
 ** Homework
-+ Reading about centrally organised and self-ogranised workshops from the handbook Teaching and Hosting Workshops.
++ Reading about centrally organised and self-ogranised workshops from the handbook [[https://docs.carpentries.org/topic_folders/hosts_instructors/index.html][Teaching and Hosting Workshops]].
 + Prepare three minutes of a live coding exercise from an existing carpentry workshop.
 
-* [[https://pad.carpentries.org/2023-06-13-ttt-online-cest-day3][Day 3]] ([2023-06-15 Thu])
+* [[https://pad.carpentries.org/2023-06-13-ttt-online-cest-day3][Day 3]] [[https://pad.uni-jena.de/2023-06-13-ttt-online-cest-day3?both#][Alternative]] ([2023-06-15 Thu])
 
+
+** Slides
+*** Review
++ Aspects of educational psychology and pedagogy
++ How to create a positive environment
++ Lesson study and observation
++ Teaching practice, giving and receiving constructive feedback
+*** Getting Started on Instructor Certification
+Instructor Checkout - in addition to this workshop.
+
+1. Make a small contribution to a lesson or glossary.
+2. Take part in an online [[https://pad.carpentries.org/community-discussions][community discussion session]].
+3. Take part in an online [[https://pad.carpentries.org/teaching-demos][teaching demonstration session]].
+
+Complete these within 3 months (90 days), extension may be granted for up to 1 year (contact
+[[mailto:instructor.training@carpentries.org][instructor.training@carpentries.org]]).
+
+**** Exercise - Discussion of [[https://carpentries.github.io/instructor-training/checkout][Checkout Process]]
+
+[[https://hackmd.io/YVrkQK3lQRCgs6WZcpCBQA?view][Discussion for Checkout 2023-06-26]]
+
+*** What does the Badge Mean?
++ You can teach any Carpentries workshops
++ You get to vote
++ You can register for Carpentries Bonus Modules
++ You can share your achievement (CV/resume/staff profile)
+
+*** The Carpentries : How we Operate
++ How are they organised
++ Differences between Software Data and Library
++ How do you run a workshop
++ Get Connected to the community
+
+*** History
++ Founded 1998 to teach better software development skills.
++ Data came along in 2014 to address
+*** The Carpentries
+Core Values...
++ Run accessible, inclusive workshops
++ Teach openly available, high-quality, community developed lessons
++ Foster active, diverse instructor community.
+Workshops
++ Focus on technical skills
++ Typically two day format by volunteers
++ Focus on filing gaps in current training for learners.
+
+*** What is a Carpentries Workshop?
++ Data/Library/Software Carpentry are trademarked.
++ Must meet requirements.
++ Only one instructor needs to be Carpentries certified.
++ There should always be at least one co-instructor/helpers
++ Materials should be freely available under open license CC-By 4.0
++ Giving appropriatge credit
++ May be based outside of context of Carpentries but would be "Carpentries based".
+
+*** Reporting a "Mix and Match" Workshop
++ Helps the Carpentries to evaluate the impact
++ Understand what community wants and needs from material.
++ Would be a "Carpentries based" workshop.
+
+**** Exercise - Carpentries Jargon Review
++ Lesson - A series of episodes on a specific topic.
++ Episodes - One component of a lesson.
++ Workshop - A multi-day event on a focused programme where several Lessons are delivered.
++ [[https://docs.carpentries.org/topic_folders/governance/lesson-program-policy.html][Programme]] - The three main streams
++ Instructor - Carpentries certified teacher
++ Trainer - Someone who teaches how to use the Carpentry material
+
+*** Create Your Own Lesson
++ Use the Carpentries lesson example repository
++ Follow the Curriculum Development Handbook
++ Carpentries Incubator for holding the content.
+
+*** Culture of Contribution
++ Promotion of open, collaborative and reproducible research.
++ Culture of openness and sharing.
++ Collective expertise.
++ Collaboratively develop and maintain lessons and other resources.
++ Various ways to get involved and contribute.
+
+*** Community Roles
++
+
+*** Live Coding is a Skill
++ Explain advantages and limitations
++ No slides.
++ Instructor types with screen visible to learners.
++ Learners follow along on their own machines.
++ Sometimes have introductory slides, but majority is
+
+**** Exercise Good/Bad Teaching
+
+***** Good Teaching
+
+|          | Positive                                                | Negative |
+|----------+---------------------------------------------------------+----------|
+| Content  |                                                         |          |
+|----------+---------------------------------------------------------+----------|
+| Delivery | Checked student was ok                                  |          |
+|          | Looking at audience                                     |          |
+|          | Explaining commands and location of shell               |          |
+|          | Plain terminal and command prompt                       |          |
+|          | Explaining the shell prompt changes and loop as they go |          |
+|          | Explains the output                                     |          |
+|          | Makes a mistake and explains what they've done and how to correct it. |          |
+***** Bad Teaching
+
+|          | Positive                                | Negative                        |
+|----------+-----------------------------------------+---------------------------------|
+| Content  | Content shows how to use Bash for loops |                                 |
+|----------+-----------------------------------------+---------------------------------|
+| Delivery | Made a mistake and corrected it         | Not looking at class            |
+|          |                                         | Not explaining commands         |
+|          |                                         | Not saying what they are typing |
+|          |                                         | Notifications going off         |
+|          |                                         | Distracting shell prompt        |
+
+*** Tope Tne Tips
+1. Stand up and move around the room if possible (helps slow you down)
+2. Go slowly.
+3. Mirror your learners environment
+4. Use your screen wisely.
+5. Use illustrations.
+6. Turn off notifications.
+7. Stick to the lesson material.
+8. Leave no learner behind.
+9. Embrace mistakes.
+10. Have fun.
+
+**** Exercise - Live Coding
+
++ Presenter
++ Time Keeper
++ Note taker
+
+Present the chosen episode for three minutes with the other two taking notes to give feedback whilst the other takes
+notes
+
+***** Neil
+
+|          | Positive | Constructive |
+|----------+----------+--------------|
+| Content  |          |              |
+|----------+----------+--------------|
+| Delivery |          |              |
+
+***** Claire
+
+|          | Positive | Constructive |
+|----------+----------+--------------|
+| Content  |          |              |
+|----------+----------+--------------|
+| Delivery |          |              |
+
+Positive Delivery
+Clear intro of the task.
+Clear steps of how to access the elements of a list.
+Built up the steps gradually
+Explained shortcut
+Explained why you want to automate the printing of a list if its large or if it expands
+Corrected mistake
+
+Assumes they know the list construct [ ]
+Could highlight clearer where the output was, moved mouse could say where the output is
+Larger font perhaps
+
+
+***** Madeline
+
+|          | Positive | Constructive |
+|----------+----------+--------------|
+| Content  |          |              |
+|----------+----------+--------------|
+| Delivery |          |              |
+
+Quick recap of tasks done.
+Explained how to open scripts
+How to install if not already available
+
+tidyverse is a group of packages
+Explain commenting out of line with '#'
+Copy and pasted need to get people to type or share with them the URL that you are pasting
+
+*** Building Teaching Skill
++ Teaching is a skill
++ Improve with deliberate practice
++ Improve one topic at a time.
+
+*** Know your Audience
++ Use pre-workshop surveys.
++ Have a plan to learn about them during the course.
++ But will never know everything about them.
+
+*** Examine Learning Objectives
++ Always review the learning objectives as they state what the learner is meant to be able to do after the exercise.
++ Specific tasks.
++ Bloom's Taxonomy
+
+*** Prepare to Cut
++ Go slowly.
++ Keep breaks on time.
++ Watch out for dependencies.
++ Leave time to wrap up.
++ Do not speed up just to get content in.
++ Communicate with your team.
++ Tell learners about skipped material.
 
 * [[https://pad.carpentries.org/2023-06-13-ttt-online-cest-day4][Day 4]] ([2023-06-16 Fri])
 
@@ -404,7 +610,13 @@ difficult to focus on one topic. Making time to focus on a specific task
 
 + [[https://zedif.github.io/2023-06-13-ttt-online-CEST/][Instructor Training 2023-06-13 to 2023-06-16]]
 + [[https://teachtogether.tech/en/index.html][Teaching Tech Together : How to Make Lessons That Work and Build a Teaching Community Around Them]] - Greg Wilson
++ [[https://docs.carpentries.org/index.html][The Carpentries Handbook]]
++ [[https://pad.carpentries.org/community-discussions][Community Discussions]]
+  + [[https://hackmd.io/@local-uk/B132EYCe_#2023][UK Carpentry Community Meetings (Main Document)]]
++ [[https://pad.carpentries.org/teaching-demos][Teaching Demosntration Sessions]]
+
 ** Pads
+
 + [[https://pad.carpentries.org/2023-06-13-ttt-online-cest][Day 1]]
 + [[https://pad.carpentries.org/2023-06-13-ttt-online-cest-day2][Day 2]]
 + [[https://pad.carpentries.org/2023-06-13-ttt-online-cest-day3][Day 3]]
@@ -413,3 +625,6 @@ difficult to focus on one topic. Making time to focus on a specific task
 ** Preparation
 + [[https://carpentries.github.io/instructor-training/files/papers/science-of-learning-2015.pdf][The Science of Learning]]
 + [[https://carpentries.org/files/reports/2021%20Carpentries%20Annual%20Report_Final.pdf][The Carpentries 2021 Annual Report]]
+
+** Misc
++ [[https://github.com/jupyterhub/the-littlest-jupyterhub][The Littlest Jupyter Hub]]
