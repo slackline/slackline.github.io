@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0607e15e-3ebc-402b-ad12-c9e9bbd41592
-:mtime:    20230615120551 20230615104247 20230615091530 20230615081016 20230614123407 20230614110555 20230613114248 20230613080653 20230613070414
+:mtime:    20230616134415 20230616122322 20230616110911 20230615120551 20230615104247 20230615091530 20230615081016 20230614123407 20230614110555 20230613114248 20230613080653 20230613070414
 :ctime:    20230613070414
 :END:
 #+TITLE: Carpentries Instructor Training
@@ -605,6 +605,157 @@ Copy and pasted need to get people to type or share with them the URL that you a
 
 * [[https://pad.carpentries.org/2023-06-13-ttt-online-cest-day4][Day 4]] ([2023-06-16 Fri])
 
+** Slides
+
+*** Working With Your Team
++ What are the challenges of managing a heterogeneous classroom
++ What should we do if there are violations of the Code of Conduct
+*** Never Teach alone
++ At least 2 instructors in a workshop
++ Get feedback from each other.
++ Additional helpers for individual questions and problems.
++ More instructors lighten the load and help each other in sticky situations.
+
+*** Roles in Carpentries Workshops
++ Host : organizes the workshop logistics
++ Instructor : plan and execute workshop instruction (often useful to split from Host)
++ Helpers : support learners during the workshop
+
+*** Co-Teaching Models
++ Team Teaching
+  Both present and alternate presentation.
++ Teach and Assist
+  One person actively teaching, other looks out for questions and answering.
+
+*** Classroom Practices
++ Start with Code of Conduct, mention and say you expect people to have read it. Highlight one or two points.
++ Participatory instruction and hands-off help, learners use their own machines
++ Sticky Notes, one colour for completed (yellow) one for needing help (blue) or ticks/crosses on Zoom
++ Formative assessment
++ Breaks (ideally with snacks)
++ Feedback - minute cards and Carpentries surveys
+
+*** Sticky Situations 1 : Learners at Many Levels
+Carpentries target novices but get varied skill levels.
+
+*** Sticky Situations 2 : Code of Conduct Violations
++ Does not tolerate or encourage the persistence of harmful behaviours
++ Incidents must be reported (to the Carpentries)
++ Committee determine whether a violation has occurred.
++ Decide how and when to respond to a violation within a workshop (discuss in advance).
++ Know your local laws and policies (e.g institutional).
+
+**** Exercise
+
+Maria
+
+Explain how you know that a cell has executed
+Missed excution of second and third cell (Ctrl + Enter)
+
+Good explanation of the = assignment
+Variation in quotes highlighted
+Good explanation of indexing
+
+Madeline
+
+Getting started with data in R for Ecologists
+
+Positive
+
+Recap of material covered
+Ensured everyone was at the same point
+Covered installing the package if its not already there.
+Commenting out explained
+Explained tab completion
+Copy and pasted URL for users which is really useful
+Explained progress.
+
+Constructive
+
+destfile is an option/argument rather than a command
+
+*** Launches and Landings
++ How do you actually start a workshop?
++ Connect goals of introduction and how to round things up at the end.
+
++ Set positive first impressions (primacy effect)
++ Introduce yourself and other worshop leaders effectively
++ Clarify learning objectives and expectations
++ Get learners to introduce themselves
++ Set the tone of the the workshop
++ Baseline knowledge and motivation
++ Inform of workshop logistics and schedule
++ People should not hesitate to ask questions
+
+**** Exercise - Introduction to Lesson (not episode!)
+
+I failed to introduce myself, didn't invite people to interrupt me or check whether people are setup and ready to go.
+
+*** The Art of a Smooth Landings
++ End the workshop in time
++ Do not try to squeeze the remaining content into the last few minutes.
++ Leave enough time for closing.
++ Conclusions support reflective practice and set the stage for continued learning.
++    Close and save files. Where can those files be found, and how can learners pick up independently where you left off?
+
++    Reflect on learning. This can help learners to solidify key concepts they have learned, making them easier to
+  remember. It may also flush out a few last questions.
+
++    Plan next steps. Does the local community have resources to support continued learning? Do you have advice for how
+  learners might continue on their own? Even if you have no advice, asking learners to take a moment to discuss their
+  own plans can support them in taking a next step sooner rather than later.
+
++    Reiterate where the lesson materials can be found, and encourage them to apply at least one of the skills to their own work within the next few days. Potential examples include:
+
++    Use R to reproduce an analysis that was previously done with a spreadsheet application;
+
++    Write a lab notebook entry in R-markdown;
+
++ Backup a thesis or manuscript by storing it on a remote server with a version control system; and
+
++ Log in to a remote machine and run an analysis there.
+
++ Collect feedback. Minute cards, one-up-one-down, and making time for Carpentries post-assessment surveys will support your continuing development as an Instructor as well as our continuing development of Carpentries programs. This can also support or complement a reflection activity.
+
++ Check with the workshop host to see if they have any closing words or instructions they would like to share.
+
++ Celebrate everyone’s hard work. Thank your learners for helping each other, for staying motivated and persevering with you! Thank your helpers – keep a list of names handy if you might forget them. Enjoy the applause, and give everyone a moment to bask in praise for a job well done.
+*** Putting it Together
++ How are the teaching practices we have learned used in Carpentries Workshops?
++ Organize your knowledge of teaching practices and create a plan for using these practices in a Carpentries WOrkshop
+
+**** Exercise
+
+Take on concept that we've learned and write about it in the Etherpad
+
+*** Topics we have Learned
++ novice, competent practitioner, expert
++ Mental Model
++ Formative Assessment
++ Expert Awareness gaps
++ Short v long-term memory
++ Cognitive Load
++ Motivation and de-motivation
++ Error framing
++ Life=long learning
++ Feedback
++ Lesson study
++ Code of Conduct
++ Concept maps
++ Multiple Choice Questions
++ Peer instruction
++ Going Slowly
++ "just"
++ Accessibility
++ Sticky Notes
++ One-up, one-down
++ Pre and post workshop surveys
++ Participatory live coding
++ Introductions
++ Summarising and wrapping up
+
+*** Key Points
++ Teaching is a skill that needs to be practiced.
 
 * Links
 
