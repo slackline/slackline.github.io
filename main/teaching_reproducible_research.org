@@ -72,7 +72,7 @@ Also have Data Stewards, Education Support ICT Innovation, Graduate School, Digi
 
 * Reproducible geographical information systems and science - Andrew MacLachlan, Centre for Advanced Spatial Analysis, University College London
 
-Excellent talk using GitHub Classrooms to teach GIS methodology.
+Excellent talk using GitHub Classrooms to teach GIS methodology. See GitHub pages at [[https://github.com/andrewmaclachlan][andrewmaclachlan]].
 
 * Teaching Reproducibility: reflections on redeveloping a curriculum for teaching reproducible methods - Helena Paterson, School of Psychology & Neuroscience, University of Glasgow
 
