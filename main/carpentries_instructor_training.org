@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0607e15e-3ebc-402b-ad12-c9e9bbd41592
-:mtime:    20230616134415 20230616122322 20230616110911 20230615120551 20230615104247 20230615091530 20230615081016 20230614123407 20230614110555 20230613114248 20230613080653 20230613070414
+:mtime:    20230619101504 20230616134415 20230616122322 20230616110911 20230615120551 20230615104247 20230615091530 20230615081016 20230614123407 20230614110555 20230613114248 20230613080653 20230613070414
 :ctime:    20230613070414
 :END:
 #+TITLE: Carpentries Instructor Training
@@ -416,6 +416,7 @@ Complete these within 3 months (90 days), extension may be granted for up to 1 y
 **** Exercise - Discussion of [[https://carpentries.github.io/instructor-training/checkout][Checkout Process]]
 
 [[https://hackmd.io/YVrkQK3lQRCgs6WZcpCBQA?view][Discussion for Checkout 2023-06-26]]
+[[https://pad.carpentries.org/teaching-demos][Demo Session <2023-07-11 Tue 12:00>]]
 
 *** What does the Badge Mean?
 + You can teach any Carpentries workshops

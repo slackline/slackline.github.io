@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       97d138e1-015a-406a-b7ec-c046f01246d2
-:mtime:    20230508192755 20230421130128 20230103103311 20221224191223 20230103103308
+:mtime:    20230620125955 20230508192755 20230421130128 20230103103311 20221224191223 20230103103308
 :ctime:    20221224191223 20230103103308
 :END:
 #+TITLE: Reproducible Research
@@ -58,3 +58,8 @@ and pulled from just like a Git repository.
 
 + [[https://www.nature.com/articles/d41586-023-01469-0][The sleight-of-hand trick that can simplify scientific computing]]
 + [[https://www.nature.com/articles/d41586-022-00563-z][Cut the tyranny of copy-and-paste with these coding tools]]
+
+
+** Frameworks
+
++ [[https://www.projecttier.org/][Proejct TIER]]

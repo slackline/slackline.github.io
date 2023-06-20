@@ -1,0 +1,90 @@
+:PROPERTIES:
+:ID:       ecaeb512-f4d8-4f3a-8788-71291515bcf5
+:mtime:    20230620153945 20230620135143
+:ctime:    20230620135143
+:END:
+#+TITLE: Teaching Reproducible Research
+#+FILETAGS: :teaching:reproducibility:research:
+
+Seminar in Sheffield <2023-06-20 Tue>.
+
+[[https://www.sheffield.ac.uk/smi/events/teaching-reproducible-research-and-open-science-conference][Teaching Reproducible Research and Open Science Conference]]
+
+Afternoon Session
+* Pedagogical tools for teaching reproducible research - Carlos Utrilla Guerrero, Paula Martinez Lavanchy, TU Delft Library
+
+** Why Open Science Training?
+
+Mandatory for people to know/use the FAIR principles in the Netherlands.
+
+Teaches Research Data Management and Reproducible Research.
+
+Starts with an overview of why its important, followed by Research Data Management 1010, Software Carpentries, Personal
+Data in Research. Then move on to Research Data, Code Refiniery, Version Control & Collaborative development.
+
+Also have Data Stewards, Education Support ICT Innovation, Graduate School, Digital Competence Center.
+
+** RDM101 - Teaching principles of Open Science and Reproducible Research
++ Blended three week course aimed at first year PhD candidates, are expected to have a research data management plan.
++ 4-6hrs per week
++ 25 students per run, 4 runs per academic year
++ Aim to teach
+  + Importance of good data management
+  + Identify different data types.
+  + Recognise relevant regulations, policies and legal requirements
+  + List the main components of the FAIR data principles
+  + Connect FAIR principles in to their own research workflow.
+  + Use what they have learned in their data management plan.
++ Always get feedback after sessions and so far it has been really positive.
+
+** Data Flow Map
++ Focus on the objectives of the data they collect or produce within their research.
++ For each dataset reflect on storage and back-up, organisation, documentation, file formats, metadata access, data
+  publications.
+** Challenges
++ Lack of resources, high unmet demand for the course.
++ Less appealing than other "data science" functions.
++ Lack of standardised learning tools
+
+** Resources
+
+[[https://tu-delft-library.github.com/rdm101-book][RDM101 Handbook]]
+
+* Teaching reproducibility to social scientists - Julia Kasmire, UK Data Service, University of Manchester
+
+@JKasmireComplex Twitter
+[[mailto:j.kasmire@manchester.ac.uk][j.kasmire@manchester.ac.uk]]
+
+5 week online intensive bootcamp, used Slack to communicate.
++ Challenges of teaching reproducibility
++ Conclusions
+
+** Format
++ Paid course
++ 2hrs live instruction with weekly live participation via slack (2hrs)
++ Tasks e.g. Github basics
++ 3 months of follow-up where support was provided.
+
+** Challenges
++ "/My research can't be made reproducible/" - qualitative researcher studying the history of science and technology.
+  + Aren't taught about the domain specific context of reproducibility.
+
+
+* Reproducible geographical information systems and science - Andrew MacLachlan, Centre for Advanced Spatial Analysis, University College London
+
+Excellent talk using GitHub Classrooms to teach GIS methodology.
+
+* Teaching Reproducibility: reflections on redeveloping a curriculum for teaching reproducible methods - Helena Paterson, School of Psychology & Neuroscience, University of Glasgow
+
+Really good talk on teaching reproducibility to students.
+
++ Keep students away from data for as long as possible.
++ Always use real world data and not clean data sets.
++ Give people choices of data sets to work with.
++ Teach qualitative first
+  - learn about research questinos
+  - learn about data without numbers
+  - learn about rigour
+  - learn about communicatino
+
+[[https://psyteachr.github.io/][PsyTeachR]]
