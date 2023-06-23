@@ -1,7 +1,38 @@
 :PROPERTIES:
 :ID:       a53fa3c5-f091-4715-a1a4-a94071407abf
-:mtime:    20230215101306
+:mtime:    20230623080100 20230215101306
 :ctime:    20230215101306
 :END:
 #+TITLE: Arch Linux
 #+FILETAGS: :gnu:linux:arch:
+
+I've used [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]] for many years but I found my an ageing 12 year old laptop that compiling was taking longer and longer
+(compared to my main system at least!). I also had a number of [[id:69864d74-8ec2-42e4-a227-f824a521a5ce][Raspberry Pis]] that I didn't want to have to setup cross
+compiling environments in order to run Gentoo on. I still wanted a rolling distribution though that always had the
+latest version of packages installed. Enter [[https://archlinux.org][Arch Linux]] and [[https://archlinuxarm.org/][Arch Linux ARM]].
+* ~systemd~
+
+By default Arch uses [[https://systemd.io][~systemd~]] for starting and running services.
+
+*** Services
+
+To add a service
+
+#+begin_src bash
+systemctl enable --now <unit>.service
+#+end_src
+
+To start/stop/restart/status a service
+
+#+begin_src bash
+systemctl [start|stop|restart|status] <unit>.service
+#+end_src
+
+** ~netctl~
+
+~netctl~ is a subunit specifically concerned with netwoking.
+
+** ~journalctl~
+
+~journalctl~ is a programme for reading the log files from ~systemd~. To follow logs for a specific service in real time
+you can use ~journalctl -fu <unit>.service~.
