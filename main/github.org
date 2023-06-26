@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       52b4db29-ba21-4a8a-9b83-6e9a8dc02f41
-:mtime:    20230519193813 20230519143618 20230103103310 20221211233405
+:mtime:    20230626121713 20230519193813 20230519143618 20230103103310 20221211233405
 :ctime:    20221211233405
 :END:
 #+TITLE: GitHub
@@ -58,6 +58,13 @@ It is possible to use a GitHub Action to automate [[id:5e1f167e-5c0c-4206-b2ac-6
 
 GitHub has an active blog and many of the articles are worth reading. I keep links to those I've read and think
 worthwhile below.
+
+* GitHub Classrooms
+
+If you are an teacher or academic you can register for [[https://education.github.com/][GitHub Education]], aside from [[https://classroom.github.com][Classrooms]] this also confers the
+benefits of GitHub Teams on organisations that you are a member of/control.
+
++ [[https://education.github.com/globalcampus/teacher][GlobalCampus - Teacher]] - request teams for organisations from here, check status [[https://education.github.com/discount_requests/application][here]].
 
 * Links
 ** GitHub Pages
