@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0607e15e-3ebc-402b-ad12-c9e9bbd41592
-:mtime:    20230619101504 20230616134415 20230616122322 20230616110911 20230615120551 20230615104247 20230615091530 20230615081016 20230614123407 20230614110555 20230613114248 20230613080653 20230613070414
+:mtime:    20230626163029 20230619101504 20230616134415 20230616122322 20230616110911 20230615120551 20230615104247 20230615091530 20230615081016 20230614123407 20230614110555 20230613114248 20230613080653 20230613070414
 :ctime:    20230613070414
 :END:
 #+TITLE: Carpentries Instructor Training
@@ -758,6 +758,36 @@ Take on concept that we've learned and write about it in the Etherpad
 *** Key Points
 + Teaching is a skill that needs to be practiced.
 
+* [2023-06-26 Mon 15:57] Carpentries Meeting
+
+[[https://hackmd.io/YVrkQK3lQRCgs6WZcpCBQA?view][Info and Notes]]
+
+** Questions from Checkout
+*** Neil
+Curious about the timing and pace of carpentries, in the UNIX Shell Introduction we didn't get through all the material
+and it was mentioned in the training that this is quite normal. Is it worth ever splitting courses and having a follow
+up session or do participants get directed to the teaching material to complete in their own time?
+
+@Matthew Identify core components to get through and if there is a large chunk left over they have the drop-in sessions
+for people to come along to. Spreads things out over three weeks instead of consecutive days.
+@Sarah Run the Git, Python and HPC, have to have covered shell scripts to be on HPC, tailored depending on what people
+are progressing to. Have developed the material into videos.
+@Colin has found [[https://www.youtube.com/watch?v=yMH8s0eChDg&list=PLu7d3po48tBobUSZ3dvFScMBD2oDp-CtQ][YouTube videos]] of people running the sessions, also has run a poll to do a follow-up, usually has about
+half of people following up. Also allow more time, x1.5 than the official often very useful.
+@Lucia never got through a course, takes longer online too.
+@Mario don't feel you have to cover all the material, be judicious, can cut some fluff.
+
+Timings were based on original format/estimates. Don't rush and don't worry if everything isn't covered.
+*** Yasel
+
+Slides or show the course material
+@Lucia : Slides for the Data Carpentries, less so for coding based Carpentries.
+@Sarah :
+
+Ask around if people have slides that they can share before undertaking making your own.
+*** Samuel
+
+** Matthew Bluteau presenting on [[https://github.com/RSEToolkit/rse-competencies-toolkit][RSE Competencies Toolkit project]]
 * Links
 
 + [[https://zedif.github.io/2023-06-13-ttt-online-CEST/][Instructor Training 2023-06-13 to 2023-06-16]]

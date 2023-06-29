@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0859ef9e-834d-4e84-8e67-fa7593a61e0b
-:mtime:    20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
+:mtime:    20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
 :ctime:    20230222225246
 :END:
 
@@ -714,7 +714,7 @@ It is often important to version control your data too, for more on this see [[i
 ** Extensions
 
 + [[https://tissue.systemreboot.net/][tissue]] an issue tracker and project information management system built on plain text files and Git.
-+
++ [[https://github.com/klaussilveira/gitlist][gitlist]] webUI to Git repositories.
 
 ** Related
 
