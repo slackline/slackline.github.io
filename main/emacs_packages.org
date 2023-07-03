@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ff8ee302-7518-4179-9bcb-63b13199f897
-:mtime:    20230412135517 20230309070314 20230305214004 20230221192929
+:mtime:    20230702160646 20230412135517 20230309070314 20230305214004 20230221192929
 :ctime:    20230221192929
 :END:
 #+TITLE: Emacs Packages
@@ -75,3 +75,4 @@ directory with using ~M-: (byte-recompile-directory package-user-dir nil 'force)
 ** Resources
 
 + [[https://ianyepan.github.io/posts/setting-up-use-package/][A Quick Tutorial on Use-package for Emacs | Ian Y.E. Pan]]
++ [[https://emacsnotes.wordpress.com/2023/07/02/migrating-to-use-package-tip-1-do-not-use-a-naive-macroexpand-to-grok-a-use-package-declaration-use-this-wrapper-instead/][Migrating to `use-package’—TIP 1: Do NOT use a naive `macroexpand’ to grok a `use-package’ declaration; use this wrapper instead – Emacs Notes]]

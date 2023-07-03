@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       ec26925c-f958-453d-b380-8b7e22a2ba6e
+:mtime:    20230624160142
+:ctime:    20230624160142
+:END:
+#+TITLE: Chillis
+#+FILETAGS: :food:chillis:
+
+* Links
+
++ [[http://www.chilliguru.uk/index.html][Chilli Guru]]
+
+** Sauces
+
++ [[https://chillicult.co.uk/mr-naga-offers-near-me][MR Naga Offers]]
++ [[https://www.mrvikkis.co.uk/][Mr Vikki's]]
++ [[https://www.scorchio.co.uk/][Scorchio]]
++ [[https://www.thetwistedcurry.co.uk/][The Twisted Curry Company - Yorkshire based spice kit company]]
