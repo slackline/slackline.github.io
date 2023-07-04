@@ -1,0 +1,127 @@
+:PROPERTIES:
+:ID:       f8e9d58f-e729-483a-b008-489cd30f0f6a
+:mtime:    20230704213845 20230704200624
+:ctime:    20230704200624
+:END:
+#+TITLE: R Packages
+#+FILETAGS: :R:packaging:development:software:
+
+The first thing you should read when developing R packages is  [[https://r-pkgs.org/][R Packages (2e) by Hadley Wickham and Jenny Bryan]] its
+excellent and covers most common scenarios to get up and running.
+
+* devtools
+
+The [[https://devtools.r-lib.org/][devtools]] package should be your starting point for package development and has a bunch of useful functions for
+initialising and working with packages.
+
+To create a package use ~create_package()~, you can then activate [[id:0859ef9e-834d-4e84-8e67-fa7593a61e0b][Git]] for the repository using ~use_git()~, connect to
+[[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]] using ~use_github()~ and set up automated package checks with ~use_github_action()~ or if you are using [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]]
+you can ~use_gitlab_ci()~. Creation of a package sets up the basic structure.
+
+#+begin_src
+DESCRIPTION
+NAMESPACE
+NEWS.md
+README.Rmd
+R/
+tests/
+man/
+vignettes/
+data/
+tests/
+#+end_src
+
+** ~DESCRIPTION~ file
+
+** ~NAMESPACE~ file
+
+** ~man/~ directory
+
+** ~vignettes/~ directory
+
+** GitHub Actions
+
+There are helper functions to add [[id:e19b6eb6-46b2-440a-ba35-be29feb33407][GitHub Actions]] to your repository.
+
+*** ~use_github_action()~
+
+Invoking ~use_github_action()~ within your package repository will prompt you for the type of action you wish to add to
+it. There are, as of writing, three options.
+
+#+begin_src
+> use_github_action()
+Which action do you want to add? (0 to exit)
+(See <https://github.com/r-lib/actions/tree/v2/examples> for other options)
+
+1: check-standard: Run `R CMD check` on Linux, macOS, and Windows
+2: test-coverage: Compute test coverage and report to https://about.codecov.io
+3: pr-commands: Add /document and /style commands for pull requests
+#+end_src
+
+Selecting one will write a file to ~/.github/workflows/<FILENAME>.yaml~ and then print out code to add a badge to your
+repository.
+
+#+begin_src
+Selection: 1
+✔ Adding '*.html' to '.github/.gitignore'
+✔ Creating '.github/workflows/'
+✔ Saving 'r-lib/actions/examples/check-standard.yaml@v2' to '.github/workflows/R-CMD-check.yaml'
+• Learn more at <https://github.com/r-lib/actions/blob/v2/examples/README.md>.
+• Copy and paste the following lines into 'README.Rmd':
+  <!-- badges: start -->
+  [![R-CMD-check](https://github.com/CUREd-Plus/cuRed/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CUREd-Plus/cuRed/actions/workflows/R-CMD-check.yaml)
+  <!-- badges: end -->
+  [Copied to clipboard]
+#+end_src
+** Websites with ~pkgdown~
+
+There is the ~use_pkgdown_github_pages()~ function which will setup ~pkgdown~ and configure [[id:e19b6eb6-46b2-440a-ba35-be29feb33407][GitHub Actions]] and pages. If
+you're using [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]] ~pkgdown~ can be configured with ~use_pkgdown()~ instead (build locally with
+~pkgdown::build_site()~).
+
+** Badges
+
+Add
+* pre-commit
+
+I love using ~pre-commit~ in my development pipelines, it saves so much hassle (once you are used to it). For R there is
+the excellent [[https://github.com/lorenzwalthert/precommit][precommit package]] which comes with a set of hooks you can enable. These took a little figuring out to get
+them working.
+
+** codemetar
+
+There is a hook for checking the [[https://codemeta.github.io/][Codemeta]], which is in JSON-LD format is created correctly. The R package [[https://cran.r-project.org/web//packages//codemetar/vignettes/codemetar.html][codemetar]]
+facilitates creating this and pulls metadata from the ~DESCRIPTION~, ~README.Rmd~ and other aspects of your package to
+format them in JSON Codemeta. It comes with a handy function to write the file for you, so after installing you can just
+run ~codemetar::write_codemeta()~.
+
+** roxygenize
+
+Roxygen2 is a package for making the documentation to go with your package. This hook requires additional configuration
+in ~.pre-commit-config.yaml~ as you have to install your package dependencies. Fortunately there is a helper function in
+the ~precommit~ package so you can just run ~precommit::snippet_generate("additional-deps-roxygenize")~ and it will
+output the YAML that you need to add.
+
+** styler
+
+The [[https://styler.r-lib.org/][styler]] package ensures your code follows the [[https://style.tidyverse.org/][tidyverse style guide]] by default, although it can be configured to use
+a custom style guide of your own creation.
+
+** lintr
+
+The [[https://lintr.r-lib.org/][lintr]] package lints your code automatically. It can be configured by adding a ~.lintr~ configuration file to your
+repository, a simple example is shown below. Note the indented closing parenthesis is important you get a complaint
+about that and any other formatting issues.
+
+#+begin_src
+linters: linters_with_defaults(
+         line_length_linter(120),
+         object_name_linter = NULL,
+         object_usage_linter = NULL
+  )
+
+#+end_src
+
+* Links
+
+ [[https://r-pkgs.org/][R Packages book by Hadley Wickham and Jenny Bryan]]

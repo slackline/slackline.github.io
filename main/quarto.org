@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       251b3ae4-4a5c-4c44-909a-dcbc0aef4b45
-:mtime:    20230425225904 20230312225146 20230208071742 20230105145232 20230103103309 20221228151331 20230103103309 20230103103308
+:mtime:    20230704223416 20230425225904 20230312225146 20230208071742 20230105145232 20230103103309 20221228151331 20230103103309 20230103103308
 :ctime:    20221228151331 20230103103308
 :END:
 #+TITLE: Quarto
@@ -187,6 +187,17 @@ You can preview documents easily, from within [[id:754f25a5-3429-4504-8a17-4efea
       browser: true
       watch-inputs: true
       navigate: true
+#+end_src
+
+* Hooks
+
+Quarto has hooks too, there are both ~pre-render~ and ~post-render~ (see mention [[https://fosstodon.org/@djnavarro/110653044814329437][here]] and the [[https://github.com/quarto-dev/quarto-cli/discussions/4162#discussioncomment-4831352][original comment]]) that can
+be used to run various commands or scripts.
+
+#+begin_src yaml
+  project:
+    type: website
+    post-render: ./post-render.sh
 #+end_src
 
 * Extensions
