@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0859ef9e-834d-4e84-8e67-fa7593a61e0b
-:mtime:    20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
+:mtime:    20230705155530 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
 :ctime:    20230222225246
 :END:
 
@@ -645,7 +645,7 @@ There are tons of options to Git, here I document some that I've come across and
 ** --allow-empty
 
 Sometimes you might want to force your CI/CD pipeline to run again, most of the time you can do this through the Actions
-(GitHUb) or Pipeline (GitLab) pages, but something like [[https://pre-commit.ci][pre-commit.ci]] can't be triggered from GitHub Actions. Instead
+(GitHub) or Pipeline (GitLab) pages, but something like [[https://pre-commit.ci][pre-commit.ci]] can't be triggered from GitHub Actions. Instead
 you can make an [[https://www.thread.house/2020/01/git-commit-allow-empty/][empty commit]] with the ~--allow-empty~ flag which would trigger the pipeline to run again.
 
 
