@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5
-:mtime:    20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
+:mtime:    20230705092829 20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
 :ctime:    20230304230340
 :END:
 #+TITLE: Artificial Intelligence
@@ -63,6 +63,10 @@ instead employ people to do jobs.
 + [[https://ai.googleblog.com/][GoogleBlog : AI]]
 + [[https://aiguide.substack.com/][AI: A Guide for Thinking Humans | Melanie Mitchell | Substack]]
 
+** Videos
+
++ [[https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&pp=iAQB][3blue1brown : Neural Networks]]
++ [[https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU][Stanford CS229: Machine Learning Course - Andrew Ng]]
 
 ** Detection
 
@@ -97,5 +101,8 @@ instead employ people to do jobs.
 + [[https://nymag.com/intelligencer/article/ai-artificial-intelligence-chatbots-emily-m-bender.html][On the Dangers of  Stochastic Parrots: Can Language Models Be Too Big?]]
 + [[https://www.newyorker.com/magazine/2023/04/03/the-data-delusion][The Data Delusion | The New Yorker]]
 + [[https://time.com/6273743/thinking-that-could-doom-us-with-ai/?][The 'Don't Look Up' Thinking That Could Doom Us With AI | Time]]
-+ [[https://www.theguardian.com/commentisfree/2023/jun/11/big-tech-warns-of-threat-from-ai-but-the-real-danger-is-the-people-behind-it][Fantasy
-  fears about AI are obscuring how we already abuse machine intelligence | Kenan Malik | The Guardian]]
++ [[https://www.theguardian.com/commentisfree/2023/jun/11/big-tech-warns-of-threat-from-ai-but-the-real-danger-is-the-people-behind-it][Fantasy fears about AI are obscuring how we already abuse machine intelligence | Kenan Malik | The Guardian]]
+
+** Books
++ [[https://github.com/ageron/handson-ml3][Hands-On Machine Learning with Scikit-Learn, Keras and TensorFlow]] - Jupyter
+  Notebooks to accompany the book.

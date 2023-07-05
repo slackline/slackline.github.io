@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       69864d74-8ec2-42e4-a227-f824a521a5ce
+:mtime:    20230623075248
+:ctime:    20230623075248
+:END:
+#+TITLE: Raspberry Pi
+#+FILETAGS: :linux:hardware:
+
+I have got a number of Raspberry Pis from over the years.  Typically I run [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] on them.
+
+* Multiroom Audio
+
+I use [[https://mjaggard.github.io/snapcast/][Snapcast]] ([[https://github.com/badaix/snapcast/][GitHub]]) on my main Pi 4b to serve up audio that is synchronised to other PiZeroW that are hooked up to
+speakers around the house for a simple, cheap but effective multi-room audio experience at home. Input comes from [[https://www.musicpd.org/][Music
+Player Daemon]] which I can control from my phone using [[https://gitlab.com/gateship-one/malp][M.A.L.P.]].
+
+* Links
++ [[https://www.raspberrypi.com/][Raspberry Pi]]
++ [[https://shop.pimoroni.com/][Pimoroni: Raspberry Pi, Adafruit, micro:bit, and Arduino in the UK]]
