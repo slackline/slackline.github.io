@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       52b4db29-ba21-4a8a-9b83-6e9a8dc02f41
-:mtime:    20230626121713 20230519193813 20230519143618 20230103103310 20221211233405
+:mtime:    20230708080833 20230626121713 20230519193813 20230519143618 20230103103310 20221211233405
 :ctime:    20221211233405
 :END:
 #+TITLE: GitHub
@@ -87,11 +87,11 @@ benefits of GitHub Teams on organisations that you are a member of/control.
 
 *** OpenSource
 
-+ [[https://github.blog/2022-09-02-gits-database-internals-v-scalability/][Git’s database internals V: scalability]]
-+ [[https://github.blog/2022-09-01-gits-database-internals-iv-distributed-synchronization/][Git’s database internals IV: distributed synchronization]]
-+ [[https://github.blog/2022-08-31-gits-database-internals-iii-file-history-queries/][Git’s database internals III: file history queries]]
-+ [[https://github.blog/2022-08-30-gits-database-internals-ii-commit-history-queries/][Git’s database internals II: commit history queries]]
 + [[https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store/][Git’s database internals I: packed object store]]
++ [[https://github.blog/2022-08-30-gits-database-internals-ii-commit-history-queries/][Git’s database internals II: commit history queries]]
++ [[https://github.blog/2022-08-31-gits-database-internals-iii-file-history-queries/][Git’s database internals III: file history queries]]
++ [[https://github.blog/2022-09-01-gits-database-internals-iv-distributed-synchronization/][Git’s database internals IV: distributed synchronization]]
++ [[https://github.blog/2022-09-02-gits-database-internals-v-scalability/][Git’s database internals V: scalability]]
 + [[https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/][Include diagrams in your Markdown files with Mermaid]]
 + [[https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/][How to undo (almost) anything with Git]]
 

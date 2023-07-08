@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       d08d1fe6-5317-4f09-95f7-d47e8811e007
+:mtime:    20230707232550
+:ctime:    20230707232550
+:END:
+#+TITLE: Kobo
+#+FILETAGS: :ereader:kobo:
+
+I bit the bullet, sold my soul and entered the world of Digital Rights Management by buying a second hand Kobo eReader
+(a [[https://en.wikipedia.org/wiki/Kobo_Aura][Kobo Aura]]). Its old but unlike newer models supports an external microSD card so it can have its storage capacity
+expanded.
+
+* Updating
+
+On receipt I followed the instructions [[https://help.kobo.com/hc/en-us/articles/360019690433-Products-no-longer-manufactured-or-supported-by-Kobo][here]] to update using the Desktop App under Mac OSX (as there is no GNU/Linux
+version).
+
+
+* Links
+
++ [[https://en.wikipedia.org/wiki/Kobo_Aura][Kobo Aura - Wikipedia]]
++ [[https://help.kobo.com/hc/en-us/articles/360019690433-Products-no-longer-manufactured-or-supported-by-Kobo][Products no longer manufactured or supported by Kobo – Rakuten Kobo]]
+
+** Hacking
+
++ [[https://www.linux-magazine.com/Online/Features/Basic-Hacks-for-Kobo-E-Readers][Linux Magazine : Basic Hacks for Kobo e-Reader]]
++ [[https://www.mobileread.com/forums/showthread.php?t=295612][Kobo Hacks and Utilities Index - MobileRead Forums]]
++ [[https://www.linux-magazine.com/Issues/2022/263/KOReader-E-reader][Hack Your Read » Linux Magazine]]
++ [[https://github.com/koreader/koreader][GitHub - koreader/koreader]]
