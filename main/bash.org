@@ -202,3 +202,6 @@ echo "${FILES}" | parallel -q -j ${JOBS} _convert {} $BITRATE
 ** ~PS1~ Customisation
 + [[https://bashrcgenerator.com/][.bashrc generator: create your .bashrc PS1 with a drag and drop interface]]
 + [[https://stackoverflow.com/questions/4133904/ps1-line-with-git-current-branch-and-colors][command prompt - PS1 line with Git current branch and colors - Stack Overflow]]
+
+** Shell Commands
++ [[https://explainshell.com/][Explain Shell]]

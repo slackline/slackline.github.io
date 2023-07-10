@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       4d64ea2c-b91a-4162-8d79-889b05b5ba80
-:mtime:    20230413072342 20230103103310 20221210172245
+:mtime:    20230710221611 20230413072342 20230103103310 20221210172245
 :ctime:    20221210172245
 :END:
 #+TITLE: awk
@@ -39,7 +39,7 @@ awk -F'.|,' '{print $1 "\t" $13}' my_file.csv
 
 * Switch Columns
 
-[Source](https://stackoverflow.com/questions/11967776/swap-two-columns-awk-sed-python-perl)
+[[https://stackoverflow.com/questions/11967776/swap-two-columns-awk-sed-python-perl][Source]]
 
 #+begin_src bash
 awk -F $'\t' ' { t = $1; $1 = $2; $2 = t; print; } ' OFS=$'\t' input_file

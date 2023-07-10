@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0607e15e-3ebc-402b-ad12-c9e9bbd41592
-:mtime:    20230626163029 20230619101504 20230616134415 20230616122322 20230616110911 20230615120551 20230615104247 20230615091530 20230615081016 20230614123407 20230614110555 20230613114248 20230613080653 20230613070414
+:mtime:    20230710220854 20230626163029 20230619101504 20230616134415 20230616122322 20230616110911 20230615120551 20230615104247 20230615091530 20230615081016 20230614123407 20230614110555 20230613114248 20230613080653 20230613070414
 :ctime:    20230613070414
 :END:
 #+TITLE: Carpentries Instructor Training
@@ -788,6 +788,13 @@ Ask around if people have slides that they can share before undertaking making y
 *** Samuel
 
 ** Matthew Bluteau presenting on [[https://github.com/RSEToolkit/rse-competencies-toolkit][RSE Competencies Toolkit project]]
+* [2023-07-11 Tue 12:00] Demonstration
+** Jessica Wilhelm R for Reproducible Scientific Analysis
+** Margherita Fancescatto [[https://swcarpentry.github.io/r-novice-inflammation/][Programming with R]]
+** Jenny Tou [[https://swcarpentry.github.io/git-novice/][Version Control with Git: Summary and Setup]]
+** Neil Shephard [[https://swcarpentry.github.io/shell-novice/][The Unix Shell: Summary and Setup]]
++ [[https://swcarpentry.github.io/shell-novice/instructor/index.html][Instructor View]]
++ [[https://etherpad.wikimedia.org/p/rk9dVRVm0N2BYMuE25oV][Ether Pad]]
 * Links
 
 + [[https://zedif.github.io/2023-06-13-ttt-online-CEST/][Instructor Training 2023-06-13 to 2023-06-16]]
@@ -795,7 +802,7 @@ Ask around if people have slides that they can share before undertaking making y
 + [[https://docs.carpentries.org/index.html][The Carpentries Handbook]]
 + [[https://pad.carpentries.org/community-discussions][Community Discussions]]
   + [[https://hackmd.io/@local-uk/B132EYCe_#2023][UK Carpentry Community Meetings (Main Document)]]
-+ [[https://pad.carpentries.org/teaching-demos][Teaching Demosntration Sessions]]
++ [[https://pad.carpentries.org/teaching-demos][Teaching Demonstration Sessions]]
 
 ** Pads
 

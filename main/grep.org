@@ -1,8 +1,13 @@
 :PROPERTIES:
 :ID:       1ffb126f-a7aa-4d26-a4d1-a7bfa8085abe
-:mtime:    20230103103308 20221210172406
+:mtime:    20230710221509 20230103103308 20221210172406
 :ctime:    20221210172406
 :END:
 #+TITLE: grep
 #+DATE: [2022-12-10 Sat 17:23]
 #+FILETAGS: :bash:grep:unix:
+
+* Links
+
++ [[https://regex101.com/r/0Fajyz/1][RegEx101.com]]
++ [[http://xenon.stanford.edu/~xusch/regexp/][Regular Expression Analyzer]]
