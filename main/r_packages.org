@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f8e9d58f-e729-483a-b008-489cd30f0f6a
-:mtime:    20230705103745 20230704213845 20230704200624
+:mtime:    20230711095842 20230705103745 20230704213845 20230704200624
 :ctime:    20230704200624
 :END:
 #+TITLE: R Packages
@@ -136,6 +136,15 @@ linters: linters_with_defaults(
   )
 
 #+end_src
+
+* Troubleshooting
+
+** ~Warning: Undocumented code objects:~
+
+If this error arises its because there is a ~.Rd~ file missing. You can generate these by ensuring you have the
+appropriate docstring definition prior to your function and then use the ~roxygen2:reoxygenise()~ function to generate
+the documentation automatically.  Don't forget to ~git stage~ and ~git commit~ the files to your repository, pushing if
+needed (e.g. a Continuous Integration pipeline is failing).
 
 * Links
 
