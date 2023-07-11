@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ec8e7ee9-0316-4de2-98c1-f775c20b0e35
-:mtime:    20230510155356 20230330143114 20230103103314 20220323114739 20230103103314 20230103103308
+:mtime:    20230711203358 20230510155356 20230330143114 20230103103314 20220323114739 20230103103314 20230103103308
 :ctime:    20220323114739 20230103103308
 :END:
 #+TITLE: Python Data Analysis and Visualisation
@@ -75,3 +75,5 @@ package for that provides a sensible structure and creates it for you is [[https
 :END:
 
 * Links
+
++ [[https://atrebas.github.io/post/2020-06-14-datatable-pandas/#more-joins][A data.table and pandas small stroll · Home]]
