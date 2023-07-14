@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9c6257dc-cbef-4291-8369-b3dc6c173cf2
-:mtime:    20230528213012 20230519194008 20230330135624 20230326125853 20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
+:mtime:    20230714103949 20230528213012 20230519194008 20230330135624 20230326125853 20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
 :ctime:    20221231194258
 :END:
 #+TITLE: Bash
@@ -196,6 +196,24 @@ echo "${FILES}" | parallel -q -j ${JOBS} _convert {} $BITRATE
 ** xarg
 
 [[id:48c0d280-8330-4f65-a5da-098ea186c6b6][xarg]] is a wonderful and simple tool for repeating actions on lists of objects.
+
+* Aliases
+
+You can, and should, use aliases anywhere you can.  Typically you'd set them in ~\~/.bash_aliases~.
+
+#+begin_src bash
+alias grep='grep --colour=auto'
+alias l='ls -lha'
+alias shutup='su -c "shutdown -h now"'
+#+end_src
+
+If you want to run a command that is aliased without the alias options such as ~grep~ in the above then you have a
+couple of options.
+
+#+begin_src bash
+\grep
+'grep' -n something *.R
+#+end_src
 
 * Links
 
