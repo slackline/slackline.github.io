@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       0911a63f-4b82-4bf1-9235-f1e41e93d210
 :ROAM_ALIASES: "Open Research Overview"
-:mtime:    20230621115422 20230421104923 20230420112016 20230228205121 20230103103308 20221228113013
+:mtime:    20230716210055 20230621115422 20230421104923 20230420112016 20230228205121 20230103103308 20221228113013
 :ctime:    20221228113013
 :END:
 #+title: Open Research
@@ -46,3 +46,11 @@ to validate and contribute to the research.
 
 ** Blog Posts
  + [[https://www.arj.no/2020/08/27/open-research/][Why is open research better research? – Alexander Refsum Jensenius]]
+
+** Podcasts
++ [[https://orionopenscience.podbean.com/][ORION Open Science Podcast]]
++ [[https://www.uu.nl/en/research/utrecht-young-academy/projects/open-science/road-to-open-science-podcast][Road to Open Science]]
++ [[https://codeforthought.buzzsprout.com/][Code for Thought]]
++ [[https://libscie.org/open-update/][Open Update]]
++ [[https://knowledgeequitylab.ca/podcast/][Unsettling Knowledge Inequities]]
++ [[https://www.researchspace.com/fair-data-podcast][FAIR Data Podcast]]
