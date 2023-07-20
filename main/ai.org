@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5
-:mtime:    20230705092829 20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
+:mtime:    20230720100255 20230705092829 20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
 :ctime:    20230304230340
 :END:
 #+TITLE: Artificial Intelligence
@@ -76,6 +76,7 @@ instead employ people to do jobs.
 
 + [[https://github.com/google-research/bert][google-research/bert]] : TensorFlow code and pre-trained models for BERT
 + [[https://github.com/google-research/optformer][google-research/optformer]] : Transformer-based framework for Hyperparameter Optimization
++ [[https://opening-up-chatgpt.github.io/][Opening up ChatGPT]] ([[https://doi.org/10.48550/arXiv.2307.05532][doi.org/10.48550/arXiv.2307.05532]])
 
 ** Misc
 
