@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3cca0dfd-0c82-4685-b9ed-6314f7c8b78f
-:mtime:    20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
+:mtime:    20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
 :ctime:    20221212233350
 :END:
 #+TITLE: Python Pytest
@@ -157,6 +157,11 @@ def circle_coordinates(request) -> np.ndarray:
     return coordinates
 #+END_SRC
 
+** Mocking
+
+Mocking means setting up objects that return the expected value rather than having to run a lengthy, and possibly
+unstable process that might not return what you expect (if for example a web-service can not be reached).
+
 * Documentation Tests
 
 I came across an article advocating [[https://simonwillison.net/2018/Jul/28/documentation-unit-tests/][Documentation unit tests]] and showing one approach to testing documentation.
@@ -231,3 +236,7 @@ and return values.  These can be applied to existing code to apply Typehints.
 + [[https://docs.pytest.org/en/7.1.x/how-to/fixtures.html][How to use fixtures — pytest documentation]]
 + [[https://docs.pytest.org/en/7.1.x/how-to/logging.html][How to manage logging — pytest documentation]]
 + [[https://docs.pytest.org/en/latest/how-to/capture-stdout-stderr.html][How to capture stdout/stderr output — pytest documentation]]
+
+** Mocking
+
++ [[https://docs.getmoto.org/en/latest/][Moto: Mock AWS Services — Moto 4.1.14.dev documentation]]
