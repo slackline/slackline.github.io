@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9c6257dc-cbef-4291-8369-b3dc6c173cf2
-:mtime:    20230714103949 20230528213012 20230519194008 20230330135624 20230326125853 20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
+:mtime:    20230722093604 20230714103949 20230528213012 20230519194008 20230330135624 20230326125853 20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
 :ctime:    20221231194258
 :END:
 #+TITLE: Bash
@@ -11,6 +11,20 @@ Bash is the default shell on most GNU/Linux systems and its well worth learning 
 scripting language. Day-to-day I actually use [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][zsh]] to drive my command prompt as it contains a bunch of additional
 functionality such as customised command prompts and a ton of built-in aliases that I find useful. But I still use Bash
 scripts to accomplish small tasks.
+
+* Arrays
+
+** Array Length
+
+You can find the length of an array using the ~${#array[@]}~ syntax.
+
+#+begin_src bash
+  EXT="flac"
+  FILES=$(find . -type f -iname "*.${EXT}")
+  # NB - This doesn't work correctly, the whole list rather than rows are taken for counting and it returns the number
+  #      of characters not the number of lines?
+  echo "Found ${#FILES[@]} of type ${EXT}"
+#+end_src
 
 * Bash Scripts
 
