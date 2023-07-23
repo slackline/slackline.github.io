@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0859ef9e-834d-4e84-8e67-fa7593a61e0b
-:mtime:    20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
+:mtime:    20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
 :ctime:    20230222225246
 :END:
 #+TITLE: Git
@@ -671,8 +671,15 @@ It is often important to version control your data too, for more on this see [[i
 + [[https://learngitbranching.js.org/][Learn Git Branching]]
 + [[https://srse-git-github-zero2hero.netlify.app/][Git & GitHub through GitKraken Client - From Zero to Hero]]
 + [[https://initialcommit.com/blog/git-sim][git-sim : visually simulate Git operations in your own repos]]
++ [[https://www.youtube.com/watch?v=_e5oq4JT4_8][Git Legit]] - Good video on how to use Git effectively, making atomic commits, rebasing, avoiding checkpoints to given a
+  clean history.
 
 ** HowTos
+
+*** Commit
+
++ [[https://cbea.ms/git-commit/][How to Write a Git Commit Message]]
++ [[http://www.pauline-vos.nl/atomic-commits/][Atomic Commits]] ([[https://www.pauline-vos.nl/git-legit-cheatsheet/][Git Legit Cheatsheet]])
 
 *** Rebase
 
