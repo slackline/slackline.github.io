@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       49d21f82-887e-4ec7-8963-89460673352a
-:mtime:    20230224093243 20230103103310 20221210163140
+:mtime:    20230724103934 20230224093243 20230103103310 20221210163140
 :ctime:    20221210163140
 :END:
 #+title: Research Software Engineering
@@ -25,6 +25,7 @@ Research Software Engineering covers many areas of software development such as 
 
 + [[https://merely-useful.tech/py-rse/][Research Software Engineering with Python]]
 + [[https://merely-useful.tech/r-rse/][Research Software Engineering with R]]
++ [[https://abseil.io/resources/swe-book][Software Engineering at Google]]
 + [[https://goodresearch.dev/index.html][The Good Research Code Handbook]]
 + [[https://alan-turing-institute.github.io/rse-course/html/index.html][Research Software Engineering with Python — Research Software Engineering with Python]] [[https://github.com/alan-turing-institute/rse-course][The Alan Turing Institute's
   Research Software Engineering course]]
