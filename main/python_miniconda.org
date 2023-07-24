@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       183b7521-1025-44d5-8107-c7f4e75cc6cf
+:mtime:    20230724131454
+:ctime:    20230724131454
+:END:
+#+TITLE: Python Miniconda
+#+FILETAGS: :python:venv:
+
+* Links
+
++ [[https://docs.conda.io/en/latest/miniconda.html][Miniconda]]

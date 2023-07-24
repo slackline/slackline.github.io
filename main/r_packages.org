@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f8e9d58f-e729-483a-b008-489cd30f0f6a
-:mtime:    20230718173528 20230718155804 20230711095842 20230705103745 20230704213845 20230704200624
+:mtime:    20230724221634 20230724202915 20230724174025 20230724125754 20230718173528 20230718155804 20230711095842 20230705103745 20230704213845 20230704200624
 :ctime:    20230704200624
 :END:
 #+TITLE: R Packages
@@ -211,12 +211,92 @@ needed (e.g. a Continuous Integration pipeline is failing).
 
 Windows doesn't come with Python by default, but [[https://pre-commit.com][pre-commit]] is written in Python and so an environment is required in
 order to run the above pre-commit hooks. There are many options for this, including using [[https://learn.microsoft.com/en-us/windows/wsl/install][Windows Subsystem for Linux
-(WSL)]]. However, the solution provided below uses [[https://conda.io/projects/conda/en/stable/user-guide/install/windows.html][Miniconda]], when making the installation you are asked a number of
-questions, make sure to answer/allow the modification of ~PATH~.
+(WSL)]]. The solution is provided in the [[https://cran.r-project.org/web/packages/precommit/vignettes/precommit.html][precommit vignette]] and uses the [[https://rstudio.github.io/reticulate/][reticulate]] package (which interfaces [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]] with
+[[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]]) to handle installing  a [[id:183b7521-1025-44d5-8107-c7f4e75cc6cf][Miniconda]] environment.
 
-When trying this
+1. Install R - Defaults are fine, request admin permissions if required.
+
+2. Install Rstudio - Defaults are fine, request admin permissions if required.
+
+3. Install GitBash
+
+  3.1 **Text Editor** Configure with your choice of editor, obviously you'll want to have [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] available and select that! ;-)
+  3.2 **Adjust your PATH environment** At the bare minimum go with the ~Recommended~ option and allow /Git from the
+   command line and also from 3rd-party software/. Optionally I would recommend the third option of /Use Git and
+   optional UNIX tools from the Command Prompt/, particularly if you are either a) familiar with UNIX commands or b) not
+   at all familiar with them (as you won't have to re-learn the Windows commands, just learn the Bash commands they are
+   more widely applicable).
+  3.3 **Use Bundled SSH library** this is fine.
+  3.4 **Use Bundled OpenSSL library** this is fine.
+  3.5 **Checkout Windows-style, commit Unix-style line endings** this is fine, it just changes the internal
+   representation of the carriage return to be more universal.
+  3.6 **Use MinTTY (the default terminal of MSYS2)** this is fine and more functional than the **Windows' default
+   console window**.
+  3.7 **Default (fast-forward or merge)** this is fine.
+  3.8 **Choose a credential helper** select **None** here, we will let RStudio manage these.
+  3.9 **Configure Extra Options** defaults are fine.
+  3.10 **Configuring experimental options** no need to enable any of these.
+
+
+4. Configure RStudio/GitHub with SSH keys
+
+  4.1 Start RStudio
+  4.2 Create SSH key - Navigate to /Tools > General Options  > Git/SVN > Create SSH Key/ Under /SSH key
+   type/ select the default (/ED25519/) this is a [[https://blog.g3rt.nl/upgrade-your-ssh-keys.html][very secure elliptic curve algorithm]] and is supported by GitHub. Use a
+   secure password, do **not** change the location it is created at.
+  4.3 Once created select /View public key/ and use /Ctrl + c/ to copy this to your clipboard.
+  4.4 Navigate to [[https://github.com/][GitHub]] and login then click on your avatar in the top right and select /Settings > SSH and GPG keys >
+   New SSH Key/.
+  4.5 Give the key a name and paste into the box below where indicated/instructed then click on /Add SSH key/.
+
+5. Clone Repository
+
+  5.1 Navigate to the repository you wish to clone (e.g. [[https://github.com/CUREd-Plus/cuRed/][https://github.com/CUREd-Plus/cuRed/]]) and click on the /Code/
+   button then select /SSH/ under the /Local/ tab in the box that appears.
+  5.2 Click on the box that has two small squares to the right of some text to copy the URL to clipboard.
+  5.3 Return to RStudio and start a new project with /File > New Project > Version Control > Git/ and paste the URL into
+   the /Repository URL/. Select a location to clone to under /Create project as subdirectory of:/,
+   e.g. ~c:/Users/<username>/work/cuRed~ (replacing ~<username>~ with /your/ username).
+  5.4 If prompted for password enter it. If asked to answer /Yes\/No/ answer /Yes/ and then if prompted to /Store
+   password for this session/ answer /Yes/.
+  5.5 You should now have cloned the repository and have a project to work on.
+
+6. Install ~pre-commit~
+
+   ~pre-commit~ refers to two things, primarily it is the Python package [[https://pre-commit.com][~pre-commit~]] that does all the work of running
+   Linting, Tests etc. before making commits. It also refers to an R package [[https://cran.r-project.org/web//packages/precommit/vignettes/precommit.html][precommit]] that works with the Python
+   package to enable use of various R packages that carry out such checks. Because it is a Python package it needs a
+   Python Virtual Environment to run. This may sound unfamiliar but don't worry the R ~precommit~ package and
+   documentation guides you through doing so, what follows is a rehash of the  [[https://cran.r-project.org/web//packages/precommit/vignettes/precommit.html][official documentation]].
+
+  6.1 Install ~precommit~ and ~reticulate~
+
+#+begin_src R
+  install.packages(c("precommit", "reticulate"))
+#+end_src
+
+  6.2 Install Miniconda environment
+
+  **NB** This installs a virtual environment to run Python packages called
+#+begin_src R
+  reticulate::install_miniconda()
+#+end_src
+
+  6.3 Install ~pre-commit~ framework
+
+  **NB** This installs the Python package w
+5. Enable Git Bash -  Clone existing repository /File > New Project > /
+
+
+#+begin_src R
+  install.packages(c("reticulate", "precommit"))
+  reticulate::install_miniconda()
+  # If you already have a .pre-commit-config.yaml then include it as the argument to config_source if not omit
+  precommit::install_precommit(config_source=".pre-commit-config.yaml", install_hooks=TRU)
+
+#+end_src
 * Links
 
 + [[https://r-pkgs.org/][R Packages book by Hadley Wickham and Jenny Bryan]]
 + [[https://cran.r-project.org/web//packages/precommit/vignettes/precommit.html][R precommit]] ([[https://github.com/lorenzwalthert/precommit][GitHub | lorenzwalthert/precommit]] check the [[https://github.com/lorenzwalthert/precommit/issues][Issues]], can be useful for troubleshooting)
-+ [[https://conda.io/projects/conda/en/stable/user-guide/install/windows.html][Installing Miniconda on Windows]]
++ [[https://docs.conda.io/en/latest/miniconda.html][Miniconda]]

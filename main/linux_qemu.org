@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       fab2461a-c95a-47e3-9e5d-64af083c92e0
-:mtime:    20230215115830 20230215101403
+:mtime:    20230724180742 20230215115830 20230215101403
 :ctime:    20230215101403
 :END:
 #+TITLE: Linux KVM
@@ -35,12 +35,24 @@ the Ubuntu 22.0.4.1 image).
 #+begin_src bash
   mkdir -p ~/vm/{iso,disk}
   cd ~/vm/disk
-  qemu-img create -f raw <image_file> 16G
+  qemu-img create -f raw ubuntu22 16G
   ls -lha
   drwxr-xr-x neil neil 4.0 KB Wed Feb 15 10:22:13 2023  .
 drwxr-xr-x neil neil 4.0 KB Wed Feb 15 10:21:39 2023  ..
 .rw-r--r-- neil neil  16 GB Wed Feb 15 10:22:13 2023  ubuntu22
 #+end_src
+
+If you are making an image to hold a Windows system you should use the ~-f qcow2~ option instead of ~-f raw~ and
+probably make it at least 40Gb ([[https://computernewb.com/wiki/QEMU/Guests/Windows_10][source]]).
+
+#+begin_src bash
+  cd ~/vm/disk/
+  qemu-img create -f qcow2 win10.img 40G
+#+end_src
+
+This uses the ~qcow2~ disk format which is a "/grow-on demand/" format. The host operating system will show it as the
+actual size used, the client (VM) will always see it as the full size, but you _have_ to specify the
+~-drive=<path>,format=qcow2~ for it to be correctly detected.
 
 ** Obtain a disk image
 
