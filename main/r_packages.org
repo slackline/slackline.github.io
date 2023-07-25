@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f8e9d58f-e729-483a-b008-489cd30f0f6a
-:mtime:    20230724221634 20230724202915 20230724174025 20230724125754 20230718173528 20230718155804 20230711095842 20230705103745 20230704213845 20230704200624
+:mtime:    20230725131456 20230725111137 20230725074429 20230724221634 20230724202915 20230724174025 20230724125754 20230718173528 20230718155804 20230711095842 20230705103745 20230704213845 20230704200624
 :ctime:    20230704200624
 :END:
 #+TITLE: R Packages
@@ -214,7 +214,8 @@ order to run the above pre-commit hooks. There are many options for this, includ
 (WSL)]]. The solution is provided in the [[https://cran.r-project.org/web/packages/precommit/vignettes/precommit.html][precommit vignette]] and uses the [[https://rstudio.github.io/reticulate/][reticulate]] package (which interfaces [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]] with
 [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]]) to handle installing  a [[id:183b7521-1025-44d5-8107-c7f4e75cc6cf][Miniconda]] environment.
 
-1. Install R - Defaults are fine, request admin permissions if required.
+1. Install R - As of writing ~precommit~ works with R-4.2.1 and problems were encountered with newer version. When
+   installing the defaults are fine, request admin permissions if required.
 
 2. Install Rstudio - Defaults are fine, request admin permissions if required.
 
@@ -236,7 +237,12 @@ order to run the above pre-commit hooks. There are many options for this, includ
   3.8 **Choose a credential helper** select **None** here, we will let RStudio manage these.
   3.9 **Configure Extra Options** defaults are fine.
   3.10 **Configuring experimental options** no need to enable any of these.
+  3.11 **Configure Git** Start a GitBash shell and configure your email address and name.
 
+#+begin_src bash
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+#+end_src
 
 4. Configure RStudio/GitHub with SSH keys
 
@@ -272,29 +278,41 @@ order to run the above pre-commit hooks. There are many options for this, includ
   6.1 Install ~precommit~ and ~reticulate~
 
 #+begin_src R
-  install.packages(c("precommit", "reticulate"))
+  install.packages(c("remotes", "reticulate"))
+  remotes::install_github("lorenzwalthert/precommit")
 #+end_src
 
   6.2 Install Miniconda environment
 
-  **NB** This installs a virtual environment to run Python packages called
+  **NB** This installs a [[https://docs.conda.io/en/latest/miniconda.html][Miniconda]] virtual environment framework for R to run Python packages (i.e. ~pre-commit~).
+
 #+begin_src R
+  options(timeout=600)
   reticulate::install_miniconda()
 #+end_src
 
   6.3 Install ~pre-commit~ framework
 
-  **NB** This installs the Python package w
-5. Enable Git Bash -  Clone existing repository /File > New Project > /
-
+  **NB** This installs the Python package [[https://pre-commit.com][~pre-commit~]] within a new Miniconda virtual environment (~r-precommit~), there
+  will be a fair bit of output here as all the dependencies in Python for ~pre-commit~ are downloaded.
 
 #+begin_src R
-  install.packages(c("reticulate", "precommit"))
-  reticulate::install_miniconda()
-  # If you already have a .pre-commit-config.yaml then include it as the argument to config_source if not omit
-  precommit::install_precommit(config_source=".pre-commit-config.yaml", install_hooks=TRU)
-
+  precommit::install_precommit()
+  precommit::autoupdate()
 #+end_src
+
+  6.4 Use ~precommit~ with the existing project
+
+  You should have cloned the repository you wish to enable ~precommit~ to use (see above). You now need to enable
+  ~precommit~ for this local copy of the repository. This will place a script in ~.git/hooks/pre-commit~ that says which
+  Miniconda environment to use (~r-precommit~) and will activate this whenever a commit is made, the ~install_hooks =
+  TRUE~ ensures that the R specific hooks and their required environments are installed (under ~\~/.config/pre-commit/~).
+
+#+begin_src R
+  precommit::use_precommit(install_hooks = TRUE)
+#+end_src
+
+
 * Links
 
 + [[https://r-pkgs.org/][R Packages book by Hadley Wickham and Jenny Bryan]]
