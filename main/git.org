@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0859ef9e-834d-4e84-8e67-fa7593a61e0b
-:mtime:    20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
+:mtime:    20230726132229 20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
 :ctime:    20230222225246
 :END:
 #+TITLE: Git
@@ -38,7 +38,7 @@ you create or a local, per-repository basis (local settings in a repository over
 * Setup
 :PROPERTIES:
 :ID:       75050201-e41c-40a4-bd65-cd1c0592951c
-:mtime:    20230426111505
+:mtime:    20230726132229 20230426111505
 :ctime:    20230426111505
 :END:
 
@@ -53,7 +53,24 @@ git config user.email 'my@email.org'
 git config --global push.default upstream # Syncs pull/push to the same branch (https://stackoverflow.com/a/42642628/1444043)
 #+end_src
 
+*** Default upstream branch
+
+You can set the default upstream branch to be the remote globally using
+
+#+begin_src bash
+git config --global push.autoSetupRemote true
+#+end_src
+
+This adds the following to your ~\~/.gitconfig~
+
+#+begin_src
+[push]
+    autoSetupRemote = true
+#+end_src
 ** Local Configuration
+
+
+*** SSH Configuration
 
 Each repository is configured via the file ~./.git/config~. Sometimes though you have multiple Git accounts
 (e.g. personal and work) and you can use a neat [[https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/][trick]] to keep your configurations separate if you keep such work in

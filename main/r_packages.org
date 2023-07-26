@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f8e9d58f-e729-483a-b008-489cd30f0f6a
-:mtime:    20230725131456 20230725111137 20230725074429 20230724221634 20230724202915 20230724174025 20230724125754 20230718173528 20230718155804 20230711095842 20230705103745 20230704213845 20230704200624
+:mtime:    20230726160101 20230725131456 20230725111137 20230725074429 20230724221634 20230724202915 20230724174025 20230724125754 20230718173528 20230718155804 20230711095842 20230705103745 20230704213845 20230704200624
 :ctime:    20230704200624
 :END:
 #+TITLE: R Packages
@@ -318,3 +318,4 @@ order to run the above pre-commit hooks. There are many options for this, includ
 + [[https://r-pkgs.org/][R Packages book by Hadley Wickham and Jenny Bryan]]
 + [[https://cran.r-project.org/web//packages/precommit/vignettes/precommit.html][R precommit]] ([[https://github.com/lorenzwalthert/precommit][GitHub | lorenzwalthert/precommit]] check the [[https://github.com/lorenzwalthert/precommit/issues][Issues]], can be useful for troubleshooting)
 + [[https://docs.conda.io/en/latest/miniconda.html][Miniconda]]
++ [[https://usethis.r-lib.org/reference/use_readme_rmd.html][Create README files — use_readme_rmd • usethis]]

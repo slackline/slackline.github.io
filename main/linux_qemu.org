@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       fab2461a-c95a-47e3-9e5d-64af083c92e0
-:mtime:    20230724180742 20230215115830 20230215101403
+:mtime:    20230726160156 20230724180742 20230215115830 20230215101403
 :ctime:    20230215101403
 :END:
 #+TITLE: Linux KVM
@@ -53,6 +53,8 @@ probably make it at least 40Gb ([[https://computernewb.com/wiki/QEMU/Guests/Wind
 This uses the ~qcow2~ disk format which is a "/grow-on demand/" format. The host operating system will show it as the
 actual size used, the client (VM) will always see it as the full size, but you _have_ to specify the
 ~-drive=<path>,format=qcow2~ for it to be correctly detected.
+
+The ~-vga std~ option should allow the client window to be resized.
 
 ** Obtain a disk image
 
