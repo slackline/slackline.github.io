@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       136364e7-1a6d-4b28-b284-0e415b860699
 :ROAM-ALIASES: "Org Roam : Overview"
-:mtime:    20230331110207 20230116172234 20230103103313 20221224191223 20230103103308
+:mtime:    20230727234008 20230331110207 20230116172234 20230103103313 20221224191223 20230103103308
 :ctime:    20221224191223
 :END:
 #+TITLE: Org-roam
@@ -131,6 +131,7 @@ Currently running/exporting the site is not possible, although there is an examp
 ** Zettelkasten
 
 + [[https://zenkit.com/en/blog/a-beginners-guide-to-the-zettelkasten-method/][A Beginner’s Guide to the Zettelkasten Method - Zenkit]]
++ [[https://nesslabs.com/thinking-in-maps][Thinking in maps: from the Lascaux caves to knowledge graphs]]
 
 ** Alternatives
 
