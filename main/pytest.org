@@ -164,8 +164,8 @@ unstable process that might not return what you expect (if for example a web-ser
 
 ** Timing
 
-Running tests takes time and ideally tests should run as quickly as possible. You can check how long it takes for a test
-suite to run using `pytest --duration=0` which reports where the time taken to process lasts.
+Running tests takes time and ideally tests should run as quickly as possible. You can check how long it takes for tests
+and fixtures to run using the [[https://github.com/blake-r/pytest-durations][pytest-durations]] plugin which adds the option `--durations` and prints out a nice report.
 
 * Documentation Tests
 
