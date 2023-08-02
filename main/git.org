@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0859ef9e-834d-4e84-8e67-fa7593a61e0b
-:mtime:    20230726132229 20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
+:mtime:    20230802180634 20230726132229 20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
 :ctime:    20230222225246
 :END:
 #+TITLE: Git
@@ -648,6 +648,12 @@ from the repositories forge (but this requires a little extra work that is well 
 ** GitKraken
 [[https://www.gitkraken.com/][GitKraken]] is dedicated to working with your Git repositories and interacting with forges. It has some basic IDE features
 for editing your code but it is really focused on helping you work with Git.
+
+* Searching History
+
+That Git keeps a history of everything is /really, really/ useful because you can search it and find things in the past.
+
+I've written more on that in [[id:dc40122d-b95d-4b57-a0a3-30fd0799c843][Git History]].
 
 * Miscellaneous
 

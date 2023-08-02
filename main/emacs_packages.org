@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ff8ee302-7518-4179-9bcb-63b13199f897
-:mtime:    20230702160646 20230412135517 20230309070314 20230305214004 20230221192929
+:mtime:    20230802131215 20230702160646 20230412135517 20230309070314 20230305214004 20230221192929
 :ctime:    20230221192929
 :END:
 #+TITLE: Emacs Packages
@@ -67,6 +67,8 @@ fails. The following is the sort of call made to build the binary and may be run
 
 Emacs byte-compiles ~.el~ files to ~.elc~ which are binaries and run faster. You can force compilation of a specific
 directory with using ~M-: (byte-recompile-directory package-user-dir nil 'force)~ which will [[https://stackoverflow.com/a/1217249][force compilation]].
+
+For more on this see [[https://stackoverflow.com/questions/1217180/how-do-i-byte-compile-everything-in-my-emacs-d-directory][this thread]].
 * Links
 
 + [[https://github.com/jwiegley/use-package][jwiegley/use-package: A use-package declaration for simplifying your .emacs]]
