@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0859ef9e-834d-4e84-8e67-fa7593a61e0b
-:mtime:    20230802180634 20230726132229 20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
+:mtime:    20230803214400 20230801215130 20230726132229 20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
 :ctime:    20230222225246
 :END:
 #+TITLE: Git
@@ -9,7 +9,7 @@
 
 [[https://git-scm.com][Git]] is the defacto standard for version control of code (and more) these days. Whether you write code in [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]], [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]],
 scripts for [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]], Go, Rust, C++, Java, [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] or want to keep critical files such as your dotfiles,
-~/etc/~, or GPG encrypted passwords backed up you should consider using Git (or some other version control system, but
+~/etc/~ (using [[id:48249b0d-eeba-484a-8f00-808a14169692][git_etckeeper]]), or GPG encrypted passwords backed up you should consider using Git (or some other version control system, but
 Git is the most popular for now).
 
 It can be daunting facing yet another new area to tackle as you are only just getting to grips with a programming

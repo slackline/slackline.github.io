@@ -1,0 +1,183 @@
+:PROPERTIES:
+:ID:       d9c960c2-71b6-45e6-b388-dcd07b9da3e1
+:mtime:    20230730204045 20230730112159
+:ctime:    20230730112159
+:END:
+#+TITLE: FitTrackee
+#+FILETAGS: :python:postgresql:gpx:tracking:
+
+I use [[https://github.com/OpenTracksApp/OpenTracks][OpenTracks]] to track my running, cycling and hiking and have for a long time meant to write a WebUI for summarising
+things. Fortunately I stumbled across [[https://samr1.github.io/FitTrackee/en/][FitTrackee]] which is a [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] package written in Flask that uses a database to
+store all the data and summarise it in a nice dashboard.
+
+
+* Installation
+
+Notes from installation under [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]]. I opted to install from [[https://pypi.org][PyPI]] you should follow the installation instructions
+at [[https://samr1.github.io/FitTrackee/en/installation.html#from-pypi][here]] if you are intending on doing the same (there are also instructions for installing from [[https://samr1.github.io/FitTrackee/en/installation.html#from-sources][GitHub sources]]).
+
+** Install Dependencies
+
+Requires PostgreSQL and since its written in [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] we install the ~mkvirtualenv~ package to easily manage virtual
+environments. As ~root~
+
+#+begin_src bash
+pacman -Syu python-mkvirtualenv postgresql
+#+end_src
+
+** Create user
+
+Create a dedicated user account (~fittrackee~) adding to the ~postgres~ group to run the service. As ~root~ create the
+user and set the password.
+
+#+begin_src bash
+useradd -m -G users,postgres -s /bin/bash fittrackee
+passwd fittrackee
+#+end_src
+
+** Create Database User
+
+As ~root~ you need to create a database to go with the service. As the ~postgre~ user create an account in PostgreSQL
+for ~fittrackee~
+
+#+begin_src bash
+sudo su postgre
+[postgres@host ~/]$ createuser --interactive
+Enter name of role to add: fittrackee
+Shall the new role be a superuser? (y/n) n
+Shall the new role be allowed to create databases? (y/n) y
+Shall the new role be allowed to create more new roles? (y/n) n
+#+end_src
+
+You're not prompted to set the password, we also need to create a schema and authorise the ~fittrackee~ user.
+
+#+begin_src sql
+psql
+postgres=# ALTER_USER fittrackee WITH PASSWORD '<password>';
+postgres=# CREATE SCHEMA fittrackee AUTHORIZATION fittrackee;
+#+end_src
+
+** Switch to ~fitttrackee~ install FitTrackee
+
+You need to add the following to the ~/home/fittrackee/.bashrc~ in order to use ~virtualenvwrapper~ commands
+
+
+#+begin_src bash
+sudo su fittrackee
+cd
+echo "export WORKON_HOME=~/.virtualenvs\nsource /usr/bin/virtualenvwrapper.sh" >> ~.bashrc
+mkvirtualenv fittrackee
+pip install fittrackee
+#+end_src
+
+
+** Set up your ~\~/.env~
+
+There are a number of [[https://samr1.github.io/FitTrackee/en/installation.html#environment-variables][environment variables]] that ~fittrackee~ requires, set this up by copying the [[https://github.com/SamR1/FitTrackee/blob/master/.env.example#L4][.env.example]] file
+into the ~/home/fittrackee/.env~ file. You **must** source the ~\~/.env~ file otherwise the database will not be
+created. You will **have** to source this file each time you make changes for them to take effect.
+
+#+begin_src bash
+sudo su fittrackee
+nano ~/.env
+# Paste the contents in the save and exit ^+O then ^+X
+source ~/.env
+#+end_src
+
+You may wish to tweak some settings
+** Create Database
+
+You should have created a database user ~fittrackee~ above and allowed it to create databases, now as the ~fittrackee~
+system user you need to create the database.
+
+#+begin_src bash
+sudo su fittrackee
+ftcli db upgrade
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> 9741fc7834da, create User table
+INFO  [alembic.runtime.migration] Running upgrade 9741fc7834da -> b7cfe0c17708, create Activity & Sport tables
+INFO  [alembic.runtime.migration] Running upgrade b7cfe0c17708 -> caf0e0dc621a, create Record table
+INFO  [alembic.runtime.migration] Running upgrade caf0e0dc621a -> dd73d23a7a3d, create Activities Segments table
+INFO  [alembic.runtime.migration] Running upgrade dd73d23a7a3d -> 92adde6ac0d0, add 'bounds' column to 'Activity' table
+INFO  [alembic.runtime.migration] Running upgrade 92adde6ac0d0 -> 5a42db64e872, add static map url to 'Activity' table
+INFO  [alembic.runtime.migration] Running upgrade 5a42db64e872 -> 9f8c9c37da44, add static map id to 'Activity' table
+INFO  [alembic.runtime.migration] Running upgrade 9f8c9c37da44 -> e82e5e9447de, add 'timezone' to 'User' table
+INFO  [alembic.runtime.migration] Running upgrade e82e5e9447de -> 71093ac9ca44, add weather infos in 'Activity' table
+INFO  [alembic.runtime.migration] Running upgrade 71093ac9ca44 -> 096dd0b43beb, Add 'notes' column to 'Activity' table
+INFO  [alembic.runtime.migration] Running upgrade 096dd0b43beb -> 27425324c9e3, add 'weekm' in 'User' table
+INFO  [alembic.runtime.migration] Running upgrade 27425324c9e3 -> f69f1e413bde, add 'language' to 'User' table
+INFO  [alembic.runtime.migration] Running upgrade f69f1e413bde -> 1345afe3b11d, replace 'is_default' with 'is_active' in 'Sports' table
+INFO  [alembic.runtime.migration] Running upgrade 1345afe3b11d -> 8a0aad4c838c, add application config in database
+INFO  [alembic.runtime.migration] Running upgrade 8a0aad4c838c -> 3243cd25eca7, add uuid to activities
+INFO  [alembic.runtime.migration] Running upgrade 3243cd25eca7 -> 4e8597c50064, rename 'activity' with 'workout'
+INFO  [alembic.runtime.migration] Running upgrade 4e8597c50064 -> cee0830497f8, Add new sports
+INFO  [alembic.runtime.migration] Running upgrade cee0830497f8 -> 9842464bb885, add stopped speed threshold to sports
+INFO  [alembic.runtime.migration] Running upgrade 9842464bb885 -> 080acc8ee956, add sport preferences
+INFO  [alembic.runtime.migration] Running upgrade 080acc8ee956 -> 07188ca7620a, add imperial units preferences
+INFO  [alembic.runtime.migration] Running upgrade 07188ca7620a -> ed409fd9db9d, add snowshoes sport
+INFO  [alembic.runtime.migration] Running upgrade ed409fd9db9d -> e30007d681cb, add missing indexes on Workout table
+INFO  [alembic.runtime.migration] Running upgrade e30007d681cb -> 5e3a3a31c432, update User and AppConfig tables
+INFO  [alembic.runtime.migration] Running upgrade 5e3a3a31c432 -> cd0e6cf83207, add ascent record
+INFO  [alembic.runtime.migration] Running upgrade cd0e6cf83207 -> 84d840ce853b, add OAuth 2.0 and blacklisted tokens
+INFO  [alembic.runtime.migration] Running upgrade 84d840ce853b -> 5b936821326d, add virtual cycling as sport type
+INFO  [alembic.runtime.migration] Running upgrade 5b936821326d -> bf13b8f5589d, Add date_format for date display to user preferences in DB
+INFO  [alembic.runtime.migration] Running upgrade bf13b8f5589d -> a8cc0adfe1d3, add Mountaineering
+INFO  [alembic.runtime.migration] Running upgrade a8cc0adfe1d3 -> 0f375c44e659, update elevation precision
+INFO  [alembic.runtime.migration] Running upgrade 0f375c44e659 -> 374a670efe23, add privacy policy
+INFO  [alembic.runtime.migration] Running upgrade 374a670efe23 -> db58d195c5bf, add user preference to start elevation plots at zero
+INFO  [alembic.runtime.migration] Running upgrade db58d195c5bf -> eff1c16c43eb, Add user preference for gpx speed calculation
+INFO  [alembic.runtime.migration] Running upgrade eff1c16c43eb -> d22670a89a54, add paragliding sport
+INFO  [alembic.runtime.migration] Running upgrade d22670a89a54 -> 24eb097614e4, add open water swimming
+
+#+end_src
+
+** systemd
+
+Systemd service files are also provided in the [[https://samr1.github.io/FitTrackee/en/installation.html#deployment][Deplyment]] section.
+
+Add these to ~/etc/systemd/system/fittrackee.service~ and  ~/etc/systemd/system/fittrackee_workers.service~.
+
+There are a few things to change across these files
+
++ ~User=<USER>~ - needs replacing in a few places the global configuration and also on the ~ExecStart~ line to reflect
+  the account things are running under.
++ ~<FITTRACKEE DIRECTORY>~ - a directory under the ~User~ account where data is stored. Create this directory if
+  required.
++ You may need to tweak the ~ExecStart~ path to reflect the location of ~gunicorn~ under the virtual environment you
+  created.
++ Path to your virtual environment should reflect where you have installed things (use ~which gunicorn~ to find out the
+  path, but note it also needs updating for ~which flask~).
++ ~<NUMBER OF PROCESSES>~ needs setting, to start with I went with ~1~
+
+If you use [[id:48249b0d-eeba-484a-8f00-808a14169692][etckeeper]] make sure to add them to the [[id:0859ef9e-834d-4e84-8e67-fa7593a61e0b][Git]] repository. You will need to enable the units.
+
+#+begin_src bash
+cd /etc
+git add systemd/system/fittrackee*
+git commit -m "Adding fitrtrackee systemd service units"
+git push
+systemd enable --now fittrackee.service
+systemd enable --now fittrackee_workers.service
+#+end_src
+
+** Nginx Configuration
+
+A useful configuration is provided in the [[https://samr1.github.io/FitTrackee/en/installation.html#deployment][Deployment]] section. You'll need a URL and a free one can be obtained from
+[[https://noip.com/][noip.com]] (although you have to update it every 30-days). If you've modified the ~$PORT~ then make sure to tweak this
+under the ~location~ section of the server configuration.  Again add the file to your ~etckeeper~ repository and restart
+the server.
+
+
+#+begin_src
+git add nginx/nginx.conf
+git commit -m "Adding nginx config for fittrackee"
+systemd restart nginx.service
+#+end_src
+
+
+
+
+* Links
++ [[https://samr1.github.io/FitTrackee/en/][FitTrackee]]
++ [[https://github.com/SamR1/FitTrackee/][GitHub | FitTrackee]]

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ec26925c-f958-453d-b380-8b7e22a2ba6e
-:mtime:    20230624160142
+:mtime:    20230730084607 20230624160142
 :ctime:    20230624160142
 :END:
 #+TITLE: Chillis
@@ -16,3 +16,4 @@
 + [[https://www.mrvikkis.co.uk/][Mr Vikki's]]
 + [[https://www.scorchio.co.uk/][Scorchio]]
 + [[https://www.thetwistedcurry.co.uk/][The Twisted Curry Company - Yorkshire based spice kit company]]
++ [[https://baucebrothers.com/][Bauce Brothers]] (Subscription service)

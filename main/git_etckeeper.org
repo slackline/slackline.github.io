@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       48249b0d-eeba-484a-8f00-808a14169692
+:mtime:    20230730204230
+:ctime:    20230730204230
+:END:
+#+TITLE: Git etckeeper
+#+FILETAGS: :git:
+
+You can use [[https://etckeeper.branchable.com][etckeeper]] to automatically version control your ~/etc/~ directory and by using hooks have these changes
+backed up to a Git Forge (very handy if you stupidly ~rm -rf~ whilst within your ~/etc/~ directory as I once did!).
