@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       8b2f5d7f-53f1-49bd-a6bf-4cd0ddb531fa
+:mtime:    20230803213559
+:ctime:    20230803213559
+:END:
+#+TITLE: R Regression Modelling
+#+FILETAGS: :R:regression:modelling:glm:ridge regression:splines:shrinkage:statistics:
+
+* Generalised Linear Models
+
+* Multi-level Modelling
+
+* Links
+
++ [[https://github.com/friendly/genridge][GitHub - friendly/genridge: Generalized Ridge Trace Plots for Ridge Regression]]
