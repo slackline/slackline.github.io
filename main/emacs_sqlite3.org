@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       3735f87b-346e-4c0d-a172-545e23570bcb
+:mtime:    20230809145116
+:ctime:    20230809145116
+:END:
+#+TITLE: Emacs SQLite3
+#+FILETAGS: :emacs:sql:sqlite3:
+
+* ~sqlite-mode~
+
+Open a database with ~sqlite-mode-open-file~.
+
+* Links
+
++ [[https://xenodium.com/sqlite-mode-goodies/index.html][Extending sqlite-mode (cell navigation + edits)]]
