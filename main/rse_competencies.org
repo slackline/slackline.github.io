@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       f5be737c-664f-49ad-af47-72642a4b0833
+:mtime:    20230809102618
+:ctime:    20230809102618
+:END:
+#+TITLE: RSE Competencies
+#+FILETAGS: :rse:career:community:website:
+
+* Meetings
+
+* Links
++ [[https://rsetoolkit.github.io/rse-competencies-toolkit/][RSE Competency Toolkit (Site)]]
++ [[https://github.com/RSEToolkit/rse-competencies-toolkit][GitHub | RSEToolkit/rse-competencies-toolkit]]
++ [[https://docs.google.com/document/d/1D1RhtnZ9CTTkSaornYE3l3I1JAqZfEWiiW8nADV9kEw/edit#heading=h.6dtzkqfrcccn][RSE Competencies Toolkit (Google Doc)]] - has links to most other documents
++ [[https://miro.com/app/board/uXjVMMH7cS4=/][Miro Board]]
+
+** Communication
++ [[https://ukrse.slack.com/archives/C05CY0YFWEL][RSE Slack #rse-competencies-toolkit]]
++ [[https://groups.google.com/g/rse-competencies-toolkit][Google Groups | Mailing list and communications]]
+
+** Related Frameworks
++ [[https://sfia-online.org/en/sfia-8/sfia-views/full-framework-view/?path=/glance][SFIA | Global skills and competency framework for the digital world]]
