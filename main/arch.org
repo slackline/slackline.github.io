@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a53fa3c5-f091-4715-a1a4-a94071407abf
-:mtime:    20230623080100 20230215101306
+:mtime:    20230812222550 20230623080100 20230215101306
 :ctime:    20230215101306
 :END:
 #+TITLE: Arch Linux
@@ -10,11 +10,12 @@ I've used [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]] for many years but
 (compared to my main system at least!). I also had a number of [[id:69864d74-8ec2-42e4-a227-f824a521a5ce][Raspberry Pis]] that I didn't want to have to setup cross
 compiling environments in order to run Gentoo on. I still wanted a rolling distribution though that always had the
 latest version of packages installed. Enter [[https://archlinux.org][Arch Linux]] and [[https://archlinuxarm.org/][Arch Linux ARM]].
+
 * ~systemd~
 
 By default Arch uses [[https://systemd.io][~systemd~]] for starting and running services.
 
-*** Services
+** Services
 
 To add a service
 
@@ -36,3 +37,17 @@ systemctl [start|stop|restart|status] <unit>.service
 
 ~journalctl~ is a programme for reading the log files from ~systemd~. To follow logs for a specific service in real time
 you can use ~journalctl -fu <unit>.service~.
+
+* Pacman
+
+Pacman is the default package manager on Arch and its good (although not as good as Portage!).
+
+** Insufficient Space
+
+My system is showing its age and I don't use it often, as a consequence I don't update daily/weekly and this means
+~pacman -Syu~ can exceed the available space on the root partition. Its a good opportunity to clear out things you don't
+need, but sometimes the problem persists.
+
+You can get round this by installing/upgrading individual packages with ~pacman -S <package(s)>~ or you can set a
+temporary storage when upgrading (i.e. to a partition that does have sufficient space) as advised [[https://unix.stackexchange.com/a/13090][here]] with ~pacman -Syu
+--cache /path/with/more/space~.
