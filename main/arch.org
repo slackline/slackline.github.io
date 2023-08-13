@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a53fa3c5-f091-4715-a1a4-a94071407abf
-:mtime:    20230812222550 20230623080100 20230215101306
+:mtime:    20230813184404 20230812222550 20230623080100 20230215101306
 :ctime:    20230215101306
 :END:
 #+TITLE: Arch Linux
@@ -51,3 +51,19 @@ need, but sometimes the problem persists.
 You can get round this by installing/upgrading individual packages with ~pacman -S <package(s)>~ or you can set a
 temporary storage when upgrading (i.e. to a partition that does have sufficient space) as advised [[https://unix.stackexchange.com/a/13090][here]] with ~pacman -Syu
 --cache /path/with/more/space~.
+
+** Download timeouts
+
+When performing large upgrades I found I regularly encountered timeouts and slow transfer rates. A solution to this is
+to leverage the ~XferCommand~ option in ~/etc/pacman.conf~ which allows the configuration of an external programme
+(e.g. ~wget~ or ~curl~) to perform the downloads.
+
+** Untrusted signatures
+
+If you leave updates long enough you may find that packages that are downloaded do not have trusted signatures. This
+means new people have joined the Arch team and signed the packages but your keyring is not up-to-date and so doesn't
+recognise them. To solve this is to update the ~archlinux-keyring~ package first.
+
+#+begin_src bash
+pacman -S archlinux-keyring
+#+end_src

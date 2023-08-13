@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       49d21f82-887e-4ec7-8963-89460673352a
-:mtime:    20230724103934 20230224093243 20230103103310 20221210163140
+:mtime:    20230813212014 20230724103934 20230224093243 20230103103310 20221210163140
 :ctime:    20221210163140
 :END:
 #+title: Research Software Engineering
@@ -55,6 +55,8 @@ Research Software Engineering covers many areas of software development such as 
 
 
 ** Programming Paradigms
+
++ [[https://amenzwa.github.io/stem/PL/Paradigms/][Amen Zwa - Programming Paradigms]]
 
 *** Functional Programming
 + [[https://spectrum.ieee.org/functional-programming][Why Functional Programming Should Be the Future of Software Development - IEEE Spectrum]]
