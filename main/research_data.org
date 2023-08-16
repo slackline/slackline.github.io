@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       4c9eab3d-4ae2-4f48-a32c-925929fe60bf
-:mtime:    20230706112845 20230224183541 20230103103310 20221220065948
+:mtime:    20230816094158 20230706112845 20230224183541 20230103103310 20221220065948
 :ctime:    20221220065948
 :END:
 #+title: Open Research Data
@@ -36,7 +36,7 @@ consideration should be given to principles of GDPR.
 
 ** Resources
 
-+ [[https://think.f1000research.com/open-data/toolkit/?utm_source=twitter&utm_medium=social&utm_campaign=JQB18930&utm_term=post][Open Data Toolkit - F1000 Research]]
++ [[https://think.f1000research.com/open-data/toolkit/][Open Data Toolkit - F1000 Research]]
 
 ** Tools
 + [[https://opentelemetry.io/][OpenTelemetry]]
