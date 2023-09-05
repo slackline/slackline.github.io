@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ec8e7ee9-0316-4de2-98c1-f775c20b0e35
-:mtime:    20230711203358 20230510155356 20230330143114 20230103103314 20220323114739 20230103103314 20230103103308
+:mtime:    20230905212210 20230905092900 20230711203358 20230510155356 20230330143114 20230103103314 20220323114739 20230103103314 20230103103308
 :ctime:    20220323114739 20230103103308
 :END:
 #+TITLE: Python Data Analysis and Visualisation
@@ -45,6 +45,9 @@ package for that provides a sensible structure and creates it for you is [[https
 :mtime:    20220323114739
 :ctime:    20220323114739
 :END:
+
+A very large and comprehensive package for machine learning.
+
 *** Statsmodels
 :PROPERTIES:
 :ID:       880b87a3-9bfd-4bc7-9e67-a5ec5f5cde3a
@@ -77,3 +80,16 @@ package for that provides a sensible structure and creates it for you is [[https
 * Links
 
 + [[https://atrebas.github.io/post/2020-06-14-datatable-pandas/#more-joins][A data.table and pandas small stroll · Home]]
+
+** Dashboards
+
++ [[https://aws.amazon.com/builders-library/building-dashboards-for-operational-visibility/][Building dashboards for
+  operational visibility | Amazon Builders' Library]]
+
+** Learning Resources
+
++ [[https://scipy-lectures.org/intro/language/python_language.html][Introduction to Python]]
++ [[https://sebastianraschka.com/blog/2020/numpy-intro.html][Introduction to NumPy]]
++ [[https://pandas.pydata.org/docs/user_guide/10min.html][Introduction to Pandas]]
++ [[https://sebastianraschka.com/blog/2020/numpy-intro.html#410-matplotlib][Introduction to Matplotlib]]
++ [[https://inria.github.io/scikit-learn-mooc/][Scikit-learn course]]

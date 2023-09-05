@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       0e6300c6-7025-4f45-820d-4d9da82b41a6
+:mtime:    20230905212306 20230724174038
+:ctime:    20230724174038
+:END:
+#+TITLE: Linux
+#+FILETAGS: :linux:computing:foss:opensource:
