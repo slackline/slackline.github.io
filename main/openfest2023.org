@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       a945032a-5cdb-4efb-82f9-609e66ae7049
+:mtime:    20230906113446 20230906094602
+:ctime:    20230906094602
+:END:
+#+TITLE: OpenFest 2023
+#+FILETAGS: :openresearch:sheffield:
+
+* Morning
+** Open Research and its impact on people, culture and environment - Wayne Cranton
++ [[https://www.coalition-s.org/]['Plan S' and 'cOAlition S' – Accelerating the transition to full and immediate Open Access to scientific publications]]
++ REF 2028 25% will be based on /People, culture and environment/; Contribution to knowledge and udnerstanding 50%;
+  Engagement and impact 25%
++ Open Access UKRI compliant for consideration in REF 2028.
+** Catalysing open research at the Sheffield Universities - Jenni Adams and Katie Petherbridge
+** South Yorkshire Office for Data Analytics - Vania Sena
+** Building support and resources around FAIR data and software - Ric Campbell
++ What is FAIR (Findable, Accessible, Interoperable and Reusable), enhances collboration, maximises utility of the data,
+  further credit for the work, increases accountability and reproducibility.
++ AIMS of FAIR work - lots on principles, less information on actionable elements or guidance, aimed to make something
+  that would be bespoke to the research area, useful and could be intermittently revised.
++ Worked with researchers across Architecture, Bio-sciences, English, Geography, Mechanical Engineering, Psychology and
+  ScHARR.
++ Variation across departments with level of engagement of FAIR principles. Showed there was high variation in
++ Produced the resources [[https://bit.ly/fairGuidance][Making Research FAIR]] (link this on OSCSheffield Resources page)
++ Piloting a stewarsjip service to help people with applying FAIR principles to their work.
+** The SHU open research champions scheme - Pete Smith
++ Definitely need to be in greater contact with [[mailto:P.R.Smith@shu.ac.uk][Pete Smith]] about OSC Sheffield as the champion scheme sounds like its
+  the very same sort of thing getting people together and sharing knowledge, helping each other i.e. peer-to-peer.
+** Questions
+*** Which repository should data be directed towards?
++ Jenni said go with what is most appropriate for the research.
++ Pete - Boundary work
++ Me - Is this a case where the repositories could become federated e.g. using [[https://en.wikipedia.org/wiki/ActivityPub][ActivityPub]] to co-ordinate across
+  repositories?
+* Afternoon
+** Open Research Prize 2023 - Winners Showcase
+*** Harry Wright
+*** Sylvia Whittle and Laura Wiggins
+*** Andy Tattersall
+*** Ana Mendez de Andes
+** The opportunities and challenges of using open-source data to map the voluntary sector - Chris Damm
+** A sociotechnical regime is emerging around open science, but what does that mean for qualitative researchers? - Matthew Hanchard
+** Lightning talk: Art practice research: Sharing materialities using open research practices - Marika Grasso
+** The Central Role of Being Nice in Open Science - Andrew Beckerman

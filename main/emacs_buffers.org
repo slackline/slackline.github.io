@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       4451966f-b810-4a9d-905b-e2b682578c62
-:mtime:    20230103103310 20221224191223
+:mtime:    20230906125824 20230103103310 20221224191223
 :ctime:    20221224191223
 :END:
 #+TITLE: Emacs Buffers
@@ -30,3 +30,14 @@ kill with ~C-SPACE~ and kill the selected ones with ~M-D~.
 
 [[id:e2a2ead1-4348-4cc6-9ef1-dd96777aaec8][Dired]] by default opens each directory in a new buffer, as a consequence you can quickly rack up a lot of Dired buffers
 you can kill them all quickly with ~IbufferMode~ using ~C-x C-b * / D yes Ret~ (from [[https://www.emacswiki.org/emacs/KillingBuffers#h5o-6][here]]).
+
+* Managing Buffers
+
+** Equalise all buffer windows
+
+You can make all buffers equal in size using ~balance-windows~ which is bound to ~C-x +~
+
+** Winner mode
+
+~winner-mode~ is a simple way of managing buffers/windows and switching between having many buffers to a single and back
+again (through a history of buffer layouts).
