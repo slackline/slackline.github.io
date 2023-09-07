@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       16c65320-e19d-4bdc-ab55-c410860cddfa
-:mtime:    20230103103308 20221210172107
+:mtime:    20230907162730 20230103103308 20221210172107
 :ctime:    20221210172107
 :END:
 #+TITLE: sed
@@ -8,3 +8,6 @@
 #+FILETAGS: :bash:sed:unix:
 
 * Links
++ [[https://catonmat.net/sed-one-liners-explained-part-one][Sed One-Liners Explained, Part I: File Spacing, Numbering and Text Conversion and Substitution]]
++ [[https://catonmat.net/sed-one-liners-explained-part-two][Sed One-Liners Explained, Part II: Selective Printing of Certain Lines]]
++ [[https://catonmat.net/sed-one-liners-explained-part-three][Sed One-Liners Explained, Part III: Selective Deletion of Certain Lines and Special Applications]]
