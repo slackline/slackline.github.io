@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       7318aee8-c864-40cb-9462-4ce36ac56d35
-:mtime:    20230908102028 20230103103311 20220806065259
+:mtime:    20230908124722 20230908102028 20230103103311 20220806065259
 :ctime:    20220806065259
 :END:
 #+TITLE: Python Documentation
@@ -359,4 +359,6 @@ python:
 
 ** ReadTheDocs
 
++ [[https://docs.readthedocs.io/en/stable/tutorial/index.html][Read the Docs tutorial]]
++ [[https://sphinx-rtd-theme.readthedocs.io/en/stable/index.html][Read the Docs Sphinx Theme]]
 + [[https://stackoverflow.com/questions/49331914/enable-versions-in-sidebar-in-sphinx-read-the-docs-theme#63054018][Enable versions in sidebar in sphinx read the docs theme - Stack Overflow]]
