@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       7318aee8-c864-40cb-9462-4ce36ac56d35
-:mtime:    20230103103311 20220806065259
+:mtime:    20230908102028 20230103103311 20220806065259
 :ctime:    20220806065259
 :END:
 #+TITLE: Python Documentation
@@ -320,3 +320,7 @@ Documentation can be deployed to ReadTheDocs automatically as part of your Git W
 
 + [[https://sphinx-themes.org/][Sphinx Themes Gallery]]
 + [[https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html][The PyData Sphinx Theme]]
+
+** ReadTheDocs
+
++ [[https://stackoverflow.com/questions/49331914/enable-versions-in-sidebar-in-sphinx-read-the-docs-theme#63054018][Enable versions in sidebar in sphinx read the docs theme - Stack Overflow]]
