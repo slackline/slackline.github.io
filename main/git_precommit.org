@@ -6,9 +6,9 @@
 #+TITLE: Pre-commit
 #+FILETAGS: :git:hooks:pre-commit:
 
-[[https://pre-commit.com/][Pre-commit]] is a powerful tool for executing a range of hooks prior to making commits to your Git history. This is useful
-because it means you can automatically run a range of linting tools on your code across an array of languages to ensure
-your code is up-to-scratch /before/ you make the commit.
+[[https://pre-commit.com/][Pre-commit]] is a powerful [[id:0859ef9e-834d-4e84-8e67-fa7593a61e0b][Git]] tool for executing a range of hooks prior to making commits to your Git history. This is
+useful because it means you can automatically run a range of linting tools on your code across an array of languages to
+ensure your code is up-to-scratch /before/ you make the commit.
 
 There are a number of other pages on Pre-commit...
 
@@ -22,8 +22,8 @@ There are a number of other pages on Pre-commit...
 Pre-commit is written in [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] but that isn't a limitation as it will lint [[id:fac7a695-9bdf-4a79-9ec3-9945e9a0cba4][YAML]], [[id:950174e1-c936-463a-b4a2-702ca516d95e][JSON]], C, JavaScript, [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]], Go, [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]],
 TOML, Terraform, Jupyter Notebooks, and so on. The list of [[https://pre-commit.com/hooks.html][supported hooks]] is vast.
 
-For those unfamiliar with version control and Git in particular this will likely all sound alien. If you are new to the
-world of version control and Git I can highly recommend the [[https://srse-git-github-zero2hero.netlify.app/][Git & Github through GitKraken Client - From Zero to Hero!]]
+For those unfamiliar with version control and [[id:0859ef9e-834d-4e84-8e67-fa7593a61e0b][Git]] in particular this will likely all sound alien. If you are new to the
+world of version control and [[id:0859ef9e-834d-4e84-8e67-fa7593a61e0b][Git]] I can highly recommend the [[https://srse-git-github-zero2hero.netlify.app/][Git & Github through GitKraken Client - From Zero to Hero!]]
 course offered by the [[https://rse.shef.ac.uk][Research Software Engineering]] at the University of Sheffield and developed by Alumni
 [[https://www.r-rse.eu/][Anna Krystalli]].
 
@@ -35,7 +35,7 @@ In computing a "hook" refers to something that is run prior to or in response to
 the current discussion we are talking about hooks that relate to actions undertaken in Git version control and
 specifically actions that are run before a "commit" is made.
 
-When you have initialised a directory to be under Git version control the settings and configuration are stored in the
+When you have initialised a directory to be under [[id:0859ef9e-834d-4e84-8e67-fa7593a61e0b][Git]] version control the settings and configuration are stored in the
 ~.git/~ sub-directory. There is the ~.git/config~ file for the repositories configuration but also the ~.git/hooks/~
 directory that is populated with a host of ~*.sample~ files with various different names that give you an in-road into
 what different hooks you might want to run. Its worth spending a little time reading through these if you haven't done
@@ -91,8 +91,8 @@ dev ~
 :PROPERTIES:
 :CUSTOM_ID: configuration
 :END:
-Configuration of pre-commit is via a file in the root of your Git version controlled directory called
-~.pre-commit-config.yaml~. This file should be included in your Git repository, you can create a blank file or
+Configuration of pre-commit is via a file in the root of your [[id:0859ef9e-834d-4e84-8e67-fa7593a61e0b][Git]] version controlled directory called
+~.pre-commit-config.yaml~. This file should be included in your [[id:0859ef9e-834d-4e84-8e67-fa7593a61e0b][Git]] repository, you can create a blank file or
 ~pre-commit~ can generate a sample configuration for you.
 
 #+begin_example

@@ -9,8 +9,8 @@
 
 [[https://git-scm.com][Git]] is the defacto standard for version control of code (and more) these days. Whether you write code in [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]], [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]],
 scripts for [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]], Go, Rust, C++, Java, [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] or want to keep critical files such as your dotfiles,
-~/etc/~ (using [[id:48249b0d-eeba-484a-8f00-808a14169692][git_etckeeper]]), or GPG encrypted passwords backed up you should consider using Git (or some other version control system, but
-Git is the most popular for now).
+~/etc/~ (using [[id:48249b0d-eeba-484a-8f00-808a14169692][git_etckeeper]]), or GPG encrypted passwords backed up you should consider using Git (or some other version
+control system, but Git is the most popular for now).
 
 It can be daunting facing yet another new area to tackle as you are only just getting to grips with a programming
 language having to learn a bunch of unfamiliar concepts that seem of little value, I know I've been there, but it really
@@ -19,7 +19,8 @@ the ability to work across multiple computers on the same code base, collaborate
 what changes have been made at which point in the history of the code development and in turn benefit from being able to
 revert changes that are not required.
 
-If you use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] then you should definitely be using [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]].
+If you use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] then you should definitely be using [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] and if you use Git then you would benefit from using
+[[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] too, it saves you considerable time and effort in the long run.
 
 * Concepts
 :PROPERTIES:
