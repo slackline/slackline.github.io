@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a53fa3c5-f091-4715-a1a4-a94071407abf
-:mtime:    20230813184404 20230812222550 20230623080100 20230215101306
+:mtime:    20230908084133 20230907222812 20230813184404 20230812222550 20230623080100 20230215101306
 :ctime:    20230215101306
 :END:
 #+TITLE: Arch Linux
@@ -42,7 +42,36 @@ you can use ~journalctl -fu <unit>.service~.
 
 Pacman is the default package manager on Arch and its good (although not as good as Portage!).
 
-** Insufficient Space
+** Installing packages
+
+Typically you synchronise the databases when installing a package you update the database.
+
+#+begin-src
+pacman -Syu <pkgname>
+#+end-src
+
+** Configuration
+
+Configuration of ~pacman~ is via ~/etc/pacman.conf~ and the ~/etc/pacman.d/~ directory and is well documented within
+each of the files. You can create hooks by adding them to ~/etc/pacman.d/hooks~. For example the following recompiles R
+packages on upgrade.
+
+#+begin_src
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = r
+
+[Action]
+Description = Update R packages on upgrade
+When = PostTransaction
+Exec = /usr/bin/Rscript -e 'update.packages(ask = FALSE, checkBuilt = TRUE)'
+#+end_src
+
+** Trouble Shooting
+
+*** Insufficient Space
 
 My system is showing its age and I don't use it often, as a consequence I don't update daily/weekly and this means
 ~pacman -Syu~ can exceed the available space on the root partition. Its a good opportunity to clear out things you don't
@@ -52,13 +81,13 @@ You can get round this by installing/upgrading individual packages with ~pacman 
 temporary storage when upgrading (i.e. to a partition that does have sufficient space) as advised [[https://unix.stackexchange.com/a/13090][here]] with ~pacman -Syu
 --cache /path/with/more/space~.
 
-** Download timeouts
+*** Download timeouts
 
 When performing large upgrades I found I regularly encountered timeouts and slow transfer rates. A solution to this is
 to leverage the ~XferCommand~ option in ~/etc/pacman.conf~ which allows the configuration of an external programme
 (e.g. ~wget~ or ~curl~) to perform the downloads.
 
-** Untrusted signatures
+*** Untrusted signatures
 
 If you leave updates long enough you may find that packages that are downloaded do not have trusted signatures. This
 means new people have joined the Arch team and signed the packages but your keyring is not up-to-date and so doesn't
@@ -67,3 +96,20 @@ recognise them. To solve this is to update the ~archlinux-keyring~ package first
 #+begin_src bash
 pacman -S archlinux-keyring
 #+end_src
+
+* AUR (Arch User Repository)
+
+[[https://aur.archlinux.org/][AUR]] is a repository of user maintained packages outside of the main Pacman repository. Each package is maintained as a
+git repository that the user can clone and then install. There are a few helper applications that wrap the functionality
+of Pacman into a command users can use (since you typically install AUR packages as a user rather than as ~root~).
+
+The [[https://github.com/Morganamilo/paru][paru]] package is written in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]], to install it run the following.
+
+#+begin-src
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -sri
+#+end-src
+
+Once installed it functions pretty much like ~pacman~
