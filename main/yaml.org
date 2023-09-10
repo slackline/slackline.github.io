@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       fac7a695-9bdf-4a79-9ec3-9945e9a0cba4
-:mtime:    20230103103314 20221210171528
+:mtime:    20230910195519 20230103103314 20221210171528
 :ctime:    20221210171528
 :END:
 #+TITLE: YAML
@@ -8,7 +8,7 @@
 #+FILETAGS: :yaml:json:
 
 [[https://yaml.org][YAML]] (Yaml Ain't Markup Language) is a JSON super-set that is commonly used for configuration files, particularly in
-Python (at least by me!).
+Python (at least by me!). Its popularity stems from its simplicity.
 
 * Structure
 
