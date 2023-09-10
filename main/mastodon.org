@@ -14,7 +14,7 @@
 :PROPERTIES:
 :CUSTOM_ID: rss-feed
 :END:
-Its pretty simple to get and RSS feed of an account, just add =.rss= to the end of the URL.
+Its pretty simple to get and RSS feed of an account, just add ~.rss~ to the end of the URL.
 
 An example of embedding Mastodon feeds on your site you can use [[https://github.com/sampsyo/emfed][emfed]].
 
@@ -61,7 +61,7 @@ documentation]] which recommends three things...
 I took some steps to
 [[https://kimura.no-ip.info/doku.php?id=linux:security:ssh#ssh_hardening][harden
 my SSH login]] some time ago. They are minor but make a small
-difference. In =/etc/ssh/sshd.config= change the following...
+difference. In ~/etc/ssh/sshd.config~ change the following...
 
 #+begin_src sh
 PermitRootLogin no
@@ -69,7 +69,7 @@ Port <insert-port-number>
 PasswordAuthentication no
 #+end_src
 
-Note however that before changing =PasswordAuthentication= to =no= you
+Note however that before changing ~PasswordAuthentication~ to ~no~ you
 *MUST* upload your public SSH key to your account on your VPS otherwise
 you will lock yourself out.
 
@@ -84,57 +84,44 @@ if you use [[linux:security:ssh#public_key_generation|keychain]].
 :PROPERTIES:
 :CUSTOM_ID: fail2ban
 :END:
-Under Arch Linux install with the following (as =root=)...
+Under Arch Linux install with the following (as ~root~)...
 
 #+begin_src sh
 # pacman -Syu fail2ban
 #+end_src
 
 As per instructions you could add the following to
-=/etc/fail2ban/jail.local=.
+~/etc/fail2ban/jail.local~.
 
 #+begin_src sh
-[DEFAULT]
-destemail = your@email.here
-sendername = Fail2Ban
+  [DEFAULT] destemail = your@email.here sendername = Fail2Ban
 
-[sshd]
-enabled = true
-port = 22
+  [sshd] enabled = true port = 22
 
-[sshd-ddos]
-enabled = true
-port = 22
+  [sshd-ddos] enabled = true port = 22
 #+end_src
 
 However, I don't...
 
-1. Want lots of emails telling me about failed login attempts (like
-   anyone is ever going to read what I write here!).
-2. Don't run =sshd= on port =22= and instead use some other random port
-   to reduce exposure to attacks (not perfect but its one simple step to
-   take).
+1. Want lots of emails telling me about failed login attempts (like anyone is ever going to read what I write here!).
+2. Don't run ~sshd~ on port ~22~ and instead use some other random port to reduce exposure to attacks (not perfect but
+   its one simple step to take).
 
-For obvious reasons I'm not posting what I have entered here and you
-should interpolate your own values for the relevant fields. Once you
-have configured =fail2ban= appropriately you can enable/restart the
-service.
+For obvious reasons I'm not posting what I have entered here and you should interpolate your own values for the relevant
+fields. Once you have configured ~fail2ban~ appropriately you can enable/restart the service.
 
 #+begin_src sh
-systemctl enable --now fail2ban.service
+  systemctl enable --now fail2ban.service
 #+end_src
 
 ** Firewall, SSH and HTTPS (not HTTP)
 :PROPERTIES:
 :CUSTOM_ID: firewall-ssh-and-https-not-http
 :END:
-I've already configured [[https://nginx.org/en/][nginx]] which I use for
-serving the sites I host on my VPS to redirect =http= requests on port
-80 to =https= on port 443 and use [[https://certbot.eff.org/][certbot]]
-to provide valid certificates. I'm not going to allow any firewall to
-allow =http= connections then. As mentioned above I configure =sshd= to
-run on a port other than =22=. To which end my installation of
-=iptables= is somewhat different from the recommended.
+I've already configured [[https://nginx.org/en/][nginx]] which I use for serving the sites I host on my VPS to redirect ~http~ requests on port 80
+to ~https~ on port 443 and use [[https://certbot.eff.org/][certbot]] to provide valid certificates. I'm not going to allow any firewall to allow
+~http~ connections then. As mentioned above I configure ~sshd~ to run on a port other than ~22~. To which end my
+installation of ~iptables~ is somewhat different from the recommended.
 
 *TODO* Finish off.
 
