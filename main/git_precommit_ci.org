@@ -1,0 +1,212 @@
+:PROPERTIES:
+:ID:       8c412a9d-c7ff-4afc-bc05-7bec3f06aa41
+:mtime:    20230910185620
+:ctime:    20230910185620
+:END:
+#+TITLE: Pre-commit CI
+#+FILETAGS: :git:hooks:pre-commit:ci:
+
+[[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] is a wonderful tool for automating running [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linting]] and [[id:3cca0dfd-0c82-4685-b9ed-6314f7c8b78f][Tests]] on your code.
+
+Having [[https://pre-commit.com][pre-commit]] setup locally to run before making commits is great. Typically code lives in a "forge" such as [[https://github.com][GitHub]]
+or [[https://gitlab.com][GitLab]] and as ~pre-commit~ is run on each commit you shouldn't have any problems when you come to ~git push~ your
+code to the remote ~origin~ repository (i.e. the repository hosted on GitHub/GitLab) as all ~pre-commit~ checks will
+have to have passed before this will take place.
+
+But what if for some reason you disabled ~pre-commit~ just to make some changes rather than addressing the failed
+linting or test? Or if you work on an open-source project and someone else contributes how can you ensure that their
+contributed code meets the code-style chosen by the project and that all tests pass in light of the changes that are
+being introduced?
+
+* Continuous Integration / Continuous Delivery (CI/CD)
+:PROPERTIES:
+:CUSTOM_ID: continuous-integration-continuous-delivery-cicd
+:END:
+The solution to this is Continuous Integration/Continuous Delivery (CI/CD) which runs various hooks on GitHub/GitLab
+etc. in response to specific tasks/actions that occur on the repository. The exact name or system used depends on the
+forge, on GitHub these are [[https://docs.github.com/en/actions][GitHub Actions]] (see also [[https://github.com/marketplace?type=actions][Actions Marketplace]]) whilst on GitLab uses [[https://docs.gitlab.com/ee/ci/pipelines/][Pipelines]]. There are even
+standalone systems which integrate with both such as the popular [[https://www.jenkins.io][Jenkins]].
+
+*By employing ~pre-commit~ as part of your CI/CD pipeline you ensure code meets the standards (linting, tests etc.) you
+wish contributions to meet before it is merged into your ~main~/~master~ branch`*
+
+These work by running processes under certain conditions, for example on a ~push~ to the ~main~ branch or a ~tag~ that
+begins with ~v~, and they might run processes such as running the test suite for your project to ensure all tests pass,
+build web-pages or build the package for deployment to a repository (e.g. [[https://pypi.org][PyPI]]). They are really useful and flexible
+systems and can be leveraged to run ~pre-commit~ on your code when Pull Requests (PR) are made to ensure the PR passes
+the various hooks. Ultimately a PR results in a ~commit~ to ~master~/~main~ and so its logically consistent that Pull
+Requests should pass ~pre-commit~ prior to being merged.
+
+Under any system you could write your own hook to run =pre-commit= but there is an even easier and more efficient
+solution if you use GitHub in the form of [[https://pre-commit.ci][pre-commit.ci]].
+
+* GitHub and pre-commit.ci
+:PROPERTIES:
+:CUSTOM_ID: github-and-pre-commit.ci
+:END:
+Currently [[https://pre-commit.ci][pre-commit.ci]] only supports GitHub although support of other systems is in the pipeline. =pre-commit.ci=
+doesn't need any configuration beyond your already existing =.pre-commit-config.yaml= (see [[https://ns-rse.github.io/posts/pre-commit/][Pre-commit : Protecting Your
+Future Self]]). Where a ~pre-commit~ hook corrects formatting issues as is the case with some of the defaults such as
+~trailing-whitespace~ or ~check-yaml~, or if you are using Python linters such as [[https://black.readthedocs.io/en/stable/][~black~]] or [[https://github.com/charliermarsh/ruff][~ruff~]] which fix errors,
+~pre-commit.ci~ can commit these changes and push them back to the Pull Request automatically. In a similar vein it will
+also routinely update the ~rev~ used in your ~.pre-commit-config.yaml~, commit the change and push it back to your
+repository.
+
+It is also really fast because ~pre-commit.ci~ keeps the virtual environments that are used in tests cached whereas if
+you wrote your own action to run this the GitHub runner that is spun up to run GitHub Actions would have to download all
+of these each time the action is run is they are not persistent.
+
+Use of ~pre-commit.ci~ is free for open-source repositories and there are paid options for private or organisation
+repositories.
+
+#+begin_quote
+*Benefits of pre-commit.ci*
+
+- Supports GitHub but more to come in the future.
+- Zero configuration, just need ~.pre-commit-config.yaml~.
+- Corrects & commits formatting issues automatically without need for developer to reformat.
+- Automatically updates ~.pre-commit-config.yaml~ for you (e.g. new ~rev~).
+- Faster than your own GitHub Action.
+- Free for open source repositories (paid for version for private/organisation repositories).
+
+#+end_quote
+
+** Configuration (~.pre-commit-config.yaml~)
+:PROPERTIES:
+:CUSTOM_ID: configuration-.pre-commit-config.yaml
+:END:
+Whilst not required it is possible to configure the behaviour of ~pre-commit.ci~ by adding a ~ci:~ section to your
+~.pre-commit-config.yaml~. The fields are fairly self-explanatory as the example below shows. Its possible to toggle
+whether to ~autofix_prs~ and to set the ~autofix_commit_msg~. The ~autoupdate_schedule~ can be set to ~weekly~,
+~monthly~ or ~quarterly~ along with a custom ~autoupdate_commit_msg~. Finally you can optionally disable some hooks from
+being run only in ~pre-commit.ci~.
+
+#+begin_example
+ci:
+  autofix_prs: true
+  autofix_commit_msg: '[pre-commit.ci] Fixing issues with pre-commit'
+  autoupdate_schedule: weekly
+  autoupdate_commit_msg: '[pre-commit.ci] pre-commit automatically updated revs.'
+  skip: [pylint] # Optionally list ids of hooks to skip on CI
+#+end_example
+
+** Setup
+:PROPERTIES:
+:CUSTOM_ID: setup
+:END:
+Setup is relatively straight-forward, head to [[https://pre-commit.ci]] and sign-in with your GitHub account and grant
+~pre-commit.ci~ access to your account.
+
+#+caption: Pre-commit CI
+[[file:img/pre-commit-ci.png]]
+
+Once you have granted access you can choose which repositories =pre-commit.ci= has access to. It is possible to grant
+access to all repositories but I would recommend doing so on a per-repository basis so you know and are in control of
+what is happening across your repositories. If you have administration rights to organisation repositories these should
+be listed in the "/Select repositories/" pull-down menu.
+
+#+caption: Granting pre-commit.ci access to GitHub
+[[file:img/github-pre-commit-access.png]]
+
+*** ~pre-commit.ci~ jobs
+:PROPERTIES:
+:CUSTOM_ID: pre-commit.ci-jobs
+:END:
+When logged into ~pre-commit.ci~ using your GitHub account you are presented with a page similar to the following which
+lists the accounts and any organisations that you have authorised ~pre-commit.ci~ to access.
+
+#+caption: Pre-commit.ci account access
+[[file:img/account-pre-commit-ci.png]]
+
+You can follow the links through to view the history of jobs run by ~pre-commit.ci~ and whether they pass or fail. The
+page shows the current status and provides both Markdown and reStructured Text code for adding badges to your source
+documents (e.g. the Markdown badge can be added to your repositories top-level ~README.md~ and the badge will be
+displayed on GitHub)
+
+#+caption: Pre-commit.ci jobs pass
+[[file:img/pre-commit-ci-pass2.png]]
+
+You can click through and see the results of a given run and when they [[https://results.pre-commit.ci/run/github/168173540/1674062271.Tj4xDOxqRFu3CDIPhXkMJA][pass]] they look similar to the output you would
+have seen when making commits locally.
+
+#+caption: Pre-commit.ci jobs pass
+[[file:img/pre-commit-ci-pass3.png]]
+
+But sometimes things will [[https://results.pre-commit.ci/run/github/168173540/1674061180.-2Eo_dbfRAGrukip387Nhg][fail]] as shown below where the ~trailing-whitespace~ hook failed and the file was modified. But since ~pre-commit.ci~ corrects
+and pushes such changes automatically you can see at the bottom that these changes were pushed to the Pull Request from
+which the originated.
+
+#+caption: Pre-commit.ci jobs fail
+[[file:img/pre-commit-ci-fail.png]]
+
+** GitLab
+:PROPERTIES:
+:CUSTOM_ID: gitlab
+:END:
+As [[https://pre-commit.ci][~pre-commit.ci~]] doesn't (yet) support GitLab integrating ~pre-commit~ into your GitLab Pipeline is a little more
+involved. What follows is based on the excellent post on [[https://stackoverflow.com/collectives/articles/71270196/how-to-use-pre-commit-to-automatically-correct-commits-and-merge-requests-with-g][StackOverflow]] describing how to achieve this integration.
+
+You should already have a valid ~.pre-commit-config.yaml~ in place (if not work through [[https://ns-rse.github.io/posts/pre-commit/][Pre-commit : Protecting your
+future self (blog-post)]]). To enable ~pre-commit~ on your [[https://docs.gitlab.com/ee/ci/pipelines/][GitLab Pipeline]] you need to to have a pipeline in
+place. This is a file in the root of your repository called ~.gitlab-ci.yml~. You need to add the following to this
+file...
+
+#+begin_example
+variables:
+  # since we're not using merge request pipelines in this example,
+  # we will configure the pre-commit job to run on branch pipelines only.
+  # If you ARE using merge request pipelines, you can omit this section
+  PRE_COMMIT_DEDUPLICATE_MR_AND_BRANCH: false
+  PRE_COMMIT_AUTO_FIX_BRANCH_ONLY: true
+
+include:
+  - remote: 'https://gitlab.com/yesolutions/gitlab-ci-templates/raw/main/templates/pre-commit-autofix.yaml'
+#+end_example
+
+This uses the ~pre-commit-autofix.yaml~ from [[https://gitlab.com/yesolutions/][yesolutions]] to run ~pre-commit~ and as
+the configuration shows automatically apply fixes ~pre-commit~ makes to your code. There are more options available for
+configuring this pipeline and they are documented [[https://gitlab.com/yesolutions/gitlab-ci-templates][here]].
+
+Because you are allowing a third-party pipeline to access your repository when pushing the changes ~pre-commit~ makes
+back to your repository for this to work you /must/ create a [[https://docs.gitlab.com/ee/user/project/settings/project_access_tokens.html][project access token]]. Under the repositories /Settings >
+Access Tokens/ you can create a new token with an expiry date. You must then create a CI/CD variable called
+~PRE_COMMIT_ACCESS_TOKEN~ with this token as a value.
+
+Once you have done this your CI/CD pipeline should show at the very start the ~.pre~ stage...
+
+#+caption: GitLab pre-commit pipeline.
+[[file:img/gitlab-pre-commit-pipeline.png]]
+
+...and you can click through on this to see the details of the pipeline.  Note that it takes a while to run as it has to
+download and intialise all of the environments for each configured hook unlike [[https://pre-commit.ci][~pre-commit.ci~]] (this is akin to writing
+your own [[https://docs.github.com/en/actions][GitHub Action]] to run ~pre-commit~ which would also have to download and initialise the environments).
+
+#+caption: Success! GitLab pre-commit hooks pass!
+[[file:img/gitlab-pre-commit-pipeline-pass.png]]
+
+** Summary
+:PROPERTIES:
+:CUSTOM_ID: summary
+:END:
+This article has covered
+
+- Why to integrate [[https://pre-commit.com][~pre-commit~]] into your Continuous Integration/Delivery pipeline.
+- What the [[https://pre-commit.ci][~pre-commit.ci~]] service is and the benefits it provides.
+- How to integrate [[https://pre-commit.ci][~pre-commit.ci~]] with [[https://github.com][GitHub]] repositories.
+- How to integrate [[https://pre-commit.com][~pre-commit~]] with [[https://gitlab.com][GitLab]] repositories.
+
+By automating linting and testing in this manner you improve and shorten the feedback loop for developers and
+contributors which frees up more time and focus on the code itself.
+
+** Links
+:PROPERTIES:
+:CUSTOM_ID: links
+:END:
+- [[https://ns-rse.github.io/posts/pre-commit/][Pre-commit : Protecting your future self (blog-post)]]- pre-requisite
+  reading if you are not already using [[https://pre-commit.com][~pre-commit~]]
+- [[https://ns-rse.github.io/pre-commit/][Pre-commit : Protecting your future self (slides)]] - slides from a talk given
+  at Research Computing at the University of Leeds that extended the above blog post to cover the material in this post
+  (hit ~s~ to see the "speaker notes").
+- [[https://pre-commit.com][pre-commit~]]
+- [[https://pre-commit.ci][pre-commit.ci]]
+- [[https://stackoverflow.com/collectives/articles/71270196/how-to-use-pre-commit-to-automatically-correct-commits-and-merge-requests-with-g][How to use pre-commit to automatically correct commits and merge requests with GitLab CI - Stack Overflow]]
