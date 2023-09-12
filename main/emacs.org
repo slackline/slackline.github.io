@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       754f25a5-3429-4504-8a17-4efea1568eba
-:mtime:    20230905220957 20230815075829 20230811133225 20230810082255 20230809145131 20230730125116 20230730104447 20230729230947 20230703065708 20230613223302 20230527184757 20230527082330 20230513161935 20230309220249 20230221192022 20230217165509 20230217113056 20230216205143 20230205122258 20230205081022 20230203235526 20230120215724 20230114080430 20230109075443 20230106185900 20230103103311 20221229203153
+:mtime:    20230912203148 20230905220957 20230815075829 20230811133225 20230810082255 20230809145131 20230730125116 20230730104447 20230729230947 20230703065708 20230613223302 20230527184757 20230527082330 20230513161935 20230309220249 20230221192022 20230217165509 20230217113056 20230216205143 20230205122258 20230205081022 20230203235526 20230120215724 20230114080430 20230109075443 20230106185900 20230103103311 20221229203153
 :ctime:    20221229203153
 :END:
 #+TITLE: Emacs
@@ -16,7 +16,7 @@ Packages are what makes Emacs so great, there is literally a [[https://xkcd.com/
 
 [[./img/emacs/real_programmers.png]]
 
-There are a number of ways of repositories that host repositories (see [[id:ff8ee302-7518-4179-9bcb-63b13199f897][emacs_packages]])
+There are a number of ways of repositories that host repositories (see [[id:ff8ee302-7518-4179-9bcb-63b13199f897][Emacs Packages]])
 
 Sometimes packages need to be byte-compiled again, this can be achieved using ~M-: (byte-recompile-directory
 package-user-dir nil 'force)~ which will [[https://stackoverflow.com/a/1217249][force compilation]] of existing ~.elc~ files.
@@ -88,7 +88,12 @@ I use (yet to settle down), you can read more about configuration
 
 ** Templates
 
-Emacs has built-int templates but they can also be provided by Yasnippets. For more see [[id:a8c134c6-bb0f-408d-96ee-48b02da8cffe][emacs_templates]]
+Emacs has built-in templates but they can also be provided by Yasnippets. For more see [[id:a8c134c6-bb0f-408d-96ee-48b02da8cffe][Emacs Templates]].
+
+* Password
+
+I use [[https://www.passwordstore.org/][pass the standard UNIX password manager]] and its great, better still there are various Emacs packages for working
+with ~pass~. Read[[id:ac85ca6b-4b6e-4e8d-82f8-2f85c5062de6][emacs_pass]]
 * EmacsConf
 
 Read more about [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]].

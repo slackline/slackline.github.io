@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5b5d1562-ecb4-4199-b530-e7993723e112
-:mtime:    20230623214025 20230616161729 20230526200945 20230520211006 20230319231255 20230224095542 20230223120221 20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
+:mtime:    20230911192604 20230623214025 20230616161729 20230526200945 20230520211006 20230319231255 20230224095542 20230223120221 20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
 :ctime:    20221217185215 20230103103308
 :END:
 #+TITLE: Python
@@ -220,3 +220,9 @@ Really good set of resources
 + [[https://pythonspeed.com/performance/][Speed up your code]]
 + [[https://pythonspeed.com/articles/json-memory-streaming/][Processing large JSON files in Python without running out of memory]]
 + [[https://posit.co/blog/top-python-package-picks/][Python made easy with Posit]]
+
+** Podcasts
+
+A good podcast is [[https://talkpython.fm/episodes/all][TalkPython]]
+
++ [[https://talkpython.fm/episodes/show/429/taming-flaky-tests][Taming Flaky Tests]]

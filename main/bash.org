@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9c6257dc-cbef-4291-8369-b3dc6c173cf2
-:mtime:    20230722093604 20230714103949 20230528213012 20230519194008 20230330135624 20230326125853 20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
+:mtime:    20230912203523 20230911222141 20230722093604 20230714103949 20230528213012 20230519194008 20230330135624 20230326125853 20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
 :ctime:    20221231194258
 :END:
 #+TITLE: Bash
@@ -149,6 +149,10 @@ useful command line tools for working with files.
 
 [[id:16c65320-e19d-4bdc-ab55-c410860cddfa][sed]] is a ~s~tring ~ed~itor for processing text files at the command line.
 
+** fzf
+
+[[https://github.com/junegunn/fzf][fzf]] is a fuzzy completion tool. It integrates with Bash and [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][zsh]][[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]]
+
 ** gh
 
 [[id:9a9076c8-7698-47b9-9cd3-c8b9e06d6694][gh_cli]]
@@ -206,6 +210,10 @@ export -f _convert
 #+begin_src sh
 echo "${FILES}" | parallel -q -j ${JOBS} _convert {} $BITRATE
 #+end_src
+
+** thefuck
+
+[[https://github.com/nvbn/thefuck][thefuck]] is a tool for correcting your command line mistakes.
 
 ** xarg
 
