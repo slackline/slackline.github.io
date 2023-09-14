@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0859ef9e-834d-4e84-8e67-fa7593a61e0b
-:mtime:    20230910195251 20230910183057 20230910113355 20230803214400 20230801215130 20230726132229 20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
+:mtime:    20230914220336 20230910195251 20230910183057 20230910113355 20230803214400 20230801215130 20230726132229 20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
 :ctime:    20230222225246
 :END:
 #+TITLE: Git
@@ -726,6 +726,7 @@ It is often important to version control your data too, for more on this see [[i
 + [[https://myme.no/posts/2023-01-22-git-commands-you-do-not-need.html][Git Commands You Probably Do Not Need]]
 + [[https://www.admin-magazine.com/Archive/2022/72/Versioned-backups-of-local-drives-with-Git][Git Versioned Backups » ADMIN Magazine]]
 + [[https://web.archive.org/web/20190207210108/http://stevelorek.com/how-to-shrink-a-git-repository.html][How to Shrink a Git Repository]]
+
 ** Commits
 + [[https://dev.to/hornet_daemon/git-commit-patterns-5dm7][Git Commit Patterns]]
 ** Workflows
@@ -767,3 +768,4 @@ It is often important to version control your data too, for more on this see [[i
 + [[https://github.blog/2022-08-31-gits-database-internals-iii-file-history-queries/][Git’s database internals III: file history queries]]
 + [[https://github.blog/2022-09-01-gits-database-internals-iv-distributed-synchronization/][Git’s database internals IV: distributed synchronization]]
 + [[https://github.blog/2022-09-02-gits-database-internals-v-scalability/][Git’s database internals V: scalability]]
++ [[https://jvns.ca/blog/2023/09/14/in-a-git-repository--where-do-your-files-live-/][In a git repository, where do your files live?]]
