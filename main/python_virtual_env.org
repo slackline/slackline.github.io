@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       4bf1c297-d00a-4857-9339-8017c27138c6
-:mtime:    20230319231135
+:mtime:    20230915090808 20230319231135
 :ctime:    20230319231135
 :END:
 #+TITLE: Python Virtual Environments
@@ -12,6 +12,15 @@
 
 My preferred method of working with virtual environments is [[https://virtualenvwrapper.readthedocs.io/en/latest/][virtualenvwrapper]] as once installed and setup it provides
 convenient command line arguments for creating, activating, deactivating and switching between Virtual Environments.
+
+* Updating
+
+Over time the packages in your venv will become dated. Unfortunately ~pip~ doesn't currently have an option to update
+all installed packages. But a little magic can be used to achieve this.
+
+#+begin_src bash
+pip list --outdated --format=json | jq -r '.[] | .name'  | xargs -n1 pip install -U
+#+end_src
 
 * Conda
 

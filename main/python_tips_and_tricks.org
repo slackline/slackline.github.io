@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       73be660e-298f-4ccb-900c-215b86b3f4d5
+:mtime:    20230915175823
+:ctime:    20230915175823
+:END:
+#+TITLE: Python Tips and Tricks
+#+FILETAGS: :python:tips:tricks:howto:
+
+Lots of Tips and Tricks to Python
+
+* Lists
+
+* Dictionaries
+
+** Dictionary Comprehension
+
+** Using ~.get()~ method
+
+Instead of checking whether a key exists use the ~.get()~ method which has an argument to return a default value if the
+key is not found ([[https://mastodon.social/@bbelderbos@fosstodon.org/111068156714761195][source]]).
+
+#+begin_src python
+person = {"name": "John", "age": 30}
+# Instead of this:
+if "name" in person:
+    name = person["name"]
+else:
+    name = "Unknown"
+# Use this:
+name = person.get("name", "Unknown")
+#+end_src
+
+* Regular Expressions
+
+* Links
+
++ [[https://treyhunner.com/blog/archives/][Trey Hunner Blog]] lots of useful tidbits.
