@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       e1dcf5fc-2125-455d-b800-d3f1b318c8c9
+:mtime:    20230917083313
+:ctime:    20230917083313
+:END:
+#+TITLE: Web Hosting
+#+TILETAGS: :linux:vps:
+
+* nginx
+
+* DokuWiki
+
+* WordPress
+
+* Links
+
++ [[https://git.0x0.st/mia/0x0][mia/0x0: No-bullshit file hosting and URL shortening service - 0x0 - git.0x0.st]]

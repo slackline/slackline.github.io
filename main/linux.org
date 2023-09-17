@@ -1,7 +1,30 @@
 :PROPERTIES:
 :ID:       0e6300c6-7025-4f45-820d-4d9da82b41a6
-:mtime:    20230905212306 20230724174038
+:mtime:    20230917083604 20230905212306 20230724174038
 :ctime:    20230724174038
 :END:
 #+TITLE: Linux
 #+FILETAGS: :linux:computing:foss:opensource:
+
+* Distributions
+
+I started with RedHat 7.3 at work setting up a server for others to run their [[id:9aa32f65-144f-4c52-aab6-afebd17c1e5b][Genetic]] analysis on. Quickly decided to
+try out Slackware at home, liked compiling from source and the lack of circular dependency hell that frustrated me with
+RedHats RPM system.  After a while wanted a package management system so tried out [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]] and loved it and still use it
+to this day. For laptops and lower-powered devices I've settled on [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] as I've never bothered to set up
+distributed cross-compilation under Gentoo.
+
+
+* Shells
+
+I was a happy [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] user for many years but then I started a job at a tech company and people were using the fancy [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]]
+along with the [[https://ohmyz.sh/][Oh-myZsh]] framework. I liked the extra information and tools it provided so switched and haven't looked
+back. I still use Bash for my ~root~ account though just to make me a little more cautious.
+
+* Web Hosting
+
+I use Linux on my VPS and various places to host websites. I've written more on this at [[id:e1dcf5fc-2125-455d-b800-d3f1b318c8c9][Web-hosting.]]
+
+* Links
+
++
