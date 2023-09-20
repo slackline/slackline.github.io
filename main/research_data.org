@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       4c9eab3d-4ae2-4f48-a32c-925929fe60bf
-:mtime:    20230915175523 20230914185947 20230906113833 20230816094158 20230706112845 20230224183541 20230103103310 20221220065948
+:mtime:    20230920230340 20230915175523 20230914185947 20230906113833 20230816094158 20230706112845 20230224183541 20230103103310 20221220065948
 :ctime:    20221220065948
 :END:
 #+title: Open Research Data
@@ -31,6 +31,7 @@ consideration should be given to principles of GDPR.
 + [[https://fairsharing.org/][FAIR Sharing]]
 + [[https://sites.google.com/sheffield.ac.uk/fair-guidance/home][FAIR guidance]]
 + [[https://www.gida-global.org/care][CARE Principles — Global Indigenous Data Alliance]]
++ [[https://datadryad.org/][Data Dryad]]
 
 ** Articles
 + [[https://www.nature.com/articles/sdata201618][The FAIR Guiding Principles for scientific data management and stewardship | Scientific Data]]
