@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0859ef9e-834d-4e84-8e67-fa7593a61e0b
-:mtime:    20230914220336 20230910195251 20230910183057 20230910113355 20230803214400 20230801215130 20230726132229 20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
+:mtime:    20230920064045 20230914220336 20230910195251 20230910183057 20230910113355 20230803214400 20230801215130 20230726132229 20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
 :ctime:    20230222225246
 :END:
 #+TITLE: Git
@@ -437,6 +437,21 @@ main reason for using ~git rebase main~ over ~git merge main~ is the resolution 
 main~ all conflicts have to be dealt with in one go, however with ~git rebase main~ each commit from the ~main~ branch
 is merged with your branch in turn and requires any conflicts to be resolved before merging the next commit. This can
 make resolving conflicts a lot easier.
+
+*** Handling Conflicts
+
+Conflicts need careful consideration as its down to you as a developer to decide which version you want to keep. Git
+helpfully marks regions to make it clear where each section comes from and what the conflict is and you typically
+manually edit/remove the unwanted section (and the demarcation markup).
+
+Occasionally you may know which source you want to use in advance in which case you can resolve conflicts using the
+~--ours~ / ~--theirs~ flags (see [[https://dev.to/waylonwalker/git-merge-ours-k82][here]]). After initiating a merge and being told there are conflicts you can ~git
+checkout~ the branch you want to keep and then continue.
+
+#+begin_src bash
+  git checkout --ours .
+  git merge --continue
+#+end_src
 
 ** Copy files between branches
 
