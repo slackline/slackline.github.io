@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       73be660e-298f-4ccb-900c-215b86b3f4d5
-:mtime:    20230915175823
+:mtime:    20230918223023 20230915175823
 :ctime:    20230915175823
 :END:
 #+TITLE: Python Tips and Tricks
@@ -32,6 +32,15 @@ name = person.get("name", "Unknown")
 
 * Regular Expressions
 
+* Dunder Methods
+
+Dunder Methods (~__<something>__~) are really useful for adding methods to your classes.
+
+*** Testing for Equality
+
+Excellent morsel on [[https://www.pythonmorsels.com/overloading-equality-in-python/][Overloading equality in Python]].
+
 * Links
 
 + [[https://treyhunner.com/blog/archives/][Trey Hunner Blog]] lots of useful tidbits.
++ [[https://www.pythonmorsels.com/][Python Morsels]] also from Trey Hunner
