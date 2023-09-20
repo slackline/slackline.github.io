@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f8e9d58f-e729-483a-b008-489cd30f0f6a
-:mtime:    20230729075534 20230726160101 20230725131456 20230725111137 20230725074429 20230724221634 20230724202915 20230724174025 20230724125754 20230718173528 20230718155804 20230711095842 20230705103745 20230704213845 20230704200624
+:mtime:    20230919194334 20230919175552 20230729075534 20230726160101 20230725131456 20230725111137 20230725074429 20230724221634 20230724202915 20230724174025 20230724125754 20230718173528 20230718155804 20230711095842 20230705103745 20230704213845 20230704200624
 :ctime:    20230704200624
 :END:
 #+TITLE: R Packages
@@ -10,6 +10,12 @@ The first thing you should read when developing R packages is  [[https://r-pkgs.
 excellent and covers most common scenarios to get up and running.
 
 * devtools
+:PROPERTIES:
+:ID:       ae6c9316-47a1-4325-a934-fad319bdc238
+:ROAM_ALIASES: devtools
+:mtime:    20230919194334
+:ctime:    20230919194334
+:END:
 
 The [[https://devtools.r-lib.org/][devtools]] package should be your starting point for package development and has a bunch of useful functions for
 initialising and working with packages.
@@ -313,9 +319,23 @@ order to run the above pre-commit hooks. There are many options for this, includ
 #+end_src
 
 
+* testthat
+:PROPERTIES:
+:ID:       206d377a-f739-4cb9-afa7-8f3956ca2e38
+:mtime:    20221228150524
+:ctime:    20221228150524
+:END:
+* roxygen2
+:PROPERTIES:
+:ID:       02920384-18c3-4e27-8a63-29a693ab16d0
+:mtime:    20230423231749 20230103103308 20221228150524
+:ctime:    20221228150524
+:END:
+
 * Links
 
 + [[https://r-pkgs.org/][R Packages book by Hadley Wickham and Jenny Bryan]]
 + [[https://cran.r-project.org/web//packages/precommit/vignettes/precommit.html][R precommit]] ([[https://github.com/lorenzwalthert/precommit][GitHub | lorenzwalthert/precommit]] check the [[https://github.com/lorenzwalthert/precommit/issues][Issues]], can be useful for troubleshooting)
 + [[https://docs.conda.io/en/latest/miniconda.html][Miniconda]]
 + [[https://usethis.r-lib.org/reference/use_readme_rmd.html][Create README files — use_readme_rmd • usethis]]
++ [[https://github.com/posit-conf-2023/pkg-dev-masterclass/tree/main][PostConf 2023 R Package Development Masterclass]]

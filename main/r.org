@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       de9a18a7-b4ef-4a9f-ac99-68f3c76488e5
-:mtime:    20230803213634 20230730200921 20230726101218 20230706002432 20230704213853 20230508223533 20230506201917 20230423231605 20230411223218 20230210005221 20230125072709 20230112120722 20230103103313 20221228150524 20230103103308
+:mtime:    20230920062944 20230919175554 20230803213634 20230730200921 20230726101218 20230706002432 20230704213853 20230508223533 20230506201917 20230423231605 20230411223218 20230210005221 20230125072709 20230112120722 20230103103313 20221228150524 20230103103308
 :ctime:    20221228150524 20230103103308
 :END:
 #+TITLE: R
@@ -133,26 +133,15 @@ There are a lot of R user groups and there is no single definitive list, below a
 * Development
 :PROPERTIES:
 :ID:       61a19339-e706-4f93-b98c-f5b336d0f280
-:mtime:    20230706002432 20230704213853 20230506201917 20230103103309 20221228150524
+:mtime:    20230919175554 20230706002432 20230704213853 20230506201917 20230103103309 20221228150524
 :ctime:    20221228150524
 :END:
 At some point you may want to delve further into writing more structured code in R and write your own package. This can
 be a good way of organising your work and making it reproducible and available to others, but for this to be effective
 there are some principles which should be followed and thanks to the work of others there are many tools available to
-help with that. An excellent resource is the [[https://r-pkgs.org/][R Packages book by Hadley Wickham and Jenny Bryan]], I've made my notes under[[id:f8e9d58f-e729-483a-b008-489cd30f0f6a][r_packages]]
+help with that. An excellent resource is the [[https://r-pkgs.org/][R Packages book by Hadley Wickham and Jenny Bryan]], I've made my notes
+under [[id:f8e9d58f-e729-483a-b008-489cd30f0f6a][R Packages]].
 
-** testthat
-:PROPERTIES:
-:ID:       206d377a-f739-4cb9-afa7-8f3956ca2e38
-:mtime:    20221228150524
-:ctime:    20221228150524
-:END:
-** roxygen2
-:PROPERTIES:
-:ID:       02920384-18c3-4e27-8a63-29a693ab16d0
-:mtime:    20230423231749 20230103103308 20221228150524
-:ctime:    20221228150524
-:END:
 
 * Links
 
