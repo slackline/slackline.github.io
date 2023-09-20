@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       169b9c5f-df34-46ab-b64f-8ee98946ee69
-:mtime:    20230718145501 20230613223232 20230515080140 20230513163615 20230424102336 20230413154310 20230408213646 20230319195017 20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
+:mtime:    20230920063141 20230718145501 20230613223232 20230515080140 20230513163615 20230424102336 20230413154310 20230408213646 20230319195017 20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
 :ctime:    20221217184411
 :END:
 #+TITLE: Orgmode
@@ -57,7 +57,13 @@ last number.
 * Tables
 
 A fairly fundamental structure in documents is tables and these are well supported, with [[https://emacs.stackexchange.com/a/38140/10100][cell wrapping]], functions,
-acting as input to code blocks in literate documents.
+acting as input to code blocks in literate documents. Lots of options for manipulating and working with tables, see the
+[[https://orgmode.org/manual/Built_002din-Table-Editor.html][Built-in Table Editor (The Org Manual)]] for full details.
+
+| Action             | Key Sequence |
+|--------------------+--------------|
+| Insert row above   | ~M-S-DOWN~   |
+| Delete current row | ~M-S-UP~     |
 
 
 * Links
