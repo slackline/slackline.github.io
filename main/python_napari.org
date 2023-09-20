@@ -1,0 +1,128 @@
+:PROPERTIES:
+:ID:       3b8242c4-772a-408e-84bc-6b0e1777aa36
+:mtime:    20230920223047 20230920170217 20230920155200
+:ctime:    20230920155200
+:END:
+#+TITLE: Python Napari
+#+FILETAGS: :python:visualisation:
+
+* Napari Training Course
+** [2023-09-20 Wed 16:00]
++ [[https://docs.google.com/document/d/1JyFscRvs0PLKiU0L7dv8tPffMwvLYrBkpgNM5XE8PeI/edit][Agenda]]
++ [[https://docs.google.com/presentation/d/1jKA89NV98i-mq5LUj2LbUcVmW_dOu2u0zt081hcur8E/edit][All Slides]]
+*** Plugin Modularity Stephen Lenzi (Metacell)
+Good code makes good plugins...
+  + Does what it is supposed to
+  + Testable
+  + Developer Friendly
+  + Provides User feedback
+In addition...
+  + Good user experience
+  + How it works in conjunction with other plugins
+**** Modularity
++ Code organised in a human friendly way.
++ Simpler to read and understand
++ Individual components can be reused
++ Easier to extend something that is modular
++ Pre-requsitie for writing testable code.
++ Avoids re-inventing the wheel.
+**** Code Readability
++ PEP8 /Zen of Python/
+**** Decomposition and separation of concerns
++ Extract related functionality into functions
++ Decompoistion break copmlex functions into several steps
++ Group related functions
++ Dependency Injection
++ Organise files sensibly
++ Think about abstract cases
+**** Decomposition and separation of concerns...of plugins
++ Separate widgets so they do one thing.
+**** Readers and Writers
++ Should be independent of plugin workflows, do they operate on Napari layers directly.
++ Reading from disk, will output be written to disk?
++ Work on Napari layers rather than data directly.
++ Will it be needed by several plugins?
++ Does it already exist?
+**** Dependencies
++ Heavy dependencies can block other functionality.
++ Import in the "right" place (e.g. ~try: import x except:~ within a function)
++ Restrict dependencies to the minimum possible (single modules or functions) if reaosnable.
++ Use wrappers with multiple backends.
+**** Don't let plugins block other functionality
++ Shouldn't make Napari hang whilst doing things.
+**** Test your plugin
++ Make sure it works with other plugins
++ Get user feedback
+**** Separate GUI logic from Business logic
+
+*** Testing Napari Plugins Simao Bolota Sa (Metacell)
+**** Types of Testing for plugins
++ Unit, functional, smoke, performance, property, and integration
+**** Granularity and Threading
++ Prefer small unit tests over integration tests.
++ Develop tests early during development.
++ If tests are hard to write then consider refactoring.
+**** Unit Testing with PyTest
++ Performed on each module or block of code during development.
++ Tests the internal logic.
++ Behaviour of the plugins codebase.
++ Tests input variations (i.e. parametrize tests).
+**** Fixtures
++ Use fixtures they make sure tests are consistent.
++ ~make_napari_viewer~ is an important fixture for plugin development.
+**** Mocking
++ Test "fake" behaviour.
++ Useful for edge cases and errors.
++ Minimise external influences.
++ Saves setting up resources and can be faster.
+**** Pydantic
++ Data validation, parsing and serialization.
++ Enhances the readability of data handling within the application.
++ Ensures the data being tested is valid and correctly
+**** Mypy
++ Checks typing is consistent, well worth using.
+*** Napari Plugin Maintenance Sean Martin (MetaCell)
+**** Automate Processes
++ Gives clarity on quality control.
++ Helps prevent bad practices.
+**** Plugin automates
++ Uploading to PyPI
++ Conversion to Conda forge
++ Tests
++ Building documentation
+**** Versioning
++ Semantic or Calendar
++ Either allow users to trust your plugin.
++ Semantic can get stuck on 0.x.y
++ Keep a ~ChangeLog~ its useful for users and yourselves.
+**** Dependencies
++ Use virtualenvs
++ Establish dependencies using ~pyproject.toml~
++ Set environment markers
+  + magicgui==0.7.3 ; python_version >= "3.10"
+  + magicgui==0.7.2 ; python_version < "3.10"
+  + qtpy == 2.3.1 ; sys_platform != "darwin"
+  + qtpy >= 2.3.0 ; sys_platform == "darwin"
+**** GitHub Publishing
++ Make sure to include ~Framework::napari~ to get it included.
+**** Conda-forge
++ Recipes go to ~staged-recipes~ this creates a feedstock.
++ Recipe is automatically moved to the main forge and staging is removed.
++ Have package on PyPI first.
++ Fork and clone ~staged-recipes~ then run ~grayskull~ which generates a recipe from PyPI
++ Build locally with the supplied script in a Docker environment (~build-locally.py~).
++ Refine ~meta.yaml~ until it passes.
++ Check review guidelines then submit PR to ~conda-ofrge/staged-recipes~
+**** There is a ~napari-plugins-check~!
+** [2023-09-21 Thu 16:00]
+
+
+* Links
+
+** Development
++ [[https://napari.org/stable/plugins/best_practices.html][Napari Best Practices]]
++ [[https://github.com/napari/cookiecutter-napari-plugin][GitHub - napari/cookiecutter-napari-plugin: Cookiecutter for napari plugins]]
+
+** Plugins
+
++ [[https://pypi.org/project/cellfinder-napari/][cellfinder-napari]]
