@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a7fbe90-1f6e-4a38-a0c8-b378b1893f33
-:mtime:    20230916065434 20230915202700 20230910203044
+:mtime:    20230922120216 20230916065434 20230915202700 20230910203044
 :ctime:    20230910203044
 :END:
 #+TITLE: Mastodon
@@ -204,6 +204,8 @@ installation of ~iptables~ is somewhat different from the recommended.
 + [[https://dramsch.net/today-i-learned/social-media/mastodon-user-post-timeline/][Mastodon User Timelines are RSS Feeds | Real-world Machine Learning]]
 + [[https://www.bentasker.co.uk/posts/blog/software-development/writing-a-simple-mastodon-bot-to-submit-rss-items.html][Writing A Simple RSS To Mastodon Bot | www.bentasker.co.uk]]
 + [[https://dev.to/contentful/create-a-bot-with-rss-and-webhooks-for-mastodon-a-twitter-alternative-l4o][Create a bot with RSS and webhooks for Mastodon, a Twitter alternative - DEV Community]]
++ [[https://thibaultmilan.com/blog/2022/12/20/how-to-create-a-rss-feed-bot-for-mastodon/][How to create a RSS feed bot for Mastodon – Thibault Milan]] - This was the most simple solution I've come across and
+  the one I've used!
 
 ** Academic
 :PROPERTIES:
