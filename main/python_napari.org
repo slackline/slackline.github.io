@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3b8242c4-772a-408e-84bc-6b0e1777aa36
-:mtime:    20230920223047 20230920170217 20230920155200
+:mtime:    20230922202237 20230920223047 20230920170217 20230920155200
 :ctime:    20230920155200
 :END:
 #+TITLE: Python Napari
@@ -119,6 +119,7 @@ In addition...
 
 * Links
 
++ [[https://chanzuckerberg.github.io/napari-plugin-accel-workshops/workshops/softwaredev][napari Plugin Accelerator Grant workship series]]
 ** Development
 + [[https://napari.org/stable/plugins/best_practices.html][Napari Best Practices]]
 + [[https://github.com/napari/cookiecutter-napari-plugin][GitHub - napari/cookiecutter-napari-plugin: Cookiecutter for napari plugins]]
