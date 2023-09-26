@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       eaf15ed2-dd31-4b30-a6ce-4b47b6baed0f
+:mtime:    20230926220720
+:ctime:    20230926220720
+:END:
+#+NAME: Linux LiveUSB
+#+FILETAGS: :linux:security:liveusb:usb:
+
+* MultiBootUSB
+
+[[https://mbusb.aguslr.com/][MultiBoot USB]] is a project which sets up a USB drive and allows you to use additional space for storage beyond what ISO
+images that are saved to disk use.
+
+* Tails
+
+[[https://tails.net/][Tails]] is an amazing project that provides a secure operating system that connects to the Tor network.
+
+
+* Links
+
+** Tails
+
++ [[https://tails.net/][Tails]]
+
+** MultibootUSB
+
++ [[https://mbusb.aguslr.com/][MultiBoot USB by aguslr]]
++ [[https://github.com/aguslr/multibootusb][GitHub]]
++ [[https://forum.manjaro.org/t/root-tip-multi-iso-usb-with-storage-partition/34625][[root tip] [How To] Multi ISO USB with storage partition - Contributions / Tutorials - Manjaro Linux Forum]]

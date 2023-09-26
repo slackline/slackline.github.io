@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5
-:mtime:    20230907232738 20230803211138 20230722230042 20230721144339 20230720100255 20230705092829 20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
+:mtime:    20230924112611 20230907232738 20230803211138 20230722230042 20230721144339 20230720100255 20230705092829 20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
 :ctime:    20230304230340
 :END:
 #+TITLE: Artificial Intelligence
@@ -96,6 +96,9 @@ instead employ people to do jobs.
 + [[https://arxiv.org/abs/2212.03551][[2212.03551] Talking About Large Language Models]]
 + [[https://unesdoc.unesco.org/ark:/48223/pf0000385841][Open data for AI: what now? - UNESCO Digital Library]]
 + [[https://attitudestoai.uk/findings][Attitudes to AI in the UK (2023)]]
++ [[https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4526071][Ideas are Dimes a Dozen: Large Language Models for Idea Generation in Innovation by Karan Girotra, Lennart Meincke,
+  Christian Terwiesch, Karl T. Ulrich :: SSRN]]
+
 
 ** Tools
 
@@ -107,6 +110,9 @@ instead employ people to do jobs.
 + [[https://time.com/6273743/thinking-that-could-doom-us-with-ai/?][The 'Don't Look Up' Thinking That Could Doom Us With AI | Time]]
 + [[https://www.theguardian.com/commentisfree/2023/jun/11/big-tech-warns-of-threat-from-ai-but-the-real-danger-is-the-people-behind-it][Fantasy fears about AI are obscuring how we already abuse machine intelligence | Kenan Malik | The Guardian]]
 + [[https://simonwillison.net/2023/Aug/3/weird-world-of-llms/][Catching up on the weird world of LLMs]]
++ [[https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey][Will A.I. Become the New McKinsey? | The New Yorker]]
++ [[https://www.secondbest.ca/p/ai-and-leviathan-part-i][AI and Leviathan: Part I - by Samuel Hammond - Second Best]]
++ [[https://www.secondbest.ca/p/ai-and-leviathan-part-ii][AI and Leviathan: Part II - by Samuel Hammond - Second Best]]
 
 ** Books
 + [[https://github.com/ageron/handson-ml3][Hands-On Machine Learning with Scikit-Learn, Keras and TensorFlow]] - Jupyter

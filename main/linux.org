@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0e6300c6-7025-4f45-820d-4d9da82b41a6
-:mtime:    20230917083604 20230905212306 20230724174038
+:mtime:    20230926220759 20230917083604 20230905212306 20230724174038
 :ctime:    20230724174038
 :END:
 #+TITLE: Linux
@@ -24,6 +24,11 @@ back. I still use Bash for my ~root~ account though just to make me a little mor
 * Web Hosting
 
 I use Linux on my VPS and various places to host websites. I've written more on this at [[id:e1dcf5fc-2125-455d-b800-d3f1b318c8c9][Web-hosting.]]
+
+* Live USB
+
+It can be handy to have a live distribution to carry around and boot as and when, there are a few options read more at
+[[id:eaf15ed2-dd31-4b30-a6ce-4b47b6baed0f][here]].
 
 * Links
 
