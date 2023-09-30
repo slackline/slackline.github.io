@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       754f25a5-3429-4504-8a17-4efea1568eba
-:mtime:    20230912203148 20230905220957 20230815075829 20230811133225 20230810082255 20230809145131 20230730125116 20230730104447 20230729230947 20230703065708 20230613223302 20230527184757 20230527082330 20230513161935 20230309220249 20230221192022 20230217165509 20230217113056 20230216205143 20230205122258 20230205081022 20230203235526 20230120215724 20230114080430 20230109075443 20230106185900 20230103103311 20221229203153
+:mtime:    20230930080414 20230929002937 20230912203148 20230905220957 20230815075829 20230811133225 20230810082255 20230809145131 20230730125116 20230730104447 20230729230947 20230703065708 20230613223302 20230527184757 20230527082330 20230513161935 20230309220249 20230221192022 20230217165509 20230217113056 20230216205143 20230205122258 20230205081022 20230203235526 20230120215724 20230114080430 20230109075443 20230106185900 20230103103311 20221229203153
 :ctime:    20221229203153
 :END:
 #+TITLE: Emacs
@@ -9,6 +9,10 @@
 
 I'm forever trying to convince people to try out Emacs and figured it would be worthwhile writing a short guide to
 getting started [[id:36a83dd6-7535-43a9-9b68-15dc135c86fd][Emacs Getting Started]].
+
+
+[[./img/How-to-Learn-Emacs-v2-Large.png]]
+
 
 * Packages
 
@@ -41,7 +45,7 @@ A useful article on using GPG with Emacs is [[https://www.masteringemacs.org/art
 * Magit
 
 [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] is an amazing package, its a porcelain to Git which means it gives access to all of the functions on the command
-line. It is widely considered a killer feature of Emacs (along with Org-mode). Learn to use it and you'll find your use
+line. It is widely considered a killer feature of Emacs (along with [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]]). Learn to use it and you'll find your use
 of and productivity using Git dramatically increases.
 
 * Org-mode
@@ -138,6 +142,7 @@ Read more about [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]].
 + [[https://github.com/emacs-tw/awesome-emacs][Awesome Emacs: A community driven list of useful Emacs packages, libraries and other items.]]
 + [[https://www.masteringemacs.org/article/emacs-builtin-elisp-cheat-sheet][Emacs's Builtin Elisp Cheat Sheet - Mastering Emacs]]
 + [[https://www.ingentaconnect.com/content/matthey/jmtr/2022/00000066/00000002/art00002;jsessionid=5o2da922fbmbh.x-ic-live-02][Emacs as a Tool for Modern Science : The use of open source tools to immprove scientific workflows]]
++ [[https://sachachua.com/blog/2013/05/how-to-learn-emacs-a-hand-drawn-one-pager-for-beginners/][How to Learn Emacs: A Hand-drawn One-pager for Beginners / A visual tutorial :: Sacha Chua]]
 
 *** Mastering Emacs Articles
 + [[https://www.masteringemacs.org/article/polymode-multiple-major-modes-how-to-use-sql-python-in-one-buffer][Polymode: Multiple Major Modes and How to Use SQL and Python in one Buffer]]

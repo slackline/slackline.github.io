@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       220d7ba9-d30e-4149-a25b-03796e098b0d
-:mtime:    20230528203919 20230331095952 20230329110200 20230222123344 20230103103309 20221228103404 20230103103308
+:mtime:    20230930074848 20230528203919 20230331095952 20230329110200 20230222123344 20230103103309 20221228103404 20230103103308
 :ctime:    20221228103404 20230103103308
 :END:
 #+TITLE: Magit
@@ -9,9 +9,7 @@
 
 Magit is a porcelain for [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]]. This means its a container and simply provides access to all the functionality of Git but
 from directly within Emacs via a series of easy to use [[id:d6626ec2-1e95-4d42-b06e-ae45268f2b58][emacs_transient]]
-* Forge
 
-You can interact with forges such as [[https://gitlab.com][GitLab]], [[https://github.com][GitHub]] and so forth although support is limited beyond these main two.
 
 * Configuration
 
@@ -57,10 +55,25 @@ Rebase (Part I)]] and [[https://www.lvguowei.me/post/magit-rebase-2/][Magit tuto
 :ctime:    20221228103404
 :END:
 
+You can interact with forges such as [[https://gitlab.com][GitLab]], [[https://github.com][GitHub]] and so forth although support is limited beyond these main two.
+
 Once you've setup and configured Forge you can pull all issues and pull requests with ~M-x forge-pull~ or from a ~magit~
 buffer use ~f n~. You can then create issues when the cursor is on the "~Issues~" section with ~N c i~ or similarly pull
 requests (~N c p~). You can comment and edit existing topics, whether that is Issues or Pull Requests by hitting
 ~Return~ to view it and ~C-c C-e~ to edit a given section when the cursor is over that section.
+
+* Orgmode Interaction
+
+The [[https://github.com/magit/orgit][orgit]] and [[https://github.com/magit/orgit-forge][orgit]] packages add support for org links to Magit and Forge buffers so you can litter your [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]] files
+with links to repositories, issues, pull requests etc.
+
+* Other Packages
+
+** [[https://github.com/armindarvish/consult-gh][Consult-gh]]
+
+This package fulfils the authors need to interact with various repositories that they visit regularly but don't have
+cloned locally (as far as I can tell). It relies on the ~gh~ command line interface and Consult. For a full exposition
+see the post at [[https://www.armindarvish.com/en/post/consult-gh_working_with_github_inside_emacs_in_2023_/][Consult-GH: Working with GitHub inside Emacs in 2023]].
 
 * Links
 
