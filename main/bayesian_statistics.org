@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       38feb454-ee1e-440b-939c-c413009c609d
-:mtime:    20230103103312 20221214222726 20230103103309
+:mtime:    20230930145615 20230103103312 20221214222726 20230103103309
 :ctime:    20221214222726
 :END:
 #+TITLE: Bayesian Statistics
@@ -60,14 +60,22 @@ excellent book which is available on-line for free as well as in print.
 + [[https://www.intuitivebayes.com][Intuitive Bayes]]
 
 ** Books
+
 + [[http://www.stat.columbia.edu/~gelman/book/][Bayesian Data Analysis | Gelman et al.]]
 + [[https://allendowney.github.io/ThinkBayes2/][Think Bayes 2 | Allen Downey]]
 + [[https://xcelab.net/rm/statistical-rethinking/][Statistical Rethinking | Richard McElreath]] ([[https://github.com/rmcelreath/stat_rethinking_2022][Statistical Rethinking 2022]] | [[https://bookdown.org/content/4857/][Statistical Rethinking (Second Edition) with
   brms, ggplot2, and the tidyverse]] | [[https://vincentarelbundock.github.io/rethinking2/][Rethinking2 using Stan, R, rstan, tidybayes, and ggplot2]] | [[https://github.com/pymc-devs/resources/tree/master/Rethinking_2][PyMC3 Rethinking 2]])
 + [[https://www.bayesrulesbook.com/][Bayes Rules! An Introduction to Applied Bayesian Modeling | Alicia Johnson, Miles Ott, Mine Dogucu]]
++ [[https://avehtari.github.io/ROS-Examples/][Regression and Other Stories]]
 
 ** Blog
+
++ [[https://manywordsandnumbers.org/2023/09/16/better-reproducibility-in-biology-by-better-statistics/#org6a76c06][Better reproducibility in biology by better statistics 🥚 🥚 🥚 – many words and numbers]]
+
+** Podcast
+
 + [[https://www.learnbayesstats.com/][The "Learning Bayesian Statistics" podcast]]
 
 ** Miscellaneous
+
 + [[https://neurallikelihoodfreeinference.github.io/about][Neural Likelihood Free Inference]] - a list of papers using neural networks for Bayesian Likelihood-free Inference.

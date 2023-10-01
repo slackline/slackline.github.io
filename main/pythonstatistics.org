@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ec8e7ee9-0316-4de2-98c1-f775c20b0e35
-:mtime:    20230905212210 20230905092900 20230711203358 20230510155356 20230330143114 20230103103314 20220323114739 20230103103314 20230103103308
+:mtime:    20231001132808 20230905212210 20230905092900 20230711203358 20230510155356 20230330143114 20230103103314 20220323114739 20230103103314 20230103103308
 :ctime:    20220323114739 20230103103308
 :END:
 #+TITLE: Python Data Analysis and Visualisation
@@ -83,8 +83,7 @@ A very large and comprehensive package for machine learning.
 
 ** Dashboards
 
-+ [[https://aws.amazon.com/builders-library/building-dashboards-for-operational-visibility/][Building dashboards for
-  operational visibility | Amazon Builders' Library]]
++ [[https://aws.amazon.com/builders-library/building-dashboards-for-operational-visibility/][Building dashboards for operational visibility | Amazon Builders' Library]]
 
 ** Learning Resources
 
@@ -93,3 +92,7 @@ A very large and comprehensive package for machine learning.
 + [[https://pandas.pydata.org/docs/user_guide/10min.html][Introduction to Pandas]]
 + [[https://sebastianraschka.com/blog/2020/numpy-intro.html#410-matplotlib][Introduction to Matplotlib]]
 + [[https://inria.github.io/scikit-learn-mooc/][Scikit-learn course]]
+
+** Visualisation
+
++ [[https://python-graph-gallery.com/][Python Graph Gallery]]
