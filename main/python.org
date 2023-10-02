@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5b5d1562-ecb4-4199-b530-e7993723e112
-:mtime:    20230920154939 20230915180115 20230911192604 20230623214025 20230616161729 20230526200945 20230520211006 20230319231255 20230224095542 20230223120221 20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
+:mtime:    20231002122344 20230920154939 20230915180115 20230911192604 20230623214025 20230616161729 20230526200945 20230520211006 20230319231255 20230224095542 20230223120221 20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
 :ctime:    20221217185215 20230103103308
 :END:
 #+TITLE: Python
@@ -158,6 +158,10 @@ returned.  The consistency of type hints can be checked using [[http://mypy-lang
 I found [[https://kobzol.github.io/rust/python/2023/05/20/writing-python-like-its-rust.html][Writing Python like its Rust]] a really insightful read and will be endeavour to use this as well as pydantic in
 future work.
 
+* Iterators and Generators
+
+There is more to Python ~for~ loops than meets the eye because they actually use ~iterators~ all over the place. A good
+article detailing all this is [[https://opensource.com/article/18/3/loop-better-deeper-look-iteration-python][Loop better: A deeper look at iteration in Python | Opensource.com]].
 * Profiling
 
 [[id:dd7c615f-cd8b-426d-aec0-cfd3803437cc][Python profiling]] can be leveraged to find where the bottlenecks are in your workflow and where things can be sped up.
@@ -218,6 +222,7 @@ Really good set of resources
 *** Misc
 
 + [[https://benhoyt.com/writings/python-api-design/][Designing Pythonic library APIs]]
++ [[https://opensource.com/article/18/3/loop-better-deeper-look-iteration-python][Loop better: A deeper look at iteration in Python]]
 
 ** GUI
 
