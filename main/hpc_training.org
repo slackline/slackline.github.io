@@ -1,0 +1,128 @@
+:PROPERTIES:
+:ID:       0e78437a-296e-4a3b-9797-9a50d83ddb98
+:mtime:    20231002145220 20231002134853
+:ctime:    20231002134853
+:END:
+#+TITLE: HPC Training
+#+FILETAGS: :rse:tuos:hpc:training:
+
+* Introduction to High Performance Computing
+
+* Stanage
+
+When you connect you connect to a login node, and worker nodes are then requested via a scheduler. The Login node allows
+you to setup the requests to the scheduler.
+
+** Storage
+
++ There are 2PB of Lustre parallel filesystems
++ 50GB for users ~/home~ directories, these are backed up.
++ Research groups can have 10TB ~/shared~ (xdrive) available for research groups.
++ Also node local storage.
+
+** Login and Worker Nodes
+
++ Use ~srun --pty bash -i~ to start an interactive session to test your scripts. But do NOT start jobs in this manner
+  only use it for testing.
+
+** Types of Compute Resources
++ Cluster choice - different CPU and GPU architectures and so on.
++ Time allocations - Bessemer allows 168hrs, Stanage 96hrs
++ Core allocation - Single nodes on Bessemer, multiple nodes on Stanage, ~4GB per CPU core.
++ Memory allocation - Stanage supports larger memory nodes (upto 2TB).
++ Filestore limits - Stanage provides more storage.
+
+If jobs are killed save things regularly as jobs can be killed and you don't want to lose results.
+
+Under allocation of resources will result in jobs failing.
+Similarly don't over allocate resources as it means they are not available for others.
+
+Use benchmarking to define the resource requirements of your program.
+
+** Parallel Computing
+
+*** Shared v Distributed Memory
+
+|             | Advantage                               | Disadvantage                             | Libraries                 |
+|-------------+-----------------------------------------+------------------------------------------+---------------------------|
+| Distributed | Multi-node computation (only Stanage)   | Could be more complicated to implement   | Python ~mpi4py~           |
+|             | Scalability and flexibility             | Need to ne aware of the network topology | R ~parapply~ / ~mclapply~ |
+|             | More control over the data distribution |                                          |                           |
+|             | High performance and efficiency         |                                          |                           |
+|-------------+-----------------------------------------+------------------------------------------+---------------------------|
+| Shared      | Simplicity and portability              | Single node (Bessemer and Stanage)       | Python ~multiprocessing~  |
+|             |                                         |                                          | R ~mclapply~              |
+|             |                                         |                                          |                           |
+
+[[https://en.wikipedia.org/wiki/Amdahl%27s_law][Amdahl's Law]]
+
+Embarrassingly parallel program results in better scaling.
+
+** SLURM
+
+[[https://slurm.schedmd.com/overview.html][SLURM Workload Manager]] is a reosurce management system used by both Bessemer and Stanage. It manages resource requests
+for running jobs and aims to create a fair-sharing environment. You are responsible for allocating appropriate
+resources.
+
+*** Interactive Jobs
+
+~srun --pty bash -i~ has a hard cut-off of eight hours, and if connection is lost and SSH your program is aborted. If
+connection is lost you will also have your job terminated, you might get round this by running ~tmux~ from the login and
+then starting an interactive job.
+
+*** Setting up a software Environment on a worker node
+
+You use ~module load~ to load the different apps that you want to use, e.g. ~module load apps/python/3.6/binary~.
+
+Note that some of these apps may well be outdated.
+
+*** Writing a submission scripts
+
+These are [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] scripts
+
+#+BEGIN_SRC bash
+  #!/bin/bash
+  #SBATCH -mem=16000            << 16GB RAM
+  #SBATCH --nodes=10            << Number of nodes
+  #SBATCH --ntasks=200           << Total number of tasks
+  #SBATCH --cpus-per-task=20     << Number of CPU cores on a node
+  #SBATCH --gres=cpu:2
+  module load apps/python/3.6/binary
+  python -m myscript.py
+#+END_SRC
+
+You get email notifications on job changes (finish, errors etc.). Lots of examples in the documentation.
+
+Job arrays allows you to submit a single-core job multiple times with different inputs.
+
+*** Making a submission
+
+#+BEGIN_SRC bash
+sbatch submission.sh
+#+END_SRC
+
+*** Checking status
+
+You can check the status of jobs looking at the ~<name>-<job_id>.out~, you can check the status of a job using ~squeue~
+Jobs are pending (PD), running (R), suspended (S), failed (F) or completed (CD). Resources can be viewed using the
+~sacct -j <job_id~ or ~seff <job_id>~.
+
+bYou can delete a job using ~scancel <job_id>~
+
+~SLURM_JOB_ID~ can be accessed from Python and used in writing output.
+
+#+BEGIN_SRC python
+import os
+
+JOB_ID = os.environ("SLURM_JOB_ID")
+
+with open("outputfile" + JOB_ID + ".txt", "w") as f:
+    f.write("The results are saved")
+#+END_SRC
+* Links
+
++ [[https://docs.hpc.shef.ac.uk/en/latest/][High Performance Computing at Sheffield — Sheffield HPC Documentation]]
+  + [[https://docs.hpc.shef.ac.uk/en/latest/stanage/index.html][Stanage — Sheffield HPC Documentation]]
+  + [[https://docs.hpc.shef.ac.uk/en/latest/bessemer/index.html][Bessemer — Sheffield HPC Documentation]]
+
++ [[https://hpc-uit.readthedocs.io/en/latest/jobs/examples.html][Useful examples]]

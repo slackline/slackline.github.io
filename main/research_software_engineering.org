@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       49d21f82-887e-4ec7-8963-89460673352a
-:mtime:    20230905114847 20230813212014 20230724103934 20230224093243 20230103103310 20221210163140
+:mtime:    20231002134921 20230905114847 20230813212014 20230724103934 20230224093243 20230103103310 20221210163140
 :ctime:    20221210163140
 :END:
 #+title: Research Software Engineering
@@ -8,6 +8,11 @@
 
 Research Software Engineering covers many areas of software development such as version control (typically via [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]]),
 [[id:0911a63f-4b82-4bf1-9235-f1e41e93d210][Open Research]], good coding practices (e.g. [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linting]], [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]]) and at the more technical end
+
+* Training
+
++ [[id:0e78437a-296e-4a3b-9797-9a50d83ddb98][HPC Training]]
+
 * Links
 
 + [[https://rse.shef.ac.uk/][Research Software Engineering Sheffield]] ([[https://rse.shef.ac.uk/blog/][Blog]] | [[https://rse.shef.ac.uk/newsletters/][Newsletters]] | [[https://github.com/orgs/RSE-Sheffield][GitHub]] | [[https://twitter.com/RSE_Sheffield][@RSE_Sheffield]])

@@ -1,13 +1,12 @@
 :PROPERTIES:
 :ID:       47543a76-a873-4c07-b30d-926f50b31fca
-:mtime:    20230316193310 20230103103310 20221228151415
+:mtime:    20231004101814 20230316193310 20230103103310 20221228151415
 :ctime:    20221228151415
 :END:
 #+TITLE: Python PIP
 #+DATE: [2022-12-11 Sun 19:42]
 #+FILETAGS: :python:packages:pip:
 
-* Usage
 
 Usage is fairly straight-forward, by default ~pip~ uses the main [[https://pypi.org][Python Package Index (PyPI)]].
 
@@ -15,9 +14,9 @@ Usage is fairly straight-forward, by default ~pip~ uses the main [[https://pypi.
   pip install <pkgname
 #+end_src
 
-** Installing from other Repositories
+* Installing from other Repositories
 
-** Installing from Cloned Source
+* Installing from Cloned Source
 
 Some projects haven't made it to a PyPI and are provided as source code on a forge such as [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]], [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]]. These can be
 cloned to your computer and installed.
@@ -28,17 +27,32 @@ cloned to your computer and installed.
   pip install .
 #+end_src
 
-** Installing from GitHub
+* Installing from GitHub
 
 You can also install packages directly from GitHub
 
-*** Installing Specific Branches
+** Installing Specific Branches
 
-** Cleaning Virtual Environments
+* Cleaning Virtual Environments
 
 Sometimes your environments can get cluttered with unnecessary packages. [[https://github.com/fredrikaverpil/creosote][creosote]] can help here as it analyses a virtual
 environment and removes unnecessary packages.
 
+* Upgrading
+
+Upgrading is a bit of pain, there is no option to automatically upgrade all packages that are installed within a virtual
+environment. You can however use a little bit of [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] shell magic to do this in one line.
+
+
+#+begin_src bash
+pip list --outdated --format=json | jq -r '.[] | .name'  | xargs -n1 pip install -U
+#+end_src
+
+For convenience you can set an alias for this in your ~\~/.bash_aliases~ file.
+
+#+begin_src bash
+alias pip_upgrade="pip list --outdated --format=json | jq -r '.[] | .name'  | xargs -n1 pip install -U"
+#+end_src
 * Links
 
 + [[https://pypi.org][PyPI]]
