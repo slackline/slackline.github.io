@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       d0998286-1c36-47d7-943d-6b5f641a9e4d
+:mtime:    20231005134500
+:ctime:    20231005134500
+:END:
+#+NAME: Kitty
+#+FILETAGS: :linux:kitty:terminal:
+
+[[https://sw.kovidgoyal.net/kitty/][kitty]] is a fast GPU accelerated terminal emulator. I like it and have used it for a number of years.
+
+* Troubleshooting
+
+** SSH Connections
+
+You may find that a remote SSH doesn't support kitty and you encounter the error message...
+
+#+begin_src bash
+'xterm-kitty': unknown terminal type
+#+end_src
+
+This means that ~kitty~ isn't installed on the remote and it doesn't know how to handle connections from it. You can
+however let the remote server know what capabilities your terminal emulator (i.e. ~kitty~) has using ~terminfo~. This
+solution was found [[https://redgreen.no/2020/05/10/kitty-unknown-terminal-type.html][here]]. Run the following and it will create ~\~/.terminfo/x/xterm-kitty~ on the remote host.
+
+#+begin_src bash
+$ kitty +kitten ssh you@remote.server
+#+end_src
+
+Alternatively you can try the solution suggested in the [[https://unix.stackexchange.com/a/470682/39149][UNIX Stackexchange]] question I asked which manually copies the
+information over.
+
+#+begin_src bash
+$ ssh myserver mkdir -p  ~/.terminfo/${TERM:0:1}
+$ scp /usr/share/terminfo/${TERM:0:1}/$TERM myserver:~/.terminfo/${TERM:0:1}/
+#+end_src

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0e6300c6-7025-4f45-820d-4d9da82b41a6
-:mtime:    20230926220759 20230917083604 20230905212306 20230724174038
+:mtime:    20231005133759 20230926220759 20230917083604 20230905212306 20230724174038
 :ctime:    20230724174038
 :END:
 #+TITLE: Linux
@@ -13,7 +13,6 @@ try out Slackware at home, liked compiling from source and the lack of circular 
 RedHats RPM system.  After a while wanted a package management system so tried out [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]] and loved it and still use it
 to this day. For laptops and lower-powered devices I've settled on [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] as I've never bothered to set up
 distributed cross-compilation under Gentoo.
-
 
 * Shells
 
@@ -30,6 +29,11 @@ I use Linux on my VPS and various places to host websites. I've written more on 
 It can be handy to have a live distribution to carry around and boot as and when, there are a few options read more at
 [[id:eaf15ed2-dd31-4b30-a6ce-4b47b6baed0f][here]].
 
+* Topics
+
+Miscellaneous topics
+
++[[id:d0998286-1c36-47d7-943d-6b5f641a9e4d][linux_kitty]]
 * Links
 
 +
