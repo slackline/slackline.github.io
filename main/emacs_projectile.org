@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       580157bf-0313-4c4e-88d3-cd443ddbab62
+:mtime:    20231005070323
+:ctime:    20231005070323
+:END:
+#+TITLE: Emacs Projectile
+#+FILETAGS: :emacs:package:projectile:
+
+* Links
+
++ [[https://docs.projectile.mx/projectile/index.html][Projectile :: Projectile]]
++ [[https://github.com/bbatsov/projectile][bbatsoc/projectile: Project Interaction Library for Emacs]]
++ [[https://takeonrules.com/2023/10/04/adjusting-emacs-to-shift-with-a-new-project-organization-strategy/][Adjusting Emacs to Shift with a New Project Organization Strategy // Take on Rules]]
