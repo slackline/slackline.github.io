@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       8dbde866-810a-48e4-981f-2fcbc19ec5cf
+:mtime:    20231008074648
+:ctime:    20231008074648
+:END:
+#+TITLE: Pre-commit Markdownlint-cli2
+#+FILETAGS :precommit:markdown:linting:lint:
+
+* Ignoring Files
+
+Ignore directories of groups of files using globs by adding the ~ignores~ section to ~.markdownlint-cli2.yaml~
+
+#+begin_src yaml
+  ignores:
+    - "*.svg"
+    - "_site/*"
+    - ".quarto/*"
+#+end_src
+
+* Disable checks
+
+** Globally
+
+You can disable specific checks globally by adding them to
+
+** Locally
+
+You can also disable specific checks on a per-line basis by adding lines similar to the following to the end of the line
+you want to ignore (source [[https://discourse.gohugo.io/t/ignore-a-line-with-markdownlint/44269][Ignore a line with markdownlint - tips & tricks - HUGO]]).
+
+#+begin_src markdown
+{{< mdl-disable "<!-- markdownlint-disable MD034 -->" >}}
+#+end_src
+
+* Links
+
++ [[https://discourse.gohugo.io/t/ignore-a-line-with-markdownlint/44269][Ignore a line with markdownlint - tips & tricks - HUGO]]

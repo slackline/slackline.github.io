@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c76767c4-2a49-42f8-a323-a6d6105e0bce
-:mtime:    20230910194920 20230910183127
+:mtime:    20231008074712 20230910194920 20230910183127
 :ctime:    20230910183127
 :END:
 #+TITLE: Pre-commit
@@ -295,7 +295,7 @@ A non-exhaustive list of hooks that I use by language.
 
 ** Markdown
 
-+ ~markdown-cli2~
++ [[id:8dbde866-810a-48e4-981f-2fcbc19ec5cf][~markdown-cli2~]]
 
 ** Python
 
