@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5
-:mtime:    20230924112611 20230907232738 20230803211138 20230722230042 20230721144339 20230720100255 20230705092829 20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
+:mtime:    20231013000730 20230924112611 20230907232738 20230803211138 20230722230042 20230721144339 20230720100255 20230705092829 20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
 :ctime:    20230304230340
 :END:
 #+TITLE: Artificial Intelligence
@@ -113,6 +113,7 @@ instead employ people to do jobs.
 + [[https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey][Will A.I. Become the New McKinsey? | The New Yorker]]
 + [[https://www.secondbest.ca/p/ai-and-leviathan-part-i][AI and Leviathan: Part I - by Samuel Hammond - Second Best]]
 + [[https://www.secondbest.ca/p/ai-and-leviathan-part-ii][AI and Leviathan: Part II - by Samuel Hammond - Second Best]]
++ [[https://statmodeling.stat.columbia.edu/wp-content/uploads/2023/10/carpenter-transformer-decoder-pseudocode.pdf][Transformer decoding in fifty lines of pseudocode]]
 
 ** Books
 + [[https://github.com/ageron/handson-ml3][Hands-On Machine Learning with Scikit-Learn, Keras and TensorFlow]] - Jupyter

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a7fbe90-1f6e-4a38-a0c8-b378b1893f33
-:mtime:    20230922120216 20230916065434 20230915202700 20230910203044
+:mtime:    20231010204450 20230922120216 20230916065434 20230915202700 20230910203044
 :ctime:    20230910203044
 :END:
 #+TITLE: Mastodon
@@ -195,7 +195,8 @@ installation of ~iptables~ is somewhat different from the recommended.
 + [[https://blog.maartenballiauw.be/post/2022/11/05/mastodon-own-donain-without-hosting-server.html][Mastodon on your own domain without hosting a server - Maarten Balliauw {blog}]]
 + [[https://rossabaker.com/projects/webfinger/][Ross A. Baker: WebFinger]]
 + [[https://www.stevencanplan.com/2022/12/automatically-post-your-flickr-photos-to-your-mastodon-account/][Automatically post your Flickr photos to your Mastodon account – Steven Can Plan]]
-
++ [[https://cosimameyer.com/post/2023-04-25-building-mastodon-bots-and-promoting-the-community/][Building Mastodon Bots and Promoting the Community - Part 1]]
++ [[https://cosimameyer.com/post/2023-09-17-building-mastodon-bots-and-promoting-the-community-part-2/][Building Mastodon Bots and Promoting the Community - Part 2]]
 
 ** Technical
 :PROPERTIES:
