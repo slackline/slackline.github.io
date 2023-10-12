@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9f72e8bd-2dbe-4a95-9517-c0c94bc995a0
-:mtime:    20230710213941 20230418223817 20230319111642 20230103103312 20221215204145 20230103103310
+:mtime:    20231012133555 20231012114034 20230710213941 20230418223817 20230319111642 20230103103312 20221215204145 20230103103310
 :ctime:    20221215204145 20230103103310
 :END:
 #+TITLE: Statistics
@@ -81,12 +81,16 @@ often subject specific and I can not cover all areas here, only those that I'm f
 + [[https://stats.stackexchange.com/][Cross Validated]] : a [[https://stakexchange.com][StackExchange]] site specific to statistics.
 
 * Risk
-[[id:9679a312-f631-45ea-b1f5-0e6411aef086][Risk]] is often an endpoint that people are concerned about when considering statistics, but its hard to understand as it
+[[id:9679a312-f631-45ea-b1f5-0e6411aef086][Risk]] is often an endpoint that people are concerned about when considering statistics, xbut its hard to understand as it
 pertains to events which have not happened based on observations of those that have.
 
 * Links
 
 + [[https://www.wzchen.com/probability-cheatsheet][The Probability Cheat Sheat]]
+
+** Blogs
+
++ [[https://katbailey.github.io/post/gaussian-processes-for-dummies/][Gaussian Processes for Dummies ·]]
 
 ** Books
 + [[https://lakens.github.io/statistical_inferences/index.html][Improving Your Statistical Inferences | Daniël Lakens]]

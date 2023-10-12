@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       fe1f6380-9217-482c-bb5e-91817ae3e8f8
-:mtime:    20230103103314 20220524201346
+:mtime:    20231012133551 20231011113735 20230103103314 20220524201346
 :ctime:    20220524201346
 :END:
 #+TITLE: R Shiny
@@ -10,6 +10,9 @@
 * Links
 
 + [[https://shiny.rstudio.com/][Shiny]]
++ [[https://rstudio.github.io/shinytest/][Test Shiny Apps • shinytest]]
++ [[https://shinylive.io/r/examples/][ShinyLive (R)]] / [[https://shinylive.io/py/editor/][ShinyLive (Python)]]
++ [[https://shiny.posit.co/r/gallery/][Shiny Gallery]]
 
 ** Books
 
