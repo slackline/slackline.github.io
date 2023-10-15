@@ -1,0 +1,57 @@
+:PROPERTIES:
+:ID:       2c46e54a-d704-4e7e-bca3-d8c3e042ab43
+:mtime:    20231015172236
+:ctime:    20231015172236
+:END:
+#+TITLE: Android
+#+FILETAGS: :linux:android:mobile:
+
+Android is a mobile operating system but its under-pinned by the [[id:0e6300c6-7025-4f45-820d-4d9da82b41a6][Linux]] kernel and uses a lot of [[id:88fc1e91-d928-485e-83b4-1991663fa267][GNU]] tools in the
+background. By installing a custom ROM you can free yourself from a number of pernicious tracking practices and keep
+phones that are no longer supported by manufacturers up-to-date.
+
+* Applications
+
+Of course there are tons of applications (programmes) one might want to install on their phone and I use a number for
+convenience.
+
+* Devices
+
+Over the years I've owned a number of Android devices and my partner has too (these are mentioned as I often inherit
+them, and root them and flash an alternative OS, typically LineageOS).
+
++ Samsung S2 GTi9100
++ Samsung S4 GT-9505
++ Samsung S7 Edge SM-G935F
++ Google Nexus 7
++ Motorolla G7 Plus
++ Motorolla G7 Power
++ Motorolla G100 XT2125-4
+
+* Links
+
+** Apps
+
+
+** BootLoader
+
++ [[https://twrp.me/][TWRP]]
+
+** Gapps
+
++ [[https://microg.org/][microG]]
++ [[http://opengapps.org/][Gapps]]
+
+**  ROMS, Boot Loader and Root
+
++ [[https://openandroidinstaller.org/][OpenAndroidInstaller]]
++ [[https://lineageos.org/][LineageOS]]
++ [[https://lineage.microg.org/][LineageOS for microG]]
++ [[https://e.foundation/e-solutions/][eSolutions]]
+
+** Root
+
++ [[https://github.com/topjohnwu/Magisk/releases][Magisk Github Releases]]
++ [[https://magiskmanager.com/][Magisk Manager]] **UNOFFICIAL**
++ [[https://www.didgeridoohan.com/magisk/HomePage][Magisk and MagiskHide Installation and Troubleshooting guide]]
++ [[https://www.xda-developers.com/google-updates-safetynet-temporary-fix-available-for-magisk-official-update-coming/][Magisk SafetyNet work around]]
