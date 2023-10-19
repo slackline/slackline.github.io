@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b4510762-8409-4e5e-8ee8-c27574977772
-:mtime:    20231017142417 20230103103312 20221228151013 20230103103312 20230103103308
+:mtime:    20231019135929 20231018135646 20231017142417 20230103103312 20221228151013 20230103103312 20230103103308
 :ctime:    20221228151013 20230103103308
 :END:
 #+TITLE: Tidyverse
@@ -244,6 +244,9 @@ Tidytable provides ~tidyverse~ like syntax built on top of the fast ~data.table 
 
 [[https://www.tidymodels.org/][Tidymodels]] framework is a collection of packages for modelling and machine learning using [[id:b4510762-8409-4e5e-8ee8-c27574977772][Tidyverse]] principles. Perhaps
 the best resource to get started is the book [[https://www.tmwr.org/][Tidy Modeling with R]] by Max Kuhn and Julia Silge.
+
+Notes from the [[id:68355978-9a79-4537-91a0-c264276ecb9b][introduction to Machine Learning with Tidymodels]].
+
 * Links
 
 

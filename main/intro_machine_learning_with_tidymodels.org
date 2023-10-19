@@ -1,0 +1,132 @@
+:PROPERTIES:
+:ID:       68355978-9a79-4537-91a0-c264276ecb9b
+:mtime:    20231018162245 20231018142058
+:ctime:    20231018142058
+:END:
+#+TITLE: Introduction to Machine Learning with Tidymodels
+#+FILETAGS: :r:statistics:machine learning:tidymodels
+
+[[https://www.tidymodels.org/][Tidymodels]] framework for Machine Learning undertaken <2023-10-18 Wed 14:00>.
+
+* Setup
+
+#+begin_src R
+
+install.packages(c("tidymodels", "rsample", "parsnip", "recipes", "tune", "yardstick", "ranger"))
+#+end_src
+
+* Heart Failure or Not
+
+Clinical Trial of people had stroke and rpescprescibed drugs or exercise
+
+* tidymodels packages
+
++ ~rsample~ splitting data
++ ~recipes~ preprocessing
++ ~parsnip~ model specifications
++ ~yardstick~ model perofrmance
++ ~broom~ view models and metrics in a tidy way
++ ~workflows~ make modelling workflow
++ ~tune~ tune hyperparameters
++ ~dials~ tune hyperparameters
+
+* Types of Machine Learning
+
+Supervised - classification or regression based models
+Unsupervised - clustering or association rules
+
+* Testing v Training
+
++ Always split data into training and testing, keep separate.
++ But can't always learn every parameter from the data i.e. hyperparameter tuning
++ Use k-fold cross-validation
+
+* Workflows and Recipes
+
++ *Recipes* a series of preprocessing performe don data before you fit a model.
++ *Workflow* combine pre-processing with modelling and post-processing.
+
+* Live coding
+
+See [[https://github.com/nrennie/r-pharma-2023-tidymodels/blob/main/examples/example_01.R][tidymodels/example_01.R]]
+
+This defines the recipe and then pipes it into ~step_dummy()~ for converting strings to dummies and normalizes other
+variables. Normalisation is important for models and selection can be done using the ~dplyr::select()~ syntax.  There
+are more ~step_###()~ functions available.
+
+By using ~recipe~ we apply the same pre-processing to all steps in subsequent analyses.
+
+#+begin_src
+hf_recipe <- recipe(death ~ ., data = hf_train) |>
+  step_dummy(sex) |>
+  step_normalize(age, serum_creatinine:time)
+#+end_src
+
+The recipe then gets added to a workflow with...
+
+#+begin_src R
+wf <- workflow() |>
+  add_recipe(hf_recipe)
+#+end_src
+
+* LASSO
+
++ Lambda ==0 is plain regression, higher value coefficients are pushed towards zero.
+* Model Assessment
+
++ Accuracy is not great, particularly for rare events, just say everyone isn't a case and you are by default going to be
+  right most of the time!
++ Yardstick automatically gives us ROC curves, neat!
+
+* Model specification
+
+See [[https://github.com/nrennie/r-pharma-2023-tidymodels/blob/main/examples/example_02.R][examples/example_02.R]]
+
+We want to perform logistic regression (~logistic_reg~)we define the type of regression, the penalty to ~tune()~ and setting
+the ~mixture~ value determines LASSO (~1~) or Ridge Regression (~0~), trade-off is the Elastic Net! Then say to use the
+~glmnet~ engine (see more with ~show_engine()~)
+
+~tune_grid()~ dfeines the model we want to use (i.e. our ~wf~ which has the recipe and the model we wish to use in this
+case logistic regression). We fit it to the cross validation data set (~folds~) and the ~grid~ option defines the
+different values of lambda (which minimises the coefficients) and in this example we say the ~penalty()~ is the same as
+the argument in the logistic regression and we then set the number of levels (equally spaced as we are choosing
+~grid_regular()~).
+
+Next choose the best value from the grid of values. "Best" is determined by the metric we want to assess, here we use
+the highest ROC AUR. The final model is then fitted based on the best value.
+
+The final model is then fitted to the training data set and assessed.
+
+
+* Random Forests
+
+See [[https://github.com/nrennie/r-pharma-2023-tidymodels/blob/main/examples/example_03.R][examples/example_03.R]]
+
+~rand_forest()~ is defined with the number of tries and we choose a ~mtry~ (number of parameters to try at each split)
+and ~min_n~ (observations in each node split) as hyper-parameters to be tuned. A 1000 trees is a reasonable number to
+run. Set the mode to ~classification~ and then in ~tune_grid()~ we can set.
+
+Be wary if hyperparameters come out near the edge of the range specified, may want to extend as optimal may be beyond
+that but not possible with initial values.
+
+* Support Vector Machines
+
++ *Cost* - higher emphasises fitting the data (overfitting), low avoids overfitting
++ *Gamma* - higher values give more flexible boundaries, lower values give simpler boundaries.
+
+~svm_rbf()~ used to tune the hyper-parameter using radial based SVM, engine is set to ~kernlab~, mode to
+~classification~. Engine dependent on classification or kernel (~show_engines("svm_rbf")~ to find out options)
+
+Again define a tuning via ~tune_grid~ using the ~wf~ and ~tune_spec_svm~. We use the ~folds~ to define the resampling.
+
+Use a high number of levels.
+
+
+
+
+* Links
+
++ [[https://nrennie.github.io/r-pharma-2023-tidymodels/#/title-slide][Slides]]
++ [[https://github.com/nrennie/r-pharma-2023-tidymodels][GitHub Repo]]
++ [[https://posit.cloud/spaces/432336/join?access_code=GV-nDuBYP8gu-1HRxI2kz-gE9rIsg-_fPp5vNzif][Posit Cloud course material]]
++ [[https://vetiver.rstudio.com/][Vetiver]]
