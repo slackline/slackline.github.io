@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0859ef9e-834d-4e84-8e67-fa7593a61e0b
-:mtime:    20231019151842 20231018215110 20231018204740 20231018073902 20231015085830 20231007203439 20231005064143 20231004202913 20230922202301 20230920064045 20230914220336 20230910195251 20230910183057 20230910113355 20230803214400 20230801215130 20230726132229 20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
+:mtime:    20231021073737 20231020224724 20231018215110 20231018204740 20231018073902 20231015085830 20231007203439 20231005064143 20231004202913 20230922202301 20230920064045 20230914220336 20230910195251 20230910183057 20230910113355 20230803214400 20230801215130 20230726132229 20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
 :ctime:    20230222225246
 :END:
 #+TITLE: Git
@@ -22,6 +22,10 @@ revert changes that are not required.
 If you use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] then you should definitely be using [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] and if you use Git then you would benefit from using
 [[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] too, it saves you considerable time and effort in the long run.
 
+#+ATTR_HTML: :width 300px
+#+CAPTION: In Case of Fire
+[[./img/git_in_case_of_fire.png]]
+
 * Concepts
 :PROPERTIES:
 :ID:       292f6e62-a56e-4e71-9801-05c96b950af5
@@ -33,6 +37,7 @@ A repository is placed under version control when you ~git init~ within in but b
 variables such as the ~user~ and ~email~. These can be done on a global scale which will apply across all repositories
 you create or a local, per-repository basis (local settings in a repository over-ride global so they don't conflict).
 
+#+ATTR_HTML: :width 600px
 #+CAPTION: Git Workflow by [[https://nikkiandchris.io][nikkiandchris.io]]
 [[./img/git/git_pull_push.jpg]]
 
@@ -302,9 +307,9 @@ systems you will at some point have to use ~git pull~ to get your changes onto y
 fetch~ and how does it differ from ~git pull~? The simplest answer to this is provided by this excellent cartoon from
 [[https://allisonhorst.com/git-github][Allison Horst]].
 
+#+ATTR_HTML: :width 800px
 #+CAPTION: ~git fetch~ v ~git pull~ by [[https://allisonhorst.com/git-github][Allison Horst]]
 #+NAME: fig:git-fetch-v-git-pull
-
 [[./img/git/git_fetch_v_pull.png]]
 
 *** Forcing pulls
@@ -802,6 +807,7 @@ It is often important to version control your data too, for more on this see [[i
 + [[https://github.com/arzzen/git-quick-stats][arzzen/git-quick-stats: ▁▅▆▃▅ Git quick statistics is a simple and
   efficient way to access various statistics in git repository.]]
 + [[https://gitcute.cat/][Cute Commits]]
++ [[https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/][Some miscellaneous git facts]]
 
 ** Research
 
