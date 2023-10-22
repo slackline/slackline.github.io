@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a53fa3c5-f091-4715-a1a4-a94071407abf
-:mtime:    20230908084133 20230907222812 20230813184404 20230812222550 20230623080100 20230215101306
+:mtime:    20231022214824 20230908084133 20230907222812 20230813184404 20230812222550 20230623080100 20230215101306
 :ctime:    20230215101306
 :END:
 #+TITLE: Arch Linux
@@ -49,6 +49,7 @@ Typically you synchronise the databases when installing a package you update the
 #+begin-src
 pacman -Syu <pkgname>
 #+end-src
+
 
 ** Configuration
 
@@ -113,3 +114,11 @@ makepkg -sri
 #+end-src
 
 Once installed it functions pretty much like ~pacman~
+
+** ~makepkg~ cores
+
+Configure the number of cores used when compiling from source by adding the following to ~/etc/makepkg.conf~
+
+#+begin_src conf
+MAKEFLAG="-j$(nproc)"
+#+end_src
