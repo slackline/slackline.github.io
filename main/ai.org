@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5
-:mtime:    20231013000730 20230924112611 20230907232738 20230803211138 20230722230042 20230721144339 20230720100255 20230705092829 20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
+:mtime:    20231023063845 20231013000730 20230924112611 20230907232738 20230803211138 20230722230042 20230721144339 20230720100255 20230705092829 20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
 :ctime:    20230304230340
 :END:
 #+TITLE: Artificial Intelligence
@@ -43,6 +43,12 @@ OpenAI"]].
 
 * Ethics and Morals
 
+** Accountability
+
+Dennett writes that AI has the capacity to erode trust, a foundation on which society and governance is based on [[https://www.theatlantic.com/technology/archive/2023/05/problem-counterfeit-people/674075/][The
+Problem With Counterfeit People - The Atlantic]].
+
+
 ** Moral Outsourcing
 
 Something I first came across in the article [[https://www.theguardian.com/technology/2023/may/29/rumman-chowdhury-interview-artificial-intelligence-accountability][‘I do not think ethical surveillance can exist’: by Rumman Chowdhury]] is the
@@ -79,6 +85,10 @@ instead employ people to do jobs.
 + [[https://opening-up-chatgpt.github.io/][Opening up ChatGPT]] ([[https://doi.org/10.48550/arXiv.2307.05532][doi.org/10.48550/arXiv.2307.05532]])
 + [[https://github.com/leon-ai/leon][Leon AI]] : Open-source personal (off-line for now) assistant.
 
+** Bias
+
++ [[https://restofworld.org/2023/ai-image-stereotypes/][Generative AI like Midjourney creates images full of stereotypes - Rest of World]]
+
 ** Misc
 
 + [[https://writings.stephenwolfram.com/2023/01/wolframalpha-as-the-way-to-bring-computational-knowledge-superpowers-to-chatgpt/][Wolfram|Alpha as the Way to Bring Computational Knowledge Superpowers to ChatGPT—Stephen Wolfram Writings]]
@@ -90,6 +100,8 @@ instead employ people to do jobs.
 + [[https://vickiboykis.com/2023/02/26/what-should-you-use-chatgpt-for/][What should you use ChatGPT for? | ★❤✰ Vicki Boykis ★❤✰]]
 + [[https://www.semianalysis.com/p/google-we-have-no-moat-and-neither][Google "We Have No Moat, And Neither Does OpenAI"]] - leaked internal article on how closed source AI systems are losing
   the "race" to open-source systems.
++ [[https://www.theatlantic.com/technology/archive/2023/05/problem-counterfeit-people/674075/][The Problem With Counterfeit People - The Atlantic]]
++ [[https://www.nature.com/articles/d41586-023-02990-y][How to stop AI deepfakes from sinking society — and science]]
 
 ** Papers
 
@@ -114,6 +126,7 @@ instead employ people to do jobs.
 + [[https://www.secondbest.ca/p/ai-and-leviathan-part-i][AI and Leviathan: Part I - by Samuel Hammond - Second Best]]
 + [[https://www.secondbest.ca/p/ai-and-leviathan-part-ii][AI and Leviathan: Part II - by Samuel Hammond - Second Best]]
 + [[https://statmodeling.stat.columbia.edu/wp-content/uploads/2023/10/carpenter-transformer-decoder-pseudocode.pdf][Transformer decoding in fifty lines of pseudocode]]
++ [[https://www.nature.com/articles/d41586-023-03144-w][How ChatGPT and other AI tools could disrupt scientific publishing]]
 
 ** Books
 + [[https://github.com/ageron/handson-ml3][Hands-On Machine Learning with Scikit-Learn, Keras and TensorFlow]] - Jupyter
