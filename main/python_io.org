@@ -1,0 +1,86 @@
+:PROPERTIES:
+:ID:       e4ba385c-7a04-4135-a469-167e73912f4c
+:mtime:    20231024144148
+:ctime:    20231024144148
+:END:
+#+TITLE: Python I/O
+#+FILETAGS: :python:input:output
+
+* YAML
+
+[[id:fac7a695-9bdf-4a79-9ec3-9945e9a0cba4][YAML]] is a commonly used format and you often need to read such files (e.g. for configuration) or write them
+(e.g. outputing dictionaries).
+
+** ruamel.yaml
+
+A popular package is [[https://yaml.readthedocs.io/en/latest/][~ruamel.yaml~]] which I find to be a bit confusing as it works with streams rather than strings and
+files. Regardless I've got it working for what I want.
+
+*** Reading YAML
+
+#+begin_src python
+from pathlib import Path
+
+from ruamel.yaml import YAML, YAMLError
+
+def read_yaml(filename: str | Path) -> dict:
+    """Read a YAML file.
+
+    Parameters
+    ----------
+    filename: Union[str, Path]
+        YAML file to read.
+
+    Returns
+    -------
+    Dict
+        Dictionary of the file.
+    """
+    with Path(filename).open(encoding="utf-8") as f:
+        try:
+            yaml_file = YAML(typ="safe")
+            return yaml_file.load(f)
+        except YAMLError as exception:
+            LOGGER.error(exception)
+            return {}
+#+end_src
+
+*** Writing YAML
+
+#+begin_src python
+
+def write_yaml(
+    config: dict, output_dir: str | Path, out_file: str = "config.yaml", header_message: str = None
+) -> None:
+    """Write a configuration (stored as a dictionary) to a YAML file.
+
+    Parameters
+    ----------
+    config: dict
+        Configuration dictionary.
+    output_dir: Union[str, Path]
+        Path to save the dictionary to as a YAML file (it will be called 'config.yaml').
+    out_file: str
+        Filename to write to.
+    header_message: str
+        String to write to the header message of the YAML file
+    """
+    # Save the configuration to output directory
+    output_config = Path(output_dir) / out_file
+    # Revert PosixPath items to string
+    config = path_to_str(config)
+
+    if header_message:
+        header = f"# {header_message} : {get_date_time()}\n"
+    else:
+        header = f"# This is a YAML file : {get_date_time()}\n"
+    output_config.write_text(header)
+
+    yaml = YAML(typ="safe")
+    with output_config.open("a") as f:
+        try:
+            yaml.dump(config, f)
+        except YAMLError as exception:
+            LOGGER.error(exception)
+
+#+end_src
