@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       0911a63f-4b82-4bf1-9235-f1e41e93d210
 :ROAM_ALIASES: "Open Research Overview"
-:mtime:    20230906113838 20230728145927 20230718174435 20230716210055 20230717104813 20230621115422 20230421104923 20230420112016 20230228205121 20230103103308 20221228113013
+:mtime:    20231025215057 20230906113838 20230728145927 20230718174435 20230716210055 20230717104813 20230621115422 20230421104923 20230420112016 20230228205121 20230103103308 20221228113013
 :ctime:    20221228113013
 :END:
 #+title: Open Research
@@ -65,3 +65,11 @@ Slides and videos from past events
 
 + [[https://indico.cern.ch/event/1254282/timetable/#20230710][Accelerating the Adoption of Open Science (CERN/NASA)]]
 + [[https://www.cos.io/blog/cos-celebrates-10-years][Center for Open Science : 10 Years]]
+
+** Publishing
+
++ [[https://www.openbookpublishers.com/][OpenBook Publishers]]
+
+*** Specifics
+
++ [[https://www.openbookpublishers.com/books/10.11647/OBP.0364][The Predatory Paradox: Ethics, Politics, and Practices in Contemporary Scholarly Publishing | Open Book Publishers]]
