@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       136364e7-1a6d-4b28-b284-0e415b860699
 :ROAM-ALIASES: "Org Roam : Overview"
-:mtime:    20231016222532 20230727234008 20230331110207 20230116172234 20230103103313 20221224191223 20230103103308
+:mtime:    20231026121908 20231016222532 20230727234008 20230331110207 20230116172234 20230103103313 20221224191223 20230103103308
 :ctime:    20221224191223
 :END:
 #+TITLE: Org-roam
@@ -139,3 +139,8 @@ Currently running/exporting the site is not possible, although there is an examp
 
 + [[https://logseq.com/][logseq]]
 + [[https://obsidian.md/][Obsidian]]
+
+** PARA Method
+
++ [[https://fortelabs.com/blog/para/][The PARA Method: The Simple System for Organizing Your Digital Life in Seconds]]
++ [[https://whhone.com/posts/para-org-mode/][Implementing the PARA Method in Org-mode - Wai Hon's Blog]]
