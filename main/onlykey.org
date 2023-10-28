@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a54eeb0c-ffd1-4002-8a15-7c1f0c0a6a9b
-:mtime:    20230105145222 20230103103312 20221229210127
+:mtime:    20231028185946 20231028071627 20230105145222 20230103103312 20221229210127
 :ctime:    20221229210127
 :END:
 #+TITLE: OnlyKey Duo
@@ -25,9 +25,85 @@ I use Gentoo, no ebuild is available and I couldn't suss out the sourcecode. Ins
 
 I then had /Other > OnlyKey App/ present under my Xfce4 menu. On starting your asked to "/Please connect your OnlyKey/".
 
+I have attempted to write an ~ebuild~ which installed for v5.3.6 but is currently failing for v5.5.0.
+
+#+begin_src
+# Copyright 1999-2023 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+#PYTHON_COMPAT=
+
+DESCRIPTION="Application for managing Onlykey password device."
+HOMEPAGE="https://github.com/trustcrypto/OnlyKey-App"
+SRC_URI="https://github.com/trustcrypto/${PN}/archive/refs/tags/v${PV}.tar.gz"
+KEYWORDS="~amd64"
+LICENSE=""
+SLOT="0"
+IUSE=""
+BDEPEND="net-libs/nodejs"
+
+src_compile() {
+	# nothing to compile here
+	:
+}
+
+src_install() {
+	npm \
+		--audit false \
+		--color false \
+		--foreground-scripts \
+		--global \
+		--offline \
+		--omit dev \
+		--prefix "${ED}"/usr \
+		--progress false \
+		--verbose \
+		install "${DISTDIR}/v${PV}".tar.gz || die "npm install failed"
+
+	einstalldocs
+}
+#+end_src
+
+** Configure UDEV
+
+[[https://en.wikipedia.org/wiki/Udev][udev]] is a device manager for the [[id:0e6300c6-7025-4f45-820d-4d9da82b41a6][Linux]] kernel that controls how hardware communicates with each other. In order to make
+the OnlyKey Duo available to users other than ~root~ you need to install a rule. Fortunately one is [[https://docs.onlykey.io/linux.html#udev-rule][provided]] and it can
+be installed with.
+
+#+begin_src bash
+$ wget https://raw.githubusercontent.com/trustcrypto/trustcrypto.github.io/pages/49-onlykey.rules
+$ sudo cp 49-onlykey.rules /etc/udev/rules.d/
+$ sudo udevadm control --reload-rules && sudo udevadm trigger
+#+end_src
+
+** OnlyKey Command-Line Utility
+
+I also opted to install the [[https://docs.onlykey.io/command-line.html][OnlyKey Command-Line Utility]] in a virtual environment.
+
+#+begin_src bash
+$ mkvirtualenv onlykey
+$ workon onlykey
+$ pip install onlykey
+#+end_src
+
 * Configuration
 
 The advanced wizard then asks you to set a Device PIN that is 7-10 digits using **only** the numbers 1-6.
+
+** Adding GPG key
+
+This was a royal pain in the arse! Whilst OnlyKey Duo supports Elliptic Curve Cryptography (ECC) keys such as ~ed25519~
+it requires the private part to be input as 64-bit string characters and getting these was painful. I was [[https://onlykey.discourse.group/t/opengpg-pem-key/844/3][pointed]] to an
+issue on GitHub when I first asked (see [[https://github.com/trustcrypto/OnlyKey-App/issues/166#issuecomment-890157049][here]]) but the linked script (~PGPparseprivate.py~) is no longer
+available. Reading through the thread another person had generalised the script (see [[https://github.com/trustcrypto/OnlyKey-App/issues/166#issuecomment-1065866909][here]]) but again the linked scripts
+(/gists) were no longer available.
+
+The last post in the thread though pointed something that did still exist, the repository
+[[https://github.com/garrickwelsh/onlykey_configuration][garrickwelsh/onlykey_configuration]] which includes a script to add keys. I forked this ([[https://github.com/slackline/onlykey_configuration/][slackline/onlykey_configuration]]).
+
+Initially I found it challenging to get this script to run, despite installing the ~Crypto~ package in the ~onlykey~
+virtualenv it couldn't be found.
 
 * Links
 
