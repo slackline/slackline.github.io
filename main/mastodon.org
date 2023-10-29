@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a7fbe90-1f6e-4a38-a0c8-b378b1893f33
-:mtime:    20231010204450 20230922120216 20230916065434 20230915202700 20230910203044
+:mtime:    20231029193938 20231010204450 20230922120216 20230916065434 20230915202700 20230910203044
 :ctime:    20230910203044
 :END:
 #+TITLE: Mastodon
@@ -224,3 +224,9 @@ installation of ~iptables~ is somewhat different from the recommended.
 + [[https://denise.dreamwidth.org/91757.html][A guide to potential liability pitfalls for people running a Mastodon instance]]
 + [[https://mastometrics.com/][MastoMetrics - Analytics for Mastodon]]
 + [[https://whomtofollow.com/][Whom to Follow | Find New Fediverse Accounts]]
+
+** RSS Feeds
+
++ [[https://blog.khinsen.net/posts/2023/10/09/deconstructing-the-mastodon-client/][Deconstructing the Mastodon client]] - covers the broad principles (with links) for creating RSS feeds to read from
+  Mastodon.
++ [[https://codeberg.org/aliceice/fedi-marss/][Fedi-MaRRS]] Emacs Lisp implementation of the above.
