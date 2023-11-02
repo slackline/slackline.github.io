@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       723b9b81-5718-4981-a1c9-bde52377458c
+:mtime:    20231102200553
+:ctime:    20231102200553
+:END:
+#+TITLE: Jobs
+#+FILETAGS: :jobs:work:career:
+
+* Links
+
+** Useful Places Jobs are Advertised
+
++ [[https://opensourcejobhub.com/][Open Source JobHub]]
