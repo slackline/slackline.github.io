@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       507782d4-01ee-441f-b3e5-e6fe8f0980ad
+:mtime:    20231103170421
+:ctime:    20231103170421
+:END:
+#+TITLE: Python Strings
+#+FILETAGS: :python:strings:regex:
+
+* f-strings
+
+Really handy you can write code within strings using f-strings ~f"Something {n}"~, they can be formatted and you can do
+maths on them.
+
+If you are debugging then you can print the name of the variable and its value with ~print(f"{foo=}")~ which saves a ton
+of typing! An extension of this is to ~print(local())~ which prints all variables in the local environment but this can
+get messy quickly!
+
+* Regular Expressions
+
+A massive can of worms but so important. You can search for matches, substitute etc.
+
+* Links
+
++ [[https://realpython.com/python-f-strings/][Real Python | F-String for String Interpolation]]

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ea1499ab-dab2-49b1-8479-cb5a2fbd38bc
-:mtime:    20230714224933 20230503073018 20230331230614 20230103103314 20221224191223 20230103103313 20230103103309 20230103103308
+:mtime:    20231103145409 20230714224933 20230503073018 20230331230614 20230103103314 20221224191223 20230103103313 20230103103309 20230103103308
 :ctime:    20221224191223 20230103103308
 :END:
 #+TITLE: Programming
@@ -77,6 +77,9 @@ worked with interpreted languages which don't require compiling.
 + [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]]
 + [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]]
 + [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]]
+
+I don't dabble much in compiled languages but thought it worth making a note of [[https://justine.lol/cosmo3/][Cosmopolitan Third Edition]] which
+compiles C/C++ across architectures and operating systems. Very clever!
 
 * Conferences
 
