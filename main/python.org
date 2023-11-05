@@ -173,7 +173,7 @@ article detailing all this is [[https://opensource.com/article/18/3/loop-better-
 + [[id:7318aee8-c864-40cb-9462-4ce36ac56d35][Documentation]].
 + [[id:ec8e7ee9-0316-4de2-98c1-f775c20b0e35][Data Analysis and Visualisation]]
 + [[id:6938ec86-03df-48df-9491-118c14834aae][Image Analysis]]
-
++ [[id:bed915ef-acc7-474b-9074-744a6c0f8b43][Network Analysis]]
 
 * Community
 
