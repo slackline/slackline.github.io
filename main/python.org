@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5b5d1562-ecb4-4199-b530-e7993723e112
-:mtime:    20231103170452 20231024144239 20231002122344 20230920154939 20230915180115 20230911192604 20230623214025 20230616161729 20230526200945 20230520211006 20230319231255 20230224095542 20230223120221 20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
+:mtime:    20231105150910 20231105073358 20231103170452 20231024144239 20231002122344 20230920154939 20230915180115 20230911192604 20230623214025 20230616161729 20230526200945 20230520211006 20230319231255 20230224095542 20230223120221 20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
 :ctime:    20221217185215 20230103103308
 :END:
 #+TITLE: Python
@@ -166,29 +166,13 @@ article detailing all this is [[https://opensource.com/article/18/3/loop-better-
 
 [[id:dd7c615f-cd8b-426d-aec0-cfd3803437cc][Python profiling]] can be leveraged to find where the bottlenecks are in your workflow and where things can be sped up.
 
+* Specific Topics
 
-* Packaging
-:PROPERTIES:
-:ID:       38f61e88-0f77-4b80-9f52-1d5f6fe54a74
-:END:
-
-At some point you will want to package your code up and make it available for others to use. There are many approaches
-to this and whilst it requires a little more learning the [[https://setuptools.pypa.io/en/latest/#][setuptools]] package offers many advantages in the long run.
-
-There are also a ton of useful and interesting packages out there. I've documented some at [[id:4ca15b37-1436-45fc-8a81-7f1f03b0ee64][Useful Python Packages]].
-
-* Visualisation
-
-Python can be used for visualisation of images, there are a lot of tools for this such a [[id:d2097748-2fd0-4668-93fc-17e7f5ed3ef4][Scikit Image]]. A recent
-development is the [[id:3b8242c4-772a-408e-84bc-6b0e1777aa36][Napari]] framework.
-
-* Documentation
-
-Python has a powerful and flexible ecosystem for creating documentation called Sphinx, read more about [[id:7318aee8-c864-40cb-9462-4ce36ac56d35][documentation]].
-
-* [[id:ec8e7ee9-0316-4de2-98c1-f775c20b0e35][Data Analysis and Visualisation]]
-
-Python has a very mature and well developed set of packages for statistical computing, data analysis and visualisation.
++ [[id:bb57f65e-58f4-45de-9620-901dc998f6d6][Packaging]]
++ [[id:4ca15b37-1436-45fc-8a81-7f1f03b0ee64][Useful Python Packages]].
++ [[id:7318aee8-c864-40cb-9462-4ce36ac56d35][Documentation]].
++ [[id:ec8e7ee9-0316-4de2-98c1-f775c20b0e35][Data Analysis and Visualisation]]
++ [[id:6938ec86-03df-48df-9491-118c14834aae][Image Analysis]]
 
 
 * Community
@@ -239,3 +223,7 @@ Really good set of resources
 A good podcast is [[https://talkpython.fm/episodes/all][TalkPython]]
 
 + [[https://talkpython.fm/episodes/show/429/taming-flaky-tests][Taming Flaky Tests]]
+
+** GUIs
+
++ [[https://nicegui.io/][NiceGUI]]
