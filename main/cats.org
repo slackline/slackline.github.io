@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       cd3dc1ff-3b64-4eab-abaa-4e43974646fb
+:mtime:    20231105214217
+:ctime:    20231105214217
+:END:
+#+TITLE: Cats
+#+FILETAGS: :cats:
+
+* Behaviour
+
++ [[https://www.theguardian.com/lifeandstyle/2023/jun/01/kitty-confidential-13-secret-signals-all-cat-owners-need-to-know-from-a-quivering-tail-to-aeroplane-ears][Kitty confidential: 13 secret signals all cat owners need to know – from a quivering tail to aeroplane ears]]
++ [[https://www.theguardian.com/technology/2023/nov/04/scientists-turn-to-ai-for-help-translate-animal-vocal-physical-cues][‘AI can teach us a lot’: scientists say cats’ expressions richer than imagined and aim to translate them]]
+
+* Books
+
++ [[https://www.hive.co.uk/Product/Lili-Chin/Kitty-Language--An-Illustrated-Guide-to-Understanding-Your-Cat/28466340][Kitty Language : An Illustrated Guide to Understanding Your Cat: Lili Chin: 9780241653647: hive.co.uk]]
