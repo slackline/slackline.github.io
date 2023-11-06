@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       8178219c-ef79-4b59-ad51-e4204a8f369c
+:mtime:    20231106164927
+:ctime:    20231106164927
+:END:
+#+TITLE: Fediverse
+#+FILETAGS: :fediverse:distributed:mastodon:pixelfed:mobilizon:
+
+* Bookwyrm
+
+[[https://bookwyrm.social/][Bookwyrm]] offers federated book reading and reviewing. I use [[https://bookrastinating.com/][Bookrastinating]].
+
+* Mastodon
+
+[[id:0a7fbe90-1f6e-4a38-a0c8-b378b1893f33][Mastodon]] is a social media/instant messaging service that doesn't suffer from being owned by a single idiot who destroys
+it with his personal agenda.
+
+* Mobilizon
+
+[[https://joinmobilizon.org/en/][Mobilizon]] is a system for finding, creating and organising events.
+
+* Pixelfed
+
+[[https://pixelfed.org/][Pixelfed]] is an alternative to other centralised picture sharing services.
+
+* ForgeJo
+
+[[https://forgejo.org/][ForgeJo]] is a self-hosted GitHub repository which aims for federation (although its still a work in progress).
