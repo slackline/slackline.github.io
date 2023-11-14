@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       345cadc2-52a5-4c91-8de1-a45a98aaa5a8
-:mtime:    20230108140200 20230103103309 20221212181558
+:mtime:    20231114194829 20230108140200 20230103103309 20221212181558
 :ctime:    20221212181558
 :END:
 #+TITLE: Python Logging
@@ -118,6 +118,8 @@ input dictionaries and return dictionaries.
 
 + [[https://loguru.readthedocs.io/en/stable/index.html][loguru]]
 + [[https://www.structlog.org/en/stable/][structlog]]
++ [[https://eliot.readthedocs.io/en/stable/quickstart.html][eliot]]
+
 ** Articles
 + [[https://realpython.com/python-logging/][Logging in Python – Real Python]]
 + [[https://bitestreams.com/blog/structured_logging/][Structured Logging with Structlog | BiteStreams]]
