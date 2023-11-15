@@ -735,6 +735,7 @@ parallel!) with ~mr -j6 update~. Commands run on individual repositories can be 
 + [[https://arialdomartini.github.io/no-reason-to-squash][No Reason to Squash]]
 + [[https://adamj.eu/tech/2023/10/31/git-force-push-safely/][Git: Force push safely with --force-with-lease and --force-if-includes - Adam Johnson]]
 + [[https://megakemp.com/2019/03/20/the-case-for-pull-rebase/][The Case for Pull Rebase]]
++ [[https://jvns.ca/blog/2023/11/06/rebasing-what-can-go-wrong-/][git rebase: what can go wrong?]]
 
 *** Resetting
 
