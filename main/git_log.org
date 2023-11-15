@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       0b6eddb6-eb5c-4f26-aaea-beed3505f195
+:mtime:    20231115133528
+:ctime:    20231115133528
+:END:
+#+TITLE: Git Log
+#+FILETAGS: :git:log:history:search:regex:
+
+* Git Short Log
+
+A simple way to get the list of contributors is to
+
+#+begin_src sh
+  git shortlog -s -n -e
+#+end_src
+
+It can also be used to summarise contributions by combining with come command [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][command line utilities]]. The following
+formats commits by date (~YYYY-MM~), ~sorts~ them and then counts the number of ~uniq~ observations (from [[https://github.blog/2022-12-12-highlights-from-git-2-39/][here]]).
+
+#+begin_src sh
+  git log v2.38.0.. --date='format:%Y-%m' --format='%cd' | sort | uniq -c
+#+end_src
+
+* Evolution of code
+
+You can list the evolution of classes or functions using ~git log -L :<function>:path/to/file.py~ ([[https://mastodon.social/@chmouel@fosstodon.org/111278958440113991][source]]) and it will
+show a series of commits that have changed the function. Very neat.
+
+* Searching for specific lines
+
+You can search for a specific piece of text across the history of a given file ([[https://stackoverflow.com/questions/12591247/how-to-find-commit-when-line-was-deleted-removed][reference]]). If you don't know the file
+that contained the line omit the
+
+#+begin_src bash
+git log -c -S'missingtext' [/path/to/file]
+#+end_src
+
+If you don't know
