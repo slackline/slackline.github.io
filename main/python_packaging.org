@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       bb57f65e-58f4-45de-9620-901dc998f6d6
-:mtime:    20231015151206 20230919101558 20230811133355 20230811112305 20230714185857 20230629212250 20230509145004 20230331162046 20230329204528 20230319195324 20230319124004 20230318215853 20230318205506 20230316065623 20230312225913 20230311130516 20230301211740 20230301095721 20230227221806 20230207111629 20230103103312 20221228113913 20230103103309
+:mtime:    20231117101119 20231015151206 20230919101558 20230811133355 20230811112305 20230714185857 20230629212250 20230509145004 20230331162046 20230329204528 20230319195324 20230319124004 20230318215853 20230318205506 20230316065623 20230312225913 20230311130516 20230301211740 20230301095721 20230227221806 20230207111629 20230103103312 20221228113913 20230103103309
 :ctime:    20221228113913 20230103103309
 :END:
 #+TITLE: Python Packaging
@@ -570,6 +570,13 @@ used it yet as I wanted
 
 [[https://python-poetry.org/][Poetry]] is another package for managing packaging and dependencies. Again, I've not yet used it.
 
+* Checking
+
+A really useful tool for checking your package and [[id:55581960-395e-443c-bd5d-bc00c496b6ae][linting]] configuration is available from the [[https://learn.scientific-python.org/development/][Scientific Python Library
+Development Guide]] which has a [[https://learn.scientific-python.org/development/guides/repo-review/][Repo Review]] tool to check a GitHub hosted project against their guidelines. You might
+not want to follow all of their guidelines but most are very sensible and the tools used are highly configurable and so
+can be configured to your own preferences.
+
 * Links
 
 + [[https://setuptools.pypa.io/en/latest/userguide/index.html][PyPA : Building and Distributing Packages with Setuptools]]
@@ -584,6 +591,7 @@ used it yet as I wanted
 + [[https://github.com/mitsuhiko/rye][rye: an experimental alternative to poetry/pip/pipenv/pyenv/venv/virtualenv/pdm/hatch/…]]
 + [[https://docs.pypi.org/trusted-publishers/][Publishing to PyPI with a Trusted Publisher]]
 + [[https://pepy.tech/][PyPI statistics]]
++ [[https://learn.scientific-python.org/development/][Scientific Python Library Development Guide]] ([[https://learn.scientific-python.org/development/guides/repo-review/][Repo Review Tool]])
 
 ** Miscellaneous
 
