@@ -704,7 +704,7 @@ parallel!) with ~mr -j6 update~. Commands run on individual repositories can be 
 + [[http://gitignore.io/][gitignore.io]]
 + [[https://initialcommit.com/blog/git-sim][git-sim: Visually simulate Git operations in your own repos]]
 + [[https://github.com/wfxr/forgit][forgit]] eases use of Git at the command line
- [[https://github.com/o2sh/onefetch][onefetch]] - command line utility for fast overview of a repository.
++ [[https://github.com/o2sh/onefetch][onefetch]] - command line utility for fast overview of a repository.
 
 ** Learning Resources
 
