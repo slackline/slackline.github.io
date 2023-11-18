@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       3df9f7ea-12c0-47ab-97a8-e2b3d6c72606
 :ROAM_ALIASES: "Open Research : Publishing"
-:mtime:    20231031201838 20231017154505 20230602072325 20230506081901 20230103103309 20220429104307
+:mtime:    20231118213020 20231031201838 20231017154505 20230602072325 20230506081901 20230103103309 20220429104307
 :ctime:    20220429104307
 :END:
 #+title: Open-research Publishing
@@ -26,3 +26,4 @@ obtain a DOI for yourself via [[https://orcid.org/][ORCiD]].
 + [[https://www.researchequals.com/][ResearchEquals.com]]
 + [[https://www.pyopensci.org/][Welcome to pyOpenSci - pyOpenSci]]
 + [[https://www.coar-repositories.org/][Confederation of Open Access Repositories (COAR)]]  – Building a sustainable, global knowledge commons
++ [[https://core.ac.uk/][CORE – Aggregating the world’s open access research papers]]
