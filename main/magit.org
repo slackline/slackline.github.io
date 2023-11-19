@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       220d7ba9-d30e-4149-a25b-03796e098b0d
-:mtime:    20230930074848 20230528203919 20230331095952 20230329110200 20230222123344 20230103103309 20221228103404 20230103103308
+:mtime:    20231119175955 20230930074848 20230528203919 20230331095952 20230329110200 20230222123344 20230103103309 20221228103404 20230103103308
 :ctime:    20221228103404 20230103103308
 :END:
 #+TITLE: Magit
@@ -26,6 +26,21 @@ setup but you should read the [[https://magit.vc/manual/forge.html#Getting-Start
 
 ** Branching
 
+Checking out branches is easy `c l` will prompt you for the name of a local branch to check out.
+
+Checking out new branches is incredibly simple `b c` will prompt the branch you want to branch from, typically `main` /
+`master` and you are then prompted for a name.
+
+** Committing
+
+*** Amending
+
+Its really useful to amend commits (if they haven't been pushed!), ~c a~ will add whatever is staged to the last commit
+and pop up a buffer to allow you to edit the commit message. If however you don't want to change the message you can
+enable the ~-C~ flag which is short-hand for ~--reuse-message~ and you are prompted for the message to reuse. This
+defaults to ~ORGIN-HEAD~ but type in ~HEAD~ and it reuses the last local commit on the current branch. I'd like to
+change this default behaviour but haven't worked out how yet.
+
 ** Rebasing
 :PROPERTIES:
 :mtime:    20230331100004
@@ -37,8 +52,8 @@ consider poor practice. There are good reasons for doing so though, for example 
 develop a feature and ~master~ had changes merged from another branch (~someone_elses_feature~) before you had finished
 your work then you should ideally merge those changes (i.e. ~master~) into your branch (~my_feature~) before you attempt
 to merge your branch (~my_feature~) into ~master~. You can do this via merging ~origin master~ into ~my_feature~ but
-then you inherit all of the commits from ~someone_elses_feature~. An alternative is to use ~git rebase~ and squash the
-commits into a single ~bringing branch up-to-date with master~ commit.
+then you inherit all of the commits from ~someone_elses_feature~ along with a ~merged main into <branch> commit~. An
+alternative is to use ~git rebase~ and squash the commits into a single ~bringing branch up-to-date with master~ commit.
 
 Rebasing in Magit is super easy, for a simple walk-through see [[https://chainsawriot.com/postmannheim/2022/12/12/aoe12.html][here]] or these very clear blog posts at  [[https://www.lvguowei.me/post/magit-rebase/][Magit tutorial -
 Rebase (Part I)]] and [[https://www.lvguowei.me/post/magit-rebase-2/][Magit tutorial - Rebase (Part II)]].
