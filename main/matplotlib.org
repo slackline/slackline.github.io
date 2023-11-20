@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       43350ae9-bbef-487f-8661-1336974ffecd
+:mtime:    20231120135228
+:ctime:    20231120135228
+:END:
+#+TITLE: Matplotlib
+#+FILETAGS: :python:visualisation:graphics:matplotlib:
+
+* Subplots
+
+You often want to include multiple plots in a single graph, this can be achieved using subplots.
+
+** Mosaic Plots
+
+Semantic figure configuration is available via [[https://matplotlib.org/stable/users/explain/axes/mosaic.html][~subplot_mosaic()~]].
+
+* Links
+:PROPERTIES:
+:mtime:    20231120135053
+:ctime:    20231120135053
+:END:
+
++ [[https://matplotlib.org/stable/][Matplotlib]]
++ [[https://matplotlib.org/stable/users/index.html][Using Matplotlib — Matplotlib 3.8.2 documentation]]
++ [[https://matplotlib.org/stable/tutorials/index.html][Tutorials — Matplotlib 3.8.2 documentation]]

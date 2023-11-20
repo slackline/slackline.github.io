@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       a026ee5d-c965-4697-81e5-dc5153f6d8b3
+:mtime:    20231120135417
+:ctime:    20231120135417
+:END:
+#+TITLE: Holoviews
+#+FILETAGS: :python:visualisation:graphics:holoviews:
+
+
+* Links
+:PROPERTIES:
+:mtime:    20231120135417
+:ctime:    20231120135417
+:END:
