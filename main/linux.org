@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0e6300c6-7025-4f45-820d-4d9da82b41a6
-:mtime:    20231015172332 20231005133759 20230926220759 20230917083604 20230905212306 20230724174038
+:mtime:    20231120130321 20231015172332 20231005133759 20230926220759 20230917083604 20230905212306 20230724174038
 :ctime:    20230724174038
 :END:
 #+TITLE: Linux
@@ -19,6 +19,21 @@ I've settled on [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] as I've 
 I was a happy [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] user for many years but then I started a job at a tech company and people were using the fancy [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]]
 along with the [[https://ohmyz.sh/][Oh-myZsh]] framework. I liked the extra information and tools it provided so switched and haven't looked
 back. I still use Bash for my ~root~ account though just to make me a little more cautious.
+
+** Terminals
+
+I like using the [[https://sw.kovidgoyal.net/kitty/][kitty]] terminal emulator. Its highly configurable, fast and easy to use (plus it supports transparency
+and doesn't use large boarders which take up real-estate on the screen).
+
+It doesn't always play ball when you've SSH'd in to other machines though. I couldn't find a solution to this so [[https://unix.stackexchange.com/questions/470676/tmux-under-kitty-terminal][asked]]
+and got some very useful responses. The simplest is to install ~kitty~ on the remote server, but that isn't always
+possible, in which case you should copy the ~terminfo~ from your local machine to your remote host.
+
+#+begin_src bash
+$ ssh myserver mkdir -p  ~/.terminfo/${TERM:0:1}
+$ scp /usr/share/terminfo/${TERM:0:1}/$TERM myserver:~/.terminfo/${TERM:0:1}/
+#+end_src
+
 
 * Web Hosting
 
