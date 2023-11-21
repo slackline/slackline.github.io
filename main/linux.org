@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0e6300c6-7025-4f45-820d-4d9da82b41a6
-:mtime:    20231120130321 20231015172332 20231005133759 20230926220759 20230917083604 20230905212306 20230724174038
+:mtime:    20231121204845 20231120130321 20231015172332 20231005133759 20230926220759 20230917083604 20230905212306 20230724174038
 :ctime:    20230724174038
 :END:
 #+TITLE: Linux
@@ -53,6 +53,10 @@ Miscellaneous topics
 * Android
 
 [[id:2c46e54a-d704-4e7e-bca3-d8c3e042ab43][Android]] is an operating system for mobile phones that runs the Linux kernel (and a lot of [[id:88fc1e91-d928-485e-83b4-1991663fa267][GNU/Linux]] utilities).
+
+* Privacy
+
+A lot of FOSS respects and protects your [[id:b5000932-0fec-4353-acc4-0cb02127c9ac][privacy]] as it is more transparent than closed source software.
 
 * Links
 
