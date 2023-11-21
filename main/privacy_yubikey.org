@@ -6,4 +6,572 @@
 #+TITLE: Yubikey
 #+FILETAGS: :privacy:encryption:passwords:
 
+* Glossary
+:PROPERTIES:
+:CUSTOM_ID: glossary
+:END:
+
+#+begin_verse
+  Acronym | Meaning |
+  2FA | *2* *F*actor *A*uthentication |
+  FIDO | |
+  GPG | |
+  OTP | *O*ne *T*ime *P*assword |
+  PIN | *P*ersonal *I*dentification *N*umber |
+  PIV | *P*ersonal *I*dentify *V*erification |
+  PUK | |
+#+end_verse
+
+* Installation
+** Arch
+
+#+begin_src sh
+pacman -Syu yubikey-manager yubico-pam pam-u2f yubioath-desktop libfido2
+systemctl enable --now pcscd.service
+#+end_src
+
+** Gentoo
+
+#+begin_src sh
+emerge -avt yubikey-manager pam_yubico pcsc-lite
+#+end_src
+
+*** PCSCD
+As per the [[https://wiki.gentoo.org/wiki/PCSC-Lite][PCSC-Lite - Gentoo Wiki]] under an OpenRC system either enable this using hotplug by adding
+the following to =/etc/rc.conf=...
+
+#+begin_src sh
+rc_hotplug="pcscd"
+#+end_src
+
+Alternatively enable it using OpenRC
+
+#+begin_src sh
+rc-update add pcscd default
+rc-service pcscd start
+#+end_src
+
+
+** Android
+:PROPERTIES:
+:CUSTOM_ID: android
+:END:
+[[https://www.openkeychain.org/][OpenKeychain]] supports many of the Yubikey formats and others (see [[https://github.com/open-keychain/open-keychain/wiki/Security-Tokens][open-keychain Wiki]])
+
+
+** Windows
+
+* Setup
+
+**NB** What follows is geared towards [[id:0e6300c6-7025-4f45-820d-4d9da82b41a6][Linux]] although you can do all of this using the Python tools under OSX and
+Windows.
+
+Check the firmware of your Yubikey as this will influence which form of encryption you can use on your key. In the table
+below ~E~ncryption, ~S~igning and ~A~uthorising indicates support for each firmware. I already had an ~ed25519~ OpenPGP
+key and found mention that it is supported [[https://www.reddit.com/r/yubikey/comments/i2c36b/full_ed25519_support/][here]]. I've followed the instructions [[https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP][Using Your YubiKey with OpenPGP]] from
+Yubico and recommend you read and follow these yourself.
+
+#+begin_verse
+  *Firmware* | *RSA 2048* | *RSA 4096* | *ed25519* | *Link* |
+  < 5.2.3 | =E=, =S=, =A= | - | - | |
+  5.2.3 | =E=, =S=, =A= | =E=, =S=, =A= | =S=, =A= | [[https://support.yubico.com/hc/en-us/articles/360016649139-YubiKey-5-2-3-Enhancements-to-OpenPGP-3-4-Support][1]] [[https://developers.yubico.com/PGP/YubiKey_5.2.3_Enhancements_to_OpenPGP_3.4.html][2]]|
+  > 5.2.6 | =E=, =S=, =A= | =E=, =S=, =A= | =E=, =S=, =A= | [[https://www.reddit.com/r/yubikey/comments/i2c36b/full_ed25519_support/][2]]
+#+end_verse
+
+#+begin_src sh
+Device type: YubiKey 5 NFC
+Serial number: 1234567
+Firmware version: 5.2.7
+Form factor: Keychain (USB-A)
+Enabled USB interfaces: OTP+FIDO+CCID
+NFC interface is enabled.
+
+Applications    USB     NFC
+OTP         Enabled Enabled
+FIDO U2F    Enabled Enabled
+OpenPGP     Enabled Enabled
+PIV         Enabled Enabled
+OATH        Enabled Enabled
+FIDO2       Enabled Enabled
+#+end_src
+
+First thing was to change the PIN (~123456~) and PUK and Admin PIN (~12345678~) on the device (see [[https://developers.yubico.com/PIV/Introduction/Admin_access.html][here]] for
+defaults). This is described [[https://developers.yubico.com/PIV/Guides/Device_setup.html][here]] but see ~ykman piv --help~ for more information.
+
+#+begin_src sh
+ykman piv change-pin --pin 123456 --new-pin 654321
+ykman piv change-puk --piv 12345678 --new-piv 87654321
+ykman piv change-management-key --generate --protect
+#+end_src
+
+I did encounter an error when trying this as a normal user, this also occurred as ~root~ on one system but restarting
+the =pcscd= daemon solved this (see [[https://github.com/Yubico/yubikey-manager/issues/35][ykman oath returns 'Failed connecting to the YubiKey' · Issue #35 ·
+Yubico/yubikey-manager]] and work through the different suggested solutions if you encounter this problem and restarting
+~pcscd~ daemon doesn't work).
+
+** Using Yubikey to unlock computer
+
+There are two methods to achiveing this according to this [[https://kliu.io/post/yubico-magic-unlock/][article]], ~pam_u2f~ which requires a tap on the key (see
+[[https://wiki.archlinux.org/index.php/Universal_2nd_Factor#Authentication_for_Arch_Linux][Universal 2nd Factor : Authentication for (Arch) Linux - ArchWiki]]) and ~pam_yubico~ which doesn't (see [[https://support.system76.com/articles/yubikey-login/][Login with
+Yubikey - System76 Support]]). I wanted touchless so went with the later.
+
+* GPG
+It is important to note that the PIN and Admin PIN for managing your
+Yubikey are *NOT* the same as those set with =ykman piv=, they need
+setting independently. I found out the hard way and had to reset my
+
+** Changing PIN and Admin Pin
+:PROPERTIES:
+:CUSTOM_ID: changing-pin-and-admin-pin
+:END:
+The defaults are the same as for the YubiKey PIN is ~123456~ and Admin PIN is ~12345678~
+
+#+begin_src sh
+gpg --card-edit
+
+gpg/card> admin
+Admin commands are allowed
+
+gpg/card> passwd
+gpg: OpenPGP card no. D2760001240103040006136798170000 detected
+
+1 - change PIN
+2 - unblock PIN
+3 - change Admin PIN
+4 - set the Reset Code
+Q - quit
+
+Your selection? 1
+PIN changed.
+
+1 - change PIN
+2 - unblock PIN
+3 - change Admin PIN
+4 - set the Reset Code
+Q - quit
+
+Your selection? 3
+Error changing the PIN: Operation cancelled
+
+1 - change PIN
+2 - unblock PIN
+3 - change Admin PIN
+4 - set the Reset Code
+Q - quit
+
+Your selection? 3
+PIN changed.
+
+1 - change PIN
+2 - unblock PIN
+3 - change Admin PIN
+4 - set the Reset Code
+Q - quit
+
+Your selection? Q
+#+end_src
+
+You have now change the GPG passwords for the YubiKey card.
+
+** Add Info
+#+begin_src sh
+gpg --card-edit
+
+gpg/card> admin
+Admin commands are allowed
+
+gpg/card> name
+Cardholder's surname: Last
+Cardholder's given name: First
+
+gpg/card> sex
+Salutation (M = Mr., F = Ms., or space): M
+
+gpg/card> lang
+Language preferences: gb
+
+gpg/card> list
+
+Reader ...........: Yubico YubiKey OTP FIDO CCID 00 00
+Application ID ...: ################################
+Application type .: OpenPGP
+Version ..........: 3.4
+Manufacturer .....: Yubico
+Serial number ....: ########
+Name of cardholder: First Last
+Language prefs ...: gb
+Salutation .......: Mr.
+URL of public key : [not set]
+Login data .......: [not set]
+Signature PIN ....: not forced
+Key attributes ...: rsa2048 rsa2048 rsa2048
+Max. PIN lengths .: 127 127 127
+PIN retry counter : 3 0 3
+Signature counter : 0
+KDF setting ......: off
+Signature key ....: [none]
+Encryption key....: [none]
+Authentication key: [none]
+General key info..: [none]
+#+end_src
+
+** Transferring Keys to Cards
+I wasn't quite ready to jump in with both feet and move my GPG signatures to the YubiKey completely, but copying them to
+the card destroys the local copy. I ~rsync~d mine to another computer and made a back up of the private key to my
+password manager.
+
+#+begin_src sh
+  # Show Secret part of key gpg --export-secret-key --armor your@email.address # Create and paste in the secret key to
+  pass password manager pass edit Personal/gpg/your@email.address
+#+end_src
+
+Then fire up ~gpg --edit-keys your@email.address.com~ and follow the instructions [[https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP][here]] to transfer primary and subkeys
+across to the Yubikey.
+
+** Reset GnuPG on Card
+If you mess up entering the PIN or Admin PIN three or more times you'll get locked out, in which case you will need to
+reset the PIN, this can be done using ~ykman~. It can also be done using gpg, see [[https://support.yubico.com/hc/en-us/articles/360013761339-Resetting-the-OpenPGP-Applet-on-the-YubiKey][article]].
+
+#+begin_src sh
+ykman openpgp reset
+#+end_src
+
+** Troubleshooting
+
+I found after an upgrade to ~gpg-2.3.3~ and a reboot after updating my kernel to ~5.14.15~ that my Yubikey 5 was not
+recognised by ~gpg~ despite working fine as a 2FA device and working on two other systems without any problems.
+
+It was detected by ~lsusb~ and ~ykman list~ showed it but initially ~ykman info~ didn't return anything (althoug it did
+on a laptop).
+
+I found the Yubikey was recognised as a USB device...
+
+#+begin_src sh
+dmesg | tail -n8
+[ 1610.158557] usb 1-6.4.2: new full-speed USB device number 98 using xhci_hcd
+[ 1610.240347] usb 1-6.4.2: New USB device found, idVendor=1050, idProduct=0407, bcdDevice= 5.27
+[ 1610.240350] usb 1-6.4.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 1610.240351] usb 1-6.4.2: Product: YubiKey OTP+FIDO+CCID
+[ 1610.240352] usb 1-6.4.2: Manufacturer: Yubico
+[ 1610.257937] input: Yubico YubiKey OTP+FIDO+CCID as /devices/pci0000:00/0000:00:14.0/usb1/1-6/1-6.4/1-6.4.2/1-6.4.2:1.0/0003:1050:0407.0011/input/input39
+[ 1610.309710] hid-generic 0003:1050:0407.0011: input,hidraw4: USB HID v1.10 Keyboard [Yubico YubiKey OTP+FIDO+CCID] on usb-0000:00:14.0-6.4.2/input0
+[ 1610.310826] hid-generic 0003:1050:0407.0012: hiddev97,hidraw5: USB HID v1.10 Device [Yubico YubiKey OTP+FIDO+CCID] on usb-0000:00:14.0-6.4.2/input1
+❱ lsusb -d 1050:0407 -v
+
+Bus 001 Device 026: ID 1050:0407 Yubico.com Yubikey 4/5 OTP+U2F+CCID
+Device Descriptor:
+  bLength                18
+  bDescriptorType         1
+  bcdUSB               2.00
+  bDeviceClass            0
+  bDeviceSubClass         0
+  bDeviceProtocol         0
+  bMaxPacketSize0        64
+  idVendor           0x1050 Yubico.com
+  idProduct          0x0407 Yubikey 4/5 OTP+U2F+CCID
+  bcdDevice            5.27
+  iManufacturer           1 Yubico
+  iProduct                2 YubiKey OTP+FIDO+CCID
+  iSerial                 0
+  bNumConfigurations      1
+  Configuration Descriptor:
+    bLength                 9
+    bDescriptorType         2
+    wTotalLength       0x0096
+    bNumInterfaces          3
+    bConfigurationValue     1
+    iConfiguration          0
+    bmAttributes         0x80
+      (Bus Powered)
+    MaxPower               30mA
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        0
+      bAlternateSetting       0
+      bNumEndpoints           1
+      bInterfaceClass         3 Human Interface Device
+      bInterfaceSubClass      1 Boot Interface Subclass
+      bInterfaceProtocol      1 Keyboard
+      iInterface              0
+        HID Device Descriptor:
+          bLength                 9
+          bDescriptorType        33
+          bcdHID               1.10
+          bCountryCode            0 Not supported
+          bNumDescriptors         1
+          bDescriptorType        34 Report
+          wDescriptorLength      71
+         Report Descriptors:
+           ** UNAVAILABLE **
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x81  EP 1 IN
+        bmAttributes            3
+          Transfer Type            Interrupt
+          Synch Type               None
+          Usage Type               Data
+        wMaxPacketSize     0x0008  1x 8 bytes
+        bInterval              10
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        1
+      bAlternateSetting       0
+      bNumEndpoints           2
+      bInterfaceClass         3 Human Interface Device
+      bInterfaceSubClass      0
+      bInterfaceProtocol      0
+      iInterface              0
+        HID Device Descriptor:
+          bLength                 9
+          bDescriptorType        33
+          bcdHID               1.10
+          bCountryCode            0 Not supported
+          bNumDescriptors         1
+          bDescriptorType        34 Report
+          wDescriptorLength      34
+         Report Descriptors:
+           ** UNAVAILABLE **
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x04  EP 4 OUT
+        bmAttributes            3
+          Transfer Type            Interrupt
+          Synch Type               None
+          Usage Type               Data
+        wMaxPacketSize     0x0040  1x 64 bytes
+        bInterval               2
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x84  EP 4 IN
+        bmAttributes            3
+          Transfer Type            Interrupt
+          Synch Type               None
+          Usage Type               Data
+        wMaxPacketSize     0x0040  1x 64 bytes
+        bInterval               2
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        2
+      bAlternateSetting       0
+      bNumEndpoints           3
+      bInterfaceClass        11 Chip/SmartCard
+      bInterfaceSubClass      0
+      bInterfaceProtocol      0
+      iInterface              0
+      ChipCard Interface Descriptor:
+        bLength                54
+        bDescriptorType        33
+        bcdCCID              1.00
+        nMaxSlotIndex           0
+        bVoltageSupport         7  5.0V 3.0V 1.8V
+        dwProtocols             2  T=1
+        dwDefaultClock       4000
+        dwMaxiumumClock      4000
+        bNumClockSupported      0
+        dwDataRate         307200 bps
+        dwMaxDataRate      307200 bps
+        bNumDataRatesSupp.      0
+        dwMaxIFSD            3062
+        dwSyncProtocols  00000000
+        dwMechanical     00000000
+        dwFeatures       000400FE
+          Auto configuration based on ATR
+          Auto activation on insert
+          Auto voltage selection
+          Auto clock change
+          Auto baud rate change
+          Auto parameter negotiation made by CCID
+          Short and extended APDU level exchange
+        dwMaxCCIDMsgLen      3072
+        bClassGetResponse    echo
+        bClassEnvelope       echo
+        wlcdLayout           none
+        bPINSupport             0
+        bMaxCCIDBusySlots       1
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x02  EP 2 OUT
+        bmAttributes            2
+          Transfer Type            Bulk
+          Synch Type               None
+          Usage Type               Data
+        wMaxPacketSize     0x0040  1x 64 bytes
+        bInterval               0
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x82  EP 2 IN
+        bmAttributes            2
+          Transfer Type            Bulk
+          Synch Type               None
+          Usage Type               Data
+        wMaxPacketSize     0x0040  1x 64 bytes
+        bInterval               0
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x83  EP 3 IN
+        bmAttributes            3
+          Transfer Type            Interrupt
+          Synch Type               None
+          Usage Type               Data
+        wMaxPacketSize     0x0008  1x 8 bytes
+        bInterval              32
+Device Status:     0x0000
+  (Bus Powered)
+#+end_src
+
+And whilst ~ykman~ could ~list~ the key it couldn't gain access to get any information about it...
+
+#+begin_src sh
+  (Bus Powered)
+  ❱ ykman list
+YubiKey 5 NFC (5.2.7) [OTP+FIDO+CCID] Serial: 13679817
+
+But if I try to get info about it..
+
+ykman info
+Traceback (most recent call last):
+File "/usr/lib/python3.9/site-packages/ykman/cli/__main__.py", line 104, in retrying_connect
+_, state = _scan_changes(state)
+File "/usr/lib/python3.9/site-packages/ykman/cli/__main__.py", line 91, in _scan_changes
+raise TimeoutError("Timed out waiting for state change")
+TimeoutError: Timed out waiting for state change
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+File "/usr/lib/python-exec/python3.9/ykman", line 33, in <module>
+sys.exit(load_entry_point('yubikey-manager==4.0.7', 'console_scripts', 'ykman')())
+File "/usr/lib/python3.9/site-packages/ykman/cli/__main__.py", line 378, in main
+cli(obj={})
+File "/usr/lib/python3.9/site-packages/click/core.py", line 1128, in __call__
+return self.main(*args, **kwargs)
+File "/usr/lib/python3.9/site-packages/click/core.py", line 1053, in main
+rv = self.invoke(ctx)
+File "/usr/lib/python3.9/site-packages/click/core.py", line 1659, in invoke
+return _process_result(sub_ctx.command.invoke(sub_ctx))
+File "/usr/lib/python3.9/site-packages/click/core.py", line 1395, in invoke
+return ctx.invoke(self.callback, **ctx.params)
+File "/usr/lib/python3.9/site-packages/click/core.py", line 754, in invoke
+return __callback(*args, **kwargs)
+File "/usr/lib/python3.9/site-packages/click/decorators.py", line 26, in new_func
+return f(get_current_context(), *args, **kwargs)
+File "/usr/lib/python3.9/site-packages/ykman/cli/info.py", line 158, in info
+info = ctx.obj["info"]
+File "/usr/lib/python3.9/site-packages/ykman/cli/util.py", line 164, in __getitem__
+self.resolve()
+File "/usr/lib/python3.9/site-packages/ykman/cli/util.py", line 161, in resolve
+self._objects[k] = f()
+File "/usr/lib/python3.9/site-packages/ykman/cli/__main__.py", line 306, in <lambda>
+ctx.obj.add_resolver("conn", lambda: resolve()[0])
+File "/usr/lib/python3.9/site-packages/ykman/cli/__main__.py", line 301, in resolve
+items = _run_cmd_for_single(ctx, subcmd.name, connections, reader)
+File "/usr/lib/python3.9/site-packages/ykman/cli/__main__.py", line 197, in _run_cmd_for_single
+return retrying_connect(None, connections, state=state)
+File "/usr/lib/python3.9/site-packages/ykman/cli/__main__.py", line 107, in retrying_connect
+raise e
+File "/usr/lib/python3.9/site-packages/ykman/cli/__main__.py", line 97, in retrying_connect
+return connect_to_device(serial, connections)
+File "/usr/lib/python3.9/site-packages/ykman/device.py", line 216, in connect_to_device
+conn = dev.open_connection(connection_type)
+File "/usr/lib/python3.9/site-packages/ykman/hid/__init__.py", line 74, in open_connection
+return CtapHidDevice(self.descriptor, open_connection(self.descriptor))
+File "/usr/lib/python3.9/site-packages/fido2/hid/__init__.py", line 109, in __init__
+response = self.call(CTAPHID.INIT, nonce)
+File "/usr/lib/python3.9/site-packages/fido2/hid/__init__.py", line 157, in call
+self._connection.write_packet(packet.ljust(packet_size, b"\0"))
+File "/usr/lib/python3.9/site-packages/fido2/hid/linux.py", line 41, in write_packet
+super(LinuxCtapHidConnection, self).write_packet(b"\0" + packet)
+File "/usr/lib/python3.9/site-packages/fido2/hid/base.py", line 73, in write_packet
+if os.write(self.handle, packet) != len(packet):
+OSError: [Errno 71] Protocol error
+#+end_src
+
+There are error messages in dmesg with error code 71...
+
+#+begin_src sh
+dmesg | grep '71$'
+[ 1885.607659] usb 1-3.1.2: device descriptor read/64, error -71
+[ 1891.435568] usb 1-3.1.2: device not accepting address 121, error -71
+#+end_src
+
+...and both ~gpg --card-status~ and ~gpg --card-edit~ failed to detect the card...
+
+#+begin_src sh
+❱ gpg --card-status
+gpg: selecting card failed: No such device
+gpg: OpenPGP card not available: No such device
+❱ gpg --card-edit
+
+gpg: selecting card failed: No such device
+gpg: OpenPGP card not available: No such device
+#+end_src
+
+A bit of searching led to some threads on Reddit and the suggestion [[https://www.reddit.com/r/yubikey/comments/mzvlt0/comment/gwwdo78/][here]] (see also [[https://www.reddit.com/r/yubikey/comments/n4n96r/fix_gpg_to_recognize_your_yubikey_again_after/][here]]) appeared to do the trick as
+adding the following to ~~/.gnupg/scdaemon.conf~ got the card working again...
+
+#+begin_src sh
+❱ gpg --card-status
+Reader ...........: Yubico YubiKey OTP FIDO CCID 00 00
+Application ID ...: ################################
+Application type .: OpenPGP
+Version ..........: 0.0
+Manufacturer .....: Yubico
+Serial number ....: 13679817
+Name of cardholder: Me
+Language prefs ...: gb
+Salutation .......: Mr.
+URL of public key : [not set]
+Login data .......: [not set]
+Signature PIN ....: not forced
+Key attributes ...: ed25519 cv25519 ed25519
+Max. PIN lengths .: 127 127 127
+PIN retry counter : 3 0 3
+Signature counter : 0
+KDF setting ......: off
+UIF setting ......: Sign=off Decrypt=off Auth=off
+Signature key ....: #### #### #### #### ####  #### #### #### #### ####
+      created ....: 2020-11-20 14:12:27
+Encryption key....: #### #### #### #### ####  #### #### #### #### ####
+      created ....: 2020-11-20 14:12:27
+Authentication key: #### #### #### #### ####  #### #### #### #### ####
+      created ....: 2020-12-02 22:06:51
+General key info..: pub  ed25519/700172212EF5818B 2020-11-20 Me <my@email.com>
+sec>  ed25519/700172212EF5818B  created: 2020-11-20  expires: ####-##-##
+                                card-no: 0006 ########
+ssb>  cv25519/95437AC864ECE7F9  created: 2020-11-20  expires: ####-##-##
+                                card-no: 0006 ########
+ssb>  ed25519/1B704D7D93B8DC1C  created: 2020-12-02  expires: ####-##-##
+                                card-no: 0006 ########
+ssb   ed25519/ADA9F17409C4D726  created: 2020-12-13  expires: ####-##-##
+#+end_src
+
+What the problem is or how it occurred I do not know, I did email Yubico support but as of writing am yet to hear back
+from them.
+
+
 * Links
+
+** Yubico
+
++  [[https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP][Using Your YubiKey with OpenPGP]]
+** Installation
+
+*** Linux
++ [[https://wiki.gentoo.org/wiki/YubiKey][YubiKey - Gentoo wiki]]
++ [[https://wiki.gentoo.org/wiki/PCSC-Lite][PCSC-Lite - Gentoo Wiki]]
++ [[https://wiki.archlinux.org/index.php/YubiKey][YubiKey - ArchWiki]]
+
+*** Miscellaneous
++ [[https://flameeyes.blog/2014/10/25/setting-up-yubikey-neo-and-u2f-on-gentoo-and-linux-in-general/][Setting up Yubikey NEO and U2F on Gentoo (and Linux in general)]]
++ [[https://kliu.io/post/yubico-magic-unlock/][Using a Yubikey as a touchless, magic unlock key for Linux :: Kevin Liu]]
++ [[https://wiki.archlinux.org/index.php/Universal_2nd_Factor#Authentication_for_Arch_Linux][Universal 2nd Factor - ArchWiki]]
++ [[https://support.system76.com/articles/yubikey-login/][Login with Yubikey - System76 Support]]
