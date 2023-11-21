@@ -6,4 +6,112 @@
 #+TITLE: OnlyKey
 #+FILETAGS: :privacy:encryption:onlykey:
 
+I splashed out on three of these from a KickStarter project, to date I'm yet to transfer my GPG keys onto them, nor
+setup my family with theirs. I like the simplicity of the design/idea, but the design, software and support just isn't
+as good as the [[id:1f44c0fe-5b1c-4a02-a623-18c4eebbc851][Yubikey]] I've tried.
+
+* Command Line Utility
+#+begin_src sh
+mkvirtualenv onlykey
+workon onlykey
+pip install onlykey
+#+end_src
+
+* udev rule
+As ~root~...
+
+#+begin_src sh
+cd /etc/udev/rules.d/
+wget https://raw.githubusercontent.com/trustcrypto/trustcrypto.github.io/pages/49-onlykey.rules
+udevadm control --reload-rules && udevadm trigger
+#+end_src
+
+* OnlyKey App
+Only available as a Debian package (for now), but it can be installed by extracting (see instructions [[https://docs.crp.to/linux.html][here]]).
+
+#+begin_src sh
+ar xf OnlyKey_5.3.3_amd64.deb
+tar xf data.tar.xz
+sudo cp -r opt/OnlyKey /opt/.
+ln -s /opt/OnlyKey/nw ~/.local/bin/.
+#+end_src
+
+* Arch Linux
+
+
+There are packages on AUR for the OnlyKey Chrome desktop app ([[https://aur.archlinux.org/packages/onlykey][~onlykey~]]) and for udev rules ([[https://aur.archlinux.org/packages/onlykey-udev][~onlykey~]])
+
+* Setup
+
+You **have** to put the key in config mode to set it up. Hold the ~1~ button for 10 seconds to do this, it will go red and flash.
+
+** PIN/Backup Password
+
+The first thing to do is set a PIN, this **ONLY** uses the digits ~1-6~ and /must/ be at least 8 digits long. Save this somewhere safe, if you
+lose it you will have to Factory Reset the device and lose all information.
+
+After setting the PIN you have to set a Backup Password, this **MUST** be at least 25 characters.
+
+* OpenPGP Key
+
+You can add an OpenPGP key to your OnlyKey, to do so you have to export your key in PEM format. This requires you to use
+~gpgsm~ and (typically) some tom-foolery. I found the answer [[https://superuser.com/a/1414277][here]] useful, but still couldn't work things out and so
+[[https://onlykey.discourse.group/t/opengpg-pem-key/844/3][asked for assistance]].
+
+As advised my OpenPGP key does indeed have subkeys and so I needed to load the decryption key to slot 1 and the signing
+key to slot 2 of the OnlyKey Duo.
+
+I followed the [[https://docs.crp.to/importpgp.html#loading-keys-a][instructions]]...
+
+1. Export the OpenPGP compatible private key from GPG
+
+#+begin_src sh
+# List your master key and subkeys, make note of your master key you will use it in the subsequent
+❱ gpg2 --list-keys your.email@address.com
+pub   ed25519 2020-11-20 [SC]
+      KJAA23980KALSJD0913UAJKNETAQ9082398345RU
+uid           [ultimate] Your Name <your.email@address.com>
+sub   cv25519 2022-04-20 [E]
+sub   ed25519 2022-04-20 [A]
+sub   ed25519 2022-04-20 [S]
+
+# List your different keys
+gpg2 --with-colons --list-keys KJAA23980KALSJD0913UAJKNETAQ9082398345RU
+##READACTED##
+#+end_src
+
+The "key" here is to identify the output associated with the flag ~e~ in the official documentation it appears as
+~sub:-:4096:1:8E6332B693FB6D8F:1513980282::::::e::::::23:~ the critical bit being ~::::::e::::::~ as this is the key you
+need.
+
+2. [@2] Put the OnlyKey Duo into config mode by holding down button #1 for 10+ seconds.
+
+3. The [[https://docs.crp.to/importpgp.html#loading-keys-a][advice]] is geared towards OnlyKey /not/ OnlyKey Duo and states you should...
+
+#+begin_quote
+Copy and paste the private key into the RSA Private Key box. Ensure slot 1 is selected, the same passphrase you used
+with GPG is entered as passphrase, Set as decryption key is selected. If you wish to use your PGP to encrypt OnlyKey
+backups select Set as backup key (Note: If you previously set a backup passphrase and set this the PGP key will be used
+instead). When finished select Save to OnlyKey
+
+#+end_quote
+
+...under the "/Keys/" tab there is no "/RSA Private key box/", this is because newer Eliptic Curve Cryptography (ECC)
+keys are now supported.  Instead select the Slot as ~ECC 1 (101)~ and paste your key into the ~Key:~ box.
+
+4. [@4] Tick the box ~Decryption key (use to decrypt messages)~
+
+5. Enter your passphrase in the field.
+
+6. Click `Save to OnlyKey
+
+* Factory Reset
+Supposedly you hold down button 1 for 10 seconds until it goes red then button 2 for 20 seconds and it then goes blue. I
+didn't get these colours but did reset it. After having reset you need to upload the firmware.
+
 * Links
+** Official
++ [[https://docs.crp.to/][OnlyKey Docs]]
++ [[https://docs.crp.to/command-line.html#idletimeout-num][OnlyKey
+  Command-Line Utility]]
++ [[https://docs.crp.to/linux.html][Using OnlyKey with Linux]]
