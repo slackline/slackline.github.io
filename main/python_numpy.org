@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d7b0fb90-d668-4e31-bc2d-305f6ee14fc9
-:mtime:    20231119210731 20230803212315 20230612165437 20230108213627 20230103103313 20220524211634
+:mtime:    20231126083238 20231119210731 20230803212315 20230612165437 20230108213627 20230103103313 20220524211634
 :ctime:    20220524211634
 :END:
 #+TITLE: Numpy
@@ -61,3 +61,7 @@ This shows that its faster to use the vectorisation approach than to loop over t
 
 + [[https://pythonspeed.com/articles/speeding-up-numba/?s=35][Understanding CPUs can help speed up Numba and NumPy code]]
 + [[https://pythonspeed.com/articles/numpy-is-slow/][When NumPy is too slow]]
+
+** Misc
+
++ [[https://labs.quansight.org/blog/building-scipy-with-flang][The 'eu' in eucatastrophe – Why SciPy builds for Python 3.12 on Windows are a minor miracle | Labs]]

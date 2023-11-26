@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a5f391b-0f61-48d8-a4c3-a204d55538de
-:mtime:    20230530082045 20230528222034
+:mtime:    20231126082848 20230530082045 20230528222034
 :ctime:    20230528222034
 :END:
 #+TITLE: OpenStreetMap
@@ -8,9 +8,110 @@
 
 [[https://openstreetmap.org][OpenStreetMap]] is an amazing free, open source resource.
 
+* Bicycle Router (BRouter)
+[[http://brouter.de/brouter/][BRouter]] ([[https://brouter.de/brouter-web/][Web Interface]]) is a dedicated routing engine for cyclists, its a little clunky to install and get it working with [[https://osmand.net][OSMAnd+]]
+but the [[http://brouter.de/brouter/offline.html][offline routing instructions]] help. Once you've installed the [[https://f-droid.org/en/packages/btools.routingapp/][BRouter Application]] start it up, you will be asked
+where to store data and after following a few prompts will be presented with a world map, zoom in and select the areas
+you wish to have routing for. These will be downloaded and stored in the selected location.
+
+You then need to configure OSMAnd+, go to ~Settings > Cycling > Navigation Settings > Navigation Type~ and select
+~BRouter (offline)~. That's it when you choose to find a route for cycling it should use BRouter.
+
+* Beat The Street
+
+Sheffield set up [[https://beatthestreet.me/sheffield][Beat The Street]] and I requested the locations of all boxes and was pointed to a [[https://production-bts-static.s3.amazonaws.com/maps/sheffield.geojson][GeoJSON]] ([[][copy]])
+which I converted to [[https://kimura.no-ip.info/~arch/beatthestreet_sheffield.gpx][GPX]] using an [[][online converter]]. I trimmed it down so that it was just the [[https://kimura.no-ip.info/~arch/sheffield_beatboxes.gpx][BeatBoxes]] and loaded
+it into [[https://osmand.net][OSMAnd+]]. I can now select a BeatBox to navigate to from the map by bicycle and it will use BRouter (see above)
+to get me there, I can add additional boxes to visit along the route as way points.
+
+* Visualisation
+
+[[https://leafletjs.com/][Leaflet]] is a JavaScript library for visualising OpenStreetMap data. There are API interfaces for Python and R.
+
+** Python
+- [[https://python-visualization.github.io/folium/][Folium]]
+
+** R
+- [[https://www.r-bloggers.com/2021/07/simplevis-making-leaflet-sf-maps/][simplevis]]
+- [[https://ucanr-igis.github.io/tech_notes/inaturalist_map.html][Mapping iNaturalist Data in R]]
+
+
 * Links
 
-** Android
+** OpenStreetMap
++ [[https://openstreetmap.org][openstreetmap.org]]
++ [[https://wiki.openstreetmap.org/wiki/Main_Page][Wiki]]
++ [[http://resultmaps.neis-one.org/oooc?zoom=10&lat=53.5057987&lon=-1.36281103&layers=B00TFFT][User Contributions Map]]
++ [[https://nominatim.openstreetmap.org/][Nominatim]] for reverse lookup (slightly better than searching on OSM as you get area information)
++ [[https://mapwith.ai/][MapWith.AI]] - useful for adding building outlines.
++ [[https://overpass-turbo.eu/][Overpass]] useful for highlighting features in given areas.
++ [[https://resultmaps.neis-one.org/unmapped#7/52.935/-2.159][Unmapped Places of OpenStreetMap - 2020]]
++ [[https://osmuk.org/][OpenStreetMap UK -- A Community Interest Company (CIC)]]
++ [[https://mc.bbbike.org/mc/][MapCompare]] ### Apps
++ [[https://osmand.net][OSMAnd]]
++ [[https://github.com/westnordost/StreetComplete][StreetComplete]]
++ [[https://github.com/ubipo/osmfocus][OSMFocus Reburn]]
++ [[https://vespucci.io/][Vespuci]]
++ [[https://github.com/IpswichMapper/SwiftAddress][IpswichMapper/SwiftAddress: The fastest way to collect housenumbers for OpenStreetMap]]
++ [[https://trailrouter.com][TrailRouter]] for running in nature.
++ [[http://brouter.de/brouter/][BRouter]] for bikes.
++ [[https://organicmaps.app/][OrganicMaps]] alternative routing to OSMAnd (doesn't allow you to share the maps OSMAnd downloads and so doubles your
+  storage if you use both).
++ [[https://github.com/schienenersatzverkehr/byke][byke: bike lane quality analysis]]
++ [[https://www.cyclestreets.net/mobile/android/][CycleStreets » Android - cycle journey planner]]
++ [[https://owntracks.org/booklet/][OwnTracks Booklet]]
+
+*** Overlays
++ [[https://www.cyclosm.org/#map=15/53.3696/-1.4740/cyclosm][CyclOSM]]
++ [[https://opencampingmap.org][OpenCamping]]
++ [[https://histosm.org/#3/9/49/0/][HistOSM 2]]
++ [[https://github.com/hvdwolf/OsmAnd-UKpostcodes][OsmAnd-UKpostcodes: Set of scripts to create UK-postcodes files for OsmAnd]]
++ [[https://scottishcastles.xyz/][Scottishcastles.xyz]]
+
+*** Articles
+:PROPERTIES:
+:CUSTOM_ID: articles
+:END:
++ [[https://joemorrison.medium.com/openstreetmap-is-having-a-moment-dcc7eef1bb01][OpenStreetMap is Having a Moment. The Billion Dollar Dataset Next Door]]
++ [[https://www.mdpi.com/2220-9964/8/5/232][Corporate Editors in the Evolving Landscape of OpenStreetMap]]
++ [[https://www.openstreetmap.org/user/Jennings%20Anderson/diary/396271][Paid editing of OSM]]
++ [[https://www.theguardian.com/politics/2021/jun/30/openstreetmap-looks-to-relocate-to-eu-due-to-brexit-limitations][OpenStreetMap looks to relocate to EU due to Brexit limitations]]
+
+** Hardware
+
++ [[https://thegreytechnologies.com/products/smallest-gps-tracker-for-car][Smallest GPS Tracker]]
+
+** Software
+
++ [[https://github.com/vkurup/python-tcxparser][python-tcxparser: Simple parser for Garmin TCX files]]
++ [[https://gitlab.com/nshephard/tcx2gpx][nshephard / tcx2gpx · GitLab]] I leverage the above package to convert TCX to more generic GPX (plus I learnt how to
+  publish packages to PyPi to ease installation).
+
+*** Android
 
 + [[https://streetcomplete.app/][StreetComplete]] ([[https://github.com/streetcomplete/streetcomplete][GitHub : streetcomplete/StreetComplete]])
 + [[https://osmand.net/][OsmAnd]] ([[https://github.com/osmandapp/OsmAnd/][GitHub : osmandapp/OsmAnd]])
+
+** Books
+
++ [[https://geocompx.org/][Geo Computation Resources]] (includes books for such in R and Python).
+
+** Misc
+
++ [[https://blog.datawrapper.de/interpolation-for-color-scales-and-maps/][How to choose an interpolation for your color scale - Datawrapper Blog]]
+
+** Sharing Locations
+
++ [[https://shkspr.mobi/blog/2019/03/why-bother-with-what-three-words/][Why bother with What Three Words? -- Terence Eden's Blog]]
++ [[https://cybergibbons.com/security-2/what3words-the-algorithm/][What3Words -- The Algorithm]]
++ [[https://en.wikipedia.org/wiki/Open_Location_Code][Open Location Code - Wikipedia]]
++ [[https://en.wikipedia.org/wiki/Geohash][Geohash - Wikipedia]]
+
+*** Stars
+Sometimes useful for navigation!
+
++  [[https://www.timeanddate.com/astronomy/night/uk/sheffield][Sheffield Night Sky]]
+
+** Related
+
++ [[https://www.opendronemap.org/][Drone Mapping Software - OpenDroneMap™]]
