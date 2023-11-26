@@ -1,15 +1,17 @@
 :PROPERTIES:
 :ID:       ce08bd82-0146-49cb-8a64-048ffe7210f2
-:mtime:    20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
+:mtime:    20231126223255 20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
 :ctime:    20221229210308
 :END:
-#+TITLE: GPG
-#+DATE: <2022-12-29 Thu 20:48>
-#+FILETAGS: security:gpg
+#+TITLE: GnuPG
+#+FILETAGS: :security:gpg:linux:yubikey:
+
+GnuPG is a beast, it allows you to encrypt keys, sign commits in [[id:0859ef9e-834d-4e84-8e67-fa7593a61e0b][Git]] and more, its available for [[id:0e6300c6-7025-4f45-820d-4d9da82b41a6][Linux]], OSX and Windows.
 
 * Key Management
 
-Private keys never expire, its the public part that can be set to expire.
+Keys expire if a date is set, its ok not to have an expiry date for private keys (although its still recommended) but
+its wise to set expiry dates for the public parts.
 
 ** Creating Keys
 

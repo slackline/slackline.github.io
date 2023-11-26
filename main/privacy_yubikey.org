@@ -1,10 +1,13 @@
 :PROPERTIES:
 :ID:       1f44c0fe-5b1c-4a02-a623-18c4eebbc851
-:mtime:    20231121210434
+:mtime:    20231126221735 20231121210434
 :ctime:    20231121210434
 :END:
 #+TITLE: Yubikey
 #+FILETAGS: :privacy:encryption:passwords:
+
+Yubikeys are a great piece of hardware and make keeping your digital life secure considerably easier. You can store your
+[[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] keys on there and use them for (some types of) 2FA.
 
 * Glossary
 :PROPERTIES:

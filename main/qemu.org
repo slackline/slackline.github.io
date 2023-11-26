@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       76578fdf-d00f-4eb6-ad74-13bb08fc5d65
+:mtime:    20231126223450
+:ctime:    20231126223450
+:END:
+#+TITLE: QEMU
+#+FILETAGS: :linux:vm:virtual machine:emulation:
