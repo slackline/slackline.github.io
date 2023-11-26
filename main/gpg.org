@@ -1,13 +1,212 @@
 :PROPERTIES:
 :ID:       ce08bd82-0146-49cb-8a64-048ffe7210f2
-:mtime:    20230504101907 20230103103313 20221229210308
+:mtime:    20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
 :ctime:    20221229210308
 :END:
 #+TITLE: GPG
 #+DATE: <2022-12-29 Thu 20:48>
 #+FILETAGS: security:gpg
 
+* Key Management
+
+Private keys never expire, its the public part that can be set to expire.
+
+** Creating Keys
+
+The following steps creates a master private key using ED25519 elliptic curve to sign, certify and authenticate.
+#+begin_src
+gpg2 --full-gen-key-expert
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (7) DSA (set your own capabilities)
+   (8) RSA (set your own capabilities)
+   (9) ECC and ECC
+  (10) ECC (sign only)
+  (11) ECC (set your own capabilities)
+  (13) Existing key
+Your selection? 11
+Possible actions for a ECDSA/EdDSA key: Sign Certify Authenticate
+Current allowed actions: Sign Certify
+
+   (S) Toggle the sign capability
+   (A) Toggle the authenticate capability
+   (Q) Finished
+Your selection? Q
+Please select which elliptic curve you want:
+   (1) Curve 25519
+   (3) NIST P-256
+   (4) NIST P-384
+   (5) NIST P-521
+   (6) Brainpool P-256
+   (7) Brainpool P-384
+   (8) Brainpool P-512
+   (9) secp256k1
+Your selection? 1
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 0
+Key does not expire at all
+Is this correct? (y/N) y
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: John Doe
+Email address: jdoe@protonmail.com
+Comment:
+You selected this USER-ID:
+    "John Doe <jdoe@protonmail.com>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? o
+We need to generate a lot of random bytes. It is a good idea to perform some other action (type on the keyboard, move the mouse, utilize the disks) during the prime generation; this gives the random number generator a better chance to gain enough entropy.
+gpg: key 0xC0A72D42633AADE1 marked as ultimately trusted
+gpg: revocation certificate stored as '/home/amnesia/.gnupg/openpgp-revocs.d/C6425A1EDA82B023A90E382CC0A36B11781DEFF4.rev'
+public and secret key created and signed.
+
+pub   ed25519/0xC0A72D42633AADE1 2020-04-27 [C] [expires: 2070-04-15]
+      Key fingerprint = C524 6A0A DE20 E283 A90E  382C C0A3 6B17 811F FED4
+uid                              John Doe <jdoe@protonmail.com>
+#+end_src
+
+We then create a sub-key for Encryption using Curve 25519, ideally you should set an expiration date for this.
+
+#+begin_src bash
+:~$ gpg --expert --edit-key 0xC0A72D42633AADE1
+gpg (GnuPG) 2.2.12; Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+
+gpg> addkey
+Please select what kind of key you want:
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (5) Elgamal (encrypt only)
+   (6) RSA (encrypt only)
+  (10) ECC (sign only)
+  (12) ECC (encrypt only)
+  (14) Existing key from car
+Your selection? 12
+Please select which elliptic curve you want:
+   (1) Curve 22519 *default*
+   (4) NIST P-384
+   (6) Brainpool P-256
+Your selection? 1
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 0
+Key does not expire at all
+Is this correct? (y/N) y
+Really create? y
+<PROMPTED FOR PASSWORD>
+#+end_src
+
+** Deleting Keys
+
+Deleting keys is straight-forward, if you have a secret key that needs deleting first.
+
+#+begin_src bash
+$ gpg2 --delete-secret-keys <KEY-ID>
+$ gpg2 --delete-keys <KEY-ID>
+#+end_src
+
+** Exporting Keys
+
+
+** Making public keys available
+
+
+* Yubikey and OpenPGP
+
+[[https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP][Using Your YubiKey with OpenPGP – Yubico]] is the official documentation and worth reading in detail first, and then
+again.
+
+** Changing PIN and Admin PIN
+
+The default PIN (~123456~) and Admin PIN (~12345678~) can be edited using ~gpg2 --card-edit~. Once started enter ~admin~
+and you can use the following commands to set the PIN, Admin PIN, Name, Gender
+
+#+begin_src
+gpg --card-edit
+
+gpg/card> admin
+Admin commands are allowed
+
+gpg/card> passwd
+gpg: OpenPGP card no. D2760001240103040006136798170000 detected
+
+1 - change PIN
+2 - unblock PIN
+3 - change Admin PIN
+4 - set the Reset Code
+Q - quit
+
+...
+gpg/card> name
+Cardholder's surname: Last
+Cardholder's given name: First
+
+gpg/card> sex
+Salutation (M = Mr., F = Ms., or space): M/F
+
+gpg/card> lang
+Language preferences: gb
+
+gpg/card> list
+#+end_src
+
+** Import keys to Yubikey
+
+#+begin_src bash
+  gpg2 --edit-key <key-id>
+
+#+end_src
+* Pass the Standard UNIX Password Manager
+
+[[https://www.passwordstore.org][~pass~]] is an excellent password manager that works on GNU/Linux and OSX systems (and can be setup to work on Windows
+too). It encrypts passwords to the ~\~.password-store/~ directory in a hierarchical structure that reflects the site and
+username that is stored. You can include more than just a single password in each file that holds information and all
+files are encrypted with GnuPG to ensure they can only be viewed by you.
+
+** Setup
+
+** Changing Keys
+
+At some point you may update your GnuPG key, for example it might have expired or you choose to use a more secure
+algorithm such as Elliptic Curve, in which case you will have regenerated a new GnuPG key but you will have to update
+the passwords saved by pass to use this new key. As explained [[https://superuser.com/a/1662151][here]] and in the [[https://git.zx2c4.com/password-store/about/][man pages]], when you ~pass init~ a
+directory...
+
+#+begin_quote
+ If the specified gpg-id is different from the key used in any existing files, these files will be reencrypted to use
+ the new id.
+#+end_quote
+
+It is recommended you make a backup of your existing directory /before/ changing things, that way you can easily
+restore.
+
+#+begin_src bash
+cp -r ~/.password-store/ ~/.password-store-$(date +%Y%m%d)
+#+end_src
+
+You can then use id of your new key to encode the directory.
+
+#+begin_src bash
+  cd ~/.password-store/
+  pass init
+#+end_src
 
 * Links
 
 + [[https://rgoulter.com/blog/posts/programming/2022-06-10-a-visual-explanation-of-gpg-subkeys.html][A Visual Explanation of GPG Subkeys - Richard Goulter's Blog]]
+
+** Setup/Configuration
+
++ [[https://www.digitalneanderthal.com/post/gpg/][Generate GPG Keys With Curve Ed25519 | Digital Neanderthal]]
