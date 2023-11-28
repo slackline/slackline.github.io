@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       3f19e1ef-e5c4-45f1-822f-8d4d834acdbd
+:mtime:    20231128102157
+:ctime:    20231128102157
+:END:
+#+TITLE: Python Typing
+#+FILETAGS: :python:typing:mypy:
+
+* Links
+
++ [[https://www.mypy-lang.org/][mypy - Optional Static Typing for Python]] ([[https://mypy.readthedocs.io/en/stable/index.html][documentation]])
++ [[https://python-type-challenges.zeabur.app/][Python Type Challenges - Learn & Master Type Hints]]

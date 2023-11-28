@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5b5d1562-ecb4-4199-b530-e7993723e112
-:mtime:    20231116235015 20231105150910 20231105073358 20231103170452 20231024144239 20231002122344 20230920154939 20230915180115 20230911192604 20230623214025 20230616161729 20230526200945 20230520211006 20230319231255 20230224095542 20230223120221 20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
+:mtime:    20231128102207 20231116235015 20231105150910 20231105073358 20231103170452 20231024144239 20231002122344 20230920154939 20230915180115 20230911192604 20230623214025 20230616161729 20230526200945 20230520211006 20230319231255 20230224095542 20230223120221 20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
 :ctime:    20221217185215 20230103103308
 :END:
 #+TITLE: Python
@@ -44,6 +44,14 @@ structured before it goes out to peer-review.
 
 You can also use the "AI" [[https://sourcery.ai/][Sourcery]] to "/Automatically Improve Python Code Quality/". For more on linting see [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linting]].
 
+* Typing
+
+Python is a "/dynamically typed language/" doesn't mean, as I first thought when I heard the term (having no background
+in Computer Science!), that you type it interactively (that is the "/REPL/"!), rather it means that an object can be of
+a given "type" (~string~, ~int~, ~float~, class types etc.) and this is determined at run-time and can change on the
+fly.
+
+Read more about [[id:3f19e1ef-e5c4-45f1-822f-8d4d834acdbd][python_typing]]
 * Testing
 
 Testing is something I came across late in my programming adventure, but it is really something that should be learnt or
