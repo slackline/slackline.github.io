@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ea1499ab-dab2-49b1-8479-cb5a2fbd38bc
-:mtime:    20231103145409 20230714224933 20230503073018 20230331230614 20230103103314 20221224191223 20230103103313 20230103103309 20230103103308
+:mtime:    20231128211522 20231103145409 20230714224933 20230503073018 20230331230614 20230103103314 20221224191223 20230103103313 20230103103309 20230103103308
 :ctime:    20221224191223 20230103103308
 :END:
 #+TITLE: Programming
@@ -97,6 +97,7 @@ somewhere to attend conferences when they are often available online (either liv
 Misc
 
 + [[https://norasandler.com/2017/11/29/Write-a-Compiler.html][Writing a C Compiler, Part 1]]
++ [[https://www.pythonmorsels.com/programming-exercise-tips/][Solving programming exercises - Python Morsels]]
 
 ** Books
 
