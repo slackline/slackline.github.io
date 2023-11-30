@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       077cb9b0-a54e-45b0-abdf-1b8a5bb63aa9
-:mtime:    20230103103308 20221110233138
+:mtime:    20231129140030 20230103103308 20221110233138
 :ctime:    20221110233138
 :END:
 #+TITLE: Python Parallel Programming
@@ -73,3 +73,12 @@ functions and a neat progress bar courtesy of [[https://tqdm.github.io/][tqdm]].
     results = np.stack(results)
 
 #+end_src
+
+* Data Analysis
+
+[[https://dask.org/][Dask]] is a useful tool for parallel computing in Python.
+
+* Links
+
++ [[https://dask.org/][Dask]]
++ [[https://docs.rapids.ai/api/cudf/stable/cudf_pandas/][cudf.pandas]] uses GPU to accelerate Pandas
