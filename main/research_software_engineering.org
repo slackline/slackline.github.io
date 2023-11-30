@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       49d21f82-887e-4ec7-8963-89460673352a
-:mtime:    20231113231025 20231028235755 20231005121249 20231002134921 20230905114847 20230813212014 20230724103934 20230224093243 20230103103310 20221210163140
+:mtime:    20231130163702 20231113231025 20231028235755 20231005121249 20231002134921 20230905114847 20230813212014 20230724103934 20230224093243 20230103103310 20221210163140
 :ctime:    20221210163140
 :END:
 #+title: Research Software Engineering
@@ -39,6 +39,10 @@ Research Software Engineering covers many areas of software development such as 
 + [[https://alan-turing-institute.github.io/rse-course/html/index.html][Research Software Engineering with Python — Research Software Engineering with Python]] [[https://github.com/alan-turing-institute/rse-course][The Alan Turing Institute's
   Research Software Engineering course]]
 + [[https://coderefinery.org/][CodeRefinery]]
+
+** FAIR4RS
+
++ [[https://fair-software.eu/][FAIR Software EU]]
 
 ** Software
 
