@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       5182239f-bd72-4889-b00e-fde6672efb8a
+:mtime:    20231203140753
+:ctime:    20231203140753
+:END:
+#+TITLE: Python Debugging
+#+FILETAGS: :python:development:debugging:
+
+A traditional strategy to debugging is to litter the code with ~print()~ statements to find out the state of things at
+any given point. In Python this can be done relatively easily thanks to f-strings with ~print(f"{<var>=}")~ and you get
+the name of ~var~ and its value printed out.
+
+But that is not the optimal way to debug code you then have to remove all the print statements afterwards. Enter
+* PDB
+
+* Other Tools
+
+A couple of other tools exist which are a mid-way between liberal ~print()~ or ~logger.debug()~ and full on ~pdb~. These
+provide decorators which you can use on functions to easily print out state during execution.
+
+** snoop
+
+[[https://github.com/alexmojaki/snoop][snoop]] is /A powerful set of Python debugging tools, based on PySnooper/ and provides a decorator ~@snoop~ which prints
+out the state of all variables at each stage of the function/method execution.
+
+
+** tracelogger
+
+[[https://github.com/xLaszlo/tracelogger][tracelogger]] was written before the author was aware of ~snoop~ but does essentially the same thing but with some
+slightly different options.
+
+* Links
+
++ [[https://docs.python.org/3/library/pdb.html][pdb — The Python Debugger — Python 3.12.0 documentation]]
++ [[https://realpython.com/python-debugging-pdb/][Python Debugging With Pdb – Real Python]]

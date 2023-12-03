@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5b5d1562-ecb4-4199-b530-e7993723e112
-:mtime:    20231128102207 20231116235015 20231105150910 20231105073358 20231103170452 20231024144239 20231002122344 20230920154939 20230915180115 20230911192604 20230623214025 20230616161729 20230526200945 20230520211006 20230319231255 20230224095542 20230223120221 20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
+:mtime:    20231203135526 20231128102207 20231116235015 20231105150910 20231105073358 20231103170452 20231024144239 20231002122344 20230920154939 20230915180115 20230911192604 20230623214025 20230616161729 20230526200945 20230520211006 20230319231255 20230224095542 20230223120221 20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
 :ctime:    20221217185215 20230103103308
 :END:
 #+TITLE: Python
@@ -11,21 +11,21 @@
 accounts be using Python > 3.7 although you may encounter situations where Python 2.* is still in use, even though its
 end-of-life was [[https://endoflife.date/python][2010-07-03]]. There are of course lots of [[id:73be660e-298f-4ccb-900c-215b86b3f4d5][Tips and Tricks]].
 
-* Input/Output
+* Topics
 
-Invariably you will want to get data into or out of your programme, there is lots to [[id:e4ba385c-7a04-4135-a469-167e73912f4c][Python I/O]].
-* Virtual Environments
++ [[id:e4ba385c-7a04-4135-a469-167e73912f4c][Python I/O]]
++ [[id:4bf1c297-d00a-4857-9339-8017c27138c6][Virtual Environments]]
++ [[id:3f19e1ef-e5c4-45f1-822f-8d4d834acdbd][Typing]]
++ [[id:3cca0dfd-0c82-4685-b9ed-6314f7c8b78f][Pytest]]
++[[id:5182239f-bd72-4889-b00e-fde6672efb8a][python_debugging]]
++ Packages
+  + MatplotLib
+  + [[id:d7b0fb90-d668-4e31-bc2d-305f6ee14fc9][Numpy]]
+  + Pandas
+  + SciPy
+  + [[id:d9176707-8c60-4557-a181-7780d3215cbe][Python Pickle]]
+  + [[id:c3712eee-d30f-4dd4-b894-4721d094edd1][Jupyter Notebooks]]
 
-Whether its Conda or plain venv [[id:4bf1c297-d00a-4857-9339-8017c27138c6][Virtual Environments]] are an indispensable component of working with Python.
-
-* Packages
-
-+ MatplotLib
-+ [[id:d7b0fb90-d668-4e31-bc2d-305f6ee14fc9][Numpy]]
-+ Pandas
-+ SciPy
-+ [[id:d9176707-8c60-4557-a181-7780d3215cbe][Python Pickle]]
-+ [[id:c3712eee-d30f-4dd4-b894-4721d094edd1][Jupyter Notebooks]]
 
 * Linting
 
@@ -59,6 +59,9 @@ taught from the beginning as it has huge benefits as you progress through develo
 even a popular paradigm of [[https://en.wikipedia.org/wiki/Test-driven_development][Test-driven development]] whereby tests are written /before/ any code is written.
 
 In Python there is the built-in [[https://docs.python.org/3/library/unittest.html][unittest — Unit testing framework]] but a more popular one is [[id:3cca0dfd-0c82-4685-b9ed-6314f7c8b78f][Pytest]]
+
+* Debugging
+
 
 * Project Management
 
