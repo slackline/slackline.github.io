@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       43350ae9-bbef-487f-8661-1336974ffecd
-:mtime:    20231120135228
+:mtime:    20231202202543 20231120135228
 :ctime:    20231120135228
 :END:
 #+TITLE: Matplotlib
@@ -23,3 +23,4 @@ Semantic figure configuration is available via [[https://matplotlib.org/stable/u
 + [[https://matplotlib.org/stable/][Matplotlib]]
 + [[https://matplotlib.org/stable/users/index.html][Using Matplotlib — Matplotlib 3.8.2 documentation]]
 + [[https://matplotlib.org/stable/tutorials/index.html][Tutorials — Matplotlib 3.8.2 documentation]]
++ [[https://github.com/lepisma/matplotllm][lepisma/matplotllm: LLM Assisted data visualization system]]
