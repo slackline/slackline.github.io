@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       de9a18a7-b4ef-4a9f-ac99-68f3c76488e5
-:mtime:    20231202131426 20231117224031 20231108094036 20231023104105 20231023070045 20230920074733 20230920062944 20230919175554 20230803213634 20230730200921 20230726101218 20230706002432 20230704213853 20230508223533 20230506201917 20230423231605 20230411223218 20230210005221 20230125072709 20230112120722 20230103103313 20221228150524 20230103103308
+:mtime:    20231205220407 20231202131426 20231117224031 20231108094036 20231023104105 20231023070045 20230920074733 20230920062944 20230919175554 20230803213634 20230730200921 20230726101218 20230706002432 20230704213853 20230508223533 20230506201917 20230423231605 20230411223218 20230210005221 20230125072709 20230112120722 20230103103313 20221228150524 20230103103308
 :ctime:    20221228150524 20230103103308
 :END:
 #+TITLE: R
@@ -146,7 +146,7 @@ under [[id:f8e9d58f-e729-483a-b008-489cd30f0f6a][R Packages]].
 * ~renv~
 :PROPERTIES:
 :ID:       9396fd39-d62f-4359-8101-49423d449cb5
-:mtime:    20231023104105 20231023070045
+:mtime:    20231205220407 20231023104105 20231023070045
 :ctime:    20231023070045
 :END:
 
@@ -181,21 +181,59 @@ be added.
 :ctime:    20230423231605
 :END:
 
-+ [[https://r-pkgs.org/][R Packages]]
-+ [[https://r4ds.had.co.nz/][R for Data Science]]
-+ [[https://rstudio-education.github.io/hopr/][Hands-On Programming with R]]
-+ [[https://ggplot2-book.org/index.html][ggplot2]]+
 
+*** Data Science
+
++ [[https://r4ds.had.co.nz/][R for Data Science]]
++ [[https://bookdown.org/rdpeng/rprogdatascience/][R Programming for Data Science]]
+
+*** Graphics
+
++ [[https://ggplot2-book.org/index.html][ggplot2]]
 + [[https://r-graphics.org/][R Graphics Cookbook, 2nd edition]]
-+ [[https://geocompr.robinlovelace.net/][Geocomputation with R]]
+
+*** Statistics
+
++ [[http://appliedpredictivemodeling.com/][Applied Predictive Modeling]]
++ [[https://www.statlearning.com/][An Introduction to Statistical Learning with Applications in R]] (also available for Python)
++ [[https://openforecast.org/adam/index.html][Time Series Analysis and Forecasting with ADAM]]
+
+
+**** Bayesian
+
 + [[https://www.bayesrulesbook.com/][Bayes Rules! An Introduction to Applied Bayesian Modeling]]
++ [[https://bookdown.org/content/70a06054-8138-4d90-aaa0-895f57aab1b4/][Statistical rethinking with brms, ggplot2, and the tidyverse: Second edition]]
+
+**** Machine Learning
+
++ [[https://bradleyboehmke.github.io/HOML/][Hands-On Machine Learning with R]]
++ [[https://betaandbit.github.io/RML/][The Hitchikers Guide to Responsible Machine Learning]]
+
+*** Health Data
+
 + [[https://epirhandbook.com/en/][The Epidemiologist R Handbook : R for applied epidemiology and public health]]
 + [[http://hbiostat.org/rflow/][R Workflow for Reproducible Biomedical Research Using Quarto]]
 + [[https://argoshare.is.ed.ac.uk/healthyr_book/][R for Health Data Science]]
-+ [[https://skeydan.github.io/Deep-Learning-and-Scientific-Computing-with-R-torch/][Deep Learning and Scientific Computing with R torch]]
 + [[https://raps-with-r.dev/][Building reproducible analytical pipelines with R]]
-+ [[https://bookdown.org/rdpeng/rprogdatascience/][R Programming for Data Science]]
+
+*** GIS
+
++ [[https://geocompr.robinlovelace.net/][Geocomputation with R]]
+
+*** Reproducibility
+
++ [[https://www.tmwr.org/][Tidy Modeling with R]]
+
+*** Miscellaneous
+
++ [[https://rstudio-education.github.io/hopr/][Hands-On Programming with R]]
++ [[https://skeydan.github.io/Deep-Learning-and-Scientific-Computing-with-R-torch/][Deep Learning and Scientific Computing with R torch]]
 + [[https://rstats.wtf/][What They Forgot to Teach You About R]]
+
+*** Advanced
+
++ [[https://r-pkgs.org/][R Packages]]
++ [[https://deepr.gagolewski.com/index.html][Deep R Programming]]
 
 ** Learning Resources
 
