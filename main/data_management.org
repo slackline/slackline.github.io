@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       60748503-8e7d-42af-ab36-b67a8b3858d0
-:mtime:    20230426122337 20230330144615
+:mtime:    20231208123959 20230426122337 20230330144615
 :ctime:    20230330144615
 :END:
 #+TITLE: Data Management
@@ -52,3 +52,7 @@ SELECT * FROM ATable;
 * Links
 
 + [[https://www.sqlitetutorial.net/][SQLite Tutorial]]
+
+** Books
+
++ [[https://dedp.online/][Data Engineering Design Patterns]]
