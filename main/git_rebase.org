@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       57ba7f41-cf41-493c-bbf4-9d1e05a0602d
-:mtime:    20230729071312 20230509150839 20230314223425 20230103103310 20221226212438
+:mtime:    20231209102351 20230729071312 20230509150839 20230314223425 20230103103310 20221226212438
 :ctime:    20221226212438
 :END:
 #+TITLE: Git Rebase
@@ -38,6 +38,13 @@ Of course [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] allows this to be d
 ** Git Rebase in Magit
 
 [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] is really useful for holding your hand through the rebasing process, read more [[id:1f4a3e9c-900d-4f73-b2e0-ac4e8c4037e9][here]].
+
+* Git Fixup
+
+* Git Absorb
+
+[[https://github.com/tummychow/git-absorb][git-absorb]] is a neat extension which runs ~--fixup~ automatically and works out which commits changes can be applied to
+whether these can be done safely before then doing so.
 
 * Tips and Tricks
 
