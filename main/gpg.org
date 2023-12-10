@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ce08bd82-0146-49cb-8a64-048ffe7210f2
-:mtime:    20231126223255 20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
+:mtime:    20231210095348 20231126223255 20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
 :ctime:    20221229210308
 :END:
 #+TITLE: GnuPG
@@ -16,8 +16,9 @@ its wise to set expiry dates for the public parts.
 ** Creating Keys
 
 The following steps creates a master private key using ED25519 elliptic curve to sign, certify and authenticate.
+
 #+begin_src
-gpg2 --full-gen-key-expert
+gpg2 --full-gen-key --expert
 Please select what kind of key you want:
    (1) RSA and RSA (default)
    (2) DSA and Elgamal
@@ -37,6 +38,7 @@ Current allowed actions: Sign Certify
    (A) Toggle the authenticate capability
    (Q) Finished
 Your selection? Q
+
 Please select which elliptic curve you want:
    (1) Curve 25519
    (3) NIST P-256
@@ -47,6 +49,7 @@ Please select which elliptic curve you want:
    (8) Brainpool P-512
    (9) secp256k1
 Your selection? 1
+
 Please specify how long the key should be valid.
          0 = key does not expire
       <n>  = key expires in n days
@@ -75,6 +78,8 @@ pub   ed25519/0xC0A72D42633AADE1 2020-04-27 [C] [expires: 2070-04-15]
 uid                              John Doe <jdoe@protonmail.com>
 #+end_src
 
+*** Encryption Key
+
 We then create a sub-key for Encryption using Curve 25519, ideally you should set an expiration date for this.
 
 #+begin_src bash
@@ -89,14 +94,123 @@ Please select what kind of key you want:
    (5) Elgamal (encrypt only)
    (6) RSA (encrypt only)
   (10) ECC (sign only)
+  (11) ECC (set your own capabilities)
   (12) ECC (encrypt only)
   (14) Existing key from car
 Your selection? 12
+
 Please select which elliptic curve you want:
    (1) Curve 22519 *default*
    (4) NIST P-384
    (6) Brainpool P-256
 Your selection? 1
+
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 0
+Key does not expire at all
+Is this correct? (y/N) y
+Really create? y
+<PROMPTED FOR PASSWORD>
+#+end_src
+
+*** Signing Key
+
+Next we create a sub-key for Signing using Curve 25519, ideally you should set an expiration date for this.
+
+#+begin_src bash
+:~$ gpg --expert --edit-key 0xC0A72D42633AADE1
+gpg (GnuPG) 2.2.12; Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+
+gpg> addkey
+Please select what kind of key you want:
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (5) Elgamal (encrypt only)
+   (6) RSA (encrypt only)
+  (10) ECC (sign only)
+  (11) ECC (set your own capabilities)
+  (12) ECC (encrypt only)
+  (14) Existing key from car
+Your selection? 10
+Please select which elliptic curve you want:
+   (1) Curve 22519 *default*
+   (4) NIST P-384
+   (6) Brainpool P-256
+Your selection? 1
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 0
+Key does not expire at all
+Is this correct? (y/N) y
+Really create? y
+<PROMPTED FOR PASSWORD>
+#+end_src
+
+*** Authentication Keyboard
+
+Finally we add a sub-key for Authentication using Curve 25519, again ideally you should set an expiration date for this.
+
+#+begin_src bash
+:~$ gpg --expert --edit-key 0xC0A72D42633AADE1
+gpg (GnuPG) 2.2.12; Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+
+gpg> addkey
+Please select what kind of key you want:
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (5) Elgamal (encrypt only)
+   (6) RSA (encrypt only)
+  (10) ECC (sign only)
+  (11) ECC (set your own capabilities)
+  (12) ECC (encrypt only)
+  (14) Existing key from car
+Your selection? 11
+
+Possible actions for this ECC key: Sign Authenticate
+Current allowed actions: Sign
+
+   (S) Toggle the sign capability
+   (A) Toggle the authentication capability
+   (Q) Finished
+
+Your Selection: S
+
+Possible actions for this ECC key: Sign Authenticate
+Current allowed actions: Sign
+
+   (S) Toggle the sign capability
+   (A) Toggle the authentication capability
+   (Q) Finished
+
+Your Selection: A
+
+
+Possible actions for this ECC key: Sign Authenticate
+Current allowed actions: Authenticate
+
+   (S) Toggle the sign capability
+   (A) Toggle the authentication capability
+   (Q) Finished
+
+Your Selection: !
+
+Please select which elliptic curve you want:
+   (1) Curve 22519 *default*
+   (4) NIST P-384
+   (6) Brainpool P-256
+   Your selection? 1
+
 Please specify how long the key should be valid.
          0 = key does not expire
       <n>  = key expires in n days
@@ -124,11 +238,14 @@ $ gpg2 --delete-keys <KEY-ID>
 
 ** Making public keys available
 
+To effectively use GnuPG keys you need to share the public component so that others can use it to encrypt files they are
+sending to you (only you will be able to decrypt it as your private key is something only you own).
 
 * Yubikey and OpenPGP
 
 [[https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP][Using Your YubiKey with OpenPGP – Yubico]] is the official documentation and worth reading in detail first, and then
-again.
+again. Another very useful article is the [[https://docs.yubikey.wiki/v/gpg/import-to-yubikey/with-commandline][Yubikey Wiki - Commandline]]
+
 
 ** Changing PIN and Admin PIN
 
@@ -166,9 +283,34 @@ gpg/card> list
 
 ** Import keys to Yubikey
 
+The following are the steps described at [[https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP][Using Your YubiKey with OpenPGP – Yubico]] under /To import the key on your
+Yubikey/. It moves both the Signature and Authentication keys to the Yubikey. After inserting your Yubikey go through
+the following.
+
+You can select which key you wish to move to card using ~key #~, select and move each of the subkeys in turn moving them
+to your card and then ~save~. Note however that ~save~ removes the keys from your local system, you should make a backup
+of them elsewhere _before_ doing this.
+
 #+begin_src bash
   gpg2 --edit-key <key-id>
 
+  gpg> key 1
+
+  gpg> keytocard
+  Really move the primary key? (y/N) y
+  Please select
+     (1) Signature key
+     (3) Authentication key
+  Your selection? 1
+
+  gpg> key 2
+  gpg> keytocard
+  Please select
+     (2) Encryption key
+
+  gpg> key 3
+  Please select
+     (3) Authenticaion key
 #+end_src
 * Pass the Standard UNIX Password Manager
 
@@ -212,3 +354,8 @@ You can then use id of your new key to encode the directory.
 ** Setup/Configuration
 
 + [[https://www.digitalneanderthal.com/post/gpg/][Generate GPG Keys With Curve Ed25519 | Digital Neanderthal]]
+
+** Yubkiey
+
++ [[https://docs.yubikey.wiki/v/gpg/import-to-yubikey/with-commandline][Yubikey Wiki - Commandline]]
++ [[https://github.com/drduh/YubiKey-Guide][drduh/YubiKey-Guide: Guide to using YubiKey for GPG and SSH]]
