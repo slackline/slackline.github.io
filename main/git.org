@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0859ef9e-834d-4e84-8e67-fa7593a61e0b
-:mtime:    20231122193433 20231121195208 20231115215615 20231115133558 20231115114414 20231113084013 20231103084937 20231102202740 20231031213320 20231030192448 20231025145646 20231022202227 20231021073737 20231020224724 20231018215110 20231018204740 20231018073902 20231015085830 20231007203439 20231005064143 20231004202913 20230922202301 20230920064045 20230914220336 20230910195251 20230910183057 20230910113355 20230803214400 20230801215130 20230726132229 20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
+:mtime:    20231210170146 20231122193433 20231121195208 20231115215615 20231115133558 20231115114414 20231113084013 20231103084937 20231102202740 20231031213320 20231030192448 20231025145646 20231022202227 20231021073737 20231020224724 20231018215110 20231018204740 20231018073902 20231015085830 20231007203439 20231005064143 20231004202913 20230922202301 20230920064045 20230914220336 20230910195251 20230910183057 20230910113355 20230803214400 20230801215130 20230726132229 20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
 :ctime:    20230222225246
 :END:
 #+TITLE: Git
@@ -168,7 +168,8 @@ the linked pages.
 | [[https://xethub.com/][XetHub]]   | /A collaboration platform for accessing, exploring and iterating on large-scale repositories, backed by the power of Git./       |
 | [[https://codeberg.org/][Codeberg]] | /Codeberg is a collaboration platform and Git hosting for Free and Open Source Software, content and projects./                  |
 | [[https://gitea.io][Gitea]]    | A self-hosted Git Forge                                                                                                          |
-| [[https://forgejo.org/][Forgejo]]  | A fork of                                                                                                                        |
+| [[https://forgejo.org/][Forgejo]]  | A fork of Gitea which aims to allow federation between instances hosted on different servers.                                    |
+| [[https://git.zx2c4.com/cgit/about/][cgit]]     | A hyperfast web frontend for git repositories written in C.                                                                                                                                    |
 
 * Usage
 :PROPERTIES:
@@ -804,6 +805,7 @@ parallel!) with ~mr -j6 update~. Commands run on individual repositories can be 
 + [[https://www.fossil-scm.org/home/doc/trunk/www/index.wiki][Fossil]]
 + [[https://pijul.org/][Pijul]]
 + [[https://gitless.com/][Gitless]]
++ [[https://martinvonz.github.io/jj/][Jujutsu]]
 + [[https://www.monotone.ca/][Monotone]]
 + [[https://forgefriends.org/][forgefriends]]
 + [[https://www.gameoftrees.org/][Game of Trees]]

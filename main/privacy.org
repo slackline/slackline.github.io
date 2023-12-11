@@ -1,19 +1,24 @@
 :PROPERTIES:
 :ID:       b5000932-0fec-4353-acc4-0cb02127c9ac
-:mtime:    20231121210843
+:mtime:    20231211080603 20231121210843
 :ctime:    20231121210843
 :END:
 #+TITLE: Privacy and Encryption
 #+FILETAGS: :privacy:encyrption:ssh:gpg:
 
-Privacy is important
+Privacy is important, it underpins free speech, but many chose to sacrifice their privacy for convenience these days.
 
 + [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]]
 + [[id:929e3de1-5c9c-4b1a-9e7d-7c5464649f87][GnuPG]]
 + [[id:1f44c0fe-5b1c-4a02-a623-18c4eebbc851][Yubikey]]
 + [[id:7b94d7b3-b765-4874-90bd-d558cc8742b5][OnlyKey Duo]]
-+ [[id:fa6ee84e-ad08-4d8e-a544-943ec864c9f9][privacy_tor]]
++ [[id:fa6ee84e-ad08-4d8e-a544-943ec864c9f9][Tor]]
 
 * Links
 
++ [[https://www.eff.org/][Electronic Frontier Foundation | Defending your rights in the digital world]]
 + [[https://www.privacyguides.org/en/][Privacy Guides: Your Independent Privacy and Security Resource]]
+
+** Articles
+
++ [[https://www.eff.org/deeplinks/2023/11/address-online-harms-we-must-first-do-privacy][To Address Online Harms, We Must Consider Privacy First | Electronic Frontier Foundation]]

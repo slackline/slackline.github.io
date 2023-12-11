@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       380cd501-fc14-4e9c-bd26-ad3fd41bace0
+:mtime:    20231211080725
+:ctime:    20231211080725
+:END:
+#+TITLE: Carpentries
+#+FILETAGS: :training:teaching:learning:carpentries:
+
+[[https://carpentries.org/][The Carpentries]] is an organisation focused on providing /foundational coding and data science skills to researchers
+worldwide/. The material is all [[https://carpentries.org/license/][licensed]] under the [[https://creativecommons.org/licenses/by/4.0/][Creative Commons Attribution 4.0 International License]] which means
+the material can be freely shared and adapted providing attribution is given.
+
+The teaching material covers three broad areas [[https://datacarpentry.org/][Data Carpentry]], [[https://librarycarpentry.org/][Library Carpentry]] and [[https://software-carpentry.org/][Software Carpentry]] (in an unrelated
+vein there is also the [[https://programminghistorian.org/][Programming Historian]] which covers similar material).
+
+* Courses I've Taught
+
++ [[https://swcarpentry.github.io/shell-novice/][The Unix Shell]]
+
+Records of training delivered are kept at [[https://amy.carpentries.org/dashboard/instructor/][AMY]].
+
+* Courses I've Taken
+
++ [[https://carpentries.github.io/lesson-development-training/][Collaborative Lesson Development Training]] (self-directed)
