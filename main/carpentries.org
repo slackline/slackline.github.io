@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       380cd501-fc14-4e9c-bd26-ad3fd41bace0
-:mtime:    20231211080725
+:mtime:    20231211220007 20231211080725
 :ctime:    20231211080725
 :END:
 #+TITLE: Carpentries
@@ -21,4 +21,4 @@ Records of training delivered are kept at [[https://amy.carpentries.org/dashboar
 
 * Courses I've Taken
 
-+ [[https://carpentries.github.io/lesson-development-training/][Collaborative Lesson Development Training]] (self-directed)
++ [[id:1a80c1c9-1f4d-41b7-afc8-e80a7c2aa72f][carpentries_lesson_development]] (self-directed)

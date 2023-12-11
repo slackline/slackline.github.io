@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       1a80c1c9-1f4d-41b7-afc8-e80a7c2aa72f
+:mtime:    20231211220109
+:ctime:    20231211220109
+:END:
+#+TITLE: Carpentries Lesson Development
+#+FILETAGS: :carpentries:learning:teaching:
+
+The [[id:380cd501-fc14-4e9c-bd26-ad3fd41bace0][Carpentries]] have a course on  [[https://carpentries.github.io/lesson-development-training/][Collaborative Lesson Development Training]] and I've worked through it on my own to
+guide my development of a Collaborative Git course for intermediate users.
+
+
+* Introduction
++ The material teaches you how to design a lesson, produce a website and encourage others to collaborate with you on the
+  material.
++ Defining the specific skills you wish to teach early on in development is important as it means the lesson is more
+  focused and will have greater impact.
++ Developing the learning material in an organised and accessible structure provides a scaffolding around which
+  development grows.
++ Collaboration is good it provides feedback and widens the input and makes the lesson more likely to succeed.
+* Lesson Design
+* Identifying Your Target Audience
+* Defining Lesson Objectives/Outcomes
+* Episodes
+* The Carpentries Workbench
+* Defining Episode Objectives
+* Stay on Target
+* Wrap-up
+* Designing Assessments
+* Example Data and Narrative
+* How to Write a Lesson
+* How we Operate
+* Preparing to Teach
+* Wrap-up
+* Reflecting on Trial Runs
+* Collaborating with Your Team
+* Collaborating with Newcomers
+* Project Management and Governance
+* Final Wrap-up
