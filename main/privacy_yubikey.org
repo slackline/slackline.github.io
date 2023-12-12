@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       1f44c0fe-5b1c-4a02-a623-18c4eebbc851
-:mtime:    20231126221735 20231121210434
+:mtime:    20231212091935 20231126221735 20231121210434
 :ctime:    20231121210434
 :END:
 #+TITLE: Yubikey
@@ -565,7 +565,9 @@ from them.
 
 ** Yubico
 
-+  [[https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP][Using Your YubiKey with OpenPGP]]
++ [[https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP][Using Your YubiKey with OpenPGP]]
++ [[https://support.yubico.com/hc/en-us/articles/360013761339-Resetting-the-OpenPGP-Application-on-the-YubiKey][Resetting the OpenPGP Application on the YubiKey – Yubico]] (presumably from an [[https://forum.yubico.com/viewtopic6e5a.html?p=8629][old forum post]])
+
 ** Installation
 
 *** Linux
