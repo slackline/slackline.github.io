@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0859ef9e-834d-4e84-8e67-fa7593a61e0b
-:mtime:    20231212094801 20231209093931 20231122193433 20231121195208 20231115215615 20231115133558 20231115114414 20231113084013 20231103084937 20231102202740 20231031213320 20231030192448 20231025145646 20231022202227 20231021073737 20231020224724 20231018215110 20231018204740 20231018073902 20231015085830 20231007203439 20231005064143 20231004202913 20230922202301 20230920064045 20230914220336 20230910195251 20230910183057 20230910113355 20230803214400 20230801215130 20230726132229 20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
+:mtime:    20231213080400 20231212094801 20231209093931 20231122193433 20231121195208 20231115215615 20231115133558 20231115114414 20231113084013 20231103084937 20231102202740 20231031213320 20231030192448 20231025145646 20231022202227 20231021073737 20231020224724 20231018215110 20231018204740 20231018073902 20231015085830 20231007203439 20231005064143 20231004202913 20230922202301 20230920064045 20230914220336 20230910195251 20230910183057 20230910113355 20230803214400 20230801215130 20230726132229 20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
 :ctime:    20230222225246
 :END:
 #+TITLE: Git
@@ -27,11 +27,6 @@ If you use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] then you should de
 [[./img/git_in_case_of_fire.png]]
 
 * Concepts
-:PROPERTIES:
-:ID:       292f6e62-a56e-4e71-9801-05c96b950af5
-:mtime:    20230513073211 20230102213516 20230103103309
-:ctime:    20230102213516
-:END:
 
 A repository is placed under version control when you ~git init~ within in but before doing so you need to set some
 variables such as the ~user~ and ~email~. These can be done on a global scale which will apply across all repositories
@@ -304,10 +299,6 @@ add additional information to commits but the title should be short /and/ inform
 
 ** Merging
 
-#+ATTR_HTML: :width 800px
-#+CAPTION: Meet the merge by [[https://wizardzines.com/comics/meet-the-merge/][Julia Evans]]
-#+NAME: fig:meet-the-merge
-[[./img/git/meet-the-merge.png]]
 
 ** Pushing and Pulling
 
@@ -345,7 +336,12 @@ git clean -df
 
 * Branches
 The beauty of Git is that it allows multiple people to work on the same software project without interfering with each
-others work.  This is done through [[https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging][]branching and merging]].
+others work.  This is done through [[https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging][branching and merging]].
+
+ATTR_HTML: :width 800px
+#+CAPTION: Branches mean different things by [[https://jvns.ca/blog/2023/11/23/branches-intuition-reality/][Julia Evans]]
+NAME: git-branches
+[[./img/git/git_meet_the_branch_julia_evans.png]]
 
 
 On GitHub/GitLab/BitBucket you will find the option to make a branch of a repository, but its generally cleaner to make
@@ -353,7 +349,7 @@ branches on your local machine and then have them pushed and updated to your rem
 switch to it in one step using...
 
 
-#+CAPTION:
+#+CAPTION: Creating and checking out a new branch.
 #+NAME:
 #+begin_src sh
 git checkout -b new_branch
@@ -429,7 +425,7 @@ Lots of articles out there on [[https://railsware.com/blog/git-housekeeping-tuto
 git fetch -p
 #+end_src
 
-...which will prune branches that have been merged on fetching.
+...which will prune branches locally that have been merged on ~origin~.
 
 ** Keep up with ~main~
 
@@ -437,24 +433,56 @@ As you work on your feature branch development will likely be on-going in other 
 when complete. To avoid headaches when you commit to submit a Pull Request for your completed feature you should
 regularly merge main into your branch.
 
-#+begin_src sh
+There are two strategies for this ~merge~ and ~rebase~
+
+*** ~git merge~
+
+#+ATTR_HTML: :width 800px
+#+CAPTION: Meet the merge by [[https://wizardzines.com/comics/meet-the-merge/][Julia Evans]]
+#+NAME: fig:meet-the-merge
+[[./img/git/git_merge_julia_evans.png]]
+
+#+begin_
+src sh
   git pull origin main        # Pulls the latest changes from origin/main
   git merge main --squash     # Merge the changes into your feature branch and squash commits
 #+end_src
 
-This may result in merge conflicts that you'll have to resolve, as you are likely to continue working on your branch it
-is worthwhile enabling the [[https://git-scm.com/docs/git-rerere][Reuse Recorded Resolution (~rerere~)]] option so that you do not have to resolve such conflicts
-in the future (from [[https://samwize.com/2022/12/15/tips-to-resolve-merge-conflicts-for-long-lived-branches/][here]]).
+This may result in merge conflicts that you'll have to resolve.
+
+#+ATTR_HTML: :width 800px
+#+CAPTION: Meet the merge by [[https://wizardzines.com/comics/meet-the-merge/][Julia Evans]]
+#+NAME: fig:meet-the-merge
+[[./img/git/git_meet_the_merge_julia_evans.png]]
+
+#+begin_
+*** ~git rebase~
+
+Another option to merging  ~main~ onto your branch that may be preferable and that is [[id:57ba7f41-cf41-493c-bbf4-9d1e05a0602d][Git Rebase]]. The
+main reason for using ~git rebase main~ over ~git merge main~ is the resolution of conflicts. When using ~git merge
+main~ all conflicts have to be dealt with in one go, however with ~git rebase main~ each commit from the ~main~ branch
+is merged with your branch in turn and requires any conflicts to be resolved before merging the next commit. This can
+make resolving conflicts a lot easier.
+
+#+ATTR_HTML: :width 800px
+#+CAPTION: Meet the rebase by [[https://wizardzines.com/comics/meet-the-merge/][Julia Evans]]
+#+NAME: fig:meet-the-rebase
+[[./img/git/git_rebase_julia_evans.png]]
+
+As with merging you may encounter merge conflicts and because during a rebase each commit is merged individual you are
+likely to continue working on your branch it is worthwhile enabling the [[https://git-scm.com/docs/git-rerere][Reuse Recorded Resolution (~rerere~)]] option so
+that you do not have to resolve such conflicts in the future (from [[https://samwize.com/2022/12/15/tips-to-resolve-merge-conflicts-for-long-lived-branches/][here]]).
 
 #+begin_src sh
   git config --global rerere.enabled true
 #+end_src
 
-However, there is another option to merging  ~main~ onto your branch that may be preferable and that is [[id:57ba7f41-cf41-493c-bbf4-9d1e05a0602d][Git Rebase]]. The
-main reason for using ~git rebase main~ over ~git merge main~ is the resolution of conflicts. When using ~git merge
-main~ all conflicts have to be dealt with in one go, however with ~git rebase main~ each commit from the ~main~ branch
-is merged with your branch in turn and requires any conflicts to be resolved before merging the next commit. This can
-make resolving conflicts a lot easier.
+
+#+ATTR_HTML: :width 800px
+#+CAPTION: Meet the rebase by [[https://wizardzines.com/comics/meet-the-merge/][Julia Evans]]
+#+NAME: fig:meet-the-rebase
+[[./img/git/git_meet_the_rebase_julia_evans.png]]
+
 
 *** Handling Conflicts
 
