@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       b8355381-a5c8-480c-9e56-f78d3d3d3d4e
+:mtime:    20231214172851
+:ctime:    20231214172851
+:END:
+#+TITLE: Open Publishing
+#+FILETAGS: :open research:publishing:
+
+* Links
+
+** Tools
+
++ [[https://osf.io/][OSF]]
++ [[https://www.octopus.ac/][Octopus | Built for Researchers]]
+
+** Blogs
+
++ [[https://www.highwirepress.com/blog/the-future-of-peer-review-diversification-and-decentralization/][The Future of Peer Review: Diversification and Decentralisation]]
