@@ -1,10 +1,39 @@
 :PROPERTIES:
 :ID:       580157bf-0313-4c4e-88d3-cd443ddbab62
-:mtime:    20231005070323
+:mtime:    20231215104131 20231005070323
 :ctime:    20231005070323
 :END:
 #+TITLE: Emacs Projectile
 #+FILETAGS: :emacs:package:projectile:
+
+* Configuration
+
+I use ~use-package~ to install and configure my packages. The current configuration I use can be found at
+[[https://gitlab.com/nshephard/emacs/-/blob/master/settings/projectile.el?ref_type=heads][emacs/settings/projectile.el]] but some explanation is given below.
+
+
+#+end_src
+* Projects
+
+You can set projects via ~projectile-project-search-path~ as absolute paths or nested directories to a specific
+depth. The following adds the first three directories as absolute paths, whilst ~("/work/git/" .3)~ looks for
+directories upto three deep that are under version control (since Projectile automatically includes version controlled
+directories as projects). I also by default use caching which is particularly useful for large projects
+
+#+begin_src elisp
+  (setq projectile-enable-caching t)
+  (setq projectile-project-search-path '("~/org/" "~/org-roam" "~/.config/emacs" ("~/work/git/" . 3)))
+#+end_src
+
+** Switching
+
+I wanted to change the way I [[https://docs.projectile.mx/projectile/configuration.html#switching-projects][switched projects]] the default behaviour was to ask for a file to be opened within the
+selected project. I wanted to fire up [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] instead and this can be achieved via the ~projectile-switch-project-action~
+and the ~projectile-commander~
+
+#+begin_src elisp
+  (setq projectile-switch-project-action #'projectile-commander)
+#+end_src
 
 * Links
 
