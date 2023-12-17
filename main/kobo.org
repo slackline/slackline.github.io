@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d08d1fe6-5317-4f09-95f7-d47e8811e007
-:mtime:    20231211080621 20230910113351 20230724072348 20230707232550
+:mtime:    20231217164206 20231211080621 20230910113351 20230724072348 20230707232550
 :ctime:    20230707232550
 :END:
 #+TITLE: Kobo
@@ -29,6 +29,11 @@ version).
 + [[https://github.com/koreader/koreader][GitHub - koreader/koreader]]
 + [[https://www.hoeijmakers.net/share-kobo-ebooks-with-your-partner/][Share Kobo e-books with your family]]
 + [[https://dimitris.cc/general/2023/09/10/epub-rss-ebook.html][Generate EPUB documents from RSS feeds and URLs and take your e-book reader offline – dimitris.cc – Notes on technology and freedom]]
+
+** Books
+
++ [[https://standardebooks.org][Standard eBooks]]
++ [[https://www.gutenberg.org][Project Gutenberg]]
 
 ** Audio Books
 

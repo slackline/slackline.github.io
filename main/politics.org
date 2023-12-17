@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       8068c739-f291-48b7-8de7-31e6b7e5a5e0
+:mtime:    20231217185347
+:ctime:    20231217185347
+:END:
+#+TITLE: Politics
+#+FILETAGS: :politics:
+
+* Articles
+
++ [[https://novaramedia.com/2023/12/17/the-secret-plan-to-privatise-everything-aaron-bastani-meets-brett-christophers/][The Secret Plan to Privatise EVERYTHING | Aaron Bastani Meets Brett Christophers | Novara Media]]

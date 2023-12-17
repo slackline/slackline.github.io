@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a7fbe90-1f6e-4a38-a0c8-b378b1893f33
-:mtime:    20231208200545 20231106165640 20231029193938 20231010204450 20230922120216 20230916065434 20230915202700 20230910203044
+:mtime:    20231217163005 20231208200545 20231106165640 20231029193938 20231010204450 20230922120216 20230916065434 20230915202700 20230910203044
 :ctime:    20230910203044
 :END:
 #+TITLE: Mastodon
@@ -126,6 +126,27 @@ to ~https~ on port 443 and use [[https://certbot.eff.org/][certbot]] to provide 
 installation of ~iptables~ is somewhat different from the recommended.
 
 *TODO* Finish off.
+
+* On keeping things open
+
+An interesting piece on why Farcebooks entry into the Fediverse is dangerous is here. Its possible to block all of
+"threads" as tooted by Mastodon developer, see [[https://mastodon.social/@Gargron/111587088958531028][@Gargon@mastodon.social]] ...
+
+#+begin_quote
+If for whatever reason you never wish to interact with #Threads, you can personally block it for your account. This
+hides all posts and profiles from Threads, prevents anyone from Threads from following you, and stops your posts from
+being delivered to or fetched by Threads. Simply click the "Block domain threads.net" option on any Threads profile or
+post you see in Mastodon.
+#+end_quote
+
+It is galling that Meta/Threads think that the simple act of interacting with users on their instances means that they
+can [[https://fosstodon.org/@mastodonmigration@mastodon.online/111585528277307543][harvest all your data]].
+
+
+* Discourse
+
+A great piece of forum software is Discourse, they have as of 2023-11-09 integrated support for Fediverse (see [[https://meta.discourse.org/t/activitypub-plugin/266794/116][post]] and
+[[https://socialhub.activitypub.rocks/t/are-you-running-your-own-discourse-community-for-your-software-lets-federate/3757][more info]]).
 
 * Links
 :PROPERTIES:
