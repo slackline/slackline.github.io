@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a7fbe90-1f6e-4a38-a0c8-b378b1893f33
-:mtime:    20231217163005 20231208200545 20231106165640 20231029193938 20231010204450 20230922120216 20230916065434 20230915202700 20230910203044
+:mtime:    20231218231936 20231217220611 20231217163005 20231208200545 20231106165640 20231029193938 20231010204450 20230922120216 20230916065434 20230915202700 20230910203044
 :ctime:    20230910203044
 :END:
 #+TITLE: Mastodon
@@ -140,7 +140,9 @@ post you see in Mastodon.
 #+end_quote
 
 It is galling that Meta/Threads think that the simple act of interacting with users on their instances means that they
-can [[https://fosstodon.org/@mastodonmigration@mastodon.online/111585528277307543][harvest all your data]].
+can [[https://fosstodon.org/@mastodonmigration@mastodon.online/111585528277307543][harvest all your data]], although a counter point is that they can [[https://rknight.me/meta-doesnt-need-activitypub-to-slurp-up-your-data/][already get to what they want]].
+
+A list of servers and their status with regards to [[https://fedipact.veganism.social][blocking threads]].
 
 
 * Discourse
@@ -223,6 +225,7 @@ A great piece of forum software is Discourse, they have as of 2023-11-09 integra
 + [[https://dev.to/contentful/create-a-bot-with-rss-and-webhooks-for-mastodon-a-twitter-alternative-l4o][Create a bot with RSS and webhooks for Mastodon, a Twitter alternative - DEV Community]]
 + [[https://thibaultmilan.com/blog/2022/12/20/how-to-create-a-rss-feed-bot-for-mastodon/][How to create a RSS feed bot for Mastodon – Thibault Milan]] - This was the most simple solution I've come across and
   the one I've used!
++ [[https://www.softwolves.com/wolfblog/2023/12/18/adding-a-mastodon-feed-to-a-static-html-site/][Adding a Mastodon feed to a static HTML site]]
 
 ** Academic
 :PROPERTIES:
@@ -240,6 +243,7 @@ A great piece of forum software is Discourse, they have as of 2023-11-09 integra
 + [[https://denise.dreamwidth.org/91757.html][A guide to potential liability pitfalls for people running a Mastodon instance]]
 + [[https://mastometrics.com/][MastoMetrics - Analytics for Mastodon]]
 + [[https://whomtofollow.com/][Whom to Follow | Find New Fediverse Accounts]]
+
 
 ** RSS Feeds
 
