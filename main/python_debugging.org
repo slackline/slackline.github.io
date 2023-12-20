@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5182239f-bd72-4889-b00e-fde6672efb8a
-:mtime:    20231203140753
+:mtime:    20231220115200 20231203140753
 :ctime:    20231203140753
 :END:
 #+TITLE: Python Debugging
@@ -11,6 +11,7 @@ any given point. In Python this can be done relatively easily thanks to f-string
 the name of ~var~ and its value printed out.
 
 But that is not the optimal way to debug code you then have to remove all the print statements afterwards. Enter
+
 * PDB
 
 * Other Tools

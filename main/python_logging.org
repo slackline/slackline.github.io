@@ -1,11 +1,15 @@
 :PROPERTIES:
 :ID:       345cadc2-52a5-4c91-8de1-a45a98aaa5a8
-:mtime:    20231114194829 20230108140200 20230103103309 20221212181558
+:mtime:    20231220115140 20231114194829 20230108140200 20230103103309 20221212181558
 :ctime:    20221212181558
 :END:
 #+TITLE: Python Logging
 #+DATE: [2022-05-24 Tue 21:21]
 #+FILETAGS: :python:programming:statistics:logging:
+
+
+
+* Standard Library
 
 The [[https://docs.python.org/3/library/logging.html][logging]] core module is pretty complete.
 

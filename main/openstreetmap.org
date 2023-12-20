@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a5f391b-0f61-48d8-a4c3-a204d55538de
-:mtime:    20231126082848 20230530082045 20230528222034
+:mtime:    20231220115205 20231126082848 20230530082045 20230528222034
 :ctime:    20230528222034
 :END:
 #+TITLE: OpenStreetMap
@@ -47,7 +47,9 @@ to get me there, I can add additional boxes to visit along the route as way poin
 + [[https://overpass-turbo.eu/][Overpass]] useful for highlighting features in given areas.
 + [[https://resultmaps.neis-one.org/unmapped#7/52.935/-2.159][Unmapped Places of OpenStreetMap - 2020]]
 + [[https://osmuk.org/][OpenStreetMap UK -- A Community Interest Company (CIC)]]
-+ [[https://mc.bbbike.org/mc/][MapCompare]] ### Apps
++ [[https://mc.bbbike.org/mc/][MapCompare]]
+
+*** Apps
 + [[https://osmand.net][OSMAnd]]
 + [[https://github.com/westnordost/StreetComplete][StreetComplete]]
 + [[https://github.com/ubipo/osmfocus][OSMFocus Reburn]]
