@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       de9a18a7-b4ef-4a9f-ac99-68f3c76488e5
-:mtime:    20231212071551 20231205220407 20231202131426 20231117224031 20231108094036 20231023104105 20231023070045 20230920074733 20230920062944 20230919175554 20230803213634 20230730200921 20230726101218 20230706002432 20230704213853 20230508223533 20230506201917 20230423231605 20230411223218 20230210005221 20230125072709 20230112120722 20230103103313 20221228150524 20230103103308
+:mtime:    20231222005051 20231220224641 20231212071551 20231205220407 20231202131426 20231117224031 20231108094036 20231023104105 20231023070045 20230920074733 20230920062944 20230919175554 20230803213634 20230730200921 20230726101218 20230706002432 20230704213853 20230508223533 20230506201917 20230423231605 20230411223218 20230210005221 20230125072709 20230112120722 20230103103313 20221228150524 20230103103308
 :ctime:    20221228150524 20230103103308
 :END:
 #+TITLE: R
@@ -146,7 +146,7 @@ under [[id:f8e9d58f-e729-483a-b008-489cd30f0f6a][R Packages]].
 * ~renv~
 :PROPERTIES:
 :ID:       9396fd39-d62f-4359-8101-49423d449cb5
-:mtime:    20231205220407 20231023104105 20231023070045
+:mtime:    20231222005051 20231205220407 20231023104105 20231023070045
 :ctime:    20231023070045
 :END:
 
@@ -177,7 +177,7 @@ be added.
 ** Books
 :PROPERTIES:
 :ID:       3c8ec7de-ab7e-40cd-9c7e-58d3ed0a81bb
-:mtime:    20231212071551 20230730200921 20230423231605
+:mtime:    20231220224641 20231212071551 20230730200921 20230423231605
 :ctime:    20230423231605
 :END:
 
@@ -198,7 +198,8 @@ found useful.
 
 *** Statistics
 
-+ [[http://appliedpredictivemodeling.com/][Applied Predictive Modeling]]
++ [[http://appliedpredictivemodeling.com/][Applied Predictive Modeling]] most focused on [[https://topepo.github.io/caret/index.html][The caret Package]] (but see also [[https://www.tmwr.org/][Tidy Modeling with R]] and the next book).
++ [[https://aml4td.org/][Applied Machine Learning for Tabular Data]]
 + [[https://www.statlearning.com/][An Introduction to Statistical Learning with Applications in R]] (also available for Python)
 + [[https://openforecast.org/adam/index.html][Time Series Analysis and Forecasting with ADAM]]
 + [[https://www.modernstatisticswithr.com/][Modern Statistics with R]]
@@ -224,6 +225,7 @@ found useful.
 
 + [[https://geocompr.robinlovelace.net/][Geocomputation with R]]
 + [[https://bookdown.org/michael_bcalles/gis-crash-course-in-r/][A Crash Course in Geographic Information Systems (GIS) using R]]
++ [[https://ipeagit.github.io/intro_access_book/][Introduction to urban accessibility]]
 
 *** Reproducibility
 

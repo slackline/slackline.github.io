@@ -1,14 +1,14 @@
 :PROPERTIES:
 :ID:       b9961a9e-e833-4160-aa8f-1c69b9cbb397
-:mtime:    20230228201359 20230225220747 20230114083258 20230103103312 20221228105320
+:mtime:    20231222084356 20230228201359 20230225220747 20230114083258 20230103103312 20221228105320
 :ctime:    20221228105320
 :END:
 #+TITLE: Emacs TRAMP
 #+DATE: [2022-12-21 Wed 09:10]
 #+FILETAGS: emacs:tramps:editing
 
-[[https://www.gnu.org/software/tramp/][TRAMP]] is a protocol for editing files either as another user on your own files system or on a remote file system over SSH
-(providing you have permission to access the system!).
+[[https://www.gnu.org/software/tramp/][TRAMP]] is a protocol for editing files either as another user on your own files system or on a remote file system over
+[[id:b39ebc4e-3351-45e3-80b8-9780c76dbbb6][SSH]] (providing you have permission to access the system!).
 
 * Configuration
 

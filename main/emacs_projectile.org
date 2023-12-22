@@ -1,10 +1,13 @@
 :PROPERTIES:
 :ID:       580157bf-0313-4c4e-88d3-cd443ddbab62
-:mtime:    20231215104131 20231005070323
+:mtime:    20231222084358 20231215104131 20231005070323
 :ctime:    20231005070323
 :END:
 #+TITLE: Emacs Projectile
 #+FILETAGS: :emacs:package:projectile:
+
+Emacs has built in support for managing [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Projects.html][projects]] but, as is always the case, there are a number of packages which extend
+or provide alternatives. Perhaps the most popular is [[id:580157bf-0313-4c4e-88d3-cd443ddbab62][Projectile]].
 
 * Configuration
 
@@ -34,6 +37,8 @@ and the ~projectile-commander~
 #+begin_src elisp
   (setq projectile-switch-project-action #'projectile-commander)
 #+end_src
+
+* Bookmarks
 
 * Links
 

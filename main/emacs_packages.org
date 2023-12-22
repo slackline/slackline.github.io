@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ff8ee302-7518-4179-9bcb-63b13199f897
-:mtime:    20230912203338 20230802131215 20230702160646 20230412135517 20230309070314 20230305214004 20230221192929
+:mtime:    20231222084359 20230912203338 20230802131215 20230702160646 20230412135517 20230309070314 20230305214004 20230221192929
 :ctime:    20230221192929
 :END:
 #+TITLE: Emacs Packages
@@ -50,6 +50,10 @@ system. Common commands that speed up loading are ~:defer t~.
 A new kid on the block [[https://github.com/progfolio/elpaca][elpaca]] is an asynchronous package manager which means that unlike others it can be started and
 then run in the background, freeing you to use Emacs as desired whilst it updates/installs.
 
+* Hooks
+
+Hooks are a really useful way to customise different modes in Emacs.
+
 * Binaries
 
 Some packages (e.g. EmacSQL) build and install binaries from source code. With EmacSQL in particular this sometimes
@@ -79,3 +83,4 @@ For more on this see [[https://stackoverflow.com/questions/1217180/how-do-i-byte
 
 + [[https://ianyepan.github.io/posts/setting-up-use-package/][A Quick Tutorial on Use-package for Emacs | Ian Y.E. Pan]]
 + [[https://emacsnotes.wordpress.com/2023/07/02/migrating-to-use-package-tip-1-do-not-use-a-naive-macroexpand-to-grok-a-use-package-declaration-use-this-wrapper-instead/][Migrating to `use-package’—TIP 1: Do NOT use a naive `macroexpand’ to grok a `use-package’ declaration; use this wrapper instead – Emacs Notes]]
++ [[https://www.danliden.com/posts/20231217-emacs-hooks.html][Introduction to Emacs Hooks]]

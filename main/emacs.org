@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       754f25a5-3429-4504-8a17-4efea1568eba
-:mtime:    20231205092526 20231109095700 20231021075048 20231005065940 20230930080414 20230929002937 20230912203148 20230905220957 20230815075829 20230811133225 20230810082255 20230809145131 20230730125116 20230730104447 20230729230947 20230703065708 20230613223302 20230527184757 20230527082330 20230513161935 20230309220249 20230221192022 20230217165509 20230217113056 20230216205143 20230205122258 20230205081022 20230203235526 20230120215724 20230114080430 20230109075443 20230106185900 20230103103311 20221229203153
+:mtime:    20231222084351 20231205092526 20231109095700 20231021075048 20231005065940 20230930080414 20230929002937 20230912203148 20230905220957 20230815075829 20230811133225 20230810082255 20230809145131 20230730125116 20230730104447 20230729230947 20230703065708 20230613223302 20230527184757 20230527082330 20230513161935 20230309220249 20230221192022 20230217165509 20230217113056 20230216205143 20230205122258 20230205081022 20230203235526 20230120215724 20230114080430 20230109075443 20230106185900 20230103103311 20221229203153
 :ctime:    20221229203153
 :END:
 #+TITLE: Emacs
@@ -10,33 +10,45 @@
 I'm forever trying to convince people to try out Emacs and figured it would be worthwhile writing a short guide to
 getting started [[id:36a83dd6-7535-43a9-9b68-15dc135c86fd][Emacs Getting Started]].
 
++ [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]]
++ [[id:ff8ee302-7518-4179-9bcb-63b13199f897][Emacs Packages]]
++ [[id:4451966f-b810-4a9d-905b-e2b682578c62][Buffers]]
++ [[id:e2a2ead1-4348-4cc6-9ef1-dd96777aaec8][Dired]]
++ [[id:efe4e098-d7e6-42cd-90bd-234a25806c3a][Eglot]]
++ [[id:35c72a31-2beb-4dcf-98c9-0254b05bcb86][EIN]]
++ [[id:c5b2b8ae-46fc-4d91-8227-7116c7885de4][Elfeed]]
++ [[id:a2ff20a8-46cd-4123-9931-722925e0af19][ESS]]
++ [[id:d0cd450a-2c1e-44da-b185-a9b27d0f0012][Flycheck]]
++ [[id:708f5d99-6040-4306-a323-306d39ce45c3][Emacs Lisp]]
++ [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]]
++ [[id:100c80ce-2299-4d0f-a6a2-03fed94a4cc7][Markdown]]
++ [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]]
+  + [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Org-mode]]
+  + [[id:fc9974d4-2a26-4bf7-9360-c828bfaeed1d][Org Agenda]]
+  + [[id:6e75f9df-df3d-4402-b5ad-ed98d0834e08][Org Babel]]
+  + [[id:136364e7-1a6d-4b28-b284-0e415b860699][Org-roam]]
+  + [[id:42dd7a3e-d6bf-4e22-b564-f159fcbeb460][Org GTD]]
++ [[id:301c717a-c9f6-4490-9620-491762db4343][OSM]]
++ [[id:ac85ca6b-4b6e-4e8d-82f8-2f85c5062de6][Passwords]]
++ [[id:04868965-8413-4d9d-8ecc-573570fec5b1][LSP Mode]]
++ [[id:3735f87b-346e-4c0d-a172-545e23570bcb][sqlite3]]
++ [[id:a8c134c6-bb0f-408d-96ee-48b02da8cffe][Templates]]
++ [[id:cf1405ab-6d1d-4d55-92b7-9271773c499d][Themes and Appearance]]
++ [[id:b9961a9e-e833-4160-aa8f-1c69b9cbb397][TRAMP]]
++ [[id:d6626ec2-1e95-4d42-b06e-ae45268f2b58][Transient]]
++ [[id:3070e6ed-1788-44ff-8498-8af6c84f588f][Tree-Sitter]]
++ [[id:4668a662-27ab-4015-aaa0-6e356b6bc165][Vterm]]
+
 #+ATTR_HTML: :width 800px
 [[./img/How-to-Learn-Emacs-v2-Large.png]]
 
 
-* Packages
-
-Packages are what makes Emacs so great, there is literally a [[https://xkcd.com/378/][package for everything.]]
 
 [[./img/emacs/real_programmers.png]]
 
-There are a number of ways of repositories that host repositories (see [[id:ff8ee302-7518-4179-9bcb-63b13199f897][Emacs Packages]])
-
-Sometimes packages need to be byte-compiled again, this can be achieved using ~M-: (byte-recompile-directory
-package-user-dir nil 'force)~ which will [[https://stackoverflow.com/a/1217249][force compilation]] of existing ~.elc~ files.
-
-* Appearance
-
-The appearance of Emacs is highly customisable, read more under [[id:cf1405ab-6d1d-4d55-92b7-9271773c499d][themes and appearance]].
-
-* Dired
-
-[[id:e2a2ead1-4348-4cc6-9ef1-dd96777aaec8][Dired]]
-
-* Buffers
-
-[[id:4451966f-b810-4a9d-905b-e2b682578c62][Buffers]] are the basis of Emacs, the window through which you view files and processes, understanding how they work and
-navigating between the vastly improves your productivity.
+Emacs can be used as a powerful Integrated Development Environment (IDE) for a range of [[id:ea1499ab-dab2-49b1-8479-cb5a2fbd38bc][Programming]] languages thanks to
+its support of the Language Server Protocol (LSP) courtesy of which supports [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]], [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]], [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] and many others. This is
+achieved through one of two packages.
 
 * GPG
 
@@ -46,71 +58,6 @@ it if you are sharing files and encrypting with others public keys. Read more in
 
 A useful article on using GPG with Emacs is [[https://www.masteringemacs.org/article/keeping-secrets-in-emacs-gnupg-auth-sources][Keeping Secrets in Emacs with GnuPG and Auth Sources - Mastering Emacs]]
 
-* Magit
-
-[[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] is an amazing package, its a porcelain to Git which means it gives access to all of the functions on the command
-line. It is widely considered a killer feature of Emacs (along with [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]]). Learn to use it and you'll find your use
-of and productivity using Git dramatically increases.
-
-* Org-mode
-
-Org-mode is a powerful suite of packages that allow you to organise your work and life. Org-mode is another killer
-feature of Emacs (along with Magit).
-
-+ [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Org-mode]]
-+ [[id:fc9974d4-2a26-4bf7-9360-c828bfaeed1d][Org Agenda]]
-+ [[id:6e75f9df-df3d-4402-b5ad-ed98d0834e08][Org Babel]]
-+ [[id:136364e7-1a6d-4b28-b284-0e415b860699][Org-roam]]
-
-* Programming IDE
-
-Emacs can be used as a powerful Integrated Development Environment (IDE) for a range of [[id:ea1499ab-dab2-49b1-8479-cb5a2fbd38bc][Programming]] languages thanks to
-its support of the Language Server Protocol (LSP) courtesy of which supports [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]], [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]], [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] and many others. This is
-achieved through one of two packages.
-
-+ [[id:04868965-8413-4d9d-8ecc-573570fec5b1][LSP Mode]]
-+ [[id:efe4e098-d7e6-42cd-90bd-234a25806c3a][Eglot]]
-
-* Projects
-
-Emacs has built in support for managing [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Projects.html][projects]] but, as is always the case, there are a number of packages which extend
-or provide alternatives. Perhaps the most popular is [[id:580157bf-0313-4c4e-88d3-cd443ddbab62][Projectile]].
-
-* TRAMP
-
-[[id:b9961a9e-e833-4160-aa8f-1c69b9cbb397][Emacs TRAMP]] is a really useful feature that allows you to open files as other users (e.g. ~root~) on your local file
-system or over [[id:b39ebc4e-3351-45e3-80b8-9780c76dbbb6][SSH]] to systems you have access to so you can edit files remotely. For more on this see [[id:b9961a9e-e833-4160-aa8f-1c69b9cbb397][Emacs TRAMP]].
-
-* Emacs Lisp
-
-[[id:708f5d99-6040-4306-a323-306d39ce45c3][Emacs Lisp]] is the language which gives Emacs its power and extensibility. Understanding just the basics makes
-configuring and using Emacs considerably easier, going deeper you can then develop your own functions to extend existing
-packages or even develop your own packages and share them with the community.
-
-* SQLite3
-
-Emacs 29 gained builtin support for [[id:3735f87b-346e-4c0d-a172-545e23570bcb][sqlite3]].
-
-
-* Configuration
-
-My configuration is, well, sprawling. The main initialisation file resides at ~/config/emacs/init.el~ but I split it
-over a number of individual files for each package or group of packages. Unsurprisingly there are a lot of packages that
-I use (yet to settle down), you can read more about configuration
-[[id:938af6af-7a0e-46d1-ae76-6157e948151b][Emacs Configuration]].
-
-** Templates
-
-Emacs has built-in templates but they can also be provided by Yasnippets. For more see [[id:a8c134c6-bb0f-408d-96ee-48b02da8cffe][Emacs Templates]].
-
-* Password
-
-I use [[https://www.passwordstore.org/][pass the standard UNIX password manager]] and its great, better still there are various Emacs packages for working
-with ~pass~. Read [[id:ac85ca6b-4b6e-4e8d-82f8-2f85c5062de6][Emacs Pass]]
-
-* EmacsConf
-
-Read more about [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]].
 
 * Links
 
