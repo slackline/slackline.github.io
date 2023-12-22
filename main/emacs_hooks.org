@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       c661d96e-98e3-43ca-b22f-e5dec7bf33f7
+:mtime:    20231222143742
+:ctime:    20231222143742
+:END:
+#+TITLE: Emacs Hooks
+#+FILETAGS: :emacs:hooks:
+
+* Links
+
++ [[https://www.danliden.com/posts/20231217-emacs-hooks.html][Introduction to Emacs Hooks]]
