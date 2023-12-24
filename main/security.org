@@ -10,6 +10,7 @@
 + [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GPG]]
 + [[id:a54eeb0c-ffd1-4002-8a15-7c1f0c0a6a9b][OnlyKey Duo]]
 + [[id:95d35596-cbf9-408a-b296-d3c79019cfd1][Yubikey]]
++ [[id:8d0bd278-d247-47a7-9e47-774e5a8a8150][DNS]]
 
 ** Passkeys
 + [[https://www.passkeys.io/][Passkeys]]

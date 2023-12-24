@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       8d0bd278-d247-47a7-9e47-774e5a8a8150
+:END:
+#+TITLE: DNS
+#+FILETAGS: :security:dns:privacy:
+
+[[https://en.wikipedia.org/wiki/Domain_Name_System][Domain Name System]] (DNS) is the protocol that translates IP addresses into domain names, the human readable form of
+web-addresses. Traditionally these are transmitted in "plain-text" and so third parties can snoop on what sites you
+are looking at. Thankfully these days there are a number of ways to ensure that such data is encrypted during transit
+and the information about what sites you are browsing remains private.
+
+* Links
+
+** DNS Providers
+
++ [[https://www.dns0.eu/][dns0.eu — The European public DNS that makes your Internet safer]]
++ [[https://developers.cloudflare.com/1.1.1.1/ip-addresses/][IP addresses · Cloudflare 1.1.1.1 docs]]

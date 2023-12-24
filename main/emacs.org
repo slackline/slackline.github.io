@@ -75,6 +75,8 @@ A useful article on using GPG with Emacs is [[https://www.masteringemacs.org/art
 ** Configuration
 + [[https://erickgnavar.github.io/emacs-config/][Emacs config]] by Erick Navarro - a nice neat and clear set of custom configurations.
 + [[https://sr.ht/~ashton314/emacs-bedrock/][emacs-bedrock: Stepping stones to a better Emacs experience]]
++ [[https://arne.me/articles/emacs-from-scratch-part-one-foundations][Emacs From Scratch, Part 1: Foundations]]
++ [[https://justinbarclay.ca/posts/from-zero-to-ide-with-emacs-and-lsp/][From Zero To IDE with Emacs and LSP · Justin Barclay]]
 
 ** Research Articles
 + [[https://arxiv.org/abs/2004.02504][[2004.02504] Bringing GNU Emacs to Native Code]]

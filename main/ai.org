@@ -107,6 +107,10 @@ A thoughtful paper on [[https://www.authorea.com/doi/full/10.22541/au.169264350.
 + [[https://www.theatlantic.com/technology/archive/2023/05/problem-counterfeit-people/674075/][The Problem With Counterfeit People - The Atlantic]]
 + [[https://www.nature.com/articles/d41586-023-02990-y][How to stop AI deepfakes from sinking society — and science]]
 
+** Books
+
++ [[https://deeplearningmath.org/][The Mathematical Engineering of Deep Learning]]
+
 ** Papers
 
 + [[https://arxiv.org/abs/2212.03551][[2212.03551] Talking About Large Language Models]]
