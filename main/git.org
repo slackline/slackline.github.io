@@ -521,6 +521,10 @@ One of the challenges of working on branches is that whilst its easy to switch b
 you either need to ~git commit~ or ~git stash~ (and the ~git stash pop~ on returning to the branch) in order to
 switch. An alternative model to this is to use [[id:ddcfed69-2ba5-442a-99b4-eaa5c7a9fe40][Git Worktree]].
 
+** Tidy up Branches
+
+It is good practice to delete branches both locally and on ~origin~ after they are done with. An article on doing so
+locally is [[https://www.wisdomgeek.com/development/delete-git-branches-that-do-not-exist-on-remote/][Delete git branches that do not exist on remote - Wisdom Geek]].
 
 * Merge Conflicts
 :PROPERTIES:

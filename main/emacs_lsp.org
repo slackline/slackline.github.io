@@ -5,3 +5,45 @@
 :END:
 #+TITLE: Emacs LSP
 #+FILETAGS: :emacs:lsp:programming:
+
+I use Emacs as my Integrated Development Environment (IDE) and in addition to [[id:3070e6ed-1788-44ff-8498-8af6c84f588f][Tree-Sitter]] have configured it to use [[https://emacs-lsp.github.io/lsp-mode/][LSP
+Mode - Language Server Protocol support for Emacs]]  as I started using it prior to [[https://joaotavora.github.io/eglot/][Eglot]] (another LSP mode for Emacs)
+being incorporated into Emacs (>=29).
+
+* Installation
+
+Installation is straight-forward but for optimal benefit requires the use of a number of other packages. Since I use
+~use-package~ the [[https://emacs-lsp.github.io/lsp-mode/page/installation/#use-package][installation instructions]] provided a good starting point, note that they include integration with
+~which-key~. The additional packages I use are...
+
++ [[https://github.com/emacs-lsp/lsp-ui][lsp-ui]] - provides high level User Interface modules such as flycheck and code neses.
++ [[https://github.com/emacs-lsp/lsp-treemacs][lsp-treemacs]]
++ company
++ [[https://github.com/emacs-lsp/dap-mode][dap-mode]]
+
+
+** Python
+
+There are multiple options for a Python Language Server.
+
+*** Jedi
+I've used Jedi prior to LSP becoming widely available in Emacs so wanted to stick with this. There are two components to
+this [[https://github.com/fredcamps/lsp-jedi][~lsp-jedi~]] which acts as a go-between from Emacs ~lsp-mode~ and the language server itself
+[[https://github.com/pappasam/jedi-language-server][~jedi-language-server~]]. This seems to work perfectly on my work laptop but not on my desktop and I can not for the life
+of me figure out why. I've kept the old configuration just in case I one day sort it out.
+
+*** pylsp
+
+
+
+*** pyright
+
+[[https://emacs-lsp.github.io/lsp-pyright/][~lsp-pyright~]] is another good  option.
+** R
+
+** Bash
+
+** Emacs LISP
+
+Strangely there is no language server dedicated to Emacs LISP which is mildly frustrating but internal support for Emacs
+LISP is, unsurprisingly, very good in Emacs.

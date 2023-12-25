@@ -93,6 +93,12 @@ A thoughtful paper on [[https://www.authorea.com/doi/full/10.22541/au.169264350.
 
 + [[https://restofworld.org/2023/ai-image-stereotypes/][Generative AI like Midjourney creates images full of stereotypes - Rest of World]]
 
+** Environmental Impact
+
++ [[https://www.theguardian.com/commentisfree/2023/dec/23/ai-chat-gpt-environmental-impact-energy-carbon-intensive-technology][Why AI is a disaster for the climate | John Naughton | The Guardian]]
++ [[https://arxiv.org/abs/1906.02243v1][[1906.02243v1] Energy and Policy Considerations for Deep Learning in NLP]]
++ [[https://arxiv.org/abs/2311.16863][[2311.16863] Power Hungry Processing: Watts Driving the Cost of AI Deployment?]]
+
 ** Misc
 
 + [[https://writings.stephenwolfram.com/2023/01/wolframalpha-as-the-way-to-bring-computational-knowledge-superpowers-to-chatgpt/][Wolfram|Alpha as the Way to Bring Computational Knowledge Superpowers to ChatGPT—Stephen Wolfram Writings]]

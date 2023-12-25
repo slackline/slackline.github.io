@@ -5,7 +5,7 @@
 :END:
 #+TITLE: Programming
 #+DATE: [2022-02-15 Tue 21:07]
-#+FILETAGS: :programming:theory:design patterns:refactoring
+#+FILETAGS: :programming:theory:design patterns:refactoring:
 
 Programming can be abstracted from the language in which it is written and the [[id:526272b2-904f-4656-b24c-fdefc4492fdc][Software]] which results.
 
