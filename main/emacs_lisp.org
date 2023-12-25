@@ -26,3 +26,7 @@ Emacs Lisp/ that is available from within Emacs using ~C-h i m Emacs Lisp Intro~
 
 + [[https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][An Introduction to Programming in Emacs Lisp]]
 + [[http://landoflisp.com/][Land of Lisp]]
+
+** History
+
++ [[https://www.theregister.com/2023/12/25/the_war_of_the_workstations/][The war of the workstations • The Register]]
