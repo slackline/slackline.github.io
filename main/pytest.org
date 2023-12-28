@@ -217,6 +217,12 @@ It is worth noting two important things...
 + If you have [[id:077cb9b0-a54e-45b0-abdf-1b8a5bb63aa9][multiprocessing]] in your work flow ~pytest~ does /not/ capture logging statements from spawned processes
   (see [[https://github.com/pytest-dev/pytest/issues/3037][pytest-dev/pytest · Issue #3037 · caplog fixture: capture log records from another process]]).
 
+*** loguru
+
+Note that loguru does [[https://github.com/Delgan/loguru/issues/59][not work with pytest caplog]], but a simple solution is provided in the [[https://loguru.readthedocs.io/en/latest/resources/migration.html#replacing-caplog-fixture-from-pytest-library][documentation]] which
+redefines the ~caplog~ fixture.
+
+
 * Plugins
 
 There are lots of PyTest plugins/extensions.

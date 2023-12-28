@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       0539fa9c-fc0e-4cb8-a3f4-eee46899240a
+:END:
+#+TITLE: NPM
+#+FILETAGS: :linux:npm:
+
+[[https://www.npmjs.com/][Node Package Manager (npm)]] is a package manager for JavaScript projects.
+
+* Installing Packages
+
+List the packages that are installed
+
+#+begin_src bash
+  npm list -g
+  /home/neil/.node/lib64
+  ├── bash-language-server@4.4.0
+  ├── coinmon@0.0.6
+  ├── npm@9.3.0
+  └── tldr@3.3.7
+#+end_src
+
+Install a package "globally" (under the users account).
+
+
+#+begin_src bash
+   ❱ npm install -g remark-language-server
+
+   added 128 packages in 12s
+   npm list -g
+   /home/neil/.node/lib64
+   ├── bash-language-server@4.4.0
+   ├── coinmon@0.0.6
+   ├── npm@9.3.0
+   ├── remark-language-server@2.0.0    # Package we just installed
+   └── tldr@3.3.7
+src
+
+Binaries reside under ~\~/.node/bin/~ so make sure this is in your ~$PATH~ environment variable so the binaries can be
+found.
+
+* Links
+
++ [[https://www.npmjs.com/][NPM website]]

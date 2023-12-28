@@ -45,6 +45,9 @@ It can be handy to have a live distribution to carry around and boot as and when
 [[id:eaf15ed2-dd31-4b30-a6ce-4b47b6baed0f][here]].
 
 * Topics
+:PROPERTIES:
+:ID:       f67cfdbc-32de-4a45-8e04-72d94c11ddd8
+:END:
 
 Miscellaneous topics
 
@@ -53,6 +56,7 @@ Miscellaneous topics
 + [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]]
 + [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]]
 + [[id:76578fdf-d00f-4eb6-ad74-13bb08fc5d65][qemu]]
++ [[id:0539fa9c-fc0e-4cb8-a3f4-eee46899240a][Node Package Manager]]
 
 * Android
 
