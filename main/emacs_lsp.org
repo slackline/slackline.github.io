@@ -47,3 +47,38 @@ of me figure out why. I've kept the old configuration just in case I one day sor
 
 Strangely there is no language server dedicated to Emacs LISP which is mildly frustrating but internal support for Emacs
 LISP is, unsurprisingly, very good in Emacs.
+
+** Markdown
+
+Install [[https://github.com/remarkjs/remark-language-server][remark-language-server]] ...
+
+#+begin_src bash
+  npm install -g remark-language-server
+  npm list -g
+  which remark-language-server
+#+end_src
+
+Make sure the install path is in the ~exec-path~ in Emacs,
+
+#+begin_src elisp
+  (setq exec-path (append '("~/bin"
+                          "~/.local/bin"
+                          "~/.cargo/bin/"
+                          "~/.node/bin/"
+                          )
+                        exec-path))
+#+end_src
+
+The [[https://github.com/jrblevin/markdown-mode][markdown-mode]] package can be used, you can set a hook here or in the
+
+#+begin_src elisp
+  (use-package markdown-mode
+  :ensure t
+  :mode ("\\.md\\'" . gfm-mode)
+  :hook (markdown-mode . auto-fill-mode)
+  :init (setq markdown-command "pandoc")
+  :config
+  :bind (:map markdown-mode-map
+          ("C-c C-m" . markdown-do)))
+
+#+end_src

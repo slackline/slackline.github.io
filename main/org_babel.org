@@ -40,3 +40,7 @@ this is easiest to achieve using ~npm~ if you are on GNU/Linux or ~brew~ if you'
 ** Packages
 + [[https://github.com/arnm/ob-mermaid][arnm/ob-mermaid: Generate mermaid diagrams within Emacs org-mode babel]]
 + [[https://github.com/yjwen/org-reveal/][yjwen/org-reveal: Exports Org-mode contents to Reveal.js HTML presentation.]]
+
+** Articles
+
++ [[https://web.archive.org/web/20230803171616/https://www.rse.ox.ac.uk/tech_post/polyglot_documentation_with_org_mode/][Polyglot Documentation with Org-mode - Oxford RSE]]

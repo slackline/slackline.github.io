@@ -10,7 +10,11 @@
 
 + [[https://www.theguardian.com/lifeandstyle/2023/jun/01/kitty-confidential-13-secret-signals-all-cat-owners-need-to-know-from-a-quivering-tail-to-aeroplane-ears][Kitty confidential: 13 secret signals all cat owners need to know – from a quivering tail to aeroplane ears]]
 + [[https://www.theguardian.com/technology/2023/nov/04/scientists-turn-to-ai-for-help-translate-animal-vocal-physical-cues][‘AI can teach us a lot’: scientists say cats’ expressions richer than imagined and aim to translate them]]
+ + [[https://lithub.com/house-cats-and-wild-cats-arent-actually-that-different/][House cats and wild cats aren't actually that different]]
 
 * Books
 
 + [[https://www.hive.co.uk/Product/Lili-Chin/Kitty-Language--An-Illustrated-Guide-to-Understanding-Your-Cat/28466340][Kitty Language : An Illustrated Guide to Understanding Your Cat: Lili Chin: 9780241653647: hive.co.uk]]
+
+** Genetics
++ [[https://www.goodreads.com/book/show/1358214.Cats_Are_Not_Peas][Cats Are Not Peas: A Calico History of Genetics by Laura Gould]]
