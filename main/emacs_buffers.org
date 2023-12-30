@@ -33,6 +33,11 @@ you can kill them all quickly with ~IbufferMode~ using ~C-x C-b * / D yes Ret~ (
 
 * Managing Buffers
 
+** What modes are enabled?
+
+You can find out what modes are enabled using ~M-x describe-mode~ to see a list of the Major and minor modes enabled for
+the given buffer.
+
 ** Equalise all buffer windows
 
 You can make all buffers equal in size using ~balance-windows~ which is bound to ~C-x +~
