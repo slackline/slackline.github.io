@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f66d7674-508b-471a-ba04-87c36ae2cdd6
-:mtime:    20231113230944
+:mtime:    20231230222808 20231113230944
 :ctime:    20231113230944
 :END:
 #+TITLE: HPC
@@ -9,3 +9,7 @@
 * Links
 
 + [[https://hpsfoundation.github.io/][High Performance Software Foundation]]
+
+** Books
+
++ [[https://theartofhpc.com/][The Art of HPC]]
