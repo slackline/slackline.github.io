@@ -1,0 +1,106 @@
+:PROPERTIES:
+:ID:       5e4b0759-696f-47a7-81c1-a7506aab41a0
+:END:
+#+TITLE: Reading
+#+FILETAGS: :reading:science:fiction:
+
+Interesting things I've read. I keep a record of books I've read and occasionally write reviews at [[https://www.goodreads.com/user/show/112820224-slackline][GoodReads.com]].
+
+* Books
+Physical books I've actually spent time reading!
+** Biographies
+*** Climbing
++ /Psychovertical/ Andy Kirkpatrick
++ /Cold Wars/ Andy Kirkpatrick
++ /Unknown Pleasures/ Andy Kirkpatrick
++ /Full of Myself/ Johnny Dawes
++ /Echoes/ Nick Bullock
++ /Tides/ Nick Bullock
++ /Winter 8000/ Bernadette McDonald
++ /Art of Freedom: The Life and Climbs of Voytek Kurtyka/ Bernadette McDonald
++ /Freedom Climbers/ Bernadette McDonald
++ /Deep Play/ Paul Pritchard
++ /The Totem Pole/ Paul Pritchard
++ /The Mountain Path/ Paul Pritchard
++ /Revelations/ Jerry Moffatt
++ /Statement/ Ben Moon
++ /Rock Athlete/ Ron Fawcett
++ /Wild Country: The Man Who Made Friends/ Mark Vallance
++ /On Thin Ice/ Mick Fowler
++ /Vertical Pleasure/ Mick Fowler
++ /No Easy Way/ Mick Fowler
+** Climbing
+*** Coffee Table
++ /Hard Rock: Great British rock climbs from VS to E4 (Hardcover)/ Ian Parnell
++ /The White Cliff: Epic tales of life and death on the world's best sea cliff/ Grant Farquhar
++ /The Great Mountain Crags of Scotland: A Celebration of Scottish Mountaineering/ Guy Robertson, Adrian Crofton
+*** Guides
+** Science
+*** Genetics
++ /An Introduction to Population Genetics/ James F Crow, Motoo Kimura
++ /The Neutral Theory of Molecular Evolution/ Motoo Kimura
++ /Basic Concepts in Population, Quantitative and Evolutionary Genetics/ James F Crow
+*** Evolution
+Most of these I read a long time ago when studying hence a distinct lack of notes about them.  I've grouped by author.
+***** Richard Dawkins
++ /The Selfish Gene/
++ /The Extended Phenotype/
++ /The Blind Watchmaker/
++ /River Out of Eden/
+***** Stephen Jay Gould
++ /Eight Little Piggies/
++ /Wonderful Life/
++ /The Flamingo's Smile/
++ /Life's Grandeur/
++ /The Structure of Evolutionary Theory/
+***** Daniel C Dennet
++ /Darwins Dangerous Idea/
++ /Freedom Evolves/
+***** R.A. Fisher
++ /The Genetical Theory of Natural Selection/
+***** Charles Darwin
++ /On the Origin of Species/
+***** Misc
++ /The Evolution of Co-operation/ Robert Axelrod
+*** Mycology
++ /Entangled Life/ Merlin Sheldrake
+*** Physics
++ /Everything that can Happen has Happened/ Brian Cox and
+** Statistics
++ /The Art of Statistics/ David Speigelhalter
++ /How to Make The World Add Up/ Tim Harford
++ /Calling Bullshit/ Carl Bergstrom
++ [[https://www.cambridge.org/fr/universitypress/subjects/computer-science/computing-and-society/computing-climate-how-we-know-what-we-know-about-climate-change?format=PB&isbn=9781107589926][Copmuting the Climate : How We Know What We Know About Climate Change]]
+*** Technical
++ /Regression Modelling Strategies/ by Frank Harrell
++ /Statistical Rethinking : A Bayesian Course with Examples in R and Stan 2nd Edition/ Richard McElreath
++ /Applied Predictive Modelling/ Max Kuhn, Kjell Johnson
++ /Computer Age Statistical Inference/ Bradley Efron, Trevor Hastie
+*** Languages
++ /The R Handbook/
++ /R in a Nutshell/
+
+* Not Books
+
+Other stuff I've read at various points on the net that were interesting.
+
+** Genetics
+*** <2022-02-12 Sat> [[https://newleftreview.org/sidecar/posts/away-from-the-guns?pc=1423][Richard Seymour, Away from the Guns — Sidecar]] a piece on E.O. Wilson's legacy and the dispute about
+nature v nurture.
+** Statistics
+*** Data/Machine Learning/AI
++ <2021-10-31 Sun> [[https://reallifemag.com/false-positivism/][False Positivism — Real Life]]
+** Economics
++ <2020-11-01 Sun> [[https://aeon.co/essays/the-challenge-of-reclaiming-the-commons-from-capitalism][The challenge of reclaiming the commons from capitalism | Aeon Essays]]
+** Internet
+*** Social Media
++ <2021-10-31 Sun> [[https://www.newyorker.com/news/essay/on-the-internet-were-always-famous][On the Internet, We’re Always Famous | The New Yorker]]
++ <2023-09-18 Mon> [[https://www.wired.com/story/the-internet-con-cory-doctorow-book-excerpt/][How Big Tech Got So Damn Big | WIRED]]
+** Miscellany
+*** Nautilus
++ [[https://nautil.us/the-most-beautiful-science-of-the-year-2-471635/][The Most Beautiful Science of the Year - 2024]]
++ [[https://nautil.us/the-physics-of-crowds-388020/][The Physics of Crowds]]
+*** Aeon
++ <2020-12-17 Thu> [[https://aeon.co/essays/the-gaia-hypothesis-reimagined-by-one-of-its-key-sceptics][The Gaia hypothesis reimagined by one of its key sceptics | Aeon Essays]]
+*** Quanta Magazine
++ <2023-10-01 Sun> [[https://www.quantamagazine.org/insect-brains-melt-and-rewire-during-metamorphosis-20230726/][Insect Brains Melt and Rewire During Metamorphosis | Quanta Magazine]]
