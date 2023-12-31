@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       6155515e-469b-4e2a-ad23-c0fbd06e32e3
+:mtime:    20231231091641
+:ctime:    20231231091641
+:END:
+#+TITLE: Emacs Debugging
+#+FILETAGS: :emacs:debugging:
+
+Debugging in Emacs is varied, you may need to debug your Emacs LISP configuration or you may wish to debug the code of
+another language you are writing in.
+
+* Debugging Emacs LISP
+
+This is something I have to do regularly as I tinker with my configuration (it might help if I properly learned a bit more Emacs LISP).
+
+Useful commands
+
++ ~M-: (executable-find "<exec>")~ - show the path to the binary specified by ~<exec>~
++ ~C-h m~ - show the modes for the current buffer.
++ ~C-h v~ - show the value for the prompted variable.
++ ~C-h f~ - show the value for the prompted function.
++ ~C-h v exec-path~ - show the path executables are searched for.
+
+* gdb
+
+The main debugger for most languages is the ~gdb~

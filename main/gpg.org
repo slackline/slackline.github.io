@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ce08bd82-0146-49cb-8a64-048ffe7210f2
-:mtime:    20231210095348 20231126223255 20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
+:mtime:    20231231085314 20231210095348 20231126223255 20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
 :ctime:    20221229210308
 :END:
 #+TITLE: GnuPG
@@ -281,6 +281,20 @@ Language preferences: gb
 gpg/card> list
 #+end_src
 
+*** Sending Keys to Servers
+
+Having your public key on a server means others can use it to encrypt and send you files.  Add ~standard-resolver~ as
+the first line of ~\~/.gnupg/dirmngr.conf~~, kill the manager and then upload with the following.
+
+#+begin_src bash
+  gpgcong --kill dirmngr
+gpg --keyserver hkps://keys.openpgp.org --send-keys <KEY_ID>
+#+end_src
+
+If successful you will receive an email at the email address associated with your key which contains instructions no how
+to make the email address public.
+
+
 ** Import keys to Yubikey
 
 The following are the steps described at [[https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP][Using Your YubiKey with OpenPGP – Yubico]] under /To import the key on your
@@ -290,6 +304,10 @@ the following.
 You can select which key you wish to move to card using ~key #~, select and move each of the subkeys in turn moving them
 to your card and then ~save~. Note however that ~save~ removes the keys from your local system, you should make a backup
 of them elsewhere _before_ doing this.
+
+I'll repeat that...
+
+**MAKE A BACKUP OF YOUR KEYS BEFORE DOING THIS, IT WILL REMOVE THEM FROM YOUR LOCAL SYSTEM**
 
 #+begin_src bash
   gpg2 --edit-key <key-id>
@@ -312,6 +330,8 @@ of them elsewhere _before_ doing this.
   Please select
      (3) Authenticaion key
 #+end_src
+
+
 * Pass the Standard UNIX Password Manager
 
 [[https://www.passwordstore.org][~pass~]] is an excellent password manager that works on GNU/Linux and OSX systems (and can be setup to work on Windows

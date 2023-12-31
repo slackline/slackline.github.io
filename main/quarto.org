@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       251b3ae4-4a5c-4c44-909a-dcbc0aef4b45
-:mtime:    20230808214728 20230715122915 20230704223416 20230425225904 20230312225146 20230208071742 20230105145232 20230103103309 20221228151331 20230103103309 20230103103308
+:mtime:    20231231084604 20230808214728 20230715122915 20230704223416 20230425225904 20230312225146 20230208071742 20230105145232 20230103103309 20221228151331 20230103103309 20230103103308
 :ctime:    20221228151331 20230103103308
 :END:
 #+TITLE: Quarto
@@ -231,6 +231,14 @@ Leverages [[https://docs.r-wasm.org/webr/latest/][webR]] to embed interactive R 
 + [[https://emilhvitfeldt.github.io/talk-nyr-slidecraft/#/section][Slidecraft : The Art of creating Pretty Presentations]] ([[https://github.com/EmilHvitfeldt/talk-nyr-slidecraft][EmilHvitfeldt/talk-nyr-slidecraft]])
 + [[https://www.emilhvitfeldt.com/blog.html#category=slidecraft%20101][Emil Hvitfeldt : Slidecraft 101]]
 
+** Videos
+
+*** Themes
+
++ [[https://www.youtube.com/watch?v=jX4_Dnzhl0M][How to style your Quarto docs without knowing HTML & CSS]]
++ [[https://www.youtube.com/watch?v=QU8wSya-Y9E][An easy way to style your Quarto Docs without knowing HTML and CSS]]
+
 ** Misc
 
 + [[https://eliocamp.github.io/codigo-r/en/2023/04/knitr-rmarkdown-tricks/][11 tricks to level up your rmarkdown documents]]
++ [[https://bylr.info/articles/2023/12/30/til-displaying-contributor-avatars-in-github-changelogs/][TIL: displaying contributor avatars in GitHub changelogs | bylr.info]]
