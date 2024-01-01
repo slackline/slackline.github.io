@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3cca0dfd-0c82-4685-b9ed-6314f7c8b78f
-:mtime:    20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
+:mtime:    20231231095334 20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
 :ctime:    20221212233350
 :END:
 #+TITLE: Python Pytest
@@ -137,6 +137,24 @@ A neat use of parameterisation is to allow some tests to pass and some to fail.
           assert divide(a, b) == expected
 #+END_SRC
 
+You can also label your parametrised tests, this gives them meaningful names and means you don't have to leave comments
+in the source. This is done using ~pytest.param()~ (from [[https://gist.github.com/danjac/72e00f39d53702de9c20553a941a8343][this gist]]).
+
+#+CAPTION: Naming pararmeters in tests using ~pytest.param()~
+#+NAME: pytest-ficture-naming
+#+begin_src
+@pytest.mark.parametrize(
+    ("value", "exected"),
+    [
+        pytest.param(None, "", id="none"),
+        pytest.param("", "", id="empty")
+        pytest.param("test", "test", id="text")
+        pytest.param("test1 test2", "test1 test2", id="text with spaces")
+    ]
+)
+#+end_src
+def test_some_function(value: str, expected: str) -> None:
+    assert some_function(value) == exepected
 
 *** Fixture Parameterisation
 
