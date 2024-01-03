@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3cca0dfd-0c82-4685-b9ed-6314f7c8b78f
-:mtime:    20231231095334 20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
+:mtime:    20240102123440 20240101130614 20231231095334 20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
 :ctime:    20221212233350
 :END:
 #+TITLE: Python Pytest
@@ -108,9 +108,9 @@ def multiply(a, b):
     return a * b
 
 @pytest.mark.parameterize("a, b, expected",
-    [(2, 4, 8),
-     (3, 9, 27),
-     (12, 10, 120)
+    [pytest.param(2, 4, 8, id="two multiplied by four"),
+     pytest.param(3, 9, 27, id="three multiplied by nine"),
+     pytest.param(12, 10, 120, id="twelve multiplied by ten")
     ])
 def test_multiply(a, b, expected):
     assert multiply(a, b) == expected
@@ -260,6 +260,8 @@ and return values.  These can be applied to existing code to apply Typehints.
 
 * Links
 
+** Pytest
+
 + [[https://docs.pytest.org/en/7.0.x/][pytest: helps you write better programs]]
 + [[https://docs.pytest.org/en/7.1.x/how-to/parametrize.html][How to parametrize fixtures and test functions]]
 + [[https://docs.pytest.org/en/7.1.x/how-to/fixtures.html][How to use fixtures — pytest documentation]]
@@ -269,3 +271,9 @@ and return values.  These can be applied to existing code to apply Typehints.
 ** Mocking
 
 + [[https://docs.getmoto.org/en/latest/][Moto: Mock AWS Services — Moto 4.1.14.dev documentation]]
+
+** Unit Testing
+
++ [[http://www.owenpellegrin.com/blog/testing/how-do-you-solve-multiple-asserts/][How do you solve multiple asserts?]]
++ [[https://www.artofunittesting.com][The Art of Unit Testing]]
++ [[https://softwareengineering.stackexchange.com/questions/7823/is-it-ok-to-have-multiple-asserts-in-a-single-unit-test][Is it OK to have multiple asserts in a single unit test?]] (see also [[https://softwareengineering.stackexchange.com/questions/341953/split-tests-by-method-or-behavior][unit testing - Split tests by method or behavior?]]).
