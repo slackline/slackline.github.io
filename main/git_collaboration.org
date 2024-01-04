@@ -1,0 +1,82 @@
+:PROPERTIES:
+:ID:       09da049c-9288-4856-af3e-e67de566588b
+:END:
+#+TITLE: Git Collaboration
+#+FILETAGS: :git:teaching:collaboration:
+
+There are lots of resources out there for getting started with [[id:0859ef9e-834d-4e84-8e67-fa7593a61e0b][Git]] and lots of very dense, technically detailed
+resources on how it works and to use it, but there is little material at what I would considfer intermediate level that
+addresses some of the more advanced topics and importantly how to use [[id:0859ef9e-834d-4e84-8e67-fa7593a61e0b][Git]] to effectively work and collaborate on
+software development.
+
+I've undertaken development of such a courseand am using the Carpentries [[https://carpentries.github.io/lesson-development-training/][Collaborative Lesson Development Training:
+Summaryand Setup]] as a framework to develop the material. This page documents my work progressing through the material
+whilst the resulting website is version controlled at  [[https://github.com/ns-rse/git-collaboration][ns-rse/git-collaboration: Intermediate level
+course on using Git for collaboration]] and the resulting site is [[https://ns-rse.github.io/git-collaboration/][Git Collaboration]].
+
+* Learning Outcomes
+
+The first step is to define the learning outcomes for partipants. At this stage they may be mutable in light of
+progression and collaboration but as a start I would like people to have the following knowledge areas.
+
+** Branches
+How branches can be used to fix bugs or develop features in isolation.
++ Comfortable creating and switching between multiple branches.
++ Keep development branches up-to-date with ~main~ (i.e. ~git merge~ and ~git rebase~).
++ Moving commits from the wrong branch (~git cherrypick~ and ~git reset~).
++ Git Worktrees
++ Tracking multiple Origins
+
+** Git Hygeine
+How to maintain a clean commit history.
+
++ Understand the concept of atomic commits
++ ~git ammend~
++ ~git add patch~
++ Using ~git rebase~ squash commits.
++ The use of consistent nomenclature such as [[https://www.conventionalcommits.org/en/v1.0.0/][Conventional Commits]].
+
+** Hooks and Continuous Integration
+Understand what hooks are available.
++ How to install and use [[https://pre-commit.com][pre-commit]].
++ Bebnefits of Continuous Integration, particularly the importance of tests (but not covering tests in detail).
++ GitHub Actions and Workflows.
++ GitLab Continuous Integration.
+
+** Effective Reviewing
+How to make useful and constructive Pull/Merge request reviews
++ Not overwhelming people with lots of comments.
++ Making suggestions when reviewing
+
+
+* Target Audience
+
+I expect the target audience to be early stage /competent parctitioner/ with using GitHub to this end it is likely to be
+more useful to have activities that allow users the freedom to explore options and develop their own solutions.
+
+** Exercise
+
+1. What is their background?
+
+   Researchers writing "software" that is version controlled. They will have varying levels of language specific
+   programming experience but will already be using to version control their code using Git and backing it up to remote
+   ~origin~.
+
+   Some may already be working on code collaboratively.
+
+2. What do they already know how to do?
+
+   + How to create a repository under version control.
+   + How to create branches, make commits and merge branches.
+   +
+
+3. What do they want to do with the skills they will learn from your lesson?
+
+   + Bring collaborators on-board and work on code bases with them.
+   + Contribute to up-stream software where problems have been encountered using them
+
+4. What problem will your lesson help them solve?
+
+   + The overwhelming options and tasks that can be used to work collaboratively on software development.
+
+** Prior Knowledge/Expectations

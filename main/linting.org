@@ -284,8 +284,8 @@ number of tools available that will lint your Python code for you and most integ
    #+END_SRC
 
 
-   For more on configuriong PyLint refer to the [[https://pylint.pycqa.org/en/latest/user_guide/options.html][configuration documentation]]
-and also details of how to [[https://pylint.pycqa.org/en/latest/user_guide/ide-integration.html][integrate with your editor and IDE]].
+   For more on configuriong PyLint refer to the [[https://pylint.pycqa.org/en/latest/user_guide/options.html][configuration documentation]] and also details of how to [[https://pylint.pycqa.org/en/latest/user_guide/ide-integration.html][integrate with
+   your editor and IDE]].
 
 ** Automated Formatting with Black
 

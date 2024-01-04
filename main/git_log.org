@@ -35,4 +35,8 @@ that contained the line omit the
 git log -c -S'missingtext' [/path/to/file]
 #+end_src
 
-If you don't know
+If you don't know where the files is you can use
+
+#+begin_src bash
+git log -c -S'missingtext' --source --all
+#+end_src

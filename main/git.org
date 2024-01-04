@@ -740,6 +740,12 @@ Over time the number of repositories you have and use regularly will likely grow
 In a `git` version controlled directory run ~mr register~ which sets up ~\~/.mrconfig~ you can then update them all (in
 parallel!) with ~mr -j6 update~. Commands run on individual repositories can be customised.
 
+* Teaching
+
+I've ended up teaching people the basics of Git and GitHub using the excellent [[https://srse-git-github-zero2hero.netlify.app/][srse-git-github-zero2hero.netlify.app/]]
+(Git Repo : [[https://github.com/RSE-Sheffield/git-github-zero-to-hero][RSE-Sheffield/git-github-zero-to-hero]]).  Feedback for this module often requested more advanced materials,
+to which end I have undertaken developing an intermediate course [[id:09da049c-9288-4856-af3e-e67de566588b][Git Collaboration]].
+
 * Links
 + [[https://git-scm.com][Git]]
 + [[https:magit.vc][Magit]]
