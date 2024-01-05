@@ -893,3 +893,4 @@ to which end I have undertaken developing an intermediate course [[id:09da049c-9
 
 + [[https://davidism.com/github-pull-request-pitfalls/][GitHub Pull Request Pitfalls]]
 + [[https://code-review.tidyverse.org/][Tidyteam code review principles]] (derived from [[https://google.github.io/eng-practices/review/reviewer/][How to do a Code Review]])
++ [[https://www.pyopensci.org/software-peer-review/][pyOpenSci Software Peer Review Guidebook]]

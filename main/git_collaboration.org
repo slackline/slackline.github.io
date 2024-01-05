@@ -47,7 +47,7 @@ Understand what hooks are available.
 How to make useful and constructive Pull/Merge request reviews
 + Not overwhelming people with lots of comments.
 + Making suggestions when reviewing
-
++  [[https://www.pyopensci.org/software-peer-review/][pyOpenSci Software Peer Review Guidebook]] and  [[https://code-review.tidyverse.org/][Tidyteam code review principles]]
 
 * Target Audience
 
@@ -79,4 +79,18 @@ more useful to have activities that allow users the freedom to explore options a
 
    + The overwhelming options and tasks that can be used to work collaboratively on software development.
 
+*** Assessment Questions
+
+1. What are the steps involved in Git to develop a new feature or fix a bug?
+
+   - ~git checkout main && git pull~ - make sure main is up-to-date.
+   - ~git checkout -b <new_branch>~ - create a new branch from ~main~
+   - ~git add -u && git commit -m "New feature"~ - Make multiple commits to add new feature/fix bug.
+   - ~git push --set-upstream origin/<new_branch> <new_branch>~
+   - Create pull-request.
+   - Address feedback and push.
+   - Merge
+   - Delete branch on origin and remote.
+
+2.
 ** Prior Knowledge/Expectations
