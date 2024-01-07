@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b5000932-0fec-4353-acc4-0cb02127c9ac
-:mtime:    20231221072710 20231211080603 20231121210843
+:mtime:    20240107095430 20231221072710 20231211080603 20231121210843
 :ctime:    20231121210843
 :END:
 #+TITLE: Privacy and Encryption
@@ -21,6 +21,7 @@ Privacy is important, it underpins free speech, but many chose to sacrifice thei
 * Services
 
 + [[https://protonmail.com][Proton Mail]]
++ [[https://framasoft.org/en/][Framasoft]]
 
 * Advocacy
 

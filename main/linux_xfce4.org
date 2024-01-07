@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       63fa9747-24ef-40e2-a2ed-d6bd4133374f
+:mtime:    20240107103809
+:ctime:    20240107103809
+:END:
+#+TITLE: Xfce4
+#+FILETAGS: :linux:xfce4:desktop:
+
+* Thunar
+
+Enable dual pane mode by hitting ~F3~.
