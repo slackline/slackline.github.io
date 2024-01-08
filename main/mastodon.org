@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a7fbe90-1f6e-4a38-a0c8-b378b1893f33
-:mtime:    20231218231936 20231217220611 20231217163005 20231208200545 20231106165640 20231029193938 20231010204450 20230922120216 20230916065434 20230915202700 20230910203044
+:mtime:    20240107125102 20231218231936 20231217220611 20231217163005 20231208200545 20231106165640 20231029193938 20231010204450 20230922120216 20230916065434 20230915202700 20230910203044
 :ctime:    20230910203044
 :END:
 #+TITLE: Mastodon
@@ -20,12 +20,19 @@ Its pretty simple to get and RSS feed of an account, just add ~.rss~ to the end 
 
 An example of embedding Mastodon feeds on your site you can use [[https://github.com/sampsyo/emfed][emfed]].
 
-*** Sources
-:PROPERTIES:
-:CUSTOM_ID: sources
-:END:
-+ [[https://mstdn.social/@feditips/108357998963885456][Most accounts are accessible via RSS with .rss at the end of the URL]]
-+ [[https://mastodon.social/@ifixcoinops/109288684615075785][Add .rss to the end of most pages you see on a Mastodon server to get an RSS feed for your RSS reader.]]
+An excellent service is available via [[https://rss-parrot.net/][RSS Parrot]] which allows you to toot ~@birb@rss-parrot.net~ with a URL for a site
+with RSS feeds. It will then look up the RSS or Atom feed of the site automatically and set up an account that
+automatically toots new RSS posts. It replies to you with the account details and you can follow them to stay abreast of
+the RSS feed directly in Mastodon.
+
+Since this is a Mastodon instance you can also view the account itself, e.g. I have setup...
+
++ [[https://rss-parrot.net/web/feeds/www.flickr.com.photos.slackline][@www.flickr.com.photos.slackline@rss-parrot.net]] for my Flickr feed.
++ [[https://rss-parrot.net/web/feeds/rse.shef.ac.uk][@rse.shef.ac.uk@rss-parrot.net]] for [[https://rse.shef.ac.uk][RSE Sheffield]] feed.
+
+This is a really neat feature, it works for anything with RSS feeds, e.g. YouTube channels, SoundCloud accounts (if
+configured to include RSS feeds, not all are). Services such as [[https://fetchrss.com/][FetchRSS]] can generate RSS feeds for any website or
+service.
 
 * Server Setup
 :PROPERTIES:
@@ -247,6 +254,9 @@ A great piece of forum software is Discourse, they have as of 2023-11-09 integra
 
 ** RSS Feeds
 
++ [[https://mstdn.social/@feditips/108357998963885456][Most accounts are accessible via RSS with .rss at the end of the URL]]
++ [[https://mastodon.social/@ifixcoinops/109288684615075785][Add .rss to the end of most pages you see on a Mastodon server to get an RSS feed for your RSS reader.]]
 + [[https://blog.khinsen.net/posts/2023/10/09/deconstructing-the-mastodon-client/][Deconstructing the Mastodon client]] - covers the broad principles (with links) for creating RSS feeds to read from
   Mastodon.
 + [[https://codeberg.org/aliceice/fedi-marss/][Fedi-MaRRS]] Emacs Lisp implementation of the above.
++ [[https://rss-parrot.net/web/about][@birb@rss-parrot.net]]

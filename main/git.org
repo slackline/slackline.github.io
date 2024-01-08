@@ -157,16 +157,17 @@ Forges are places where Git repositories are hosted online for collaborative wor
 Request to have their changes incorporated into the original body of code for a project. Read more about each Forge at
 the linked pages.
 
-| Forge    | Description                                                                                                                      |
-|----------+----------------------------------------------------------------------------------------------------------------------------------|
-| [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]]   | Perhaps the largest and most widely used forge. Purchased my Micro$oft a few years ago.                                          |
-| [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]]   | Comparable services with strong CI/CD functionality. Its also a free, open source piece of software so you can host it yourself. |
-| [[https://xethub.com/][XetHub]]   | /A collaboration platform for accessing, exploring and iterating on large-scale repositories, backed by the power of Git./       |
-| [[https://codeberg.org/][Codeberg]] | /Codeberg is a collaboration platform and Git hosting for Free and Open Source Software, content and projects./                  |
-| [[https://gitea.io][Gitea]]    | A self-hosted Git Forge                                                                                                          |
-| [[https://forgejo.org/][Forgejo]]  | A fork of Gitea which aims to allow federation between instances hosted on different servers.                                    |
-| [[https://git.zx2c4.com/cgit/about/][cgit]]     | A hyperfast web frontend for git repositories written in C.                                                                                                                                    |
-
+| Forge     | Description                                                                                                                      |
+|-----------+----------------------------------------------------------------------------------------------------------------------------------|
+| [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]]    | Perhaps the largest and most widely used forge. Purchased my Micro$oft a few years ago.                                          |
+| [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]]    | Comparable services with strong CI/CD functionality. Its also a free, open source piece of software so you can host it yourself. |
+| [[https://xethub.com/][XetHub]]    | /A collaboration platform for accessing, exploring and iterating on large-scale repositories, backed by the power of Git./       |
+| [[https://codeberg.org/][Codeberg]]  | /Codeberg is a collaboration platform and Git hosting for Free and Open Source Software, content and projects./                  |
+| [[https://gitea.io][Gitea]]     | A self-hosted Git Forge                                                                                                          |
+| [[https://forgejo.org/][Forgejo]]   | A fork of Gitea which aims to allow federation between instances hosted on different servers.                                    |
+| [[https://git.zx2c4.com/cgit/about/][cgit]]      | A hyperfast web frontend for git repositories written in C.                                                                      |
+| Bare repo | It is also relatively simple to [[https://maddie.info//2023/09/05/simple-and-small-git-hosting.html][self-host over SSH]].                                                                              |
+|           |                                                                                                                                  |
 
 The Gittea based offerings have far less complete CI but there is a growing number of tools such as [[https://davejansen.com/publish-to-netlify-using-gitea-actions/][deploying to Netlify]].
 
