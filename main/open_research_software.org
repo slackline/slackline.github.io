@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       8a38a071-9901-4e35-9aec-213a0c65af00
 :ROAM-ALIASES: "Open Research Software"
-:mtime:    20231002105158 20230519121737 20230316215314 20230315120054 20230103103311 20221231171719
+:mtime:    20240109124736 20231002105158 20230519121737 20230316215314 20230315120054 20230103103311 20221231171719
 :ctime:    20221231171719
 :END:
 #+TITLE: Open Research Software
@@ -39,6 +39,7 @@ There are a number of criteria that are useful in ensuring that code is sustaina
 
 * Bibliography
 
++ [[https://www.nature.com/articles/s41597-022-01710-x][Introducing the FAIR Principles for Research Software]]
 + [[https://doi.org/10.15497/RDA00068][FAIR Principles for Research Software 1.0]] (supersedes [[https://doi.org/10.15497/RDA00068][FAIR Principles for Research Software]])
 + [[https://content.iospress.com/articles/data-science/ds190026][Towards FAIR principles for research software - IOS Press]]
 + [[https://medium.com/czi-technology/new-data-reveals-the-hidden-impact-of-open-source-in-science-11cc4a16fea2][New data reveals the hidden impact of open source in science]]

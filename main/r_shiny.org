@@ -1,11 +1,40 @@
 :PROPERTIES:
 :ID:       fe1f6380-9217-482c-bb5e-91817ae3e8f8
-:mtime:    20231012133551 20231011113735 20230103103314 20220524201346
+:mtime:    20240109203109 20240109175658 20240109142953 20240109120558 20231012133551 20231011113735 20230103103314 20220524201346
 :ctime:    20220524201346
 :END:
 #+TITLE: R Shiny
 #+DATE: [2022-05-24 Tue 20:09]
 #+FILETAGS: :r:programming:statistics:shiny:dashboards:
+
+* Golem
+
+[[https://engineering-shiny.org/index.html][Golem]] is a package that aids developing Shiny applications, based on packages, for deployment in production.
+
+* Setup
+
+#+begin_src r
+library(golem)
+library(precommit)
+library(usethis)
+
+## Initialise a project
+golem::create_golem("<package>")
+
+## Initialise Git
+usethis::use_git()
+
+## Setup precommit
+precommit::use_precommit()
+
+## Setup README.Rmd
+usethis::use_readme_rmd()
+
+## Setup License
+usethis::use_gpl3_license()
+#+end_src
+
+Now edit the ~DESCRIPTION~ and ~README.Rmd~ and adjust the fields.
 
 * Links
 
