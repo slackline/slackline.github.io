@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5b5d1562-ecb4-4199-b530-e7993723e112
-:mtime:    20231231094423 20231203135526 20231128102207 20231116235015 20231105150910 20231105073358 20231103170452 20231024144239 20231002122344 20230920154939 20230915180115 20230911192604 20230623214025 20230616161729 20230526200945 20230520211006 20230319231255 20230224095542 20230223120221 20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
+:mtime:    20240111095218 20231231094423 20231203135526 20231128102207 20231116235015 20231105150910 20231105073358 20231103170452 20231024144239 20231002122344 20230920154939 20230915180115 20230911192604 20230623214025 20230616161729 20230526200945 20230520211006 20230319231255 20230224095542 20230223120221 20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
 :ctime:    20221217185215 20230103103308
 :END:
 #+TITLE: Python
@@ -25,7 +25,8 @@ end-of-life was [[https://endoflife.date/python][2010-07-03]]. There are of cour
   + SciPy
   + [[id:d9176707-8c60-4557-a181-7780d3215cbe][Python Pickle]]
   + [[id:c3712eee-d30f-4dd4-b894-4721d094edd1][Jupyter Notebooks]]
-
++ Frameworks
+  + [[id:0739c563-409c-48ce-b84b-eb4cecdbeb47][Toolz]]
 
 * Linting
 
@@ -46,12 +47,13 @@ You can also use the "AI" [[https://sourcery.ai/][Sourcery]] to "/Automatically 
 
 * Typing
 
-Python is a "/dynamically typed language/" doesn't mean, as I first thought when I heard the term (having no background
-in Computer Science!), that you type it interactively (that is the "/REPL/"!), rather it means that an object can be of
-a given "type" (~string~, ~int~, ~float~, class types etc.) and this is determined at run-time and can change on the
-fly.
+Python is a "/dynamically typed language/" and this doesn't mean, as I first thought when I heard the term (having no
+background in Computer Science!), that you type it interactively (that is the "/REPL/"!), rather it means that an object
+can be of a given "type" (~string~, ~int~, ~float~, class types etc.) and this is determined at run-time and can change
+on the fly.
 
-Read more about [[id:3f19e1ef-e5c4-45f1-822f-8d4d834acdbd][python_typing]]
+Read more about [[id:3f19e1ef-e5c4-45f1-822f-8d4d834acdbd][Python Typing]].
+
 * Testing
 
 Testing is something I came across late in my programming adventure, but it is really something that should be learnt or

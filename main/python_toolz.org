@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       0739c563-409c-48ce-b84b-eb4cecdbeb47
+:mtime:    20240111095527
+:ctime:    20240111095527
+:END:
+#+TITLE: Python Toolz
+#+FILETAGS: :python:pipes:programming:
+
+[[https://toolz.readthedocs.io/en/latest/index.html][PyToolz]] "/provides a set of utility functions for iterators, functions and dictionaries./" for [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]].
+
+* Tools
+
+** Pipes
+
+The ~pipe()~ method provides a neat method to pipe data and commands through various functions, akin to the ~|>~ or
+maggritir pipes in [[id:61d814c2-c81a-4980-8ef2-bd2afeec79f1][R]].
