@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       00092001-9bac-4434-b098-a72d6b00385a
+:mtime:    20240113162844
+:ctime:    20240113162844
+:END:
+#+TITLE: Emacs Editing
+#+FILETAGS: :emacs:editing:
+
+* Searching
+
+You can search for strings with ~C-s~ which allows interactive searching but a more powerful mode exists in the form of
+~occur-mode~ which searches for regular expressions and shows matching lines in a buffer.
+
+* Tips and Tricks
+
+** Use Elisp in Replacement String
+
+You can use Elisp functions in the replacement string of regular expressions which is quite useful. See [[https://susam.net/maze/elisp-in-replacement-string.html][Elisp in
+Replacement String]] for examples.
+
+* Links
+
++ [[https://susam.net/maze/elisp-in-replacement-string.html][Elisp in Replacement String - Susam's Maze]]
++ [[https://www.masteringemacs.org/article/searching-buffers-occur-mode][Searching and Editing in Buffers with Occur Mode - Mastering Emacs]]
