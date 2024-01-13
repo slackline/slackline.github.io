@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a7fbe90-1f6e-4a38-a0c8-b378b1893f33
-:mtime:    20240107125102 20231218231936 20231217220611 20231217163005 20231208200545 20231106165640 20231029193938 20231010204450 20230922120216 20230916065434 20230915202700 20230910203044
+:mtime:    20240109073432 20240107125102 20231218231936 20231217220611 20231217163005 20231208200545 20231106165640 20231029193938 20231010204450 20230922120216 20230916065434 20230915202700 20230910203044
 :ctime:    20230910203044
 :END:
 #+TITLE: Mastodon
@@ -16,9 +16,11 @@ Mastodon is federated software and part of the [[id:8178219c-ef79-4b59-ad51-e420
 :PROPERTIES:
 :CUSTOM_ID: rss-feed
 :END:
-Its pretty simple to get and RSS feed of an account, just add ~.rss~ to the end of the URL.
+Its pretty simple to get an RSS feed of an account, just add ~.rss~ to the end of the URL.
 
 An example of embedding Mastodon feeds on your site you can use [[https://github.com/sampsyo/emfed][emfed]].
+
+** Following RSS Feeds on Mastodon
 
 An excellent service is available via [[https://rss-parrot.net/][RSS Parrot]] which allows you to toot ~@birb@rss-parrot.net~ with a URL for a site
 with RSS feeds. It will then look up the RSS or Atom feed of the site automatically and set up an account that
@@ -256,6 +258,7 @@ A great piece of forum software is Discourse, they have as of 2023-11-09 integra
 
 + [[https://mstdn.social/@feditips/108357998963885456][Most accounts are accessible via RSS with .rss at the end of the URL]]
 + [[https://mastodon.social/@ifixcoinops/109288684615075785][Add .rss to the end of most pages you see on a Mastodon server to get an RSS feed for your RSS reader.]]
++ [[https://thibaultmilan.com/blog/2022/12/20/how-to-create-a-rss-feed-bot-for-mastodon/][How to create a RSS feed bot for Mastodon – Thibault Milan]]
 + [[https://blog.khinsen.net/posts/2023/10/09/deconstructing-the-mastodon-client/][Deconstructing the Mastodon client]] - covers the broad principles (with links) for creating RSS feeds to read from
   Mastodon.
 + [[https://codeberg.org/aliceice/fedi-marss/][Fedi-MaRRS]] Emacs Lisp implementation of the above.
