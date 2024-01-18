@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       fe1f6380-9217-482c-bb5e-91817ae3e8f8
-:mtime:    20240109225151 20240109203109 20240109175658 20240109142953 20240109120558 20231012133551 20231011113735 20230103103314 20220524201346
+:mtime:    20240116101258 20240109225151 20240109203109 20240109175658 20240109142953 20240109120558 20231012133551 20231011113735 20230103103314 20220524201346
 :ctime:    20220524201346
 :END:
 #+TITLE: R Shiny
@@ -27,17 +27,108 @@ usethis::use_git()
 ## Setup precommit
 precommit::use_precommit()
 
-## Setup README.Rmd
+## Setup the DESCRIPTION file
+golem::fill_desc(
+  pkg_name = "shinyexample", # The Name of the package containing the App
+  pkg_title = "PKG_TITLE", # The Title of the package containing the App
+  pkg_description = "PKG_DESC.", # The Description of the package containing the App
+  author_first_name = "AUTHOR_FIRST", # Your First Name
+  author_last_name = "AUTHOR_LAST", # Your Last Name
+  author_email = "AUTHOR@MAIL.COM", # Your Email
+  repo_url = NULL, # The (optional) URL of the GitHub Repo
+  pkg_version = "0.0.0.9000" # The Version of the package containing the App
+  )
+
+## Setup various aspects using usethis
 usethis::use_readme_rmd()
-
-## Setup License
 usethis::use_gpl3_license()
-
-## Update DESCRIPTION automatically
 usethis::use_dev_package()
+usethis::use_code_of_conduct()
+usethis::use_lifecycle_badge("Experimental")
+usethis::use_news_md(open = FALSE)
+
+## Initialise Tests
+golem::use_recommended_tests()
+
+## Use recommended Packages
+golem::user_recommended_deps()
+
+## Setup the Shiny UI/Server
+golem::use_utils_ui()
+golem::use_utils_server()
 #+end_src
 
-Now edit the ~DESCRIPTION~ and ~README.Rmd~ and adjust the fields.
+You can now edit the~README.Rmd~ and adjust the fields.
+
+For convenience these commands (and a few others) are located in the ~dev/01_start.R~ file which can be edited directly
+and sourced.
+
+** Running the App
+
+Once setup you can run the application.
+
+#+begin_src r
+  options(browser = "firefox") golem::run_dev()
+#+end_src
+
+* Development
+
+You are now ready to go about developing your application. The file ~dev/02_dev.R~ is provided which includes a number
+of helper functions that aid with development.
+
+** Add dependencies
+
+The ~attachment::att_amend_desc()~ functions is included at the start (if not installed then you should
+~renv::install("attachment")~ to install this package). It will automatically parse ~.R~ files detecting ~@import~,
+~@importFrom~ and ~::~ and update the ~DESCRIPTION~ file accordingly so that all packages are recorded.
+
+** Adding modules
+
+Modules form the backbone of Shiny apps and are created using ~golem::Add_module()~ which creates a file ~mod_<name>.R~ which contains a ~mod_<mdodule_name>_ui~ and ~mod_<mdodule_name>_server_~ sections of the files along with instructions on how to include them in the main ~ui.R~ and ~server.R~
+
+** Adding function and helper files
+
+In a similar vein the ~golem::add_fct("<name>")~ and ~golem::add_utils("<name>")~ create ~R/fct_<name>.R~ and ~R/utils_<name>.R~ respectively and these can contain business logic functions.
+
+** Adding External files
+
+There are a suite of additional files that can be created (see commands below) and these reside under ~inst/app/www~. Any files added manually to this directory can be included using the ~www~ prefix (e.g. ~tags$img(src = "www/my.png")~)
+
+#+begin_src r
+  golem::add_js_file("script")
+  golem::add_js_handler("script")
+  golem::add_css_file("custom")
+  golem::add_sass_file("custom")
+  golem::use_external_css_file(url = "url", name = "your_provided_name")
+  golem::use_external_js_file(url = "url", name = "your_provided_name")
+#+end_src
+
+** Raw Data
+
+If there is raw data it can be included using ~usethis::use_data_raw()~
+
+** More Tests
+
+Everyone love tests, so include tests for your app with ~usethis::use_test("app")~
+
+** Documentation
+
+After writing tests everyones second favourite task is writing documentation. You can include and build vignettes easily/
+
+#+begin_src r
+  usethis::use_vignette("shinyexample")
+  devtools::build_vignettes()
+#+end_src
+
+** Test Coverage
+
+Add test coverage with the following.
+
+#+begin_src r
+  usethis::use_travis()
+  usethis::use_appveyor()
+  usethis::use_coverage()
+#+end_src
 
 * Links
 

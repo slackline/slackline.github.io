@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a7fbe90-1f6e-4a38-a0c8-b378b1893f33
-:mtime:    20240109073432 20240107125102 20231218231936 20231217220611 20231217163005 20231208200545 20231106165640 20231029193938 20231010204450 20230922120216 20230916065434 20230915202700 20230910203044
+:mtime:    20240118164111 20240116122241 20240107125102 20231218231936 20231217220611 20231217163005 20231208200545 20231106165640 20231029193938 20231010204450 20230922120216 20230916065434 20230915202700 20230910203044
 :ctime:    20230910203044
 :END:
 #+TITLE: Mastodon
@@ -9,18 +9,12 @@
 Mastodon is federated software and part of the [[id:8178219c-ef79-4b59-ad51-e4204a8f369c][Fediverse]] a decentralised network of servers for different services.
 
 * Tips
-:PROPERTIES:
-:CUSTOM_ID: tips
-:END:
+
 ** RSS feed
-:PROPERTIES:
-:CUSTOM_ID: rss-feed
-:END:
-Its pretty simple to get an RSS feed of an account, just add ~.rss~ to the end of the URL.
+
+Its pretty simple to get and RSS feed of an account, just add ~.rss~ to the end of the URL.
 
 An example of embedding Mastodon feeds on your site you can use [[https://github.com/sampsyo/emfed][emfed]].
-
-** Following RSS Feeds on Mastodon
 
 An excellent service is available via [[https://rss-parrot.net/][RSS Parrot]] which allows you to toot ~@birb@rss-parrot.net~ with a URL for a site
 with RSS feeds. It will then look up the RSS or Atom feed of the site automatically and set up an account that
@@ -37,9 +31,7 @@ configured to include RSS feeds, not all are). Services such as [[https://fetchr
 service.
 
 * Server Setup
-:PROPERTIES:
-:CUSTOM_ID: server-setup
-:END:
+
 I have a VPS (I use [[https://ovh.co.uk][OVH]]) and figured I could just
 host my own. My VPS runs [[https://archlinux.org][Arch Linux]] and there
 is a package for [[https://aur.archlinux.org/packages/mastodon][Mastodon
@@ -66,9 +58,7 @@ documentation]] which recommends three things...
 3. Install a firewall and only allow SSH, HTTP and HTTPS ports
 
 ** SSH key-based login
-:PROPERTIES:
-:CUSTOM_ID: ssh-key-based-login
-:END:
+
 I took some steps to
 [[https://kimura.no-ip.info/doku.php?id=linux:security:ssh#ssh_hardening][harden
 my SSH login]] some time ago. They are minor but make a small
@@ -92,9 +82,7 @@ You should now be able to login using your SSH key and its even easier
 if you use [[linux:security:ssh#public_key_generation|keychain]].
 
 ** fail2ban
-:PROPERTIES:
-:CUSTOM_ID: fail2ban
-:END:
+
 Under Arch Linux install with the following (as ~root~)...
 
 #+begin_src sh
@@ -126,9 +114,7 @@ fields. Once you have configured ~fail2ban~ appropriately you can enable/restart
 #+end_src
 
 ** Firewall, SSH and HTTPS (not HTTP)
-:PROPERTIES:
-:CUSTOM_ID: firewall-ssh-and-https-not-http
-:END:
+
 I've already configured [[https://nginx.org/en/][nginx]] which I use for serving the sites I host on my VPS to redirect ~http~ requests on port 80
 to ~https~ on port 443 and use [[https://certbot.eff.org/][certbot]] to provide valid certificates. I'm not going to allow any firewall to allow
 ~http~ connections then. As mentioned above I configure ~sshd~ to run on a port other than ~22~. To which end my
@@ -160,46 +146,34 @@ A great piece of forum software is Discourse, they have as of 2023-11-09 integra
 [[https://socialhub.activitypub.rocks/t/are-you-running-your-own-discourse-community-for-your-software-lets-federate/3757][more info]]).
 
 * Links
-:PROPERTIES:
-:CUSTOM_ID: links
-:END:
+
 ** About
-:PROPERTIES:
-:CUSTOM_ID: about
-:END:
+
 + [[https://fedi.tips/][Fedi.Tips -- An Unofficial Guide to Mastodon and the Fediverse]]
 + [[https://simonwillison.net/2022/Nov/5/mastodon/][It looks like I'm moving to Mastodon]]
 + [[https://blog.djnavarro.net/posts/2022-11-03_what-i-know-about-mastodon/][Notes from a data witch - Everything I know about Mastodon]]
 
 ** Switching
-:PROPERTIES:
-:CUSTOM_ID: switching
-:END:
-- [[https://fedifinder.glitch.me/][Fedifinder]] Find Fediverse accounts of your Twitter followings
-- [[https://twitodon.com/][Twitodon - Find your Twitter friends on Mastodon]]
-- [[https://www.movetodon.org/][movetodon.org]]
-- [[https://pruvisto.org/debirdify/][Debirdify]]
-- [[https://axbom.com/mastodon-tips/][10 quick Mastodon tips]]
+
++ [[https://fedifinder.glitch.me/][Fedifinder]] Find Fediverse accounts of your Twitter followings
++ [[https://twitodon.com/][Twitodon - Find your Twitter friends on Mastodon]]
++ [[https://www.movetodon.org/][movetodon.org]]
++ [[https://pruvisto.org/debirdify/][Debirdify]]
++ [[https://axbom.com/mastodon-tips/][10 quick Mastodon tips]]
 
 ** Emacs
-:PROPERTIES:
-:CUSTOM_ID: emacs
-:END:
-- [[https://emacs.ch][emacs.ch]]
-- [[https://codeberg.org/martianh/mastodon.el][martianh/mastodon.el: Emacs client for Mastodon]]
-- [[https://sachachua.com/dotemacs/index.html#mastodon][Sacha Chua - Mastodon Config]]
-- [[https://gist.github.com/rougier/e92d446600dfe350b9ec9d7cabaca211][A different timeline layout for the Emacs mastond client]]
+
++ [[https://emacs.ch][emacs.ch]]
++ [[https://codeberg.org/martianh/mastodon.el][martianh/mastodon.el: Emacs client for Mastodon]]
++ [[https://sachachua.com/dotemacs/index.html#mastodon][Sacha Chua - Mastodon Config]]
++ [[https://gist.github.com/rougier/e92d446600dfe350b9ec9d7cabaca211][A different timeline layout for the Emacs mastond client]]
 
 ** Verification
-:PROPERTIES:
-:CUSTOM_ID: verification
-:END:
-- [[https://keyoxide.org/][KeyOxide]]
+
++ [[https://keyoxide.org/][KeyOxide]]
 
 ** Servers
-:PROPERTIES:
-:CUSTOM_ID: servers
-:END:
+
 + [[https://joinmastodon.org/servers][Servers - Mastodon]]
 + [[https://mastodon.social][mastodon.social]]
 + [[https://fosstodon.org][fosstodon.org]]
@@ -208,17 +182,13 @@ A great piece of forum software is Discourse, they have as of 2023-11-09 integra
 + [[https://phanpy.social/][phanpy.social]] a nice layer over the top of standard Mastodon.
 
 *** Hosting
-:PROPERTIES:
-:CUSTOM_ID: hosting
-:END:
+
 + [[https://masto.host/][masto.host]]
 + [[https://growyourown.services/grow-your-own-social-network/][GrowYourOwnServices]]
 
 
 ** HowTo
-:PROPERTIES:
-:CUSTOM_ID: howto
-:END:
+
 + [[https://blog.maartenballiauw.be/post/2022/11/05/mastodon-own-donain-without-hosting-server.html][Mastodon on your own domain without hosting a server - Maarten Balliauw {blog}]]
 + [[https://rossabaker.com/projects/webfinger/][Ross A. Baker: WebFinger]]
 + [[https://www.stevencanplan.com/2022/12/automatically-post-your-flickr-photos-to-your-mastodon-account/][Automatically post your Flickr photos to your Mastodon account – Steven Can Plan]]
@@ -226,9 +196,7 @@ A great piece of forum software is Discourse, they have as of 2023-11-09 integra
 + [[https://cosimameyer.com/post/2023-09-17-building-mastodon-bots-and-promoting-the-community-part-2/][Building Mastodon Bots and Promoting the Community - Part 2]]
 
 ** Technical
-:PROPERTIES:
-:CUSTOM_ID: technical
-:END:
+
 + [[https://dramsch.net/today-i-learned/social-media/mastodon-user-post-timeline/][Mastodon User Timelines are RSS Feeds | Real-world Machine Learning]]
 + [[https://www.bentasker.co.uk/posts/blog/software-development/writing-a-simple-mastodon-bot-to-submit-rss-items.html][Writing A Simple RSS To Mastodon Bot | www.bentasker.co.uk]]
 + [[https://dev.to/contentful/create-a-bot-with-rss-and-webhooks-for-mastodon-a-twitter-alternative-l4o][Create a bot with RSS and webhooks for Mastodon, a Twitter alternative - DEV Community]]
@@ -237,22 +205,17 @@ A great piece of forum software is Discourse, they have as of 2023-11-09 integra
 + [[https://www.softwolves.com/wolfblog/2023/12/18/adding-a-mastodon-feed-to-a-static-html-site/][Adding a Mastodon feed to a static HTML site]]
 
 ** Academic
-:PROPERTIES:
-:CUSTOM_ID: academic
-:END:
+
 + [[https://truesciphi.org/][TrueSciPhi]]
-+ [[https://nathanlesage.github.io/academics-on-mastodon/][Academics on
-  Mastodon]]
++ [[https://nathanlesage.github.io/academics-on-mastodon/][Academics on Mastodon]]
 + [[https://docs.google.com/document/d/1TTtXbf0yDXHKXwR9jpZ4kU79mmiZT5KIM7U4tBr83hY/edit#][Mastodon Media List]]
 
 ** Misc
-:PROPERTIES:
-:CUSTOM_ID: misc
-:END:
+
 + [[https://denise.dreamwidth.org/91757.html][A guide to potential liability pitfalls for people running a Mastodon instance]]
 + [[https://mastometrics.com/][MastoMetrics - Analytics for Mastodon]]
 + [[https://whomtofollow.com/][Whom to Follow | Find New Fediverse Accounts]]
-
++ [[https://followgraph.vercel.app/][Followgraph on Mastodon]]
 
 ** RSS Feeds
 

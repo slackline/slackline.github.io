@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       d281425d-a118-4651-96a6-b85da5424b81
+:mtime:    20240116143319
+:ctime:    20240116143319
+:END:
+#+TITLE: R Simulations
+#+FILETAGS: :R:simulation:
+
+* Fabricatr
+
+The [[https://declaredesign.org/r/fabricatr/index.html][fabricatr]] package is an excellent tool for generating simulated data.
+
+* Links
+
++ [[https://declaredesign.org/r/fabricatr/index.html][fabricatr]]
++ [[https://declaredesign.org/][Declare and Diagnose Your Research Design]]

@@ -1,13 +1,13 @@
 :PROPERTIES:
 :ID:       1a80c1c9-1f4d-41b7-afc8-e80a7c2aa72f
-:mtime:    20231211220109
+:mtime:    20240115162904 20231211220109
 :ctime:    20231211220109
 :END:
 #+TITLE: Carpentries Lesson Development
 #+FILETAGS: :carpentries:learning:teaching:
 
 The [[id:380cd501-fc14-4e9c-bd26-ad3fd41bace0][Carpentries]] have a course on  [[https://carpentries.github.io/lesson-development-training/][Collaborative Lesson Development Training]] and I've worked through it on my own to
-guide my development of a Collaborative Git course for intermediate users.
+guide my development of a [[https://github.com/ns-rse/git-collaboration][Collaborative Git]] course for intermediate users.
 
 
 * Introduction
@@ -19,7 +19,60 @@ guide my development of a Collaborative Git course for intermediate users.
   development grows.
 + Collaboration is good it provides feedback and widens the input and makes the lesson more likely to succeed.
 * Lesson Design
+Adapts [[https://www.taylorfrancis.com/books/mono/10.4324/9780203469231/developing-teaching-learning-higher-education-gill-nicholls][Nicholls' five phases]] to emphasise on assessing learning during the workshop as they tend to be short format and
+rather than a /summative/ assessment at the end undertake on-going /formative/ assessment while the teaching is still
+going on so instructors can assess progress before the workshop completes. Teaching the material is an essential
+intermediate step, it is important to gather feedback whilst teaching.
+
+#+CAPTION: Adapted phases of curriculum design
+#+ATTR_HTML: :width 400px
+[[./img/carpentries/cldt-design-process.svg]]
+
+** Discussion
+
+1. What is the topic of the lesson that you plan to develop based on this training?
+
+Git for effective collaboration which will be an intermediate course on using Git effectively covering more than the
+basics of stage/commit/push/pull and delving deeper into working with branches, pre-commit hooks.
+
+2. Have you created training material on this topic before?
+
+No, but I have taught a basic Git course [[https://srse-git-github-zero2hero.netlify.app/][Git & GitHub through GitKraken Client - From Zero to Hero!]] rather than the
+[[https://swcarpentry.github.io/git-novice/][Version Control with Git: Summary and Setup]] from the Carpentries.
+
+3. What is motivating you to create this lesson?
+
+We teach the basic course at work (University of Sheffield) and many who come on the course have fed back that they
+would like more advanced material.
+
 * Identifying Your Target Audience
+
+** Thinking About Target Audience
+
+1. What is their background?
+
+Researchers writing code and either already working in a team or looking to collaborate with others.
+
+2. What do they already know how to do?
+
+Setup a repository under version control, stage and commit changes, push/pull from remotes.
+
+3. What do they want to do with the skills they will learn from your lesson?
+
+Use more advanced features of Git/GitHub/GitLab and collaborate more effectively and efficiently.
+
+4. What problem will your lesson help them solve?
+
+The overwhelming choice of options with Git, confusing subjects such as tracking ~main~ via merging and/or rebasing.
+
+*** Diagnostic Questions
+
+**** Commits in the wrong place.
+
+You make a commit on your ~main~ branch locally but can not push it because it is protected. How can you move this
+commit to its own branch and push it to the ~origin~ so it can be reviewed and merged?
+
+****
 * Defining Lesson Objectives/Outcomes
 * Episodes
 * The Carpentries Workbench

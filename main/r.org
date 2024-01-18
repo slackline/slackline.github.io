@@ -1,4 +1,8 @@
 :PROPERTIES:
+:ID:       1dd894ac-f094-4848-9d9f-2a85ee066104
+
+:END:
+:PROPERTIES:
 :ID:       61d814c2-c81a-4980-8ef2-bd2afeec79f1
 
 :END:
@@ -42,6 +46,9 @@ Being a statistical package R is aimed around modelling (despite the many other 
 + [[id:8b2f5d7f-53f1-49bd-a6bf-4cd0ddb531fa][Regression]] and its many variations and generalisations.
 + [[id:38feb454-ee1e-440b-939c-c413009c609d][Bayesian Statistics]]
 
+* Simulation
+
+Often you'll want to simulate[[id:d281425d-a118-4651-96a6-b85da5424b81][r_simulate]] data.
 * RStudio
 
 [[https://www.rstudio.com/][RStudio]] is an Integrated Development Environment (IDE) for working with R and more recently other languages. Read more
@@ -224,6 +231,7 @@ found useful.
 + [[http://hbiostat.org/rflow/][R Workflow for Reproducible Biomedical Research Using Quarto]]
 + [[https://argoshare.is.ed.ac.uk/healthyr_book/][R for Health Data Science]]
 + [[https://raps-with-r.dev/][Building reproducible analytical pipelines with R]]
++ [[https://book.declaredesign.org/][Research Design in the Social Sciences]]
 
 *** GIS
 
@@ -287,4 +295,5 @@ found useful.
 + [[https://www.mm218.dev/posts/2023-11-07-classed-errors/][Mike Mahoney - Classed conditions from rlang functions]]
   
 20240102121735 20231222005051 20231220224641 20231212071551 20231205220407 20231202131426 20231117224031 20231108094036 20231023104105 20231023070045 20230920074733 20230920062944 20230919175554 20230803213634 20230730200921 20230726101218 20230706002432 20230704213853 20230508223533 20230506201917 20230423231605 20230411223218 20230210005221 20230125072709 20230112120722 20230103103313 20221228150524 20230103103308 20240102121718 20231220224641 20231212071551 20230730200921 20230423231605 :mtime :mtime:
-20240111095507 :mtime
+20240111095507 :mtime:
+20240116143409 :mtime
