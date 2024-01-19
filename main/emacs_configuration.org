@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       938af6af-7a0e-46d1-ae76-6157e948151b
-:mtime:    20231222084358 20230114083319 20230103103311 20221229094021
+:mtime:    20240115230041 20231222084358 20230114083319 20230103103311 20221229094021
 :ctime:    20221229094021
 :END:
 #+TITLE: Emacs Configuration
@@ -46,3 +46,7 @@ Details of each package specific configuration are found on their own pages.
 + [[id:d6626ec2-1e95-4d42-b06e-ae45268f2b58][Transient]]
 + [[id:3070e6ed-1788-44ff-8498-8af6c84f588f][Tree-Sitter]]
 + [[id:4668a662-27ab-4015-aaa0-6e356b6bc165][Vterm]]
+
+* Links
+
++ [[https://codeberg.org/jcastp/emacs.d/][Codeberg | jcastp/emacs.d]] - a nice literate configuration
