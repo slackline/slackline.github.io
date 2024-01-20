@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       604b59c7-4ca0-44a7-bbec-7f1486bc5bd8
+:mtime:    20240120101138
+:ctime:    20240120101138
+:END:
+#+TITLE: Music Software
+#+FILETAGS: :music:software:
+
+I listen to a lot of [[id:60363eb0-6272-4c26-8f2e-d7c237bd6609][Music]] and use various pieces of [[id:526272b2-904f-4656-b24c-fdefc4492fdc][software]] to do so.
+
+* Home
+
+** Snapcast
+
+[[https://github.com/badaix/snapcast][snapcast]] is a synchronous multiroom audio player which means I have multiple [[id:69864d74-8ec2-42e4-a227-f824a521a5ce][Raspberry Pi]] dotted around the house hooked
+up to speakers that all play music in synch. There is a central server running MPD that outputs to ~snapserver~ and each
+Pi is running ~snapclient~.
+
+** MPD
+
+[[https://www.musicpd.org/][Music Player Daemon]] is at the heart of my home music system, its a headless (i.e. no GUI) piece of software that plays
+music. It uses a database system to record music in specified directories. It can output to multiple devices such as
+soundcards, HTTP streams or Snapcast.
+
+** MALP
+
+To control MPD I use [[https://gitlab.com/gateship-one/malp][malp]], it finds the MPD server, connects to it and allows you to browse the database and manipulate
+the current playlist.
+
+* Mobile
+
+** Long Music Player
+
+An excellent Android client that I've used for a long time is [[https://www.emtronics.co.uk/wp_blog/?p=277][Long Music Player]].

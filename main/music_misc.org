@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       47e9469b-b4fd-4228-bf1e-de212230a3ef
+:mtime:    20240120101333
+:ctime:    20240120101333
+:END:
+#+TITLE: Music Miscellaneous
+#+FILETAGS: :music:
+
+* Longplayer
+
+A [[https://longplayer.org/][thousand year long piece of music]].

@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       c3d85b0a-29e6-49e4-9349-0072a9604cfa
+:mtime:    20240120102519
+:ctime:    20240120102519
+:END:
+#+TITLE: Music Electronic
+#+FILETAGS: :music:electronic:
+
+A diverse genre but broadly my favourite (perhaps that is because of the diversity!).
+
+* Artists
+
+** Acid Pauli
+
++ [[https://soundcloud.com/acidpauli][Soundcloud - Acid Pauli]]
+
+** Empirion
+
++ [[https://soundcloud.com/empirion][Soundcloud - Empirion]]
+
+** Leftfield
+
+** Richard Fearless
+
++ [[https://soundcloud.com/richard-fearless][Soundcloud - Richard Fearless]]
+
+** The Chemical Brothers
+
++ [[https://soundcloud.com/thechemicalbrothers][Soundcloud - The Chemical Brothers]]
+
+* Radio Shows
+
++ [[https://www.dublab.com/djs/richard-fearless][Metal Box]] - Richard Fearless on dublab.
+
+* Burning Man
+
+The infamous desert festival is a continuous source of interesting mixes for me as many of the stages post their mixes
+on Soundcloud.
+
++ [[https://soundcloud.com/mayanwarriorofficial][Mayan Warrior]]
++ [[https://soundcloud.com/playalchemist][PlayAlchemist]]
++ [[https://soundcloud.com/robot-heart][Robot Heart]]
+
+* Soundcloud
+
+A great source of new music.
+
++ [[https://soundcloud.com/acidpauli][Acid Pauli]]
++ [[https://soundcloud.com/empirion][Empirion]]
++ [[https://soundcloud.com/richard-fearless][Richard Fearless]]
++ [[https://soundcloud.com/thechemicalbrothers][The Chemical Brothers]]

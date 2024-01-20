@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       60363eb0-6272-4c26-8f2e-d7c237bd6609
+:mtime:    20240120092829
+:ctime:    20240120092829
+:END:
+#+TITLE: Music
+#+FILETAGS: :music:electronic:techno:dub:dnb:
+
+I like a lot of different types of music, figured I should start making some notes.
+
++ [[id:c3d85b0a-29e6-49e4-9349-0072a9604cfa][Electronic]]
++ [[id:604b59c7-4ca0-44a7-bbec-7f1486bc5bd8][Software]] - Have to play music somehow these days, this is what I use.
++ [[id:47e9469b-b4fd-4228-bf1e-de212230a3ef][Miscellaneous]] - Other random stuff.
+
+* Genres
+
++
