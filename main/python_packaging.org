@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       bb57f65e-58f4-45de-9620-901dc998f6d6
-:mtime:    20240117072308 20231117101119 20231015151206 20230919101558 20230811133355 20230811112305 20230714185857 20230629212250 20230509145004 20230331162046 20230329204528 20230319195324 20230319124004 20230318215853 20230318205506 20230316065623 20230312225913 20230311130516 20230301211740 20230301095721 20230227221806 20230207111629 20230103103312 20221228113913 20230103103309
+:mtime:    20240121220239 20240117072308 20231117101119 20231015151206 20230919101558 20230811133355 20230811112305 20230714185857 20230629212250 20230509145004 20230331162046 20230329204528 20230319195324 20230319124004 20230318215853 20230318205506 20230316065623 20230312225913 20230311130516 20230301211740 20230301095721 20230227221806 20230207111629 20230103103312 20221228113913 20230103103309
 :ctime:    20221228113913 20230103103309
 :END:
 #+TITLE: Python Packaging
@@ -585,6 +585,7 @@ can be configured to your own preferences.
 + [[https://www.pyopensci.org/python-package-guide/package-structure-code/intro.html][Python package structure information — pyOpenSci Python Packaging Guide]]
 + [[https://github.com/wimglenn/resources-example][Packaging Data files in a Python Distribution]]
 + [[https://pdm.fming.dev/latest/][PDM - Python package and Dependency Manager]]
++ [[https://github.com/pypa/hatch/graphs/contributors?from=2023-01-01&to=2023-12-31&type=c][Hatch]]
 + [[https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html][Why you shouldn't invoke setup.py directly]]
 + [[https://github.com/python-versioneer/python-versioneer][python-versioneer/python-versioneer: version-string management for VCS-controlled trees]]
 + [[https://github.com/pypa/setuptools_scm][pypa/setuptools_scm: the blessed package to manage your versions by scm tags]]
@@ -593,6 +594,7 @@ can be configured to your own preferences.
 + [[https://pepy.tech/][PyPI statistics]]
 + [[https://learn.scientific-python.org/development/][Scientific Python Library Development Guide]] ([[https://learn.scientific-python.org/development/guides/repo-review/][Repo Review Tool]])
 + [[https://www.pyopensci.org/python-package-guide/tutorials/intro.html][pyOpenSci - Python Packaging 101]]
++ [[https://discuss.python.org/c/packaging/14][Python Packaging Discourse]]
 
 ** PyPI Authentication
 
@@ -610,3 +612,7 @@ can be configured to your own preferences.
 + [[https://www.toptal.com/developers/gitignore][gitignore.io]] - Create Useful .gitignore Files For Your Project
 + [[https://pypi.org/project/gitlab2zenodo/][gitlab2zenodo · PyPI]]
 + [[https://github.com/marketplace/actions/zenodo-upload][GitHub Actions Marketplace | Zenodo Upload]]
+
+** Blogs on Packaging
+
++ [[https://chriswarrick.com/blog/2024/01/15/python-packaging-one-year-later/][Python Packaging, One Year Later: A Look Back at 2023 in Python Packaging | Chris Warrick]]
