@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       09da049c-9288-4856-af3e-e67de566588b
+:mtime:    20240121212356
+:ctime:    20240121212356
 :END:
 #+TITLE: Git Collaboration
 #+FILETAGS: :git:teaching:collaboration:
@@ -47,7 +49,7 @@ Understand what hooks are available.
 How to make useful and constructive Pull/Merge request reviews
 + Not overwhelming people with lots of comments.
 + Making suggestions when reviewing
-+  [[https://www.pyopensci.org/software-peer-review/][pyOpenSci Software Peer Review Guidebook]] and  [[https://code-review.tidyverse.org/][Tidyteam code review principles]]
++ [[https://www.pyopensci.org/software-peer-review/][pyOpenSci Software Peer Review Guidebook]] and  [[https://code-review.tidyverse.org/][Tidyteam code review principles]]
 
 * Target Audience
 
