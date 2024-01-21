@@ -1,10 +1,18 @@
 :PROPERTIES:
 :ID:       0e6300c6-7025-4f45-820d-4d9da82b41a6
-:mtime:    20240107103825 20231219213305 20231126221347 20231121204845 20231120130321 20231015172332 20231005133759 20230926220759 20230917083604 20230905212306 20230724174038
+:mtime:    20240121200503 20240121115714 20240107103825 20231219213305 20231126221347 20231121204845 20231120130321 20231015172332 20231005133759 20230926220759 20230917083604 20230905212306 20230724174038
 :ctime:    20230724174038
 :END:
 #+TITLE: Linux
 #+FILETAGS: :linux:computing:foss:opensource:
+
+Linux is often considered the poster-child for the [[id:f277da12-5d6d-46e3-a49c-7bda9254d469][FOSS]] movement, but things actually started a lot earlier when Richard
+Stallman setup the [[https://www.eff.org/][Electronic Frontier Foundation]] and started the [[https://www.gnu.org/][The GNU Operating System and the Free Software
+Movement]] (of which [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] is just one component, albeit a very important one!).
+
+Linux is the code that gets your hardware to talk to each other and interact with the GNU Operating System and so is
+itself, a pretty important component (the GNU attempt to get a replacement UNIX kernel, [[https://www.gnu.org/software/hurd/][hurd]] is /still/ a work in
+progress).
 
 * Distributions
 

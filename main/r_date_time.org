@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5b5b5396-0e90-4b2e-bd6a-67e7112207f8
-:mtime:    20230103103310 20221227085044
+:mtime:    20240121183422 20230103103310 20221227085044
 :ctime:    20221227085044
 :END:
 #+TITLE: R Date/Time
@@ -29,6 +29,12 @@ You can format strings using [[https://www.rdocumentation.org/packages/base/vers
 #+end_src
 
 ~POSIXct~ objects have an S3 method
+
+* Lubridate
+
+As with many aspects of [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]] the [[id:b4510762-8409-4e5e-8ee8-c27574977772][Tidyverse]] makes live easier and for dates and times there is the amazing  [[https://lubridate.tidyverse.org/articles/lubridate.html][lubridate]]
+package.
+
 * Links
 
 + [[https://clock.r-lib.org/][clock • Date-Time Types and Tools]]

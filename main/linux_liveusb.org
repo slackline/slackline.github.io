@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       eaf15ed2-dd31-4b30-a6ce-4b47b6baed0f
-:mtime:    20230930220238 20230926220720
+:mtime:    20240121201028 20240121115713 20230930220238 20230926220720
 :ctime:    20230926220720
 :END:
 #+NAME: Linux LiveUSB
@@ -17,7 +17,7 @@ There is a detailed guide to creating [[https://mags.zone/help/arch-usb.html][Ar
 
 * Tails
 
-[[https://tails.net/][Tails]] is an amazing project that provides a secure operating system that connects to the Tor network.
+[[https://tails.net/][Tails]] is an amazing project that provides a secure [[id:0e6300c6-7025-4f45-820d-4d9da82b41a6][Linux]] operating system that connects to the Tor network.
 
 
 * Links

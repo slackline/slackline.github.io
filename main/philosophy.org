@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       75a9e631-547f-4f6b-9f8a-e916fdbe6309
-:mtime:    20230103103311 20221217225841
+:mtime:    20240121115525 20230103103311 20221217225841
 :ctime:    20221217225841
 :END:
 #+TITLE: Philosophy
@@ -9,7 +9,8 @@
 
 I've a passing interest in philosophy, particularly the philosophy of science.
 
+* Philosophy of Science
 
 * Links
 
-+ [[https://closertotruth.com/contributor/daniel-dennett/#episodes][Closer to the Truth : Dnaiel Dennett]]
++ [[https://closertotruth.com/contributor/daniel-dennett/#episodes][Closer to the Truth : Daniel Dennett]]

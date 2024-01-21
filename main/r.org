@@ -10,57 +10,57 @@
 [[https://www.r-project.org][R]] is a statistical programming language, written and developed initially by statisticians for statisticians. It is based
 on the statistical programming S.
 
-* Data Manipulations
+* Configuration
 
-** Tidyverse
+By default R looks for ~\~/.Rprofile~ on starting to load options and configuration. There are, as always, caveats to
+this. For example the ~\~/.R/Makevars~ file defines options for compiling packages from source and may look like the
+following which enables multiple cores to be used by ~gcc~ when building from source.
 
-The Tidyverse refers to a group of packages that work in unison to simplify the process of writing readable code. Read
-more on the [[id:b4510762-8409-4e5e-8ee8-c27574977772][Tidyverse]].
+#+begin_src r
+    CFLAGS=-O3 -Wall -pedantic -march=native -mtune=native -pipe
+    CXXFLAGS=-O3 -Wall -pedantic -march=native -mtune=native -pipe
+    MAKEOPTS=-j$(nproc)
+#+end_src
 
-** data.table
+* Topics
 
-[[https://rdatatable.gitlab.io/data.table/][data.table]] is an extension of base `data.frame` that has a consistent syntax and is very fast. Its well worth learning
-this framework, read more [[id:78838e73-e7de-4a41-a0a9-69861a3f4abe][here]].
+** Data Manipulations
 
-** collapse
++ [[id:b4510762-8409-4e5e-8ee8-c27574977772][Tidyverse]]
++ [[id:78838e73-e7de-4a41-a0a9-69861a3f4abe][data.table]]
++ [[id:8a79b410-bc31-458e-824f-11c92eaa4f22][collapse]] 
++ [[id:5b5b5396-0e90-4b2e-bd6a-67e7112207f8][Dates and Times]]
 
-[[id:8a79b410-bc31-458e-824f-11c92eaa4f22][collapse]] is a fast and flexible framework for complex data transformations in R. Well worth learning to use if you are
-working with large datasets (or even small as then you know how to use it when you come to handling large datasets!),
-
-** Dates
-
-Working with dates/times is key to a lot of data analysis. Learn more [[id:5b5b5396-0e90-4b2e-bd6a-67e7112207f8][here]].
-
-* Modelling
+** Modelling
 
 Being a statistical package R is aimed around modelling (despite the many other uses).
 
 + [[id:8b2f5d7f-53f1-49bd-a6bf-4cd0ddb531fa][Regression]] and its many variations and generalisations.
 + [[id:38feb454-ee1e-440b-939c-c413009c609d][Bayesian Statistics]]
++ [[id:d281425d-a118-4651-96a6-b85da5424b81][Simulations]] R is a great choice for simulating datasets.
 
-* Simulation
+** Graphics
 
-Often you'll want to [[id:d281425d-a118-4651-96a6-b85da5424b81][simulate]] data and R is a great choice for doing so.
+Inevitably you'll want to plot your data, there are a few options and I keep notes on these (although highly biased
+towards ~ggplot2~)
 
-* Graphics
++ [[id:fc6c0f69-4899-401e-bd6c-a36894c1542e][ggplot2]] an excellent framework for producing graphics. 
++ [[id:82a48af2-bcda-4beb-bf88-71377394f899][Base Graphics]] are highly functional and very useful.
 
-Inevitably you'll want to plot your data, the most popular package these days is [[id:fc6c0f69-4899-401e-bd6c-a36894c1542e][ggplot2]] which provides an excellent
-framework for producing graphics. Although [[id:82a48af2-bcda-4beb-bf88-71377394f899][Base Graphics]] are highly functional and very useful.
+** IDE
 
 * RStudio
 
 [[https://www.rstudio.com/][RStudio]] is an Integrated Development Environment (IDE) for working with R and more recently other languages. Read more
 on [[id:fbe4e0bc-038d-4aeb-aa48-e312f469678e][RStudio]].
 
-* RMarkdown
-[[https://rmarkdown.rstudio.com/][R Markdown]] is a markup language that weaves [[id:0c371287-128d-4e46-8128-b2d4f5fc604c][markdown]] with code to facilitate producing reproducible workflows. It can
-render to HTML, PDF (via [[id:e1c2cfef-1b43-47a8-a425-94e6ae58d917][latex]]) or produce interactive Shiny applications. Read more on [[id:1db6158d-cb5d-4b73-b926-95e9c09f878b][RMarkdown]].
+** Literate Programming
 
-* Quarto
+You'll want to write up your work in some format and R has your back for that with various packages
 
-[[id:251b3ae4-4a5c-4c44-909a-dcbc0aef4b45][Quarto]] is a new offering from Posit (nee RStudio) that builds on RMarkdown and use Pandoc to produce output. Its
-brilliant and you should definitely learn how to use it. Anything you do in RMarkdown can be done in Quarto and a whole
-lot more.
++ [[id:1db6158d-cb5d-4b73-b926-95e9c09f878b][RMarkdown]] weaves [[id:0c371287-128d-4e46-8128-b2d4f5fc604c][markdown]] with code to facilitate producing reproducible workflows. It can
+render to HTML, PDF (via [[id:e1c2cfef-1b43-47a8-a425-94e6ae58d917][latex]]) or produce interactive Shiny applications.
++ [[id:251b3ae4-4a5c-4c44-909a-dcbc0aef4b45][Quarto]] is a new offering from Posit (nee RStudio) that builds on RMarkdown and use Pandoc to produce output.
 
 * Shiny
 
@@ -70,12 +70,13 @@ There are a few ways in which dashboards can be created. The package [[https://r
 shinydashboard/ and as v2.0.0 its as simple as switching from ~library(shinydashboard)~ to ~library(bs4Dash)~
 
 You can also [[https://shiny.rstudio.com/blog/shiny-on-hugging-face.html][deploy Shiny on Hugging Face]] via both R and Python Shiny Docker images which gives a simple interface to
-Machine Learning interfaces.
+Machine Learning interfaces. 
 
 * Parallelisation
 
 It's possible to parallelise conducive code using R, one such package is [[https://www.futureverse.org/][Futureverse]] but there are other options some of
 which are summarised in this [[https://bookdown.org/rdpeng/rprogdatascience/parallel-computation.html][Chapter 22 Parallel]] of Roger Peng's [[https://bookdown.org/rdpeng/rprogdatascience/][R Programming for Data Science]].
+
 * Community
 :PROPERTIES:
 :TITLE: R community
@@ -87,7 +88,7 @@ which are summarised in this [[https://bookdown.org/rdpeng/rprogdatascience/para
 There is a wonderful community around R online. Gone are the days of trepidation about posting on [[https://stat.ethz.ch/mailman/listinfo/r-help][R-help]] only to get
 chided for not being clear enough about the problem. These days there is [[https://stackoverflow.com/questions/tagged/r][StackOverflow]] and [[https://stats.stackexchange.com/][CrossValidated]], [[https://www.tidytuesday.com/][Tidy Tuesday]]
 
-** Seeking Help
+* Seeking Help
 :PROPERTIES:
 :ID:       bbe26fc4-9c87-477b-ab93-eeec4449bc4b
 :mtime:    20221228150524 20230103103311
@@ -288,3 +289,4 @@ found useful.
 
 + [[https://sebkrantz.github.io/Rblog/2023/04/12/collapse-and-the-fastverse-reflecting-the-past-present-and-future/][collapse and the fastverse: Reflections on the Past, Present and Future - With Examples from Geospatial Data Science - R, Econometrics, High Performance]]
 + [[https://www.mm218.dev/posts/2023-11-07-classed-errors/][Mike Mahoney - Classed conditions from rlang functions]]
+
