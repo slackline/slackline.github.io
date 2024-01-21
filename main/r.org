@@ -1,14 +1,6 @@
 :PROPERTIES:
-:ID:       1dd894ac-f094-4848-9d9f-2a85ee066104
-
-:END:
-:PROPERTIES:
-:ID:       61d814c2-c81a-4980-8ef2-bd2afeec79f1
-
-:END:
-:PROPERTIES:
 :ID:       de9a18a7-b4ef-4a9f-ac99-68f3c76488e5
-:
+:mtime:
 :ctime:    20221228150524 20230103103308
 :END:
 #+TITLE: R
@@ -48,7 +40,13 @@ Being a statistical package R is aimed around modelling (despite the many other 
 
 * Simulation
 
-Often you'll want to simulate[[id:d281425d-a118-4651-96a6-b85da5424b81][r_simulate]] data.
+Often you'll want to [[id:d281425d-a118-4651-96a6-b85da5424b81][simulate]] data and R is a great choice for doing so.
+
+* Graphics
+
+Inevitably you'll want to plot your data, the most popular package these days is [[id:fc6c0f69-4899-401e-bd6c-a36894c1542e][ggplot2]] which provides an excellent
+framework for producing graphics. Although [[id:82a48af2-bcda-4beb-bf88-71377394f899][Base Graphics]] are highly functional and very useful.
+
 * RStudio
 
 [[https://www.rstudio.com/][RStudio]] is an Integrated Development Environment (IDE) for working with R and more recently other languages. Read more
@@ -65,10 +63,6 @@ brilliant and you should definitely learn how to use it. Anything you do in RMar
 lot more.
 
 * Shiny
-:PROPERTIES:
-:mtime:    20221228150524 20230103103312
-:ctime:    20221228150524 20230103103312
-:END:
 
 Shiny provides a framework for creating interactive web-pages from within R. Read more on [[id:fe1f6380-9217-482c-bb5e-91817ae3e8f8][Shiny]].
 
@@ -294,4 +288,3 @@ found useful.
 
 + [[https://sebkrantz.github.io/Rblog/2023/04/12/collapse-and-the-fastverse-reflecting-the-past-present-and-future/][collapse and the fastverse: Reflections on the Past, Present and Future - With Examples from Geospatial Data Science - R, Econometrics, High Performance]]
 + [[https://www.mm218.dev/posts/2023-11-07-classed-errors/][Mike Mahoney - Classed conditions from rlang functions]]
-  

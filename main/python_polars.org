@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       056cfe3b-c8a4-42b5-bea2-b7186e1d2a5e
+:mtime:    20240121114416
+:ctime:    20240121114416
+:END:
+#+TITLE: Python Polars
+#+FILETAGS: :python:data:
+
+[[https://pola.rs/][Polars]] is a dataframe structure written in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]] for working with data in [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]].

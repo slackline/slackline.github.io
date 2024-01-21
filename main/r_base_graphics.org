@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       82a48af2-bcda-4beb-bf88-71377394f899
+:mtime:    20240121112700
+:ctime:    20240121112700
+:END:
+#+TITLE: R Base Graphics
+#+FILETAGS: :r:graphics:plotting:visualisation:
+
+Base Graphics are highly flexible and there are a lot of objects that have built-in methods for plotting in base [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]]
+graphics.

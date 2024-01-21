@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       fa283f95-40b0-4be0-ab9d-7672d67b7f27
+:mtime:    20240121114231
+:ctime:    20240121114231
+:END:
+#+TITLE: Python Pandas
+#+FILETAGS: :python:pandas:data:
+
+* Alternatives
+
+Polars[[id:056cfe3b-c8a4-42b5-bea2-b7186e1d2a5e][python_polars]] is an alternative to Pandas that is implemented in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]].
+
+* Links
