@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       251b3ae4-4a5c-4c44-909a-dcbc0aef4b45
-:mtime:    20231231084604 20230808214728 20230715122915 20230704223416 20230425225904 20230312225146 20230208071742 20230105145232 20230103103309 20221228151331 20230103103309 20230103103308
+:mtime:    20240123092307 20231231084604 20230808214728 20230715122915 20230704223416 20230425225904 20230312225146 20230208071742 20230105145232 20230103103309 20221228151331 20230103103309 20230103103308
 :ctime:    20221228151331 20230103103308
 :END:
 #+TITLE: Quarto
@@ -222,6 +222,15 @@ Leverages [[https://docs.r-wasm.org/webr/latest/][webR]] to embed interactive R 
 + [[https://hbiostat.org/rflow/][R Workflow]] : Reproducible Biomedical Research using Quarto
 + [[https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/][A Quarto tip a day]]
 + [[https://mine-cetinkaya-rundel.github.io/teach-with-quarto/][Teaching (with) Quarto]]
+
+** Extensions
+
++ [[https://github.com/quarto-ext/shinylive][quarto-ext/shinylive: Quarto extension to embed Shinylive for Python applications]]
++ [[https://github.com/posit-dev/shinylive][posit-dev/shinylive: Run Shiny on Python and R (compiled to wasm) in the browser]]
++ [[https://github.com/davidwilby/openlinksinnewpage][davidwilby/openlinksinnewpage: Quarto extension to open all links in new pages]]
++ [[https://github.com/jmbuhr/quarto-qrcode][jmbuhr/quarto-qrcode: Add qrcodes to quarto html output]]
++ [[https://github.com/grantmcdermott/quarto-revealjs-clean][grantmcdermott/quarto-revealjs-clean: A minimal and elegant presentation theme for Quarto Reveal.js]]
++ [[https://github.com/ArthurData/quarto-confetti][ArthurData/quarto-confetti: Send some 🎊]]
 
 ** GitHub
 
