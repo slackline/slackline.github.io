@@ -1,10 +1,71 @@
 :PROPERTIES:
 :ID:       f277da12-5d6d-46e3-a49c-7bda9254d469
-:mtime:    20240121200647
+:mtime:    20240123221325 20240121200647
 :ctime:    20240121200647
 :END:
 #+TITLE: FOSS
 #+FILETAGS: :foss:linux:open source:software:
+
+There is a /lot/ out there. If I use something and have found the time to write about the following links take you to
+that page, if not they take you to the projects site.
+
+* OpenSource Software
+
+** Essentials
+
++ [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]]
++ [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]]
++ [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]]
++ [[id:868b46bc-3594-4cf2-aecb-ca6e1389ac27][Kitty]]
++ tmux
+
+** Version control
+
++ Fossil
++ [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]]
+
+** Multimedia
+
++ [[https:://musicpd.org][MPD]]
++ Snapcast
+
+** Gentoo
+
++ eix
++ equery
+
+** Infrastructure
+
++ [[https://opentofu.org][OpenTofu]]
+
+** Web
+
++ nginx
+
+** Browsers
+
++ Firefox
++ Opera
++ Vivaldi
+
+** Android
+
++ LineageOS
+
+*** Power Tools
+
++ AdAway
++ F-Droid
++ LogFox
++ MALP
++ Magisk
++ OSMAnd
++ OpenTracks
++ Orgro
++ Orgzly Revived
++ StreetComplete
++ SyncThing Fork
++ Tasker
 
 * Links
 

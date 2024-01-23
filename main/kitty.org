@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       868b46bc-3594-4cf2-aecb-ca6e1389ac27
+:mtime:    20240123221435
+:ctime:    20240123221435
+:END:
+#+TITLE: Kitty
+#+FILETAGS: :linux:terminal:shell:
+
+* Links
+
++ [[https://sw.kovidgoyal.net/kitty/][Kitty]]

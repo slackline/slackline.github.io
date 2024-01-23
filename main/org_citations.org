@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       17e91369-11a2-4ef3-9d4c-6e38af4d1b8f
+:mtime:    20240122181226
+:ctime:    20240122181226
+:END:
+#+TITLE: Org Citations
+#+FILETAGS: :org:orgmode:citations:bibtex:references:
+
+For years I've used plain BibTex files for keeping my citations in a "database" and these days I version control it
+using [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]]. But [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] has much, much more to offer to help manage and use citations.
+
+* ebib
+
+"/[[https://joostkremers.github.io/ebib/][Ebib]] is a program for managing BibTeX and biblatex databases that runs inside Emacs. It allows you to manage
+bibliography files without having to edit the raw ~.bib~files./"
+
+It has an excellent [[https://joostkremers.github.io/ebib/ebib-manual.html][manual]].
+* Org-ref
+
+
+
+* Links
+
+** Packages
+
++ [[https://joostkremers.github.io/ebib/][Ebib]] ([[https://joostkremers.github.io/ebib/ebib-manual.html][manual]])
+
+** Blogs
+
+*** Basic Citations in Org by William Denton
+
++ [[https://www.miskatonic.org/2024/01/08/org-citations-basic/][Part 1]]
++ [[https://www.miskatonic.org/2024/01/10/org-citations-basic-2/][Part 2]]
++ [[https://www.miskatonic.org/2024/01/15/org-citations-basic-3/][Part 3]]
++ [[https://www.miskatonic.org/2024/01/17/org-citations-basic-4/][Part 4]]
++ [[https://www.miskatonic.org/2024/01/22/org-citations-basic-5/][Part 5]]
