@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d08d1fe6-5317-4f09-95f7-d47e8811e007
-:mtime:    20231217164206 20231211080621 20230910113351 20230724072348 20230707232550
+:mtime:    20240125114215 20231217164206 20231211080621 20230910113351 20230724072348 20230707232550
 :ctime:    20230707232550
 :END:
 #+TITLE: Kobo
@@ -33,7 +33,7 @@ version).
 ** Books
 
 + [[https://standardebooks.org][Standard eBooks]]
-+ [[https://pressbooks.com/][Pressbooks]]
++ [[https://pressbooks.com/][Pressbooks]] ([[https://pressbooks.directory/][Directory]])
 + [[https://www.gutenberg.org][Project Gutenberg]]
 
 ** Audio Books
