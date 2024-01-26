@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       1d5dabde-6f1a-43cd-9b48-f7ca7235f802
+:mtime:    20240126111036
+:ctime:    20240126111036
+:END:
+#+TITLE: Python Structural Pattern Matching
+#+FILETAGS: :python:pep:pattern:
+
+Defined in [[https://peps.python.org/pep-0634/][PEP634]] this provides an alternative to ~if: ... elif: ... elif: ... else:~ constructs.
+
+#+begin_src python
+match subject:
+    case <pattern_1>:
+        <action_1>
+    case <pattern_2>:
+        <action_2>
+    case <pattern_3>:
+        <action_3>
+    case _:
+        <action_wildcard>
+#+end_src
