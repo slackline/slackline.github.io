@@ -22,6 +22,37 @@ following which enables multiple cores to be used by ~gcc~ when building from so
     MAKEOPTS=-j$(nproc)
 #+end_src
 
+* Maintenance
+
+Its easy to install packages with
+
+#+begin_src r
+packages_to_install <- c("tidyverse", "tidymodels", "ggplot2")
+> install.packages(packages_to_install)
+#+end_src
+
+You can update packages with
+
+#+begin_src r
+> update.packages(ask = FALSE)
+#+end_src
+
+** Gotchas
+
+Sometimes if installation of a package fails it leaves around a ~00LOCK-<pkg>~ directory which can prevent subsequent
+upgrades/installs these can be safely deleted.
+
+The V8 package has an external system dependency on ~libv8~, it gives advice on how to install it on some systems but
+not all. Under [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]] there doesn't appear to be such a package but there is advice given, which is to set the
+environment variable ~DOWNLOAD_STATIC_LIBV8=1~ so you can...
+
+#+begin_src r
+> Sys.setenv(DOWNLOAD_STATIC_LIBV8=1)
+> update.packages(ask = FALSE)
+#+end_src
+
+...and it will download the library that is required.
+
 * Topics
 
 ** Data Manipulations
