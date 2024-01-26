@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       0d480f0d-03dc-4056-a6a0-db35d4046ade
+:mtime:    20240126214439
+:ctime:    20240126214439
+:END:
+#+TITLE: Org Export
+#+FILETAGS: :org:orgmode:html:
+
+One of the really neat features of [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]] is the ability to export easily to multiple formats with a few keystrokes. I
+have these bound to ~C-c C-e~ which brings up a [[id:d6626ec2-1e95-4d42-b06e-ae45268f2b58][Transient]] like buffer for selecting how you want to export your
+document. There are options for HTML, PDF, Markdown and because this is [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] there are lots of extensions and plugins.
+
+* HTML
+
+Quick and easy and anyone can open the file.
+
+** RevealJS
+
+
+** Themes
+
+The [[https://github.com/fniessen/org-html-themes][org-html-themes]] offers some simple, clean options for exporting your documents and if you're always going to be
+connected to the internet all you need to do is drop the following into your header, substituting ~NAME~ for either
+~readtheorg~ or ~bigblow~.
+
+#+begin_src org
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-NAME.setup
+#+end_src
+
+
+* Links
+
++  [[https://github.com/fniessen/org-html-themes][org-html-themes]]
