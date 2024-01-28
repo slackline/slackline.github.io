@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e19b6eb6-46b2-440a-ba35-be29feb33407
-:mtime:    20231015151623 20230318204943 20230103103313 20221216215027
+:mtime:    20240128232536 20240127115829 20231015151623 20230318204943 20230103103313 20221216215027
 :ctime:    20221216215027
 :END:
 #+TITLE: GitHub Actions
@@ -10,5 +10,10 @@
 
 * Links
 
+** Actions
+
 + [[https://github.blog/changelog/2021-11-23-github-actions-setup-python-now-supports-dependency-caching/][Python Dependency Caching]]
 + [[https://github.com/marketplace/actions/zenodo-upload][Zenodo Upload]]
++ [[https://github.com/caltechlibrary/baler][caltechlibrary/baler]]
++ [[https://github.com/DavidAnson/markdownlint-cli2][DavidAnson/markdownlint-cli2]]
++ [[https://github.com/marketplace/actions/publish-org-roam-ui][Publish Org-Roam UI]] publish your org-roam UI pages on GitHub from a repository, very neat.
