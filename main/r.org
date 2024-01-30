@@ -275,6 +275,7 @@ found useful.
 + [[https://rstudio-education.github.io/hopr/][Hands-On Programming with R]]
 + [[https://skeydan.github.io/Deep-Learning-and-Scientific-Computing-with-R-torch/][Deep Learning and Scientific Computing with R torch]]
 + [[https://rstats.wtf/][What They Forgot to Teach You About R]]
++ [[https://www.tidy-finance.org/r/index.html][Tidy Finance with R]] (see also [[https://www.tidy-finance.org/][Welcome to Tidy Finance]])
 
 *** Advanced
 
@@ -320,4 +321,3 @@ found useful.
 
 + [[https://sebkrantz.github.io/Rblog/2023/04/12/collapse-and-the-fastverse-reflecting-the-past-present-and-future/][collapse and the fastverse: Reflections on the Past, Present and Future - With Examples from Geospatial Data Science - R, Econometrics, High Performance]]
 + [[https://www.mm218.dev/posts/2023-11-07-classed-errors/][Mike Mahoney - Classed conditions from rlang functions]]
-
