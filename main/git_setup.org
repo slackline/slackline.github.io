@@ -1,0 +1,106 @@
+:PROPERTIES:
+:ID:       90a51969-bb25-4a44-8a71-ffcd43b9dfe6
+:mtime:    20240130202617
+:ctime:    20240130202617
+:END:
+
+
+
+First thing to do is setup Git with your name and email address and a
+few other common default settings.
+
+#+begin_src sh
+git config user.name 'My Username'
+git config user.email 'my@email.org'
+git config --global push.default upstream # Syncs pull/push to the same branch (https://stackoverflow.com/a/42642628/1444043)
+#+end_src
+
+** Default upstream branch
+
+You can set the default upstream branch to be the remote globally using
+
+#+begin_src bash
+git config --global push.autoSetupRemote true
+#+end_src
+
+This adds the following to your ~\~/.gitconfig~
+
+#+begin_src
+[push]
+    autoSetupRemote = true
+#+end_src
+
+* Local Configuration
+
+** SSH Configuration
+
+Each repository is configured via the file ~./.git/config~. Sometimes though you have multiple Git accounts
+(e.g. personal and work) and you can use a neat [[https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/][trick]] to keep your configurations separate if you keep such work in
+separate directories (e.g. ~~/work/~ and ~~/personal~). Define a separate ~~/work/.gitconfig-work~ and
+~~/personal/.gitconfig-personal~  such as...
+
+#+begin_src
+[user]
+email = your.personal@email.com
+name = Your Name
+
+[github]
+user = "personal_github_username"
+
+[core]
+sshCommand = "ssh -i ~/.ssh/<personal_ssh_key>"
+#+end_src
+
+#+begin_src
+[user]
+email = your.work@email.com
+name = Your Name
+
+[github]
+user = "work_github_username"
+
+[core]
+sshCommand = "ssh -i ~/.ssh/<work_ssh_key>"
+#+end_src
+
+In your global ~~/.gitconfig~ you then set the following.
+
+#+begin_src
+[includeIf “gitdir:~/personal/”] # include for all .git projects under personnal/
+path = ~/personal/.gitconfig-personal
+
+[includeIf “gitdir:~/work/”]
+path = ~/work/.gitconfig-work
+#+end_src
+
+I've written more on using per-repository SSH keys at [[https://ns-rse.github.io/posts/git-ssh/][Git: Custom SSH credentials for git repositories]].
+
+* Repository Configuration
+** Remote push defaults
+
+Adding the following to your ~.git/config~ will means the first time you attempt to push a new branch from [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] you
+will not be asked where you want to push to, it will automatically be the ~origin/<branch-name>~.
+
+#+begin_src
+[remote]
+  pushDefault = origin
+
+#+end_src
+** .gitignore
+
+You can tell Git to automatically ignore certain files by adding file blobs to the file ~.gitignore~ in the root of your
+repositories directory (i.e. the highest level). This is useful as you can exclude temporary files that your test editor
+might create (e.g. Emacs leaves behind ~*~~ files) and if you're working with patient data then its quite likely that
+this shouldn't be shared in a public repository such as GitHub. The [[https://github.com/github/gitignore][github/gitignore]] repository has a number of
+skeleton/example files for different languages including [[https://github.com/github/gitignore/blob/master/R.gitignore][R]], I modify this to include all ~*.RData~ files to exclude any
+and all R Data objects and also Emacs temporary files ~*~~. There is also [[https://www.gitignore.io/][gitignore.io]] which generates configs
+automatically.
+
+Another solution is to have an alias that prefixes the call to Git with the SSH credentials specific to the directory
+which is matched based on a regular expression of directories (see [[https://hermitage.utsob.me/writings/technical/how-tos/how-to-manage-multiple-git-credential-for-the-same-provider/][How to Manage Multiple Git Credential for the Same
+Provider]]).
+
+* Shell Autocompletion
+
+Git (>2.37.3 at least, perhaps before) ships with the file that automates git completion. Under Gentoo this installs at
+~/usr/share/bash-completion/completions/git~ and it includes instructions on how to use it.

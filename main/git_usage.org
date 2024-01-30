@@ -1,0 +1,162 @@
+:PROPERTIES:
+:ID:       6f30d2b6-b1eb-413a-b181-de434d35fc69
+:mtime:    20240130203222
+:ctime:    20240130203222
+:END:
+#+TITLE: Git Usage
+#+FILETAGS: :git:versioncontrol:github:gitlab:
+
+* Initialise a repository
+
+How you initialise a repository depends on whether you are doing it locally first or cloning a repository from a
+[[#git-forge]]. If you bring a directory under git version control before setting up an online repository you can always
+configure the remote (~origin~) afterwards.
+
+** Cloning a Remote Repository
+
+Cloning a remote repository is straight-forward. On the front page of all forges (GitHub, GitLab, Codeberg etc.) is a
+button above the listing of files to **Clone**. There are two methods of cloning, one uses ~https~ the other ~ssh~. To
+use the later you will have had to add your SSH credentials to your user account on that forge.
+
+#+CAPTION: Clonging a Git repository
+#+NAME: git-clone
+#+begin_src sh
+  git clone
+#+end_src
+
+** Locally
+
+It is straight-forward to initialise a directory to be under git version control simply...
+
+
+#+CAPTION: Initialising a local repository to bring it under Git version contorl.
+#+NAME: git-local-init
+#+begin_src sh
+  git init
+#+end_src
+
+If you then want to bring this under version control for an ~origin~ you create at a Forge you can do so with...
+
+#+begin_src sh
+git remote add origin git@work.github.com:work/new-project.git
+git push -u origin master
+#+end_src
+
+* Adding Files
+
+#+CAPTION: Adding files within a git repository
+#+NAME: git-add
+#+begin_src sh
+  git add file1.py tests/file2.py
+#+end_src
+
+** Ignoring Files
+
+You can tell Git to automatically ignore certain files by adding file blobs to the file ~.gitignore~ in the root of your
+repositories directory (i.e. the highest level). This is useful as you can exclude temporary files that your test editor
+might create (e.g. Emacs leaves behind ~*~~ files) and if you're working with patient data then its quite likely that
+this shouldn't be shared in a public repository such as GitHub. The [[https://github.com/github/gitignore][github/gitignore]] repository has a number of
+skeleton/example files for different languages including [[https://github.com/github/gitignore/blob/master/R.gitignore][R]], I modify this to include all ~*.RData~ files to exclude any
+and all R Data objects and also Emacs temporary files ~*~~. There is also [[https://www.gitignore.io/][gitignore.io]] which generates configs
+automatically.
+
+#+begin_src sh
+# History files
+.Rhistory
+.Rapp.history
+
+# All Data files
+*.RData
+
+# Example code in package build process
+*-Ex.R
+
+# RStudio files
+.Rproj.user/
+
+# Emacs tmp files
+*~
+
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
+
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+#+end_src
+
+** Moving Files
+You might rename a file and want delete the original, how to do this in Git? The solution is to ~mv~ your file just as
+you would for a normal.
+file.
+
+#+begin_src sh
+git mv file1.txt file2.txt
+git commit -m "Renaming file1.txt > file2.txt"
+git push
+#+end_src
+
+** Deleting Files
+To remove a file complete from a repository *and* delete it locally then use ~rm~.
+
+#+begin_src sh
+git rm file1.txt
+git commit -m "remove file1.txt"
+git push -u origin master
+#+end_src
+
+** Removing Files
+Sometimes you will want to remove a file from a Git repository but not delete it, to do this use the ~rm --cached~
+option.
+
+#+begin_src sh
+# Remove a file
+git rm --cached file.txt
+# Remove a directory
+git rm --cached -r directory
+#+end_src
+
+** Making a commit
+
+Typically a commit message should complete the sentence /This commit.../ and be succinct and informative. You can always
+add additional information to commits but the title should be short /and/ informative.
+
+#+CAPTION: Git commit with a message
+#+NAME: git-commit
+#+begin_src sh
+  git commit -m "Adding first files to the repository"
+#+end_src
+
+** Merging
+
+
+** Pushing and Pulling
+
+
+
+*** Fetch v Pull
+
+Whether you work on a project collaboratively or simply use GitHub/GitLab to keep personal repositories in sync between
+systems you will at some point have to use ~git pull~ to get your changes onto your local computer. But what is ~git
+fetch~ and how does it differ from ~git pull~? The simplest answer to this is provided by this excellent cartoon from
+[[https://allisonhorst.com/git-github][Allison Horst]].
+
+#+ATTR_HTML: :width 800px
+#+CAPTION: ~git fetch~ v ~git pull~ by [[https://allisonhorst.com/git-github][Allison Horst]]
+#+NAME: fig:git-fetch-v-git-pull
+[[./img/git/git_fetch_v_pull.png]]
+
+*** Forcing pulls
+:PROPERTIES:
+:CUSTOM_ID: forcing-pulls
+:END:
+Sometimes you want to manually force a pull, and whilst it might be tempting to use =git pull -f= this is not the best
+approach, rather you should [[https://stackoverflow.com/a/9589927/1444043][use fetch and reset]].
+
+#+CAPTION:
+#+NAME:
+#+begin_src sh
+git fetch origin master
+git reset --hard FETCH_HEAD
+git clean -df
+#+end_src

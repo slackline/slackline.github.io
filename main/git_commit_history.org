@@ -1,0 +1,58 @@
+:PROPERTIES:
+:ID:       809de327-3039-4499-945b-b48974e5efe7
+:mtime:    20240130204555
+:ctime:    20240130204555
+:END:
+#+TITLE: Git History
+#+FILETAGS: :git:history:log:blame:grep:
+
+
+Git keeps a detailed history of commits that contain metadata and other useful information. Having a history of
+everything you've done on your code base is really useful as you can go back and search it with the help of ~git grep~.
+
+
+* Git Log
+
+There are many options for viewing, formatting and searching the [[id:0b6eddb6-eb5c-4f26-aaea-beed3505f195][log]] history.
+
+* Blame
+
+[[https://www.git-scm.com/docs/git-blame][Git Blame]] shows who was responsible for changes to which lines of code, read more [[id:d8b70d14-06bd-46c5-97fc-5c8e4f2c3503][Git Blame]]. Sometimes though you don't
+always want to use or acknowledge the blame. For example if you lint a bunch of pre-existing code you don't want the
+blame applied to you, rather it should be applied to the original author. This is achieved using a
+~.gitblame-ignore-revs~ file. I've written about that in the following article.
+
++ [[https://ns-rse.github.io/posts/whos_to_blame/][Who’s to Blame]]
+
+* Searching Git History
+
+** Commit Messages
+
+You can search commit messages for regular expressions using.
+
+#+begin_src bash
+git log --all --grep="<term>"
+#+end_src
+
+** Code
+
+You can search all code for terms using the following.
+
+#+begin_src bash
+git grep <term> $(git rev-list --all)
+#+end_src
+
+...and it will show you what commits have lines that match ~<term>~.  This can take a long time if you've got a large
+history/code base.
+
+** Specific Commit
+
+Search a specific commit for a term (after having identified it using the above) using
+
+#+begin_src bash
+git grep -n <term> <commit_hash>
+#+end_src
+
+* Reset and Revert
+
+Useful article [[https://www.datacamp.com/tutorial/git-reset-revert-tutorial][here]].

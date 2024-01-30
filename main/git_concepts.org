@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       669648c5-07ce-472e-aaac-cdba9c0b4d05
+:mtime:    20240130202454
+:ctime:    20240130202454
+:END:
+#+TITLE: Git Concepts
+#+FILETAGS: :git:theory:
+
+
+A repository is placed under version control when you ~git init~ within in but before doing so you need to set some
+variables such as the ~user~ and ~email~. These can be done on a global scale which will apply across all repositories
+you create or a local, per-repository basis (local settings in a repository over-ride global so they don't conflict).
+
+#+ATTR_HTML: :width 600px
+#+CAPTION: Git Workflow by [[https://nikkiandchris.io][nikkiandchris.io]]
+[[./img/git/git_pull_push.jpg]]

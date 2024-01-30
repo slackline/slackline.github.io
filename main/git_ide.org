@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       d42f29bd-1a5b-4e30-a2e6-03469a024133
+:mtime:    20240130205815
+:ctime:    20240130205815
+:END:
+#+TITLE: Git IDE Integration
+#+FILETAGS: :git:magit:rstudio:gitkraken:
+
+Because [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] is so ubiquitous these days most Integrated Development Environments (IDEs) have support fort Git actions
+built-in. This is in large part thanks to the design of Git which seeks to be the "plumbing" (i.e. the internals) around
+which the "porcelain" is built (i.e. tools such as IDEs and stand alone clients).
+
+* Emacs Magit
+
+If you use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] (and why wouldn't you?) then you should use [[https:magit.vc][Magit]] to manage your Git repository and interactions with
+forges such as GitHub and GitLab. It includes the ability to synchronise locally details of issues and pull requests
+from the repositories forge (but this requires a little extra work that is well documented).
+
+* RStudio
+
+[[id:fbe4e0bc-038d-4aeb-aa48-e312f469678e][RStudio]] has support for Git and GitHub baked in.
+
+* GitKraken
+[[https://www.gitkraken.com/][GitKraken]] is dedicated to working with your Git repositories and interacting with forges. It has some basic IDE features
+for editing your code but it is really focused on helping you work with Git.

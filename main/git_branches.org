@@ -1,0 +1,199 @@
+:PROPERTIES:
+:ID:       661f45c0-cec7-4b57-b2b1-7da8f9d8d0e6
+:mtime:    20240130203610
+:ctime:    20240130203610
+:END:
+#+TITLE: Git Branches
+#+FILETAGS: :git:versioncontrol:branches:
+
+ Branches
+The beauty of Git is that it allows multiple people to work on the same software project without interfering with each
+others work.  This is done through [[https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging][branching and merging]].
+
+ATTR_HTML: :width 800px
+#+CAPTION: Branches mean different things by [[https://jvns.ca/blog/2023/11/23/branches-intuition-reality/][Julia Evans]]
+NAME: git-branches
+[[./img/git/git_meet_the_branch_julia_evans.png]]
+
+
+On GitHub/GitLab/BitBucket you will find the option to make a branch of a repository, but its generally cleaner to make
+branches on your local machine and then have them pushed and updated to your remote (`origin`).  Create a branch and
+switch to it in one step using...
+
+
+#+CAPTION: Creating and checking out a new branch.
+#+NAME:
+#+begin_src sh
+git checkout -b new_branch
+#+end_src
+
+You can see what branches there are now locally and which you are currently on using...
+
+#+CAPTION:
+#+NAME:
+#+begin_src sh
+git branch --list
+ * new_branch
+  master
+#+end_src
+
+If you create a branch locally it will not exist on the remote ~origin~. How does the remote repository know/become
+aware of this new branch? If you try to push a ~local~ branch that doesn't exist on ~orogin~ then ~git~ will helpfully
+tell you how to push from your ~local~ branch to ~origin~ and create the branch there.
+
+#+CAPTION:
+#+NAME:
+#+begin_src sh
+  git push --set-upstream origin new_branch
+#+end_src
+
+ You can push and update all branches on the remote ~origin~ with...
+
+
+#+CAPTION:
+#+NAME:
+#+begin_src sh
+git push --all -u
+#+end_src
+
+* Branching from a specified branch
+Sometimes you may be working on a problem with others simultaneously and wish to develop you work together /before/
+merging to master. In such an instance you could create a ~development~ branch and push your work to this to ensure
+changes you and your colleague make are consistent and work before you merge that to master.
+
+#+CAPTION:
+#+NAME:
+#+begin_src sh
+git branch --list
+ development
+ master
+#+end_src
+
+I want branch from ~development~ rather than ~master~ and so you...
+
+#+CAPTION:
+#+NAME:
+#+begin_src sh
+git checkout -b my_new_branch development
+#+end_src
+
+* Move Most Recent Commit to a New Branch
+From [[https://stackoverflow.com/a/1628584/1444043][here]]...
+
+#+CAPTION: Move most recent commit from existing branch to a new branch.
+#+NAME:
+#+begin_src sh
+git branch a_new_branch     # This creates a new branch from the existing.
+git reset --hard ad1290ai   # Remove the last commit from the current branch
+git checkout a_new_branch   # Moves to the new branch which includes the last commit
+#+end_src
+
+* Tidying up Merged Branches
+
+Lots of articles out there on [[https://railsware.com/blog/git-housekeeping-tutorial-clean-up-outdated-branches-in-local-and-remote-repositories/][Git housekeeping]] one simple thing to do is use...
+
+#+CAPTION: Prune branches that have been merged on fetching.
+#+begin_src sh
+git fetch -p
+#+end_src
+
+...which will prune branches locally that have been merged on ~origin~.
+
+* Keep up with ~main~
+
+As you work on your feature branch development will likely be on-going in other branches which are merged into ~main~
+when complete. To avoid headaches when you commit to submit a Pull Request for your completed feature you should
+regularly merge main into your branch.
+
+There are two strategies for this ~merge~ and ~rebase~
+
+*** ~git merge~
+
+#+ATTR_HTML: :width 800px
+#+CAPTION: Meet the merge by [[https://wizardzines.com/comics/meet-the-merge/][Julia Evans]]
+#+NAME: fig:meet-the-merge
+[[./img/git/git_merge_julia_evans.png]]
+
+#+begin_
+src sh
+  git pull origin main        # Pulls the latest changes from origin/main
+  git merge main --squash     # Merge the changes into your feature branch and squash commits
+#+end_src
+
+This may result in merge conflicts that you'll have to resolve.
+
+#+ATTR_HTML: :width 800px
+#+CAPTION: Meet the merge by [[https://wizardzines.com/comics/meet-the-merge/][Julia Evans]]
+#+NAME: fig:meet-the-merge
+[[./img/git/git_meet_the_merge_julia_evans.png]]
+
+#+begin_
+*** ~git rebase~
+
+Another option to merging  ~main~ onto your branch that may be preferable and that is [[id:57ba7f41-cf41-493c-bbf4-9d1e05a0602d][Git Rebase]]. The
+main reason for using ~git rebase main~ over ~git merge main~ is the resolution of conflicts. When using ~git merge
+main~ all conflicts have to be dealt with in one go, however with ~git rebase main~ each commit from the ~main~ branch
+is merged with your branch in turn and requires any conflicts to be resolved before merging the next commit. This can
+make resolving conflicts a lot easier.
+
+#+ATTR_HTML: :width 800px
+#+CAPTION: Meet the rebase by [[https://wizardzines.com/comics/meet-the-merge/][Julia Evans]]
+#+NAME: fig:meet-the-rebase
+[[./img/git/git_rebase_julia_evans.png]]
+
+As with merging you may encounter merge conflicts and because during a rebase each commit is merged individual you are
+likely to continue working on your branch it is worthwhile enabling the [[https://git-scm.com/docs/git-rerere][Reuse Recorded Resolution (~rerere~)]] option so
+that you do not have to resolve such conflicts in the future (from [[https://samwize.com/2022/12/15/tips-to-resolve-merge-conflicts-for-long-lived-branches/][here]]).
+
+#+begin_src sh
+  git config --global rerere.enabled true
+#+end_src
+
+
+#+ATTR_HTML: :width 800px
+#+CAPTION: Meet the rebase by [[https://wizardzines.com/comics/meet-the-merge/][Julia Evans]]
+#+NAME: fig:meet-the-rebase
+[[./img/git/git_meet_the_rebase_julia_evans.png]]
+
+
+*** Handling Conflicts
+
+Conflicts need careful consideration as its down to you as a developer to decide which version you want to keep. Git
+helpfully marks regions to make it clear where each section comes from and what the conflict is and you typically
+manually edit/remove the unwanted section (and the demarcation markup).
+
+Occasionally you may know which source you want to use in advance in which case you can resolve conflicts using the
+~--ours~ / ~--theirs~ flags (see [[https://dev.to/waylonwalker/git-merge-ours-k82][here]]). After initiating a merge and being told there are conflicts you can ~git
+checkout~ the branch you want to keep and then continue.
+
+#+begin_src bash
+  git checkout --ours .
+  git merge --continue
+#+end_src
+
+* Copy files between branches
+
+This isn't particularly advisable as you lose history which is the antithesis of Git, but sometimes you may wish to pull
+a file from one branch to another. This can be done by checking out the destination branch (e.g. ~new_feature~) and the
+using ~git checkout~ to pull from the branch where the file exists. **WARNING** This can be destructive as it will
+over-write the file on ~new_feature~ with what ever is on the other branch. It is therefore only wise to do this with
+new files or if you are absolutely certain that you have made no changes to the file on your ~new_feature~ branch and
+are not going to lose anything.
+
+#+begin_src sh
+  git checkout -b new_feature    # Create and checkout a new branch
+  git checkout old_feature_branch -- path/to/file/in/old_feature_branch
+#+end_src
+
+**NB** the ~--~ is a delimiter which indicates that what follows afterwards are not options.
+
+* Trees instead of branches
+
+One of the challenges of working on branches is that whilst its easy to switch between them if you have work in progress
+you either need to ~git commit~ or ~git stash~ (and the ~git stash pop~ on returning to the branch) in order to
+switch. An alternative model to this is to use [[id:ddcfed69-2ba5-442a-99b4-eaa5c7a9fe40][Git Worktree]].
+
+* Tidy up Branches
+
+It is good practice to delete branches both locally and on ~origin~ after they are done with. An article on doing so
+locally is [[https://www.wisdomgeek.com/development/delete-git-branches-that-do-not-exist-on-remote/][Delete git branches that do not exist on remote - Wisdom Geek]].

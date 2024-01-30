@@ -1,0 +1,53 @@
+:PROPERTIES:
+:ID:       62d4406f-68ce-418b-90aa-25a8978b0248
+:mtime:    20240130203857
+:ctime:    20240130203857
+:END:
+#+TITLE: Git Stash
+#+FILETAGS: :git:versioncontrol:usage:stash:branches:
+
+
+Sometimes if you've work in progress (WIP) you may end up stashing your changes when you ~git pull~ as you'll be
+informed that doing so would over-write unsaved changes and you should either ~git commit~ or ~git stash~. This later
+strategy of [[https://www.git-scm.com/docs/git-stash][stashing]] is useful when you are not ready to ~git commit~ as you intend on coming back to your work. Its
+straight-forward to make a stash...
+
+#+begin_src sh
+  git stash
+#+end_src
+
+You can view the list of stashes, which are specific to the branches on which they were created with either of the
+following (~show~ gives greater detail).
+
+#+begin_src sh
+  git stash list
+  stash@{0}: WIP on master: 70de7ca youtube-dl configuration
+  stash@{1}: WIP on master: 6a8cdb0 Updating gitconfig/authinfo and install.R
+#+end_src
+
+* Applying Stashed Changes
+
+When you return to your Work In Progress on the branch you are working on you likely want to restore the last saved
+stash or another stash in from the history. This is achieved using the ~pop~ directive. Without any arguments it applies
+the last stash, but its possible to specify the stash you wish to restore.
+
+#+begin_src sh
+  git stash pop
+  git stash pop 6a8cdb0
+  git stash pop stash@{1}
+#+end_src
+
+* Discarding Stashes
+:PROPERTIES:
+:mtime:    20230103103311 20230102213516
+:ctime:    20230102213516
+:END:
+
+Sometimes you may not want to keep your stashes, you can discard the most recent or a specific stash with ~drop
+[<stash>]~ or you can clear all stashes with ~clear~
+
+#+begin_src sh
+  git stash drop
+  git stash drop stash@{1}
+  git stash clear
+#+end_src

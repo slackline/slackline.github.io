@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       3d6bf689-54bd-4551-b367-019e1cb67e73
+:mtime:    20240130203726
+:ctime:    20240130203726
+:END:
+#+TITLE: Git Merge Conflicts
+#+FILETAGS: :git:versioncontrol:merge:conflicts:
+
+
+Merge conflicts arise when you have edited a file and someone else has edited the same point in the same file and their
+changes have been merged before your Pull Request was made/approved. Git, whilst smart, doesn't know what to do in such
+situations and so defers to the humans, asking them to resolve the conflict.
+
+* Anatomy
+
+Git conflicts are clearly marked in files.
+
+* Resolving

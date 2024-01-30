@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       55d950fe-e9ce-477d-9ab1-6498be95b910
+:mtime:    20240130204737
+:ctime:    20240130204737
+:END:
+#+TITLE: Git Aliases
+#+FILETAGS: :git:versioncontrol:aliases:shell:
+
+Git has its own system for aliasing common commands, for now refer to the article on Git Blame ([[https://ns-rse.github.io/posts/whos_to_blame/][Who’s to Blame]]) for
+examples of how to use aliases.
+
+* Shell Aliases
+
+It's useful to be aware of the options that are available to you for formatting your logs, but it can be cumbersome to
+memorise them, particularly so when often your primary focus is on getting work done rather than becoming an expert in
+the tools you use. To which end using [[id:c7d811f9-5e9f-43b9-9b0b-d647a399756c][Bash aliases]] to provide shortcuts to the formatting you want is invaluable. The
+[[id:a1b78518-31e8-4fd3-a36f-d8f152832138][zsh]] shell comes with a bundle of aliases pre-configured, typically I just use ~glod~ which shows the graph in short
+form, but you may find others to be more suited to your preferences, and if not you can always specify your own.
