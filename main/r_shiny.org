@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       fe1f6380-9217-482c-bb5e-91817ae3e8f8
-:mtime:    20240116101258 20240109225151 20240109203109 20240109175658 20240109142953 20240109120558 20231012133551 20231011113735 20230103103314 20220524201346
+:mtime:    20240201145038 20240201125118 20240131094721 20240116101258 20240109225151 20240109203109 20240109175658 2024010914295 20240109120558 20231012133551 20231011113735 20230103103314 20220524201346
 :ctime:    20220524201346
 :END:
 #+TITLE: R Shiny
@@ -68,7 +68,8 @@ and sourced.
 Once setup you can run the application.
 
 #+begin_src r
-  options(browser = "firefox") golem::run_dev()
+options(browser = "firefox")
+golem::run_dev()
 #+end_src
 
 * Development
@@ -125,10 +126,17 @@ After writing tests everyones second favourite task is writing documentation. Yo
 Add test coverage with the following.
 
 #+begin_src r
-  usethis::use_travis()
-  usethis::use_appveyor()
-  usethis::use_coverage()
+usethis::use_travis()
+usethis::use_appveyor()
+usethis::use_coverage()
 #+end_src
+
+* Multiple Modules
+
+If you have more than one module you may wish to communicate between them and pass input and results from one to the
+other. There are a few solutions to this documented in [[https://engineering-shiny.org/structuring-project.html#communication-between-modules][Engineering Production Grade Shiny Apps 3.2.4 Communication
+between modules]]. The solution that looked the easiest was to use global ~reactiveValues~ that is a list passed to each
+of the modules.
 
 * Links
 

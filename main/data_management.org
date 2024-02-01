@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       60748503-8e7d-42af-ab36-b67a8b3858d0
-:mtime:    20231208123959 20230426122337 20230330144615
+:mtime:    20240201125041 20231208123959 20230426122337 20230330144615
 :ctime:    20230330144615
 :END:
 #+TITLE: Data Management
@@ -11,7 +11,7 @@ data you are going to collect and how to manage it.
 
 * SQLite3
 
-A simple and lightweight database.
+A simple and lightweight database, a very good tutorial on SQL is [[https://gvwilson.github.io/sql-tutorial/][SQL for Data Scientists in 100 Queries]].
 
 ** List Tables and Schemas
 
@@ -52,6 +52,7 @@ SELECT * FROM ATable;
 * Links
 
 + [[https://www.sqlitetutorial.net/][SQLite Tutorial]]
++ [[https://gvwilson.github.io/sql-tutorial/][SQL for Data Scientists in 100 Queries]]
 
 ** Books
 
