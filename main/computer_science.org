@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       8893338a-540d-40a4-a8de-f6117b730c8d
+:mtime:    20240201080302
+:ctime:    20240201080302
+:END:
+#+TITLE: Computer Science
+#+FILETAGS: :programming:computing:science:
+
+* Time Complexity
+
+This is the study and science of how the execution speed of code scales.
+
+* Links
+
+** Time Complexity
+
++ [[https://nedbatchelder.com/text/bigo.html][Big-O: How Code Slows as Data Grows | Ned Batchelder]]

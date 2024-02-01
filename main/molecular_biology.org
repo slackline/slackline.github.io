@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       7789c5e4-032d-47fe-b031-e66951b9a4df
+:mtime:    20240131221824
+:ctime:    20240131221824
+:END:
+#+TITLE: Molecular Biology
+#+FILETAGS: :molecularbiology:genetics:
+
+* Links
+
+** Misc
+
++ [[https://www.theregister.com/2024/01/31/bacteria_runs_doom/][Add bacteria to the list of things that can run Doom • The Register]]
