@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       decb0531-e02a-42ab-b101-8ea79e149a09
+:mtime:    20240202001740
+:ctime:    20240202001740
+:END:
+#+TITLE: Polars
+#+FILETAGS: :polars:r:python:data:munging:wrangling:
+
+[[https://www.pola.rs/][Polars]] is a modern data manipulation framework written in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]]. It allows you to undertake similar manipulations to
+popular frameworks such as [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]]'s [[id:b4510762-8409-4e5e-8ee8-c27574977772][Tidyverse]], [[id:78838e73-e7de-4a41-a0a9-69861a3f4abe][data.table]] or Python's [[id:fa283f95-40b0-4be0-ab9d-7672d67b7f27][Python Pandas]] but because it is a compiled language it
+is considerably faster.
+
+* Comparison
+
+There are a couple of useful books that provide side-by-side comparisons of Polars to R frameworks and Pythons Pandas.
+
++ [[https://kevinheavey.github.io/modern-polars/][Modern Polars]] - a side-by-side comparison of Polars with [[id:fa283f95-40b0-4be0-ab9d-7672d67b7f27][Pandas]].
++ [[https://ddotta.github.io/cookbook-rpolars/][Cookbook Polars for R]] - a side-by-side comparison of Polars with [[id:78504ff1-a3cd-4f64-a515-ffa2ab6ac36c][dplyr]] and [[id:78838e73-e7de-4a41-a0a9-69861a3f4abe][data.table]].
+
+* Links
+
+** Comparison
+
++ [[https://kevinheavey.github.io/modern-polars/][Modern Polars]]
++ [[https://ddotta.github.io/cookbook-rpolars/][Cookbook Polars for R]]
