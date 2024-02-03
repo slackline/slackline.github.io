@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       1f44c0fe-5b1c-4a02-a623-18c4eebbc851
-:mtime:    20231212091935 20231126221735 20231121210434
+:mtime:    20240203204840 20231212091935 20231126221735 20231121210434
 :ctime:    20231121210434
 :END:
 #+TITLE: Yubikey
@@ -580,3 +580,4 @@ from them.
 + [[https://kliu.io/post/yubico-magic-unlock/][Using a Yubikey as a touchless, magic unlock key for Linux :: Kevin Liu]]
 + [[https://wiki.archlinux.org/index.php/Universal_2nd_Factor#Authentication_for_Arch_Linux][Universal 2nd Factor - ArchWiki]]
 + [[https://support.system76.com/articles/yubikey-login/][Login with Yubikey - System76 Support]]
++ [[https://www.fosskers.ca/en/blog/yubikey-ssh][Colin Woodbury - Yubikey-based SSH Keys]]
