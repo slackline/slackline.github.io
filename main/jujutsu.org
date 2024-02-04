@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       a37b61ba-8699-4ee3-b407-38f256c186c4
+:mtime:    20240204192058
+:ctime:    20240204192058
+:END:
+#+TITLE: Jujutsu
+#+FILETAGS:
+
+[[https://martinvonz.github.io/jj/latest/][Jujutsu]] is a new [[id:668debfd-9cf7-4577-9ae8-b63fcf044bb8][Version Control System]] developed by Martin von Zweigbergk at Google, although it is not an official
+Google product and is Open Source Software licensed under the Apache 2.0 license.
+
+It has its own internal/native backend but also supports using [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] in the background to undertake all tasks. As such it
+can be used as a drop-in replacement for [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]].
+
+A big difference from the familiar Git model is that the working copy is automatically committed. If you check out a
+commit this introduces a new working-copy commit where changes are recorded (no more ~detached HEAD~ state!).
+
+* Revisions and Revsets
+
+* Changes
+
+* Links
+
++ [[https://martinvonz.github.io/jj/latest/][Jujutsu Documentation]]
++ [[https://github.com/martinvonz/jj#command-line-completion][martinvonz/jj: A Git-compatible VCS that is both simple and powerful]]
+
+** Blogs
+
++ [[https://v5.chriskrycho.com/essays/jj-init/][jj init — Sympolymathesy, by Chris Krycho]]

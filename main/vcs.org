@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       668debfd-9cf7-4577-9ae8-b63fcf044bb8
+:mtime:    20240204190426
+:ctime:    20240204190426
+:END:
+#+TITLE: Version Control Systems
+#+FILETAGS: :vcs:git:jujutsu:fossil:mercurial:svn:
+
+There are many options for version controlling code, they are typically agnostic to the code that is being stored as
+they work with ASCII text files (and sometimes binaries).
+
++ [[id:f2db46e4-a0fc-4252-b9ca-989239a75d19][Fossil]]
++ [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]]
++ [[id:a37b61ba-8699-4ee3-b407-38f256c186c4][Jujutsu]]

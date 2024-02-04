@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       f2db46e4-a0fc-4252-b9ca-989239a75d19
+:mtime:    20240204192500
+:ctime:    20240204192500
+:END:
+#+TITLE: Fossil
+#+FILETAGS: :vcs:fossil:forges:
+
+[[https://fossil-scm.org/home/doc/trunk/www/index.wiki][Fossil]] is another distributed [[id:668debfd-9cf7-4577-9ae8-b63fcf044bb8][Version Control System]] but unlike [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] and [[id:a37b61ba-8699-4ee3-b407-38f256c186c4][Jujutsu]] it includes many of the features
+associated with [[id:052e079f-d42b-4e19-adff-811335a2c852][Forge]] like [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]], [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]], SourceHut, Codeberg, ForgeJo and so forth such as bug tracking, wiki, forum,
+email alerts and chat.
+
+* Links
+
++ [[https://fossil-scm.org/home/doc/trunk/www/index.wiki][Fossil]]
