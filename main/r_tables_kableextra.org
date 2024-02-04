@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       b2af442f-2afd-46ac-8cc3-862a2234dfc1
+:mtime:    20240204113427
+:ctime:    20240204113427
+:END:
+#+TITLE: R Tables kableExtra
+#+FILETAGS: :r:tables:
+
+* Links
+
++ [[https://haozhu233.github.io/kableExtra/][kableExtra]]

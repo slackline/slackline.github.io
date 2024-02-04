@@ -87,6 +87,14 @@ towards ~ggplot2~)
 + [[id:fc6c0f69-4899-401e-bd6c-a36894c1542e][ggplot2]] an excellent framework for producing graphics. 
 + [[id:82a48af2-bcda-4beb-bf88-71377394f899][Base Graphics]] are highly functional and very useful.
 
+** Tables
+
++ [[id:9d2317d5-06f3-45de-9cd0-cc4b7307e1db][~flextable~]]
++ [[id:c285d6f1-79d3-4970-8e7f-b6873b565382][~gt~]]
++ [[id:aae6948d-da09-47e8-93f5-85c1a9287c1d][~huxtable~]]
++ [[id:b2af442f-2afd-46ac-8cc3-862a2234dfc1][~kableExtra~]]
+    + [[id:c00d4b6b-5c29-4033-a1d6-472159a9c0eb][~tinytable~]]
+
 ** IDE
 
 * RStudio

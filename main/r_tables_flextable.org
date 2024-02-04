@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       9d2317d5-06f3-45de-9cd0-cc4b7307e1db
+:mtime:    20240204113801
+:ctime:    20240204113801
+:END:
+#+TITLE: R Tables Flextable
+#+FILETAGS: :r:tables:
+
+* Links
+
++ [[https://davidgohel.github.io/flextable/][Functions for Tabular Reporting • flextable]]
++ [[https://github.com/davidgohel/flextable/][GitHub - davidgohel/flextable: table farming]]

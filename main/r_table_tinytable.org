@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       c00d4b6b-5c29-4033-a1d6-472159a9c0eb
+:mtime:    20240204113310
+:ctime:    20240204113310
+:END:
+#+TITLE: R Tables TinyTable
+#+FILETAGS: :r:tables:
+
+The [[https://vincentarelbundock.github.io/tinytable/][tinytable]] package is a new package that supports tables in a variety of formats, its highly flexible and has
+features common to other packages but one big advantage is that it has virtually no dependencies.
+
+* Links
+
++ [[https://vincentarelbundock.github.io/tinytable/][tinytable]]

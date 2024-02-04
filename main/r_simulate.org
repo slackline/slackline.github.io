@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d281425d-a118-4651-96a6-b85da5424b81
-:mtime:    20240116143319
+:mtime:    20240204114220 20240116143319
 :ctime:    20240116143319
 :END:
 #+TITLE: R Simulations
@@ -10,7 +10,12 @@
 
 The [[https://declaredesign.org/r/fabricatr/index.html][fabricatr]] package is an excellent tool for generating simulated data.
 
+* Fakir
+
+/The goal of [[https://thinkr-open.github.io/fakir/][fakir]] is to provide fake datasets that can be used to teach R./
+
 * Links
 
 + [[https://declaredesign.org/r/fabricatr/index.html][fabricatr]]
 + [[https://declaredesign.org/][Declare and Diagnose Your Research Design]]
++ [[https://thinkr-open.github.io/fakir/][Create Fake Data in R for tutorials | fakir]]

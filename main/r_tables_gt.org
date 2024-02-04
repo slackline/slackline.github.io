@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       c285d6f1-79d3-4970-8e7f-b6873b565382
+:mtime:    20240204113019
+:ctime:    20240204113019
+:END:
+#+TITLE: R Tables gt
+#+FILETAGS: :r:tables:
+
+The [[https://gt.rstudio.com/][gt]] package allows you to easily create presentation ready display tables.
+
+
+* Links
+
++ [[https://gt.rstudio.com/][Easily Create Presentation-Ready Display Tables • gt]]
++ [[https://github.com/rstudio/gt/][GitHub - rstudio/gt: Easily generate information-rich, publication-quality tables from R]]

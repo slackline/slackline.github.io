@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       aae6948d-da09-47e8-93f5-85c1a9287c1d
+:mtime:    20240204113603
+:ctime:    20240204113603
+:END:
+#+TITLE: R Tables Huxtable
+#+FILETAGS: :r:tables:
+
+* Links
+
++ [[https://hughjonesd.github.io/huxtable/][Huxtable - an R package for writing LaTeX and HTML tables]]
++ [[https://github.com/hughjonesd/huxtable][GitHub - hughjonesd/huxtable: An R package to create styled tables in multiple output formats, with a friendly, modern
+  interface.]]
