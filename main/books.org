@@ -1,0 +1,98 @@
+:PROPERTIES:
+:ID:       18820a48-4ec2-43d7-a0a3-01fc5beca40d
+:mtime:    20240204194822
+:ctime:    20240204194822
+:END:
+#+TITLE: Books
+#+FILETAGS: :reading:books:stories:
+
+I love reading books and have done since a young age when I devoured Terry Prattchet's /Discworld/ novels along with
+many other books. I enjoyed reading text books for school and at University and enjoy reading technical documentation
+for computing these days to find out what I need to about how software works.
+
+As a consequence I also love buying books, although these days I have found using a [[id:d08d1fe6-5317-4f09-95f7-d47e8811e007][Kobo]] considerably easier than
+lugging books around.
+
+I have a list of books I own on [[https://www.goodreads.com/user/show/112820224-slackline][GoodReads.com]] but being Amazon owned have divested my interests and listed most of them
+on [[https://bookrastinating.com/user/slackline][BookRastinating.com]].
+
+* Buying
+
+Good places to buy that aren't Amazon
+
++ [[https://abebooks.co.uk][AbeBooks]]
++ [[https://bookdepository.com][Book Depository]]
++ [[https://www.hive.co.uk][Hive]]
++ [[https://worldofbooks.com][World of Book]]
+
+* Read
+
+** Fiction
+
+*** Haruki Murakami
+
++ /Dance, Dance, Dance/
++ /Hardboiled Wonderland and the End of the Universe/
++ /The Wind Up Bird Chronicles/
+
+** Science Fiction
+
+*** Terry Pratchet
+
++ /The Colour of Magic/
++ /The Light Fantastic/
++ /Mort/
++ /Reaper Man/
++ /The Carpet People/
++ /Diggers/
++ /Wings/
++ /Good Oments/
+
+*** Neil Gaiman
+
+*** Neal Stephenson
+
++ /Snowcrash/
++ /Reamde/
++ /Termination Shock/
+
+** Non-Fiction
+
+*** Robert Twigger
+
++ /Angry White Pyjamas/
++ /Portage/
++ /Walking The Great North Line/
+
+** Climbing
+
+*** Biography
+
++ Dawes, Johnny /Full of Myself/
++ Moffatt, Jerry /Revelations/
++ Moon, Ben /Statement of Youth/
+
+*** Training
+
++ Feehally, Ned /Beastmaking/
++ Kirkpatrick, Andy /1001 Climbing Tips/
++ Kirkpatrick, Andy /Down/
++ Kirkpatrick, Andy /Higher Education/
++ Kirkpatrick, Andy /On the Line/
++ Whittaker, Pete /Crack Climbing/
+
+** Science
+
++ Dawkins, Richard /The Selfish Gene/
++ Dawkins, Richard /The Blind Watchmaker/
++ Dawkins, Richard /The Extended Phenotype/
++ Dennet, Daniel C [[https://en.wikipedia.org/wiki/Darwin%27s_Dangerous_Idea][/Darwin's Dangerous Idea/]]
++ Dennet, Daniel C [[https://en.wikipedia.org/wiki/Freedom_Evolves][/Freedom Evolves/]]
++ Darwin, Charles /The Origin of Species/
+
+
+* To Read
+
+** History
+
++ Thompson, EP [[https://en.wikipedia.org/wiki/The_Making_of_the_English_Working_Class][/The Making of the English Working Class/]]

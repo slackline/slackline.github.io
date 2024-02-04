@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d08d1fe6-5317-4f09-95f7-d47e8811e007
-:mtime:    20240203183424 20240125114215 20231217164206 20231211080621 20230910113351 20230724072348 20230707232550
+:mtime:    20240204200239 20240203183424 20240125114215 20231217164206 20231211080621 20230910113351 20230724072348 20230707232550
 :ctime:    20230707232550
 :END:
 #+TITLE: Kobo
@@ -9,6 +9,8 @@
 I bit the bullet, sold my soul and entered the world of Digital Rights Management by buying a second hand Kobo eReader
 (a [[https://en.wikipedia.org/wiki/Kobo_Aura][Kobo Aura]]). Its old but unlike newer models supports an external microSD card so it can have its storage capacity
 expanded.
+
+I keep a vague list of books I've read and might read [[id:18820a48-4ec2-43d7-a0a3-01fc5beca40d][here]].
 
 * Updating
 
