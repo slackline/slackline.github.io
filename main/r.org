@@ -55,13 +55,22 @@ environment variable ~DOWNLOAD_STATIC_LIBV8=1~ so you can...
 
 * Topics
 
+** Base R
+
+Its the foundation of the whole language but is often over looked in favour of the very popular [[id:b4510762-8409-4e5e-8ee8-c27574977772][Tidyverse]], but there are
+a lot of useful functions available in base R and its worth knowing your way around.
+
++ [[id:cf5da2f1-3c43-4dcc-ba14-682d0ffe25b7][Indexing]]
++ [[id:81a69f9a-207c-41fc-8c2b-913f0743141c][Functions]]
++ [[id:97404282-b80a-41bf-af28-3f5558b06b81][Plotting]]
+
 ** Data Manipulations
 
 + [[id:b4510762-8409-4e5e-8ee8-c27574977772][Tidyverse]]
 + [[id:78838e73-e7de-4a41-a0a9-69861a3f4abe][data.table]]
 + [[id:8a79b410-bc31-458e-824f-11c92eaa4f22][collapse]] 
 + [[id:5b5b5396-0e90-4b2e-bd6a-67e7112207f8][Dates and Times]]
-+ 
+
 ** Modelling
 
 Being a statistical package R is aimed around modelling (despite the many other uses).

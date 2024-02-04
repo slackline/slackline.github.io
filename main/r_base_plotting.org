@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       97404282-b80a-41bf-af28-3f5558b06b81
+:mtime:    20240204111251
+:ctime:    20240204111251
+:END:
+#+TITLE: R Base Plotting
+#+FILETAGS: :r:basics:programming:plotting:
+
+* TinyPlot
+
+[[https://github.com/grantmcdermott/][Grant McDermott]] has developed the [[https://github.com/grantmcdermott/plot2/][TinyPlot]] package that extends the base ~plot~ function.
+
+* Links
+
++ [[https://github.com/grantmcdermott/plot2/][TinyPlot]]

@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       cf5da2f1-3c43-4dcc-ba14-682d0ffe25b7
+:mtime:    20240204110723
+:ctime:    20240204110723
+:END:
+#+TITLE: Base R Indexing
+#+FILETAGS: :r:basics:
+
+Being able to index and access different elements of arrays/lists/data frames is essential to using R
+effectively. Unlike most other programming languages R starts indexing at ~1~ rather than ~0~.
+
+* Arrays/Lists
+
+* Data Frames
+
+* Dictionaries

@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       81a69f9a-207c-41fc-8c2b-913f0743141c
+:mtime:    20240204110840
+:ctime:    20240204110840
+:END:
+#+TITLE: Base R Functions
+#+FILETAGS: :R:basics:functions:programming:
+
+* Links
+
++ [[https://ivelasq.rbind.io/blog/not-so-basic-base-r-functions/][%>% dreams - Six not-so-basic base R functions]]
