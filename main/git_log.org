@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0b6eddb6-eb5c-4f26-aaea-beed3505f195
-:mtime:    20231115133528
+:mtime:    20240205164459 20231115133528
 :ctime:    20231115133528
 :END:
 #+TITLE: Git Log
@@ -39,4 +39,15 @@ If you don't know where the files is you can use
 
 #+begin_src bash
 git log -c -S'missingtext' --source --all
+#+end_src
+
+* Find commit
+
+** First commit
+
+Find the first commit of the current branch using the following. Typically this will _always_ be the first commit on the
+~main~/~master~) branch since a branch is the complete history of references upto the current ~HEAD~.
+
+#+begin_src bash
+  git log `git rev-list --max-parents=0 HEAD`
 #+end_src
