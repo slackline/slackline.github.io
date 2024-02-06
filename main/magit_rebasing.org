@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       cb2cbfcd-8814-4638-9b14-08ce09630005
+:mtime:    20240206213451
+:ctime:    20240206213451
+:END:
+#+TITLE:
+
+There are a couple of different uses for [[https://git-scm.com/book/en/v2/Git-Branching-Rebasing][rebasing]], the first is to bring a development branch that has diverged from
+~master~/~main~ up to date so that changes others have merged are present in your development branch. Another use is to
+"squash" many small commits into a single larger one.
+
+Rebasing in Magit is super easy, for a simple walk-through see [[https://chainsawriot.com/postmannheim/2022/12/12/aoe12.html][here]] or these very clear blog posts at  [[https://www.lvguowei.me/post/magit-rebase/][Magit tutorial -
+Rebase (Part I)]] and [[https://www.lvguowei.me/post/magit-rebase-2/][Magit tutorial - Rebase (Part II)]].
+
+* Rebasing Branches
+
+This is soooo much easier in Magit than anywhere else I have tried (command line, GitKraken).
+
+You should be checked out on the branch you are working on, then in the Magit buffer ~r e~ will prompt you for the
+branch you want to rebase onto. This will include those on ~origin~ so its not necessary to have checked out the branch
+(~b l~) and pulled (~F~) first.
+
+** Pushing changes
+
+After you have done so you may wish to push the new commits from your local, rebased branch to your remote branch on
+~origin~ but its quite possible you have commits locally that you /don't/ want to push just yet. This is super easy in
+Magit too and Magit developer [[https://emacs.stackexchange.com/users/306/tarsius][tarsius]] shows us how in [[https://emacs.stackexchange.com/a/27727/10100][this post]].
+
+#+begin_quote
+1. Move to the commit.
+2. P o to push "another branch" (despite the description in the popup, this can also push arbitrary commits).
+3. RET confirm the default source, which should be the abbreviated commit hash. If a branch points at the commit, then
+   the commit is the second choice.
+4. RET confirm the default target, which should be the current branch. (But only if the commit is reachable from HEAD.)
+#+end_quote
+* Squashing
+
+
+Squashing is a contentious issue for some when squashing commits, the reason for this is that it is rewriting Git commit
+history, which some consider poor practice. There are good reasons for doing so though, for example if you made a branch (~my_feature~) to
+develop a feature and ~master~ had changes merged from another branch (~someone_elses_feature~) before you had finished
+your work then you should ideally merge those changes (i.e. ~master~) into your branch (~my_feature~) before you attempt
+to merge your branch (~my_feature~) into ~master~. You can do this via merging ~origin master~ into ~my_feature~ but
+then you inherit all of the commits from ~someone_elses_feature~ along with a ~merged main into <branch> commit~. An
+alternative is to use ~git rebase~ and squash the commits into a single ~bringing branch up-to-date with master~ commit.

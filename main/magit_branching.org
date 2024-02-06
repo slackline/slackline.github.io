@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       e8f8bce6-2b31-4cc0-aa0f-5fe4bf288586
+:mtime:    20240206212220
+:ctime:    20240206212220
+:END:
+#+TITLE: Magit Branching
+#+FILETAGS: :magit:git:branching:
+
+Checking out branches is easy `c l` will prompt you for the name of a local branch to check out.
+
+Checking out new branches is incredibly simple `b c` will prompt the branch you want to branch from, typically `main` /
+`master` and you are then prompted for a name.

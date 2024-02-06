@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       220d7ba9-d30e-4149-a25b-03796e098b0d
-:mtime:    20240108070158 20231119175955 20230930074848 20230528203919 20230331095952 20230329110200 20230222123344 20230103103309 20221228103404 20230103103308
+:mtime:    20240206214314 20240108070158 20231119175955 20230930074848 20230528203919 20230331095952 20230329110200 20230222123344 20230103103309 20221228103404 20230103103308
 :ctime:    20221228103404 20230103103308
 :END:
 #+TITLE: Magit
@@ -10,79 +10,15 @@
 Magit is a porcelain for [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]]. This means its a container and simply provides access to all the functionality of Git but
 from directly within Emacs via a series of easy to use [[id:d6626ec2-1e95-4d42-b06e-ae45268f2b58][emacs_transient]]
 
++ [[id:2483b326-b66c-4ec8-8b4b-0826be5c2c45][Configuration]]
++ [[id:1e0f286e-bf78-48af-a26b-d8367c8495e3][Forges]]
++ [[id:e8f8bce6-2b31-4cc0-aa0f-5fe4bf288586][Branching]]
++ [[id:c36df4fc-a7b8-430d-b4ac-845b3a77d582][Committing]]
++ [[id:cb2cbfcd-8814-4638-9b14-08ce09630005][Rebasing]]
++ [[id:ebb1b921-f075-47ba-a21f-90666b6acfec][Bisect]]
++ [[id:f8932e8b-3b30-49ef-bbf1-81908f6739b5][Orgmode]]
 
-* Configuration
-
-My configuration of Magit is below.
-
-#+INCLUDE: "~/.config/emacs/settings/magit-settings.el" example emacs-lisp
-
-** Forge
-
-You can configure Magit to work with forges such as [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]] and [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]] using the [[https://magit.vc/manual/forge.html][Forge]] package. Its a little tricky to
-setup but you should read the [[https://magit.vc/manual/forge.html#Getting-Started][Getting Started]] instructions and if it doesn't work first time persevere and try again.
-
-* Usage
-
-** Branching
-
-Checking out branches is easy `c l` will prompt you for the name of a local branch to check out.
-
-Checking out new branches is incredibly simple `b c` will prompt the branch you want to branch from, typically `main` /
-`master` and you are then prompted for a name.
-
-** Committing
-
-*** Amending
-
-Its really useful to amend commits (if they haven't been pushed!), ~c a~ will add whatever is staged to the last commit
-and pop up a buffer to allow you to edit the commit message. If however you don't want to change the message you can
-enable the ~-C~ flag which is short-hand for ~--reuse-message~ and you are prompted for the message to reuse. This
-defaults to ~ORGIN-HEAD~ but type in ~HEAD~ and it reuses the last local commit on the current branch. I'd like to
-change this default behaviour but haven't worked out how yet.
-
-** Rebasing
-:PROPERTIES:
-:mtime:    20230331100004
-:ctime:    20230331100004
-:END:
-
-Rebasing is a contentious issue for some, the reason for this is that it is rewriting Git commit history, which some
-consider poor practice. There are good reasons for doing so though, for example if you made a branch (~my_feature~) to
-develop a feature and ~master~ had changes merged from another branch (~someone_elses_feature~) before you had finished
-your work then you should ideally merge those changes (i.e. ~master~) into your branch (~my_feature~) before you attempt
-to merge your branch (~my_feature~) into ~master~. You can do this via merging ~origin master~ into ~my_feature~ but
-then you inherit all of the commits from ~someone_elses_feature~ along with a ~merged main into <branch> commit~. An
-alternative is to use ~git rebase~ and squash the commits into a single ~bringing branch up-to-date with master~ commit.
-
-Rebasing in Magit is super easy, for a simple walk-through see [[https://chainsawriot.com/postmannheim/2022/12/12/aoe12.html][here]] or these very clear blog posts at  [[https://www.lvguowei.me/post/magit-rebase/][Magit tutorial -
-Rebase (Part I)]] and [[https://www.lvguowei.me/post/magit-rebase-2/][Magit tutorial - Rebase (Part II)]].
-
-
-** Bisecting
-
-[[id:323647af-4d22-4b24-9763-320da9a1d76d][Bisecting]] can be done in Magit, see [[id:ebb1b921-f075-47ba-a21f-90666b6acfec][Magit Bisect]].
-
-* Forge
-:PROPERTIES:
-:ID:       052e079f-d42b-4e19-adff-811335a2c852
-:mtime:    20230103103308 20221228103404
-:ctime:    20221228103404
-:END:
-
-You can interact with forges such as [[https://gitlab.com][GitLab]], [[https://github.com][GitHub]] and so forth although support is limited beyond these main two.
-
-Once you've setup and configured Forge you can pull all issues and pull requests with ~M-x forge-pull~ or from a ~magit~
-buffer use ~f n~. You can then create issues when the cursor is on the "~Issues~" section with ~N c i~ or similarly pull
-requests (~N c p~). You can comment and edit existing topics, whether that is Issues or Pull Requests by hitting
-~Return~ to view it and ~C-c C-e~ to edit a given section when the cursor is over that section.
-
-* Orgmode Interaction
-
-The [[https://github.com/magit/orgit][orgit]] and [[https://github.com/magit/orgit-forge][orgit]] packages add support for org links to Magit and Forge buffers so you can litter your [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]] files
-with links to repositories, issues, pull requests etc.
-
-* Other Packages
+* Related Packages
 
 ** [[https://github.com/armindarvish/consult-gh][Consult-gh]]
 

@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       2483b326-b66c-4ec8-8b4b-0826be5c2c45
+:mtime:    20240206211940
+:ctime:    20240206211940
+:END:
+#+TITLE: Magit Configuration
+#+FILETAGS: :magit:git:
+
+My configuration of Magit is below.
+
+#+INCLUDE: "~/.config/emacs/settings/magit-settings.el" example emacs-lisp

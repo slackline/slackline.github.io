@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       708f5d99-6040-4306-a323-306d39ce45c3
-:mtime:    20240118162910 20231113221350 20230621183025 20230511204503 20230215095632 20230129085036 20230114084505 20230103103311 20221209211925
+:mtime:    20240206201930 20240118162910 20231113221350 20230621183025 20230511204503 20230215095632 20230129085036 20230114084505 20230103103311 20221209211925
 :ctime:    20221209211925
 :END:
 #+TITLE: Emacs Lisp
@@ -11,6 +11,13 @@ Emacs LISP is a [[id:ea1499ab-dab2-49b1-8479-cb5a2fbd38bc][Programming]] languag
 Emacs itself. The easiest way of getting started with Emacs is to use the built-in /An Introduction to Programming in
 Emacs Lisp/ that is available from within Emacs using ~C-h i m Emacs Lisp Intro~
 
+* Tips and Tricks
+
+** Back Ticks and Commas
+
+Backticks (~`~) allow you to selectively evaluate sections of a list that are preceded with a comma (~,~). The list ~`(1
+2 (3 +4))~ and ~'(1 2 (3 + 4))~ both return nothing as they are not evaluated, but ~`(1 2 ,(3 + 4))~ returns ~`(1 2 7)~
+as the list after the comma is evaluated (but only if a back-tick is used) ([[https://fosstodon.org/@dliden@emacs.ch/111884927150599744][source]] / [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Backquote.html][manual]]).
 * Links
 
 + [[https://yoo2080.wordpress.com/2011/12/31/lexical-scoping-and-dynamic-scoping-in-emacs-lisp/][lexical scoping and dynamic scoping in Emacs Lisp | Yoo Box]]

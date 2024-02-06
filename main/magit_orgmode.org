@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       f8932e8b-3b30-49ef-bbf1-81908f6739b5
+:mtime:    20240206214249
+:ctime:    20240206214249
+:END:
+#+TITLE: Magit OrgMode
+#+FILETAGS: :magit:org:
+
+The [[https://github.com/magit/orgit][orgit]] and [[https://github.com/magit/orgit-forge][orgit-forge]] packages add support for org links to Magit and Forge buffers so you can litter your [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]]
+files with links to repositories, issues, pull requests etc.

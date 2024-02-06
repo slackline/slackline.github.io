@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       c36df4fc-a7b8-430d-b4ac-845b3a77d582
+:mtime:    20240206212620
+:ctime:    20240206212620
+:END:
+#+TITLE: Magit Committing
+#+FILETAGS: :magit:git:comitting:
+
+* Staging
+
+Staging files is easy ~s~ on the file or the ~Unstaged Files~ header and the files are staged (you'll be prompted if you
+do the later as to whether you want to include all of the files).
+
+* Unstaging
+
+Its easy to unstage files or hunks of code with ~k~, you'll be prompted to confirm.
+
+* Committing
+
+Also easy ~c~ and you'll be prompted for a Summary and Description if all the [[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] tests pass, if not hit ~$~ to
+see what failed, fix, stage the changes and try again.
+
+* Amending
+
+Its really useful to amend commits (if they haven't been pushed!), ~c a~ will add whatever is staged to the last commit
+and pop up a buffer to allow you to edit the commit message. If however you don't want to change the message you can
+enable the ~-C~ flag which is short-hand for ~--reuse-message~ and you are prompted for the message to reuse. This
+defaults to ~ORGIN-HEAD~ but type in ~HEAD~ and it reuses the last local commit on the current branch. I'd like to
+change this default behaviour but haven't worked out how yet.
