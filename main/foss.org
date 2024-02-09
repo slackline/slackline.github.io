@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f277da12-5d6d-46e3-a49c-7bda9254d469
-:mtime:    20240123221325 20240121200647
+:mtime:    20240209160828 20240123221325 20240121200647
 :ctime:    20240121200647
 :END:
 #+TITLE: FOSS
@@ -70,6 +70,11 @@ that page, if not they take you to the projects site.
 * Links
 
 + [[https://www.eff.org/][Electronic Frontier Foundation | Defending your rights in the digital world]]
+
+** Guides
+
++ [[https://opensource.guide/][Open Source Guides | Learn how to launch and grow your project.]]
++ [[https://www.contributor-covenant.org/][Contributor Covenant: A Code of Conduct for Open Source and Other Digital Commons Communities]]
 
 ** Essays
 
