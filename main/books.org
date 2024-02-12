@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       18820a48-4ec2-43d7-a0a3-01fc5beca40d
-:mtime:    20240204194822
+:mtime:    20240212071535 20240204194822
 :ctime:    20240204194822
 :END:
 #+TITLE: Books
@@ -88,7 +88,7 @@ Good places to buy that aren't Amazon
 + Dawkins, Richard /The Extended Phenotype/
 + Dennet, Daniel C [[https://en.wikipedia.org/wiki/Darwin%27s_Dangerous_Idea][/Darwin's Dangerous Idea/]]
 + Dennet, Daniel C [[https://en.wikipedia.org/wiki/Freedom_Evolves][/Freedom Evolves/]]
-+ Darwin, Charles /The Origin of Species/
++ Darwin, Charles /The Origin of Species/ (see also [[http://darwin-online.org.uk/AboutUs.html][The Complete Work of Charles Darwin Online]])
 
 
 * To Read

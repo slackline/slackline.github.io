@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       28ffcc43-9dff-4de8-a211-277c5346a642
-:mtime:    20240130202744
+:mtime:    20240211172814 20240130202744
 :ctime:    20240130202744
 :END:
 #+TITLE: Git Forges
@@ -25,3 +25,5 @@ the linked pages.
 |           |                                                                                                                                  |
 
 The Gittea based offerings have far less complete CI but there is a growing number of tools such as [[https://davejansen.com/publish-to-netlify-using-gitea-actions/][deploying to Netlify]].
+
++ [[id:736537b3-75e0-4c24-9156-364937e0e8a2][Forgejo]]

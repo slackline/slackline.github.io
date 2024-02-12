@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       c7a63aeb-a6d6-4753-8f0b-f255a532d36b
+:mtime:    20240210210617
+:ctime:    20240210210617
+:END:
+#+TITLE: Emacs Abbrev
+#+FILETAGS: :emacs:
+
+* Links
+
++ [[https://protesilaos.com/codelog/2024-02-03-emacs-abbrev-mode/][Emacs: abbreviations with abbrev-mode (quick text expansion) | Protesilaos Stavrou]]

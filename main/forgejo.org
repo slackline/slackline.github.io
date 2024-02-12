@@ -1,0 +1,230 @@
+:PROPERTIES:
+:ID:       736537b3-75e0-4c24-9156-364937e0e8a2
+:mtime:    20240211204231 20240211163700 20240211140707
+:ctime:    20240211140707
+:END:
+#+TITLE: Forgejo
+#+FILETAGS: :git:forges:hosting:
+
+[[https://forgejo.org/][Forgejo]] is a fork of [[https://gitea.io][Gitea]]
+
+* Self-hosting on Arch Linux
+
+My OVH VPS runs [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch]] Linux and has more space than I use so I thought I would have a go at self-hosting Forgejo.
+
+The installation [[https://wiki.archlinux.org/title/Gitea][instructions]] are for Gitea but I simply substituted every instance of ~gitea~ for ~foregjo~. I opted
+for a MariaDB backend and setup a reverse proxy in [[id:3774439d-af75-453e-b3e9-9d578b6bec46][Nginx]] as per the instructions.
+
+** Setting up MariaDB
+
+Install, add a ~mysql~ user and make sure permissions are correct on the key directories.
+
+#+begin_src bash
+pacman -Syu mariadb
+useradd mysql
+chown -R mysql:root /run/mysqld /var/lib/mysql
+#+end_src
+
+It can be sensible to secure your MariaDB installation. The ~mariadb-secure-installation~ will guide you through the
+various steps required to improve the security. One key step is setting a password for the ~root~ account.
+
+#+begin_src bash
+mariadb-secure-installation
+#+end_src
+
+It is also sensible to restrict access to the database to the local-host via Unix sockets. This is done by editing
+~/etc/my.cnf.d/server.cnf~ and adding.
+
+#+begin_src
+[mariadb]
+bind-address = localhost
+skip-networking
+#+end_src
+
+You can now enabled the MariaDB service and start it.
+
+#+begin_src bash
+systemctl enable --now mariadb.service
+#+end_src
+
+** Configure Database and User
+
+Next step is to setup a database for Forgejo to use and a user account to access it. Change ~password~ to something
+secure.
+
+#+begin_src sql
+$ mysql -u root -p
+
+mysql> CREATE DATABASE `forgejo` DEFAULT CHARACTER SET `utf8mb4` COLLATE `utf8mb4_unicode_ci`;
+mysql> CREATE USER `gitea`@'localhost' IDENTIFIED BY 'password';
+mysql> GRANT ALL PRIVILEGES ON `gitea`.* TO `gitea`@`localhost`;
+mysql> FLUSH PRIVILEGES;
+mysql> \q
+#+end_src
+
+You can check the user can connect to the database (**NB** : Installing ~forgejo~ created a user ~forgejo~ at the system
+level, this is checking the MariaDB database user can access the account just created). You the ~password~ you used in
+the above.
+
+#+begin_src bash
+$ mariadb -u forgejo -p -D forgejo
+#+end_src
+
+If you can connect ok go ahead and configure the Forgejo installation to connect to the database by editing
+~/etc/forgejo/app.ini~ with the following values.
+
+#+begin_src
+DB_TYPE = mysql
+HOST    = 127.0.0.1:3306 ; Can use /var/run/mysqld/mysqld.sock if using sockers as per above
+NAME    = forgejo
+USER    = forgejo
+PASSWD  = passwd
+#+end_src
+
+You can now enable the ~forgejo.service~.
+
+#+begin_src bash
+systemctl enable --now forgejo.service
+#+end_src
+
+And you should be able to access the ~http://localhost:3306~ from the same computer. As I'm installing on my VPS I
+tested this with ~lynx~ and success!
+
+#+begin_quote
+                                                                                                                       Installation - Gitea at Kimura (p1 of 2)
+   This website works better with JavaScript.
+
+Initial Configuration
+
+   If you run Gitea inside Docker, please read the documentation before changing any settings.
+
+Database Settings
+
+   Gitea requires MySQL, PostgreSQL, MSSQL, SQLite3 or TiDB (MySQL protocol).
+   Database Type
+   postgres
+   MySQL
+   PostgreSQL
+   MSSQL
+   SQLite3
+   Host 127.0.0.1:5432______
+   Username gitea_______________
+   Password ____________________
+   Database Name gitea_______________ Note to MySQL users: please use the InnoDB storage engine and if you use "utf8mb4", your InnoDB version must be
+   greater than 5.6 .
+   SSL
+   disable
+   Disable
+   Require
+   Verify Full
+   Schema ____________________ Leave blank for database default ("public").
+   Charset
+   utf8mb4
+   utf8mb4
+   Path /var/lib/gitea/data/ File path for the SQLite3 database.
+   Enter an absolute path if you run Gitea as a service.
+
+General Settings
+
+   Site Title Gitea at Kimura_____ You can enter your company name here.
+   Repository Root Path /var/lib/gitea/data/ Remote Git repositories will be saved to this directory.
+   Git LFS Root Path /var/lib/gitea/data/ Files tracked by Git LFS will be stored in this directory. Leave empty to disable.
+   Run As Username gitea_______________ Enter the operating system username that Gitea runs as. Note that this user must have access to the repository
+   root path.
+   Server Domain localhost___________ Domain or host address for the server.
+   SSH Server Port 22__________________ Port number your SSH server listens on. Leave empty to disable.
+   Gitea HTTP Listen Port 3000________________ Port number the Giteas web server will listen on.
+   Gitea Base URL http://localhost:300 Base address for HTTP(S) clone URLs and email notifications.
+   Log Path /var/lib/gitea/log__ Log files will be written to this directory.
+
+Optional Settings
+
+   Email Settings
+#+end_quote
+
+** Nginx reverse proxy
+
+To be able to connect to the instance from anywhere other than the local computer I opted to use
+[[id:3774439d-af75-453e-b3e9-9d578b6bec46][Nginx]] for a [[https://wiki.archlinux.org/title/Gitea#nginx][reverse proxy]]
+(I use it to provide all my other web-sites so it was the natural choice for me).
+
+~/etc/nginx/servers-available/forgejo.conf~ is the file suggested to put this in but I already have my sites configured
+in a global ~/etc/nginx/nginx.conf~ so opted to add the following there.
+
+I use [[https://letsencrypt.org/][Let's Encrypt]] to obtain certificates.
+
+#+begin_src bash
+certbot certonly --nginx -d forgejo.hopto.org
+#+end_src
+
+...and updated the ~ssl_certificate~ and ~ssl_certificate_key~ fields in the below ~server~ entry in
+~/etc/nginx/nginx.conf~.
+
+#+begin_src
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name forgejo.your.domain;
+
+    ssl_certificate /path/to/fullchain.pem;
+    ssl_certificate_key /path/to/privkey.pem;
+
+    location / {
+        client_max_body_size 512M;
+        proxy_pass http://unix:/run/forgejo/forgejo.socket;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+#+end_src
+
+The following then needs adding/enabling in ~/etc/forgejo/app.ini~.
+
+#+begin_src
+[server]
+PROTOCOL                   = unix
+DOMAIN                     = forgejo.your.domain
+ROOT_URL                   = https://forgejo.your.domain
+HTTP_ADDR                  = /run/forgejo/forgejo.socket
+LOCAL_ROOT_URL             =
+
+[session]
+COOKIE_SECURE              = true
+#+end_src
+
+Restart both ~nginx.service~ and ~forgejo.service~.
+
+#+begin_src bash
+systemctl restart nginx.service
+systemctl restart forgejo.service
+#+end_src
+
+** SSH Configuration
+
+In ~/etc/forgejo/app.ini~ set the ~SSH_DOMAIN~ to the URL of your site, at the same time disable HTTP protocol by
+setting ~DISABLE_HTTP_GIT~ to ~true~.
+
+#+begin_src
+SSH_DOMAIN       = git.your.domain
+DISABLE_HTTP_GIT = true
+#+end_src
+
+
+** Mirroring
+
+I had some Python packages ([[https://gitlab.com/nshephard/tcx2gpx][tcx2gpx]] and [[https://gitlab.com/nshephard/mvdate][mvdate]]) setup on GitLab with Continuous Integration to publish the packages that
+I wanted to retain whilst working out how to migrate the repositories to my self hosted Forgejo instance. I also wanted
+to retain backup on GitLab should my VPS die completely (it has done [[https://www.theregister.com/2022/03/22/ovhcloud_fire_datacenter_report/][before]]).
+
+Doing so involved setting up multiple ~origins~ for my local [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] repository.
+
+* Links
+
++ [[https://seanthegeek.net/1035/how-to-configure-a-nginx-reverse-proxy-with-lets-encrypt-certificates/][How to configure a nginx reverse proxy with Let's Encrypt certificates - seanthegeek.net]]
+
+** Mirroring
+
++ [[https://docs.gitlab.com/ee/user/project/repository/mirror/][Repository mirroring | GitLab]]
++ [[https://docs.gitlab.com/ee/user/project/repository/mirror/pull.html][Pull from a remote repository | GitLab]]

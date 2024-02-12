@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       609f694f-40bb-4f7b-92f4-9e478d743442
+:mtime:    20240212074812 20240211210722
+:ctime:    20240211210722
+:END:
+#+TITLE: Git Remotes
+#+FILETAGS: :git:forges:github:gitlab:forgejo:
+
+[[https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes][Remotes]] are where other copies of your repository exist and typically where collaboration occurs (i.e. issue tracking,
+merge requests, bug reports etc.).
+
+The main remote that a repository is configured to use by default is called ~origin~ but it is possible to have multiple
+remotes tracked by your local copy.
+
+* Listing Remotes
+
+List remotes with ~git remote [-v]~ the ~-v~ flag will show the URLs that are stored for the short-cut.
+
+#+begin_src bash
+❱ git remote -v
+forgejo	forgejo@forgejo.hopto.org:nshephard/mvdate.git (fetch)
+forgejo	forgejo@forgejo.hopto.org:nshephard/mvdate.git (push)
+origin	git@gitlab.com:nshephard/mvdate.git (fetch)
+origin	git@gitlab.com:nshephard/mvdate.git (push)
+#+end_src
+
+You can get more information about a remote using ~git remote show origin~
+
+#+begin_src bash
+
+#+end_src
+* Adding Remotes
+
+It is straight forward to add a remote with ~git remote add <shortcut> <URL>~ where the URL is either the ~https~ or the
+~git~ URL.
+
+#+begin_src bash
+git remote add forgejo forgejo@forgejo.hopto.org:nshephard/mvdate.git
+#+end_src
+
+* Links
+
++ [[https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes][Git - Working with Remotes]]
