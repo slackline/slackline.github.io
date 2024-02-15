@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f277da12-5d6d-46e3-a49c-7bda9254d469
-:mtime:    20240209160828 20240123221325 20240121200647
+:mtime:    20240215130935 20240209160828 20240123221325 20240121200647
 :ctime:    20240121200647
 :END:
 #+TITLE: FOSS
@@ -26,6 +26,7 @@ that page, if not they take you to the projects site.
 
 ** Multimedia
 
++ [[id:9b22641a-6921-4afa-84fc-1da105a3dfc7][ffmpeg]]
 + [[https:://musicpd.org][MPD]]
 + Snapcast
 
@@ -71,6 +72,9 @@ that page, if not they take you to the projects site.
 
 + [[https://www.eff.org/][Electronic Frontier Foundation | Defending your rights in the digital world]]
 
+** Lists of Software
+
++ [[https://awesome-selfhosted.net/index.html][awesome-selfhosted]]
 ** Guides
 
 + [[https://opensource.guide/][Open Source Guides | Learn how to launch and grow your project.]]

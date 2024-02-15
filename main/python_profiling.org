@@ -1,11 +1,67 @@
 :PROPERTIES:
 :ID:       dd7c615f-cd8b-426d-aec0-cfd3803437cc
-:mtime:    20230125190111 20230125155927
+:mtime:    20240215115043 20240215090823 20230125190111 20230125155927
 :ctime:    20230125155927
 :END:
 #+TITLE: Python Profiling
 #+FILETAGS: :python:profiling:
 
+
+* [[https://rse.shef.ac.uk/pando-python/][Performance Profiling and Optimisation (Python)]]
+
+** Introduction to Profiling
++ Why profile?
++ Choosing profilers?
++ Which tests?
+
++ ~timeit~ returns total runtime for a block of code and is therefore more suited for benchmarking. Instead use
+  ~time.monotinic()~ to capture the points at which functions start and finish.
++ Standard library ~cProfile~ with ~SnakeViz~ to profile.
++ Line level profiling can be done using ~line_profiler~ which limits the target through use of the ~@profile~
+  decorator.
++ [[https://viztracer.readthedocs.io/en/latest/index.html][VizTracer]] visualises via timeline rather than hierarchical. Shows over tine
+
+*** Selecting Test Cases (Exercise)
+TopoStats has never been profiled would be nice to do so and so we've no idea about where time is spent in processing.
+In order to profile we would need...
+
++ A selection of images to profile one at time.
++ Assess the whole process to find out which of the stages (loading/filtering/grain finding/grainstatistics/tracing) are
+  the slowest.
++ Once those have been identified focus in on each of the modules to see if there are bottlenecks within each of those.
+
+** Function Level Profiling
+
+*** Call Stack
+
+*** cProfile
+
+Always available as part of the standard library, call in command line with.
+
+** Line Level Profiling
+
+
+** Optimisation
+
++ Optimisation can be detrimental if focussing on small efficiencies, but it shouldn't be ignored for the small number
+  of areas where big gains can be gained. /Premature optimisation is the root of all evil/ - Donald Knuth.
++ Obfuscating code can be detrimental to future maintainability!
++ Important to have tests in place so that changes to code do not break things, important to have tests in place.
+
+*** pytest Overview
+
++ May include a small test.
+
+** Data Structures and Algorithms
+
+** Minimise Python (NumPy/Pandas)
+
+
+** Feedback
++ Distribute setup instructions before hand.
++ Consider not having the text up whilst talking to class, people tend to read it.
++ [Will] - better distinction between benchmarking and profiling.
++ Course focuses on ~cProfile~ and visualisation with ~SnakeVix~.
 
 * Links
 
@@ -15,3 +71,4 @@
 + [[https://docs.python.org/3/library/profile.html#module-pstats][pstats]]
 + [[https://pypi.org/project/scalene/][Scalene]] ([[https://github.com/plasma-umass/scalene][GitHub]])
 + [[https://jiffyclub.github.io/snakeviz/][SnakeViz]]
++ [[https://viztracer.readthedocs.io/en/latest/index.html][VizTracer]]

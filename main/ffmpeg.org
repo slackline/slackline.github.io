@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       9b22641a-6921-4afa-84fc-1da105a3dfc7
+:mtime:    20240215130934
+:ctime:    20240215130934
+:END:
+#+TITLE: FFmpeg
+#+FILETAGS: :multimedia:ffmpeg:video:audio:
+
+
+* Audio
+
+** Converting
+
+Ideal tool for extracting audio from videos or converting between different formats.
+
+*** Wave to MP3
+
+Convert a ~.wav~ to ~.mp3~ at 44.1kHz and 320kbps.
+
+#+begin_src bash
+ffmpeg -i <input>.wav -vn -ar 44100 -ac 2 -b:a 320k <output>.mp3
+#+end_src
+
+* Links
+
++ [[https://ffmpeg.org/][FFmpeg]]
+  + [[https://ffmpeg.org/documentation.html][Documentation]]
+
+** Audio
+
++ [[https://ourcodeworld.com/articles/read/1435/how-to-convert-a-wav-file-to-mp3-using-ffmpeg][How to convert a WAV file to MP3 using FFmpeg | Our Code World]]
