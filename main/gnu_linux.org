@@ -1,13 +1,13 @@
 :PROPERTIES:
 :ID:       88fc1e91-d928-485e-83b4-1991663fa267
-:mtime:    20230215120451 20230215101424
+:mtime:    20240215131513 20230215120451 20230215101424
 :ctime:    20230215101424
 :END:
 #+TITLE: GNU/Linux
 #+FILETAGS: :gnu:linux:
 
 I've used GNU/Linux variants for almost 20 years they are brilliant and an amazing example of what can be achieved using
-the Free Open Source Software (FOSS) and collaborative working. I've used many variants starting with RedHat 7.3, then
+the [[id:f277da12-5d6d-46e3-a49c-7bda9254d469][Free Open Source Software (FOSS)]] and collaborative working. I've used many variants starting with RedHat 7.3, then
 trying out [[https://slackware.com][Slackware]] for a few years before jumping to [[https://www.gentoo.org][Gentoo]] and more recently using [[https://archlinux.org][Arch]] for lower powered devices and
 work machines as I don't have time to tinker/maintain them in addition to my long standing Gentoo server.
 

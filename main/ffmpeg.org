@@ -13,6 +13,9 @@
 
 Ideal tool for extracting audio from videos or converting between different formats.
 
+I've written a script [[https://gitlab.com/nshephard/dotfiles/-/blob/master/bin/flac2mp3][~flac2mp3~]] that converts files I rip from CD to ~flac~ to ~mp3~ (as they then take up less space
+on my phone). It uses the [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash Parallel]] to do this a little bit faster.
+
 *** Wave to MP3
 
 Convert a ~.wav~ to ~.mp3~ at 44.1kHz and 320kbps.
@@ -20,6 +23,7 @@ Convert a ~.wav~ to ~.mp3~ at 44.1kHz and 320kbps.
 #+begin_src bash
 ffmpeg -i <input>.wav -vn -ar 44100 -ac 2 -b:a 320k <output>.mp3
 #+end_src
+
 
 * Links
 
