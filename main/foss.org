@@ -1,6 +1,12 @@
 :PROPERTIES:
 :ID:       f277da12-5d6d-46e3-a49c-7bda9254d469
+<<<<<<< HEAD
 :mtime:    20240215130935 20240209160828 20240123221325 20240121200647
+||||||| parent of f0ffc8b (Forgejo notes, starting smtp and some books)
+:mtime:    20240209160828 20240123221325 20240121200647
+=======
+:mtime:    20240214204012 20240209160828 20240123221325 20240121200647
+>>>>>>> f0ffc8b (Forgejo notes, starting smtp and some books)
 :ctime:    20240121200647
 :END:
 #+TITLE: FOSS
@@ -21,7 +27,7 @@ that page, if not they take you to the projects site.
 
 ** Version control
 
-+ Fossil
++ [[id:f2db46e4-a0fc-4252-b9ca-989239a75d19][Fossil]]
 + [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]]
 
 ** Multimedia
@@ -83,3 +89,7 @@ that page, if not they take you to the projects site.
 ** Essays
 
 + [[https://www.cynicusrex.com/file/takemymoney.html][What if I paid for all my free software? | Angelino Desmet]]
+
+** Tools
+
++ [[https://sharepic.fsfe.org/][FSFE Sharepic Generator]]

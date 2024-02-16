@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       736537b3-75e0-4c24-9156-364937e0e8a2
-:mtime:    20240211204231 20240211163700 20240211140707
+:mtime:    20240215065336 20240214220237 20240214203455 20240213073417 20240211204231 20240211163700 20240211140707
 :ctime:    20240211140707
 :END:
 #+TITLE: Forgejo
@@ -201,30 +201,130 @@ systemctl restart nginx.service
 systemctl restart forgejo.service
 #+end_src
 
+* Security
+
 ** SSH Configuration
 
 In ~/etc/forgejo/app.ini~ set the ~SSH_DOMAIN~ to the URL of your site, at the same time disable HTTP protocol by
 setting ~DISABLE_HTTP_GIT~ to ~true~.
 
 #+begin_src
-SSH_DOMAIN       = git.your.domain
+SSH_DOMAIN       = forgejo.your.domain
 DISABLE_HTTP_GIT = true
 #+end_src
 
+If you are /not/ using the built-in SSH server then you need to modify the ~/etc/ssh/sshd_config~ to accept the Git
+Protocol by adding the following (and restarting the ~sshd~ process/service, done with systemd using ~systemctl restart
+sshd.service~).
 
-** Mirroring
+#+begin_src
+AcceptEnv GIT_PROTOCOL
+#+end_src
+
+*** Non-default SSH Port
+
+If your system SSH daemon uses a non-standard port (i.e. something other than ~22~) then you will need to set the port
+explicitly in ~/etc/forgejo/app.ini~
+
+#+begin_src
+SSH_PORT = 12345
+#+end_src
+
+You will then find than the cloning instructions for adding an SSH remote are slightly different to the common syntax
+(which is ~scp~ based) as the URL is prefixed with ~ssh://~ and the port number is included which as shown in the
+example below.
+
+#+begin_src bash
+git remote add forgejo ssh://forgejo@forgejo.your.domain:562/<user_account>/test.git
+#+end_src
+
+** GPG Keys
+
+The excellent article [[https://docs.codeberg.org/security/gpg-key/][Adding a GPG key to your account]] tells you all you need to know, I don't need to repeat what is
+there, although I did find that it worked fine with my ED25519 signing key and I _didn't_ generate long unwieldy RSA
+keys.
+
+* Email
+
+Typically [[id:28ffcc43-9dff-4de8-a211-277c5346a642][Git Forges]] will email users when certain conditions are met and Forgejo is no different. To utilise this you
+have to have an SMTP or IMAP server configured to send the email on your behalf. Personally I use the brilliant
+[[https://protonmail.com][ProtonMail]] whose products genuinely protect your [[id:b5000932-0fec-4353-acc4-0cb02127c9ac][Privacy]] unfortunately SMTP services are restricted to /Proton for
+Business/ accounts which I don't have. The next best thing is therefore to configure my own [[id:2f138d75-ad63-4079-adbe-1c0cec2d0304][SMTP server]], I opted for
+[[https://wiki.archlinux.org/title/Postfix][Postfix]].
+
+
+** Postfix Configuration
+
+
+* Runners
+
+Runners make Continuous Integration possible. Under [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] these are available from the AUR [[https://aur.archlinux.org/packages/forgejo-runner][~forgejo-runner~]]
+package. It requires the Go language to be installed to build but this should be removed afterwards automatically.
+
+#+begin_src bash
+mkdir ~/aur
+cd ~/aur
+git clone https://aur.archlinux.org/forgejo-runner.git
+cd forgejo-runner
+makepkg -sri
+#+end_src
+
+Once installed refer to the [[https://forgejo.org/docs/next/admin/actions/][Forgejo Actions administrator guide]]. You will need to make sure there are both Docker and
+Podman container services available to run the actions whose configurations are hosted elsewhere
+(e.g. ~https://code.forgejo.org~).
+
+** Configuration
+
+You have to add the following to the default configuration (default values are not included by default as is the case
+for many other aspects of the configuration).
+
+#+begin_src
+[actions]
+ENABLED = true
+DEFAULT_ACTIONS_URL = https://code.forgejo.org
+ARTIFACT_RETENTION_DAYS = 30
+
+[storage]
+ACTIONS_LOG =
+ARTIFACTS =
+#+end_src
+
+You then need to register runners.
+
+* Mirroring
 
 I had some Python packages ([[https://gitlab.com/nshephard/tcx2gpx][tcx2gpx]] and [[https://gitlab.com/nshephard/mvdate][mvdate]]) setup on GitLab with Continuous Integration to publish the packages that
 I wanted to retain whilst working out how to migrate the repositories to my self hosted Forgejo instance. I also wanted
-to retain backup on GitLab should my VPS die completely (it has done [[https://www.theregister.com/2022/03/22/ovhcloud_fire_datacenter_report/][before]]).
+to retain backup on GitLab should my VPS die completely (it has done [[https://www.theregister.com/2022/03/22/ovhcloud_fire_datacenter_report/][before]]). Unfortunately on the free tier on GitLab
+it only supports Push mirroring (i.e. /GitLab > Forgejo/ and not /Forgejo > GitLab/). I therefore opted to use the
+Migration feature of Forgejo to mirror the repository.
 
-Doing so involved setting up multiple ~origins~ for my local [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] repository.
+** Migration
+
+Forgejo includes functionality to migrate data from other forges. In order to migrate all information including labels,
+issues, merge requests, releases and milestones you need to generate a Personal Access Token with the appropriate
+permissions on the Forge you wish to migrate from.
+
+
+** Adding Remotes
+
+Adding a secondary remote to a git repository is straight forward using ~git remote add <name> <target_url>~.
+
+src bash
+git remote add forgejo ssh://forgejo@forgejo.your.domain:562/<user_account>/test.git
+#+end_src
+
+You can now push and pull from ~git [fetch|push|pull] forgejo~ from Forgejo instance but because of the way mirroring is
+setup pushing would be a bad idea as it would leave the main copy on GitLab behind.
 
 * Links
 
 + [[https://seanthegeek.net/1035/how-to-configure-a-nginx-reverse-proxy-with-lets-encrypt-certificates/][How to configure a nginx reverse proxy with Let's Encrypt certificates - seanthegeek.net]]
 
-** Mirroring
+** Email
+  + [[https://forgejo.org/docs/latest/admin/email-setup/][Email setup | Forgejo - Beyond coding. We forge.]]
+  + [[https://proton.me/support/smtp-submission][How to set up SMTP to use business applications or devices with Proton Mail | Proton]]
 
-+ [[https://docs.gitlab.com/ee/user/project/repository/mirror/][Repository mirroring | GitLab]]
-+ [[https://docs.gitlab.com/ee/user/project/repository/mirror/pull.html][Pull from a remote repository | GitLab]]
+** Mirroring
+  + [[https://docs.gitlab.com/ee/user/project/repository/mirror/][Repository mirroring | GitLab]]
+  + [[https://docs.gitlab.com/ee/user/project/repository/mirror/pull.html][Pull from a remote repository | GitLab]]

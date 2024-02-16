@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       2f138d75-ad63-4079-adbe-1c0cec2d0304
+:mtime:    20240215074651 20240214203536
+:ctime:    20240214203536
+:END:
+#+TITLE: Linux SMTP
+#+FILETAGS: :linux:smtp:email:services:
+
+* Installation ([[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]])
+
+1. ~pacman -Syu postfix~
+2. Edit ~/etc/postfix/aliases~ and add ~root: you~ so that mails to ~root~ get forwarded to you.
+3. Run ~postalias /etc/postfix/aliases~
+* Link
+
++ [[https://wiki.archlinux.org/title/Postfix][Postfix - ArchWiki]]
