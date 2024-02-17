@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       2cd3fed4-bf8b-4f8a-be97-a74863ff022b
+:mtime:    20240217093325
+:ctime:    20240217093325
+:END:
+#+TITLE: Git Reference
+#+FILETAGS: :git:reference:branch:tag:

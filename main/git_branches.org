@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       661f45c0-cec7-4b57-b2b1-7da8f9d8d0e6
-:mtime:    20240130203610
+:mtime:    20240217093159 20240130203610
 :ctime:    20240130203610
 :END:
 #+TITLE: Git Branches
@@ -10,7 +10,7 @@
 The beauty of Git is that it allows multiple people to work on the same software project without interfering with each
 others work.  This is done through [[https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging][branching and merging]].
 
-ATTR_HTML: :width 800px
+ATTR_HTML: :width 600px
 #+CAPTION: Branches mean different things by [[https://jvns.ca/blog/2023/11/23/branches-intuition-reality/][Julia Evans]]
 NAME: git-branches
 [[./img/git/git_meet_the_branch_julia_evans.png]]
@@ -197,3 +197,12 @@ switch. An alternative model to this is to use [[id:ddcfed69-2ba5-442a-99b4-eaa5
 
 It is good practice to delete branches both locally and on ~origin~ after they are done with. An article on doing so
 locally is [[https://www.wisdomgeek.com/development/delete-git-branches-that-do-not-exist-on-remote/][Delete git branches that do not exist on remote - Wisdom Geek]].
+
+* There is no such things as a branch!
+
+In reality there is no such thing as branches, they are just a [[id:2cd3fed4-bf8b-4f8a-be97-a74863ff022b][reference]] to a commit in the "database" that Git uses to
+keep track of everything! [[https://medium.com/@Sergeon/git-branches-are-just-references-to-commits-b66923026df9][Git branches are just references to commits]].
+
+* Links
+
++ [[https://github.com/tummychow/git-absorb][git-absorb]]
