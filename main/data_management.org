@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       60748503-8e7d-42af-ab36-b67a8b3858d0
-:mtime:    20240201125041 20231208123959 20230426122337 20230330144615
+:mtime:    20240219222901 20240201125041 20231208123959 20230426122337 20230330144615
 :ctime:    20230330144615
 :END:
 #+TITLE: Data Management
@@ -8,6 +8,13 @@
 
 Most data needs managing, if you don't it ends up messy and wasting time. It therefore pays to think about what sort of
 data you are going to collect and how to manage it.
+
+* Data Dictionaries
+
+Arguably the single most important aspect of working with data, aside from the data itself, is to have a decent
+dictionary which describes what data has been (or ideally will be) collected.
+
++ [[https://cghlewis.com/blog/data_dictionary/][Using a data dictionary as your roadmap to quality data | Crystal Lewis]]
 
 * SQLite3
 
@@ -51,8 +58,15 @@ SELECT * FROM ATable;
 #+end_src
 * Links
 
+** Data Dictionaries
+
++ [[https://cghlewis.com/blog/data_dictionary/][Using a data dictionary as your roadmap to quality data | Crystal Lewis]]
++ [[https://cghlewis.com/blog/data_mgmt_resources/][A Curated Collection of Data Management Resources | Crystal Lewis]]
+
+** SQLite3
 + [[https://www.sqlitetutorial.net/][SQLite Tutorial]]
 + [[https://gvwilson.github.io/sql-tutorial/][SQL for Data Scientists in 100 Queries]]
+
 
 ** Books
 

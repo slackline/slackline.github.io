@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       49d21f82-887e-4ec7-8963-89460673352a
-:mtime:    20240201080314 20231201132401 20231130163702 20231113231025 20231028235755 20231005121249 20231002134921 20230905114847 20230813212014 20230724103934 20230224093243 20230103103310 20221210163140
+:mtime:    20240219222858 20240201080314 20231201132401 20231130163702 20231113231025 20231028235755 20231005121249 20231002134921 20230905114847 20230813212014 20230724103934 20230224093243 20230103103310 20221210163140
 :ctime:    20221210163140
 :END:
 #+title: Research Software Engineering
@@ -87,3 +87,4 @@ Research Software Engineering covers many areas of software development such as 
 + [[https://www.theverge.com/22684730/students-file-folder-directory-structure-education-gen-z][File Not Found - Kids who grew up with search engines could change STEM education forever]]
 + [[https://danielskatzblog.wordpress.com/2021/05/14/software-development-curve/][Introducing the Software Development Curve]]
 + [[https://missing.csail.mit.edu/][The Missing Semester of Your CS Education]]
++ [[https://berthub.eu/articles/posts/a-2024-plea-for-lean-software/][A 2024 Plea for Lean Software (with running code) - Bert Hubert's writings]]

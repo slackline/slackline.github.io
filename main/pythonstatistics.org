@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ec8e7ee9-0316-4de2-98c1-f775c20b0e35
-:mtime:    20231220203935 20231214173924 20231126082956 20231120135549 20231108103106 20231001132808 20230905212210 20230905092900 20230711203358 20230510155356 20230330143114 20230103103314 20220323114739 20230103103314 20230103103308
+:mtime:    20240218135858 20231220203935 20231214173924 20231126082956 20231120135549 20231108103106 20231001132808 20230905212210 20230905092900 20230711203358 20230510155356 20230330143114 20230103103314 20220323114739 20230103103314 20230103103308
 :ctime:    20220323114739 20230103103308
 :END:
 #+TITLE: Python Data Analysis and Visualisation
@@ -16,47 +16,13 @@ package for that provides a sensible structure and creates it for you is [[https
 
 * Packages
 ** Data Analysis
-:PROPERTIES:
-:ID:       f7c491f4-c557-4a68-916a-4e883a15e8ac
-:mtime:    20231220203935 20231126082956 20230103103311 20220323114739 20230103103309
-:ctime:    20220323114739
-:END:
-*** NumPy
 
-For more on Numpy see [[id:d7b0fb90-d668-4e31-bc2d-305f6ee14fc9][here]].
-
-*** SciPy
-:PROPERTIES:
-:ID:       56d20ad7-c064-49bd-8ed7-eea6944d84c1
-:mtime:    20230103103312 20220323114739
-:ctime:    20220323114739
-:END:
-*** Pandas
-:PROPERTIES:
-:ID:       28963f75-6411-4e1b-b4d3-1d7e7510052c
-:mtime:    20220323114739
-:ctime:    20220323114739
-:END:
-*** Scikit-Learn
-:PROPERTIES:
-:ID:       fbd601a5-ef1a-415d-a701-ba03fb5218d6
-:mtime:    20220323114739
-:ctime:    20220323114739
-:END:
-
-A very large and comprehensive package for machine learning.
-
-*** Statsmodels
-:PROPERTIES:
-:ID:       880b87a3-9bfd-4bc7-9e67-a5ec5f5cde3a
-:mtime:    20231120135549 20220323114739
-:ctime:    20220323114739
-  :END:
-
-*** ydata-profiling
-
-A neat package for summarising Pandas data frames is [[https://docs.profiling.ydata.ai/latest/][ydata-profiling]] which takes the hard work out of a lot of common
-summarisation tasks.
++ [[id:d7b0fb90-d668-4e31-bc2d-305f6ee14fc9][NumPy]].
++ Pandas
++ Scikit-Learn
++ Statsmodels
++ [[https://docs.profiling.ydata.ai/latest/][ydata-profiling]] - takes the hard work out of a lot of common summarisation tasks.
++ Polars
 
 ** Visualisation
 :PROPERTIES:
