@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f277da12-5d6d-46e3-a49c-7bda9254d469
-:mtime:    20240218160428 20240217180720 20240215130935 20240209160828 20240123221325 20240121200647
+:mtime:    20240222094145 20240218160428 20240217180720 20240215130935 20240209160828 20240123221325 20240121200647
 :ctime:    20240121200647
 :END:
 #+TITLE: FOSS
@@ -92,6 +92,14 @@ that page, if not they take you to the projects site.
 ** Essays
 
 + [[https://www.cynicusrex.com/file/takemymoney.html][What if I paid for all my free software? | Angelino Desmet]]
+
+** Misc
+
++ [[https://fosdem.org/2024/schedule/event/fosdem-2024-3095-one-way-forward-finding-a-path-to-what-comes-after-unix/][FOSDEM 2024 - One way forward: finding a path to what comes after Unix]]
+  + [[https://fosdem.org/2024/schedule/event/fosdem-2024-3095-one-way-forward-finding-a-path-to-what-comes-after-unix/][One way forward: finding a path to what comes after Unix]]
+  + [[https://www.theregister.com/2024/02/16/what_is_unix/][Forgetting the history of Unix is coding us into a corner • The Register]]
+  + [[https://www.theregister.com/2024/02/21/successor_to_unix_plan_9/][The successor to Research Unix was Plan 9 from Bell Labs • The Register]]
+  + [[https://cr.yp.to/bib/1995/wirth.pdf][A Plea for Lean Software - Niklaus Wirth]]
 
 ** Tools
 

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       cbdb0c03-0eeb-45f0-a4c7-91131519120e
-:mtime:    20240130204013
+:mtime:    20240221154046 20240130204013
 :ctime:    20240130204013
 :END:
 #+TITLE: Git Bisect
@@ -13,9 +13,12 @@ and this serves as a template for the following examples.
 
 #+begin_src sh
   git bisect start
+  git bisect good <ref>
   git bisect bad HEAD
-  git bisect good <hash>
 #+end_src
+
+~<ref>~ can be a commit hash or the relative commit from ~HEAD~ e.g. ~HEAD\~20~ will take the commit 20 back from the
+current position.
 
 Git will then automatically checkout the revisions in the middle of this range and we have to run our tests or builds to
 check if things work, marking the commit as ~git bisect good~ or ~git bisect bad~. Git then repeats this process
@@ -24,3 +27,10 @@ splitting the commit range again. This is repeated until a bad commit is found a
 On completion ~git bisect reset~ restores ~HEAD~.
 
 This can be done in [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] of course!
+
+
+* Links
+
+** Videos
+
++ [[https://www.youtube.com/watch?v=uzog0BTLrYY][The Business of Bisecting - Pauline Vos - YouTube]]

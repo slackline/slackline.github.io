@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       39a3e4f4-3d19-424d-ad9d-4e080298b891
-:mtime:    20240216105657
+:mtime:    20240221165544 20240219143102 20240216105657
 :ctime:    20240216105657
 :END:
 #+TITLE: IPython
@@ -11,7 +11,7 @@
 Create a [[https://ipython.readthedocs.io/en/stable/config/intro.html#setting-configurable-options][configuration]] file with
 
 #+begin_src: bash
-ipython profile create <profile_name>
+  ipython profile create <profile_name>
 #+end_src
 
 ...which creates ~\~/.ipython/profile_<profile_name>/ipython.config~.
@@ -27,6 +27,16 @@ Use the [[https://ipython.readthedocs.io/en/stable/config/extensions/autoreload.
 %autoreload 2
 #+end_src
 
+Add the following to your  ~\~/.ipython/profile_<profile_name>/ipython.config~ which loads these automatically on
+starting IPython ([[https://engineeringfordatascience.com/posts/autoreload_ipython_config/][source]])
+
+#+begin_src: python
+c = get_config()  # noqa
+c.InteractiveShellApp.exec_lines = []
+c.InteractiveShellApp.exec_lines.append("%load_ext autoreload")
+c.InteractiveShellApp.exec_lines.append("%autoreload 2")
+print("~~~~~~~~~~~~ AUTORELOAD ENABALED ~~~~~~~~~~~~")
+#+end_src
 * Links
 
 + [[https://ipython.readthedocs.io/en/stable/index.html][IPython]]

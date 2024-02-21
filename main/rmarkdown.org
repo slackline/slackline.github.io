@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ca27ae38-f187-4a3c-803f-b36ee2cfa374
-:mtime:    20230103103313 20220216065705
+:mtime:    20240222103333 20230103103313 20220216065705
 :ctime:    20220216065705
 :END:
 #+TITLE: RMarkdown
@@ -8,11 +8,23 @@
 #+FILETAGS: :R:literate programming:
 
 [[https://rmarkdown.rstudio.com/][R Markdown]] is a superb language for [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]] as it leverages the simplicity of [[id:0c371287-128d-4e46-8128-b2d4f5fc604c][Markdown]] but enriches it with
-embedded code that can display tables, graphs and more as well as supporting in-line code and [[id:e1c2cfef-1b43-47a8-a425-94e6ae58d917][LaTeX]].
+embedded code that can display tables, graphs and more as well as supporting in-line code and [[id:e1c2cfef-1b43-47a8-a425-94e6ae58d917][LaTeX]]. A lot of the notes
+here overlap with [[id:251b3ae4-4a5c-4c44-909a-dcbc0aef4b45][Quarto]].
 
 * Code Blocks
 
 * LaTeX
+
+* Extracting Code Chunk
+
+If you want to extract your [[id:251b3ae4-4a5c-4c44-909a-dcbc0aef4b45][Quarto]] code chunks to their own script you should include the ~#| purl: true~ in the header
+of the code cells (see [[https://quarto.org/docs/reference/cells/cells-knitr.html][Quarto – Code Cells: Knitr]]) and you can then run ~knitr::purl()~ on the file to get the code
+chunks written to a separate file, by default the name of the source file with the extension ~.R~ in the current
+directory but that can be modified.
+
+#+begin_src: R
+knitr::purl(input="input.qmd", output="path/to/output.R")
+#+end_src
 
 * Links
 
