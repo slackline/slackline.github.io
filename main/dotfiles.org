@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       31304184-2fad-4cc5-824b-3ab4b9d2e126
-:mtime:    20230418113544 20230214231111 20230103103309 20221212181558
+:mtime:    20240224205650 20230418113544 20230214231111 20230103103309 20221212181558
 :ctime:    20221212181558
 :END:
 #+TITLE: Dotfiles
@@ -45,3 +45,5 @@ Make a repository for yo
 
 + [[https://dotfiles.io/][Dotfiles - Simply designed to fit your shell life (UK)]]
 + [[https://www.chezmoi.io/][chezmoi - chezmoi]]
++ [[https://www.atlassian.com/git/tutorials/dotfiles][How to Store Dotfiles - A Bare Git Repository | Atlassian Git Tutorial]]
+  + [[https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/][The best way to store your dotfiles: A bare Git repository **EXPLAINED** - Ackama]]

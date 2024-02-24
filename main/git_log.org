@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0b6eddb6-eb5c-4f26-aaea-beed3505f195
-:mtime:    20240205164459 20231115133528
+:mtime:    20240224205636 20240205164459 20231115133528
 :ctime:    20231115133528
 :END:
 #+TITLE: Git Log
@@ -51,3 +51,17 @@ Find the first commit of the current branch using the following. Typically this 
 #+begin_src bash
   git log `git rev-list --max-parents=0 HEAD`
 #+end_src
+
+* Visualisation
+
+There are, as noted above, a bunch of ways in changing the output of your code. [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]] has a number of built-in aliases for
+how the log output should look but there are other tools available for visualising Git logs/graphs that are somewhat
+easier on the eye.
+
+** [[https://github.com/mlange-42/git-graph][~git-graph~]]
+
+Written in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]] (like so many of the cool things these days) it produces very nice graphs.
+
+** [[https://github.com/mlange-42/git-igitt][~git-igitt~]]
+
+An extension of ~git-graph~ that is interactive.
