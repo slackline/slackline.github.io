@@ -3,15 +3,8 @@
 #+AUTHOR: Neil Shephard
 #+email: nshephard@gmail.com
 
-* org-roam
+This is my [[https://www.orgroam.com/][org-roam]] repo, there are many like it but this one is mine.
 
-My org-roam files, topics include...
-
-+ [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Python]]
-+ [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]]
-+ [[id:0911a63f-4b82-4bf1-9235-f1e41e93d210][Open Research]]
-
-* Links
-
-* [[https://gitlab.com/nshephard/emacs][emacs]] (includes configuration for all things org)
-* [[https://gitlab.com/nshephard/org][org]] my non-org-roam org files.
+I used to keep my notes on a DokuWiki [[https://kimura.no-ip.info][instance]] and loved it, using the Markdown plugin made it easy to write, but over
+time I gravitated towards using Emacs for more and more tasks so it made sense to keep my notes on technical issues and
+other areas in Emacs too and at the time Org-roam was the most sensible option to go with.
