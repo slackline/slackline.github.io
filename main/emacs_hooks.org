@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c661d96e-98e3-43ca-b22f-e5dec7bf33f7
-:mtime:    20231222143742
+:mtime:    20240226121358 20231222143742
 :ctime:    20231222143742
 :END:
 #+TITLE: Emacs Hooks
@@ -8,4 +8,5 @@
 
 * Links
 
++ [[https://arialdomartini.github.io/emacs-hooks][Emacs: how to activate the functionality X for all files of type Y?]]
 + [[https://www.danliden.com/posts/20231217-emacs-hooks.html][Introduction to Emacs Hooks]]
