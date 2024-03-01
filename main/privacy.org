@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b5000932-0fec-4353-acc4-0cb02127c9ac
-:mtime:    20240122165548 20240107095430 20231221072710 20231211080603 20231121210843
+:mtime:    20240301231300 20240122165548 20240107095430 20231221072710 20231211080603 20231121210843
 :ctime:    20231121210843
 :END:
 #+TITLE: Privacy and Encryption
@@ -23,6 +23,7 @@ Privacy is important, it underpins free speech, but many chose to sacrifice thei
 + [[https://protonmail.com][Proton Mail]]
 + [[https://framasoft.org/en/][Framasoft]]
 + [[https://threema.ch/en/home][Threema – The Secure Messaging App Without Data Collection]]
++ [[https://ente.io/][Ente - Encrypted photo backup]]
 
 * Advocacy
 
