@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       52b4db29-ba21-4a8a-9b83-6e9a8dc02f41
-:mtime:    20240110125102 20230708080833 20230626121713 20230519193813 20230519143618 20230103103310 20221211233405
+:mtime:    20240302150709 20240110125102 20230708080833 20230626121713 20230519193813 20230519143618 20230103103310 20221211233405
 :ctime:    20221211233405
 :END:
 #+TITLE: GitHub
@@ -68,10 +68,13 @@ benefits of GitHub Teams on organisations that you are a member of/control.
 
 * Links
 ** GitHub Pages
+
 + [[https://pages.github.com/][Websites for you and your projects, hosted directly from your GitHub repository.]]
 
 ** Configuration
+
 + [[https://github.com/repository-settings/app][repisotyr-settings/app]] Configure repositories via a config file.
+
 ** Automation
 + [[https://docs.github.com/en/actions][GitHub Actions Documentation]]
 + [[https://github.com/actions][GitHub Actions Library]]
@@ -103,7 +106,8 @@ benefits of GitHub Teams on organisations that you are a member of/control.
 
 + [[https://github.com/readme/featured/open-source-minimalism][Open Source Minimalism]]
 + [[https://github.com/readme/featured/why-the-lucky-stiff][What we can learn from “_why”, the long lost open source developer]]
++ [[https://neodyme.io/en/blog/github_secrets/][Hidden GitHub Commits and How to Reveal Them — Neodyme]]
 
-** Miscellaneious
+** Miscellaneous
 
 + [[https://anvaka.github.io/map-of-github/#2/0/0][Map of GitHub]]

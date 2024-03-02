@@ -1,0 +1,61 @@
+:PROPERTIES:
+:ID:       5d906b68-22c8-4169-8b0d-d3f3a02d2faa
+:mtime:    20240302202817
+:ctime:    20240302202817
+:END:
+#+TITLE: Etherpad
+#+FILETAGS: :linux:nginx:web:
+
+I fancied having my own Etherpad instance for collaboration when needed so set about installing it on my VPS and unlike
+most other things I do on it I thought I'd document installation and setup.
+
+* Installation
+
+I use [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] so installed using the package on [[https://aur.archlinux.org/packages/etherpad-lite/][AUR | etherpad-lite]]. I manually installed ~npm~ before doing so.
+
+#+begin_src: bash
+cd ~/aur
+git clone https://aur.archlinux.org/etherpad-lite.git
+makepkg -sri
+#+end_src:
+
+* Configuration
+
+** SQLite
+
+Sparse information on this but I found [[https://thomas.thehawkinsfamily.ca/][Thomas' Tidbits]] had a three part series on how to set things up which was really
+useful.
+
+** Nginx
+
+Rather than exposing Etherpad directly I opted to leave it running on the ~localhost~ and setup a reverse proxy in [[id:3774439d-af75-453e-b3e9-9d578b6bec46][Nginx]]
+so that I could add a ~CNAME~ alias in my DNS and have it point to ~https://etherpad.mydomain.dev~.
+
+Initially a  [[https://www.digitalocean.com/community/tutorials/how-to-install-the-etherpad-collaborative-web-editor-on-ubuntu-20-04][DigitalOcean]] article on setting things up on Ubuntu 20.04 was attempted but I found it
+lacking. Fortunately, unlike SQLite, the wiki has extensive information on [[https://github.com/ether/etherpad-lite/wiki/How-to-put-Etherpad-Lite-behind-a-reverse-Proxy#nginx][How to put Etherpad Lite behind a reverse
+proxy - Nginx]].
+
+*** Certbot certificates
+
+I use [[id:10cd5613-0b84-4e68-8abf-ed4cd1803621][certbot]] to get certificates for my domain and have the nginx plugin
+
+#+begin_src: bash
+certbot certonly -d etherpad.mydomain.dev
+#+end_src
+
+*** DNS
+
+Straight-forward to add a ~CNAME~ that points ~etherpad.mydomain.dev~ to ~mydomain.dev~.
+
+* Links
+
++ [[https://github.com/ether/etherpad-lite/][Etherpad-lite | GitHub]]
++ [[https://github.com/ether/etherpad-lite/wiki][Etherpad-lite Wiki]]
++ [[https://wiki.archlinux.org/title/Etherpad-lite][Etherpad-lite - ArchWiki]]
++ [[https://www.digitalocean.com/community/tutorials/how-to-install-the-etherpad-collaborative-web-editor-on-ubuntu-20-04][How To Install the Etherpad Collaborative Web Editor on Ubuntu 20.04 | DigitalOcean]]
+
+** Blogs
+
++ [[https://thomas.thehawkinsfamily.ca/post.php?post=2020-05-22_10_57_00_setting_up_etherpad_lite_on_linux_with_sqlite_database][Thomas' Tidbits : Setting up Etherpad Lite on Linux with SQLite Database (Part 1)]]
++ [[https://thomas.thehawkinsfamily.ca/post.php?post=2020-05-30_20_32_00_setting_up_etherpad_lite_on_linux_with_sqlite_database_%28part_2%29][Thomas' Tidbits : Setting up Etherpad Lite on Linux with SQLite Database (Part 2)]]
++ [[https://thomas.thehawkinsfamily.ca/post.php?post=2020-06-05_20_37_00_setting_up_etherpad_lite_on_linux_with_sqlite_database_%28part_3%29][Thomas' Tidbits : Setting up Etherpad Lite on Linux with SQLite Database (Part 3)]]
