@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       69291a6b-c253-44bc-ad9d-8d899bb90529
+:mtime:    20240304160447
+:ctime:    20240304160447
+:END:
+#+TITLE: NixOS
+#+FILETAGS: :linux:unix:nixos:
+
+
+* Links
+
++ [[https://economicsfromthetopdown.com/2024/02/17/nixing-technological-lock-in/][Nixing Technological Lock In – Economics from the Top Down]]

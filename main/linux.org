@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0e6300c6-7025-4f45-820d-4d9da82b41a6
-:mtime:    20240302204630 20240121200503 20240121115714 20240107103825 20231219213305 20231126221347 20231121204845 20231120130321 20231015172332 20231005133759 20230926220759 20230917083604 20230905212306 20230724174038
+:mtime:    20240304160438 20240302204630 20240121200503 20240121115714 20240107103825 20231219213305 20231126221347 20231121204845 20231120130321 20231015172332 20231005133759 20230926220759 20230917083604 20230905212306 20230724174038
 :ctime:    20230724174038
 :END:
 #+TITLE: Linux
@@ -14,13 +14,24 @@ Linux is the code that gets your hardware to talk to each other and interact wit
 itself, a pretty important component (the GNU attempt to get a replacement UNIX kernel, [[https://www.gnu.org/software/hurd/][hurd]] is /still/ a work in
 progress).
 
+I've used GNU/Linux variants for almost 20 years they are brilliant and an amazing example of what can be achieved using
+the [[id:f277da12-5d6d-46e3-a49c-7bda9254d469][Free Open Source Software (FOSS)]] and collaborative working. I've used many variants starting with RedHat 7.3, then
+trying out [[https://slackware.com][Slackware]] for a few years before jumping to [[https://www.gentoo.org][Gentoo]] and more recently using [[https://archlinux.org][Arch]] for lower powered devices and
+work machines as I don't have time to tinker/maintain them in addition to my long standing Gentoo server.
+
+
 * Distributions
 
 I started with RedHat 7.3 at work setting up a server for others to run their [[id:9aa32f65-144f-4c52-aab6-afebd17c1e5b][Genetic]] analysis on. Quickly decided to
 try out [[http://www.slackware.com/][Slackware]] at home, liked compiling from source and the lack of circular dependency hell that frustrated me with
 RedHats RPM system.  After a while wanted a package management system as I found it awkward uninstalling a packages
 dependencies and so tried out [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]] and loved it and still use it to this day. For laptops and lower-powered devices
-I've settled on [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] as I've never bothered to set up distributed cross-compilation under Gentoo.
+I've settled on [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] as I've never bothered to set up distributed cross-compilation under Gentoo. I'm very
+interested to give NixOS a whirl though.
+
++ [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]]
++ [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch]]
++ [[id:69291a6b-c253-44bc-ad9d-8d899bb90529][NixOS]]
 
 * Shells
 
@@ -29,6 +40,10 @@ along with the [[https://ohmyz.sh/][Oh-myZsh]] framework. I liked the extra info
 back. I still use Bash for my ~root~ account though just to make me a little more cautious.
 
 ** Terminals
+:PROPERTIES:
+:mtime:    20240304160701
+:ctime:    20240304160701
+:END:
 
 I like using the [[https://sw.kovidgoyal.net/kitty/][kitty]] terminal emulator. Its highly configurable, fast and easy to use (plus it supports transparency
 and doesn't use large boarders which take up real-estate on the screen).
@@ -59,7 +74,7 @@ It can be handy to have a live distribution to carry around and boot as and when
 * Topics
 :PROPERTIES:
 :ID:       f67cfdbc-32de-4a45-8e04-72d94c11ddd8
-:mtime:    20240302204630 20240107103825
+:mtime:    20240304160438 20240302204630 20240107103825
 :ctime:    20240107103825
 :END:
 
@@ -73,6 +88,9 @@ Miscellaneous topics
 + [[id:0539fa9c-fc0e-4cb8-a3f4-eee46899240a][Node Package Manager]]
 + [[id:5d906b68-22c8-4169-8b0d-d3f3a02d2faa][Etherpad]]
 + [[id:63fa9747-24ef-40e2-a2ed-d6bd4133374f][Xfce4]]
++ [[id:3774439d-af75-453e-b3e9-9d578b6bec46][Nginx]]
++ [[id:13de4e0e-4c14-48c8-897e-42862be8cfc1][discourse]]
++ [[id:fab2461a-c95a-47e3-9e5d-64af083c92e0][QEMU]]
 
 * Android
 
