@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       4c9eab3d-4ae2-4f48-a32c-925929fe60bf
-:mtime:    20230920230340 20230915175523 20230914185947 20230906113833 20230816094158 20230706112845 20230224183541 20230103103310 20221220065948
+:mtime:    20240304231237 20230920230340 20230915175523 20230914185947 20230906113833 20230816094158 20230706112845 20230224183541 20230103103310 20221220065948
 :ctime:    20221220065948
 :END:
 #+title: Open Research Data
@@ -41,6 +41,7 @@ consideration should be given to principles of GDPR.
 
 + [[https://think.f1000research.com/open-data/toolkit/][Open Data Toolkit - F1000 Research]]
 + [[https://assist.fairsharing.org][FAIRsharing Assistant]]
++ [[https://www.ouvrirlascience.fr/open-science-research-data/][Ouvrir la Science - Open Science library]]
 
 ** Tools
 + [[https://opentelemetry.io/][OpenTelemetry]]
