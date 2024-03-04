@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a29a1e50-3cf2-4d88-a71d-7c600fdf8f65
-:mtime:    20230114084624
+:mtime:    20240304065906 20230114084624
 :ctime:    20230114084624
 :END:
 #+TITLE: Emacs LSP
@@ -82,3 +82,37 @@ The [[https://github.com/jrblevin/markdown-mode][markdown-mode]] package can be 
           ("C-c C-m" . markdown-do)))
 
 #+end_src
+
+** Ltex
+
+[[https://valentjn.github.io/ltex/][LTeX]] is a bit of a magic bullet, it provides "_grammar/spell checking using language tool  with support for LaTeX,
+Markdown and Others_". This includes [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]] which was a real short coming for sometime since I write these notes in
+[[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]]!
+
+*** Installing
+
+Under Emacs you can use the [[https://github.com/emacs-languagetool/lsp-ltex][emacs-languagetool/lsp-ltex]] package but yo have to have the language server [[https://valentjn.github.io/ltex/ltex-ls/installation.html][ltex-ls]]
+installed. Under Gentoo this is available from the [[https://github.com/msva/mva-overlay/][mva overlay]].
+
+**** Gentoo
+
+#+begin_src bash
+eselect repository mva
+emerge -av ltex-ls
+#+end_src
+
+**** Arch
+
+For Arch install from [[https://aur.archlinux.org/packages/ltex-ls-bin][AUR (en) - ltex-ls-bin]]
+
+
+#+begin_src bash
+git clone https://aur.archlinux.org/ltex-ls-bin.git
+cd ltex-ls-bin
+makepkg -sri
+#+end_src
+
+
+* Links
+
++ [[https://andreyor.st/posts/2023-09-09-migrating-from-lsp-mode-to-eglot/][Migrating from LSP-Mode to Eglot · Andrey Listopadov]]
