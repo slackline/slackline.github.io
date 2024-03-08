@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       5e4b0759-696f-47a7-81c1-a7506aab41a0
+:mtime:    20240306145316
+:ctime:    20240306145316
 :END:
 #+TITLE: Reading
 #+FILETAGS: :reading:science:fiction:
@@ -104,3 +106,7 @@ nature v nurture.
 + <2020-12-17 Thu> [[https://aeon.co/essays/the-gaia-hypothesis-reimagined-by-one-of-its-key-sceptics][The Gaia hypothesis reimagined by one of its key sceptics | Aeon Essays]]
 *** Quanta Magazine
 + <2023-10-01 Sun> [[https://www.quantamagazine.org/insect-brains-melt-and-rewire-during-metamorphosis-20230726/][Insect Brains Melt and Rewire During Metamorphosis | Quanta Magazine]]
+
+* Not Yet Read
+
++ [[https://gerrymcgovern.com/world-wide-waste/][World Wide Waste - Gerry McGovern]]
