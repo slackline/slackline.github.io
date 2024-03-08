@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9aa32f65-144f-4c52-aab6-afebd17c1e5b
-:mtime:    20230129213127 20230103103312 20221211200227
+:mtime:    20240308164239 20230129213127 20230103103312 20221211200227
 :ctime:    20221211200227
 :END:
 #+TITLE: Genetics
@@ -17,3 +17,7 @@ diseases. More on this can be found in the section on [[id:3899f7f8-bc4a-4228-b9
 ** General Reading
 
 + [[https://www.theguardian.com/science/2023/jan/29/the-human-genome-needs-updating-but-how-do-we-make-it-fair][The Guardian | The human genome needs updating. But how do we make it fair?]]
+
+** Miscellaneous
+
++ [[https://arcinstitute.org/news/blog/evo][Evo: DNA foundation modeling from molecular to genome scale | Arc Institute]]
