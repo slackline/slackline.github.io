@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8178219c-ef79-4b59-ad51-e4204a8f369c
-:mtime:    20231106164927
+:mtime:    20240309205745 20231106164927
 :ctime:    20231106164927
 :END:
 #+TITLE: Fediverse
@@ -26,3 +26,7 @@ it with his personal agenda.
 * ForgeJo
 
 [[https://forgejo.org/][ForgeJo]] is a self-hosted GitHub repository which aims for federation (although its still a work in progress).
+
+* Matrix
+
+[[id:7c18f6c4-375e-4832-9e40-f44d04245e8a][matrix]]

@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       7c18f6c4-375e-4832-9e40-f44d04245e8a
+:mtime:    20240309205622
+:ctime:    20240309205622
+:END:
+#+TITLE: Matrix
+#+FILETAGS: :fediverse:matrix:chat:
+
+[[https://matrix.org/][Matrix]] is an open, decentralised network for secure communication.
+
+* Clients
+
+** Web
+
++ [[https://element.io/][Element]] - My preferred way of interacting with the Matrix network from the browser.
+
+** Android
+
++ [[https://f-droid.org/packages/im.vector.app/][Element]] - My preferred way of interacting with the Matrix network from my [[id:2c46e54a-d704-4e7e-bca3-d8c3e042ab43][Android]] phone.
+
+* Links
+
++ [[https://delightful.club/delightful-matrix/][delightful matrix]] a curated list of delightful Matrix resources, implementations and clients.

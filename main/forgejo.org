@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       736537b3-75e0-4c24-9156-364937e0e8a2
-:mtime:    20240215065336 20240214220237 20240214203455 20240213073417 20240211204231 20240211163700 20240211140707
+:mtime:    20240309204131 20240215065336 20240214220237 20240214203455 20240213073417 20240211204231 20240211163700 20240211140707
 :ctime:    20240211140707
 :END:
 #+TITLE: Forgejo
@@ -320,6 +320,7 @@ setup pushing would be a bad idea as it would leave the main copy on GitLab behi
 * Links
 
 + [[https://seanthegeek.net/1035/how-to-configure-a-nginx-reverse-proxy-with-lets-encrypt-certificates/][How to configure a nginx reverse proxy with Let's Encrypt certificates - seanthegeek.net]]
++ [[https://delightful.club/delightful-forgejo/][delightful Forgejo]] - a curated list of delightful Forgejo related projects and resources.
 
 ** Email
   + [[https://forgejo.org/docs/latest/admin/email-setup/][Email setup | Forgejo - Beyond coding. We forge.]]
