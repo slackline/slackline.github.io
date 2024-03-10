@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       28ffcc43-9dff-4de8-a211-277c5346a642
-:mtime:    20240217133735 20240211172814 20240130202744
+:mtime:    20240310181605 20240217133735 20240211172814 20240130202744
 :ctime:    20240130202744
 :END:
 #+TITLE: Git Forges
@@ -22,7 +22,7 @@ the linked pages.
 | [[https://forgejo.org/][Forgejo]]   | A fork of Gitea which aims to allow federation between instances hosted on different servers.                                    |
 | [[https://git.zx2c4.com/cgit/about/][cgit]]      | A hyperfast web frontend for git repositories written in C.                                                                      |
 | Bare repo | It is also relatively simple to [[https://maddie.info//2023/09/05/simple-and-small-git-hosting.html][self-host over SSH]].                                                                              |
-|           |                                                                                                                                  |
+| [[https://radicle.xyz/][Radicle]]   | Peer-to-peer code collaboration stack built on Git.                                                                              |
 
 The Gittea based offerings have far less complete CI but there is a growing number of tools such as [[https://davejansen.com/publish-to-netlify-using-gitea-actions/][deploying to Netlify]].
 

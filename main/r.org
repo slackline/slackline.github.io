@@ -53,6 +53,15 @@ environment variable ~DOWNLOAD_STATIC_LIBV8=1~ so you can...
 
 ...and it will download the library that is required.
 
+** Connectivity
+
+Some packages, by their nature (e.g. ~{googlesheets}~) require network connectivity to work, but not all do. You can
+check whether a given package needs network connectivity (under GNU/Linux at least) with
+
+#+begin_src: bash
+unshare --net --ipc -r R CMD check {package}_0.1.0.tar.gz
+#+end_src
+
 * Topics
 
 ** Base R

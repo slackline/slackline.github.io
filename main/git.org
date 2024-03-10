@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3c905838-8de4-4bb6-9171-98c1332456be
-:mtime:    20240302201155 20240301234241 20240221200649 20240219222911 20240217211347 20240213221614 20240211213301 20240210201330 20240206214914 20240204190433 20240201174331 20240130212848 20240130202345 20240130093843 20240125081236 20240123220514 20240122180605 20240122164915 20240121215156 20240121101117 20240119090547 20240101000833 20231222225414 20231213080400 20231212094801 20231209093931 20231122193433 20231121195208 20231115215615 20231115133558 20231115114414 20231113084013 20231103084937 20231102202740 20231031213320 20231030192448 20231025145646 20231022202227 20231021073737 20231020224724 20231018215110 20231018204740 20231018073902 20231015085830 20231007203439 20231005064143 20231004202913 20230922202301 20230920064045 20230914220336 20230910195251 20230910183057 20230910113355 20230803214400 20230801215130 20230726132229 20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
+:mtime:    20240310105101 20240310081624 20240302201155 20240301234241 20240221200649 20240219222911 20240217211347 20240213221614 20240211213301 20240210201330 20240206214914 20240204190433 20240201174331 20240130212848 20240130202345 20240130093843 20240125081236 20240123220514 20240122180605 20240122164915 20240121215156 20240121101117 20240119090547 20240101000833 20231222225414 20231213080400 20231212094801 20231209093931 20231122193433 20231121195208 20231115215615 20231115133558 20231115114414 20231113084013 20231103084937 20231102202740 20231031213320 20231030192448 20231025145646 20231022202227 20231021073737 20231020224724 20231018215110 20231018204740 20231018073902 20231015085830 20231007203439 20231005064143 20231004202913 20230922202301 20230920064045 20230914220336 20230910195251 20230910183057 20230910113355 20230803214400 20230801215130 20230726132229 20230723222943 20230720135032 20230708145328 20230708080944 20230707225153 20230628133055 20230617210051 20230513073211 20230509144956 20230426111505 20230413161814 20230331194520 20230224093757 20230222225246
 :ctime:    20230222225246
 :END:
 #+TITLE: Git
@@ -41,7 +41,6 @@ Topics are alphabetical...
 + [[id:3d6bf689-54bd-4551-b367-019e1cb67e73][Merge Conflicts]]
 + [[id:5c6a5268-9f73-46d1-810f-6aa6158101a5][Miscellaneous]]
 + [[id:57ba7f41-cf41-493c-bbf4-9d1e05a0602d][Rebase]]
-+
 + [[id:90a51969-bb25-4a44-8a71-ffcd43b9dfe6][Setup]]
 + [[id:62d4406f-68ce-418b-90aa-25a8978b0248][Stashing]]
 + [[id:8c97a5ea-6a80-4569-a7fa-6223200a0ea6][Teaching]]
@@ -55,7 +54,6 @@ Topics are alphabetical...
 ** Tools
 
 + [[http://gitignore.io/][gitignore.io]]
-+ [[https://initialcommit.com/blog/git-sim][git-sim: Visually simulate Git operations in your own repos]]
 + [[https://github.com/wfxr/forgit][forgit]] eases use of Git at the command line
 + [[https://github.com/o2sh/onefetch][onefetch]] - command line utility for fast overview of a repository.
 + [[https://jonas.github.io/tig/][Tig · Text-mode interface for Git]]
@@ -71,7 +69,6 @@ Topics are alphabetical...
 + [[https://learngitbranching.js.org/][Learn Git Branching]]
 + [[https://srse-git-github-zero2hero.netlify.app/][Git & GitHub through GitKraken Client - From Zero to Hero]]
 + [[https://initialcommit.com/blog/git-sim][git-sim : visually simulate Git operations in your own repos]]
-
 + [[https://maryrosecook.com/blog/post/git-from-the-inside-out][Git from the inside out]] - excellent walk through of Git internals.
 
 ** HowTos
@@ -106,13 +103,15 @@ Topics are alphabetical...
 
 *** Julia Evans
 
++ [[https://jvns.ca/blog/2024/03/08/how-head-works-in-git/][How HEAD works in git]]
++ [[https://jvns.ca/blog/2024/02/16/popular-git-config-options/][Popular git config options]]
 + [[https://jvns.ca/blog/2024/02/01/dealing-with-diverged-git-branches/][Dealing with diverged git branches]]
 + [[https://jvns.ca/blog/2024/01/26/inside-git/][Inside .git]]
 + [[https://jvns.ca/blog/2023/11/23/branches-intuition-reality/][git branches: intuition &amp; reality]]
 + [[https://jvns.ca/blog/2023/11/10/how-cherry-pick-and-revert-work/][How git cherry-pick and revert use 3-way merge]]
 + [[https://jvns.ca/blog/2023/11/06/rebasing-what-can-go-wrong-/][git rebase: what can go wrong?]]
 + [[https://jvns.ca/blog/2023/11/01/confusing-git-terminology/][Confusing git terminology]]
-+ [[(https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/][]Some miscellaneous git facts]]
++ [[https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/][Some miscellaneous git facts]]
 + [[https://jvns.ca/blog/2023/09/14/in-a-git-repository--where-do-your-files-live-/][In a git repository, where do your files live?]]
 
 *** Misc
@@ -127,12 +126,16 @@ Topics are alphabetical...
 + [[https://jvns.ca/blog/2023/09/14/in-a-git-repository--where-do-your-files-live-/][In a git repository, where do your files live?]]
 + [[https://blog.meain.io/2023/what-is-in-dot-git/][What is in that .git directory?]]
 + [[https://alexwlchan.net/a-plumbers-guide-to-git/][A Plumber’s Guide to Git – alexwlchan]]
++ [[https://martinheinz.dev/blog/109][Modern Git Commands and Features You Should Be Using]]
++ [[https://martinheinz.dev/blog/43][Advanced Git Features You Didn’t Know You Needed]]
 + [[https://blog.gitbutler.com/git-tips-and-tricks/][Git Tips and Tricks]] blog post/talk from Scott Chacon (one of the founders of GitHub)
 + [[https://github.com/unixorn/git-extra-commands][unixorn/git-extra-commands: A collection of git utilities, useful extra git scripts, tutorials and other useful
   articles.]]
++ [[https://jwiegley.github.io/git-from-the-bottom-up/][Git from the Bottom Up]]
 
 ** Commits
 
++ [[https://www.conventionalcommits.org/en/v1.0.0/][Conventional Commits]]
 + [[https://dev.to/hornet_daemon/git-commit-patterns-5dm7][Git Commit Patterns]]
 + [[https://trunk.io/blog/git-commit-messages-are-useless?utm_medium=erik.in&utm_source=mastodon][Git commit messages are useless]]
 
