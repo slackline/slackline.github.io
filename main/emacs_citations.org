@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       8b6ba3c1-18f2-4cc4-ae5c-97c31b7cec28
+:mtime:    20240313221707
+:ctime:    20240313221707
+:END:
+#+TITLE: Emacs Citations
+#+FILETAGS: :emacs:bibtex:ebib:org-ref:orgmode:
+
+* Ebib
+
+* Org-ref
+
+
+* Links
+
+** EBib
+
+** Org-ref
++ [[https://github.com/jkitchin/org-ref][jkitchin/org-ref: org-mode modules for citations, cross-references, bibliographies in org-mode and useful bibtex tools to go with it.]]
++ [[https://www.youtube.com/watch?v=vWpDs1riqbQ][OpenAlex Scholar in Emacs]]
