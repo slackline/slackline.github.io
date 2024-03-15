@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ce08bd82-0146-49cb-8a64-048ffe7210f2
-:mtime:    20231231085314 20231210095348 20231126223255 20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
+:mtime:    20240315224355 20231231085314 20231210095348 20231126223255 20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
 :ctime:    20221229210308
 :END:
 #+TITLE: GnuPG
@@ -366,6 +366,45 @@ You can then use id of your new key to encode the directory.
   cd ~/.password-store/
   pass init
 #+end_src
+
+* Signing Git Commits
+
+You need to configure [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] to use the key you want to sign with which should be both secure and if you have subkeys
+should have a signing element.
+
+You can find these out using.
+
+#+begin_src bash
+gpg -K --keyid-format SHORT
+src
+
+If you have subkeys the signing one will be deonted with ~[S]~ at the end (after the creation date). You can use the
+short code (after the type e.g. ~ed25519/########~) to then set your global signing key with...
+
+#+begin_src bash
+git config --global user.signingKey ########
+#+end_src
+
+You can then enable signing on a per-repository basis from within a repository with.
+
+#+begin_src bash
+git config --local commit.gpgsign true
+#+end_src
+
+This adds the following to ~./git/config~
+
+#+begin_src
+[commit]
+    gpgsign = true
+#+end_src
+
+If you want to always sign all commits you can enable this globally which adds the same entry to ~\~/.gitconfig~.
+
+#+begin_src bash
+git config --global commit.gpgsign true
+#+end_src
+
+For more on signing Git commits see[[id:beef0eda-374a-4ea0-9894-967850fbe0ce][Git Signing]]
 
 * Links
 

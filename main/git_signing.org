@@ -1,0 +1,56 @@
+:PROPERTIES:
+:ID:       beef0eda-374a-4ea0-9894-967850fbe0ce
+:mtime:    20240315230653
+:ctime:    20240315230653
+:END:
+#+TITLE: Git Signing
+#+FILETAGS: :git:gnupg:signature:
+
+* Setup
+
+You can find these out what your [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] signing key is by checking.
+
+#+begin_src bash
+gpg -K --keyid-format SHORT
+src
+
+If you have subkeys the signing one will be deonted with ~[S]~ at the end (after the creation date). You can use the
+short code (after the type e.g. ~ed25519/########~) to then set your global signing key with...
+
+#+begin_src bash
+git config --global user.signingKey ########
+#+end_src
+
+You can then enable signing on a per-repository basis from within a repository with.
+
+#+begin_src bash
+git config --local commit.gpgsign true
+#+end_src
+
+This adds the following to ~./git/config~
+
+#+begin_src
+[commit]
+    gpgsign = true
+#+end_src
+
+If you want to always sign all commits you can enable this globally which adds the same entry to ~\~/.gitconfig~.
+
+#+begin_src bash
+git config --global commit.gpgsign true
+#+end_src
+
+For this to work easily you should have configured ~gpg-agent~ to hold your keys in memory, otherwise you will be
+prompted to enter your passphrase for your GPG key each and every time you try to use it. You can do this using
+~keychain~ and adding the following to your ~\~/.zshrc~ or ~\~/.basshrc~.
+
+#+begin_src bash
+KEYCHAIN=$(which keychain)
+${KEYCHAIN} --agents gpg nshephard@protonmail.com
+#+end_src
+
+
+
+* Links
+
++ [[https://withblue.ink/2020/05/17/how-and-why-to-sign-git-commits.html][How (and why) to sign Git commits | With Blue Ink]]
