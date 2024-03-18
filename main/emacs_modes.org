@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       b8ff9882-3935-45ce-962d-f5d11e339f15
+:mtime:    20240318230943
+:ctime:    20240318230943
+:END:
+#+TITLE: Emacs Modes
+#+FILETAGS: :emacs:modes:
+
+Modes are what makes Emacs so great, they customise the behaviour based on the buffer type. You can find out the modes
+that are active for a given buffer using ~C-h m~.
+
+* Major v Minor Modes
+
+
+* Random Useful modes
+
+** Follow-mode
+
+Discovered ~follow-mode~ randomly courtesy of a [[https://mbork.pl/2024-03-18_Follow_mode][blog post]].
+
+* Links
+
++ [[https://mbork.pl/2024-03-18_Follow_mode][Marcin Borkowski: 2024-03-18 Follow mode]]

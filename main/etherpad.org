@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5d906b68-22c8-4169-8b0d-d3f3a02d2faa
-:mtime:    20240318073451 20240317214621 20240302202817
+:mtime:    20240318225311 20240318073451 20240317214621 20240302202817
 :ctime:    20240302202817
 :END:
 #+TITLE: Etherpad
@@ -125,10 +125,11 @@ Copy and paste the resulting hashed password (without the encapsulating ~b'<hash
 There are a lot of [[https://static.etherpad.org/index.html][plugins]] available. Some I've opted to install are.
 
 + [[https://www.npmjs.org/package/ep_adminpads2][ep_adminpads2]] - list and delete pads in ~/admin~.
++ [[https://npmjs.org/package/ep_delete_after_delay][ep_delete_after_delay]] - delete pads after a configured delay
 + [[https://www.npmjs.org/package/ep_foot_note][ep_foot_note]] -
 + [[https://www.npmjs.org/package/ep_list_pads][ep_list_pads]] - list pads on the index page.
 + [[https://www.npmjs.org/package/ep_markdown][ep_markdown]] - edit and export in Markdown.
-
++ [[https://npmjs.org/package/ep_table_of_contents][ep_table_of_contents]] - add a table of contents.
 
 * Links
 
