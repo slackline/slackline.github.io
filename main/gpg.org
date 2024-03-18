@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ce08bd82-0146-49cb-8a64-048ffe7210f2
-:mtime:    20240315224355 20231231085314 20231210095348 20231126223255 20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
+:mtime:    20240317085317 20240315224355 20231231085314 20231210095348 20231126223255 20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
 :ctime:    20221229210308
 :END:
 #+TITLE: GnuPG
@@ -367,6 +367,23 @@ You can then use id of your new key to encode the directory.
   pass init
 #+end_src
 
+* OpenKeyChain
+
+[[https://www.openkeychain.org/faq/][OpenKeychain]] is an Android application for working with GPG keys on mobile.
+
+** Importing Keys
+
+To import your key you must first export your private key and encrypt it with a strong one time password and /securely/
+copy it to your mobile device. The [[https://www.openkeychain.org/faq/#what-is-the-best-way-to-transfer-my-own-key-to-openkeychain][the instructions]] are very clear, you have to choose a secure way of transferring the
+file to your mobile device. I have done this over sFTP on my home network or by sending an email to myself using
+ProtonMail which by default also encrypts peer-to-peer emails.
+
+Once you've got the private key on your phone start OpenKeyChain and select to "Import Key", open the file and enter the
+one time password that you created.
+
+
+
+
 * Signing Git Commits
 
 You need to configure [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] to use the key you want to sign with which should be both secure and if you have subkeys
@@ -418,3 +435,11 @@ For more on signing Git commits see[[id:beef0eda-374a-4ea0-9894-967850fbe0ce][Gi
 
 + [[https://docs.yubikey.wiki/v/gpg/import-to-yubikey/with-commandline][Yubikey Wiki - Commandline]]
 + [[https://github.com/drduh/YubiKey-Guide][drduh/YubiKey-Guide: Guide to using YubiKey for GPG and SSH]]
+
+** Apps
+
++ [[https://docs.passwordstore.app/][Android Password Store Documentation | Android Password Store Documentation]]
+
+** Misc
+
++ [[https://proton.me/blog/openpgp-golang][Introducing GopenPGP, an open source encryption library for native applications | Proton]]

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5d906b68-22c8-4169-8b0d-d3f3a02d2faa
-:mtime:    20240302202817
+:mtime:    20240318073451 20240317214621 20240302202817
 :ctime:    20240302202817
 :END:
 #+TITLE: Etherpad
@@ -26,6 +26,36 @@ makepkg -sri
 Sparse information on this but I found [[https://thomas.thehawkinsfamily.ca/][Thomas' Tidbits]] had a three part series on how to set things up which was really
 useful.
 
+You do /not/ need any username or passwords if you are using SQLite3.
+
+Simply create an empty database and set the configuration as follows in ~/etc/etherpad-lite/settings.json~.
+
+#+begin_src bash
+cd /usr/share/etherpad-lite
+mkdir var && cd var
+sqlite3 etherpad-sqlite.db "VACUUM;"
+#+end_src
+
+
+
+#+begin_src json
+"dbType": "sqlite",
+"dbSettings": {
+  "database": "/usr/share/etherpad-lite/var/etherpad-sqlite.db"
+}
+"users": {
+  "etherpad-lite": {
+    "password": "changeme1",
+    "is_admin": true
+  },
+  "another_user": {
+    "password": "changeme1",
+    "is_admin": false
+  },
+},
+#+end_src
+
+
 ** Nginx
 
 Rather than exposing Etherpad directly I opted to leave it running on the ~localhost~ and setup a reverse proxy in [[id:3774439d-af75-453e-b3e9-9d578b6bec46][Nginx]]
@@ -41,11 +71,64 @@ I use [[id:10cd5613-0b84-4e68-8abf-ed4cd1803621][certbot]] to get certificates f
 
 #+begin_src: bash
 certbot certonly -d etherpad.mydomain.dev
-#+end_src
++#+end_src
 
-*** DNS
+** DNS
 
 Straight-forward to add a ~CNAME~ that points ~etherpad.mydomain.dev~ to ~mydomain.dev~.
+
+*** Update
+
+** ~SESSIONKEY.txt~
+
+Under ~/usr/share/etherpad-lite~ a symbolic link points to this file, which is empty (i.e. 0B) under
+~/etc/etherpad/SESSIONKEY.txt~. On trying to view the site (via reverse proxy at ~https://domain/admin/plugins~) I
+repeatedly encountered errors. Searching the archives I found this [[https://github.com/ether/etherpad-lite/issues/3317][issue]] which describes this being a common situation
+when package managers need to install default configuration files that can be version controlled.
+
+The "solution"/hack was to remove the symbolic link and refresh the page, this created a new
+~/usr/share/etherpad-lite/SESSIONKEY.txt~ with a fresh random key which I could move to
+~/etc/etherpad-lite/SESSIONKEY.txt~ and symbolically link to from ~/usr/share/etherpad-lite/SESSIONKEY.txt~.
+
+Bingo! I could now access ~https://domain/admin/plugins~ via the reverse proxy.
+
+** Password Hashes
+
+Storing passwords in plain text is a bad idea, they should instead be hashed. I couldn't install the plugin through the
+WebUI and so opted to install it manually using ~npm~. Doing so wiped the symbolic link under
+~node_modules/ep_etherpad-lite~ and so I manually restored that to ensure Etherpad worked (kind of important!).
+
+#+begin_src bash
+cd /usr/share/etherpad-lite
+npm install --no-save --legacy-peer-deps ep_hash_auth
+cd node_modules
+ln -s ../src/ ep_etherpad-lite
+#+end_src
+
+This screwed things up so I had to uninstall and start again (saving the configuration files and databases and restoring
+them).
+
+Second time round I could successfully install the ~ep_hash_auth~ plugin from the WebUI.
+
+You can now create hashes for passwords. This [[https://thomas.thehawkinsfamily.ca/post.php?post=2020-05-30_20_32_00_setting_up_etherpad_lite_on_linux_with_sqlite_database_%28part_2%29][article]] suggests doing so using ~python_bcrypt~ which needs installing
+(~pacman -Syu python-bcrypt~ under [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]]). Substitute ~<your_password>~ below for your password.
+
+#+begin_src bash
+python -c 'import bcrypt; print(bcrypt.hashpw(b"46Ht9zpZA>;|O6lfN5(lTp3_(vUnP=", bcrypt.gensalt(rounds=10,prefix=b"2a")))'
+#+end_src
+
+Copy and paste the resulting hashed password (without the encapsulating ~b'<hash>'~) into the
+~/etc/etherpad-lite/settings.json~.
+
+* Plugins
+
+There are a lot of [[https://static.etherpad.org/index.html][plugins]] available. Some I've opted to install are.
+
++ [[https://www.npmjs.org/package/ep_adminpads2][ep_adminpads2]] - list and delete pads in ~/admin~.
++ [[https://www.npmjs.org/package/ep_foot_note][ep_foot_note]] -
++ [[https://www.npmjs.org/package/ep_list_pads][ep_list_pads]] - list pads on the index page.
++ [[https://www.npmjs.org/package/ep_markdown][ep_markdown]] - edit and export in Markdown.
+
 
 * Links
 
@@ -53,6 +136,7 @@ Straight-forward to add a ~CNAME~ that points ~etherpad.mydomain.dev~ to ~mydoma
 + [[https://github.com/ether/etherpad-lite/wiki][Etherpad-lite Wiki]]
 + [[https://wiki.archlinux.org/title/Etherpad-lite][Etherpad-lite - ArchWiki]]
 + [[https://www.digitalocean.com/community/tutorials/how-to-install-the-etherpad-collaborative-web-editor-on-ubuntu-20-04][How To Install the Etherpad Collaborative Web Editor on Ubuntu 20.04 | DigitalOcean]]
++ [[https://static.etherpad.org/index.html][Etherpad plugins]]
 
 ** Blogs
 
