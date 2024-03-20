@@ -1,6 +1,12 @@
 :PROPERTIES:
 :ID:       5d906b68-22c8-4169-8b0d-d3f3a02d2faa
+<<<<<<< HEAD
 :mtime:    20240318225311 20240318073451 20240317214621 20240302202817
+||||||| parent of bb4b806 (More etherpad plugins)
+:mtime:    20240318073451 20240317214621 20240302202817
+=======
+:mtime:    20240319081746 20240318073451 20240317214621 20240302202817
+>>>>>>> bb4b806 (More etherpad plugins)
 :ctime:    20240302202817
 :END:
 #+TITLE: Etherpad
@@ -129,7 +135,8 @@ There are a lot of [[https://static.etherpad.org/index.html][plugins]] available
 + [[https://www.npmjs.org/package/ep_foot_note][ep_foot_note]] -
 + [[https://www.npmjs.org/package/ep_list_pads][ep_list_pads]] - list pads on the index page.
 + [[https://www.npmjs.org/package/ep_markdown][ep_markdown]] - edit and export in Markdown.
-+ [[https://npmjs.org/package/ep_table_of_contents][ep_table_of_contents]] - add a table of contents.
++ [[https://npmjs.org/package/ep_stable_authorid][ep_stable_authorid]] - consistent author ID across logins.
++ [[https://npmjs.org/package/ep_table_of_contents][ep_table_of_contents]] - view table of contents.
 
 * Links
 
