@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b5000932-0fec-4353-acc4-0cb02127c9ac
-:mtime:    20240301231300 20240122165548 20240107095430 20231221072710 20231211080603 20231121210843
+:mtime:    20240323194442 20240301231300 20240122165548 20240107095430 20231221072710 20231211080603 20231121210843
 :ctime:    20231121210843
 :END:
 #+TITLE: Privacy and Encryption
@@ -38,3 +38,7 @@ Privacy is important, it underpins free speech, but many chose to sacrifice thei
 ** Articles
 
 + [[https://www.eff.org/deeplinks/2023/11/address-online-harms-we-must-first-do-privacy][To Address Online Harms, We Must Consider Privacy First | Electronic Frontier Foundation]]
+
+** Miscellaneous
+
++ [[https://www.eff.org/deeplinks/2024/03/how-figure-out-what-your-car-knows-about-you-and-opt-out-sharing-when-you-can][How to Figure Out What Your Car Knows About You (and Opt Out of Sharing When You Can) | Electronic Frontier Foundation]]
