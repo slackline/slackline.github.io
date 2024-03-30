@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       7eae2f27-c155-48ba-80b2-d96f87b7adfa
+:mtime:    20240330205337
+:ctime:    20240330205337
+:END:
+#+TITLE: Python Beancount
+#+FILETAGS: :python:finances:
+
+* Links
++ [[https://sgoel.dev/posts/one-of-the-most-useful-directories-on-my-laptop/][One of the most useful directories on my laptop | Siddhant Goel]]
