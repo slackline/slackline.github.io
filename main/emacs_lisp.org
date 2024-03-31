@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       708f5d99-6040-4306-a323-306d39ce45c3
-:mtime:    20240225185002 20240206201930 20240118162910 20231113221350 20230621183025 20230511204503 20230215095632 20230129085036 20230114084505 20230103103311 20221209211925
+:mtime:    20240331202209 20240225185002 20240206201930 20240118162910 20231113221350 20230621183025 20230511204503 20230215095632 20230129085036 20230114084505 20230103103311 20221209211925
 :ctime:    20221209211925
 :END:
 #+TITLE: Emacs Lisp
@@ -29,6 +29,13 @@ as the list after the comma is evaluated (but only if a back-tick is used) ([[ht
 + [[https://www.youtube.com/playlist?list=PLEoMzSkcN8oPQtn7FQEF3D7sroZbXuPZ7][Learning Emacs Lisp - SystemCrafters]] / [[https://systemcrafters.net/learning-emacs-lisp/][System Crafters - Learning Emacs Lisp]]
 + [[https://yt.artemislena.eu/watch?v=x9Qws7ZOksc][Learning Elisp - 1 - intro - Invidious]]
 + [[https://www.youtube.com/playlist?list=PL9KxKa8NpFxKGctwh4-BqjQvdSRhh4NV-][learning-elisp - YouTube]]
+
+*** Gaving Freeborn
+
++ [[https://piped.video/watch?v=NocDm4zzToo][LEARN EMACS LISP - Mostly The Strange Parts - Piped]]
++ [[https://piped.video/watch?v=AfY_zGR_QBI][Why Lisp Is One Of The Most Productive Programming Languages]]
++ [[https://piped.video/watch?v=1y__2IK-aLM][Learn Emacs Lisp in 30 Minutes]]
+
 
 ** Documentation
 
