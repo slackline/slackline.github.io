@@ -1,0 +1,10 @@
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate org-roam-ui page
+        uses: ikoamu/org-roam-ui-hosting@main
+        with:
+          org-roam-db-filename: <org-roam-filename>.db
+          deploy-to-pages: true
+          site-title: nshephard.dev org-roam notes
