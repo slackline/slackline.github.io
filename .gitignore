@@ -1,6 +1,6 @@
 *~
 \#*
-org-roam.db
+# org-roam.db
 *.html
 *.md
 vps-wiki*
