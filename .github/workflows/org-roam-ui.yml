@@ -3,12 +3,18 @@ on:
   push:
     branches:
       - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   main:
     runs-on: ubuntu-latest
     steps:
       - name: Generate org-roam-ui page
-        uses: ikoamu/org-roam-ui-hosting@v1.1.0
+        uses: ikoamu/org-roam-ui-hosting@main
         with:
           org-roam-db-filename: org-roam.db
           deploy-to-pages: true
