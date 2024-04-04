@@ -16,6 +16,7 @@ jobs:
       - name: Generate org-roam-ui page
         uses: ikoamu/org-roam-ui-hosting@main
         with:
+          org-roam-directory: main
           org-roam-db-filename: org-roam.db
           deploy-to-pages: true
           site-title: nshephard.dev org-roam notes
