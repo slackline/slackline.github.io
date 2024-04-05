@@ -1,19 +1,79 @@
 :PROPERTIES:
-:ID:       ec26925c-f958-453d-b380-8b7e22a2ba6e
-:mtime:    20230730084607 20230624160142
-:ctime:    20230624160142
+:ID:       5a8671e1-f402-4725-9f73-f344dfd4de77
+:mtime:    20240405180710 20230103103310 20220525072928
+:ctime:    20220525072928
 :END:
 #+TITLE: Chillis
+#+DATE: [2022-05-25 Wed 07:18]
 #+FILETAGS: :food:chillis:
+
+Chillis are one of (my) lifes delights, I can not get enough of them and the hotter the better.
+
+* Growing
+Chillis are simple to grow, and seeds are readily available, just take them out of the chilli when preparing food and
+leave them in a well vented area to dry.
+
+** From Seed
+Start them early in late January/early February.  Some varieties benefit from heating mats to promote germination.
+
+** Over Wintering
+
+Keep the plants indoors, they will invariably lose their leaves and if not kept in warm place the stems might start to
+go brown. Don't over-water otherwise they will rot. In February/March get them back in as much direct sunlight as
+possible and you should have a robust plant that has a head start on new seedlings as it already has its root structure
+in place.
+
+
+* Recipes
+
+** Sauces
+
+** Chilli Oil
+
+
+
 
 * Links
 
++ [[https://www.chilipeppermadness.com/][Chili Pepper Madness]]
++ [[https://www.lovemychillies.co.uk/][Love my Chillies]]
++ [[https://birdhousechillies.com/articles/][Birdhouse Chillies]]
 + [[http://www.chilliguru.uk/index.html][Chilli Guru]]
+
+
+** Articles
+
++ [[https://time.com/5566993/why-spicy-food-makes-your-nose-run/][Why Spicy Food Makes Your Nose Run—and Why It's Great for You | TIME]]
+
+** Seeds
+
+
+** Plants
+
++ [[https://seaspringplants.co.uk/][Chilli Plug Plants]]
 
 ** Sauces
 
 + [[https://chillicult.co.uk/mr-naga-offers-near-me][MR Naga Offers]]
 + [[https://www.mrvikkis.co.uk/][Mr Vikki's]]
++ [[https://www.wigawagaa.com/][Wiga Wagaa]]
++ [[https://khooshotsauce.co.uk/][Khoo's Hot Sauce]] Sheffield based chilli sauces.
 + [[https://www.scorchio.co.uk/][Scorchio]]
++ [[https://www.southdevonchillifarm.co.uk/][South Devon Chilli Farm]]
++ [[https://www.chilliwizards.co.uk/][Chilli Wizards]]
 + [[https://www.thetwistedcurry.co.uk/][The Twisted Curry Company - Yorkshire based spice kit company]]
 + [[https://baucebrothers.com/][Bauce Brothers]] (Subscription service)
++ [[https://www.chilliwizards.co.uk/1kg-Dried-Chilli-Naga-Bhut-Jolokia-Pods---Ghost-Pepper-Chili-Highest-Quality][1kg of Bhut Jolokia Pods £49]]
++ [[http://www.belizemagazine.com/edition04/english/e04_05questions.htm][20 questions with Marie Sharp]]
+
+** Nutrition
+
++ [[https://www.healthline.com/nutrition/foods/chili-peppers][Chili Peppers 101: Nutrition Facts and Health Effects]]
+
+** Research
+
++ [[https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0169876][The Association of Hot Red Chili Pepper Consumption and Mortality: A Large Population-Based Cohort Study]]
++ [[https://www.bmj.com/content/351/bmj.h3942][Consumption of spicy foods and total and cause specific mortality: population based cohort study | The BMJ]]
++ [[https://www.sciencedirect.com/science/article/pii/S0735109719382063][Chili Pepper Consumption and Mortality in Italian Adults - ScienceDirect]]
++ [[https://www.ahajournals.org/doi/abs/10.1161/circ.139.suppl_1.P224][Abstract P224: Chili Pepper Intake and Risk of Total and Cardiovascular Mortality in Italian Adults: Prospective Findings From the Moli-Sani Study | Circulation]]
++ [[https://pubs.acs.org/doi/10.1021/acsanm.0c02079][N-Doped Graphene Nanoplatelets for Direct Capsaicin Detection in Chili Pepper Samples | ACS Applied Nano Materials]] (see also article on its application at [[https://arstechnica.com/science/2020/10/just-how-hot-is-that-pepper-new-chili-shaped-portable-device-could-tell-you/][Better than the Scoville scale? Chili-shaped device can rate pepper hotness | Ars Technica]])

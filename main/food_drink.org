@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b0c654b8-a875-40e7-a672-7567ccee5052
-:mtime:    20240225215224
+:mtime:    20240405180857 20240225215224
 :ctime:    20240225215224
 :END:
 #+TITLE: Food and Drink
@@ -180,6 +180,8 @@ a URL will strip out the ingredients and the instructions for making a recipe an
 * Nutrition
 + [[https://slimemoldtimemold.com/2021/07/07/a-chemical-hunger-part-i-mysteries/][A Chemical Hunger – Part I: Mysteries]]
 * Chilli
+
+For more on Chilli's see [[id:5a8671e1-f402-4725-9f73-f344dfd4de77][Chilli's]].
 ** Sauces and Pastes
 + [[https://chillicult.co.uk/mr-naga-offers-near-me][MR Naga Offers]] (weirdly cheap at [[https://www.iceland.co.uk/p/mr-naga-hot-pepper-pickle-190g/95409.html][Iceland]]; Case of [[https://alaminfoodstore.co.uk/mr-naga-case-36x190g-1346][36]] might be cheapest)
 + [[https://www.mrvikkis.co.uk/][Mr Vikki's]]
