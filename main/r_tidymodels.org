@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       e4b22dd5-edf1-4801-9e82-e8786c18de09
+:mtime:    20240326100253
+:ctime:    20240326100253
+:END:
+#+TITLE: R Tidymodels
+#+FILETAGS: :r:statistics:modelling:tidymodels:
+
+
+* Links
+
++ [[https://www.tidymodels.org/learn/work/fairness-detectors/][Are GPT detectors fair? A machine learning fairness case study]]

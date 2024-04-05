@@ -87,6 +87,7 @@ Being a statistical package R is aimed around modelling (despite the many other 
 + [[id:8b2f5d7f-53f1-49bd-a6bf-4cd0ddb531fa][Regression]] and its many variations and generalisations.
 + [[id:38feb454-ee1e-440b-939c-c413009c609d][Bayesian Statistics]]
 + [[id:d281425d-a118-4651-96a6-b85da5424b81][Simulations]] R is a great choice for simulating datasets.
++ [[id:e4b22dd5-edf1-4801-9e82-e8786c18de09][Tidymodels]]
 
 ** Graphics
 
@@ -347,4 +348,6 @@ found useful.
 
 + [[https://sebkrantz.github.io/Rblog/2023/04/12/collapse-and-the-fastverse-reflecting-the-past-present-and-future/][collapse and the fastverse: Reflections on the Past, Present and Future - With Examples from Geospatial Data Science - R, Econometrics, High Performance]]
 + [[https://www.mm218.dev/posts/2023-11-07-classed-errors/][Mike Mahoney - Classed conditions from rlang functions]]
-+ [[https://yabellini.netlify.app/blog/2024_learningtocode/][Learning Programming in 30 lessons | Yanina Bellini Saibene]]
++ [[https://yabellini.netlify.app/blog/2024_learningtocode/][Learning Programming in 30 lessons | Yanina Bellini
+ Saibene]]
+  
