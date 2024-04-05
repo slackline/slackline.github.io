@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       b7e4dcbf-ae6e-4afc-b5eb-81999f38a0e8
+:mtime:    20240322111057
+:ctime:    20240322111057
+:END:
+#+TITLE: Emacs Local Directory Configuration
+#+FILETAGS: :emacs:lisp:elisp:config:
+
+You can customise the behaviour of [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] conditional on the directory you are opening files within.
+
+This is done via ~.dir-locals.el~ file (or a secondary ~.dir-locals-2.el~ if the first is shared under version control
+and you want further customisation).
+
+The file should map major modes to alists ([[https://www.gnu.org/software/emacs/manual/html_node/elisp/Association-Lists.html#Association-Lists][Association Lists]]) and you must use "[[https://www.gnu.org/software/emacs/manual/html_node/elisp/Association-Lists.html#Association-Lists][dotted form]]".
+
+* Examples
+
+#+begin_src elisp
+((python-mode . ((pyvenv-workon . "~/.virtualenvs/default")
+                 (subdirs . nil))))
+#+end_src
+
+* Links
+
++ [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html][Directory Variables (GNU Emacs Manual)]]
++ [[https://emacs.stackexchange.com/questions/46458/specifying-pyvenv-in-projects-dir-locals-el][virtualenv - specifying pyvenv in projects .dir-locals.el - Emacs Stack Exchange]]
