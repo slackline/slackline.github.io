@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5a8671e1-f402-4725-9f73-f344dfd4de77
-:mtime:    20240405180710 20230103103310 20220525072928
+:mtime:    20240410201727 20240405180710 20230103103310 20220525072928
 :ctime:    20220525072928
 :END:
 #+TITLE: Chillis
@@ -26,9 +26,79 @@ in place.
 
 * Recipes
 
-** Sauces
+** Wiga Waga
 
-** Chilli Oil
+*** Curried Chicken Thighs
+**** Ingredients
++ 500g chicken thighs gut into small pieces ~2.5cm in length
++ 1 medium onion cut into small pieces
++ 2 tablespoons of rapeseed or sunflower oil
++ 1 jar of Wiga Wagaa African Curry Paste
++ 100ml of water
++ Fresh coriander, finely chopped
+**** Recipe
++ Heat oil and fry onions for about a minute.
++ Add chicken thighs and fry for 3 minutes, stirring regularly.
++ Pour curry past into the pan and add water, stir well and summer for 20 minutes or until chicken is cooked, add water
+  if necessary.
++ Garnish with coriander and serve with rice and breads.
+*** Chilli Chicken Breast
+**** Ingredients
++ 500g chicken breast cut into thin slices ~2.5cm long.
++ 1 medium size onion cut into small pieces.
++ 3 tablespoons of sunflower oil.
++ 1 jar of Wiga Wagga Scotch Bonnet Chilli Cooking Paste.
++ Fresh coriander finely chopped.
+**** Recipe
++ Mix the chicken with 3 tablespoons of paste and marinate for 15 minutes (ideally overnight).
++ Heat the oil and stir-fry onion for 1 minute.
++ Add chicken and stir-fry for 3 minutes, stirring regularly.
++ Add the rest of chilli paste and add a little water, stir well and simmer for 15 minutes or until the chicken is
+  cooked.
++ Garnish with fresh coriander and serve with rice and bread.
+*** Jerk Chicken
+**** Ingredients
++ 500g chicken thighs.
++ 1 medium onion cut into small pieces.
++ 3 tablespoons of sunflower oil.
++ 3 tablespoons of Wiga Wagaa Jerk Paste.
+**** Recipe
++ Mix the chicken with Wig Wagga Jerk Paste, cover and marinate overnight in the fridge.
++ Heat the oil in a frying and fry onions for 1 minute.
++ Add the chicken and fry for 3 minutes, stirring regularly.
++ Add 50ml of water, stir well and simmer gently for 15 minutes or until cooked.
++ Serve on a bed of rice with salad and black eye beans.
+*** Coconut Chicken
+**** Ingredients
++ 500g chicken breast or thigh cut into 2.5cm pieces
++ 1 jar of Wig Wagaa Coconut Cooking sauce
++ Marinade chicken in 4 tablespoons of sauce and marinate for minimum 15 mins (ideally overnight)
++ 1 medium size onion cut into small pieces
++ ½ red and ½ green pepper in 2.5cm pieces
++ 4 tablespoons of sunflower oil
++ 100ml water
++ Fresh coriander finely chopped
+**** Recipe
++ Heat oil in medium size pan until hot.
++ Stir fry onion for 1 minute.
++ Stir fry ½ pepper for 30 seconds.
++ Add chicken and stir fry for 2 minutes.
++ Add remaining peppers and Coconut Sauce and stir thoroughly.
++ Simmer for 15 minutes or until chicken is cooked.
++ Add water if required.
++ Garnish with coriander and serve with pasta, rice or cous cous.
+
+
+* Sauces
+
+** Sheffield
++ [[https://maktok.com/][Mak Tok Malaysian Pastes]] (use ~WELCOME10~ to get 10% discount on first order)
++ [[https://fulaflavour.co.uk/products/][Fula Flavour]]
++ [[https://www.sheffielddragon.com/][Sheffield Dragon]]
++ [[https://khooshotsauce.co.uk/][Khoo’s Hot Sauce]]
++ [[https://omemade.co.uk/]['Ome Made Store]]
+
+* Chilli Oil
 
 
 
@@ -39,6 +109,8 @@ in place.
 + [[https://www.lovemychillies.co.uk/][Love my Chillies]]
 + [[https://birdhousechillies.com/articles/][Birdhouse Chillies]]
 + [[http://www.chilliguru.uk/index.html][Chilli Guru]]
++ [[https://www.thechilliking.com/][The Chilli King]]
++ [[https://www.goodreads.com/book/show/6534803-the-complete-chile-pepper-book][The Complete Chile Pepper Book: A Gardener's Guide to Choosing, Growing, Preserving, and Cooking by Dave DeWitt | Goodreads]]
 
 
 ** Articles
@@ -54,9 +126,9 @@ in place.
 
 ** Sauces
 
-+ [[https://chillicult.co.uk/mr-naga-offers-near-me][MR Naga Offers]]
++ [[https://chillicult.co.uk/mr-naga-offers-near-me][Mr Naga Offers]]
 + [[https://www.mrvikkis.co.uk/][Mr Vikki's]]
-+ [[https://www.wigawagaa.com/][Wiga Wagaa]]
++ [[https://www.wigawagaa.com/][Wiga Wagaa]] (use code ~wiga1~ for 10% discount)
 + [[https://khooshotsauce.co.uk/][Khoo's Hot Sauce]] Sheffield based chilli sauces.
 + [[https://www.scorchio.co.uk/][Scorchio]]
 + [[https://www.southdevonchillifarm.co.uk/][South Devon Chilli Farm]]

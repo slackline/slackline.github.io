@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       d315258f-a22f-49ac-a049-c0c166e1186e
+:mtime:    20240410162830
+:ctime:    20240410162830
+:END:
+#+TITLE: Food : Spanish
+#+FILETAGS: :food:cooking:spanish:

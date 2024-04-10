@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       160aa1f1-b5d1-4443-b231-f36e86062ea8
+:mtime:    20240410161719
+:ctime:    20240410161719
+:END:
+#+TITLE: Food : Chinese
+#+FILETAGS: :food:cooking:chinese:
+
+* Starters
+* Rice
+* Noodles
+* Main
++ [[https://www.seriouseats.com/recipes/2010/06/real-deal-kung-pao-chicken-recipe.html][Real-Deal Kung Pao Chicken Recipe | Serious Eats]]

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       ca8b60d2-879a-49bf-95d1-b5c118e531c1
+:mtime:    20240410201306
+:ctime:    20240410201306
+:END:
+#+TITLE: Food: Vegeterian
+#+FILETAGS: :food:cooking:vegeterian:
+
+
++ [[https://www.theguardian.com/lifeandstyle/2020/sep/01/squash-up-17-delicious-ways-with-courgettes-from-creamy-carbonara-to-spicy-dal][17 delicious ways with courgettes, from creamy carbonara to spicy ...]]

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       78d4eae6-8504-438a-9ce7-ae2ff4359bb2
+:mtime:    20240410162148
+:ctime:    20240410162148
+:END:
+#+TITLE: Food : Malaysian
+#+FILETAGS: :food:cooking:malaysian:
+
+
+* [[https://maktok.com/blogs/recipes][Signature Chilli Paste (Recipes) – Mak Tok Store]]

@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       36ca44c6-518d-4b87-9926-d2d132fb2fd7
+:mtime:    20240410162040
+:ctime:    20240410162040
+:END:
+#+TITLE: Food : Italian
+#+FILETAGS: :food:cooking:italian:
+
+* Pasta Dishes
+* Pizza
++ <2021-01-25 Mon> [[https://getpocket.com/explore/item/these-3-ingredient-sheet-pan-gnocchi-dinners-are-crispy-no-mess-perfection][Five 3-Ingredient Sheet Pan Gnocchi Dinners]]
+*** Ingredients
++ 500g strong flower
++ 325ml of luke warm water with a desert spoon of sugar
++ 8g of yeast
++ Pinch of salt
++ Plain flour
+*** Recipe
++ Add the sugar to the warm water, stir and dissolve then add the yeast and leave for ~3 minutes.
++ Sieve the flower into a bowl with the salt.
++ Gradually add the water and yeast stirring with a fork until a dough is formed.
++ Dust the surface with plain flower and knead the dough for 10 minutes.
++ Grease a glass bowl with vegetable or olive oil, dust the dough and place in the bowl covering with a towel.
++ Place in the warmth (oven at 30-40C) for 30 minutes.
++ Remove and stand for a further 15 minutes, increasing temperature of oven to 220C.
++ Split and roll out into pizzas.
+*** Toppings - Chorizo Pizza
++ Sliced chorizo
++ Black olives (sliced)
++ Spring Onions
++ Sweetcorn
++ Chillis (finely chopped)
++ Onions (finely sliced)
++ Fresh mozarela
++ Black pepper
++ Chilli oil & flakes

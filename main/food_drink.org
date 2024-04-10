@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b0c654b8-a875-40e7-a672-7567ccee5052
-:mtime:    20240405180857 20240225215224
+:mtime:    20240410201123 20240410161614 20240405180857 20240225215224
 :ctime:    20240225215224
 :END:
 #+TITLE: Food and Drink
@@ -10,165 +10,18 @@
 Recipes and notes on food and drink I've come across over the years. I found [[https://cooked.wiki/user/slackline][cooked.wiki]] which is a neat site that given
 a URL will strip out the ingredients and the instructions for making a recipe and have started using it to record recipes.
 
-* Chinese
-** Starters
-** Rice
-** Noodles
-** Main
-+ [[https://www.seriouseats.com/recipes/2010/06/real-deal-kung-pao-chicken-recipe.html][Real-Deal Kung Pao Chicken Recipe | Serious Eats]]
-* Indian
-** Starters
-** Curries
-+ [[https://www.omemade.com/fish-pakora-recipe/][Fish Pakora ('Ome Made)]]
-*** From [[https://www.goodreads.com/book/show/2273661.Balti_Curry_Cookbook][Balti Curry Cookbook by Pat Chapman]]
-**** Green Masala Paste
-***** Ingredients
-+ 1 teaspoon fenugreek seeds
-+ 6 garlic cloves chopped
-+ 2 tablespoons of finely chopped fresh ginger
-+ 40g fresh mint leaves
-+ 40g fresh coriander leaves
-+ 3 teaspoons of salt
-+ 3 teaspoons of turmeric
-+ 2 teaspoons chilli powder
-+ ½ teaspoon ground cloves
-+ 1 teaspoon ground cardamom seeds
-+ 120ml vegetable oil
-+ 50ml sesame oil
-***** Recipe
-1. Soak the fenugreek seeds overnight, strain before using.
-2. Blend/mulch all ingredients, bar oil, to make a puree. Leave to stand for at least 10 minutes.
-3. Heat the oil in a karahi or wok, add the paste.
-4. Stir-fry continually to prevent it from sticking until the water has evaporated (should be ~5 minutes). As the liquid
-   reduces the paste will make a bubbling noise (chup-chup-chup) if not stirred and will splatter, this is an indication
-   that it is done.
-5. Bottle in sterilised jars, capping with hot oil.
-6. Seal and store.
-**** Special Balti Sauce
-***** Ingredients
-+ 200ml milk
-+ 200ml water
-+ 2 tablespoons of ghee or vegetable oil
-+ 3 garlic cloves finely chopped
-+ 225g onion, very finely chopped
-+ 110g carrot, grated
-+ 50g celeriac, grated
-+ 50g mooli, grated
-+ 4 bay leaves
-+ 8-10 green cardamoms, split
-+ ~10cm cassia bark
-+ 1 teaspoon fennel seeds
-+ ½ teaspoon turmeric
-+ 2 star anise
-+ 2.5cm cube of fresh ginger, roughly sliced
-***** Recipe
-1. Bring the milk, water and spices to the boil and simmer for 10-15 minutes, remove from the heat, strain and discard
-   the spices.
-2. Heat the oil/ghee in a karahi, fry the garlic for 30 seconds then add the onion and stir-fry for 5 minutes or until
-   soft and golden.
-3. Add the spicy milk/water, carrots, celeriac and mooli and simmer for 30 minutes. It should not be too dry, nor runny.
-4. Allow to cool and blend to a fine puree, it should be easy to pour.
-**** Balti Jal Frezi (4 portions)
-***** Ingredients
-+ ~600g of meat of choice (diced chicken, fish or shell fish)
-+ 450ml of Special Balti Sauce
-+ 1 tablespoon of ghee or vegetable oil
-+ 1 tablespoon of Green Masala paste
-+ 3 garlic cloves, finely chopped
-+ 110g onion, thinly sliced
-+ ½ red pepper cut into small diamonds
-+ ½ green pepper cut into small diamonds
-+ 2-4 tablespoons of finely chopped coriander leaves
-+ juice from ½ a lemon
-+ Garam masala
-+ Pinch of salt
-+ Fresh coriander leaves to garnish
-+ 1½ teaspoons of cummin seeds
-+ ½ teaspoon of lovage seeds
-+ ½ teaspoon corriander seeds
-***** Recipe
-0. Optionally marinate meat in green masala paste overnight
-1. Heat oil/ghee and stir fry the cummin/lovage/corriander seeds for 30 seconds, then add the garlic and stir-fry for a
-   further 30 seconds. Add the green masala paste and stir-fry for another minute, then the onion and stir-fry for 3
-   minutes.
-2. Add the main ingredient (if marinated don't worry about extra masala paste, it all tastes good!). Stir-fry for 3
-   minutes.
-3. Add the Special Balti Sauce and bring to a simmer.
-4. Add the peppers, chopped corriander, lemon juice and garam masala and simmer until cooked to your liking.
-5. Serve with rice and garnish with corriander leaves.
-**** Bombay Potatoes
-***** Ingredients
-+ Diced (~1cm) potatoes.
-+ 1 large onion finely sliced.
-+ 4 garlic cloves, crushed/finely sliced.
-+ Tomato Puree.
-+ Garam Masala (alternatively cumin, corriander and chilli powder)
-+ Turmeric
-+ 2 table spoons of vegetable oil.
-***** Recipe
-1. Boil potatoes until just done and drain well.
-2. Fry onion and garlic until soft and golden.
-3. Add the turmeric, garam masala and tomato puree to the onions and garlic and mix well.
-4. Add the potatoes and mix well on a low heat for upto 5 minutes.
-** Snacks
-+ [[https://www.theguardian.com/food/2022/apr/16/tamal-ray-recipe-for-bengali-kati-rolls][Tamal Ray’s recipe for Bengali kati rolls | Indian food and drink | The Guardian]]
-** Breads
-+ [[https://www.omemade.com/british-indian-restaurant-curry/][British Indian Restaurant Curry & Basic Base Gravy Recipe 'Ome Made - 'Ome Ma...]]
-* Italian
-** Pasta Dishes
-** Pizza
-+ <2021-01-25 Mon> [[https://getpocket.com/explore/item/these-3-ingredient-sheet-pan-gnocchi-dinners-are-crispy-no-mess-perfection][Five 3-Ingredient Sheet Pan Gnocchi Dinners]]
-*** Ingredients
-+ 500g strong flower
-+ 325ml of luke warm water with a desert spoon of sugar
-+ 8g of yeast
-+ Pinch of salt
-+ Plain flour
-*** Recipe
-+ Add the sugar to the warm water, stir and dissolve then add the yeast and leave for ~3 minutes.
-+ Sieve the flower into a bowl with the salt.
-+ Gradually add the water and yeast stirring with a fork until a dough is formed.
-+ Dust the surface with plain flower and knead the dough for 10 minutes.
-+ Grease a glass bowl with vegetable or olive oil, dust the dough and place in the bowl covering with a towel.
-+ Place in the warmth (oven at 30-40C) for 30 minutes.
-+ Remove and stand for a further 15 minutes, increasing temperature of oven to 220C.
-+ Split and roll out into pizzas.
-*** Toppings - Chorizo Pizza
-+ Sliced chorizo
-+ Black olives (sliced)
-+ Spring Onions
-+ Sweetcorn
-+ Chillis (finely chopped)
-+ Onions (finely sliced)
-+ Fresh mozarela
-+ Black pepper
-+ Chilli oil & flakes
-* Malaysian
-** [[https://maktok.com/blogs/recipes][Signature Chilli Paste (Recipes) – Mak Tok Store]]
-* Slovenian
-** Ricet
-*** Ingredients
-+ Brown Beans
-+ Barley
-+ Kohlabri
-+ Potatoes
-+ Celery
-+ Carrots
-+ Onions
-+ Parlsey Root
-+ Fresh Parsley
-+ Cooked smoked pork or Sausages
-+ Vegetable Stock
-+ Bay Leaves
-+ Marjoram
-+ Thyme
-*** Recipes
-+ [[https://foodnutters.com/ricet/][Ricet - the iconic Slovenian barley soup]]
-+ [[https://homemadeslovenianfood.blogspot.com/2016/02/ricet-traditional-slovenian-barley-soup.html][HOMEMADE SLOVENIAN FOOD : RIČET - TRADITIONAL SLOVENIAN BARLEY SOUP]]
-+ [[https://balkanrecipes.com/ricet-traditional-slovenian-barley-soup/][Ričet (Traditional Slovenian Barley Soup) - Traditional Recipes from the Balkans]]
-* Spanish
-* Vegetarian
-+ [[https://www.theguardian.com/lifeandstyle/2020/sep/01/squash-up-17-delicious-ways-with-courgettes-from-creamy-carbonara-to-spicy-dal][17 delicious ways with courgettes, from creamy carbonara to spicy ...]]
+* Styles
+
++ [[id:160aa1f1-b5d1-4443-b231-f36e86062ea8][Chinese]]
++ [[id:b10998ac-94d5-4ff0-940a-fb05d80b6ba8][Indian]]
++ [[id:36ca44c6-518d-4b87-9926-d2d132fb2fd7][Italian]]
++ [[id:78d4eae6-8504-438a-9ce7-ae2ff4359bb2][Malaysian]]
++ [[id:43927400-7eaf-4a13-9352-6c76b0da8c97][Slovenian]]
++ [[id:d315258f-a22f-49ac-a049-c0c166e1186e][Spanish]]
++ [[id:ca8b60d2-879a-49bf-95d1-b5c118e531c1][Vegeterian]]
++ [[id:5a8671e1-f402-4725-9f73-f344dfd4de77][Chilli's]]
++ [[id:f3ee906f-4e5c-441b-95ea-99d72eae3edc][Alcohol]]
+
 * Misc
 ** Snacks
 *** [[https://getpocket.com/explore/item/how-to-make-crispy-baked-sweet-potato-fries][How To Make Crispy Baked Sweet Potato Fries]]
@@ -179,93 +32,10 @@ a URL will strip out the ingredients and the instructions for making a recipe an
 *** [[https://www.theguardian.com/food/2022/sep/07/how-to-make-the-perfect-sweetcorn-fritters-recipe][How to make the perfect sweetcorn fritters]]
 * Nutrition
 + [[https://slimemoldtimemold.com/2021/07/07/a-chemical-hunger-part-i-mysteries/][A Chemical Hunger – Part I: Mysteries]]
-* Chilli
 
-For more on Chilli's see [[id:5a8671e1-f402-4725-9f73-f344dfd4de77][Chilli's]].
-** Sauces and Pastes
-+ [[https://chillicult.co.uk/mr-naga-offers-near-me][MR Naga Offers]] (weirdly cheap at [[https://www.iceland.co.uk/p/mr-naga-hot-pepper-pickle-190g/95409.html][Iceland]]; Case of [[https://alaminfoodstore.co.uk/mr-naga-case-36x190g-1346][36]] might be cheapest)
-+ [[https://www.mrvikkis.co.uk/][Mr Vikki's]]
-+ [[https://www.scorchio.co.uk/][Scorchio]]
-+ [[https://www.thetwistedcurry.co.uk/][The Twisted Curry Company - Yorkshire based spice kit company]]
-*** [[https://www.wigawagaa.com/shop/][Wiga Wagaa]] Carolina Reaper Sauce is particularly good. (use code ~wiga1~ for 10% discount)
-**** Curried Chicken Thighs
-***** Ingredients
-+ 500g chicken thighs gut into small pieces ~2.5cm in length
-+ 1 medium onion cut into small pieces
-+ 2 tablespoons of rapeseed or sunflower oil
-+ 1 jar of Wiga Wagaa African Curry Paste
-+ 100ml of water
-+ Fresh coriander, finely chopped
-***** Recipe
-+ Heat oil and fry onions for about a minute.
-+ Add chicken thighs and fry for 3 minutes, stirring regularly.
-+ Pour curry past into the pan and add water, stir well and summer for 20 minutes or until chicken is cooked, add water
-  if necessary.
-+ Garnish with coriander and serve with rice and breads.
-**** Chilli Chicken Breast
-***** Ingredients
-+ 500g chicken breast cut into thin slices ~2.5cm long.
-+ 1 medium size onion cut into small pieces.
-+ 3 tablespoons of sunflower oil.
-+ 1 jar of Wiga Wagga Scotch Bonnet Chilli Cooking Paste.
-+ Fresh coriander finely chopped.
-***** Recipe
-+ Mix the chicken with 3 tablespoons of paste and marinate for 15 minutes (ideally overnight).
-+ Heat the oil and stir-fry onion for 1 minute.
-+ Add chicken and stir-fry for 3 minutes, stirring regularly.
-+ Add the rest of chilli paste and add a little water, stir well and simmer for 15 minutes or until the chicken is
-  cooked.
-+ Garnish with fresh coriander and serve with rice and bread.
-**** Jerk Chicken
-***** Ingredients
-+ 500g chicken thighs.
-+ 1 medium onion cut into small pieces.
-+ 3 tablespoons of sunflower oil.
-+ 3 tablespoons of Wiga Wagaa Jerk Paste.
-***** Recipe
-+ Mix the chicken with Wig Wagga Jerk Paste, cover and marinate overnight in the fridge.
-+ Heat the oil in a frying and fry onions for 1 minute.
-+ Add the chicken and fry for 3 minutes, stirring regularly.
-+ Add 50ml of water, stir well and simmer gently for 15 minutes or until cooked.
-+ Serve on a bed of rice with salad and black eye beans.
-**** Coconut Chicken
-***** Ingredients
-+ 500g chicken breast or thigh cut into 2.5cm pieces
-+ 1 jar of Wig Wagaa Coconut Cooking sauce
-+ Marinade chicken in 4 tablespoons of sauce and marinate for minimum 15 mins (ideally overnight)
-+ 1 medium size onion cut into small pieces
-+ ½ red and ½ green pepper in 2.5cm pieces
-+ 4 tablespoons of sunflower oil
-+ 100ml water
-+ Fresh coriander finely chopped
-***** Recipe
-+ Heat oil in medium size pan until hot.
-+ Stir fry onion for 1 minute.
-+ Stir fry ½ pepper for 30 seconds.
-+ Add chicken and stir fry for 2 minutes.
-+ Add remaining peppers and Coconut Sauce and stir thoroughly.
-+ Simmer for 15 minutes or until chicken is cooked.
-+ Add water if required.
-+ Garnish with coriander and serve with pasta, rice or cous cous.
-*** Sheffield
-+ [[https://maktok.com/][Mak Tok Malaysian Pastes]] (use ~WELCOME10~ to get 10% discount on first order)
-+ [[https://fulaflavour.co.uk/products/][Fula Flavour]]
-+ [[https://www.sheffielddragon.com/][Sheffield Dragon]]
-+ [[https://khooshotsauce.co.uk/][Khoo’s Hot Sauce]]
-+ [[https://omemade.co.uk/]['Ome Made Store]]
-* Alcohol
-** Beer
-*** To Try
-+ [[https://www.beersofeurope.co.uk/beer/country/belgium/tongerlo-prior][Tongerlo Prior | Buy Beer Now Online | Beers of Europe]]
-** Gin
-[[https://www.theginguide.com/][The Gin Guide]]
-+ [[https://lindandlime.com/][Lind & Lime Gin]]
-** Whisky
-** Wine
-* Web Sites
-** Alcohol
-+ [[https://www.beersofeurope.co.uk/][Beers of Europe]]
-** Recipes
+
+
+* Links
 + [[https://cooked.wiki/][Cooked - Your Smart Cookbook]]
 + [[https://cookingonabootstrap.com/][Cooking on a Bootstrap | The #1 budget recipe website]]
 + [[https://www.bbcgoodfood.com/][BBC Good Food | Recipes and cooking tips]]
@@ -273,17 +43,13 @@ For more on Chilli's see [[id:5a8671e1-f402-4725-9f73-f344dfd4de77][Chilli's]].
 + [[https://justthedarnrecipe.com/][JustTheDarnRecipe.com]]
 + [[https://greatcurryrecipes.net][The Curry Guy]]
 
-** Chilli's
-+ [[https://www.thechilliking.com/][The Chilli King]]
 
 ** Misc
 + [[https://www.lovefoodhatewaste.com/][Love Food Hate Waste]]
 + [[https://www.theguardian.com/society/2021/jul/11/unlocking-the-gut-microbiome-and-its-massive-significance-to-our-health][Unlocking the ‘gut microbiome’ – and its massive significance to our health | Health | The Guardian]]
 + [[https://www.sapiens.org/culture/chili-pepper-anthropology/][Why Do (Some) Humans Love Chili Peppers?]]
 
-*** Cheese
+** Cheese
 + [[https://micro-bites.org/2024/02/23/a-cheesy-story-of-microbial-cooperation/][A cheesy story of microbial cooperation]] ([[https://www.nature.com/articles/s41467-023-41059-2][Microbial interactions shape cheese flavour formation | Nature
   Communications]])
 + [[https://news.cnrs.fr/articles/french-cheese-under-threat][French cheese under threat | CNRS News]]
-* Books
-+ [[https://www.goodreads.com/book/show/6534803-the-complete-chile-pepper-book][The Complete Chile Pepper Book: A Gardener's Guide to Choosing, Growing, Preserving, and Cooking by Dave DeWitt | Goodreads]]

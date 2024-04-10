@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       f3ee906f-4e5c-441b-95ea-99d72eae3edc
+:mtime:    20240410202015
+:ctime:    20240410202015
+:END:
+#+TITLE: Food : Alcohol
+#+FILETAGS: :food:alcohol:
+
+* Beer
+*** To Try
++ [[https://www.beersofeurope.co.uk/beer/country/belgium/tongerlo-prior][Tongerlo Prior | Buy Beer Now Online | Beers of Europe]]
+* Gin
+[[https://www.theginguide.com/][The Gin Guide]]
++ [[https://lindandlime.com/][Lind & Lime Gin]]
+* Whisky
+* Wine
+
+
+* Links
+
++ [[https://www.beersofeurope.co.uk/][Beers of Europe]]

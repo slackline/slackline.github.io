@@ -1,0 +1,105 @@
+:PROPERTIES:
+:ID:       b10998ac-94d5-4ff0-940a-fb05d80b6ba8
+:mtime:    20240410161843
+:ctime:    20240410161843
+:END:
+#+TITLE: Food : Indian
+#+FILETAGS: :food:cooking:indian:
+
+* Starters
+* Curries
++ [[https://www.omemade.com/fish-pakora-recipe/][Fish Pakora ('Ome Made)]]
+** From [[https://www.goodreads.com/book/show/2273661.Balti_Curry_Cookbook][Balti Curry Cookbook by Pat Chapman]]
+** Green Masala Paste
+*** Ingredients
++ 1 teaspoon fenugreek seeds
++ 6 garlic cloves chopped
++ 2 tablespoons of finely chopped fresh ginger
++ 40g fresh mint leaves
++ 40g fresh coriander leaves
++ 3 teaspoons of salt
++ 3 teaspoons of turmeric
++ 2 teaspoons chilli powder
++ ½ teaspoon ground cloves
++ 1 teaspoon ground cardamom seeds
++ 120ml vegetable oil
++ 50ml sesame oil
+*** Recipe
+1. Soak the fenugreek seeds overnight, strain before using.
+2. Blend/mulch all ingredients, bar oil, to make a puree. Leave to stand for at least 10 minutes.
+3. Heat the oil in a karahi or wok, add the paste.
+4. Stir-fry continually to prevent it from sticking until the water has evaporated (should be ~5 minutes). As the liquid
+   reduces the paste will make a bubbling noise (chup-chup-chup) if not stirred and will splatter, this is an indication
+   that it is done.
+5. Bottle in sterilised jars, capping with hot oil.
+6. Seal and store.
+** Special Balti Sauce
+*** Ingredients
++ 200ml milk
++ 200ml water
++ 2 tablespoons of ghee or vegetable oil
++ 3 garlic cloves finely chopped
++ 225g onion, very finely chopped
++ 110g carrot, grated
++ 50g celeriac, grated
++ 50g mooli, grated
++ 4 bay leaves
++ 8-10 green cardamoms, split
++ ~10cm cassia bark
++ 1 teaspoon fennel seeds
++ ½ teaspoon turmeric
++ 2 star anise
++ 2.5cm cube of fresh ginger, roughly sliced
+*** Recipe
+1. Bring the milk, water and spices to the boil and simmer for 10-15 minutes, remove from the heat, strain and discard
+   the spices.
+2. Heat the oil/ghee in a karahi, fry the garlic for 30 seconds then add the onion and stir-fry for 5 minutes or until
+   soft and golden.
+3. Add the spicy milk/water, carrots, celeriac and mooli and simmer for 30 minutes. It should not be too dry, nor runny.
+4. Allow to cool and blend to a fine puree, it should be easy to pour.
+** Balti Jal Frezi (4 portions)
+*** Ingredients
++ ~600g of meat of choice (diced chicken, fish or shell fish)
++ 450ml of Special Balti Sauce
++ 1 tablespoon of ghee or vegetable oil
++ 1 tablespoon of Green Masala paste
++ 3 garlic cloves, finely chopped
++ 110g onion, thinly sliced
++ ½ red pepper cut into small diamonds
++ ½ green pepper cut into small diamonds
++ 2-4 tablespoons of finely chopped coriander leaves
++ juice from ½ a lemon
++ Garam masala
++ Pinch of salt
++ Fresh coriander leaves to garnish
++ 1½ teaspoons of cummin seeds
++ ½ teaspoon of lovage seeds
++ ½ teaspoon corriander seeds
+*** Recipe
+0. Optionally marinate meat in green masala paste overnight
+1. Heat oil/ghee and stir fry the cummin/lovage/corriander seeds for 30 seconds, then add the garlic and stir-fry for a
+   further 30 seconds. Add the green masala paste and stir-fry for another minute, then the onion and stir-fry for 3
+   minutes.
+2. Add the main ingredient (if marinated don't worry about extra masala paste, it all tastes good!). Stir-fry for 3
+   minutes.
+3. Add the Special Balti Sauce and bring to a simmer.
+4. Add the peppers, chopped corriander, lemon juice and garam masala and simmer until cooked to your liking.
+5. Serve with rice and garnish with corriander leaves.
+** Bombay Potatoes
+*** Ingredients
++ Diced (~1cm) potatoes.
++ 1 large onion finely sliced.
++ 4 garlic cloves, crushed/finely sliced.
++ Tomato Puree.
++ Garam Masala (alternatively cumin, corriander and chilli powder)
++ Turmeric
++ 2 table spoons of vegetable oil.
+*** Recipe
+1. Boil potatoes until just done and drain well.
+2. Fry onion and garlic until soft and golden.
+3. Add the turmeric, garam masala and tomato puree to the onions and garlic and mix well.
+4. Add the potatoes and mix well on a low heat for upto 5 minutes.
+* Snacks
++ [[https://www.theguardian.com/food/2022/apr/16/tamal-ray-recipe-for-bengali-kati-rolls][Tamal Ray’s recipe for Bengali kati rolls | Indian food and drink | The Guardian]]
+* Breads
++ [[https://www.omemade.com/british-indian-restaurant-curry/][British Indian Restaurant Curry & Basic Base Gravy Recipe 'Ome Made - 'Ome Ma...]]

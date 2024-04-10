@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       43927400-7eaf-4a13-9352-6c76b0da8c97
+:mtime:    20240410162256
+:ctime:    20240410162256
+:END:
+#+TITLE: Food : Slovenian
+#+FILETAGS: :food:cooking:slovenian:
+
+* Ricet
+*** Ingredients
++ Brown Beans
++ Barley
++ Kohlabri
++ Potatoes
++ Celery
++ Carrots
++ Onions
++ Parlsey Root
++ Fresh Parsley
++ Cooked smoked pork or Sausages
++ Vegetable Stock
++ Bay Leaves
++ Marjoram
++ Thyme
+*** Recipes
++ [[https://foodnutters.com/ricet/][Ricet - the iconic Slovenian barley soup]]
++ [[https://homemadeslovenianfood.blogspot.com/2016/02/ricet-traditional-slovenian-barley-soup.html][HOMEMADE SLOVENIAN FOOD : RIČET - TRADITIONAL SLOVENIAN BARLEY SOUP]]
++ [[https://balkanrecipes.com/ricet-traditional-slovenian-barley-soup/][Ričet (Traditional Slovenian Barley Soup) - Traditional Recipes from the Balkans]]
