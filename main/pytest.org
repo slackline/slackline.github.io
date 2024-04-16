@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3cca0dfd-0c82-4685-b9ed-6314f7c8b78f
-:mtime:    20240315123523 20240206174808 20240102123440 20240101130614 20231231095334 20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
+:mtime:    20240416215946 20240315123523 20240206174808 20240102123440 20240101130614 20231231095334 20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
 :ctime:    20221212233350
 :END:
 #+TITLE: Python Pytest
@@ -248,7 +248,11 @@ There are lots of PyTest plugins/extensions.
 
 ** pytest-mpl
 
+Generate Matplotlib images and compare them in subsequent runs.
+
 ** pytest-regtest
+
+Regression testing of methods, writes output to files and compares subsequent runs to these.
 
 ** pytest-benchmark
 
@@ -258,6 +262,10 @@ There are lots of PyTest plugins/extensions.
 
 [[https://github.com/mariusvniekerk/pytest-monkeytype][pytest-monkeytype]] is a plugin that facilitates running [[https://github.com/Instagram/MonkeyType][MonkeyType]] which generates run-time types of function arguments
 and return values.  These can be applied to existing code to apply Typehints.
+
+** inline-snapshot
+
+[[https://15r10nk.github.io/inline-snapshot/][inline-snapshot]]
 
 * Links
 
