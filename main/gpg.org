@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ce08bd82-0146-49cb-8a64-048ffe7210f2
-:mtime:    20240317085317 20240315224355 20231231085314 20231210095348 20231126223255 20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
+:mtime:    20240417110830 20240317085317 20240315224355 20231231085314 20231210095348 20231126223255 20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
 :ctime:    20221229210308
 :END:
 #+TITLE: GnuPG
@@ -439,6 +439,10 @@ For more on signing Git commits see[[id:beef0eda-374a-4ea0-9894-967850fbe0ce][Gi
 ** Apps
 
 + [[https://docs.passwordstore.app/][Android Password Store Documentation | Android Password Store Documentation]]
+
+** Expiring/Updating Keys
+
++ [[https://kevin.gimbel.dev/blog/2024/04/oh-no-my-gpg-key-expired-like-every-year/][Oh no my gpg key expired (like every year) - Kevin.Gimbel.Dev/Blog]]
 
 ** Misc
 
