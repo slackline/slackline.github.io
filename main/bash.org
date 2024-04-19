@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9c6257dc-cbef-4291-8369-b3dc6c173cf2
-:mtime:    20231231085056 20231030220403 20231012172230 20230915150059 20230912203523 20230911222141 20230722093604 20230714103949 20230528213012 20230519194008 20230330135624 20230326125853 20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
+:mtime:    20240419192502 20231231085056 20231030220403 20231012172230 20230915150059 20230912203523 20230911222141 20230722093604 20230714103949 20230528213012 20230519194008 20230330135624 20230326125853 20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
 :ctime:    20221231194258
 :END:
 #+TITLE: Bash
@@ -245,6 +245,12 @@ couple of options.
 'grep' -n something *.R
 #+end_src
 
+* History
+
+Having a history of what you have used in a shell is invaluable, you can search it for commands you have used in the
+past. Under Bash this is saved in `~/.bash_history~`. It would be really neat to be able to share history between
+systems. The tool [[id:f74f50d3-9d99-4082-8733-84f139fddea1][Atuin]] is invaluable for this.
+
 * Links
 
 ** ~PS1~ Customisation
@@ -255,6 +261,8 @@ couple of options.
 + [[https://explainshell.com/][Explain Shell]]
 
 ** Tools
+
++ [[https://docs.atuin.sh/][Atuin]] - context and (encrypted) synchronisation for your shell history.
 + [[https://diffy.org/][Diffy - share diff output in your browser]]
 
 ** Data Science at the Command Line

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a1b78518-31e8-4fd3-a36f-d8f152832138
-:mtime:    20230911222408 20230103103312 20221211195020
+:mtime:    20240419193336 20230911222408 20230103103312 20221211195020
 :ctime:    20221211195020
 :END:
 #+TITLE: ZSH
@@ -44,11 +44,39 @@ To enable it add the following to ~.zshrc~
   autoload zmv
 #+end_src
 
+* History
+
+There are a few options, tools and plugins for working with history. Ensuring there are no duplicates is really useful
+as is setting the maximum size of your history to a very high level so that you retain a lot of your history.
+
+I have the following options set.
+
+#+begin_src sh
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_FIND_NO_DUPS
+export HISTTIMEFORMAT="[%F %T]"
+export HIST_STAMPS="yyyy-mm-dd"
+export SAVEHIST=100000
+export HISTSIZE=5000
+#+end_src
+
+** Tips and Tricks
+
++ Start a command with a space it /won't/ be saved in your history. Useful for sensitive commands that include passwords
+  or keys.
+
+
+** Atuin
+
+[[id:f74f50d3-9d99-4082-8733-84f139fddea1][Atuin]] is a tool for syncing, searching and backing up shell history.
+
 * Links
 
 + [[https://www.zsh.org/][ZSH]]
 + [[https://grml.org/zsh/zsh-lovers.html][ZSH Lovers]]
 + [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]
++ [[id:f74f50d3-9d99-4082-8733-84f139fddea1][Atuin]]
 
 ** Extensions
 
