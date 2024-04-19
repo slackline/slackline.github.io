@@ -1,9 +1,20 @@
 :PROPERTIES:
 :ID:       f74f50d3-9d99-4082-8733-84f139fddea1
-:mtime:    20240419192807
+:mtime:    20240419210141 20240419192807
 :ctime:    20240419192807
 :END:
 #+TITLE: Atuin
 #+FILETAGS: :shell:sync:history:
 
 [[https://docs.atuin.sh/][Atuin]] is a tool for syncing, searching and backing up shell history.
+
+* Installation
+
+** Gentoo
+
+I set my Gentoo install up to act as a server for synchronising Atuin.
+
+#+begin_src sh
+echo "app-shells/atuin server sync" >> /etc/portage/package.use/app-shells
+emerge -av app-shells/atuin
+src

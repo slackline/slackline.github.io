@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ea1499ab-dab2-49b1-8479-cb5a2fbd38bc
-:mtime:    20231128211522 20231103145409 20230714224933 20230503073018 20230331230614 20230103103314 20221224191223 20230103103313 20230103103309 20230103103308
+:mtime:    20240419202116 20231128211522 20231103145409 20230714224933 20230503073018 20230331230614 20230103103314 20221224191223 20230103103313 20230103103309 20230103103308
 :ctime:    20221224191223 20230103103308
 :END:
 #+TITLE: Programming
@@ -90,9 +90,11 @@ somewhere to attend conferences when they are often available online (either liv
 + [[id:cc3612e7-3ed5-4cca-b36d-0a4b20e8669d][NormConf]]
 
 * Links
+
 + [[https://www.catharsisinsight.com/_files/ugd/fce7f8_f9d2fea4f1b9478baeb7e84ab1b63759.pdf]["It's like Coding in the Dark" : The need for learning cultures within coding teams]]
 + [[https://refactoring.guru/refactoring][Refactoring Guru : Refactoring]]
 + [[https://refactoring.guru/design-patterns][Refactoring Guru : Design Patterns]]
++ [[https://python-patterns.guide/][Python Design Patterns]]
 
 Misc
 
