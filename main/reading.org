@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5e4b0759-696f-47a7-81c1-a7506aab41a0
-:mtime:    20240306145316
+:mtime:    20240422071430 20240306145316
 :ctime:    20240306145316
 :END:
 #+TITLE: Reading
@@ -72,7 +72,7 @@ Most of these I read a long time ago when studying hence a distinct lack of note
 + /The Art of Statistics/ David Speigelhalter
 + /How to Make The World Add Up/ Tim Harford
 + /Calling Bullshit/ Carl Bergstrom
-+ [[https://www.cambridge.org/fr/universitypress/subjects/computer-science/computing-and-society/computing-climate-how-we-know-what-we-know-about-climate-change?format=PB&isbn=9781107589926][Copmuting the Climate : How We Know What We Know About Climate Change]]
++ [[https://www.cambridge.org/fr/universitypress/subjects/computer-science/computing-and-society/computing-climate-how-we-know-what-we-know-about-climate-change?format=PB&isbn=9781107589926][Computing the Climate : How We Know What We Know About Climate Change]]
 *** Technical
 + /Regression Modelling Strategies/ by Frank Harrell
 + /Statistical Rethinking : A Bayesian Course with Examples in R and Stan 2nd Edition/ Richard McElreath
@@ -82,6 +82,38 @@ Most of these I read a long time ago when studying hence a distinct lack of note
 + /The R Handbook/
 + /R in a Nutshell/
 
+** Other
+*** Robert Twigger
++ /Angry White Pyjamas/
++ /Portage/
++ /The Great North Line/
+*** William S Boroughs
++ /Naked/
+** Fiction
+*** Neal Stephenson
++ /Cryptonomicon/
++ /Snow Crash/
++ /The Diamond Age : or a Young Lady's Illustrated Primer/
++ /Reamde/
++ /Termination Shock/
+*** Terry Pratchet
+**** Discworld
++ /Colour of Magic/
++ /Light Fantastic/
++ /Mort/
++ /Reaper Man/
++ /Guards, Guards/
+**** Other
++ /The Unadulterated Cat/
++ /The Carpet People/
++ /Diggers/
++ /Good Omens/ (co-authored with Neil Gaiman)
+*** Neil Gaiman
++ /American Gods/
++ /Anansi Boys/
+*** Kinky Friedman
+*** Aldous Huxley
++ /Brave New World/
 * Not Books
 
 Other stuff I've read at various points on the net that were interesting.
