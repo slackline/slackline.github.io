@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5a8671e1-f402-4725-9f73-f344dfd4de77
-:mtime:    20240410201727 20240405180710 20230103103310 20220525072928
+:mtime:    20240424210604 20240410201727 20240405180710 20230103103310 20220525072928
 :ctime:    20220525072928
 :END:
 #+TITLE: Chillis
@@ -111,7 +111,7 @@ in place.
 + [[http://www.chilliguru.uk/index.html][Chilli Guru]]
 + [[https://www.thechilliking.com/][The Chilli King]]
 + [[https://www.goodreads.com/book/show/6534803-the-complete-chile-pepper-book][The Complete Chile Pepper Book: A Gardener's Guide to Choosing, Growing, Preserving, and Cooking by Dave DeWitt | Goodreads]]
-
++ [[https://pepperscale.com/hot-pepper-list/][The Hot Pepper List: 150+ Chilies Profiled]]
 
 ** Articles
 
