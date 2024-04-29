@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d7b0fb90-d668-4e31-bc2d-305f6ee14fc9
-:mtime:    20240122164500 20231126083238 20231119210731 20230803212315 20230612165437 20230108213627 20230103103313 20220524211634
+:mtime:    20240429121335 20240122164500 20231126083238 20231119210731 20230803212315 20230612165437 20230108213627 20230103103313 20220524211634
 :ctime:    20220524211634
 :END:
 #+TITLE: Numpy
@@ -58,6 +58,22 @@ This shows that its faster to use the vectorisation approach than to loop over t
 [[https://numpy.org/doc/stable/reference/generated/numpy.lexsort.html][~np.lexsort()~]] is a neat way to lexically sort arrays, useful if you want to change the order of co-ordinates from say
 ~np.argwhere~.
 
+** Printing Arrays
+
+If you need to print all of an array and not have columns or rows truncated you [[https://stackoverflow.com/questions/1987694/how-do-i-print-the-full-numpy-array-without-truncation][can]].
+
+#+begin_src python
+  import sys
+  import numpy as np
+
+  # Prints everything regardless
+  with np.printoptions(threshold=np.inf):
+      print(array)
+
+  # More respectful of system capacity
+  with np.printoptions(threshold=sys.maxsize):
+      print(array)
+#+end_src
 * Links
 
 ** Books
