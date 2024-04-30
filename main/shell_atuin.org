@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f74f50d3-9d99-4082-8733-84f139fddea1
-:mtime:    20240419210141 20240419192807
+:mtime:    20240430154522 20240429070358 20240419210141 20240419192807
 :ctime:    20240419192807
 :END:
 #+TITLE: Atuin
@@ -15,6 +15,42 @@
 I set my Gentoo install up to act as a server for synchronising Atuin.
 
 #+begin_src sh
-echo "app-shells/atuin server sync" >> /etc/portage/package.use/app-shells
 emerge -av app-shells/atuin
 src
+
+** Arch
+
+#+begin_src sh
+pacman -Syu atuin
+#+end_src
+
+* Setup
+
+You need to setup your shell to use Atuin
+
+#+begin_src sh
+echo 'eval $(atuin init zsh)' > ~/.zshrc
+#+end_src
+
+On one server I registered, created a key and imported my existing [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]] history. Save your key alongside your password in
+your password, it's required for syncing other devices.
+
+#+begin_src sh
+atuin register -u <username> -e <email@address.me>
+atuin key
+atuin import zsh
+#+end_src
+
+
+** Initial Sync
+
+On the initial sync it failed with...
+
+#+begin_src sh
+❱ atuin sync
+0/0 up/down to record store
+20685 in history index, but 0 in history store
+Running automatic history store init...
+⠁ Fetching history from old database
+ERROR: Failed to find $ATUIN_SESSION in the environment. Check that you have correctly set up your shell.
+#+end_src
