@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       52b4db29-ba21-4a8a-9b83-6e9a8dc02f41
-:mtime:    20240302150709 20240110125102 20230708080833 20230626121713 20230519193813 20230519143618 20230103103310 20221211233405
+:mtime:    20240502231416 20240302150709 20240110125102 20230708080833 20230626121713 20230519193813 20230519143618 20230103103310 20221211233405
 :ctime:    20221211233405
 :END:
 #+TITLE: GitHub
@@ -14,6 +14,16 @@
 * Configuration
 
 ** Adding SSH Keys
+
+If you use GitHub ([[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]], [[id:736537b3-75e0-4c24-9156-364937e0e8a2][Forgejo]] or any other forge) regularly then you'll want to use SSH keys. As with all [[id:b5000932-0fec-4353-acc4-0cb02127c9ac][Privacy
+and Encryption]] tools these are a way of authenticating who you are securely and involved a private key, which stays on
+your computer, and a public key which you share.
+
+Saving your public key to you GitHub account under /Settings > SSH and GPG keys/ means that after you login to your
+computer and stored the unlocked private key in something like [[id:5f040d28-2aa8-4cac-91aa-43f5e3d515a3][Keychain]] (sometimes a called a Keyring) you can connect
+seamlessly to not just other servers via [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] it can also be used for pushing and pulling from Forge's/
+
+**TODO** - Details of how to create keys, add to account, configure Git to use them.
 
 ** GPG Keys
 
@@ -66,14 +76,20 @@ benefits of GitHub Teams on organisations that you are a member of/control.
 
 + [[https://education.github.com/globalcampus/teacher][GlobalCampus - Teacher]] - request teams for organisations from here, check status [[https://education.github.com/discount_requests/application][here]].
 
+* Keyboard Shortcuts
+
+Almost every page on GitHub has [[https://images.github.media/Web/GitHubInc/%7Bdee1b5bb-19a4-4a85-9a40-678ed551e40d%7D_github-insider-archive-nov-2023.html][keyboard shortcuts]] that help with navigation, learning them can (like touch-typing and
+Emacs) make you more efficient.
+
 * Links
+
 ** GitHub Pages
 
 + [[https://pages.github.com/][Websites for you and your projects, hosted directly from your GitHub repository.]]
 
 ** Configuration
 
-+ [[https://github.com/repository-settings/app][repisotyr-settings/app]] Configure repositories via a config file.
++ [[https://github.com/repository-settings/app][repisotry-settings/app]] Configure repositories via a config file.
 
 ** Automation
 + [[https://docs.github.com/en/actions][GitHub Actions Documentation]]
