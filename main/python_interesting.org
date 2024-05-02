@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       4ca15b37-1436-45fc-8a81-7f1f03b0ee64
-:mtime:    20230103103310 20221212181558
+:mtime:    20240501131554 20230103103310 20221212181558
 :ctime:    20221212181558
 :END:
 #+TITLE: Useful Python Packages
@@ -8,6 +8,12 @@
 #+FILETAGS: :python:packages:tqdm:textual:loguru:
 
 [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] has a /lot/ of packages available I've even written and published one myself. The main resource is the Python Package Index (PyPI)
+
+* pyinfra
+
+#+begin_quote
+[[https://pyinfra.com/][pyinfra]] automates infrastructure super fast at massive scale.
+#+end_quote
 
 * loguru
 
@@ -18,6 +24,7 @@
 * Links
 
 + [[https://github.com/Delgan/loguru][loguru]]
++ [[https://pyinfra.com/][pyinfra]]
 + [[https://requests.readthedocs.io/en/latest/][requests]]
 + [[https://textual.textualize.io][textual]]
 + [[https://tqdm.github.io][tqdm]]
