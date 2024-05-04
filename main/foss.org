@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f277da12-5d6d-46e3-a49c-7bda9254d469
-:mtime:    20240329071409 20240222094145 20240218160428 20240217180720 20240215130935 20240209160828 20240123221325 20240121200647
+:mtime:    20240504161600 20240329071409 20240222094145 20240218160428 20240217180720 20240215130935 20240209160828 20240123221325 20240121200647
 :ctime:    20240121200647
 :END:
 #+TITLE: FOSS
@@ -27,6 +27,7 @@ that page, if not they take you to the projects site.
 ** Multimedia
 
 + [[id:9b22641a-6921-4afa-84fc-1da105a3dfc7][ffmpeg]]
++ [[https://immich.app/docs/overview/introduction][Immich]] self-hosting for pictures and video ([[https://aur.archlinux.org/packages/immich-server][Arch Linux AUR server]])
 + [[https:://musicpd.org][MPD]]
 + Snapcast
 

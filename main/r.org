@@ -278,6 +278,10 @@ found useful.
 + [[https://bradleyboehmke.github.io/HOML/][Hands-On Machine Learning with R]]
 + [[https://betaandbit.github.io/RML/][The Hitchikers Guide to Responsible Machine Learning]]
 
+**** Neural Nets
+
++ [[https://skeydan.github.io/Deep-Learning-and-Scientific-Computing-with-R-torch/][Deep Learning and Scientific Computing with R torch]]
+
 *** Health Data
 
 + [[https://epirhandbook.com/en/][The Epidemiologist R Handbook : R for applied epidemiology and public health]]

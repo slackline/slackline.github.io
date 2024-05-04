@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a53fa3c5-f091-4715-a1a4-a94071407abf
-:mtime:    20231022214824 20230908084133 20230907222812 20230813184404 20230812222550 20230623080100 20230215101306
+:mtime:    20240502105958 20231022214824 20230908084133 20230907222812 20230813184404 20230812222550 20230623080100 20230215101306
 :ctime:    20230215101306
 :END:
 #+TITLE: Arch Linux
@@ -98,6 +98,13 @@ recognise them. To solve this is to update the ~archlinux-keyring~ package first
 pacman -S archlinux-keyring
 #+end_src
 
+** Downgrading Packages
+
+[[https://wiki.archlinux.org/title/Downgrading_packages][Downgrading packages - ArchWiki]] covers everything in detail. Ideally use the ~pacman~ cache
+
+#+begin_src sh
+pacman -U file:///var/cache/pkg/package-old_version.pkg.tar.type
+ac#+end_src
 * AUR (Arch User Repository)
 
 [[https://aur.archlinux.org/][AUR]] is a repository of user maintained packages outside of the main Pacman repository. Each package is maintained as a

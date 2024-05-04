@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5e4b0759-696f-47a7-81c1-a7506aab41a0
-:mtime:    20240426165410 20240422071430 20240306145316
+:mtime:    20240502093004 20240426165410 20240422071430 20240306145316
 :ctime:    20240306145316
 :END:
 #+TITLE: Reading
@@ -127,6 +127,8 @@ nature v nurture.
 ** Economics
 + <2020-11-01 Sun> [[https://aeon.co/essays/the-challenge-of-reclaiming-the-commons-from-capitalism][The challenge of reclaiming the commons from capitalism | Aeon Essays]]
 ** Internet
+
++ [[https://www.noemamag.com/we-need-to-rewild-the-internet/][We Need To Rewild The Internet]]
 *** Social Media
 + <2021-10-31 Sun> [[https://www.newyorker.com/news/essay/on-the-internet-were-always-famous][On the Internet, We’re Always Famous | The New Yorker]]
 + <2023-09-18 Mon> [[https://www.wired.com/story/the-internet-con-cory-doctorow-book-excerpt/][How Big Tech Got So Damn Big | WIRED]]
