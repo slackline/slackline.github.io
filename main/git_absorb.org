@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       ba1f4f83-b032-410c-9cb6-98b6fa1246bd
+:mtime:    20240505164135
+:ctime:    20240505164135
+:END:
+#+TITLE: Git Absorb
+#+FILETAGS: :git:
+
+* Links
+
++ [[https://github.com/tummychow/git-absorb][tummychow/git-absorb: git commit --fixup, but automatic]]
++ [[https://crates.io/crates/git-absorb][git-absorb - crates.io: Rust Package Registry]]

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       44b32b4e-1bef-49eb-b53c-86d9129cb29a
-:mtime:    20230311154912 20230304204837 20230215101210 20230114082312
+:mtime:    20240510231405 20240504061610 20230311154912 20230304204837 20230215101210 20230114082312
 :ctime:    20230114082312
 :END:
 #+TITLE: Gentoo
@@ -44,16 +44,15 @@ system.
   emerge -av eix genlop gentoolkit eselect eclean-kernel eix-sync
 #+end_src
 
-** Layman
+** Overlays
 
-[[https://wiki.gentoo.org/wiki/Layman][Layman]] is a package for handling overlays, extensions to the official Portage repository, you can list all available
-repositories and as shown below, once installed you can ~emerge~ packages from the [[https://wiki.gentoo.org/wiki/Project:GURU][~guru~ overlay]] as you would any other
-package.
+There are a number of [[https://overlays.gentoo.org/][Gentoo Overlays]] which can be enabled with ~eselect repository~. This will list the available
+repository which can be added with ~add <name>~, optionally setting the ~<sync-type>~  and ~<sync-url>~ there are
+commands to ~enable~, ~disable~, ~list -i~ (installed) and ~remove~.
 
+*** Layman
 
-#+begin_src bash
-  layman -L layman -a guru
-#+end_src
+[[https://wiki.gentoo.org/wiki/Layman][Layman]] used to be a package for handling overlays but is now obsolete.
 
 * Ebuilds
 
@@ -104,3 +103,7 @@ article.
 
 ** Personal Repository
 + [[https://dataswamp.org/~solene/2023-03-04-github-actions-building-gentoo-packages.html][Using GitHub Actions to maintain Gentoo packages repository]]
+
+** Useful
+
++ [[https://hub.docker.com/r/ksmanis/gentoo-distcc][ksmanis/gentoo-distcc - Docker Image | Docker Hub]]

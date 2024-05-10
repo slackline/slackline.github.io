@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ce08bd82-0146-49cb-8a64-048ffe7210f2
-:mtime:    20240417110830 20240317085317 20240315224355 20231231085314 20231210095348 20231126223255 20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
+:mtime:    20240510223935 20240417110830 20240317085317 20240315224355 20231231085314 20231210095348 20231126223255 20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
 :ctime:    20221229210308
 :END:
 #+TITLE: GnuPG
@@ -156,7 +156,7 @@ Really create? y
 <PROMPTED FOR PASSWORD>
 #+end_src
 
-*** Authentication Keyboard
+*** Authentication Key
 
 Finally we add a sub-key for Authentication using Curve 25519, again ideally you should set an expiration date for this.
 
@@ -240,6 +240,15 @@ $ gpg2 --delete-keys <KEY-ID>
 
 To effectively use GnuPG keys you need to share the public component so that others can use it to encrypt files they are
 sending to you (only you will be able to decrypt it as your private key is something only you own).
+
+The instructions on [[https://keys.openpgp.org/about/usage][openpgp.org]] are very clear, to make your key findable based on email address you should...
+
+#+begin_src bash
+  gpg --export your@email.net | curl -T - https://keys.openpgp.org
+#+end_src
+
+Once this is done you should visit the URL that is shown and click on the link to verify the email address, check your
+inbox and then you have verified your email address.
 
 * Yubikey and OpenPGP
 
