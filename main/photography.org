@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       5253f936-28e2-416c-8541-6081c1ac4f0c
+:mtime:    20240511204735 20240511084447
+:ctime:    20240511084447
+:END:
+#+TITLE: Photography
+#+FILETAGS: :photography:pictures:
+
+* Cameras
+
+** Nikon D50
+
+** Nikon D90
+
+** Fuji X-T2
+
+*** Lenses
+
+* Software
+
+** Darktable
+
+** Hugin
+
+* Hosting
+
+** Flickr
+
+I've been a long time [[https://www.flickr.com/photos/slackline][Flickr]] user and have stuck with it despite the change of hands and increasing costs.
+
+*** API
+
+Details of Flickr API are at [[https://www.flickr.com/services/feeds/][Flickr Services]]

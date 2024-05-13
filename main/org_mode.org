@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       169b9c5f-df34-46ab-b64f-8ee98946ee69
-:mtime:    20240330210731 20240126213839 20240123221444 20230920063141 20230718145501 20230613223232 20230515080140 20230513163615 20230424102336 20230413154310 20230408213646 20230319195017 20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
+:mtime:    20240513075658 20240330210731 20240126213839 20240123221444 20230920063141 20230718145501 20230613223232 20230515080140 20230513163615 20230424102336 20230413154310 20230408213646 20230319195017 20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
 :ctime:    20221217184411
 :END:
 #+TITLE: Orgmode
@@ -136,3 +136,4 @@ There are hundreds!
 + [[https://wmealing.github.io/emacs-org-babel-analysis.html][Emacs and Org-babel for flaw analysis.]]
 + [[https://baty.net/2022/book-logging-in-emacs][Book logging in Emacs – Baty.net]]
 + [[https://arunmani.in/articles/publishing-book-emacs/][Publishing Book with Emacs and OrgMode]]
++ [[https://slawomir-grochowski.com/posts/02-how-i-organize-my-life-in-org-mode-using-column-view.html][‎]][[https://slawomir-grochowski.com/posts/02-how-i-organize-my-life-in-org-mode-using-column-view.html][‎How I organize my life in org-mode using column view]]
