@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       2b1518bf-c76c-4780-9274-41beb7e91cf0
+:mtime:    20240514070619
+:ctime:    20240514070619
+:END:
+#+TITLE: Org Capture
+#+FILETAGS: :orgmode:capture:templates:productivity:
+
+* Links
+
++ [[https://orgmode.org/manual/Capture.html][Capture (The Org Manual)]]
+
+** Articles
+
++ [[https://unixbhaskar.wordpress.com/2024/05/08/emacs-org-capture-templates-and-their-benefits/][Emacs Org-Capture Templates And Their Benefits | Unixbhaskar's Blog]]
