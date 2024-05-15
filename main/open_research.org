@@ -1,8 +1,8 @@
 :PROPERTIES:
 :ID:       0911a63f-4b82-4bf1-9235-f1e41e93d210
 :ROAM_ALIASES: "Open Research Overview"
-:mtime:    20240427202224 20240426220621 20240315114201 20240309205741 20240222110520 20240221200727 20240221123421 20240211213211 20240209220314 20240125144233 20240114172924 20231115220822 20231025215057 20230906113838 20230728145927 20230718174435 20230716210055 20230717104813 20230621115422 20230421104923 20230420112016 20230228205121 20230103103308 20221228113013
-:ctime:    20221228113013
+:mtime:    20240515164155
+:ctime:    20240515164155
 :END:
 #+title: Open Research
 #+filetags: :open-research:
@@ -11,17 +11,18 @@ Open Research seeks to make the practice of scientific method one that has rigou
 this supports the interpretation and re-use of research. Further it promotes the dissemination of work to allow others
 to validate and contribute to the research.
 
-* [[id:4c9eab3d-4ae2-4f48-a32c-925929fe60bf][Open Research Data]]
-* [[id:8a38a071-9901-4e35-9aec-213a0c65af00][Open Research Software]]
-* [[id:af7ec14e-3022-4d4b-b05d-101e937569e2][Frameworks]]
-* [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]]
-* [[id:97d138e1-015a-406a-b7ec-c046f01246d2][Reproducible Research]]
-* [[id:3df9f7ea-12c0-47ab-97a8-e2b3d6c72606][Publishing]]
-* [[id:04cf68bf-0db2-403e-b0a6-9c94aa662577][Replication / Peer Review]]
-* [[id:49d21f82-887e-4ec7-8963-89460673352a][Research Software Engineering]]
-* [[id:5d84509c-5895-4890-b073-5cdfe0ad094f][Octopus]]
-* [[id:8d52f6c2-84ba-4fa4-9755-7168e3b0b229][Open Science Community Incubator Program]]
-* [[id:ecaeb512-f4d8-4f3a-8788-71291515bcf5][Teaching Reproducible Research]]
++ [[id:4c9eab3d-4ae2-4f48-a32c-925929fe60bf][Open Research Data]]
++ [[id:8a38a071-9901-4e35-9aec-213a0c65af00][Open Research Software]]
++ [[id:af7ec14e-3022-4d4b-b05d-101e937569e2][Frameworks]]
++ [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]]
++ [[id:97d138e1-015a-406a-b7ec-c046f01246d2][Reproducible Research]]
++ [[id:3df9f7ea-12c0-47ab-97a8-e2b3d6c72606][Publishing]]
++ [[id:04cf68bf-0db2-403e-b0a6-9c94aa662577][Replication / Peer Review]]
++ [[id:49d21f82-887e-4ec7-8963-89460673352a][Research Software Engineering]]
++ [[id:5d84509c-5895-4890-b073-5cdfe0ad094f][Octopus]]
++ [[id:0cb02a27-253c-42aa-8496-a9520c3d63a6][open_peer_review]]
++ [[id:8d52f6c2-84ba-4fa4-9755-7168e3b0b229][Open Science Community Incubator Program]]
++ [[id:ecaeb512-f4d8-4f3a-8788-71291515bcf5][Teaching Reproducible Research]]
 
 
 * References

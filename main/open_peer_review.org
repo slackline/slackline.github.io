@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       0cb02a27-253c-42aa-8496-a9520c3d63a6
+:mtime:    20240515164051
+:ctime:    20240515164051
+:END:
+#+TITLE: Open Peer Review
+#+FILETAGS: :open research:peer review:
+
+* Open Platforms
+
+[[id:5d84509c-5895-4890-b073-5cdfe0ad094f][Octopus]] is a platform that encourages open peer review and a number of other journals do to.
+
+* Links
+
++ [[https://www.opennessinitiative.org/][Peer Reviewers' Openness Initiative | Supporting the spread of open research practices]]
+
+** Papers
+
++ [[https://f1000research.com/articles/7-969/v1][Ten considerations for open peer review | F1000Research]]
