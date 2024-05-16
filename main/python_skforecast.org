@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       1d423396-546f-4aaf-9927-6002ccca4530
+:mtime:    20240516112339
+:ctime:    20240516112339
+:END:
+#+TITLE: Python skforecast
+#+FILETAGS: :python:statistics:time-series:forecasting:
+
+* Links
+
++ [[https://skforecast.org/][Skforecast Docs]]

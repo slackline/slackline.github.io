@@ -17,3 +17,4 @@
 ** Papers
 
 + [[https://f1000research.com/articles/7-969/v1][Ten considerations for open peer review | F1000Research]]
++ [[https://f1000research.com/articles/3-271/v2][An Open Science Peer Review Oath | F1000Research]]
