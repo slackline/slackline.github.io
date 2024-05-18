@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       06e11786-bbbe-42c1-8f97-dde66d8f844e
+:mtime:    20240518155014
+:ctime:    20240518155014
+:END:
+#+TITLE: Economics
+#+FILETAGS: :economics:maths:statistics:
+
+* The Jevons Paradox
+
+Read this interesting piece [[https://economicsfromthetopdown.com/2024/05/18/a-tour-of-the-jevons-paradox-how-energy-efficiency-backfires/][A Tour of the Jevons Paradox: How Energy Efficency Backfires]].
+
+* Links
+
+** Blogs
+
++ [[https://economicsfromthetopdown.com/][Economics from the Top Down – New ideas in economics and the social sciences]]
