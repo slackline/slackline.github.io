@@ -252,6 +252,8 @@ found useful.
 
 + [[https://r4ds.had.co.nz/][R for Data Science]]
 + [[https://bookdown.org/rdpeng/rprogdatascience/][R Programming for Data Science]]
++ [[https://e2e-ds-r.franckess.com/][End To End Data Science With R]]
+
 
 *** Graphics
 
