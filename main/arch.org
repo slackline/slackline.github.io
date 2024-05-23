@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a53fa3c5-f091-4715-a1a4-a94071407abf
-:mtime:    20240502105958 20231022214824 20230908084133 20230907222812 20230813184404 20230812222550 20230623080100 20230215101306
+:mtime:    20240523145115 20240523132208 20240502105958 20231022214824 20230908084133 20230907222812 20230813184404 20230812222550 20230623080100 20230215101306
 :ctime:    20230215101306
 :END:
 #+TITLE: Arch Linux
@@ -103,8 +103,24 @@ pacman -S archlinux-keyring
 [[https://wiki.archlinux.org/title/Downgrading_packages][Downgrading packages - ArchWiki]] covers everything in detail. Ideally use the ~pacman~ cache
 
 #+begin_src sh
-pacman -U file:///var/cache/pkg/package-old_version.pkg.tar.type
-ac#+end_src
+pacman -U file:///var/cache/pacman/pkg/package-old_version.pkg.tar.type
+#+end_src
+
+If the file is not in your local cache you can obtain older versions from the [[https://archive.archlinux.org/][Arch Linux Archive]] or one of its
+[[https://gitlab.archlinux.org/archlinux/infrastructure/-/blob/master/docs/servers.md#archive-mirrors][mirrors]]. You can use ~wget~ to grab these files but remember to get the signature file too.
+
+#+begin_src bash
+cd /var/cache/pacman/pkg
+wget https://archive.archlinux.org/packages/l/libgit2/libgit2-1%3A1.7.2-1-x86_64.pkg.tar.{zst,zst.sig}
+#+end_src
+
+To prevent packages from being updated again you should add them in a space delimited list to ~IgnorePkg~ in
+~/etc/pacman.conf~
+
+#+begin_src bash
+IgnorePkg = libgit2
+#+end_src
+
 * AUR (Arch User Repository)
 
 [[https://aur.archlinux.org/][AUR]] is a repository of user maintained packages outside of the main Pacman repository. Each package is maintained as a
