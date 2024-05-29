@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       378d14b6-3b5b-496a-b70a-fee6a3c64ed3
+:mtime:    20240529142124
+:ctime:    20240529142124
+:END:
+#+TITLE: Python Hatch
+#+FILETAGS: :python:packaging:hatch:
+
+[[https://hatch.pypa.io/latest/][Hatch]] is "/a modern, extensible Python project manager/". It includes a build system, manages environments, works with
+[[id:55581960-395e-443c-bd5d-bc00c496b6ae][Ruff]] and UV, testing and static analysis (viz. MyPy).
