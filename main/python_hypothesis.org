@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       d1832004-f5ee-4e28-8d83-abfe5969c283
+:mtime:    20240529093808
+:ctime:    20240529093808
+:END:
+#+TITLE: Python Hypothesis
+#+FILETAGS: :python:tests:testing:unittests:
+
+[[https://hypothesis.readthedocs.io/en/latest/index.html][Hypothesis]] is a powerful framework that aids with unittest development, it can find edge cases where functions fail and
+plays well with [[id:3cca0dfd-0c82-4685-b9ed-6314f7c8b78f][Pytest]].
+
+
+* Links
+
++ [[https://hypothesis.readthedocs.io/en/latest/index.html][Hypothesis Documentation]]
+
+** Articles
+
++ [[https://djsn.dev/post/into-python-hypothesis-testing/][Property-based testing in Python | ls /etc/brain]]

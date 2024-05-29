@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3cca0dfd-0c82-4685-b9ed-6314f7c8b78f
-:mtime:    20240507153851 20240417074159 20240416215946 20240315123523 20240206174808 20240102123440 20240101130614 20231231095334 20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
+:mtime:    20240529091921 20240523125824 20240507153851 20240417074159 20240416215946 20240315123523 20240206174808 20240102123440 20240101130614 20231231095334 20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
 :ctime:    20221212233350
 :END:
 #+TITLE: Python Pytest
@@ -14,6 +14,8 @@ As its web-page states [[https://docs.pytest.org/en/7.0.x/][pytest: helps you wr
 
 Often when writing tests early on you might expect them to fail, you can use the ~@pytest.mark.xfail~ fixture to mark a
 test as "expect to fail" and ~pytest~ will not halt and instead carry on with the rest of the tests.
+
+Combining ~pytest~ with [[id:d1832004-f5ee-4e28-8d83-abfe5969c283][Hypothesis]] makes for a very powerful framework.
 
 ** Configuration
 
@@ -267,6 +269,15 @@ Regression testing of methods, writes output to files and compares subsequent ru
 
 ** inline-snapshot
 This is somewhat baffling to me at the moment but [[https://15r10nk.github.io/inline-snapshot/][inline-snapshot]] has a pytest plugin extension.
+
+* Miscellaneous
+
+Thanks to [[https://fosstodon.org/@adamchainz/112484238160832627][this toot]] I discovered it is possible to use [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] to pass a list of modified files to ~pytest~ to run the tests
+against.
+
+#+begin_src bash
+pytest $git diff --name-only '*/test_*.py')
+#+end_src
 
 * Links
 
