@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5
-:mtime:    20240514223948 20240329211826 20240310181610 20240203204843 20240122164607 20240120110521 20231231180655 20231218184621 20231206221404 20231104081218 20231023063845 20231013000730 20230924112611 20230907232738 20230803211138 20230722230042 20230721144339 20230720100255 20230705092829 20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
+:mtime:    20240530093111 20240514223948 20240329211826 20240310181610 20240203204843 20240122164607 20240120110521 20231231180655 20231218184621 20231206221404 20231104081218 20231023063845 20231013000730 20230924112611 20230907232738 20230803211138 20230722230042 20230721144339 20230720100255 20230705092829 20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
 :ctime:    20230304230340
 :END:
 #+TITLE: Artificial Intelligence
@@ -49,6 +49,9 @@ Dennett writes that AI has the capacity to erode trust, a foundation on which so
 Problem With Counterfeit People - The Atlantic]].
 
 
+An excellent article by Meredith Whittaker on accountability of AI and "Big Tech" [[https://www.helmut-schmidt.de/aktuelles/detail/die-rede-der-zukunftspreistraegerin][Bundeskanzler-Helmut-Schmidt-Stiftung
+2024]]
+
 ** Moral Outsourcing
 
 Something I first came across in the article [[https://www.theguardian.com/technology/2023/may/29/rumman-chowdhury-interview-artificial-intelligence-accountability][‘I do not think ethical surveillance can exist’: by Rumman Chowdhury]] is the
@@ -89,6 +92,11 @@ A thoughtful paper on [[https://www.authorea.com/doi/full/10.22541/au.169264350.
 + [[https://github.com/google-research/optformer][google-research/optformer]] : Transformer-based framework for Hyperparameter Optimization
 + [[https://opening-up-chatgpt.github.io/][Opening up ChatGPT]] ([[https://doi.org/10.48550/arXiv.2307.05532][doi.org/10.48550/arXiv.2307.05532]])
 + [[https://github.com/leon-ai/leon][Leon AI]] : Open-source personal (off-line for now) assistant.
+
+** Research Summary
+
++ [[https://www.researchrabbit.ai/][ResearchRabbit]]
++ [[https://elicit.com/][Elicit: The AI Research Assistant]]
 
 ** Bias
 
