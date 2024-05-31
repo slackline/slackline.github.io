@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       378d14b6-3b5b-496a-b70a-fee6a3c64ed3
-:mtime:    20240529142124
+:mtime:    20240530202258 20240530184100 20240529142124
 :ctime:    20240529142124
 :END:
 #+TITLE: Python Hatch
@@ -8,3 +8,100 @@
 
 [[https://hatch.pypa.io/latest/][Hatch]] is "/a modern, extensible Python project manager/". It includes a build system, manages environments, works with
 [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Ruff]] and UV, testing and static analysis (viz. MyPy).
+
+* Adding Hatch to Existing Project
+
+You can bring an existing project under Hatch using the following from within the project directory.
+
+#+begin_src bash
+hatch new --init
+#+end_src
+
+You'll be asked for your project name and a /Description/ use what is already in your ~pyproject.toml~. It will update
+these fields as well as replacing the ~[build-system]~ section with ~hatchling~ and add headers to ~pyproject.toml~ for
+configuring hatch.
+
+** Versioning
+
+Previously I had used [[https://github.com/pypa/setuptools_scm/][setuptools_scm]] to dynamically set versions based on Git tags, but with switch to Hatch I also had
+to abandon this and instead use the [[https://github.com/ofek/hatch-vcs][hatch-vcs plugin]].
+
+#+begin_src toml
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+[project]
+...
+dynamic = ["version"]
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "_version.py"
+
+#+end_src
+
+** Environments
+
+Now that versioning is configured we can start creating environments, the ~default~ is the common one and this can be
+created with
+
+#+begin_src bash
+hatch env create <env_name>
+#+end_src
+
+You can remove environments with ~hatch env remove <env_name>~, see ~hatch env --help~ for more details on managing
+environments.
+
+** Building
+
+You can setup [[https://hatch.pypa.io/1.12/config/build/][builds]] under the following section, here ~sdist~ (source based distributions) explicitly exclude the
+~tests~ and ~docs~ directory whilst ~wheel~ looks in the ~mvdate~ directory.
+
+#+begin_src toml
+[tools.hatch.build.targets.sdist]
+exclude =[
+  "/tests",
+  "/docs",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["mvdate"]
+#+end_src
+
+Once configured you can build your package with ~hatch build~.
+
+** Publishing
+
+I use [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]] for my projects and have a CI job enabled to build the package (see the original build details in [[https://gitlab.com/nshephard/mvdate/-/blob/7a4892766c944e6134888b1f9c17e0845f311ee5/.gitlab-ci.yml#L97][this
+commit]]) but with switching to ~hatch~ I had to update this. First was updating the ~project.optional-dependencies~ for
+~pypi~.
+
+#+begin_src toml
+[project.optional-dependencies]
+...
+pypi = [
+  "hatch",
+]
+#+end_src
+
+
+I also configured the ~publish.index.repos.main~.
+
+#+begin_src toml
+[publish.index.repos.main]
+url = "https://upload.pypi.org/legacy/"
+#+end_src
+
+Finally I had to update the ~.gitlab-ci.yaml~ to use ~hatch build~ followed by ~hatch publish~.
+
+#+begin_src yaml
+pypi:
+  stage: pypi
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - pip install .[pypi]
+    - hatch build
+    - hatch publish
+#+end_src
