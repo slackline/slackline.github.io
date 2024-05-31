@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       f1395f5b-ba1d-4b32-99e4-f0b107f50a0d
+:mtime:    20240531211501
+:ctime:    20240531211501
+:END:
+#+TITLE: Git Reflog
+#+FILETAGS: :git:log:reflog:rebase:history:
+
+The ~reflog~ records /all/ changes that are made to the history, including ~amend~, ~fixup~ and ~rebase~. As such it is
+what can save you when things go awry.
+
+* Undoing a Rebase
+
+Sometimes you might find that you want to undo a [[id:57ba7f41-cf41-493c-bbf4-9d1e05a0602d][Git Rebase]] and ~reflog~ lets you achieve that since it records /all/
+changes that have been made in the repository including ~amend~, ~fixup~ and ~rebase~. A detailed exposition of how to
+achieve this can be found in [[https://stackoverflow.com/a/135614/1444043][this answer on StackOverflow]].
+
+** ~ORIG_HEAD~
+
+It is worth nothing that immediately after a ~rebase~ the starting point is stored in ~ORIG_HEAD~ and so you can use
+~git reset~ to return to this point as described [[https://stackoverflow.com/a/692763/1444043][here]].
+
+#+begin_src sh
+git reset --hard ORIG_HEAD
+#+end_src
+
+* Links
+
++ [[https://git-scm.com/docs/git-reflog][Git - git-reflog Documentation]]

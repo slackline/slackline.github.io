@@ -1,6 +1,31 @@
 :PROPERTIES:
 :ID:       1f4a3e9c-900d-4f73-b2e0-ac4e8c4037e9
+:mtime:    20240531211623
+:ctime:    20240531211623
 :END:
 #+TITLE: Magit Rebase
 #+DATE: <2022-12-23 Fri 14:57>
 #+FILETAGS: emacs:git:magit:rebase
+
+[[id:57ba7f41-cf41-493c-bbf4-9d1e05a0602d][Rebasing]] in [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] is, like many other things [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] related, much easier than at the command line.
+
+1. Checkout the branch you want to rebase and open the log with ~l l~.
+2. Move the cursor to the first commit you want to rebase and hit ~r i~.
+3. You can now navigate through the commits and choose what you want to do with them ~s~ to squash (note contiguous
+   commits are squashed as one).
+4. Once ready its ~C-c C-c~ to execute.
+
+It's that simple, its like [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]]!
+
+
+* Undoing a Rebase
+
+This is also super easy in [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] and comes courtesy of the [[id:f1395f5b-ba1d-4b32-99e4-f0b107f50a0d][~reflog~]]. I found the solution [[https://stackoverflow.com/a/42810530][here]] and it worked like a
+charm. Without going into detail about the ~reflog~ in Magit you use ~l r~ to bring it up for the current branch, move
+the cursor to the commit /before/ the rebase you want to undo and then ~M-x magit-reset-hard~ to get your branch back to
+the state it was in prior to the rebase. Its [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]]!
+
+* Links
+
++ [[https://www.lvguowei.me/post/magit-rebase/][Magit tutorial - Rebase (Part I)]]
++ [[https://stackoverflow.com/questions/33644156/how-do-i-undo-rebase-in-magit][git - how do I undo rebase in magit? - Stack Overflow]]
