@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d9c960c2-71b6-45e6-b388-dcd07b9da3e1
-:mtime:    20240601082743 20230730204045 20230730112159
+:mtime:    20240602222241 20240601082743 20230730204045 20230730112159
 :ctime:    20230730112159
 :END:
 #+TITLE: FitTrackee
@@ -53,9 +53,11 @@ You're not prompted to set the password, we also need to create a schema and aut
 
 #+begin_src sql
 psql
-postgres=# ALTER_USER fittrackee WITH PASSWORD '<password>';
+postgres=# ALTER USER fittrackee WITH PASSWORD '<password>';
 postgres=# CREATE SCHEMA fittrackee AUTHORIZATION fittrackee;
-#+end_src
+postgres=# CREATE DATABASE fittrackee OWNER fittrackee;
+    #+end_src
+
 
 ** Switch to ~fitttrackee~ install FitTrackee
 
