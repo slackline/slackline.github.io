@@ -269,6 +269,7 @@ found useful.
 + [[https://www.statlearning.com/][An Introduction to Statistical Learning with Applications in R]] (also available for Python)
 + [[https://openforecast.org/adam/index.html][Time Series Analysis and Forecasting with ADAM]]
 + [[https://www.modernstatisticswithr.com/][Modern Statistics with R]]
++ [[https://learningstatisticswithr.com/][Learning Statistics with R]] by Danielle Navarro
 
 **** Bayesian
 
@@ -354,6 +355,5 @@ found useful.
 
 + [[https://sebkrantz.github.io/Rblog/2023/04/12/collapse-and-the-fastverse-reflecting-the-past-present-and-future/][collapse and the fastverse: Reflections on the Past, Present and Future - With Examples from Geospatial Data Science - R, Econometrics, High Performance]]
 + [[https://www.mm218.dev/posts/2023-11-07-classed-errors/][Mike Mahoney - Classed conditions from rlang functions]]
-+ [[https://yabellini.netlify.app/blog/2024_learningtocode/][Learning Programming in 30 lessons | Yanina Bellini
- Saibene]]
++ [[https://yabellini.netlify.app/blog/2024_learningtocode/][Learning Programming in 30 lessons | Yanina Bellini Saibene]]
   
