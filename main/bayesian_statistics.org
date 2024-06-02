@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       38feb454-ee1e-440b-939c-c413009c609d
-:mtime:    20231026124856 20230930145615 20230103103312 20221214222726 20230103103309
-:ctime:    20221214222726
+:mtime:    20240602194324
+:ctime:    20240602194324
 :END:
 #+TITLE: Bayesian Statistics
 #+DATE: [2022-02-13 Sun 19:26]
@@ -20,20 +20,21 @@ before I started to rectify the situation.
 * Basic Principles
 :PROPERTIES:
 :ID:       b892421c-d17f-4774-a2cf-006f470c1999
-:mtime:    20230103103313 20221214222726
-:ctime:    20221214222726
 :END:
 
 * Markov Chain Monte Carlo
 :PROPERTIES:
 :ID:       57fc9276-c335-47e4-97fc-a00494ca294c
-:mtime:    20221214222726
-:ctime:    20221214222726
 :END:
 
 * Gaussian Processes
+:PROPERTIES:
+:mtime:    20240602194324
+:ctime:    20240602194324
+:END:
 
 Read more on [[id:7ced9fda-ff1e-4ff0-a80b-2193255e511d][Gaussian Processes]]
+
 * Learning Resources
 :PROPERTIES:
 :ID:       bdfa2000-29b5-4147-b7f1-0b78f6138064

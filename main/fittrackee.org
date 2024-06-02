@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d9c960c2-71b6-45e6-b388-dcd07b9da3e1
-:mtime:    20230730204045 20230730112159
+:mtime:    20240601082743 20230730204045 20230730112159
 :ctime:    20230730112159
 :END:
 #+TITLE: FitTrackee
@@ -37,11 +37,11 @@ passwd fittrackee
 
 ** Create Database User
 
-As ~root~ you need to create a database to go with the service. As the ~postgre~ user create an account in PostgreSQL
+As ~root~ you need to create a database to go with the service. As the ~postgres~ user create an account in PostgreSQL
 for ~fittrackee~
 
 #+begin_src bash
-sudo su postgre
+sudo su postgres
 [postgres@host ~/]$ createuser --interactive
 Enter name of role to add: fittrackee
 Shall the new role be a superuser? (y/n) n
@@ -85,6 +85,7 @@ source ~/.env
 #+end_src
 
 You may wish to tweak some settings
+
 ** Create Database
 
 You should have created a database user ~fittrackee~ above and allowed it to create databases, now as the ~fittrackee~
