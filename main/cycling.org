@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       67964093-4994-4910-9e8a-d2c418b8e634
+:mtime:    20240602201416
+:ctime:    20240602201416
+:END:
+#+TITLE: Cycling
+#+FILETAGS: :cycling:environment:
+
+I've always cycled lots, from doing my paper-round(s) from the age of 11-16, commuting to school, work and occassionally
+for fun, its an excellent, cheap, healthy and environmentally friendly way of moving around.
+
+
+* Links
+
++ [[https://solar.lowtechmagazine.com/2023/02/can-we-make-bicycles-sustainable-again/][Can We Make Bicycles Sustainable Again? | LOW←TECH MAGAZINE]]
