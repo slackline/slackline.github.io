@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       18820a48-4ec2-43d7-a0a3-01fc5beca40d
-:mtime:    20240215074645 20240212071535 20240204194822
+:mtime:    20240603215054 20240215074645 20240212071535 20240204194822
 :ctime:    20240204194822
 :END:
 #+TITLE: Books
@@ -110,6 +110,11 @@ Good places to buy that aren't Amazon
 
 + [[https://www.theguardian.com/books/2004/sep/18/featuresreviews.guardianreview10][A Reason For Everything by Mark Kohn]] ([[https://www.hive.co.uk/Product/Marek-Kohn/A-Reason-for-Everything--Darwinism-and-the-English-Imagination/14567156][Hive £10.65]]) ISBN : 9780571223930
 + [[https://www.theguardian.com/books/2013/feb/21/natures-oracle-ullica-segerstrale-review][Nature's Oracle: The Life and Work of WD Hamilton by Ullica Segerstrale]]
+
+** Environment
+
++ [[https://mitpress.mit.edu/9780262048682/a-darwinian-survival-guide/][A Darwinian Survival Guide]] ([[https://www.hive.co.uk/Product/Daniel-R-Brooks/A-Darwinian-Survival-Guide--Hope-for-the-Twenty-First-Century/29334381][Hive £22.85]]) ISBN: 9780262048682
+
 ** History
 
 + Thompson, EP [[https://en.wikipedia.org/wiki/The_Making_of_the_English_Working_Class][/The Making of the English Working Class/]]
