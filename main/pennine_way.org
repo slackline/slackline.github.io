@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       b473da61-4fb9-4f66-a319-64aa2b4b2f92
+:mtime:    20240609223611
+:ctime:    20240609223611
+:END:
+#+TITLE: Pennine Way
+#+FILETAGS: :hiking:uk:
+
+Planning on hiking the Pennine Way from Kirk Yetholm to Edale.
+
+* Travel
+
+Getting to Kirk Yetholm will involve a train and bus journey from Sheffield to Berwick-upon-Tweed from there two buses
+can be caught to get to Kirk Yetholm via Kelso ([[https://www.bordersbuses.co.uk/services/BORD/67][67 to Kelso]] ~ 1h; 81/81A on to Kirk Yetholm).
+
+Checking [[https://www.trainline.com][Trainline]] suggests there is an 09:21 train arriving at 12:21 (no changes) at £66.50, could perhaps get the
+09:32 train (one change) arriving at the same time for £50.20.
+
+Checking the 67 bus [[https://passenger-line-assets.s3.eu-west-1.amazonaws.com/bordersbuses/BORD/67-timetable-20220627-d2f17f76.pdf][67 to Kelso]] I'm going to be limited to a bus at 13:00, 15:00 or later. Might be worth getting to
+Berwick late on the Tuesday if trains are conducive (e.g. 19:21 from Sheffield arriving at 22:38 then a cheap hostel if
+possible which is unlikely as the YHA is £80 minimum!).
+
+
+* Links
+
++ [[https://www.beckythetraveller.com/walking-pennine-way-wild-camping/][ULTIMATE Guide to Walking The Pennine Way + Wild Camping]]

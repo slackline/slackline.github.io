@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d9c960c2-71b6-45e6-b388-dcd07b9da3e1
-:mtime:    20240602222241 20240601082743 20230730204045 20230730112159
+:mtime:    20240607080242 20240606223325 20240605074417 20240602222241 20240601082743 20230730204045 20230730112159
 :ctime:    20230730112159
 :END:
 #+TITLE: FitTrackee
@@ -73,6 +73,18 @@ pip install fittrackee
 #+end_src
 
 
+** Email
+
+I found on initially starting Fittrackee and creating a user account that I was then unable to login due to "Invalid
+Credentials" and attributed that to not having verified my email address as I hadn't configured an email account. I
+sought to remedy this by installing [[https://wiki.archlinux.org/title/Postfix][postfix]] which also required [[https://wiki.archlinux.org/title/Obtain_a_certificate][obtaining a certificate]].
+
+On review I opted to use Gmail's SMTP service, this required creating an [[https://www.zdnet.com/article/gmail-app-passwords-what-they-are-how-to-create-one-and-why-to-use-them/][App Password]] and configuring the ~EMAIL_URL~ to
+use this via the ~.env~ configuration file (this [[https://mailtrap.io/blog/gmail-smtp/][article]] was also useful).
+
+#+begin_src
+export EMAIL_URL=smtp://<gmail_user>:<app_password>@smtp.gmail.com:465
+#+end_src
 ** Set up your ~\~/.env~
 
 There are a number of [[https://samr1.github.io/FitTrackee/en/installation.html#environment-variables][environment variables]] that ~fittrackee~ requires, set this up by copying the [[https://github.com/SamR1/FitTrackee/blob/master/.env.example#L4][.env.example]] file
@@ -87,6 +99,45 @@ source ~/.env
 #+end_src
 
 You may wish to tweak some settings
+
+** Postfix
+
+I found on starting that I had to register for an account, this in turn requires an email server and Redis to work
+properly.
+
+For email I opted to use [[https://wiki.archlinux.org/title/Postfix][Postfix - ArchWiki]]
+
+#+begin_src bash
+pacman -Syu postfix postfix-lmdb
+src
+
+Settings are under ~/etc/postfix/main.cf~ and are really well documented. Key fields I changed, including setting
+aliases for ~root~ as advised in ~/etc/postfix/aliases~.
+
+#+begin_src
+mydomain = <mydomain>
+myorigin = $mydomain
+inet_interfaces = $myorigin, localhost
+mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
+mynetworks_style = host
+alias_maps = lmdb:/etc/postfix/aliases
+alias_database = $alias_map
+#+end_src
+
+Then enabling the service.
+
+#+begin_src bash
+systemctl enable --now postfix.service
+#+end_src
+
+** Redis
+
+Redis installation was straight-forward I followed the [[https://wiki.archlinux.org/title/Redis][Redis - ArchWiki]]
+
+#+begin_src bash
+pacman -Syu redis
+systemctl enable --now redis.service
+#+end_src
 
 ** Create Database
 
@@ -179,8 +230,26 @@ systemd restart nginx.service
 #+end_src
 
 
+* PostgreSQL
 
+Useful commands for working with the database that underpins Fittrackee.
 
+#+begin_src
+\l                # List databases
+\c <database>     # Connect to <database>
+\dt               # Display tables in current database
+#+end_src
+
+** SQL
+
+One day I might sit down and learn SQL in greater detail.
+
+#+begin_src sql
+-- List all fields in table users
+SELECT * FROM users;
+-- Delete a row
+DELETE FROM users WHERE email = 'user@email.com';
+#+end_src
 * Links
 + [[https://samr1.github.io/FitTrackee/en/][FitTrackee]]
 + [[https://github.com/SamR1/FitTrackee/][GitHub | FitTrackee]]
