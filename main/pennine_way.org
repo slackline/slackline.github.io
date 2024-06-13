@@ -1,0 +1,79 @@
+:PROPERTIES:
+:ID:       19d710f0-8744-406e-a22f-cb3107da87d5
+:mtime:    20240613160211
+:ctime:    20240613160211
+:END:
+#+TITLE: Pennine Way
+#+FILETAGS: :hiking:uk:pennineway:
+
+Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-way/][Pennine Way]] from <2024-08-14 Wed> to <2024-08-31 Sat> from Kirk Yetholm to Edale
+
+* Itinerary
+** Day 1 Sheffield to Kirk Yetholm
+
++ Train ticket booked leaving Sheffield 09:32 arriving Berwick-upon-Tweed 12:21 (change at Newcastle with 19min transfer
+  time).
++ Bus from [[https://passenger-line-assets.s3.eu-west-1.amazonaws.com/bordersbuses/BORD/67-timetable-20220627-d2f17f76.pdf][Berwick-upon-Tweed to Kelso (67)]] £10.70 leaves Berwick at 14:05 arrives 15:08
++ [[https://www.travelinescotland.com/lts/#/timetables?timetableId=BODO081&direction=OUTBOUND&queryDate=1723646684000&queryTime=1718289884751][Kelso to Kirk Yetholm (81)]]
+*** Food
+*** Accommodation
++ Camp at ?
+** Day 2
+*** Food
+*** Accommodation
++ Camp at ?
+** Day 3
+*** Food
+*** Accommodation
+** Day 4
+*** Food
+*** Accommodation
+** Day 5
+*** Food
+*** Accommodation
+** Day 6
+*** Food
+*** Accommodation
+** Day 7
+*** Food
+*** Accommodation
+** Day 8
+*** Food
+*** Accommodation
+** Day 9
+*** Food
+*** Accommodation
+** Day 10
+*** Food
+*** Accommodation
+** Day 11
+*** Food
+*** Accommodation
+** Day 12
+*** Food
+*** Accommodation
+** Day 13
+*** Food
+*** Accommodation
+** Day 14
+*** Food
+*** Accommodation
+** Day 15
+*** Food
+*** Accommodation
+** Day 16
+*** Food
+*** Accommodation
+** Day 17
+*** Food
+*** Accommodation
+** Day 18
+*** Food
+*** Accommodation
+
+
+* Links
+
++ [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-way/trail-holidays/][National Trails : Pennine Way Trail Holidays]] (includes route planner and GPX tools)
++ [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-way/route/][Route Description - Pennine Way - National Trails]] splits into 16 days
++ [[https://www.beckythetraveller.com/walking-pennine-way-wild-camping/][ULTIMATE Guide to Walking The Pennine Way + Wild Camping]] splits into 13 days with details of wild camping
