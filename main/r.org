@@ -270,6 +270,7 @@ found useful.
 + [[https://openforecast.org/adam/index.html][Time Series Analysis and Forecasting with ADAM]]
 + [[https://www.modernstatisticswithr.com/][Modern Statistics with R]]
 + [[https://learningstatisticswithr.com/][Learning Statistics with R]] by Danielle Navarro
++ [[https://www.r-causal.org/][Causal Inference in R]]
 
 **** Bayesian
 
