@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       708f5d99-6040-4306-a323-306d39ce45c3
-:mtime:    20240331202209 20240225185002 20240206201930 20240118162910 20231113221350 20230621183025 20230511204503 20230215095632 20230129085036 20230114084505 20230103103311 20221209211925
+:mtime:    20240611153339 20240331202209 20240225185002 20240206201930 20240118162910 20231113221350 20230621183025 20230511204503 20230215095632 20230129085036 20230114084505 20230103103311 20221209211925
 :ctime:    20221209211925
 :END:
 #+TITLE: Emacs Lisp
@@ -41,6 +41,7 @@ as the list after the comma is evaluated (but only if a back-tick is used) ([[ht
 
 + [[https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][An Introduction to Programming in Emacs Lisp]]
 + [[http://landoflisp.com/][Land of Lisp]]
++ [[https://cl-cookbook.sourceforge.net/index.html][The Common Lisp Cookbook]]
 
 ** History
 
