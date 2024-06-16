@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       19d710f0-8744-406e-a22f-cb3107da87d5
-:mtime:    20240613160211
+:mtime:    20240616191957 20240615071440 20240614212950 20240614192443 20240613160211
 :ctime:    20240613160211
 :END:
 #+TITLE: Pennine Way
@@ -71,6 +71,49 @@ Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-wa
 *** Food
 *** Accommodation
 
+* Equipment
+
+|---------------------------------------------------------+----------+------+--------|
+| Item                                                    | Use      | Got? | Weight |
+|---------------------------------------------------------+----------+------+--------|
+| 1-person tent                                           | Camping  | [x]  |        |
+| Sleeping bag                                            | Camping  | [x]  |        |
+| Thermarest                                              | Camping  | [x]  |        |
+|---------------------------------------------------------+----------+------+--------|
+| Walking Boots                                           | Hiking   | [x]  |        |
+| Walking Poles                                           | Hiking   | [x]  |        |
+| Rucksack and cover                                      | Hiking   | [x]  |        |
+| Gaiters                                                 | Hiking   | [x]  |        |
+| Paramo                                                  | Hiking   | [x]  |        |
+| Waterproof Trousers                                     | Hiking   | [x]  |        |
+| [[https://www.cicerone.co.uk/pennine-way-map-booklet][Maps]] - pre-ordered due to be published <2024-08-05 Mon> | Hiking   | [x]  |        |
+| Compass                                                 |          | [x]  |        |
+|---------------------------------------------------------+----------+------+--------|
+| Fleece                                                  | Clothing | [x]  |        |
+| Long Trousers x2?                                       | Clothing | [x]  |        |
+| Pants x3                                                | Clothing | [x]  |        |
+| Shorts ?                                                | Clothing | [x]  |        |
+| Long sleeve base layer                                  | Clothing | [x]  |        |
+|---------------------------------------------------------+----------+------+--------|
+| MSR Whisperlite or borrow a Jet Boil                    | Food     | [ ]  |        |
+| Meals x?                                                | Food     | [ ]  |        |
+| Sweets/Snacks (nuts)                                    | Food     | [ ]  |        |
+| Water bottle 2L + 0.5L                                  | Food     | [ ]  |        |
+| Water purification (tablets)                            | Food     | [ ]  |        |
+|---------------------------------------------------------+----------+------+--------|
+| Phone                                                   | Tech     | [x]  |        |
+| MP3 Player                                              | Tech     | [x]  |        |
+| Fuji Camera (do I get the 18-300mm lens?)               | Tech     | [x]  |        |
+| USB Power Pack                                          | Tech     | [x]  |        |
+| Solar Panel for recharging?                             | Tech     |      |        |
+| USB adapter and cables                                  | Tech     | [x]  |        |
+|---------------------------------------------------------+----------+------+--------|
+| Toothbrush & paste                                      | Hygiene  | [x]  |        |
+| Lightweight towel                                       | Hygiene  | [x]  |        |
+| Tick removal tools                                      | Hygiene  | [x]  |        |
+| Ibuprofen (tablets and gels)                            | Hygiene  | [ ]  |        |
+| Small hand trowel                                       | Hygiene  | [ ]  |        |
+|---------------------------------------------------------+----------+------+--------|
 
 * Links
 
