@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       7cbd61f2-d6a5-4e67-af72-2a13a5e86faa
-:mtime:    20231015151154 20230317120900 20230103103311 20221215202651
+:mtime:    20240614210232 20231015151154 20230317120900 20230103103311 20221215202651
 :ctime:    20221215202651
 :END:
 #+TITLE: GitLab
@@ -18,3 +18,4 @@ install and host it yourself.
 ** Miscellaneous
 
 + [[https://pypi.org/project/gitlab2zenodo/][gitlab2zenodo · PyPI]]
++ [[https://about.gitlab.com/blog/2024/06/11/top-tips-for-efficient-ai-powered-code-suggestions-with-gitlab-duo/][Top tips for efficient AI-powered Code Suggestions with GitLab Duo]]
