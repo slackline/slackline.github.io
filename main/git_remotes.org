@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       609f694f-40bb-4f7b-92f4-9e478d743442
-:mtime:    20240217145228 20240217134938 20240212074812 20240211210722
+:mtime:    20240617072429 20240217145228 20240217134938 20240212074812 20240211210722
 :ctime:    20240211210722
 :END:
 #+TITLE: Git Remotes
@@ -224,6 +224,12 @@ origin  git@gitlab.com:nshephard/mvdate.git (fetch)
 origin  ssh://forgejo@forgejo.hopto.org:562/nshephard/mvdate.git (push)
 origin  git@gitlab.com:nshephard/mvdate.git (push)
 #+end_src
+
+* Backups
+
+You can [[https://www.tara.sh/posts/2024/2024-06-17-git_backup/][backup up git a repository (in a pipeline)]] pretty easily thanks to ~git bundle~ and the neat script detailed
+there. The resulting ~.bundle~ can be copied to most places, the example uses ~aws s3 cp~ but ~scp~ or ~rsync~ would
+work just as well.
 
 * Links
 
