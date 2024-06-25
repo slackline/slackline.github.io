@@ -1,6 +1,7 @@
+
 :PROPERTIES:
 :ID:       19d710f0-8744-406e-a22f-cb3107da87d5
-:mtime:    20240616191957 20240615071440 20240614212950 20240614192443 20240613160211
+:mtime:    20240619224133 20240616191957 20240615071440 20240614212950 20240614192443 20240613160211
 :ctime:    20240613160211
 :END:
 #+TITLE: Pennine Way
@@ -88,6 +89,7 @@ Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-wa
 | Waterproof Trousers                                     | Hiking   | [x]  |        |
 | [[https://www.cicerone.co.uk/pennine-way-map-booklet][Maps]] - pre-ordered due to be published <2024-08-05 Mon> | Hiking   | [x]  |        |
 | Compass                                                 |          | [x]  |        |
+| Midge head net                                          |          |      |        |
 |---------------------------------------------------------+----------+------+--------|
 | Fleece                                                  | Clothing | [x]  |        |
 | Long Trousers x2?                                       | Clothing | [x]  |        |
@@ -106,10 +108,11 @@ Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-wa
 | Fuji Camera (do I get the 18-300mm lens?)               | Tech     | [x]  |        |
 | USB Power Pack                                          | Tech     | [x]  |        |
 | Solar Panel for recharging?                             | Tech     |      |        |
-| USB adapter and cables                                  | Tech     | [x]  |        |
+| USB adapter and cables (white set)                       | Tech     | [x]  |        |
 |---------------------------------------------------------+----------+------+--------|
 | Toothbrush & paste                                      | Hygiene  | [x]  |        |
 | Lightweight towel                                       | Hygiene  | [x]  |        |
+| Toilet paper and poo bags for packaging waste.          | Hygiene  | [ ]  |        |
 | Tick removal tools                                      | Hygiene  | [x]  |        |
 | Ibuprofen (tablets and gels)                            | Hygiene  | [ ]  |        |
 | Small hand trowel                                       | Hygiene  | [ ]  |        |

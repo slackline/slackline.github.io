@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b8355381-a5c8-480c-9e56-f78d3d3d3d4e
-:mtime:    20240216123922 20240115183014 20231214172851
+:mtime:    20240621222027 20240216123922 20240115183014 20231214172851
 :ctime:    20231214172851
 :END:
 #+TITLE: Open Publishing
@@ -14,6 +14,7 @@
 + [[https://www.octopus.ac/][Octopus | Built for Researchers]]
 + [[https://openalex.org/][OpenAlex]]
 + [[https://shortdoi.org/][shortDOI]]
++ [[https://nanopub.net/][Nanopublications]]
 
 ** Blogs
 
