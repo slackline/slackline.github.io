@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       4e139c27-3f5d-4456-9a43-1c6cff35eb03
+:mtime:    20240701052942
+:ctime:    20240701052942
+:END:
+#+TITLE: Sony RX100 IV
+#+FILETAGS: :photography:sony:rx100:
+
+I wanted a more up-to-date compact camera than my old Canon S95 so splashed out on a second hand [[https://www.sony.co.uk/electronics/cyber-shot-compact-cameras/dsc-rx100m4][Sony RX100 IV]] (for
+£525). Its very nice to use so far, simple control over Aperture, Shutter Speed/etc. control.  I opted to get the
+[[https://www.sony.co.uk/electronics/cyber-shot-compact-cameras-other-accessories/ag-r2#reviews_awards_v2_default][attachment grip]] to improve handling.
+
+* Links
+
++ [[https://www.sony.co.uk/electronics/cyber-shot-compact-cameras/dsc-rx100m4/specifications][Full Specification]]
++ [[https://www.sony.co.uk/electronics/support/compact-cameras-dsc-rx-series/dsc-rx100m4/downloads][Downloads]]
++ [[https://www.sony.com/electronics/support/res/manuals/4574/45741601M.pdf][Manual (PDF)]] / [[https://helpguide.sony.net/dsc/1530/v1/en/index.html][Manual (Web)]]

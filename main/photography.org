@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5253f936-28e2-416c-8541-6081c1ac4f0c
-:mtime:    20240630202230 20240617091334 20240511204735 20240511084447
+:mtime:    20240701052946 20240630202230 20240617091334 20240511204735 20240511084447
 :ctime:    20240511084447
 :END:
 #+TITLE: Photography
@@ -8,25 +8,12 @@
 
 * Cameras
 
-** Nikon D50
++ [[id:89d15c28-6227-4671-b6a5-ab1b242423ef][Nikon D50]]
++ Nikon D90
++ Canon S95
++ Fuji X-T2
++ [[id:4e139c27-3f5d-4456-9a43-1c6cff35eb03][Sony RX100 IV]]
 
-** Nikon D90
-
-** Fuji X-T2
-
-*** Lenses
-
-** Sony RX100 IV
-
-I wanted a more up-to-date compact camera than my old Canon S95 so splashed out on a second hand [[https://www.sony.co.uk/electronics/cyber-shot-compact-cameras/dsc-rx100m4][Sony RX100 IV]] (for
-£525). Its very nice to use so far, simple control over Aperture, Shutter Speed/etc. control.  I opted to get the
-[[https://www.sony.co.uk/electronics/cyber-shot-compact-cameras-other-accessories/ag-r2#reviews_awards_v2_default][attachment grip]] to improve handling.
-
-+ [[https://www.sony.co.uk/electronics/cyber-shot-compact-cameras/dsc-rx100m4/specifications][Full Specification]]
-+ [[https://www.sony.co.uk/electronics/support/compact-cameras-dsc-rx-series/dsc-rx100m4/downloads][Downloads]]
-+ [[https://www.sony.com/electronics/support/res/manuals/4574/45741601M.pdf][Manual (PDF)]] / [[https://helpguide.sony.net/dsc/1530/v1/en/index.html][Manual (Web)]]
-
-** Canon S95
 
 * Software
 
@@ -42,7 +29,7 @@ I've been a long time [[https://www.flickr.com/photos/slackline][Flickr]] user a
 
 *** API
 
-Details of Flickr API are at [[https://www.flickr.com/services/feeds/][Flickr Services]]
+Details of Flickr API are at [[https://www.flickr.com/services/feeds/][Flickr Services]].
 
 ** [[https://unsplash.com/][Unsplash]]
 
