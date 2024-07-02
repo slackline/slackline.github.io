@@ -88,9 +88,11 @@ Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-wa
 | Paramo                                                  | Hiking   | [x]  |        |
 | Waterproof Trousers                                     | Hiking   | [x]  |        |
 | [[https://www.cicerone.co.uk/pennine-way-map-booklet][Maps]] - pre-ordered due to be published <2024-08-05 Mon> | Hiking   | [x]  |        |
-| Compass                                                 |          | [x]  |        |
-| Midge head net                                          |          |      |        |
+| Compass                                                 | Hiking   | [x]  |        |
+| Midge head net                                          | Hiking   | [x]  |        |
 |---------------------------------------------------------+----------+------+--------|
+| Gloves                                                  | Clothing | [x]  |        |
+| Buff x2                                                 | Clothing | [x]  |        |
 | Fleece                                                  | Clothing | [x]  |        |
 | Long Trousers x2?                                       | Clothing | [x]  |        |
 | Pants x3                                                | Clothing | [x]  |        |
@@ -105,10 +107,10 @@ Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-wa
 |---------------------------------------------------------+----------+------+--------|
 | Phone                                                   | Tech     | [x]  |        |
 | MP3 Player                                              | Tech     | [x]  |        |
-| Fuji Camera (do I get the 18-300mm lens?)               | Tech     | [x]  |        |
+| Sony RX100 IV                                           | Tech     | [x]  |        |
 | USB Power Pack                                          | Tech     | [x]  |        |
-| Solar Panel for recharging?                             | Tech     |      |        |
-| USB adapter and cables (white set)                       | Tech     | [x]  |        |
+| Solar Panel for recharging?                             | Tech     | [x]  |        |
+| USB adapter and cables (white set)                      | Tech     | [x]  |        |
 |---------------------------------------------------------+----------+------+--------|
 | Toothbrush & paste                                      | Hygiene  | [x]  |        |
 | Lightweight towel                                       | Hygiene  | [x]  |        |
