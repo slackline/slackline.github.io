@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       ad0c4775-cf41-42aa-9f1f-98fe845b2169
+:mtime:    20240705080447
+:ctime:    20240705080447
+:END:
+#+TITLE: Gentoo Ebuilds
+#+FILETAGS: :gentoo:linux:portage:programming:
+
+[[https://wiki.gentoo.org/wiki/Ebuild][Ebuilds]] are the files which define how to install a package under Gentoo. They use [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]]-like syntax style and are read
+by ~emerge~ when asked to install a package.
+
+There is a useful [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] [[id:938af6af-7a0e-46d1-ae76-6157e948151b][package]] for editing ebuilds ~app-emacs/ebuild-mode~.

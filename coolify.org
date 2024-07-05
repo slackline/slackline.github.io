@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       20a2e57f-b3bf-441a-87f5-e4a5c162eb71
+:mtime:    20240701073342
+:ctime:    20240701073342
+:END:
+#+TITLE: Coolify
+#+FILETAGS: :linux:foss:hosting:
+
+[[https://coolify.io/][Coolify]] is an [[id:f277da12-5d6d-46e3-a49c-7bda9254d469][FOSS]] and self-hostable system for hosting websites, APIs, backends, databases and services, often
+considered an alternative to Heoku / Netlify / Vercel.
+
+
+* Links
+
++ [[https://coolify.io/][Coolify]]

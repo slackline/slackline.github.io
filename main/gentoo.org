@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       44b32b4e-1bef-49eb-b53c-86d9129cb29a
-:mtime:    20240510231405 20240504061610 20230311154912 20230304204837 20230215101210 20230114082312
+:mtime:    20240705080924 20240510231405 20240504061610 20230311154912 20230304204837 20230215101210 20230114082312
 :ctime:    20230114082312
 :END:
 #+TITLE: Gentoo
@@ -8,96 +8,10 @@
 
 [[https://www.gentoo.org][Gentoo]] is a source based GNU/Linux distribution that I've used since around 2004.
 
-* Portage
-
-Package management under Gentoo is courtesy of [[https://wiki.gentoo.org/wiki/Portage][Portage]] and the ~emerge~ command which resolves all dependencies. It is
-configured via ~/etc/portage/make.conf~ where various flags are defined to determine the architecture of your system
-
-** Installing Packages
-
-To install packages you most have ~root~ access and its sensible to ensure your Portage repository is up-to-date.
-
-#+begin_src bash
-  emerge --sync emerge -uDNa <package>
-#+end_src
-
-
-** Binary Packages
-
-Gentoo also supports [[https://wiki.gentoo.org/wiki/Binary_package_guide][Binary packages]] which can be very useful for large packages on older systems with low
-resources. The [[https://wiki.gentoo.org/wiki/Binary_package_quickstart][Binary package quickstart]] is a useful starting point.
-
-** Helpers
-
-There are a number of [[https://wiki.gentoo.org/wiki/Useful_Portage_tools][helper packages]] that make working with Gentoo a bit smoother.
-
-+ ~eix~ which is a C based programme that handles syncing repositories and provides a fast interface to packages that
-  are available on a
-system.
-+ ~genlop~ is a useful package for parsing ~emerge.log~ to find out what packages have been installed.
-+ ~gentoolkit~ has a number of useful tools such as ~elcean~, ~equery~.
-+ ~eselect~ for administering packages and choosing which versions of slotted packages to use
-+ ~eclean-kernel~ for tidying up and removing old kernels.
-+ ~layman~ for managing Gentoo overlays.
-
-#+begin_src bash
-  emerge -av eix genlop gentoolkit eselect eclean-kernel eix-sync
-#+end_src
-
-** Overlays
-
-There are a number of [[https://overlays.gentoo.org/][Gentoo Overlays]] which can be enabled with ~eselect repository~. This will list the available
-repository which can be added with ~add <name>~, optionally setting the ~<sync-type>~  and ~<sync-url>~ there are
-commands to ~enable~, ~disable~, ~list -i~ (installed) and ~remove~.
-
-*** Layman
-
-[[https://wiki.gentoo.org/wiki/Layman][Layman]] used to be a package for handling overlays but is now obsolete.
-
-* Ebuilds
-
-[[https://wiki.gentoo.org/wiki/Ebuild][Ebuilds]] are the files which define how to install a package under Gentoo. They use [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]]-like syntax style and are read
-by ~emerge~ when asked to install a package.
-
-There is a useful [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] [[id:938af6af-7a0e-46d1-ae76-6157e948151b][package]] for editing ebuilds ~app-emacs/ebuild-mode~.
-
-* OpenRC
-
-** Runlevels
-
-Runlevels determine the stage at which services are started, there is ~boot~, ~sysinit~, ~default~, ~shutdown~ and you
-can define your own custom runlevels.
-
-** Add service
-
-To add a service to a particular run-level (typically ~default~ for most services)
-
-#+begin_src bash
-  rc-update add <service> <runlevel>
-#+end_src
-
-*** Check service status
-
-To check the status of a particular service use ~rc-service~
-
-#+begin_src bash
-  rc-service <service> status
-#+end_src
-
-*** Start/Stop/Restart service
-
-You can start/stop/restart services
-
-#+begin_src bash
-  rc-service <service> [start|stop|restart]
-#+end_src
-
-** Runit
-
-The downside to OpenRC is that /everything/ must be run as ~root~. An alternative that allows users to start services is
-to use [[http://smarden.org/runit/][runit - a UNIX init scheme with service supervision]] as user. For examples see [[https://wiki.gentoo.org/wiki/OpenRC/User_services#Using_runsvdir_.28part_of_Runit.29][OpenRC/User services - Gentoo Wiki]]
-article.
-
++ [[id:0998b01c-7d0a-4aec-99ec-908374de338c][Portage]]
++ [[id:ad0c4775-cf41-42aa-9f1f-98fe845b2169][Ebuilds]]
++ [[id:83017000-6081-4787-83c3-5e1639684909][Overlays]]
++ [[id:491978ed-7688-4360-9827-695b6d2eb2d1][OpenRC]]
 
 * Links
 

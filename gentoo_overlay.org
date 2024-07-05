@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       83017000-6081-4787-83c3-5e1639684909
+:mtime:    20240705080346
+:ctime:    20240705080346
+:END:
+#+TITLE: Gentoo Overlays
+#+FILETAGS: :gentoo:linux:portage:
+
+There are a number of [[https://overlays.gentoo.org/][Gentoo Overlays]] which can be enabled with ~eselect repository~. This will list the available
+repository which can be added with ~add <name>~, optionally setting the ~<sync-type>~  and ~<sync-url>~ there are
+commands to ~enable~, ~disable~, ~list -i~ (installed) and ~remove~.
+
+
+[[https://wiki.gentoo.org/wiki/Layman][Layman]] used to be a package for handling overlays but is now obsolete. These days everything is done via Git repos and
+handled by ~eselect~
+
+
+* Overlays
+
+Old or obsolete overlays I may find useful.
+
++ [[https://github.com/yemouu/moulay][moulay]] - used in the past as it had ~texlab~  a LaTeX Language Server.

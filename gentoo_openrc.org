@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       491978ed-7688-4360-9827-695b6d2eb2d1
+:mtime:    20240705080904
+:ctime:    20240705080904
+:END:
+#+TITLE: Gentoo OpenRC
+#+FILETAGS: :gentoo:linux:openrc:
+
+OpenRC is the old traditional way of starting services under [[id:0e6300c6-7025-4f45-820d-4d9da82b41a6][Linux]]. A lot of distributions have shifted to ~systemd~  a
+ground up re-write, but [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]] offers you freedom and OpenRC is still available.
+
+* Runlevels
+
+Runlevels determine the stage at which services are started, there is ~boot~, ~sysinit~, ~default~, ~shutdown~ and you
+can define your own custom runlevels.
+
+* Add service
+
+To add a service to a particular run-level (typically ~default~ for most services)
+
+#+begin_src bash
+  rc-update add <service> <runlevel>
+#+end_src
+
+*** Check service status
+
+To check the status of a particular service use ~rc-service~
+
+#+begin_src bash
+  rc-service <service> status
+#+end_src
+
+*** Start/Stop/Restart service
+
+You can start/stop/restart services
+
+#+begin_src bash
+  rc-service <service> [start|stop|restart]
+#+end_src
+
+* Runit
+
+The downside to OpenRC is that /everything/ must be run as ~root~. An alternative that allows users to start services is
+to use [[http://smarden.org/runit/][runit - a UNIX init scheme with service supervision]] as user. For examples see [[https://wiki.gentoo.org/wiki/OpenRC/User_services#Using_runsvdir_.28part_of_Runit.29][OpenRC/User services - Gentoo Wiki]]
+article.
