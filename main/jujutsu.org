@@ -1,3 +1,4 @@
+
 :PROPERTIES:
 :ID:       a37b61ba-8699-4ee3-b407-38f256c186c4
 :mtime:    20240630205259 20240204192058
@@ -23,6 +24,10 @@ commit this introduces a new working-copy commit where changes are recorded (no 
 
 + [[https://martinvonz.github.io/jj/latest/][Jujutsu Documentation]]
 + [[https://github.com/martinvonz/jj#command-line-completion][martinvonz/jj: A Git-compatible VCS that is both simple and powerful]]
+
+** Tutorials
+
++ [[https://steveklabnik.github.io/jujutsu-tutorial/introduction/introduction.html][Steve's Jujutsu Tutorial]]
 
 ** Blogs
 
