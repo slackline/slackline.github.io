@@ -358,3 +358,7 @@ found useful.
 + [[https://www.mm218.dev/posts/2023-11-07-classed-errors/][Mike Mahoney - Classed conditions from rlang functions]]
 + [[https://yabellini.netlify.app/blog/2024_learningtocode/][Learning Programming in 30 lessons | Yanina Bellini Saibene]]
   
+
+** Articles
+
++ [[https://www.mdpi.com/2075-1729/12/5/648][The R Language: An Engine for Bioinformatics and Data Science]]
