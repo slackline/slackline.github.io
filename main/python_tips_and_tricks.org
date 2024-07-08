@@ -1,12 +1,56 @@
 :PROPERTIES:
 :ID:       73be660e-298f-4ccb-900c-215b86b3f4d5
-:mtime:    20230918223023 20230915175823
+:mtime:    20240704141915 20230918223023 20230915175823
 :ctime:    20230915175823
 :END:
 #+TITLE: Python Tips and Tricks
 #+FILETAGS: :python:tips:tricks:howto:
 
 Lots of Tips and Tricks to Python
+
+* Recursion
+
+A very useful tool when you have need to use it [[https://realpython.com/python-recursion/][recursion]] is a neat way of repeating yourself, it weirdly defines a
+function that /calls itself/!
+
+This example shows how a nested dictionary can be parsed to be updated with the values from another dictionary.
+
+#+begin_src python
+def update_config(config: dict, args: dict | Namespace) -> dict:
+    """
+    Update the configuration with any arguments.
+
+    Parameters
+    ----------
+    config : dict
+        Dictionary of configuration (typically read from YAML file specified with '-c/--config <filename>').
+    args : Namespace
+        Command line arguments.
+
+    Returns
+    -------
+    dict
+        Dictionary updated with command arguments.
+    """
+    args = vars(args) if isinstance(args, Namespace) else args
+
+    config_keys = config.keys()
+    for arg_key, arg_value in args.items():
+        if isinstance(arg_value, dict):
+            update_config(config, arg_value)
+        else:
+            if arg_key in config_keys and arg_value is not None:
+                original_value = config[arg_key]
+                config[arg_key] = arg_value
+                LOGGER.info(f"Updated config config[{arg_key}] : {original_value} > {arg_value} ")
+    if "base_dir" in config.keys():
+        config["base_dir"] = convert_path(config["base_dir"])
+    if "output_dir" in config.keys():
+        config["output_dir"] = convert_path(config["output_dir"])
+    return config
+
+#+end_src
+
 
 * Lists
 

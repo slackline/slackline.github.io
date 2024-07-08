@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d7b0fb90-d668-4e31-bc2d-305f6ee14fc9
-:mtime:    20240429121335 20240122164500 20231126083238 20231119210731 20230803212315 20230612165437 20230108213627 20230103103313 20220524211634
+:mtime:    20240704163906 20240704153322 20240429121335 20240122164500 20231126083238 20231119210731 20230803212315 20230612165437 20230108213627 20230103103313 20220524211634
 :ctime:    20220524211634
 :END:
 #+TITLE: Numpy
@@ -74,6 +74,13 @@ If you need to print all of an array and not have columns or rows truncated you 
   with np.printoptions(threshold=sys.maxsize):
       print(array)
 #+end_src
+
+** JSON Woes
+
+You can't write Numpy arrays to JSON files directly. A neat solution is to use the [[https://github.com/hmallen/numpyencoder][numpyencoder]] package and pass it as
+an argument to ~json.dump()~ (see [[https://stackoverflow.com/a/61903895/1444043][solution]]), or you can just use the ~default=str~ option if you don't ever want to read
+the lists back in (they lose their delimiters using the later method).
+
 * Links
 
 ** Books
