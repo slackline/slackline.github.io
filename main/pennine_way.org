@@ -100,6 +100,7 @@ Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-wa
 | Long sleeve base layer                                  | Clothing | [x]  |        |
 |---------------------------------------------------------+----------+------+--------|
 | MSR Whisperlite or borrow a Jet Boil                    | Food     | [ ]  |        |
+| Lighter                                                 | Food     | [ ]  |        |
 | Meals x?                                                | Food     | [ ]  |        |
 | Sweets/Snacks (nuts)                                    | Food     | [ ]  |        |
 | Water bottle 2L + 0.5L                                  | Food     | [ ]  |        |
@@ -109,6 +110,7 @@ Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-wa
 | MP3 Player                                              | Tech     | [x]  |        |
 | Sony RX100 IV                                           | Tech     | [x]  |        |
 | USB Power Pack                                          | Tech     | [x]  |        |
+| Cables for phone, camera, watch and kobo                | Tech     | [ ]  |        |
 | Solar Panel for recharging?                             | Tech     | [x]  |        |
 | USB adapter and cables (white set)                      | Tech     | [x]  |        |
 |---------------------------------------------------------+----------+------+--------|
@@ -118,6 +120,7 @@ Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-wa
 | Tick removal tools                                      | Hygiene  | [x]  |        |
 | Ibuprofen (tablets and gels)                            | Hygiene  | [ ]  |        |
 | Small hand trowel                                       | Hygiene  | [ ]  |        |
+| Vaseline and Sudocream                                  | Hygiene  | [ ]  |        |
 |---------------------------------------------------------+----------+------+--------|
 
 * Links

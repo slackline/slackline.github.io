@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       736537b3-75e0-4c24-9156-364937e0e8a2
-:mtime:    20240708205417 20240309204131 20240215065336 20240214220237 20240214203455 20240213073417 20240211204231 20240211163700 20240211140707
+:mtime:    20240708222139 20240708205417 20240309204131 20240215065336 20240214220237 20240214203455 20240213073417 20240211204231 20240211163700 20240211140707
 :ctime:    20240211140707
 :END:
 #+TITLE: Forgejo
@@ -317,6 +317,9 @@ git remote add forgejo ssh://forgejo@forgejo.your.domain:562/<user_account>/test
 You can now push and pull from ~git [fetch|push|pull] forgejo~ from Forgejo instance but because of the way mirroring is
 setup pushing would be a bad idea as it would leave the main copy on GitLab behind.
 
+* Backup
+
+You can easily backup Forgejo to a zip using [[https://forgejo.org/docs/latest/admin/command-line/#dump][~forgejo dump command~]].
 * Links
 
 + [[https://seanthegeek.net/1035/how-to-configure-a-nginx-reverse-proxy-with-lets-encrypt-certificates/][How to configure a nginx reverse proxy with Let's Encrypt certificates - seanthegeek.net]]
