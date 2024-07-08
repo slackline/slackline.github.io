@@ -1,10 +1,12 @@
 :PROPERTIES:
 :ID:       b2af442f-2afd-46ac-8cc3-862a2234dfc1
-:mtime:    20240204113427
+:mtime:    20240708090856 20240204113427
 :ctime:    20240204113427
 :END:
 #+TITLE: R Tables kableExtra
 #+FILETAGS: :r:tables:
+
+[[https://haozhu233.github.io/kableExtra/][kableExtra]] is an [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]] package that extends the ~knitr::kable()~ function.
 
 * Links
 
