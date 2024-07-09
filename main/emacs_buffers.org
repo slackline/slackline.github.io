@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       4451966f-b810-4a9d-905b-e2b682578c62
-:mtime:    20231130102352 20230910184222 20230906125824 20230103103310 20221224191223
+:mtime:    20240709215159 20231130102352 20230910184222 20230906125824 20230103103310 20221224191223
 :ctime:    20221224191223
 :END:
 #+TITLE: Emacs Buffers
@@ -46,6 +46,10 @@ You can make all buffers equal in size using ~balance-windows~ which is bound to
 
 ~winner-mode~ is a simple way of managing buffers/windows and switching between having many buffers to a single and back
 again (through a history of buffer layouts).
+
+** Shackle
+
+[[https://depp.brause.cc/shackle/][shackle: Enforce rules for popup windows]]
 
 * Writing in Buffers
 
