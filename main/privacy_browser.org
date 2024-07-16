@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       899eb7a6-22d6-493a-a67f-b05bd89917d0
+:mtime:    20240716154936
+:ctime:    20240716154936
+:END:
+#+TITLE: Browsing Privacy
+#+FILETAGS: :privacy:browser:firefox:
+
+
+* Firefox
+
+There are a wealth of browser extensions available for Firefox (and many on mobile too).
+
++ AdNauseum
++ ClearURLs
++ Decentraleyes
++ Facebook Container
++ Firefox Multi-Account Containers
++ Forget Me Not
++ I Don't Care About Cookies
++ Piped Redirects
++ Temporary Containers
++ UTM Remover
++ UntrackMe
++ uBlock Origin
+
+** Mobile
+
+You can disable Firefox's Facebook data collection by following the instructions [[https://fosstodon.org/@thomholwerda@exquisite.social/112795429462507951][here]].
