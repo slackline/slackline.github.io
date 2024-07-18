@@ -311,6 +311,7 @@ found useful.
 + [[https://skeydan.github.io/Deep-Learning-and-Scientific-Computing-with-R-torch/][Deep Learning and Scientific Computing with R torch]]
 + [[https://rstats.wtf/][What They Forgot to Teach You About R]]
 + [[https://www.tidy-finance.org/r/index.html][Tidy Finance with R]] (see also [[https://www.tidy-finance.org/][Welcome to Tidy Finance]])
++ [[https://rstats.wtf/][What They Forgot to Teach You About R]]
 
 *** Advanced
 
