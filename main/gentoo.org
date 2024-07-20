@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       44b32b4e-1bef-49eb-b53c-86d9129cb29a
-:mtime:    20240705080924 20240510231405 20240504061610 20230311154912 20230304204837 20230215101210 20230114082312
+:mtime:    20240718235024 20240705080924 20240510231405 20240504061610 20230311154912 20230304204837 20230215101210 20230114082312
 :ctime:    20230114082312
 :END:
 #+TITLE: Gentoo
@@ -21,3 +21,4 @@
 ** Useful
 
 + [[https://hub.docker.com/r/ksmanis/gentoo-distcc][ksmanis/gentoo-distcc - Docker Image | Docker Hub]]
++ [[https://setphaserstostun.org/posts/secure-boot-on-gentoo-with-shim-grub/][Secure Boot on Gentoo with shim & GRUB | Just another blog]]
