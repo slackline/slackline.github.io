@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       1333529b-ea55-4ee8-aa4d-26aba712f0b5
+:mtime:    20240715081111
+:ctime:    20240715081111
+:END:
+#+TITLE: Fuji XT-2
+#+FILETAGS: :photography:fuji:xt-2:mirrorless:
+
+I got fed up of lugging large Digital SLRs around so bit the bullet and switched to a mirrorless system. Generally I've
+been very happy with the switch although I don't yet have a "do it all" lens that covers most things the same way the
+18-200mm Nikkor did although do have my eyes on a [[https://www.digitalcameraworld.com/reviews/tamron-18-300mm-f35-63-di-iii-a-vc-vxd-review][18-300m Tamron]]
