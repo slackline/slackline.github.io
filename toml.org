@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       80ebb47c-7c3e-4aa4-93c4-bb15f0ee7a01
+:mtime:    20240731221942
+:ctime:    20240731221942
+:END:
+#+TITLE: TOML
+#+FILETAGS: :toml:config:configuration

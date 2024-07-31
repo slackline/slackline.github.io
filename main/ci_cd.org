@@ -1,13 +1,25 @@
 :PROPERTIES:
 :ID:       3b6a27c8-6ef9-4133-95b9-302d2e4dbea3
-:mtime:    20230103103309 20221225184240
+:mtime:    20240731222020 20230103103309 20221225184240
 :ctime:    20221225184240
 :END:
 #+TITLE: Continuous Integration/Development
 #+DATE: <2022-12-25 Sun 18:41>
 #+FILETAGS: github:gitlab:continuous:integration:development
 
+* Pipelight
+
+  [[https://pipelight.dev/][Pipelight]] is a CI/CD system written in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]] that (supposedly!) simplifies the process of configuring your CI/CD
+pipelines that allows you to write you pipelines in [[id:80ebb47c-7c3e-4aa4-93c4-bb15f0ee7a01][TOML]], [[id:fac7a695-9bdf-4a79-9ec3-9945e9a0cba4][YAML]] or HCL. It handles hooks and keeps track of logging for
+you.
+
+
 * Links
 
 + [[https://docs.github.com/en/actions][GitHub Docs | GitHub Actions Documentation]]
 + [[https://docs.gitlab.com/ee/ci/][GitLab | GitLab CI/CD]]
+
+** Pipelight
+
++ [[https://pipelight.dev/][Home | Pipelight]]
++ [[https://github.com/pipelight/pipelight][pipelight/pipelight: Tiny automation pipelines. Bring CI/CD to the smallest projects. Self-hosted, Lightweight, CLI only.]]

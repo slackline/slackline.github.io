@@ -1,12 +1,13 @@
 :PROPERTIES:
 :ID:       8c412a9d-c7ff-4afc-bc05-7bec3f06aa41
-:mtime:    20230910185620
+:mtime:    20240731222118 20230910185620
 :ctime:    20230910185620
 :END:
 #+TITLE: Pre-commit CI
 #+FILETAGS: :git:hooks:pre-commit:ci:
 
-[[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] is a wonderful tool for automating running [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linting]] and [[id:3cca0dfd-0c82-4685-b9ed-6314f7c8b78f][Tests]] on your code.
+[[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] is a wonderful tool for automating running [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linting]] and [[id:3cca0dfd-0c82-4685-b9ed-6314f7c8b78f][Tests]] on your code, its a form of [[id:3b6a27c8-6ef9-4133-95b9-302d2e4dbea3][Continuous
+Integration/Development]] that automates many of the repetitive tasks involved in software development.
 
 Having [[https://pre-commit.com][pre-commit]] setup locally to run before making commits is great. Typically code lives in a "forge" such as [[https://github.com][GitHub]]
 or [[https://gitlab.com][GitLab]] and as ~pre-commit~ is run on each commit you shouldn't have any problems when you come to ~git push~ your
