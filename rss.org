@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       281401b5-a6db-466b-b267-41d8099ba973
+:mtime:    20240731223421
+:ctime:    20240731223421
+:END:
+#+TITLE: Really Simple Syndication
+#+FILETAGS: :rss:blog:free:open:
+
+I used to use Google Reader to keep abreast of topics via RSS feeds. Alas Google killed it as it ruined their business
+model of tracking people and serving up their ad-sponsored content. I tried a few alternative source but settled on
+hosting my own [[https://freshrss.nshephard.dev/][FreshRSS feed]] using the [[id:f277da12-5d6d-46e3-a49c-7bda9254d469][FOSS]] software [[https://www.freshrss.org/][FreshRSS]]. It's great, and has bought me back to the joy of hosting
+and reading blogs.
