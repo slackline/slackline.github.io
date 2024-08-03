@@ -1,4 +1,5 @@
 
+
 :PROPERTIES:
 :ID:       19d710f0-8744-406e-a22f-cb3107da87d5
 :mtime:    20240619224133 20240616191957 20240615071440 20240614212950 20240614192443 20240613160211
@@ -12,10 +13,11 @@ Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-wa
 * Itinerary
 ** Day 1 Sheffield to Kirk Yetholm
 
-+ Train ticket booked leaving Sheffield 09:32 arriving Berwick-upon-Tweed 12:21 (change at Newcastle with 19min transfer
-  time).
++ Train ticket booked leaving Sheffield 08:22 arriving Berwick-upon-Tweed 11:20.
 + Bus from [[https://passenger-line-assets.s3.eu-west-1.amazonaws.com/bordersbuses/BORD/67-timetable-20220627-d2f17f76.pdf][Berwick-upon-Tweed to Kelso (67)]] £10.70 leaves Berwick at 14:05 arrives 15:08
 + [[https://www.travelinescotland.com/lts/#/timetables?timetableId=BODO081&direction=OUTBOUND&queryDate=1723646684000&queryTime=1718289884751][Kelso to Kirk Yetholm (81)]]
++ On reflection probably better off getting a taxi to Kirk Yelthom straight away, have lunch in the pub and then walking
+  the first 12-13km to Auchope Rigg Cabin at about 12-13km (~3hrs) which breaks up the first leg nicely. 
 *** Food
 *** Accommodation
 + Camp at ?
@@ -72,6 +74,10 @@ Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-wa
 *** Food
 *** Accommodation
 
+* Accommodation
+** Bothies
++ [[https://www.openstreetmap.org/#map=19/55.47514/-2.19604][Near Cheviot]]
++ [[https://www.openstreetmap.org/#map=19/54.71285/-2.48147][Greg's Hut Bothy]] [[https://www.mountainbothies.org.uk/bothies/northern-england-borders/gregs-hut-cross-fell/][Mountain Bothies Association | Northern England & Borders | Greg's Hut (Cross Fell}]]
 * Equipment
 
 |---------------------------------------------------------+----------+------+--------|
