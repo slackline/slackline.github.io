@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       661f45c0-cec7-4b57-b2b1-7da8f9d8d0e6
-:mtime:    20240217093159 20240130203610
+:mtime:    20240804174300 20240217093159 20240130203610
 :ctime:    20240130203610
 :END:
 #+TITLE: Git Branches
@@ -206,3 +206,12 @@ keep track of everything! [[https://medium.com/@Sergeon/git-branches-are-just-re
 * Links
 
 + [[https://github.com/tummychow/git-absorb][git-absorb]]
+
+** Blogs
+
++ [[https://andrewlock.net/working-with-stacked-branches-in-git-is-easier-with-update-refs/][Working with stacked
+  branches in Git is easier with --update-refs]]
+
+** Tools
+
++ [[https://github.com/yaoyuannnn/gerritlab][yaoyuannnn/gerritlab: GerritLab: Gerrit-style code review for GitLab projects.]]
