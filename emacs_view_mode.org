@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       dcee8f13-e332-4fe9-826c-e2c34458e117
+:mtime:    20240805205845
+:ctime:    20240805205845
+:END:
+#+TITLE: Emacs View Mode
+#+FILETAGS: :emacs:mode:keys:
+
+* Links
+
++ [[http://yummymelon.com/devnull/enhancing-navigation-in-emacs-view-mode.html][Enhancing Navigation in Emacs View Mode]]
