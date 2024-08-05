@@ -17,7 +17,7 @@ Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-wa
 + Bus from [[https://passenger-line-assets.s3.eu-west-1.amazonaws.com/bordersbuses/BORD/67-timetable-20220627-d2f17f76.pdf][Berwick-upon-Tweed to Kelso (67)]] £10.70 leaves Berwick at 14:05 arrives 15:08
 + [[https://www.travelinescotland.com/lts/#/timetables?timetableId=BODO081&direction=OUTBOUND&queryDate=1723646684000&queryTime=1718289884751][Kelso to Kirk Yetholm (81)]]
 + On reflection probably better off getting a taxi to Kirk Yelthom straight away, have lunch in the pub and then walking
-  the first 12-13km to Auchope Rigg Cabin at about 12-13km (~3hrs) which breaks up the first leg nicely. 
+  the first 12-13km to Auchope Rigg Cabin at about 12-13km (~3hrs) which breaks up the first leg nicely.
 *** Food
 *** Accommodation
 + Camp at ?
@@ -74,6 +74,22 @@ Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-wa
 *** Food
 *** Accommodation
 
+* GPX Traces
++ [[file:gpx/pw/day001.gpx][Day 1 GPX]]
++ [[file:gpx/pw/day002.gpx][Day 2 GPX]]
++ [[file:gpx/pw/day003.gpx][Day 3 GPX]]
++ [[file:gpx/pw/day004.gpx][Day 4 GPX]]
++ [[file:gpx/pw/day005.gpx][Day 5 GPX]]
++ [[file:gpx/pw/day006.gpx][Day 6 GPX]]
++ [[file:gpx/pw/day007.gpx][Day 7 GPX]]
++ [[file:gpx/pw/day008.gpx][Day 8 GPX]]
++ [[file:gpx/pw/day009.gpx][Day 9 GPX]]
++ [[file:gpx/pw/day010.gpx][Day 10 GPX]]
++ [[file:gpx/pw/day011.gpx][Day 11 GPX]]
++ [[file:gpx/pw/day012.gpx][Day 12 GPX]]
++ [[file:gpx/pw/day013.gpx][Day 13 GPX]]
++ [[file:gpx/pw/day014.gpx][Day 14 GPX]]
+
 * Accommodation
 ** Bothies
 + [[https://www.openstreetmap.org/#map=19/55.47514/-2.19604][Near Cheviot]]
@@ -84,7 +100,7 @@ Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-wa
 | Item                                                    | Use      | Got? | Weight |
 |---------------------------------------------------------+----------+------+--------|
 | 1-person tent                                           | Camping  | [x]  |        |
-| Sleeping bag                                            | Camping  | [x]  |        |
+| Sleeping bag                                            | Camping  | [x]  | 1.3kg  |
 | Thermarest                                              | Camping  | [x]  |        |
 |---------------------------------------------------------+----------+------+--------|
 | Walking Boots                                           | Hiking   | [x]  |        |
@@ -103,7 +119,7 @@ Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-wa
 | Long Trousers x2?                                       | Clothing | [x]  |        |
 | Pants x3                                                | Clothing | [x]  |        |
 | Shorts ?                                                | Clothing | [x]  |        |
-| Long sleeve base layer                                  | Clothing | [x]  |        |
+| Long sleeve base layer x2                               | Clothing | [x]  |        |
 |---------------------------------------------------------+----------+------+--------|
 | MSR Whisperlite or borrow a Jet Boil                    | Food     | [ ]  |        |
 | Lighter                                                 | Food     | [ ]  |        |
