@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3469c33e-7c61-46c7-b01e-655695f3b93c
-:mtime:    20240410205343 20240119090258 20230912131821 20230623074206 20230622081612 20230305215056 20230217212451 20230215001041 20230103103309 20221224191223
+:mtime:    20240806173539 20240410205343 20240119090258 20230912131821 20230623074206 20230622081612 20230305215056 20230217212451 20230215001041 20230103103309 20221224191223
 :ctime:    20221224191223
 :END:
 #+TITLE: Rust
@@ -8,6 +8,9 @@
 #+FILETAGS: :programming:rust:
 
 
+* Emacs
+
+[[https://rust-analyzer.github.io/manual.html#emacs][rust-analyzer]] is a language server that integrates with [[id:a29a1e50-3cf2-4d88-a71d-7c600fdf8f65][Emacs LSP]].
 * Links
 
 + [[https://www.rust-lang.org/learn][Learn Rust - Rust Programming Language]]
@@ -17,6 +20,11 @@
 + [[https://doc.rust-lang.org/book/][The Rust Programming Language - The Rust Programming Language]]
 + [[https://doc.rust-lang.org/cargo/][The Cargo Book]]
 
+** Libraries
+
+There are lots of libraries in Rust
+
++ [[https://doc.rust-lang.org/std/index.html][std]] the Rust Standard Library
 ** Python
 
 + [[https://github.com/RustPython/RustPython][RustPython]] - Python interpreter written in Rust so that Python scripts can be interpreted in [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]]. Can be compiled
