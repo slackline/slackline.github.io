@@ -1,80 +1,140 @@
-
-
 :PROPERTIES:
 :ID:       19d710f0-8744-406e-a22f-cb3107da87d5
-:mtime:    20240619224133 20240616191957 20240615071440 20240614212950 20240614192443 20240613160211
+:mtime:    20240808193507 20240808160703 20240808085602 20240619224133 20240616191957 20240615071440 20240614212950 20240614192443 20240613160211
 :ctime:    20240613160211
 :END:
 #+TITLE: Pennine Way
 #+FILETAGS: :hiking:uk:pennineway:
 
-Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-way/][Pennine Way]] from <2024-08-14 Wed> to <2024-08-31 Sat> from Kirk Yetholm to Edale
+Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-way/][Pennine Way]] from <2024-08-14 Wed> to <2024-08-31 Sat> from Kirk Yetholm to Edale.
+
+
 
 * Itinerary
-** Day 1 Sheffield to Kirk Yetholm
-
+** Day 1 <2024-08-14 Wed> Sheffield to Kirk Yetholm ([[file:gpx/pw/day001.gpx][GPX]])
 + Train ticket booked leaving Sheffield 08:22 arriving Berwick-upon-Tweed 11:20.
-+ Bus from [[https://passenger-line-assets.s3.eu-west-1.amazonaws.com/bordersbuses/BORD/67-timetable-20220627-d2f17f76.pdf][Berwick-upon-Tweed to Kelso (67)]] £10.70 leaves Berwick at 14:05 arrives 15:08
-+ [[https://www.travelinescotland.com/lts/#/timetables?timetableId=BODO081&direction=OUTBOUND&queryDate=1723646684000&queryTime=1718289884751][Kelso to Kirk Yetholm (81)]]
-+ On reflection probably better off getting a taxi to Kirk Yelthom straight away, have lunch in the pub and then walking
++ Bus from [[https://passenger-line-assets.s3.eu-west-1.amazonaws.com/bordersbuses/BORD/67-timetable-20220627-d2f17f76.pdf][Berwick-upon-Tweed to Kelso (67)]] £10.70 leaves Berwick at 12:05 arrives 13:04 (Woodmarket)
++ [[https://www.travelinescotland.com/lts/#/timetables?timetableId=BODO081&direction=OUTBOUND&queryDate=1723646684000&queryTime=1718289884751][Kelso to Kirk Yetholm (81)]] leaving at 14:10 (Woodmarket) arriving at Kirk Yetholm 14:50.
++ On reflection probably better off getting a taxi to Kirk Yetholm straight away, have lunch in the pub and then walking
   the first 12-13km to Auchope Rigg Cabin at about 12-13km (~3hrs) which breaks up the first leg nicely.
 *** Food
++ Lunch in Kelso (no food served between 14-17:00 in [[https://www.borderhotel.co.uk/restaurant/][Border Hotel]]) plenty of options [[https://thewaggon.co.uk/menus/][The Waggon]], [[https://cobbleskelso.co.uk/sit-in][The Cobbles]]
 *** Accommodation
-+ Camp at ?
-** Day 2
++ Camp at [[https://www.openstreetmap.org/#map=19/55.47514/-2.19604][bothy near Cheviot]].
+** Day 2 <2024-08-15 Thu> Auchope Refuge to Byrness ([[file:gpx/pw/day002.gpx][GPX]])
++ Passing [[https://www.openstreetmap.org/way/97635754][Yearning Saddle Refuge Hut]]
+*** Food
++ Depends on whether I can get in at Forest View Inn
+*** Accommodation
++ Camp at [[https://www.forestviewbyrness.co.uk/terms-conditions][Forest View Inn]] requires booking and to eat there.
++ Alternatively there is [[https://www.openstreetmap.org/way/97635754#map=19/55.34429/-2.36678][Spithope Bothy]] just
+  before the town.
+** Day 3 <2024-08-16 Fri> Bryness to Bellingham ([[file:gpx/pw/day003.gpx][GPX]])
++ Bellingham has a Co-Op for snacks for lunch.
+*** Food
++ [[https://curioustaverns.uk/home/the-cheviot-bellingham][The Cheviot - Bellingham | Curious Taverns]] 17:30-20:30 for food
+*** Accommodation
++ [[https://www.demesnefarmcampsite.co.uk/campsite][Demesne Farm Campsite]] (£12)
+** Day 4 <2024-08-17 Sat> Belligham to Greenhead ([[file:gpx/pw/day004.gpx][GPX]])
+*** Food
++ [[https://www.greenheadbrampton.co.uk/][Greenhead Hotel]] serving until 21:00 may be pricey/busy.
++ [[https://www.blenkinsoppcastleinn.co.uk/][Blenkinsopp Castle Country Inn]] food served 17:00-20:30, bit [[https://www.openstreetmap.org/way/310644936][further away]], may offer camping.
+*** Accommodation
++ Possibly [[https://www.openstreetmap.org/way/310644936][Blenkinsopp Castle]]
++ Alternatively carry on to a remote spot, possible disused building [[https://www.openstreetmap.org/query?lat=54.97187&lon=-2.56252#map=19/54.97181/-2.56213][here]].
+** Day 5 <2024-08-18 Sun> Greenhead to Garrigill ([[file:gpx/pw/day005.gpx][GPX]])
+*** Food
++ Lunch in [[https://www.openstreetmap.org/query?lat=54.97187&lon=-2.56252#map=16/54.8113/-2.4395][Alston]]
++ No apparent food places in Garrigill itself.
+*** Accommodation
++ Camp on top of [[https://www.openstreetmap.org/query?lat=54.97187&lon=-2.56252#map=18/54.75494/-2.42110][Black Band]], should be nice and open so no midges
+** Day 6 <2024-08-19 Mon> Garrigill to Rasp Hill/Cow Green Reservoir ([[file:gpx/pw/day006.gpx][GPX]])
+If feeling upto it push on to [[https://www.openstreetmap.org/query?lat=54.63588&lon=-2.14230#map=16/54.6235/-2.0824][Middleton in Teesdale]] where there are more camping and food options.
+*** Food
++ Make sure to get supplies when passing through Alston.
++ Could push on to [[https://www.openstreetmap.org/query?lat=54.63588&lon=-2.14230#map=19/54.63598/-2.14219][Strathmore Arms]] for dinner perhaps?
+*** Accommodation
++ Wild camp on Rasp Hill, possibly near [[https://www.openstreetmap.org/query?lat=54.65109&lon=-2.29101#map=17/54.65074/-2.28762][Cow Green reservoir]] or could push on to [[https://www.openstreetmap.org/way/890736628#map=16/54.6386/-2.1340][Low Way Farm Campsite]] ()
+** Day 7 <2024-08-20 Tue> Rasp Hill/Cow Green Reservoir to Ravock ([[file:gpx/pw/day007.gpx][GPX]])
+*** Food
++ Lunch and supplies in [[https://www.openstreetmap.org/query?lat=54.63588&lon=-2.14230#map=16/54.6235/-2.0824][Middleton in Teesdale]]
+*** Accommodation
++ Camp wild around [[https://www.openstreetmap.org/query?lat=54.63588&lon=-2.14230#map=16/54.5395/-2.0906][Race Yate]] or [[https://www.openstreetmap.org/#map=17/54.52147/-2.07607][Ravock]] (there are a series of Grouse butts).
+** Day 8 <2024-08-21 Wed> Ravock to Hawes ([[file:gpx/pw/day008.gpx][GPX]])
+*** Food
++ [[https://thegreendragonhardraw.co.uk/][The Green Dragon Inn]] may offer camping too.
+*** Accommodation
++ [[http://www.shawghyll.co.uk/][Shaw Ghyll]]
++ [[https://thegreendragonhardraw.co.uk/][The Green Dragon Inn]]
+** Day 9 <2024-08-22 Thu> Hawes to Horton in Ribblesdale ([[file:gpx/pw/day009.gpx][GPX]])
+*** Food
++ Get supplies in Hawes before leaving.
+*** Accommodation
++ [[https://www.facebook.com/HolmeFarmCampsite][Holme Farm Campsite]] call to book in 07395581164
+** Day 10 <2024-08-23 Fri> Horton in Ribblesdale to Gargrave ([[file:gpx/pw/day010.gpx][GPX]])
+Passing through Malham and Kirkby Malham
+*** Food
+Lunch in
++ [[https://listerarms.co.uk/][Lister Arms]]
++ [[https://www.thebuckinn.co.uk/menu][The Buck Inn]]
+*** Accommodation
++ [[https://www.greatlittlecampsites.co.uk/united-kingdom/england/north-yorkshire/gargrave/eshton-road-caravan-site-110718/][Eshton Road Campsite]]
+** Day 11 <2024-08-24 Sat> Gargrave to Lower Gorple Reservoir ([[file:gpx/pw/day011.gpx][GPX]])
+*** Food
+Lunch possibilities
++ [[https://handhpub.co.uk/][Hare and Hounds]] in Lothersdale
+*** Accommodation
++ Wild camp around [[https://www.openstreetmap.org/#map=14/53.7785/-2.0992][Lower Gorple Reservoir]]
+** Day 12 <2024-08-25 Sun> Lower Gorple Reservoir to Marsden ([[file:gpx/pw/day012.gpx][GPX]])
+*** Food
+Lunch in Hebden Bridge (bit of a detour but multiple options)
++ Make sure food for last two nights.
+*** Accommodation
++ Camp [[https://www.openstreetmap.org/#map=15/53.5831/-1.9777][before]] or [[https://www.openstreetmap.org/#map=15/53.5710/-1.9472][after]] A62
+** Day 13 <2024-08-26 Mon> Marsden to Crowden ([[file:gpx/pw/day013.gpx][GPX]])
+*** Food
++ Make sure I've got food although there is a small shop on Crowden Campsite.
+*** Accommodation
++ [[https://www.campingandcaravanningclub.co.uk/campsites/uk/glossop/crowden/crowden-camping-and-caravanning-club-site/][Crowden Campsite]]
+** Day 14 <2024-08-27 Tue> Crowden to Edale ([[file:gpx/pw/day014.gpx][GPX]])
 *** Food
 *** Accommodation
-+ Camp at ?
-** Day 3
+** Day 15 <2024-08-28 Wed> SPARE
 *** Food
 *** Accommodation
-** Day 4
+** Day 16 <2024-08-29 Thu> SPARE
 *** Food
 *** Accommodation
-** Day 5
+** Day 17 <2024-08-30 Fri> SPARE
 *** Food
 *** Accommodation
-** Day 6
+** Day 18 <2024-08-31 Sat> SPARE
 *** Food
 *** Accommodation
-** Day 7
-*** Food
-*** Accommodation
-** Day 8
-*** Food
-*** Accommodation
-** Day 9
-*** Food
-*** Accommodation
-** Day 10
-*** Food
-*** Accommodation
-** Day 11
-*** Food
-*** Accommodation
-** Day 12
-*** Food
-*** Accommodation
-** Day 13
-*** Food
-*** Accommodation
-** Day 14
-*** Food
-*** Accommodation
-** Day 15
-*** Food
-*** Accommodation
-** Day 16
-*** Food
-*** Accommodation
-** Day 17
-*** Food
-*** Accommodation
-** Day 18
+** Day 19 <2024-09-01 Sun> SPARE
 *** Food
 *** Accommodation
 
+
 * GPX Traces
+
+The site [[https://brouter.m11n.de/#map=8/54.436/-2.236/standard,Waymarked_Trails-Hiking&profile=hiking-beta][brouter.m11n.de]] is a useful way of viewing GPX files, the link should highlight Hiking Trails and zooming in it
+should be possible to find the Pennine Way (a blue trail labelled ~PW~ but overlaps with ~E2~ for much of its length and
+is rendered as a blue line with red borders). Right click on any of the listed GPX file below to save locally and they
+can then be uploaded to this site as tracks or routes (the later gives more information on distance and ascent).
+
+** [[https://www.nationaltrail.co.uk/en_gb/trails/pennine-way/][National Trail Pennine Way]]
+
+The National Trail website has a GPX track (south to north) with elevation included. I [[https://reversegpx.com/][reversed it]] so it matches the way
+I'm going, both are linked below.
+
++ [[file:gpx/pw/nationaltrail_pennine-way-elev-1-north-to-south.gpx][North to South]]
++ [[file:gpx/pw/nationaltrail_pennine-way-elev-1-south-to-north.gpx][South to North]]
+
+** My Daily GPX
+
+I've plotted out GPX traces for my planned travel each day along the 431km.
+
 + [[file:gpx/pw/day001.gpx][Day 1 GPX]]
 + [[file:gpx/pw/day002.gpx][Day 2 GPX]]
 + [[file:gpx/pw/day003.gpx][Day 3 GPX]]
@@ -92,8 +152,16 @@ Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-wa
 
 * Accommodation
 ** Bothies
-+ [[https://www.openstreetmap.org/#map=19/55.47514/-2.19604][Near Cheviot]]
++ [[https://www.openstreetmap.org/#map=19/55.47514/-2.19604][Auchope Refuge Hut Near Cheviot]]
++ [[https://www.openstreetmap.org/way/97635754][Yearning Saddle Refuge Hut]]
++ [[https://www.openstreetmap.org/way/97635754#map=19/55.34429/-2.36678][Spithope Bothy]] near Bryness
 + [[https://www.openstreetmap.org/#map=19/54.71285/-2.48147][Greg's Hut Bothy]] [[https://www.mountainbothies.org.uk/bothies/northern-england-borders/gregs-hut-cross-fell/][Mountain Bothies Association | Northern England & Borders | Greg's Hut (Cross Fell}]]
+** Campsites
+
+Will be wild camping in many places but not adverse to stopping in campsites.
+
++ [[https://opencampingmap.org/en/#8/54.653/-2.043/0/1/bef][OpenCampingMap]] - OpenStreetMap with overlay of campsites.
+
 * Equipment
 
 |---------------------------------------------------------+----------+------+--------|
