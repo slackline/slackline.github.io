@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       b4f07dd1-0b43-4a13-bbe7-d2016e107e35
+:mtime:    20240809142050
+:ctime:    20240809142050
+:END:
+#+TITLE: Grid Computing
+#+FILETAGS: :research:grid compute:
+
+* Links
+
++ [[https://www.worldcommunitygrid.org/][World Community Grid]]
