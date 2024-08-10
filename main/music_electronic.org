@@ -1,12 +1,13 @@
 :PROPERTIES:
 :ID:       c3d85b0a-29e6-49e4-9349-0072a9604cfa
-:mtime:    20240120102519
+:mtime:    20240809213446 20240120102519
 :ctime:    20240120102519
 :END:
 #+TITLE: Music Electronic
 #+FILETAGS: :music:electronic:
 
-A diverse genre but broadly my favourite (perhaps that is because of the diversity!).
+A diverse genre but broadly my favourite (perhaps that is because of the diversity!). Listened to lots in the late 90s
+and early 00s these days love discovering new and diverse music via [[https://www.radiofrance.fr/fip/radio-electro][FIP Electro]] a French radio station.
 
 * Artists
 
@@ -14,23 +15,52 @@ A diverse genre but broadly my favourite (perhaps that is because of the diversi
 
 + [[https://soundcloud.com/acidpauli][Soundcloud - Acid Pauli]]
 
+** Bonobo
+
++ [[https://bonobomusic.bandcamp.com/music][Bandcamp]]
+
 ** Empirion
 
 + [[https://soundcloud.com/empirion][Soundcloud - Empirion]]
 
 ** Leftfield
 
+** [[https://o-o-music.bandcamp.com/music][O'o]]
+
+Beautiful duo from Spain
+
+** [[https://orathemolecule.bandcamp.com/music][Ora The Molecule]]
+
+Mesmerising Norweighan artist/producer.
+
 ** Richard Fearless
 
+Death in Vegas head honcho but has done lots of his own stuff, releases under Black Acid and more recently his own name
+(the later mostly on Bandcamp, the former obscure and hard to get hold of limited releases).
+
++ [[https://richardfearless.bandcamp.com/][Bandcamp]]
 + [[https://soundcloud.com/richard-fearless][Soundcloud - Richard Fearless]]
++ [[https://www.dublab.com/djs/richard-fearless][Metal Box]] - Richard Fearless on dublab.
+
+** [[https://sutjagutierrez.bandcamp.com/music][Sutja Gutierrez]]
+
+Keep on hearing this [[https://sutjagutierrez.bandcamp.com/album/phylax-society][Phylax Society]] album on FIP.
 
 ** The Chemical Brothers
 
 + [[https://soundcloud.com/thechemicalbrothers][Soundcloud - The Chemical Brothers]]
 
-* Radio Shows
+** Tree Speak
 
-+ [[https://www.dublab.com/djs/richard-fearless][Metal Box]] - Richard Fearless on dublab.
+On Soul Jazz Records, heard on FIP very cool.
+
++ [[https://soundsoftheuniverse.com/sjr/product/ohms][Trees Speak – Ohms | Soul Jazz Records]]
++ [[https://soundsoftheuniverse.com/sjr/product/vertigo-of-flaws][Trees Speak – Vertigo Of Flaws: Emancipation of the Dissonance and Temperaments in Irrational Waveforms | Soul Jazz
+  Records]]
++ [[https://soundsoftheuniverse.com/sjr/product/shadow-forms][Trees Speak – Shadow Forms | Soul Jazz Records]]
++ [[https://soundsoftheuniverse.com/sjr/product/fagltcyxx][Trees Speak – PostHuman | Soul Jazz Records]]
++ [[https://soundsoftheuniverse.com/sjr/product/mind-maze][Trees Speak – Mind Maze | Soul Jazz Records]]
+
 
 * Burning Man
 
@@ -41,12 +71,3 @@ on Soundcloud.
 + [[https://soundcloud.com/maxaxaman][Maxa]]
 + [[https://soundcloud.com/playalchemist][PlayAlchemist]]
 + [[https://soundcloud.com/robot-heart][Robot Heart]]
-
-* Soundcloud
-
-A great source of new music.
-
-+ [[https://soundcloud.com/acidpauli][Acid Pauli]]
-+ [[https://soundcloud.com/empirion][Empirion]]
-+ [[https://soundcloud.com/richard-fearless][Richard Fearless]]
-+ [[https://soundcloud.com/thechemicalbrothers][The Chemical Brothers]]
