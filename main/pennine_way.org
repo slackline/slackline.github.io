@@ -1,16 +1,55 @@
 :PROPERTIES:
 :ID:       19d710f0-8744-406e-a22f-cb3107da87d5
-:mtime:    20240808193507 20240808160703 20240808085602 20240619224133 20240616191957 20240615071440 20240614212950 20240614192443 20240613160211
+:mtime:    20240811104737 20240811085002 20240809183616 20240809142145 20240808205401 20240808193507 20240808160703 20240808085602 20240619224133 20240616191957 20240615071440 20240614212950 20240614192443 20240613160211
 :ctime:    20240613160211
 :END:
 #+TITLE: Pennine Way
 #+FILETAGS: :hiking:uk:pennineway:
+# #+SETUPFILE: export/setup/theme-solarized-dark-local.setup
 
 Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-way/][Pennine Way]] from <2024-08-14 Wed> to <2024-08-31 Sat> from Kirk Yetholm to Edale.
 
 
 
 * Itinerary
+
+| Day | Date             | Start                         | Finish                        | GPX | Distance (km) | Ascent (m) | Est Time | Food                                                                                                                                                  | Accomodation                                                                                                                                                            | Notes                                                                                                                            |
+|-----+------------------+-------------------------------+-------------------------------+-----+---------------+------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------|
+|   1 | <2024-08-14 Wed> | Sheffield                     | Kirk Yetholm                  |
+N/A |               |            |          | Lunch in Kelso (no food served between 14-17:00 in [[https://www.borderhotel.co.uk/restaurant/][Border Hotel]]) plenty of
+options [[https://thewaggon.co.uk/menus/][The Waggon]], [[https://cobbleskelso.co.uk/sit-in][The
+Cobbles]]                                            |                                                                                                                                                                         |
+Train ticket booked leaving Sheffield 08:22 arriving Berwick-upon-Tweed 11:20.                                                 |
+|     |                  |                               |                               |     |               |            |          |                                                                                                                                                       |                                                                                                                                                                         | Bus from [[https://passenger-line-assets.s3.eu-west-1.amazonaws.com/bordersbuses/BORD/67-timetable-20220627-d2f17f76.pdf][Berwick-upon-Tweed to Kelso (67)]] £10.70 leaves Berwick at 12:05 arrives 13:04 (Woodmarket)                            |
+|     |                  |                               |                               |     |               |            |          |                                                                                                                                                       |                                                                                                                                                                         | [[https://www.travelinescotland.com/lts/#/timetables?timetableId=BODO081&direction=OUTBOUND&queryDate=1723646684000&queryTime=1718289884751][Kelso to Kirk Yetholm (81)]] leaving at 14:10 (Woodmarket) arriving at Kirk Yetholm 14:50.                                       |
+|     | <2024-08-14 Wed> | Kirk Yetholm                  | Auchope Refuge                | [[file:gpx/pw/day001.gpx][GPX]] |          11.9 |        664 | 2h 48m   |                                                                                                                                                       | [[https://www.openstreetmap.org/#map=19/55.47514/-2.19604][Auchope bothy near Cheviot]]                                                                                                                                              |                                                                                                                                  |
+|-----+------------------+-------------------------------+-------------------------------+-----+---------------+------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------|
+|   2 | <2025-08-14 Thu> | Auchope Refuge                | Bryness                       | [[file:gpx/pw/day002.gpx][GPX]] |          32.8 |        732 | 6h 58m   | [[https://www.forestviewbyrness.co.uk/terms-conditions][Forest View Inn]]                                                                                                                                       | [[https://www.forestviewbyrness.co.uk/terms-conditions][Forest View Inn]]                                                                                                                                                         | Accomodation booked and paid for (still need to pay for food).                                                                   |
+|-----+------------------+-------------------------------+-------------------------------+-----+---------------+------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------|
+|   3 | <2026-08-14 Fri> | Bryness                       | Bellingham                    | [[file:gpx/pw/day003.gpx][GPX]] |          24.9 |        416 | 5h 03m   | [[https://curioustaverns.uk/home/the-cheviot-bellingham][The Cheviot - Bellingham]] (17:30-20:30 for food)                                                                                                       | [[https://www.demesnefarmcampsite.co.uk/campsite][Demesne Farm Campsite]] (£12)                                                                                                                                             |                                                                                                                                  |
+|-----+------------------+-------------------------------+-------------------------------+-----+---------------+------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------|
+|   4 | <2026-08-15 Sat> | Bellingham                    | Greenhead                     | [[file:gpx/pw/day004.gpx][GPX]] |          37.7 |        752 | 7h 47m   | [[https://www.greenheadbrampton.co.uk/][Greenhead Hotel]] serving until 21:00 may be pricey/busy.  [[https://www.blenkinsoppcastleinn.co.uk/][Blenkinsopp Castle Country Inn]] food served 17:00-20:30, bit [[https://www.openstreetmap.org/way/310644936][further away]], may offer camping. | Possibly [[https://www.openstreetmap.org/way/310644936][Blenkinsopp Castle]]. Alternatively carry on to a remote spot, possible disused building [[https://www.openstreetmap.org/query?lat=54.97187&lon=-2.56252#map=19/54.97181/-2.56213][here]].                                                                   | Long day, make sure to start early.                                                                                              |
+|-----+------------------+-------------------------------+-------------------------------+-----+---------------+------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------|
+|   5 | <2026-08-16 Sun> | Greenhead                     | Garrigill                     | [[file:gpx/pw/day005.gpx][GPX]] |          32.6 |        586 | 6h 43m   | Lunch in [[https://www.openstreetmap.org/query?lat=54.97187&lon=-2.56252#map=16/54.8113/-2.4395][Alston]], doesn't appear to be food in Garrigill itself.                                                                                       | Possible to camp outside village hall according to [[https://fellbound.blogspot.com/2021/10/pennine-way-days-9-to-12-deepdale-beck.html][this post]] with showers, toilets and kitchen. If not camp on top of [[https://www.openstreetmap.org/query?lat=54.97187&lon=-2.56252#map=18/54.75494/-2.42110][Black Band]], should be nice and open so no midges. |                                                                                                                                  |
+|-----+------------------+-------------------------------+-------------------------------+-----+---------------+------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------|
+|   6 | <2026-08-17 Mon> | Garrigill                     | Rasp Hill/Cow Green Reservoir | [[file:gpx/pw/day006.gpx][GPX]] |          35.8 |       1154 | 7h 56m   | Lunch in Dufton when passing through, ensure supplise from Alston though. Possibly push on to  [[https://www.openstreetmap.org/query?lat=54.63588&lon=-2.14230#map=19/54.63598/-2.14219][Strathmore Arms]] for dinner.                            | Wild camp on Rasp Hill, possibly near [[https://www.openstreetmap.org/query?lat=54.65109&lon=-2.29101#map=17/54.65074/-2.28762][Cow Green reservoir]] or could push on [[https://www.openstreetmap.org/query?lat=54.63588&lon=-2.14230#map=16/54.6235/-2.0824][Middleton in Teesdale]].                                                                       | If feeling upto it push on to [[https://www.openstreetmap.org/query?lat=54.63588&lon=-2.14230#map=16/54.6235/-2.0824][Middleton in Teesdale]] where there are more camping and food options, would make a /very/ long day. |
+|-----+------------------+-------------------------------+-------------------------------+-----+---------------+------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------|
+|   7 | <2027-08-17 Tue> | Rasp Hill/Cow Green Reservoir | Ravock                        | [[file:gpx/pw/day007.gpx][GPX]] |          33.1 |        449 | 6h 35m   | ([[https://tanhillinn.com/][Tan Hill Inn]] if feasible)                                                                                                                            |                                                                                                                                                                         | If made it to Middleton in Teesdale previous day then carry on to [[https://tanhillinn.com/][Tan Hill Inn]].                                                  |
+|-----+------------------+-------------------------------+-------------------------------+-----+---------------+------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------|
+|   8 | <2027-08-18 Wed> | Ravock                        | Hawes                         | [[file:gpx/pw/day008.gpx][GPX]] |          41.3 |        882 | 8h 41m   | [[http://www.shawghyll.co.uk/][Shaw Ghyll]] or [[https://thegreendragonhardraw.co.uk/][The Green Dragon Inn]]                                                                                                                    | [[https://thegreendragonhardraw.co.uk/][The Green Dragon Inn]]                                                                                                                                                    |                                                                                                                                  |
+|-----+------------------+-------------------------------+-------------------------------+-----+---------------+------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------|
+|   9 | <2027-08-19 Thu> | Hawes                         | Horton in Ribblesdale         | [[file:gpx/pw/day009.gpx][GPX]] |          22.6 |        456 | 4h 36m   | Supplies in Hawes before leaving                                                                                                                      | [[https://www.facebook.com/HolmeFarmCampsite][Holme Farm Campsite]] call to book in 07395581164                                                                                                                         |                                                                                                                                  |
+|-----+------------------+-------------------------------+-------------------------------+-----+---------------+------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------|
+|  10 | <2028-08-19 Sat> | Horton in Ribblesdale         | Gargrave                      | [[file:gpx/pw/day010.gpx][GPX]] |            30 |        822 | 7h 08m   | Lunch in  [[https://listerarms.co.uk/][Lister Arms]] or [[https://www.thebuckinn.co.uk/menu][The Buck Inn]]                                                                                                                 | [[https://www.greatlittlecampsites.co.uk/united-kingdom/england/north-yorkshire/gargrave/eshton-road-caravan-site-110718/][Eshton Road Campsite]]                                                                                                                                                    |                                                                                                                                  |
+|-----+------------------+-------------------------------+-------------------------------+-----+---------------+------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------|
+|  11 | <2028-08-19 Sat> | Gargrave                      | Lower Gorple Reservoir        | [[file:gpx/pw/day011.gpx][GPX]] |          34.6 |        945 | 7h 18m   | Lunch in  [[https://handhpub.co.uk/][Hare and Hounds]] in Lothersdale                                                                                                              | Wild camp around [[https://www.openstreetmap.org/#map=14/53.7785/-2.0992][Lower Gorple Reservoir]]                                                                                                                                 |                                                                                                                                  |
+|-----+------------------+-------------------------------+-------------------------------+-----+---------------+------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------|
+|  12 | <2028-08-20 Sun> | Lower Gorple Reservoir        | Marsden                       | [[file:gpx/pw/day012.gpx][GPX]] |            32 |        746 | 6h 41m   | Lunch in Hebden Bridge (detour but options), evening meal supplies from Hebden Bridge.                                                                | Camp [[https://www.openstreetmap.org/#map=15/53.5831/-1.9777][before]] or [[https://www.openstreetmap.org/#map=15/53.5710/-1.9472][after]] A62                                                                                                                                                | Make sure sufficient food supplies for last two days, no real shops/pub options.                                                 |
+|-----+------------------+-------------------------------+-------------------------------+-----+---------------+------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------|
+|  13 | <2028-08-21 Mon> | Marsden                       | Crowden                       | [[file:gpx/pw/day013.gpx][GPX]] |          18.3 |        440 | 3h 52m   | Supplies bought in Hebden Bridge.                                                                                                                     | [[https://www.campingandcaravanningclub.co.uk/campsites/uk/glossop/crowden/crowden-camping-and-caravanning-club-site/][Crowden Campsite]]                                                                                                                                                        |                                                                                                                                  |
+|-----+------------------+-------------------------------+-------------------------------+-----+---------------+------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------|
+|  14 | <2028-08-22 Tue> | Crowden                       | Edale                         | [[file:gpx/pw/day014.gpx][GPX]] |          26.5 |        693 | 5h 38m   |                                                                                                                                                       |                                                                                                                                                                         |                                                                                                                                  |
+
 ** Day 1 <2024-08-14 Wed> Sheffield to Kirk Yetholm ([[file:gpx/pw/day001.gpx][GPX]])
 + Train ticket booked leaving Sheffield 08:22 arriving Berwick-upon-Tweed 11:20.
 + Bus from [[https://passenger-line-assets.s3.eu-west-1.amazonaws.com/bordersbuses/BORD/67-timetable-20220627-d2f17f76.pdf][Berwick-upon-Tweed to Kelso (67)]] £10.70 leaves Berwick at 12:05 arrives 13:04 (Woodmarket)
@@ -48,14 +87,18 @@ Planning on hiking the [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-wa
 + No apparent food places in Garrigill itself.
 *** Accommodation
 + Camp on top of [[https://www.openstreetmap.org/query?lat=54.97187&lon=-2.56252#map=18/54.75494/-2.42110][Black Band]], should be nice and open so no midges
++ Possible to camp outside village hall according to [[https://fellbound.blogspot.com/2021/10/pennine-way-days-9-to-12-deepdale-beck.html][this post]] with showers, toilets and kitchen.
 ** Day 6 <2024-08-19 Mon> Garrigill to Rasp Hill/Cow Green Reservoir ([[file:gpx/pw/day006.gpx][GPX]])
 If feeling upto it push on to [[https://www.openstreetmap.org/query?lat=54.63588&lon=-2.14230#map=16/54.6235/-2.0824][Middleton in Teesdale]] where there are more camping and food options.
 *** Food
++ Food in Dufton when passing through (make sure to start early by 07:00)
 + Make sure to get supplies when passing through Alston.
 + Could push on to [[https://www.openstreetmap.org/query?lat=54.63588&lon=-2.14230#map=19/54.63598/-2.14219][Strathmore Arms]] for dinner perhaps?
 *** Accommodation
-+ Wild camp on Rasp Hill, possibly near [[https://www.openstreetmap.org/query?lat=54.65109&lon=-2.29101#map=17/54.65074/-2.28762][Cow Green reservoir]] or could push on to [[https://www.openstreetmap.org/way/890736628#map=16/54.6386/-2.1340][Low Way Farm Campsite]] ()
++ Wild camp on Rasp Hill, possibly near [[https://www.openstreetmap.org/query?lat=54.65109&lon=-2.29101#map=17/54.65074/-2.28762][Cow Green reservoir]] or could push on to [[https://www.openstreetmap.org/way/890736628#map=16/54.6386/-2.1340][Low Way Farm Campsite]] (closed).
++ Might be places in [[https://www.openstreetmap.org/query?lat=54.63588&lon=-2.14230#map=16/54.6235/-2.0824][Middleton in Teesdale]].
 ** Day 7 <2024-08-20 Tue> Rasp Hill/Cow Green Reservoir to Ravock ([[file:gpx/pw/day007.gpx][GPX]])
+If I made it to Middleton in Teesdale on previous day continue to Tan Hill Inn, will make following day shorter.
 *** Food
 + Lunch and supplies in [[https://www.openstreetmap.org/query?lat=54.63588&lon=-2.14230#map=16/54.6235/-2.0824][Middleton in Teesdale]]
 *** Accommodation
@@ -164,57 +207,66 @@ Will be wild camping in many places but not adverse to stopping in campsites.
 
 * Equipment
 
-|---------------------------------------------------------+----------+------+--------|
-| Item                                                    | Use      | Got? | Weight |
-|---------------------------------------------------------+----------+------+--------|
-| 1-person tent                                           | Camping  | [x]  |        |
-| Sleeping bag                                            | Camping  | [x]  | 1.3kg  |
-| Thermarest                                              | Camping  | [x]  |        |
-|---------------------------------------------------------+----------+------+--------|
-| Walking Boots                                           | Hiking   | [x]  |        |
-| Walking Poles                                           | Hiking   | [x]  |        |
-| Rucksack and cover                                      | Hiking   | [x]  |        |
-| Gaiters                                                 | Hiking   | [x]  |        |
-| Paramo                                                  | Hiking   | [x]  |        |
-| Waterproof Trousers                                     | Hiking   | [x]  |        |
-| [[https://www.cicerone.co.uk/pennine-way-map-booklet][Maps]] - pre-ordered due to be published <2024-08-05 Mon> | Hiking   | [x]  |        |
-| Compass                                                 | Hiking   | [x]  |        |
-| Midge head net                                          | Hiking   | [x]  |        |
-|---------------------------------------------------------+----------+------+--------|
-| Gloves                                                  | Clothing | [x]  |        |
-| Buff x2                                                 | Clothing | [x]  |        |
-| Fleece                                                  | Clothing | [x]  |        |
-| Long Trousers x2?                                       | Clothing | [x]  |        |
-| Pants x3                                                | Clothing | [x]  |        |
-| Shorts ?                                                | Clothing | [x]  |        |
-| Long sleeve base layer x2                               | Clothing | [x]  |        |
-|---------------------------------------------------------+----------+------+--------|
-| MSR Whisperlite or borrow a Jet Boil                    | Food     | [ ]  |        |
-| Lighter                                                 | Food     | [ ]  |        |
-| Meals x?                                                | Food     | [ ]  |        |
-| Sweets/Snacks (nuts)                                    | Food     | [ ]  |        |
-| Water bottle 2L + 0.5L                                  | Food     | [ ]  |        |
-| Water purification (tablets)                            | Food     | [ ]  |        |
-|---------------------------------------------------------+----------+------+--------|
-| Phone                                                   | Tech     | [x]  |        |
-| MP3 Player                                              | Tech     | [x]  |        |
-| Sony RX100 IV                                           | Tech     | [x]  |        |
-| USB Power Pack                                          | Tech     | [x]  |        |
-| Cables for phone, camera, watch and kobo                | Tech     | [ ]  |        |
-| Solar Panel for recharging?                             | Tech     | [x]  |        |
-| USB adapter and cables (white set)                      | Tech     | [x]  |        |
-|---------------------------------------------------------+----------+------+--------|
-| Toothbrush & paste                                      | Hygiene  | [x]  |        |
-| Lightweight towel                                       | Hygiene  | [x]  |        |
-| Toilet paper and poo bags for packaging waste.          | Hygiene  | [ ]  |        |
-| Tick removal tools                                      | Hygiene  | [x]  |        |
-| Ibuprofen (tablets and gels)                            | Hygiene  | [ ]  |        |
-| Small hand trowel                                       | Hygiene  | [ ]  |        |
-| Vaseline and Sudocream                                  | Hygiene  | [ ]  |        |
-|---------------------------------------------------------+----------+------+--------|
+|------------------------------------------------+----------+------+--------|
+| Item                                           | Use      | Got? | Weight |
+|------------------------------------------------+----------+------+--------|
+| 1-person tent                                  | Camping  | [x]  |        |
+| Sleeping bag                                   | Camping  | [x]  | 1.3kg  |
+| Silk linker                                    | Camping  | [x]  |        |
+| Thermarest                                     | Camping  | [x]  |        |
+| Swiss army knife                               | Camping  | [x]  |        |
+|------------------------------------------------+----------+------+--------|
+| Walking Boots                                  | Hiking   | [x]  |        |
+| Walking Poles                                  | Hiking   | [x]  |        |
+| Rucksack and cover                             | Hiking   | [x]  |        |
+| Gaiters                                        | Hiking   | [x]  |        |
+| Purple Montane jacket                          | Hiking   | [x]  |        |
+| Waterproof Trousers                            | Hiking   | [x]  |        |
+| [[https://www.cicerone.co.uk/pennine-way-map-booklet][Maps]]                                           | Hiking   | [x]  |        |
+| Compass                                        | Hiking   | [x]  |        |
+| Midge head net                                 | Hiking   | [x]  |        |
+|------------------------------------------------+----------+------+--------|
+| Gloves                                         | Clothing | [x]  |        |
+| Buff x2                                        | Clothing | [x]  |        |
+| Fleece lined hat                               | Clothing | [x]  |        |
+| Fleece                                         | Clothing | [x]  |        |
+| Long Trousers x2?                              | Clothing | [x]  |        |
+| Pants x3                                       | Clothing | [x]  |        |
+| Shorts ?                                       | Clothing | [x]  |        |
+| Long sleeve base layer x2                      | Clothing | [x]  |        |
+| Unicorn sun hat                                | Clothing | [x]  |        |
+|------------------------------------------------+----------+------+--------|
+| Jet Boil                                       | Food     | [x]  |        |
+| Lighter                                        | Food     | [x]  |        |
+| Meals x6                                       | Food     | [x]  |        |
+| Sweets/Snacks (nuts)                           | Food     | [ ]  |        |
+| Water bottle 2L + 0.5L                         | Food     | [ ]  |        |
+| Water purification (tablets)                   | Food     | [ ]  |        |
+|------------------------------------------------+----------+------+--------|
+| Phone                                          | Tech     | [x]  |        |
+| MP3 Player                                     | Tech     | [x]  |        |
+| Sony RX100 IV (with charged batteries x3)      | Tech     | [x]  |        |
+| USB Power Pack (x2 fully charged)              | Tech     | [x]  |        |
+| Cables for phone, camera, watch and kobo       | Tech     | [ ]  |        |
+| Solar Panel for recharging?                    | Tech     | [x]  |        |
+| USB adapter and cables (white set)             | Tech     | [x]  |        |
+| Sunglasses and case                            |          |      |        |
+|------------------------------------------------+----------+------+--------|
+| Toothbrush & paste                             | Hygiene  | [x]  |        |
+| Soap                                           | Hygiene  | []   |        |
+| Lightweight towel                              | Hygiene  | [x]  |        |
+| Toilet paper and poo bags for packaging waste. | Hygiene  | [ ]  |        |
+| Tick removal tools                             | Hygiene  | [x]  |        |
+| Ibuprofen (tablets and gels)                   | Hygiene  | [ ]  |        |
+| Small hand trowel                              | Hygiene  | [ ]  |        |
+| Tape                                           | Hygiene  | [ ]  |        |
+| Anti-histamine tablets and cream               | Hygiene  | [ ]  |        |
+| Vaseline and Sudocream                         | Hygiene  | [ ]  |        |
+|------------------------------------------------+----------+------+--------|
 
 * Links
 
 + [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-way/trail-holidays/][National Trails : Pennine Way Trail Holidays]] (includes route planner and GPX tools)
 + [[https://www.nationaltrail.co.uk/en_GB/trails/pennine-way/route/][Route Description - Pennine Way - National Trails]] splits into 16 days
 + [[https://www.beckythetraveller.com/walking-pennine-way-wild-camping/][ULTIMATE Guide to Walking The Pennine Way + Wild Camping]] splits into 13 days with details of wild camping
++ [[https://fellbound.blogspot.com/2021/10/the-pennine-way-men-on-mission-with.html][Useful guide for 17 day trip (albeith South to North)]]
