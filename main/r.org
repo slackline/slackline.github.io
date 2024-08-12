@@ -261,6 +261,7 @@ found useful.
 + [[https://r-graphics.org/][R Graphics Cookbook, 2nd edition]]
 + [[https://cedricscherer.netlify.app/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/][A ggplot2 Tutorial for Beautiful Plotting in R - Cédric Scherer]]
 + [[https://bbc.github.io/rcookbook/][BBC Visual and Data Journalism cookbook for R graphics]]
++ [[https://www.stat.auckland.ac.nz/~paul/RG3e/][R Graphics (3e) Paul Murrell]]
 
 *** Statistics
 
