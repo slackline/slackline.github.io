@@ -1,11 +1,52 @@
 :PROPERTIES:
 :ID:       dd7c615f-cd8b-426d-aec0-cfd3803437cc
-:mtime:    20240215115043 20240215090823 20230125190111 20230125155927
+:mtime:    20240812121129 20240215115043 20240215090823 20230125190111 20230125155927
 :ctime:    20230125155927
 :END:
 #+TITLE: Python Profiling
 #+FILETAGS: :python:profiling:
 
+
+* ~timeit~
+
+The [[https://docs.python.org/3/library/timeit.html][timeit]] library allows you to profile code and get a feel for where bottle-necks are.
+
+A simple example of profiling is shown below, the two functions ~remove_common_values()~ do the same thing but which is
+faster?
+
+#+begin_src python
+import numpy as np
+import numpy.typing as npt
+import timeit
+
+
+arr1 = np.asarray([[1, 1], [2, 2], [3, 3], [4, 4], [5, 5], [6, 6], [7, 7], [8, 8]])
+arr2 = np.asarray([[2, 2], [4, 4], [6, 6], [8, 8]])
+retain = np.asarray([[6, 6]])
+
+def remove_common_values(arr1: npt.NDArray=arr1, arr2: npt.NDArray=arr2, retain: list = retain) -> np.array:
+    set_arr2 = {tuple(row) for row in arr2}
+    set_retain = {tuple(row) for row in retain}
+    # Create a new filtered list while maintaining the order of the first array
+    filtered_arr1 = []
+    for coord in arr1:
+        tup_coord = tuple(coord)
+        if tup_coord not in set_arr2 or tup_coord in set_retain:
+            filtered_arr1.append(coord)
+    return np.asarray(filtered_arr1)
+remove_common_values()
+
+def remove_common_values_lc(arr1: npt.NDArray=arr1, arr2: npt.NDArray=arr2, retain: list = retain) -> np.array:
+    set_arr2 = {tuple(row) for row in arr2}
+    set_retain = {tuple(row) for row in retain}
+    return np.asarray([tuple(coord) for coord in arr1 if tuple(coord) not in set_arr2 or tuple(coord) in set_retain])
+remove_common_values_lc()
+
+REPEATS = 1000000
+NUMBER = 1
+np.mean(timeit.Timer(remove_common_values).repeat(repeat=REPEATS, number=NUMBER))
+np.mean(timeit.Timer(remove_common_values_lc).repeat(repeat=REPEATS, number=NUMBER))
++end_src
 
 * [[https://rse.shef.ac.uk/pando-python/][Performance Profiling and Optimisation (Python)]]
 
