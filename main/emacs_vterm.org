@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       4668a662-27ab-4015-aaa0-6e356b6bc165
-:mtime:    20230103103310 20221228112734
+:mtime:    20240812202308 20230103103310 20221228112734
 :ctime:    20221228112734
 :END:
 #+TITLE: Emacs vterm
@@ -21,3 +21,7 @@ Start with ~M-x vterm~.
 * Links
 
 + [[https://github.com/akermu/emacs-libvterm][akermu/emacs-libvterm: Emacs libvterm integration]]
+
+** Alternatives
+
++ [[https://andreyor.st/posts/2023-10-27-you-dont-need-a-terminal-emulator/][You don't need a terminal emulator · Andrey Listopadov]]
