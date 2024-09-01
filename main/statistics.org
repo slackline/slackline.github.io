@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9f72e8bd-2dbe-4a95-9517-c0c94bc995a0
-:mtime:    20240503074233 20240405003716 20240107201218 20231012133555 20231012114034 20230710213941 20230418223817 20230319111642 20230103103312 20221215204145 20230103103310
+:mtime:    20240829064835 20240503074233 20240405003716 20240107201218 20231012133555 20231012114034 20230710213941 20230418223817 20230319111642 20230103103312 20221215204145 20230103103310
 :ctime:    20221215204145 20230103103310
 :END:
 #+TITLE: Statistics
@@ -103,6 +103,17 @@ pertains to events which have not happened based on observations of those that h
 + [[https://www.statlearning.com/][An Introduction to Statistical Learning]]
 + [[https://cran.r-project.org/web/packages/ISLR2/index.html][R package]]
 + [[https://islp.readthedocs.io/en/latest/][Welcome to ISLP documentation! — Introduction to Statistical Learning (Python)]]
+
+** Videos
+
++ [[https://www.youtube.com/watch?v=xRik3vOKLcU][Statistics - past, present and future]] David Cox
+
+*** David Speigelhalter
+
+A brilliant statistician and communicator about risk.
+
++ [[https://www.youtube.com/watch?v=_DhOMdcbjuU][Learning from Data : The Art of Statistics]]
++ [[https://www.youtube.com/watch?v=SJyx9XeCAWE][RSS President's Address 2017 : Trust in Numbers]]
 
 ** Miscellaneous
 

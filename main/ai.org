@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5
-:mtime:    20240807135153 20240805160240 20240804210618 20240716140526 20240714231345 20240706170213 20240701065359 20240626230330 20240615183601 20240530093111 20240514223948 20240329211826 20240310181610 20240203204843 20240122164607 20240120110521 20231231180655 20231218184621 20231206221404 20231104081218 20231023063845 20231013000730 20230924112611 20230907232738 20230803211138 20230722230042 20230721144339 20230720100255 20230705092829 20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
+:mtime:    20240829150248 20240825203610 20240807135153 20240805160240 20240804210618 20240716140526 20240714231345 20240706170213 20240701065359 20240626230330 20240615183601 20240530093111 20240514223948 20240329211826 20240310181610 20240203204843 20240122164607 20240120110521 20231231180655 20231218184621 20231206221404 20231104081218 20231023063845 20231013000730 20230924112611 20230907232738 20230803211138 20230722230042 20230721144339 20230720100255 20230705092829 20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
 :ctime:    20230304230340
 :END:
 #+TITLE: Artificial Intelligence
@@ -47,6 +47,10 @@ with the need to open source aspect and the advantage it provides to not just so
 is the article based on purportedly leaked by content from a Google employ at [[https://www.semianalysis.com/p/google-we-have-no-moat-and-neither][Google "We Have No Moat, And Neither Does
 OpenAI"]].
 
+* What is Intelligence
+
+Historically the Turing Test has been held up, perhaps inappropriately, as the /de facto/ means of assessing AI. This
+has recently been called into question (see [[https://www.science.org/doi/10.1126/science.adq9356][The Turing Test and our shifting concetions of intelligence]])
 * Ethics and Morals
 
 ** Accountability
@@ -183,6 +187,7 @@ A thoughtful paper on [[https://www.authorea.com/doi/full/10.22541/au.169264350.
 + [[https://statmodeling.stat.columbia.edu/wp-content/uploads/2023/10/carpenter-transformer-decoder-pseudocode.pdf][Transformer decoding in fifty lines of pseudocode]]
 + [[https://www.nature.com/articles/d41586-023-03144-w][How ChatGPT and other AI tools could disrupt scientific publishing]]
 + [[https://vickiboykis.com/2024/01/15/whats-new-with-ml-in-production/][Vicki Boykis - What's new with ML in Production (2024-01-15)]]
++ [[https://www.theguardian.com/commentisfree/article/2024/aug/24/ai-cheating-chat-gpt-openai-writing-essays-school-university][AI cheating is overwhelming the education system – but teachers shouldn’t despair | John Naughton | The Guardian]]
 
 ** Books
 + [[https://github.com/ageron/handson-ml3][Hands-On Machine Learning with Scikit-Learn, Keras and TensorFlow]] - Jupyter

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       6f30d2b6-b1eb-413a-b181-de434d35fc69
-:mtime:    20240130203222
+:mtime:    20240901100624 20240130203222
 :ctime:    20240130203222
 :END:
 #+TITLE: Git Usage
@@ -86,9 +86,9 @@ vignettes/*.pdf
 #+end_src
 
 ** Moving Files
-You might rename a file and want delete the original, how to do this in Git? The solution is to ~mv~ your file just as
-you would for a normal.
-file.
+
+You might rename a file and want to delete the original, how to do this in Git? The solution is to ~mv~ your file just as
+you would for a normal file.
 
 #+begin_src sh
 git mv file1.txt file2.txt
