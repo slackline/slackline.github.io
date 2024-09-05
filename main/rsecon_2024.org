@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c00f53ba-9794-4dd1-9119-6af407b3524c
-:mtime:    20240905110219 20240905093702 20240904170454 20240904150848 20240904120556 20240904101240 20240904091239 20240903161039 20240903150914 20240903132437 20240903113628 20240903103338 20240903092745
+:mtime:    20240905141225 20240905121429 20240905110219 20240905093702 20240904170454 20240904150848 20240904120556 20240904101240 20240904091239 20240903161039 20240903150914 20240903132437 20240903113628 20240903103338 20240903092745
 :ctime:    20240903092745
 :END:
 #+TITLE: RSE Con 2024
@@ -717,7 +717,6 @@ Make doing it easy
 + [[https://britishgeologicalsurvey.github.io/etlhelper/][ETL Helper]] helps with moving data between databases.
   + See [[https://volcan01010.github.io/RSECon24/index.html#/3/10][examples]].
 
-
 * Day 3
 
 ** RSE Training and Professional Development (Birds of a Feather)
@@ -749,9 +748,60 @@ Make doing it easy
   Framework]]
 + [[https://staffeng.com/][Stories of reaching Staff-plus engineering roles - StaffEng | StaffEng]]
 
+** RSECon24 R Hackathon
+
++ [[https://docs.google.com/presentation/d/172INsWaNi9SYBO95TZAWIbumnI8j8GQxSdYLKDoALt4/edit#slide=id.p][Slides]]
++ [[https://contributor.r-project.org/][R Contributor Site]]
++ [[https://github.com/r-devel/r-dev-day/issues][RSECon24 issues]]
+
+*** [[https://github.com/r-devel/r-dev-day/issues/61][R Dev Container: improve formating, sectioning, etc in general edit of docs · Issue #61 · r-devel/r-dev-day]]
+
+Address [[https://github.com/r-devel/r-dev-env/issues/191][Improve formating, sectioning, etc in general edit of docs · Issue #191 · r-devel/r-dev-env]]
+
++ Discussed applying pre-comit hook for markdownlint-cli2 with Heather Turner who suggested making a separate issue for
+  this (see [[https://github.com/r-devel/r-dev-env/issues/194][194]] and [[https://github.com/r-devel/r-dev-day/issues/65][#65]]).
++ Fork made, config files added and automated fixes committed.
+**** MD013 line-length....
++ [X]  ~CODE_OF_CONDUCT.md~
++ [X] ~CONTRIBUTING.md~
++ [X] ~docs/container_setup/github_codespace/codespacestartstop.md~
++ [X] ~docs/container_setup/github_codespace/creating_codespace.md~
++ [X] ~docs/container_setup/github_codespace/live_share.md~
++ [X] ~docs/container_setup/gitpod_workspace/live_share.md~
++ [X] ~docs/container_setup/gitpod_workspace/workspacestart.md~
++ [X] ~docs/container_setup/gitpod_workspace/workspacestop_and_restart.md~
++ [X] ~docs/container_setup/index.md~
++ [X] ~docs/container_setup/local_setup/localsetup.md~
++ [X] ~docs/contributor_guide/contributing_to_docs.md~
++ [X] ~docs/index.md~
++ [X] ~docs/troubleshoot.md~
++ [X] ~docs/tutorials/building_r.md~
++ [X] ~docs/tutorials/contribution_workflow.md~
++ [X] ~docs/tutorials/multi_r_compilation.md~
++ [X] ~docs/tutorials/patch_update.md~
++ [X] ~docs/tutorials/running_r.md~
++ [X] ~docs/tutorials/svn_help.md~
++ [X] ~docs/tutorials/update_source.md~
++ [X] ~.github/ISSUE_TEMPLATE/release-new-version-of-devcontainer.md~
++ [X] ~.github/README.md~
++ [X] ~INDEX.md~
++ [X] ~NEWS.md~
+**** MD040 fenced-code-language
++ [X] ~docs/container_setup/local_setup/localsetup.md~
++ [X] ~docs/contributor_guide/contributing_to_docs.md~
++ [X] ~docs/troubleshoot.md~
++ [X] ~docs/tutorials/building_r.md~
++ [X] ~docs/tutorials/contribution_workflow.md~
++ [X] ~docs/tutorials/multi_r_compilation.md~
++ [X] ~docs/tutorials/svn_help.md~
+**** MD046 code-block-style
++ [X] ~docs/tutorials/building_r.md~
++ [X] ~docs/tutorials/multi_r_compilation.md~
 * Miscellaneous Links
 
 + [[https://www.jetify.com/devbox/][Devbox: Portable, Isolated Dev Environments]]
 + [[https://airqualitystripes.info/][Air Quality Stripes]]
 + [[https://github.com/UCL-ARC/][UCL Centre for Advanced Research Computing]]
 + [[https://github.com/TomMelt/mdb][TomMelt/mdb: mpi debugger]]
++ [[https://vale.sh/][Vale - A linter for prose]]
++ [[https://github.com/marketplace/actions/debugging-with-tmate][Debugging with tmate · Actions · GitHub Marketplace]]
