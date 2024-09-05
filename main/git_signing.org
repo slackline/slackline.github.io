@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       beef0eda-374a-4ea0-9894-967850fbe0ce
-:mtime:    20240315230653
+:mtime:    20240905200019 20240315230653
 :ctime:    20240315230653
 :END:
 #+TITLE: Git Signing
@@ -54,3 +54,4 @@ ${KEYCHAIN} --agents gpg nshephard@protonmail.com
 * Links
 
 + [[https://withblue.ink/2020/05/17/how-and-why-to-sign-git-commits.html][How (and why) to sign Git commits | With Blue Ink]]
++ [[https://rollen.io/blog/resigning-git-commits/][Re-signing (old) git commits]]
