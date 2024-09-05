@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       36b4612a-63df-4858-afb1-f35d4f44dba5
+:mtime:    20240901100226
+:ctime:    20240901100226
+:END:
+#+TITLE: Git Workflows
+#+FILETAGS: :git:dev:workflows:
+
+
+* Links
+
++ [[https://www.git-tower.com/blog/stacked-prs/][Understanding the Stacked Pull Requests Workflow | Tower Blog]]

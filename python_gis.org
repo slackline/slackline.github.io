@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       0712c10b-f242-4507-9947-254aebb67a35
+:mtime:    20240901212804
+:ctime:    20240901212804
+:END:
+#+TITLE: Python GIS
+#+FILETAGS: :python:gis:mapping:
+
+* Links
+
++ [[https://geog-312.gishub.org/index.html][Introduction to GIS Programming]]

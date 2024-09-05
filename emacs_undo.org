@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       2639a2f5-f7c9-44ac-a62b-99962ac6cdd1
+:mtime:    20240828121022
+:ctime:    20240828121022
+:END:
+#+TITLE: Emacs Undo
+#+DATE: [2024-08-28 Wed 12:11]
+#+FILETAGS: :emacs:programming:elisp:lsp:undo:
+
+* Links
+
++ [[https://www.reddit.com/r/emacs/comments/6yzwic/how_emacs_undo_works/][How Emacs undo works : r/emacs]]
