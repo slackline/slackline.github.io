@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c00f53ba-9794-4dd1-9119-6af407b3524c
-:mtime:    20240905093702 20240904170454 20240904150848 20240904120556 20240904101240 20240904091239 20240903161039 20240903150914 20240903132437 20240903113628 20240903103338 20240903092745
+:mtime:    20240905110219 20240905093702 20240904170454 20240904150848 20240904120556 20240904101240 20240904091239 20240903161039 20240903150914 20240903132437 20240903113628 20240903103338 20240903092745
 :ctime:    20240903092745
 :END:
 #+TITLE: RSE Con 2024
@@ -733,8 +733,25 @@ Make doing it easy
 + Applying for joint funding to support training activities
 + Explore priorities around training needs and define a roadmap of activities
 
-***
+
+*** Breakout 1
+[[https://padlet.com/astrodimitrios/breakout-link/BbjnqxrDJmxn493Q-oO6VvPqAMNrObrwD][Padlet]]
+
++ Arena Fellowship
++ UCL have excellent resources on what educational activities and evidence can be made and undertaken to contribute to
+  career progression which will be shared.
+
+*** Links
+
++ [[https://github.com/RSE-leaders/evidence-bank][RSE-leaders/evidence-bank]]
++ [[https://engineering.freeagent.com/2023/07/20/five-principles-for-writing-an-engineering-progression-framework/][Five principles for writing an engineering progression framework – Grinding Gears]]
++ [[https://ddat-capability-framework.service.gov.uk/][Government Digital and Data Profession Capability Framework - Government Digital and Data Profession Capability
+  Framework]]
++ [[https://staffeng.com/][Stories of reaching Staff-plus engineering roles - StaffEng | StaffEng]]
+
 * Miscellaneous Links
 
 + [[https://www.jetify.com/devbox/][Devbox: Portable, Isolated Dev Environments]]
 + [[https://airqualitystripes.info/][Air Quality Stripes]]
++ [[https://github.com/UCL-ARC/][UCL Centre for Advanced Research Computing]]
++ [[https://github.com/TomMelt/mdb][TomMelt/mdb: mpi debugger]]
