@@ -1,0 +1,740 @@
+:PROPERTIES:
+:ID:       c00f53ba-9794-4dd1-9119-6af407b3524c
+:mtime:    20240905093702 20240904170454 20240904150848 20240904120556 20240904101240 20240904091239 20240903161039 20240903150914 20240903132437 20240903113628 20240903103338 20240903092745
+:ctime:    20240903092745
+:END:
+#+TITLE: RSE Con 2024
+#+FILETAGS: :rse:conference:
+
+* Links
+
++ [[https://rsecon24.society-rse.org/][RSECon24: Research software engineering conference]]
++ [[https://virtual.oxfordabstracts.com/#/event/49081/program][Schedule]]
++ [[https://app.canapii.com/e/rsecon24/home][Canapii]]
+
+* Day 1
+
+** Welcome
+
++ 10 principles of RSE from Neil last year (look these up).
+
+** Anne-Marie Imafidon - RSE Community : the transition to the teenage years?
+
++ [[https://stemettes.org][STEMETTES]] - supporting 15-25 year old women in STEM.
+
+Advice...
+
+1. Plan for your future but enjoy the present
+2. Be mindful of your online presence
+  + Find your way to be visible both Internally & Externally
+  + Recognise and use your influence
+  + Book to read [[https://www.hive.co.uk/Product/Caroline-Criado-Perez/Invisible-Women--Exposing-Data-Bias-in-a-World-Designed-for-Men/24936045][/Invisible Women/]], /Stay in Your Lane/, /Demanding More/.
+3. Learn from your mistakes.
+  + Embrace the experimentation of the 'awkward' phase - Build, Measure, Learn/Iterate
+  + Track feedback, measure your impact and Iterate a Theory of Change.
+4. Respect yourself and others.
+  + Celebrate difference internally, conforming is not the destination.
+  + Angus Maguire Interaction Institute for Social Change - [[https://institutionaldiversityblog.com/wp-content/uploads/2023/11/Equality-Equity-Reality-Liberation_Artist-Angus-Maguire.jpg][Equality, equity, reality, liberation]]
+  + [[https://yestem.org][Yestem.org]]
+  + [[https://www.ifow.org/][Institute for the Future of Work]]
+5. Build resilience
+  + Who has a stake in your success?
+  + Have a growth mindset - magic happens outside of your comfort zone.
+  + Strength in numbers and *alumni*.
+
+** Muzlifah Haniffa — The role of RSE in accelerating clinical translation of biomedical research
+
++ DNA sequencing was a transformative technology, complete the Human Genome Project in 2003 and variation is in this is
+  what underlies many diseases.
++ Gene expression within single cells allowed single cell genomics amd multi-omic profiling of proteins (m)RNA epigenome
+  and so forth.
++ Resolution revolution allowed the profiling of these /in-istu/
++ All this information Li, Horsfall et al. Nature Methods 2024
++ Cell Atlas Technologies - [[htts://humancellatlas.org/join-hca][The Human Cell Atlas]]
++ Atlas allows investigation of disease.
++ Exceptional amount of data and a useful resource but need to extract knowledge and meaning.
++ Sungnal 2020 - allows profiling of cells that had receptors for SARS-CoV-2 to bind and enter the cells/body, not
+  just the oral system but also cornea and conjunctiva.
++ Look at gene expression for disease profiling, e.g. blood clotting.
++ Look at drug and cell type interactions, identifying where drugs are absorbed.
++ Can grow cells.
++ Hiddent Opportunity - Visible data and sharing of raw data files, need computing infrastructure along with data
+  analysis and coding skills.
++ Hidden Insights are currently locked - need global equity, intuitive and accessible , interactive visualisation. Need
+  Internet, computer/smartphone to democratise data. This accelerates clinical translation
++ RSE sits in between bioinformatics and data generation and helps make data access FAIR and equitable. [[https://www.nature.com/articles/s41591-023-02353-0][Horsfall et al
+  Nature Medicine 2023]]
++ [[https://rse.ncldata.dev][Mark Turner]]
++ [[https://haniffalab.com/][@HaniffaLab]] - Training (coding, tools, documentation guides), Pipelines (streamline analysis and reproducibility), Web
+  Portals (key)
++ WebAtlas is an easy way of working with this and integrates with DECIPHER a database of clinical disorders
+  [[https://CellAtlas.io][CellAtlas.io]]
++ Build on existing infrastructure (EMBI, BioConductor etc.)
+
+** Robert Chisholm - Performant Python Patterns: Small changes to speed up your Python code
+
++ Many researchers write code but don't have the technical and formal training.
+
++ Poor performance matters
+  + Reduces productivity (time spent waiting
+  + Increased Energy Usage
+  + Reduces Availability (huggin resources)
++ Profiling and optimisation should be inexpensive
++ Performance should be reasonable
++ Should be time consuming to catch the big stuff
++ Profile a reduced typical workload
++ Do the results match your assumptions?
+  + If not we learn.
+
+*** Interactive Session
+**** Logical ~in~ list
++ Rather than looping over to test whether something is in a list use ~in~ it offers a x2 speed up
+
+**** Lists
++ List comprehensino is faster (x2.26) than preallocation to a list/array and appending is by far the slowest.
+
+**** Uniques
+
++ Sets are incredibly useful
++ Iterate through a list
+**** Tuples
+
++ Tuples can be a lot faster than lists.
+
+**** Scope
++ Python has four levels of scope, local, enclosing, global and built-in.
++ When writing classes not everything needs to be a ~self~ as this adds overhead to looking up.
+
+**** NumPy
+
++ Arrays are a lot faster.
++ Where possible pass in arrays, not lists to NumPy functions, it will do the conversion on the fly, but that means you
+  have to set things up in advance.
++ Use ~numpy.dot()~ when multiplying arrays, backed by BLAS/LAPACK and may benefit from auto-parallelisation on HPC.
++ Pandas columns are typically NumPy arrays.
++ If vectorisation isn't possible then conversion to dictionaries can be a lot faster.
+
+**** Numba
+
++ If all else fails then consider adding Numba to your code base.
+
+**** Python
+
++ Keep Python up-to-date there are continual improvements 3.10 > 3.11 25% speed up.
+
+Question - how do we encourage colleagues and researchers to keep up-to-date?
+
+High Performance Python 2nd Edition
+
+
+** Prasad Sutar - OpenGHG
+
++ Multiple sensort networks measuring various gases around the country and internationally, provides the data in
+  multiple formats.
++ Can it be shared? What is the licensing?
++ [[https://openghg.github.io/decc_dashboard/][DECC Network Dashboard]]
++ Data often shared originally via zip files/Dropbox
++ OpenGHG allows interacting with the multiple networks and different data formats from each site.
++ Data is wrangled and converted to internal format which can be stored as netcdf/hd5/excel/csv
+
+*** Data Objects
++ Serve as a foundation for detailed analysis and visualisation.
++ Stored in the form of data sources.
++ Conduct Forward Analysis on the greenhouse gas emissions.
++ Easy to add custom data processing modules
++ Compare surface, mobile, aircraft and satellite data.
++ Interact with multiple stores at once.
+
+*** Data Sources
+
++ Data has three dimensions, lat, lon and date/time.
++ Users can query by site and gas type (species) and inlet.
+
+*** Zarr Backend
+
++ Allows chunking of data across multiplee dimensions and controls the maximum amount of memory used to store the data,
+  reduced memory usage by 99.93%!!!
++ [[https://zarr.dev/][Zarr]]
+
+*** ObsPacks
+
++ Standardised data output.s
+
+*** Greenhouse Gas Emissions Measurement and Modelling Advancement (GEMMA)
+
+*** Principles in Focus
+
++ responsible
++ FAIR
++ Open
+
+*** WIP
+
++ Allow more labelling of data sources by users
++ Moving config file setup to YAML
++ Aiming for expandability
++ https://openghg.org / https://github.com/openghg
+
+
+** Abhishek Dasgupta - Advanced Python Testing - mocking, property based testing, snapshot testing
+
+[[https://github.com/abhidg/advanced-python-testing][abhidg/advanced-python-testing]] code and slides from the talk
+
+*** Mocking
+
++ Test the code without the underlying code being run.
++ Useful when testing the actual interface is...
+  + time consuming
+  + requites network access
+  + not possible in an automated way
++ *Pros* : reproducibility, easy to setup.
++ *Cons* : hidden behvaiour isn't exposed
++ Alternatives : use docker to setup the infrastructure
+
+**** ~unittest.mock~
+
++ Built-int
++ Mock return values of your functions.
++ Assert the function called with certain values returns the mocked value.
++ Raise exceptions through side-effects.
+
+#+begin_src python
+f
+#+end_src
+)
+*** Property Based Testing
+
++ Checks that a particular property is satisfied by the code.
++ Similar to fuzzing which tests a system with random inputs.
++ Normally you have parameterised based tests.
++ Cons of example based testing is not being exhaustive enough.
++ Often miss edge cases.
++ Applications : test input sanitisation, encode/decode round trips.
++ Use the [[https://hypothesis.readthedocs.io/en/latest/][hypothesis]] and use the ~@given()~ decorator to pass in ~hypothesis.strategies~ such as ~floats~ and ~integers~
+  and these can be combined to build more complex examples.
++ Use ~try: except: hypothesis.reject()~ to capture errors that are raised when invalid values are given.
+
+from hypothesis import given
+from hypothesis.strategies import float, integers
+
+*** Snapshot Testing
+
++ Snapshots output of a function or process.
++ Useful for regression testing and data transformationcs
++ Avoids writing to disk, reading and testing that ist is the same.
++ Use the [[https://syrupy-project.github.io/syrupy/][~syrupy~]] library for this.
+
+[[https://pytest-mock.readthedocs.io/en/latest/index.html][pytest-mock documentation]]
+
+** Nicholas Tierney - A gentle guide to using the ~{targets}~ package for analytic pipelines
+
++ [[https://njtierney.github.io/gentle-intro-targets/#/title-slide][A gentle guide to using the {targets} package for analytic pipelines]]
++ [[https://github.com/njtierney/gentle-intro-targets][njtierney/gentle-intro-targets]]
+
+*** Motivation
+
++ Data analysis is interactive and messu.
++ How to know if it is up-to-date? Better-re-run...
++ Months later, how did you do things? Better-re-run...
++ Thinking about data analysis deserves inherent structure.
++ Always collaborating with your future self.
++ ~{targets}~ is a way to manage complexity.
++ It's also a change in mindset.
+
+*** Walk-through
+
++ Uses the [[https://allisonhorst.github.io/palmerpenguins/][palmerpenguins R data package • palmerpenguins]]
++ Build a logistic regression model.
++ [[https://github.com/MilesMcBain/fnmate][MilesMcBain/fnmate: A function definition generator.]] useful for defining function templates
++ By writing a template with functions you setup in advance the pipeline and think about what you are going to do it
+  helps plan out intent.
+
+*** Takeaways
+
++ No problem is too small for ~{targets}~
++ Use ~{tflow}~ package to setup a project to use ~{targets}~.
+
+** Effortlessly creating Python packages with good practices
+
+[[https://research-software-directory.org/software/nlesc-python-template][Netherlands eScience Center Python Template | Research Software Directory]]
+[[https://hackmd.io/@pBkWTvQwSa6d52OQUwKE6g/BktUdXQ20][Feedback for RSECon24 workshop: Effortlessly creating Python packages with good practices]]
+
+** Carlos Martinez-Ortiz - Good Cookies are made with good cookie cutters: Use research software templates to kick-start your research software
+
++ New project == new repository.
++ Good practices are important...
+  + Version control
+  + License
+  + CITATION.cff
+  + Documentation
+  + Testing
+  + CI
+  + Code of Conduct
+  + Contributing guidelines
+  + Styling
++ There is a lot of boiler plate code to set up for a new project, use a cookiecutter to create templates for software
+  projects.
++ [[https://github.com/NLeSC/python-template][NLeSC/python-template]] didn't quite solve all problems...
+  + Other languages
+  + Not suitable for all projects had some smaller projects which didn't want to use templates
+  + Low adoption rates.
+  + [[https://github.com/abelsiqueira/BestieTemplate.jl][abelsiqueira/BestieTemplate.jl: Template for Julia Programming Language packages using the copier engine.]]
+  + [[https://usethis.r-lib.org/][Automate Package and Project Setup • usethis]] is useful for setting up R packages.
++ Ideally we should have a standardised template.
+  + Modular
+  + Scalable
+  + Community ownership
+  + Connected to software management plans
+
+
+** Tobias Ribizel - Building an efficient Continuous Integration workflow on HPC systems
+
+** Poster Lightning Talks
+
++ [[https://everse.software][EVERSE]]
++ [[https://www.researchobject.org/ro-crate/][Research Object Crate (RO-Crate)]] - metadata for research objects
++ Collaborative Lesson Development Training for RSEs (Toby Hodges)
+
+** Thomas Hawes - An Introduction to Test Driven Development
+
++ [[https://github.com/UniExeterRSE/rsecon24-tdd-workshop][UniExeterRSE/rsecon24-tdd-workshop: Materials to support the workshop, An Introduction to Test-Driven Development, at
+  RSECon 2024]]
++ Tony Hawes has been practising TDD for 2-4 years.
+
+Agenda...
+
++ Basic TDD Workflow
++ Live-code and example and exercise
++ Closing thoughts; benefits and challenges
+
+*** What is TDD?
++ Interleaves
+  1. Writing tests
+  2. Writing production code
++ Writing tests provides feedback on design.
++ Iterate over the Red/Green/Refactor cycle
+  1. Write a failing test.
+  2. Make the test pass (minimal amount of code to get test pass on first instance).
+  3. Refactor to clean design.
+
+Sensible to write a requirement/specifiction (or GitHub issue!) that defines the requirements/specification for the code
+and in turn guides the tests that are being written.
+
++ Need to think about the format in which things are being returned.
++ Don't let new ideas about tests interrupt your current work flow, instead note it and do it later.
+
+Proponents claim Test Driven Development it
+
+1. Results in feweer bugs
+2. Leads to improved design (easier to maintain/change)
+3. Is more productive in the long run due to 1. and 2.
+
+Research on these claims is inconclusive though.
+
++ Splits "working code" from "clean code"
++ Establishes a rhythm and brings focus
++ API and design merge, no need to know it all up-front.
+
+*** Challenges
++ Not suitable in all cases, e.g.
+  + Difficult/impossible to write tests (e.g. often UIs)
+  + Slow feedback from tests
+  + Prototyping
++ Steep learning curve
++ How long before it pays off (if at all)?
+
+*** Further Reading
+
+The Pragmatic Programmer
+Clean Code
+
+*** Questions
+
++ What about when requirements/specifications are poorly specified up-front?
++ Is it not good practice to write clean code to start with?
+
+* Day 2
+
+** Manjinder Sandhu - Building Stronger Communities in Research Software
+
++ Attitude and motivation (enjoyment) are more important than being "smart" or "clever".
++ Being fundamentally interested in what you do is very important.
++ Academia you have an idea you do the research and publish it, but there is often a clear, hard outcome of the work.
+
+*** On Genomics
+
++ Many years ago we had a lot of genetic associations but as we charactersed the genome better we could understand
+  humans at greater scale (i.e. greater capturing of the variation from larger sample sizes).
++ Started working very early on in a collaborative way with groups working together.
++ Statistical challenge of multiple testing required larger samples sizes and replication.
++ Still need to validate but scaling is still on-going across academia as well as in pharamceutical industry.
++ Need frameworks for handling million and millions of data points on millions of people, this presents challenges on
+  how to handle and manage the large amount of data.
++ How to capitalise on ability to capitalise on the discovery this affords. It was often very biased towards western
+  society.
++ Population genetic structure through bottlenecks and expansion and genetic drift afford the opportunity to investigate
+  in different populations.
++ Characterise populations better, 1000 genomes project. Led him to population history.
++ Build resources that show the genetic structure of populations and how they relate to each other.
++ Characterise diverse populations, look at divergence, admixture and population history. [[https://academic.oup.com/genetics/article/202/4/1485/5930214?login=true][F-statistics for population
+  history]].
++ Build research resources for communities worked with institutes, e.g. in Uganda building collaborative networks for
+  research software engineering and infrastructure in Uganda, funded by Sanger Centre. Built in UK, then shipped!!!
++ Data centre built, had networking put into the infrastructure that was being rebuilt at that time.
++ Centre is now self-supported within the country.
++ [[https://pubmed.ncbi.nlm.nih.gov/36388767/][Uganda Genome Resource]]
++ [[https://www.nature.com/articles/s41576-019-0194-3][Insights from Ugandan genomes]]
++ [[https://www.nature.com/articles/s41586-023-06370-4][Africa-specific human genetic variation near CHD1L associates with HIV-1 load | Nature]] increased expression of this
+  gene dampens the ability of the virus to incorporate into the genome.
++ Built a resource, shared with a community and emerging from this was the ability to develop new tools for
+  understanding population histories.
+
+*** Democratising Technology for Research
+
++ Make computing environments flexible.
++ Trusted Research Environments allow large scale data sharing across regions.
++ Align data governance including research compliance, ethics approvals and regulatry and level requirements.
++ Secure, scalable and compliant trusted research environments.
++ Ongoing development of research software including machine/deep learning and "AI".
++ Traditional statistical models have often proved as effective as newer fancier "machine learning" solutions.
+
+** Emerging Voices Plenary
+
+*** Deborah Udoh
+
++ Universities strikes affected graduation timelines, this changed Deborahs life, YouTube and Stackoverflow accessed via
+  her sisters computer. Started doing web-development.
++ Started contributing to JupyterHub, Layer5, publiclab.org, Outrecahy and got a job with [[https://we-are-ols.org/][OLS]].
++ Registered nurse and soon to be a Midwife and Public Health Nurse.
++ Also Carpentries Instructor.
++ Don't see...
+  + Lower class large family.
+  + Societal expectations
+  + Patriarchy
+  + Internet Access
+  + Power cuts
+  + Self-doubt
++ Pursuing psychology and research software engineering and combine the two.
++ Prioritising more young women from underrepresented backgrounds to enter the tech field, developing Research 101 -
++ https://npdebs.github.io/Pre-seeds-Program
+
+*** Jack Atkinson
+
++ Research application motivates him.
++ Got a title of "careful coder", why was everyone writing their own code to solve their solutions, better software and
+  sharing there of would allow for better research.
++ Can RSEs do research? Yes, they can, most have a background of research.
++ Should RSEs do research? Not just working on others problems but using domain and software knowledge to solve
+  problems. Only with an understanding of how the software works can researchers often be the most effective,
+  understanding and making links that others may not see.
++ Having a presence helps communicate RSE concepts to the intended audience, e.g. domain specific conferences.
++ Not advocating for isolation, reason here today is because of other people.
++ RSE skills self-taught, didn't know what he didn't know, the people he worked with shared their knowledge and
+  experience and support when having problems.
++ *How can RSE groups reach out and include those more isolated RSEs within their local institution?*
+
+*** Publication System Could be Improved
+
++ Academic research is still communicated via PDFs which is just digital paper.
++ Typically take a snapshot of code/website, put it on Zenodo and get a DOI.
++ Papers should be snapshots of code, and published results can and should change.
++ Continuous Integration of papers with their code, go from a paper to the code. Link directly data processing area to
+  the functions/code, the same with the statistical analysis.
+
+** Sponsors Lightning Talks
+
++ [[https://www.turing.ac.uk/][The Alan Turing Institute]] will be hiring across positions, including senior.
++ [[https://www.hpc.cam.ac.uk/d-w-n][D A W N]]
++ [[https://wellcome.org/who-we-are/teams/data-science-and-health-team][Data for Science and Health Team | Who We Are | Wellcome]] - increasingly providing more funding specifically for
+  software across career levels. Grace, Alison and Megan (in charge of Open Schemes for RSEs).
++ Microsoft see RSEs as driving quality research outputs, a key education focus.
++ Newcastle RSE are hiring
++ [[https://www.epcc.ed.ac.uk/][Delivering UK supercomputing and data science excellence to the world | EPCC]] - collaboration with RSE is essential,
+  national service provision. Call out for GPU funding, anyone can apply.
++ [[https://www.ukri.org/what-we-do/creating-world-class-research-and-innovation-infrastructure/digital-research-infrastructure/][Digital research infrastructure – UKRI]] - supports communities by connecting them with the resources they need. See
+  also CoSeC (Computational Science Centre for Research Communities).
++ [[https://www.software.ac.uk/][Home | Software Sustainability Institute]]
+  + HiddenREF deadline <2024-09-13 Fri>
+  + Fellowship deadline <2024-10-07 Mon>
+  + Research Software Skills for Technicians [2024-11-18 Mon] to [2024-11-29 Fri]
++ [[https://www.ph.ed.ac.uk][University of Edinburgh]]
++ Github Education aiming to connect and support with researchers.
++ [[https://dreamingspires.dev][Dreaming Spires]] provide small and large scale software solutions working with researchers and RSEs. Focus on deploying
+  high-impact research ideas. (Mark Todd CEO).
++ [[https://hpc-sig.org.uk/][HPC SIG]]
+
+** Ann Gledson and Adrian Harwood - Agile methods for RSEs : A formula for scrum-driven software development in research?
+
+[[https://www.scrum.org/resources/scrum-guide][The Scrum Guide]]
+
++ Wanted a consistent method of managing "customer" relations, Adrian had been using Agile and SCRUM and wanted to roll
+  it out to the rest of the RSE team.
+
+*** Agile and Srum Overview
+
++ Methodology for project/product management built on a set of values. The Agile manigesto defines the values...
+  + Customer collaboration over contact negitiation
+  + Responding to change over following a plan
+  + Individuals and interactions over processes and tools
+  + Working software over comprehensive documentation
++ Many implementations of the manifesto and its values.
+  + Scrum
+  + Extreme Programming
+
+*** Waterfall
++ Requirements > Panning/Design > Implementation > Testing > Feedback
++ Very slow, things change and move fast (both requirements and solutions).
++ Original requirements are no longer valid at the end of the project.
++ Process is eecuted once for the entire project.
+
+*** Scrum
+
++ Iterative process in short sprints where feedback is constant and modifies the requirements (closes loop in the
+  above).
++ Stakeholders have a vestered interest in product, researches and end users do puser acceptance testing.
++ Product owner is the mediator between stakeholder and development team
++ Development Team 2-9 people, cross-functional domain expertise, self-organising and determine together the best way yo
+  complete the work.
++ Scrum Master coordinates between those involved ensuring Scrum methodology is followed.
++ Product Backlog is a list of all work to be done to deliver the product. Managed by the Prodct Onwer.
+  + New Features, enhancements and bug fixes.
+  + Can be written as User Stories.
+  + A good issue has a clear definition of done.
++ Living document items can be added, removed, r-ordered and evolve.
++ Sprint Backlog is items to be worked on in the next sprint as agreed by the Development Team.
+  + Product Onwer can not add to it, its solely managed by the development team.
+  + Product Baclkog is broken down into smaller items then moved onto the Sprint Backlog.
+
+*** Product to Sprint Backlog
+
++ Sprint planning is chaired by the Scrum Master, get agreed highest-priority items to define sprint goals.
++ Developers then populate the sprint back log by assigning story points which define how much work/value a task has.
+
+*** Daily Stand-Up
+
++ Attended by all scrum team members 2-4 minutes each, what you did the day before, what you plan to do and issues
+
+*** Sprint Review
+
++ Attended by Scrum Team and Stakeholders, chaired by Product Owner.
++ Demo showcasing achievements of the sprint.
++ Opportunity for questions to be raised
++ Does the product meet the requirements.
++ Refine for the next sprint.
++ Sprint Retrospectives review the process and NOT the work.
+
+*** Adaptation of Scrum for RSE
+
++ Rarely know what the outcome will be in research, evolution fo requirements and priorities and need a process
+  that deals with this environment.
++ Fail fast Regular feedback miimises risk.
++ Small teams often cross-functional
++ Focus on a sunset of tasks for complex tasks.
++ Clear roles and expectations
++ Clear history, progress and plans always visible to thos involved in the project.
++ Eliminates the "bus factor" (if tools like GitHub projects are used.)
+
+See picture of differences between Scrum and RSE
+
++ Product Owner
++ Scrum Master
++ RSEs + Postdocs + Phds = Development Team
++ PRoduct Backlog
++ Sprint Backlog
++ Kanban
++ Sprint Planning
++ Stand Ups (not daily)
++ SPrint Review
+
+See picture of grid based on size of RSEs involved.
+
++ Use GitHub Projects, they are ready to run configuration.
++ LIves side by side  with the code.
++ Most Scrum functionality is available (or configurable).
+
+*** Measures and Metrics
+
+**** Senior RSEs
++ Felt it improved efficiency.
++ Allowed project owners to get involved and add issues to Kanban.
++ Fosters communication.
++ Some pushed back and felt it was an overhead.
+**** RSEs
++ Navigated ambiguity and managed stakeholder expectations
++ Common language.
++ Weren't derailed by a "surprise" change in requirements, time boxing useful.
+**** Customers
++ Most asked thought it was excellent, felt that completing sprints was an achievement.
++ Transparency of issue tracking.
++ Loved the ability to dynamically adjust priorities (leader got really involved).
+
+**** Summary
++ Complex things are easier to handle and easier to manage changes in requirements.
++ Commits reduced across the RSE team, but the number of issues increased as did the number of pull requests (people are
+  doing work in smaller chunks).
++ Senior tended to make more issues.
+
+*** Key Points
++ Rse service requiresw a consistent yet fleixble management approach
+Agile methodologies embrace continuous change
+Make doing it easy
+
+** Navigating the Legal Landscape : From Research to Commercial Software
+
+*** Data Protection laws and Compliance in Computer Software
+
++ UK GDPR
++ Ignoring it can lead to disruption to important activities, reputational damage potential monetary loss. Want
+  software to be used, data is potentially valuable.
++ Organisational responsibility.
+
++ Seven GDPR Principles...
+  + Lawfulness, Fairness, Transparency
+  + Purpose limitation
+  + Data minimisation
+  + Accuracy
+  + Storage limitation
+  + Integrity and confidentiality (security)
+  + Accountability
++ Security
+  + Dependabot
+  + Container Scanners which report on Common Vulnerabilities and Exposures
++ Cookies
+  + Use institutions template.
++ Data leakage
+  + Don't forget logs (e.g. log4j vulnerability)
+  + Monitoring tools such as Sentry, Prometheus, Loki
+  + Data transfers between jurisdictions
+  + Code repositories
+  + Backups need careful checking too, especially if going off site, encrypt.
++ Institutions
+  + Data Protection Offiers
+  + Information Security team
+  + Head of Deparment
+  + Data Management Plan should have details of how to handle this.
+  + Freedom of Information is also something to consider.
+
+*** Personal Identifying Information
+
++ Any information connected to a speific individual that can be used to uncover that individuals identity.
++ Sharing PII can be valuable to both legal and illegal actors.
++ Examples
+  + Social Security / National Insurance Number
+  + Drivers license/ passport
+  + Biometric data on phones
+  + Financial information
+  + Postal address, date of birth, gender
+  + Genetic Information
+  + Medical records via accession number
+  + Email address
+**** Handling
+
++ Users of system should use authentication services such as Auth0m ORCID, SSO)
++ Anonymise the data
++ Be careful about PII getting into logs, monitoring services.
+
+**** Anonymising Data
++ Mapping file to replace IDs with UUIDs and keep the mapping file secure and isolated (e.g. encrypted)
++ Browser plugins to convert anonymised ID to PII ID if required, does this in HTML in the ed-suers browser.
+
+**** Useful
++ Explaining outliers
++ Follow up questions
++ Demographic Analysis
++ Longitudinal Studies
++ Linking data sets
++ Social and economic studies
++ Importance of PII is only going to increase need informed consent.
+
+*** Software Licenses and Intellectual Property
+
++ Always check license free and open...
+  + Public domain (creative Commons)
+  + Permissive (MIT Apache, MPL BSD)
+  + Copyleft (GPL AGPL)
+
++ AGPL is  a problem, if you make changes you have to distribute them.
++ MongoDB Server Side Public License caused problems when changes were made.
+
+**** Intellectual Property
++ "Intangible creations of the human intellect"
++ Can be complex and therefore takes time
++ Useful to have the support of a good tech transfer team
++ Have to complete an invention record to explain what you have done and who was involved.
+
+** RSE Competencies Toolkit
++ Started SSI Collaborations Workshop Hack Day in May 2023
++ Been lots of interest at events since.
++ *Motivation* It can be difficult for RSEs to understand what skills they need to succeed.
++ Help RSEs to measure skills, plan their professional development and understand training paths.
++ Lots of competencies frameworks out there but RSEs have quite specific requirements and needs so it needs to be
+  flexible which also allows the tool to be transferable to other domains.
++ Related work
+  + ds.RSE - [[https://arxiv.org/abs/2311.11457][Foundational Competencies and Responsibilities of a Research Software Engineer]]
+  + Turing - [[https://www.turing.ac.uk/research/research-projects/professionalising-traditional-and-infrastructure-research-roles-data][Professionalising traditional and infrastructure research roles in data science]]
+  + [[https://www.ukri.org/opportunity/ukri-digital-research-technical-professional-skills-networkplus/][UKRI Digital RTP Skills Network Plus]]
+  + Met Office Science Profession Skills Framework
+  + Netherlands eScience Role Descriptions
+
+*** Breakout 2 - User Sstories
+
++ [[https://hackmd.io/YbohNSbySU6EIKXddKAbpg][Breakout notes]]
+
+** John A Stevensons - SQLite for Scientists Everyone
+
+[[https://volcan01010.github.io/RSECon24/index.html][SQLite for Scientists/Everyone]]
+[[https://github.com/volcan01010/RSECon24][GItHub : SQLite for Scientists/Everyone]]
+
++ Databases store data
++ They do so in a structured manner to ensure data is consistent and easily retrievable.
++ Excel is not a database, it messes with your data without you knowing about it.
++ The most popular database in the world is [[https://www.sqlite.org/index.html][SQLite]] it provides a single standalone file to everything required for a
+  database.
++ It is designed to be a backend to other programmes
+
+|                  | SQLite | PostgreSQL |
+| SQL Language     | Yes    | Yes        |
+| Storage          | Local  | Network    |
+| Concurrent Edits | No     | Yes        |
+| JSON parsing     | Yes    | Yes        |
+| Enforced Types   | No     | Yes        |
+
++ You can put JSON objects in SQLite (and PostgreSQL!!!)
++ Will also store files (blobs) which is very handy.
++ [[https://sqlitebrowser.org/][DB Browser for SQLite]]
+
+*** Introduction to SQL
+
++ Structured Query Language around since the 70s has been a standard since the 80s
+
+*** Useful Tools
+
++ [[https://qgis.org/][Spatial without Compromise · QGIS Web Site]] which is a graphical front-end to SQL(ite) databases.
+  + Makes it very easy to create databases via a GUI with limitations on fields, e.g. matching RegEx.
+  + It understands relationships
++ [[https://datasette.io/][Datasette]] publishes data to the web where it can easily browsed without having to know any coding.
+  + Makes it very easy to combine datasets.
++ [[https://britishgeologicalsurvey.github.io/etlhelper/][ETL Helper]] helps with moving data between databases.
+  + See [[https://volcan01010.github.io/RSECon24/index.html#/3/10][examples]].
+
+
+* Day 3
+
+** RSE Training and Professional Development (Birds of a Feather)
+
++ [[https://padlet.com/astrodimitrios/rsecon-training-bof-nfd5hgvfkuc70434][Padlet]]
+
+*** Motivation
++ Unite training communties and people with common interest in training through SIG to work on
+  + Provision of computational training for reseachers and RSEs
+  + Lesson and curricula development
+  + Definition of skills, competencies and diverse progression pathways for RSEs to help track and manage their
+    profession development and career progression and knowledge within RSE groups.
++ Applying for joint funding to support training activities
++ Explore priorities around training needs and define a roadmap of activities
+
+***
+* Miscellaneous Links
+
++ [[https://www.jetify.com/devbox/][Devbox: Portable, Isolated Dev Environments]]
++ [[https://airqualitystripes.info/][Air Quality Stripes]]
