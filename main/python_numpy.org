@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d7b0fb90-d668-4e31-bc2d-305f6ee14fc9
-:mtime:    20240704163906 20240704153322 20240429121335 20240122164500 20231126083238 20231119210731 20230803212315 20230612165437 20230108213627 20230103103313 20220524211634
+:mtime:    20240909144021 20240704163906 20240704153322 20240429121335 20240122164500 20231126083238 20231119210731 20230803212315 20230612165437 20230108213627 20230103103313 20220524211634
 :ctime:    20220524211634
 :END:
 #+TITLE: Numpy
@@ -73,6 +73,36 @@ If you need to print all of an array and not have columns or rows truncated you 
   # More respectful of system capacity
   with np.printoptions(threshold=sys.maxsize):
       print(array)
+#+end_src
+
+** Coordinates to array
+
+Its easy to get the co-ordinates of features in a N-dimensional array using ~np.argwhere()~ to go the other way is a
+little trickier but possible.
+
+#+begin_src python
+import numpy as np
+import matplotlib.pyplot as plt
+
+box_coord =  np.array(
+                [
+                    [0, 0],
+                    [0, 1],
+                    [0, 2],
+                    [0, 3],
+                    [1, 3],
+                    [2, 3],
+                    [3, 3],
+                    [3, 2],
+                    [3, 1],
+                    [3, 0],
+                    [2, 0],
+                    [1, 0],
+                ]
+            ).astype(np.int32)
+box = np.zeros((np.max(box_coord[:,0]) + 1, np.max(box_coord[:, 1]) + 1))
+box[box_coord[:,0], box_coord[:,1]] = 1
+box
 #+end_src
 
 ** JSON Woes
