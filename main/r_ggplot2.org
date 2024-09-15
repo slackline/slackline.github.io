@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       fc6c0f69-4899-401e-bd6c-a36894c1542e
-:mtime:    20240121113117
+:mtime:    20240915151934 20240121113117
 :ctime:    20240121113117
 :END:
 #+TITLE: R ggplot2
@@ -18,3 +18,4 @@
 + [[https://posit-conf-2023.github.io/dataviz-storytelling/][PostiConf 2023 : Designing Data Visualisations to Successfully Tell a Story]]
 + [[https://posit-conf-2023.github.io/dataviz-ggplot2/][Engaging and Beautiful Data Visualisations with ggplot2]]
 + [[https://www.data-to-viz.com/][From Data to Viz : Find the graphic you need]]
++ [[https://medium.com/@amorimfranchi/raincloud-plots-for-clear-precise-and-efficient-data-communication-4c71d0a37c23][Raincloud plots for clear, precise and efficient data communication]]
