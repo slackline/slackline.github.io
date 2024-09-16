@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ddcfed69-2ba5-442a-99b4-eaa5c7a9fe40
-:mtime:    20230128144326 20230103103314 20230102213516
+:mtime:    20240916125108 20230128144326 20230103103314 20230102213516
 :ctime:    20230102213516
 :END:
 #+TITLE: Git Worktree
@@ -9,6 +9,10 @@
 
 Worktrees are a [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] feature that provide a method of working on multiple branches simultaneously and avoid the need to
 use ~git stash~ before switching.
+
+#+ATTR_HTML: :width 600px
+#+CAPTION: b0rk [[https://wizardzines.com/comics/git-worktree/][~git worktree~]]
+[[./img/git/git_worktree_julia_evans.png]]
 
 * Clone a bare repository
 
