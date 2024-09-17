@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       70e4fdce-e4f0-4702-95cd-2a6ad2f1c5c0
+:mtime:    20240917152608
+:ctime:    20240917152608
+:END:
+#+TITLE: Magit Diffing
+#+FILETAGS: :magit:git:diff:
+
+Diffing is easy, just hit ~d~ and to compare with any other branch ~r~ you'll get a buffer summarising all changes and
+then showing them, line-by-line and allowing you to fold the code.
+
+* Alternate Diff tools
+
+I like [[https://difftastic.wilfred.me.uk/][difftastic]] for diffing and its easy to configure with [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] but doesn't work out of the box with [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]]. Fortunately
+though someone with vastly more experience of [[id:708f5d99-6040-4306-a323-306d39ce45c3][Emacs Lisp]] than me has worked out how to get Magit to play with difftastic
+and shared it at [[https://tsdh.org/posts/2022-08-01-difftastic-diffing-with-magit.html][Difftastic diffing with Magit]].
+
+* Links
+
++ [[https://tsdh.org/posts/2022-08-01-difftastic-diffing-with-magit.html][Difftastic diffing with Magit]] ([[https://web.archive.org/web/20240908033120/https://tsdh.org/posts/2022-08-01-difftastic-diffing-with-magit.html][archive.org]])
