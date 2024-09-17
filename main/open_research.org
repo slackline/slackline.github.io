@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       0911a63f-4b82-4bf1-9235-f1e41e93d210
 :ROAM_ALIASES: "Open Research Overview"
-:mtime:    20240910123405 20240515164155
+:mtime:    20240912124356 20240910123405 20240515164155
 :ctime:    20240515164155
 :END:
 #+title: Open Research
@@ -48,6 +48,7 @@ to validate and contribute to the research.
 + [[https://carpentries.org/][The Carpentries]]
 + [[https://programminghistorian.org/][Programming Historian | Programming Historian]]
 + [[https://forrt.org/][FORRT - Framework for Open and Reproducible Research Training]]
++ [[https://opensciency.github.io/sprint-content/][OpenSciency Introductory Resources on Open Science]]
 
 ** Resources
 
