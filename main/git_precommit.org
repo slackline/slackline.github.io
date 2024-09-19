@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c76767c4-2a49-42f8-a323-a6d6105e0bce
-:mtime:    20231008074712 20230910194920 20230910183127
+:mtime:    20240919222900 20231008074712 20230910194920 20230910183127
 :ctime:    20230910183127
 :END:
 #+TITLE: Pre-commit
@@ -312,10 +312,14 @@ A non-exhaustive list of hooks that I use by language.
 :PROPERTIES:
 :CUSTOM_ID: links
 :END:
-- [[https://pre-commit.com/][Pre-commit]]
-- [[https://pre-commit.com/hooks.html][Supported hooks]]
-- [[https://github.com/marketplace/actions/pre-commit][GitHub Action]]
-- [[https://stackoverflow.com/collectives/gitlab/articles/71270196/how-to-use-pre-commit-to-automatically-correct-commits-and-merge-requests-with-g][GitLab CI]]
++ [[https://pre-commit.com/][Pre-commit]]
++ [[https://pre-commit.com/hooks.html][Supported hooks]]
++ [[https://github.com/marketplace/actions/pre-commit][GitHub Action]]
++ [[https://stackoverflow.com/collectives/gitlab/articles/71270196/how-to-use-pre-commit-to-automatically-correct-commits-and-merge-requests-with-g][GitLab CI]]
+
+** Misc
+
++ [[https://github.com/tox-dev/pre-commit-uv][tox-dev/pre-commit-uv]]
 
 ** Hooks
 
