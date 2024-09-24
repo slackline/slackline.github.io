@@ -36,6 +36,13 @@ that page, if not they take you to the projects site.
 + eix
 + equery
 
+** Sharing
+
++ [[https://github.com/magic-wormhole/magic-wormhole][Magic wormhole]]
++ rsync
++ SyncThing
++ Transmission
+
 ** Infrastructure
 
 + [[https://opentofu.org][OpenTofu]]
