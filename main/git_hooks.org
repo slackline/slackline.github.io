@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       98fb864e-8e55-47cb-bfe8-c002d9e3d435
-:mtime:    20240829233948 20240829153651 20240130204153
+:mtime:    20240923092512 20240829233948 20240829153651 20240130204153
 :ctime:    20240130204153
 :END:
 #+TITLE: Git Hooks
@@ -32,3 +32,9 @@ even given a talk to the Research Computing group at the University of Leeds.
 + [[https://ns-rse.github.io/pre-commit/#/title-slide][Slides]] ([[https://github.com/ns-rse/pre-commit][source]])
 
 That doesn't cover everything though so more notes are in the [[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] section and linked from there.
+
+* Links
+
+** Examples
+
++ [[https://btxx.org/posts/git-auto-deploy/][Build and Deploy Websites Automatically with Git]] using a ~post-receive~ hook, very neat.
