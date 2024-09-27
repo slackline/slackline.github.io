@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5
-:mtime:    20240916085950 20240829150248 20240825203610 20240807135153 20240805160240 20240804210618 20240716140526 20240714231345 20240706170213 20240701065359 20240626230330 20240615183601 20240530093111 20240514223948 20240329211826 20240310181610 20240203204843 20240122164607 20240120110521 20231231180655 20231218184621 20231206221404 20231104081218 20231023063845 20231013000730 20230924112611 20230907232738 20230803211138 20230722230042 20230721144339 20230720100255 20230705092829 20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
+:mtime:    20240927072528 20240916085950 20240829150248 20240825203610 20240807135153 20240805160240 20240804210618 20240716140526 20240714231345 20240706170213 20240701065359 20240626230330 20240615183601 20240530093111 20240514223948 20240329211826 20240310181610 20240203204843 20240122164607 20240120110521 20231231180655 20231218184621 20231206221404 20231104081218 20231023063845 20231013000730 20230924112611 20230907232738 20230803211138 20230722230042 20230721144339 20230720100255 20230705092829 20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
 :ctime:    20230304230340
 :END:
 #+TITLE: Artificial Intelligence
@@ -51,6 +51,7 @@ OpenAI"]].
 
 Historically the Turing Test has been held up, perhaps inappropriately, as the /de facto/ means of assessing AI. This
 has recently been called into question (see [[https://www.science.org/doi/10.1126/science.adq9356][The Turing Test and our shifting concetions of intelligence]])
+
 * Ethics and Morals
 
 ** Accountability
@@ -60,7 +61,7 @@ Problem With Counterfeit People - The Atlantic]].
 
 
 An excellent article by Meredith Whittaker on accountability of AI and "Big Tech" [[https://www.helmut-schmidt.de/aktuelles/detail/die-rede-der-zukunftspreistraegerin][Bundeskanzler-Helmut-Schmidt-Stiftung
-2024]]
+2024]].
 
 ** Moral Outsourcing
 
@@ -118,6 +119,7 @@ A thoughtful paper on [[https://www.authorea.com/doi/full/10.22541/au.169264350.
 + [[https://www.theguardian.com/commentisfree/article/2024/jul/27/harm-ai-artificial-intelligence-backlash-human-labour][Robots sacked, screenings shut down: a new movement of luddites is rising up against AI | Ed Newton-Rex | The Guardian]]
   ([[https://www.theguardian.com/technology/article/2024/aug/02/we-must-be-wary-of-the-power-of-ai][We must be wary of the power of AI | Letters]])
 + [[https://www.techpolicy.press/challenging-the-myths-of-generative-ai/][Challenging The Myths of Generative AI | TechPolicy.Press]]
++ [[https://www.noemamag.com/the-danger-of-superhuman-ai-is-not-what-you-think/][The Danger Of Superhuman AI Is Not What You Think - NOEMA]]
 
 ** Environmental Impact
 
@@ -139,6 +141,7 @@ A thoughtful paper on [[https://www.authorea.com/doi/full/10.22541/au.169264350.
 + [[https://www.theatlantic.com/technology/archive/2023/05/problem-counterfeit-people/674075/][The Problem With Counterfeit People - The Atlantic]]
 + [[https://www.nature.com/articles/d41586-023-02990-y][How to stop AI deepfakes from sinking society — and science]]
 + [[https://www.oreilly.com/radar/how-to-fix-ais-original-sin/][How to Fix “AI’s Original Sin” – O’Reilly]]
++ [[https://www.theguardian.com/news/article/2024/aug/08/no-god-in-the-machine-the-pitfalls-of-ai-worship][No god in the machine: the pitfalls of AI worship | Artificial intelligence (AI) | The Guardian]]
 
 ** Books
 
