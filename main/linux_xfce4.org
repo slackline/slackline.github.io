@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       63fa9747-24ef-40e2-a2ed-d6bd4133374f
-:mtime:    20240529091827 20240107103809
+:mtime:    20240929164147 20240529091827 20240107103809
 :ctime:    20240107103809
 :END:
 #+TITLE: Xfce4
@@ -10,7 +10,7 @@
 
 Enable dual pane mode by hitting ~F3~.
 
-This can apparently be set permanently using [[https://forum.endeavouros.com/t/thunar-splitview-permanently-set/40306][~xfconf-query~]]
+This can be set permanently using [[https://forum.endeavouros.com/t/thunar-splitview-permanently-set/40306][~xfconf-query~]]...
 
 #+begin_src sh
 xfconf-query -c thunar -p /misc-open-new-windows-in-split-view -n -t bool -s true
