@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       2c46e54a-d704-4e7e-bca3-d8c3e042ab43
-:mtime:    20240620095958 20240228094314 20231015172236
+:mtime:    20240930074837 20240620095958 20240228094314 20231015172236
 :ctime:    20231015172236
 :END:
 #+TITLE: Android
@@ -24,7 +24,7 @@ them, and root them and flash an alternative OS, typically LineageOS).
 + Samsung S4 GT-9505
 + Samsung S7 Edge SM-G935F
 + Google Nexus 7
-+ Motorolla G7 Plus
++ [[id:65c60c32-dcc3-4d6b-a074-bb076fd4db24][Motorolla G7 Plus]]
 + Motorolla G7 Power
 + Motorolla G100 XT2125-4
 

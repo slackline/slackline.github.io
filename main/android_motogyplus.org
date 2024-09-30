@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       65c60c32-dcc3-4d6b-a074-bb076fd4db24
+:mtime:    20240930074826
+:ctime:    20240930074826
+:END:
+#+TITLE: Motorolla G7 Plus
+#+FILETAGS: :android:phone:mobile:linux:
+
+* Links
+
+** Repair
+
++ [[https://www.ifixit.com/Guide/Motorola+Moto+G7+Plus+Battery+Removal/131190][Motorola Moto G7 Plus Battery Removal - iFixit Repair Guide]]
++ [[https://www.ifixit.com/Guide/Motorola+Moto+G7+Battery+Replacement/130853][Motorola Moto G7 Battery Replacement - iFixit Repair Guide]]
