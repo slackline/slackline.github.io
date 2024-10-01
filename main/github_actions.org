@@ -1,12 +1,18 @@
 :PROPERTIES:
 :ID:       e19b6eb6-46b2-440a-ba35-be29feb33407
-:mtime:    20240905150013 20240221074022 20240128232536 20240127115829 20231015151623 20230318204943 20230103103313 20221216215027
+:mtime:    20241001110834 20240905150013 20240221074022 20240128232536 20240127115829 20231015151623 20230318204943 20230103103313 20221216215027
 :ctime:    20221216215027
 :END:
 #+TITLE: GitHub Actions
 #+DATE: [2022-12-14 Wed 13:42]
 #+FILETAGS: :git:github:actions:github actions:
 
+* Tips and Tricks
+
+** Speed up Pip Installs
+
+You can cache virtual environments and in turn speed up setting up virtual environments by using [[https://github.com/syphar/restore-virtualenv][restore-virtualenv]]. See
+[[https://testmon.org/blog/better-github-actions-caching/][How to make your GitHub Actions build quicker?]]
 
 * Links
 
