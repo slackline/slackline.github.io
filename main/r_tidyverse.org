@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b4510762-8409-4e5e-8ee8-c27574977772
-:mtime:    20231019135929 20231018135646 20231017142417 20230103103312 20221228151013 20230103103312 20230103103308
+:mtime:    20241002092336 20231019135929 20231018135646 20231017142417 20230103103312 20221228151013 20230103103312 20230103103308
 :ctime:    20221228151013 20230103103308
 :END:
 #+TITLE: Tidyverse
@@ -15,6 +15,8 @@ ago).
 There are a lot of packages out there in the Tidyverse, I only cover a few here and nowhere near in as much depth as the
 official documentation for each package. An excellent resource if you wish to learn these tools is the [[https://r4ds.had.co.nz/][R for Data
 Science]] book by Hadley Wickham and Garrett Grolemund which is free to read on-line or can be purchased in physical form.
+
++ [[id:fc6c0f69-4899-401e-bd6c-a36894c1542e][R ggplot2]]
 
 ** Pipes
 :PROPERTIES:
@@ -64,7 +66,6 @@ reading both if you are going to use pipes although I'll try and explain each he
 :ctime:    20221228151013 20230103103311
 :END:
 
-Really useful place for learning features is [[https://ggplot2tor.com/][ggplot2tor+]]
 
 #+NAME: tidyverse-ggplot2
 #+CAPTION: ggplot2
