@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       0911a63f-4b82-4bf1-9235-f1e41e93d210
 :ROAM_ALIASES: "Open Research Overview"
-:mtime:    20240919150818 20240912124356 20240910123405 20240515164155
+:mtime:    20241001165443 20240919150818 20240912124356 20240910123405 20240515164155
 :ctime:    20240515164155
 :END:
 #+title: Open Research
@@ -99,3 +99,5 @@ to validate and contribute to the research.
 *** Specifics
 
 + [[https://www.openbookpublishers.com/books/10.11647/OBP.0364][The Predatory Paradox: Ethics, Politics, and Practices in Contemporary Scholarly Publishing | Open Book Publishers]]
++ [[https://uu.trialanderror.org/projects/the-university-in-transition][The University in Transition | Utrecht University Manifold]]
++ [[https://pluralistic.net/2024/08/16/the-public-sphere/#not-the-elsevier][Pluralistic: MIT libraries are thriving without Elsevier (16 Aug 2024) – Pluralistic: Daily links from Cory Doctorow]]
