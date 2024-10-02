@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3cca0dfd-0c82-4685-b9ed-6314f7c8b78f
-:mtime:    20241001110421 20240529091921 20240523125824 20240507153851 20240417074159 20240416215946 20240315123523 20240206174808 20240102123440 20240101130614 20231231095334 20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
+:mtime:    20241002091737 20241001110421 20240529091921 20240523125824 20240507153851 20240417074159 20240416215946 20240315123523 20240206174808 20240102123440 20240101130614 20231231095334 20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
 :ctime:    20221212233350
 :END:
 #+TITLE: Python Pytest
@@ -261,6 +261,10 @@ and return values.  These can be applied to existing code to apply Typehints.
 
 Generate Matplotlib images and compare them in subsequent runs with [[https://pytest-mpl.readthedocs.io/en/latest/usage.html][pytest-mpl]].
 
+** pytest-profiling
+
+[[https://github.com/man-group/pytest-plugins][pytest-profiling]] makes it easy to profile your tests.
+
 ** pytest-testmon
 
 [[https://github.com/tarpas/pytest-testmon/][pytest-testmon]] is an extension that allows you to run tests only on files that have been changed or on changes to
@@ -288,7 +292,7 @@ Thanks to [[https://fosstodon.org/@adamchainz/112484238160832627][this toot]] I 
 against.
 
 #+begin_src bash
-pytest $git diff --name-only '*/test_*.py')
+  pytest $(git diff --name-only '*/test_*.py')
 #+end_src
 
 * Links
@@ -305,6 +309,7 @@ pytest $git diff --name-only '*/test_*.py')
 
 + [[https://github.com/mariusvniekerk/pytest-monkeytype][pytest-monkeytype]]
 + [[https://pytest-mpl.readthedocs.io/en/latest/usage.html][pytest-mpl]]
++ [[https://github.com/man-group/pytest-plugins][pytest-profiling]]
 + [[https://github.com/ESSS/pytest-regressions][pytest-regressions]]
 + [[https://github.com/tarpas/pytest-testmon/][pytest-testmon]]
 + [[https://syrupy-project.github.io/syrupy/][Syrupy]]
