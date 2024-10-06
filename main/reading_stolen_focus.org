@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       6df8ea24-1041-4e12-9cee-ee235ff7a6ca
+:mtime:    20241006205539
+:ctime:    20241006205539
+:END:
+#+TITLE: Stolen Focus
+#+FILETAGS: :reading:books:society:concentration:
+
+I read Johan Harri's /Stolen Focus/ as I too have noticed a decline in my ability to focus for protracted periods
+compared to when I was studying in my undergraduate degree, post-graduate degree and early years of work.
+
+* Links
+
++ [[https://cmsthomas.substack.com/p/the-atlantic-did-me-dirty][The Atlantic Did Me Dirty - Carrie M. Santo-Thomas]]

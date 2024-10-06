@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5e4b0759-696f-47a7-81c1-a7506aab41a0
-:mtime:    20240502093004 20240426165410 20240422071430 20240306145316
+:mtime:    20241006205543 20240502093004 20240426165410 20240422071430 20240306145316
 :ctime:    20240306145316
 :END:
 #+TITLE: Reading
@@ -67,7 +67,11 @@ Most of these I read a long time ago when studying hence a distinct lack of note
 *** Mycology
 + /Entangled Life/ Merlin Sheldrake
 *** Physics
-+ /Everything that can Happen has Happened/ Brian Cox and
++ /Everything that can Happen does Happened/ Brian Cox and Jeff Forshaw
+** Thinking
++ [[id:6df8ea24-1041-4e12-9cee-ee235ff7a6ca][/Stolen Focus/]] Johann Hari
++ /Thinking, Fast and Slow/ Daniel Kahneman
+
 ** Statistics
 + /The Art of Statistics/ David Speigelhalter
 + /How to Make The World Add Up/ Tim Harford
@@ -79,8 +83,8 @@ Most of these I read a long time ago when studying hence a distinct lack of note
 + /Applied Predictive Modelling/ Max Kuhn, Kjell Johnson
 + /Computer Age Statistical Inference/ Bradley Efron, Trevor Hastie
 *** Languages
-+ /The R Handbook/
-+ /R in a Nutshell/
++ /The R Handbook/ Crawley
++ /R in a Nutshell/ Adler
 
 ** Other
 *** Robert Twigger
