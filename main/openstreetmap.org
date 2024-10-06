@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a5f391b-0f61-48d8-a4c3-a204d55538de
-:mtime:    20240828121857 20231220115205 20231126082848 20230530082045 20230528222034
+:mtime:    20241006212915 20240828121857 20231220115205 20231126082848 20230530082045 20230528222034
 :ctime:    20230528222034
 :END:
 #+TITLE: OpenStreetMap
@@ -49,6 +49,7 @@ to get me there, I can add additional boxes to visit along the route as way poin
 + [[https://osmuk.org/][OpenStreetMap UK -- A Community Interest Company (CIC)]]
 + [[https://mc.bbbike.org/mc/][MapCompare]]
 + [[https://2008.osm.lol/#13/53.3334/-1.6598][OSM Then (2008) and Now]]
++ [[https://umap.openstreetmap.de/en/][uMap]] - make maps and embed them easily.
 
 *** Apps
 + [[https://osmand.net][OSMAnd]]
