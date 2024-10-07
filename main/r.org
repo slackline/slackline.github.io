@@ -277,6 +277,7 @@ found useful.
 
 + [[https://www.bayesrulesbook.com/][Bayes Rules! An Introduction to Applied Bayesian Modeling]]
 + [[https://bookdown.org/content/70a06054-8138-4d90-aaa0-895f57aab1b4/][Statistical rethinking with brms, ggplot2, and the tidyverse: Second edition]]
++ [[https://paulbuerkner.com/software/brms-book/][The brms Book : Applied Bayesian Regression Modelling Using R and Stan (Early Draft)]]
 
 **** Machine Learning
 
