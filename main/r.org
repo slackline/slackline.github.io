@@ -320,7 +320,12 @@ found useful.
 + [[https://r-pkgs.org/][R Packages]]
 + [[https://deepr.gagolewski.com/index.html][Deep R Programming]]
 + [[https://design.tidyverse.org/][Tidy Design Patterns]]
-  
+
+*** Linting  
+
++ [[https://flint.etiennebacher.com/][Find and Fix Lints in R Code • flint]]
++ [[https://lintr.r-lib.org/][A Linter for R Code • lintr]]
+
 ** Learning Resources
 
 + [[https://www.stephaniehicks.com/jhustatcomputing2022/schedule][Statistical Computing]]
