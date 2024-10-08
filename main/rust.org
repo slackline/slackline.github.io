@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3469c33e-7c61-46c7-b01e-655695f3b93c
-:mtime:    20240908221038 20240806173539 20240410205343 20240119090258 20230912131821 20230623074206 20230622081612 20230305215056 20230217212451 20230215001041 20230103103309 20221224191223
+:mtime:    20241008125606 20240908221038 20240806173539 20240410205343 20240119090258 20230912131821 20230623074206 20230622081612 20230305215056 20230217212451 20230215001041 20230103103309 20221224191223
 :ctime:    20221224191223
 :END:
 #+TITLE: Rust
@@ -19,6 +19,7 @@
 + [[https://rustwasm.github.io/docs/book/][Introduction - Rust and WebAssembly]]
 + [[https://doc.rust-lang.org/book/][The Rust Programming Language - The Rust Programming Language]] ([[https://rust-book.cs.brown.edu/][with quizes]])
 + [[https://doc.rust-lang.org/cargo/][The Cargo Book]]
++ [[https://rust-gpu.github.io/][Rust GPU]]
 
 ** Libraries
 
