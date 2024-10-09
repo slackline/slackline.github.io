@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       9bc4e3ad-1d0e-49a0-a6f5-932679ab8c4e
+:mtime:    20241009152619
+:ctime:    20241009152619
+:END:
+#+TITLE: Emacs Tabs
+#+FILETAGS: :emacs:tabs:
+
+Just use [[https://github.com/ema2159/centaur-tabs][Centaur Tabs]] and you should be good to go.
+
+* Tab Grouping
+
+An excellent [[https://themkat.net/2024/01/04/emacs_centaur_tabs.html][article]] with a neat function that works with Projectile to group tabs based on project root.
+
+* Links
+
++ [[https://github.com/ema2159/centaur-tabs][Centaur-tabs]]
++ [[https://themkat.net/2024/01/04/emacs_centaur_tabs.html][Centaur Tabs - The best tab (UI) system for Emacs!]]
