@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       970f08b7-210c-41ad-a25e-b9ed0000c34f
+:mtime:    20241010102833
+:ctime:    20241010102833
+:END:
+#+TITLE: Git Ignore
+#+FILETAGS: :git:ignore:configuration:
+
+You can ignore files across a repository by adding patterns to ~.gitignore~ in the route of the folder.
+
+If you want to ignore files globally you can set it via the following global configuration
+
+#+begin_src bash
+git config --global core.excludesFile '~/.gitignore'
+#+end_src
+
+This would add the following to your ~/.gitconfig~
+
+#+begin_src bash
+[core]
+    ...
+    excludesfile = ~/.gitignore
+#+end_src
+
+On a local repository level as well as configuring ~.gitignore~ you can add patterns to the ~.git/info/exclude~ file.
