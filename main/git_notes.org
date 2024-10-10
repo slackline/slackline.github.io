@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       d8720ab9-a43e-45e4-834e-e4c5ce4f4e43
+:mtime:    20241010141151
+:ctime:    20241010141151
+:END:
+#+TITLE: Git Notes
+#+FILETAGS: :git:notes:
+
+Git Notes allow you to store additional information about specific commits. It is also possible to copy all GitHub
+comments to notes and store them (see [[https://wouterj.nl/2024/08/git-notes][Store Code Discussions in Git using Git Notes ~ Wouter J]]).
+
+* Links
+
++ [[https://wouterj.nl/2024/08/git-notes][Store Code Discussions in Git using Git Notes ~ Wouter J]]
