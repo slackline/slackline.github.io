@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       75000af0-8795-41f6-84da-6784c58fc671
+:mtime:    20241011150011
+:ctime:    20241011150011
+:END:
+#+TITLE: GitHub Stacked Pull Requests
+#+FILETAGS: :git:github:pullrequest:
+
+* Links
+
++ [[https://blog.logrocket.com/using-stacked-pull-requests-in-github/][Using stacked pull requests in GitHub - LogRocket Blog]]

@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       d5bcc9e1-1f40-4ce3-a0ed-232d22b8d706
+:mtime:    20241011150133
+:ctime:    20241011150133
+:END:
+#+TITLE: GitHub Configuration
+#+FILETAGS: :git:github:configuration:config:
+
+
+* Adding SSH Keys
+
+If you use GitHub ([[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]], [[id:736537b3-75e0-4c24-9156-364937e0e8a2][Forgejo]] or any other forge) regularly then you'll want to use SSH keys. As with all [[id:b5000932-0fec-4353-acc4-0cb02127c9ac][Privacy
+and Encryption]] tools these are a way of authenticating who you are securely and involved a private key, which stays on
+your computer, and a public key which you share.
+
+Saving your public key to you GitHub account under /Settings > SSH and GPG keys/ means that after you login to your
+computer and stored the unlocked private key in something like [[id:5f040d28-2aa8-4cac-91aa-43f5e3d515a3][Keychain]] (sometimes a called a Keyring) you can connect
+seamlessly to not just other servers via [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] it can also be used for pushing and pulling from Forge's/
+
+**TODO** - Details of how to create keys, add to account, configure Git to use them.
+
+* GPG Keys

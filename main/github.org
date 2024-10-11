@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       52b4db29-ba21-4a8a-9b83-6e9a8dc02f41
-:mtime:    20240910110516 20240805204521 20240502231416 20240302150709 20240110125102 20230708080833 20230626121713 20230519193813 20230519143618 20230103103310 20221211233405
+:mtime:    20241011150323 20240910110516 20240805204521 20240502231416 20240302150709 20240110125102 20230708080833 20230626121713 20230519193813 20230519143618 20230103103310 20221211233405
 :ctime:    20221211233405
 :END:
 #+TITLE: GitHub
@@ -10,59 +10,15 @@
 [[https://github.com][GitHub]] is an online service for sharing and collaborating on your [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] version controlled projects. It is not the only
 "forge" as such repositories are sometimes known that is available as there are other services available such as [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][gitlab]]
 
-
-* Configuration
-
-** Adding SSH Keys
-
-If you use GitHub ([[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]], [[id:736537b3-75e0-4c24-9156-364937e0e8a2][Forgejo]] or any other forge) regularly then you'll want to use SSH keys. As with all [[id:b5000932-0fec-4353-acc4-0cb02127c9ac][Privacy
-and Encryption]] tools these are a way of authenticating who you are securely and involved a private key, which stays on
-your computer, and a public key which you share.
-
-Saving your public key to you GitHub account under /Settings > SSH and GPG keys/ means that after you login to your
-computer and stored the unlocked private key in something like [[id:5f040d28-2aa8-4cac-91aa-43f5e3d515a3][Keychain]] (sometimes a called a Keyring) you can connect
-seamlessly to not just other servers via [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] it can also be used for pushing and pulling from Forge's/
-
-**TODO** - Details of how to create keys, add to account, configure Git to use them.
-
-** GPG Keys
++ [[id:e1279ce7-7cf8-4d13-967d-72e399e395e3][Actions]]
++ [[id:d5bcc9e1-1f40-4ce3-a0ed-232d22b8d706][Configuration]]
++ [[id:75000af0-8795-41f6-84da-6784c58fc671][Stacked Pull Requests]]
 
 
 * GitHub Pages
 
 * GitHub Actions
 
-GitHub Actions allow you to perform Continuous Integration (CI)/Continuous Development (CD) actions, triggering certain
-workflows and events based on pushes, commits, pulls, approvals and merges.
-
-** Building Sphinx Documentation
-
-A useful action if you have a Python project with documentation built and configured using [[https://www.sphinx-doc.org/][Sphinx]] is to have the
-documentation built automatically by GitHub. An action for this is provided by [[https://github.com/marketplace/actions/sphinx-docs-to-github-pages][action-sphinx-docs-to-gh-pages]]. Save this
-to your ~.github/workflows/~ directory (you can call it what you like but as always something descriptive is useful
-e.g. ~sphinx_docx_to_gh_pages.yaml~). You will also need to create a ~devtools/conda-env/docs_env.yml~ file which
-defines the Conda repository that is to be used for installing various Sphinx packages you are using. I found
-~conda-forge~ didn't include all the packages I required and so I modified the ~run:~ section of the main YAML
-configuration to install all required packages directly from PyPi using ~pip~.  When first setting things up you will
-want to set the ~branch:~ in the main YAML configuration to reflect that on which you are doing the development so the
-action is triggered on the branch and you can view the results. Stage, commit and push the two files and you should be
-able to find the build being made by going to the commits page on the branch you are working on, initially there is a
-yellow dot next to the commit you've just pushed which you can click on to see the actions being run.
-
-When complete this creates a new branch called ~gh-pages~ which contains all of the HTML documentation that has been
-created by Sphinx. You now need to configure your repository to use [[https://pages.github.com/][GitHub Pages]]. Go to ~Settings > Pages~ and select
-the ~gh-pages~ branch and select the ~root~ directory and then ~Save~. You will get a link to the pages appear just
-above these options. You can click on this and it may take a little while to build the pages but the will appear.
-
-** Environment Variables
-
-[[https://docs.github.com/en/github-ae@latest/actions/learn-github-actions/environment-variables#default-environment-variables][GitHub Actions environment variables]] make some variables available automatically. I had recourse to require the user and
-the repository separetly and spent some time scratching my head how to do this until I came across [[https://www.cazzulino.com/github-actions-repository.html][this short post]] that
-uses [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] parameter expansion.
-
-** Publishing to PyPI
-
-It is possible to use a GitHub Action to automate [[id:5e1f167e-5c0c-4206-b2ac-6694e08524d8][publishing to PyPI from GitHub]].
 
 * GitHub Blog
 
