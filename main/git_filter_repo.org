@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       4284622f-ab8f-4b79-ac74-b5103cd21a4f
+:mtime:    20241011120103
+:ctime:    20241011120103
+:END:
+#+TITLE: Git Filter Repo
+#+FILETAGS: :git:filterrepo:privacy:
+
+Sometimes you might add files that you shouldn't have to a [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] repository. Its not enough to delete (or `git rm`) them
+from your repository as their presence is recorded in the [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] history. Instead you need to remove them completely from
+the history. This can be achieved using the [[https://github.com/newren/git-filter-repo/][Git Filter Repo]] extension.
+
+
+* Links
+
++ [[https://github.com/newren/git-filter-repo/][Git Filter Repo]]
+
+** Articles
+
++ [[https://random.too-many-machines.com/git-encrypt.html][Secret files in Git - transparent encryption and history rewriting - Random Stuff - Too Many Machines]]
