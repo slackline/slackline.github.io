@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       0e3e2e06-d587-404e-ab7b-21837a60118a
+:mtime:    20241014184840
+:ctime:    20241014184840
+:END:
+#+TITLE: Richard Stallman
+#+FILETAGS: :stallman:fsf:
+
+* Links
+
++ [[https://stallman-report.org/][The Stallman report]]

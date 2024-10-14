@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       48c0d280-8330-4f65-a5da-098ea186c6b6
-:mtime:    20230330221120 20230330142947
+:mtime:    20241014114724 20230330221120 20230330142947
 :ctime:    20230330142947
 :END:
-#+TITLE: xarg
+#+TITLE: Bash xarg
 #+FILETAGS: :bash:xarg:scripting:
 
 ~xarg~ is a common Unix command that takes "e**x**tended **arg**ument**s**". As a basic principle it takes as input a

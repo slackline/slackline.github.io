@@ -1,14 +1,15 @@
 :PROPERTIES:
 :ID:       0e6300c6-7025-4f45-820d-4d9da82b41a6
-:mtime:    20241009203940 20240910211009 20240418114040 20240304160438 20240302204630 20240121200503 20240121115714 20240107103825 20231219213305 20231126221347 20231121204845 20231120130321 20231015172332 20231005133759 20230926220759 20230917083604 20230905212306 20230724174038
+:mtime:    20241014185041 20241009203940 20240910211009 20240418114040 20240304160438 20240302204630 20240121200503 20240121115714 20240107103825 20231219213305 20231126221347 20231121204845 20231120130321 20231015172332 20231005133759 20230926220759 20230917083604 20230905212306 20230724174038
 :ctime:    20230724174038
 :END:
 #+TITLE: Linux
 #+FILETAGS: :linux:computing:foss:opensource:
 
-Linux is often considered the poster-child for the [[id:f277da12-5d6d-46e3-a49c-7bda9254d469][FOSS]] movement, but things actually started a lot earlier when Richard
-Stallman setup the [[https://www.eff.org/][Electronic Frontier Foundation]] and started the [[https://www.gnu.org/][The GNU Operating System and the Free Software
-Movement]] (of which [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] is just one component, albeit a very important one!).
+Linux is often considered the poster-child for the [[id:f277da12-5d6d-46e3-a49c-7bda9254d469][FOSS]] movement, but things actually started a lot earlier when [[id:0e3e2e06-d587-404e-ab7b-21837a60118a][Richard
+Stallman]] setup the [[id:8b1e2298-ee48-43d3-a00b-94bb68413927][Free Software Foundation]] and started the [[https://www.gnu.org/][The GNU Operating System and the Free Software
+Movement]] (of which [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] is just one component, albeit a very important one!). There is the related  [[https://www.eff.org/][Electronic Frontier
+Foundation]]  which also champions civil liberties in the digital world.
 
 Linux is the code that gets your hardware to talk to each other and interact with the GNU Operating System and so is
 itself, a pretty important component (the GNU attempt to get a replacement UNIX kernel, [[https://www.gnu.org/software/hurd/][hurd]] is /still/ a work in

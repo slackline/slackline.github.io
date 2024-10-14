@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       8b1e2298-ee48-43d3-a00b-94bb68413927
+:mtime:    20241014184942
+:ctime:    20241014184942
+:END:
+#+TITLE: Free Software Foundation
+#+FILETAGS: :opensource:fsf:free:freedom:
+
+* Links
+
++ [[https://www.fsf.org/][Free Software Foundation]]
