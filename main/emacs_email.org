@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       8538db5d-d027-4fed-8530-6d61f7077f7c
+:mtime:    20241015215804
+:ctime:    20241015215804
+:END:
+#+TITLE: Emacs Email
+#+FILETAGS: :emacs:email:mu4e:protonmail:
+
+* Links
+
++ [[https://github.com/danielfleischer/mu4easy][danielfleischer/mu4easy: mu4e + mbsync configuration for multiple email accounts.]]
++ [[https://doubleloop.net/2019/09/06/emacs-mu4e-mbsync-and-protonmail/][emacs, mu4e, mbsync and ProtonMail - doubleloop]]
