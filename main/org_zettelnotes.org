@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       2f353170-e0d3-400d-99a5-93295383435f
+:mtime:    20241019092459
+:ctime:    20241019092459
+:END:
+#+TITLE: Zettel Notes
+#+FILETAGS: :org:android:notes:orgmode:
+
+An excellent client for working with your Org files on Android, it will sync with a Git repository on a timed basis.
+
+
+* Links
+
++ [[https://znotes.thedoc.eu.org/][Introduction - Zettel Notes Documentation]]
