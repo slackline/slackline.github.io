@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       7303cb84-7406-43ed-81d0-bbd3c4961faa
-:mtime:    20230222161526 20230222141423
+:mtime:    20241018195500 20230222161526 20230222141423
 :ctime:    20230222141423
 :END:
 #+TITLE: Python Decorators
@@ -261,3 +261,4 @@ Pydantic, which is used for enforcing typing of objects, has a [[https://docs.py
 + [[https://realpython.com/primer-on-python-decorators/][Primer on Python Decorators - Real Python]]
 + [[https://realpython.com/python-getter-setter/][Getters and Setters: Manage Attributes in Python – Real Python]]
 + [[https://stackoverflow.com/a/12179752/1444043][Meaning of @staticmethod and @classmethod decorators]]
++ [[https://www.pythonmorsels.com/all-about-decorators/][All About Decorators in Python]]
