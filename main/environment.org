@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       387c3a89-2f9c-4689-943e-a97261ec280c
-:mtime:    20241009204649
+:mtime:    20241018000929 20241009204649
 :ctime:    20241009204649
 :END:
 #+TITLE: Environment
@@ -9,3 +9,7 @@
 * Links
 
 + [[https://www.youtube.com/watch?v=8qZ0hSP_YEU][1 | Greta Thunberg & Kevin Anderson | In search of REAL climate leadership | 2022 Interview - YouTube]]
+
+** Miscellaneous
+
++ [[https://solar.dri.es/][Solar-powered, self-hosted website]]
