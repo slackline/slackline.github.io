@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       349c1607-ca60-4ea2-bb53-4eb45a0e9189
+:mtime:    20241020132011
+:ctime:    20241020132011
+:END:
+#+TITLE: Motorolla g100
+#+FILETAGS: :android:motorola:lineageos:
+
+
+* Links
+
++ [[https://wiki.lineageos.org/devices/nio/variant2/][Info about nio | LineageOS Wiki]]
