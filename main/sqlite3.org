@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       749d5f0f-09bd-47a8-a351-2432f38ff3d9
+:mtime:    20241017105109
+:ctime:    20241017105109
+:END:
+#+TITLE: SQLite3
+#+FILETAGS: :sqlite3:database:sql:
+
+* Tables
+
+*** List Tables
+
+
+#+begin_src sql
+.tables
+
+#+end_src
+
+*** List table columns
+
+#+begin_src sql
+PRAGMA table_info(<table_name>);
+#+end_src
+
+*** List contents of table
+
+#+begin_src sql
+SELECT * FROM <table_name> [WHERE <column> = ""];
+#+end_src
+
+
+*** List table columns
+
+#+begin_src sql
+PRAGMA table_info(<table_name>);
+#+end_src

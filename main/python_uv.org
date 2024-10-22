@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd
+:mtime:    20241017134853
+:ctime:    20241017134853
+:END:
+#+TITLE: Python uv
+#+FILETAGS: :python:packaging:
+
+[[https://docs.astral.sh/uv/][uv]] is a [[id:bb57f65e-58f4-45de-9620-901dc998f6d6][Python Packaging]] tool written in Rust that manages creating a project, dependencies, building and publishing.
+
+* Creating a Project
+
+[[https://docs.astral.sh/uv/guides/projects/][Working on projects]] is a good place to start, you can either create a new project by name and the directory will be
+created, or do so within an existing working directory.
+#+begin_src bash
+cd some-project
+uv init
+#+end_src
+
+**NB** It will not overwrite your ~README.md~ if you already have one in place.
+
+Once established you can ~uv run~, ~uv sync~ or ~uv lock~ and uv will create a virtual environment under ~.venv/~ and a
+~uv.lock~ file to control. If you are using Emacs you can add the following to ~.dir-locals.el~ to ensure this
+environment is used when you are working on the project.
+
+** ~pyproject.toml~
+
+Configuration of [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] packages is these days via ~pyproject.toml~ (see [[https://peps.python.org/pep-0621/][PEP0621]]) and uv uses the ~[tools.uv]~ section
+for its configuration.

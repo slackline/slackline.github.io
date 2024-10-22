@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       0911a63f-4b82-4bf1-9235-f1e41e93d210
 :ROAM_ALIASES: "Open Research Overview"
-:mtime:    20241001165443 20240919150818 20240912124356 20240910123405 20240515164155
+:mtime:    20241022150421 20241001165443 20240919150818 20240912124356 20240910123405 20240515164155
 :ctime:    20240515164155
 :END:
 #+title: Open Research
@@ -28,6 +28,7 @@ to validate and contribute to the research.
 * References
 + [[https://www.nature.com/articles/sdata201618][The FAIR Guiding Principles for scientific data management and stewardship | Scientific Data]]
 + [[https://www.nature.com/articles/s41562-016-0021][A manifesto for reproducible science | Nature Human Behaviour]]
++ [[https://online.ucpress.edu/collabra/article/10/1/121383/203136/Open-Research-Reforms-and-the-Capitalist][Open Research Reforms and the Capitalist University: Areas of Opposition and Alignment]]
 
 * Links
 
