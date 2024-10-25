@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       938af6af-7a0e-46d1-ae76-6157e948151b
-:mtime:    20240706220449 20240115230041 20231222084358 20230114083319 20230103103311 20221229094021
+:mtime:    20241023184234 20240706220449 20240115230041 20231222084358 20230114083319 20230103103311 20221229094021
 :ctime:    20221229094021
 :END:
 #+TITLE: Emacs Configuration
@@ -51,3 +51,4 @@ Details of each package specific configuration are found on their own pages.
 
 + [[https://codeberg.org/jcastp/emacs.d/][Codeberg | jcastp/emacs.d]] - a nice literate configuration
 + [[https://leanpub.com/lit-config/read][Read Literate Configuration | Leanpub]] (via [[https://mastodon.social/@masukomi@connectified.com/112741432091944271][this thread]])
++ [[https://github.com/LionyxML/emacs-kick][LionyxML/emacs-kick: A feature rich Emacs (kickstarter) config for (neo)vi(m)mers]]
