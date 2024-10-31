@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f76ac811-6c1a-4aa6-9492-8cbae7cb50ca
-:mtime:    20231204134451 20230103103314 20221224191223
+:mtime:    20241031080307 20231204134451 20230103103314 20221224191223
 :ctime:    20221224191223
 :END:
 #+TITLE: Emacs Conf
@@ -11,6 +11,7 @@
 I use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] as my primary IDE (and more besides) and there are some great talks across the years from [[https://emacsconf.org/][EmacsConf]]
 
 * Conferences
++ [[https://emacsconf.org/2024/talks/][2024]]
 + [[https://emacsconf.org/2023/][2023]]
 + [[https://emacsconf.org/2022/][2022]]
 + [[https://emacsconf.org/2021/][2021]]
