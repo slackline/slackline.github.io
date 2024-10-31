@@ -320,6 +320,8 @@ found useful.
 + [[https://r-pkgs.org/][R Packages]]
 + [[https://deepr.gagolewski.com/index.html][Deep R Programming]]
 + [[https://design.tidyverse.org/][Tidy Design Patterns]]
++ [[https://r-in-production.org/][R in Production]]
+
 
 *** Linting  
 
