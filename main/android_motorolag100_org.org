@@ -1,12 +1,20 @@
 :PROPERTIES:
 :ID:       349c1607-ca60-4ea2-bb53-4eb45a0e9189
-:mtime:    20241020132011
+:mtime:    20241021192025 20241020132011
 :ctime:    20241020132011
 :END:
 #+TITLE: Motorolla g100
 #+FILETAGS: :android:motorola:lineageos:
 
+* Updating
 
-* Links
+1. Download the image via the updater as per the instructions on LineageOS
+2. Whilst waiting download the corresponding ~boot.img~ to your phone from the LineageOS download page.
+3. Once installed reboot.
+4. Start Magisk and follow the instructions to the letter to patch the ~boot.img~, copy back to your computer and flash
+   using ~fastboot~. **NB** Rebooting into ~fastbootd~ mode is _not_ what is required, rather it is the ~bootloader~
+   mode which can be reached via ~Volume Down~ + ~Power~  when the phone is switched off or via ~adb -d reboot bootloade~
+* Links*
 
 + [[https://wiki.lineageos.org/devices/nio/variant2/][Info about nio | LineageOS Wiki]]
++ [[https://topjohnwu.github.io/Magisk/install.html][Installation | Magisk]]

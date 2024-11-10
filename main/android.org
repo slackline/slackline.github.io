@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       2c46e54a-d704-4e7e-bca3-d8c3e042ab43
-:mtime:    20241020132022 20240930074837 20240620095958 20240228094314 20231015172236
+:mtime:    20241021184849 20241020132022 20240930074837 20240620095958 20240228094314 20231015172236
 :ctime:    20231015172236
 :END:
 #+TITLE: Android
@@ -26,7 +26,7 @@ them, and root them and flash an alternative OS, typically LineageOS).
 + Google Nexus 7
 + [[id:65c60c32-dcc3-4d6b-a074-bb076fd4db24][Motorolla G7 Plus]]
 + Motorolla G7 Power
-+ [[id:349c1607-ca60-4ea2-bb53-4eb45a0e9189][Motorolla G100 XT2125-4]]
++ [[id:349c1607-ca60-4ea2-bb53-4eb45a0e9189][Motorola G100 XT2125-4]]
 
 * Push Notifications
 
