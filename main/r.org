@@ -272,6 +272,7 @@ found useful.
 + [[https://www.modernstatisticswithr.com/][Modern Statistics with R]]
 + [[https://learningstatisticswithr.com/][Learning Statistics with R]] by Danielle Navarro
 + [[https://www.r-causal.org/][Causal Inference in R]]
++ [[https://marginaleffects.com/][Model to Meaning - How to Interpret Statistical Results Using ~marginaleffects~ for R and Python]]
 
 **** Bayesian
 
