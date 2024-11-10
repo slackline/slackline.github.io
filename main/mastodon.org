@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a7fbe90-1f6e-4a38-a0c8-b378b1893f33
-:mtime:    20241002091534 20240910083234 20240909153040 20240423221820 20240309205737 20240226104144 20240122133000 20240118164111 20240116122241 20240107125102 20231218231936 20231217220611 20231217163005 20231208200545 20231106165640 20231029193938 20231010204450 20230922120216 20230916065434 20230915202700 20230910203044
+:mtime:    20241110115558 20241031215609 20241002091534 20240910083234 20240909153040 20240423221820 20240309205737 20240226104144 20240122133000 20240118164111 20240116122241 20240107125102 20231218231936 20231217220611 20231217163005 20231208200545 20231106165640 20231029193938 20231010204450 20230922120216 20230916065434 20230915202700 20230910203044
 :ctime:    20230910203044
 :END:
 #+TITLE: Mastodon
@@ -46,6 +46,10 @@ This is a really neat feature, it works for anything with RSS feeds, e.g. YouTub
 configured to include RSS feeds, not all are). Services such as [[https://fetchrss.com/][FetchRSS]] can generate RSS feeds for any website or
 service.
 
+*** Linking Across Services
+
+You can use [[https://fed.brid.gy/docs][Bridgy Fed]], a decentralised social network bridge to connect the fediverse, web and things like Bluesky.
+
 ** Searching Posts
 
 + Include ~from:me~ in search to search your own posts
@@ -67,11 +71,8 @@ $ makepkg -sri
 <<< enter password >>>
 #+end_src
 
-Ok installed but unfortunately the
-[[https://wiki.archlinux.org/title/Mastodon][promised post-install
-message]] didn't appear. So lets read the
-[[https://docs.joinmastodon.org/admin/prerequisites/][official
-documentation]] which recommends three things...
+Ok installed but unfortunately the [[https://wiki.archlinux.org/title/Mastodon][promised post-install message]] didn't appear. So lets read the [[https://docs.joinmastodon.org/admin/prerequisites/][official documentation]]
+which recommends three things...
 
 1. Only allowing SSH key-based login (I already have this configured).
 2. Installing
@@ -83,8 +84,8 @@ documentation]] which recommends three things...
 
 I took some steps to
 [[https://kimura.no-ip.info/doku.php?id=linux:security:ssh#ssh_hardening][harden
-my SSH login]] some time ago. They are minor but make a small
-difference. In ~/etc/ssh/sshd.config~ change the following...
+my SSH login]] some time ago. They are minor but make a small difference. In ~/etc/ssh/sshd.config~ change the
+following...
 
 #+begin_src sh
 PermitRootLogin no
@@ -92,16 +93,15 @@ Port <insert-port-number>
 PasswordAuthentication no
 #+end_src
 
-Note however that before changing ~PasswordAuthentication~ to ~no~ you
-*MUST* upload your public SSH key to your account on your VPS otherwise
-you will lock yourself out.
+Note however that before changing ~PasswordAuthentication~ to ~no~ you *MUST* upload your public SSH key to your account
+on your VPS otherwise you will lock yourself out.
 
 #+begin_src sh
 rsync -av ~/.ssh/<keyname>.pub <username>@<vps-server-name|ip-address>:~/.ssh/.
 #+end_src
 
-You should now be able to login using your SSH key and its even easier
-if you use [[linux:security:ssh#public_key_generation|keychain]].
+You should now be able to login using your SSH key and its even easier if you use
+[[linux:security:ssh#public_key_generation|keychain]].
 
 ** fail2ban
 
