@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5182239f-bd72-4889-b00e-fde6672efb8a
-:mtime:    20231220115200 20231203140753
+:mtime:    20241110182403 20231220115200 20231203140753
 :ctime:    20231203140753
 :END:
 #+TITLE: Python Debugging
@@ -34,3 +34,4 @@ slightly different options.
 
 + [[https://docs.python.org/3/library/pdb.html][pdb — The Python Debugger — Python 3.12.0 documentation]]
 + [[https://realpython.com/python-debugging-pdb/][Python Debugging With Pdb – Real Python]]
++ [[https://www.debuggingbook.org/][The Debugging Book]]
