@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ecaeb512-f4d8-4f3a-8788-71291515bcf5
-:mtime:    20230620153945 20230620135143
+:mtime:    20241110212055 20241110185043 20230620153945 20230620135143
 :ctime:    20230620135143
 :END:
 #+TITLE: Teaching Reproducible Research
@@ -85,6 +85,12 @@ Really good talk on teaching reproducibility to students.
   - learn about research questinos
   - learn about data without numbers
   - learn about rigour
-  - learn about communicatino
+  - learn about communication
 
 [[https://psyteachr.github.io/][PsyTeachR]]
+
+* Links
+
+** Teaching Resources
+
++ [[https://qubeshub.org/community/groups/coursesource/][CouresSource]] - evidence-based teaching resources for undergraduate biology and physics
