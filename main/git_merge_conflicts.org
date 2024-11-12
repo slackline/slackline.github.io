@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3d6bf689-54bd-4551-b367-019e1cb67e73
-:mtime:    20240130203726
+:mtime:    20241111171231 20240130203726
 :ctime:    20240130203726
 :END:
 #+TITLE: Git Merge Conflicts
@@ -16,3 +16,7 @@ situations and so defers to the humans, asking them to resolve the conflict.
 Git conflicts are clearly marked in files.
 
 * Resolving
+
+* Links
+
++ [[https://mergiraf.org/][Mergiraf]] a tool for resolving merge conflicts.
