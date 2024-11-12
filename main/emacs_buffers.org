@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       4451966f-b810-4a9d-905b-e2b682578c62
-:mtime:    20240709215159 20231130102352 20230910184222 20230906125824 20230103103310 20221224191223
+:mtime:    20241112222216 20240709215159 20231130102352 20230910184222 20230906125824 20230103103310 20221224191223
 :ctime:    20221224191223
 :END:
 #+TITLE: Emacs Buffers
@@ -60,6 +60,14 @@ You'll spend a lot of time writing in buffers, its worth knowing a few tricks.
 You can wrap lines of text to the desired/configured line length using ~fill-paragraph~ or ~fill-region~ its bound to
 ~M-q~ so just highlight the region and it will be reformatted to the configured line-length. If you need to change this
 on the fly you can do so with ~C-x f~.
+
+** Splitting
+
+It can be useful to keep buffers/files small and to do so you can highlight a region and use ~write-region~ to write a
+region to a new file.
+
+There are some related functions for appending (~append-to-buffer~), prepending (~prepend-to-buffer~), inserting
+(~insert-to-buffer~) and copying (~copy-to-buffer~) that are worth remembering when moving text around.
 
 * Code Folding
 
