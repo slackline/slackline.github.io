@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3774439d-af75-453e-b3e9-9d578b6bec46
-:mtime:    20230911222107 20230528222513 20230215120711
+:mtime:    20241114174544 20230911222107 20230528222513 20230215120711
 :ctime:    20230215120711
 :END:
 #+TITLE: Nginx
@@ -42,3 +42,7 @@ I use LetsEncrypt to provide certificates for my sites so they are secure.
 + [[https://plausible.io/][Plausible]]
 + [[https://www.hitsteps.com/][Hitsteps]]
 + [[https://heapanalytics.com][Heap]]
+
+** Blocking Bots
+
++ [[https://rknight.me/blog/blocking-bots-with-nginx/][Blocking Bots with Nginx • Robb Knight]]
