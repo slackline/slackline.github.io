@@ -1,18 +1,20 @@
 :PROPERTIES:
 :ID:       c3d85b0a-29e6-49e4-9349-0072a9604cfa
-:mtime:    20240809213446 20240120102519
+:mtime:    20241115191626 20240809213446 20240120102519
 :ctime:    20240120102519
 :END:
 #+TITLE: Music Electronic
 #+FILETAGS: :music:electronic:
 
 A diverse genre but broadly my favourite (perhaps that is because of the diversity!). Listened to lots in the late 90s
-and early 00s these days love discovering new and diverse music via [[https://www.radiofrance.fr/fip/radio-electro][FIP Electro]] a French radio station.
+and early 00s. These days love discovering new and diverse music via [[https://www.radiofrance.fr/fip/radio-electro][FIP Electro]] a French radio station.
 
 * Artists
 
+If artist is a link its to their ba
 ** Acid Pauli
 
++ [[https://acidpauli.bandcamp.com/music][Bandcamp]]
 + [[https://soundcloud.com/acidpauli][Soundcloud - Acid Pauli]]
 
 ** Bonobo
@@ -23,15 +25,25 @@ and early 00s these days love discovering new and diverse music via [[https://ww
 
 + [[https://soundcloud.com/empirion][Soundcloud - Empirion]]
 
+** In Aeternam Vale
+
++ [[https://inaeternamvale.bandcamp.com/][Bandcamp]]
+
+  +  [[https://inaeternamvale.bandcamp.com/album/valium-water][Valium Water]] - great second track on this single.
+
 ** Leftfield
 
-** [[https://o-o-music.bandcamp.com/music][O'o]]
+** O'o
 
 Beautiful duo from Spain
 
-** [[https://orathemolecule.bandcamp.com/music][Ora The Molecule]]
++ [[https://o-o-music.bandcamp.com/music][Bandcamp]]
+
+** Ora The Molecule
 
 Mesmerising Norweighan artist/producer.
+
++ [[https://orathemolecule.bandcamp.com/music][Bandcamp]]
 
 ** Richard Fearless
 
@@ -55,12 +67,14 @@ Keep on hearing this [[https://sutjagutierrez.bandcamp.com/album/phylax-society]
 On Soul Jazz Records, heard on FIP very cool.
 
 + [[https://soundsoftheuniverse.com/sjr/product/ohms][Trees Speak – Ohms | Soul Jazz Records]]
-+ [[https://soundsoftheuniverse.com/sjr/product/vertigo-of-flaws][Trees Speak – Vertigo Of Flaws: Emancipation of the Dissonance and Temperaments in Irrational Waveforms | Soul Jazz
++ [[https://soundsoftheuniverse.com/sjr/product/vertigo-of-flaws][Trees Speak – Vertigo Of Flaws:E mancipation of the Dissonance and Temperaments in Irrational Waveforms | Soul Jazz
   Records]]
 + [[https://soundsoftheuniverse.com/sjr/product/shadow-forms][Trees Speak – Shadow Forms | Soul Jazz Records]]
 + [[https://soundsoftheuniverse.com/sjr/product/fagltcyxx][Trees Speak – PostHuman | Soul Jazz Records]]
 + [[https://soundsoftheuniverse.com/sjr/product/mind-maze][Trees Speak – Mind Maze | Soul Jazz Records]]
 
+
+** Underworld
 
 * Burning Man
 
@@ -71,3 +85,10 @@ on Soundcloud.
 + [[https://soundcloud.com/maxaxaman][Maxa]]
 + [[https://soundcloud.com/playalchemist][PlayAlchemist]]
 + [[https://soundcloud.com/robot-heart][Robot Heart]]
+
+* Bandcamp
+
++ [[https://acidpauli.bandcamp.com/music][Acid Pauli]]
++ [[https://o-o-music.bandcamp.com/music][O'o]]
++ [[https://orathemolecule.bandcamp.com/music][Ora The Molecule]]
++ [[https://richardfearless.bandcamp.com/][Richard Fearless]]
