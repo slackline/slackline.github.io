@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       76432be9-82fd-46e9-96a9-031a166c6d9c
+:mtime:    20241115132353
+:ctime:    20241115132353
+:END:
+#+TITLE: Web Assembly
+#+FILETAGS: webassembly
+
+* Links
+
++ [[https://tweag.github.io/pandoc-wasm/][Pandoc WebAssembly]]_
