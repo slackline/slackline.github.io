@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       affcfe76-7707-4413-948b-6afdeda63394
+:mtime:    20241110121205
+:ctime:    20241110121205
+:END:
+#+TITLE: T-Shirts
+#+FILETAGS: :clothing:
+
+* Links
+
++ [[https://www.pampling.com/][Pampling]] - Spanish t-shirt company.
