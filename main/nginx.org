@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3774439d-af75-453e-b3e9-9d578b6bec46
-:mtime:    20241114174544 20230911222107 20230528222513 20230215120711
+:mtime:    20241117170240 20241114174544 20230911222107 20230528222513 20230215120711
 :ctime:    20230215120711
 :END:
 #+TITLE: Nginx
@@ -19,6 +19,36 @@ Available across packages install as appropriate to your OS.
 
 * Configuration
 
+** General
+
+*** Block "AI" Bots
+
+I wanted to block AI bots on my self-hosted sites. Thanks to [[https://rknight.me/blog/blocking-bots-with-nginx/][Blocking Bots with Nginx by Robb Knight]] this was pretty
+straight-forward. I didn't have the same strick requirements as the author of the article so I created
+~/etc/nginx/redirect.conf~  and added to it the following entry which is case-insensitive list of AI Bot names from
+[[https://github.com/ai-robots-txt/ai.robots.txt/blob/main/robots.txt][here]].
+
+#+begin_src
+# List from https://github.com/ai-robots-txt/ai.robots.txt/blob/main/robots.txt
+if ($http_user_agent ~* "(AI2Bot|Ai2Bot-Dolma|Amazonbot|anthropic-ai|Applebot|Applebot-Extended|Bytespider|CCBot|ChatGPT-User|Claude-Web|ClaudeBot|cohere-ai|Diffbot|DuckAssistBot|FacebookBot|facebookexternalhit|FriendlyCrawler|Google-Extended|GoogleOther|GoogleOther-Image|GoogleOther-Video|GPTBot|iaskspider/2.0|ICC-Crawler|ImagesiftBot|img2dataset|ISSCyberRiskCrawler|Kangaroo Bot|Meta-ExternalAgent|Meta-ExternalFetcher|OAI-SearchBot|omgili|omgilibot|PerplexityBot|PetalBot|Scrapy|Sidetrade indexer bot|Timpibot|VelenPublicWebCrawler|Webzio-Extended|YouBot)"){
+    return 307 https://ash-speed.hetzner.com/10GB.bin;
+}
+#+end_src
+
+
+Any bot that matches the above "user agent" will get redirected to ~https://ash-speed.hetzner.com/10GB.bin~.
+
+For each ~server{...}~ entry under ~/etc/nginx/nginx.conf~ I then added the following line to include the above file.
+
+#+begin_src
+        include /etc/nginx/redirect.conf
+#+end_src
+
+
+Restart the server and test by changing the "user agent" in any browser to one that matches the above and I was asked if
+I wanted to download a ~10GB.bin~ file.
+
+
 ** Dokuwiki
 
 I use [[id:bc096b27-5f0e-426c-9722-7798e12ca2dc][Dokuwiki]] to host a couple of wiki's as its simple and doesn't require a database.
@@ -31,6 +61,7 @@ keep the domain and one day I might update the installation and get it working a
 ** LetsEncrypt
 
 I use LetsEncrypt to provide certificates for my sites so they are secure.
+
 
 * Links
 
