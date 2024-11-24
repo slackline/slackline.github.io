@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       08080fe0-cfcf-4fc7-96fc-6be481db4da6
+:mtime:    20241124074409
+:ctime:    20241124074409
+:END:
+#+TITLE: Git Submodules
+#+FILETAGS: :git:versioncontrol:submodules:
+
+* Links
+
++ [[https://pbs.bartificer.net/pbs173][Programming by Stealh 173 : Getting Started with Submodules (Git)]]
