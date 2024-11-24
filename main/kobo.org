@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d08d1fe6-5317-4f09-95f7-d47e8811e007
-:mtime:    20241123192353 20240204200239 20240203183424 20240125114215 20231217164206 20231211080621 20230910113351 20230724072348 20230707232550
+:mtime:    20241124171029 20241123192353 20240204200239 20240203183424 20240125114215 20231217164206 20231211080621 20230910113351 20230724072348 20230707232550
 :ctime:    20230707232550
 :END:
 #+TITLE: Kobo
@@ -16,6 +16,11 @@ I keep a vague list of books I've read and might read [[id:18820a48-4ec2-43d7-a0
 
 On receipt I followed the instructions [[https://help.kobo.com/hc/en-us/articles/360019690433-Products-no-longer-manufactured-or-supported-by-Kobo][here]] to update using the Desktop App under Mac OSX (as there is no GNU/Linux
 version).
+
+
+* Calibre
+
+[[id:62ce92c8-2493-4e7f-b32a-196535c42886][Calibre]] is an excellent package for managing ebook libraries.
 
 
 * Links

@@ -1,0 +1,73 @@
+:PROPERTIES:
+:ID:       62ce92c8-2493-4e7f-b32a-196535c42886
+:mtime:    20241124171006
+:ctime:    20241124171006
+:END:
+#+TITLE: Calibre
+#+FILETAGS: :ebook:foss:pdf:
+
+
+[[https://manual.calibre-ebook.com/][Calibre]] is an excellent [[id:f277da12-5d6d-46e3-a49c-7bda9254d469][FOSS]] software package for managing ePub/PDF and other book formats. Primarily it is a GUI that
+runs on your desktop but there is also a server that can be run that gives a WebUI and makes accessing and moving books
+to your eReader (e.g. [[id:d08d1fe6-5317-4f09-95f7-d47e8811e007][Kobo]]) very simple.
+
+* Installation
+
+** Gentoo
+
+#+begin_src sh
+emerge -av calibre
+#+end_src
+
+** Arch
+
+#+begin_src sh
+pacman -Syu calibre
+#+end_src
+
+* Configuration
+
+On first starting Calibre you are asked for a location to install the database to, copies of books (ePub, PDF etc.) that
+you upload are saved here too. I create an initial database on my desktop server but then wanted to run it headless on a
+server that is always on so zipped up the directory and transferred it.
+
+** Server
+
+Ultimately I wanted to set this up as a server so I could easily manage my books from anywhere. I found a nice [[https://linuxconfig.org/how-to-remotely-access-your-ebooks-library-with-calibre-server][tutorial]]
+which walks you through how to do this. The decision I had to make was where to host. Install of Calibre was ~760Mb
+which I didn't want adding to my limited VPS where I only have 40GB of storage. I therefore opted to install it on my
+Raspberry Pi.
+
+
+I encountered a problem setting up Calibre on the Raspberry Pi though, it requires Python 3.10 but the current version
+of Python on ARM under Arch Linux is 3.12.7.
+
+#+begin_src sh
+sudo useradd --system --shell /usr/sbin/nologin calibre-server
+mkdir /var/log/calibre-server
+chown calibre-server:calibre-server /var/log/calibre-server/
+chown -R calibre-server:calibre-server /opt/calibre
+calibre-server --manage-users --userdb=/opt/calibre/calibre_users.sqlite
+calibre-server --enable-local-write --daemonize --enable-auth --userdb=/opt/calibre/calibre_users.sqlite /opt/calibre
+#+end_src
+#+begin_src sh
+[Unit]
+Description=Start calibre content server
+After=network.target
+
+[Service]
+Type=simple
+User=calibre-server
+Group=calibre-server
+ExecStart=/usr/bin/calibre-server --userdb=/srv/calibre/database --enable-auth --access-log=/var/log/calibre-server/access_log --ssl-certfile=/srv/calibre/certificate.pem --ssl-keyfile=/sr
+v/calibre/privatekey.pem /srv/calibre/library
+
+[Install]
+WantedBy=multi-user.target
+#+end_src
+
+
+* Links
+
++ [[https://manual.calibre-ebook.com/][Manual]]
++ [[https://linuxconfig.org/how-to-remotely-access-your-ebooks-library-with-calibre-server][How to remotely access your ebooks library with Calibre server - LinuxConfig]]
