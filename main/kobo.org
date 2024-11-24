@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d08d1fe6-5317-4f09-95f7-d47e8811e007
-:mtime:    20240204200239 20240203183424 20240125114215 20231217164206 20231211080621 20230910113351 20230724072348 20230707232550
+:mtime:    20241123192353 20240204200239 20240203183424 20240125114215 20231217164206 20231211080621 20230910113351 20230724072348 20230707232550
 :ctime:    20230707232550
 :END:
 #+TITLE: Kobo
@@ -22,6 +22,10 @@ version).
 
 + [[https://en.wikipedia.org/wiki/Kobo_Aura][Kobo Aura - Wikipedia]]
 + [[https://help.kobo.com/hc/en-us/articles/360019690433-Products-no-longer-manufactured-or-supported-by-Kobo][Products no longer manufactured or supported by Kobo – Rakuten Kobo]]
+
+** Official (Rakuten Kobo)
+
++ [[https://help.kobo.com/hc/en-us/articles/360017605294-Manual-reset-your-Kobo-Aura-One][Manual reset your Kobo Aura One – Rakuten Kobo]]
 
 ** Hacking
 
