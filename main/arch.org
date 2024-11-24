@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a53fa3c5-f091-4715-a1a4-a94071407abf
-:mtime:    20240523145115 20240523132208 20240502105958 20231022214824 20230908084133 20230907222812 20230813184404 20230812222550 20230623080100 20230215101306
+:mtime:    20241124190532 20240523145115 20240523132208 20240502105958 20231022214824 20230908084133 20230907222812 20230813184404 20230812222550 20230623080100 20230215101306
 :ctime:    20230215101306
 :END:
 #+TITLE: Arch Linux
@@ -97,6 +97,22 @@ recognise them. To solve this is to update the ~archlinux-keyring~ package first
 #+begin_src bash
 pacman -S archlinux-keyring
 #+end_src
+
+** Removing Packages
+
+Straight forward with the ~-R~ flag
+
+#+begin_src bash
+pacman -R calibre
+#+end_src
+
+But this doesn't remove any dependencies that were pulled in as requirements to that package. Such orphaned files can be
+removed using the following.
+
+#+begin_src bash
+pacman -Qqtd | pacman -Rns -p
+#+end_src
+
 
 ** Downgrading Packages
 
