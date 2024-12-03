@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       18820a48-4ec2-43d7-a0a3-01fc5beca40d
-:mtime:    20240910123408 20240603215054 20240215074645 20240212071535 20240204194822
+:mtime:    20241202080209 20240910123408 20240603215054 20240215074645 20240212071535 20240204194822
 :ctime:    20240204194822
 :END:
 #+TITLE: Books
@@ -30,6 +30,7 @@ Good places to buy that aren't Amazon
 + [[https://www.kobo.com/][Kobo]]
 + [[https://annas-archive.org/][Annas Archive]]
 + [[https://www.gutenberg.org/][Project Gutenberg]]
++ [[https://archive.org/details/mit_press_open_access][MIT Press: Open Access Materials : Internet Archive]]
 
 * Read
 
@@ -52,7 +53,7 @@ Good places to buy that aren't Amazon
 + /The Carpet People/
 + /Diggers/
 + /Wings/
-+ /Good Oments/
++ /Good Omens/
 
 *** Neil Gaiman
 
@@ -63,7 +64,7 @@ Good places to buy that aren't Amazon
 + /Termination Shock/
 + /Seven Eves/
 + /Cryptonomicon/
-+ /In the Begging was the Command Line/
++ /In the Begining was the Command Line/
 
 ** Non-Fiction
 
