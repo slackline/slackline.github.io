@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       708f5d99-6040-4306-a323-306d39ce45c3
-:mtime:    20240715163129 20240709204003 20240611153339 20240331202209 20240225185002 20240206201930 20240118162910 20231113221350 20230621183025 20230511204503 20230215095632 20230129085036 20230114084505 20230103103311 20221209211925
+:mtime:    20241203232124 20241203220011 20240715163129 20240709204003 20240611153339 20240331202209 20240225185002 20240206201930 20240118162910 20231113221350 20230621183025 20230511204503 20230215095632 20230129085036 20230114084505 20230103103311 20221209211925
 :ctime:    20221209211925
 :END:
 #+TITLE: Emacs Lisp
@@ -10,6 +10,46 @@
 Emacs LISP is a [[id:ea1499ab-dab2-49b1-8479-cb5a2fbd38bc][Programming]] language specifically for using under [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] and it has developed and evolved in tandem with
 Emacs itself. The easiest way of getting started with Emacs is to use the built-in /An Introduction to Programming in
 Emacs Lisp/ that is available from within Emacs using ~C-h i m Emacs Lisp Intro~
+
+* [[https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][An Introduction to Programming in Emacs Lisp]]
+
+** [[https://www.gnu.org/software/emacs/manual/html_node/eintr/List-Processing.html][Chapter 1 - List Processing]]
+
+*** Syntax
++ A list is anything in parentheses.
++ Lists consist of atoms, indivisible units, separated by white space.
++ /symbolic expressions/ (/s-expressions/ or /sexp/) are the printed representation of atoms and lists.
++ The first element of a list is treated as a function e.g. in ~(+ 21 34)~ the ~+~ is a function (for addition) and it
+  acts on the remaining elements of the list.
++ Prefixing a list  with a single quote ~'~ (~'(something else in a list)~) prevents the first element of the list being
+  treated as a function.
++ Evaluating a list where the first element isn't a function (e.g. ~(not a list that begins with a function)~) results
+  in an error and the debugger is started automatically.
++ If a symbol (typically an atom in a list) is not a function then the place it should hold the details of the function
+  is "void" hence the ~void-function~ error message.
++ The list ~(+ 21 34)~ the ~+~ is a function and has a set of instructions associated with it that tell the interpreter
+  what to do with the remainder of the list.
+
+*** Lisp Interpreter
+
+Works from left to right and...
+
+1. Looks for quote at start, if found returns the list.
+2. Looks for function associated with first element (atom) of the list, if found carries out the instructions.
+3. If 1. and 2. are not met an error message is printed (and the debugger may be started).
+
+The result of evaluation are that a value is returned, or some other side-effect takes place (e.g. copying
+files). Printing the results is considered a side-effect but one that is widely used.
+
+**** Exceptions
+
++ Lisp interpreter can evaluate symbols that are not quoted or lack parentheses and treats these as "variables".
++ Some functions don't behave the same as other functions.
++ Macros aren't functions they translate a Lisp expression into another expression that is evaluated instead.
++ If the first argument of a list is itself a list it is evaluated first.
+*** Commands
++ Evaluate the previous list using ~C-x C-e~ when the cursor is after the last parentheses.
++ Exit the debugger with ~q~.
 
 * Tips and Tricks
 
