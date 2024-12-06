@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       ca8b60d2-879a-49bf-95d1-b5c118e531c1
-:mtime:    20240410201306
+:mtime:    20241206091532 20240410201306
 :ctime:    20240410201306
 :END:
-#+TITLE: Food: Vegeterian
+#+TITLE: Food : Vegeterian
 #+FILETAGS: :food:cooking:vegeterian:
 
 

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       43927400-7eaf-4a13-9352-6c76b0da8c97
-:mtime:    20240410162256
+:mtime:    20241206091537 20240410162256
 :ctime:    20240410162256
 :END:
 #+TITLE: Food : Slovenian
@@ -15,7 +15,7 @@
 + Celery
 + Carrots
 + Onions
-+ Parlsey Root
++ Parsley Root
 + Fresh Parsley
 + Cooked smoked pork or Sausages
 + Vegetable Stock
