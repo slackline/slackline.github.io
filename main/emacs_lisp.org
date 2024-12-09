@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       708f5d99-6040-4306-a323-306d39ce45c3
-:mtime:    20241203232124 20241203220011 20240715163129 20240709204003 20240611153339 20240331202209 20240225185002 20240206201930 20240118162910 20231113221350 20230621183025 20230511204503 20230215095632 20230129085036 20230114084505 20230103103311 20221209211925
+:mtime:    20241206212307 20241203232124 20241203220011 20240715163129 20240709204003 20240611153339 20240331202209 20240225185002 20240206201930 20240118162910 20231113221350 20230621183025 20230511204503 20230215095632 20230129085036 20230114084505 20230103103311 20221209211925
 :ctime:    20221209211925
 :END:
 #+TITLE: Emacs Lisp
@@ -41,13 +41,42 @@ Works from left to right and...
 The result of evaluation are that a value is returned, or some other side-effect takes place (e.g. copying
 files). Printing the results is considered a side-effect but one that is widely used.
 
++ Nested or "inner" lists are evaluated first and their returned value used in the outer list.
++ You can evaluate the nested list in place and see its returned value by placing the cursor after the closing
+  parentheses.
++ You can evaluate numbers.
+
 **** Exceptions
 
 + Lisp interpreter can evaluate symbols that are not quoted or lack parentheses and treats these as "variables".
 + Some functions don't behave the same as other functions.
 + Macros aren't functions they translate a Lisp expression into another expression that is evaluated instead.
 + If the first argument of a list is itself a list it is evaluated first.
-*** Commands
+
+*** Variables
+
++ Symbols can have either a function definition attached or a value, or both.
++ Having a value associated with a symbol is what makes it a variable.
++ To find the value associated with a variable simply evaluate it.
++ You can set the value of a variable(/symbol) using ~setq~, remembering that we place the function first in parentheses
+  followed by the symbol and then a quoted list we can.
+
+#+begin_src elisp
+  (setq our_cats '(george cali carrot coco))
+#+end_src
+
+...sets ~our_cats~ to be the list. After evaluating you can check the value of ~our_cats~.
+
+**** Errors with Symbols/Variables
+
++ If you try to evaluate a variable as a function when it has no function associated with it a ~void-function~ error is
+  raised and the debugger entered. This can easily happen if the variable/symbol is the first argument within
+  parentheses.
++ Similarly if you attempt to evaluate a symbol that has a function but no value associated with it you will see a
+  ~void-variable~ error is raised.
+
+* Commands
+
 + Evaluate the previous list using ~C-x C-e~ when the cursor is after the last parentheses.
 + Exit the debugger with ~q~.
 
@@ -60,6 +89,10 @@ Backticks (~`~) allow you to selectively evaluate sections of a list that are pr
 as the list after the comma is evaluated (but only if a back-tick is used) ([[https://fosstodon.org/@dliden@emacs.ch/111884927150599744][source]] / [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Backquote.html][manual]]).
 * Links
 
++ [[https://github.com/p3r7/awesome-elisp][p3r7/awesome-elisp: 🏵️ A curated list of Emacs Lisp development resources]]
+
+** Articles
+
 + [[https://yoo2080.wordpress.com/2011/12/31/lexical-scoping-and-dynamic-scoping-in-emacs-lisp/][lexical scoping and dynamic scoping in Emacs Lisp | Yoo Box]]
 
 ** Learning Resources
@@ -70,7 +103,7 @@ as the list after the comma is evaluated (but only if a back-tick is used) ([[ht
 + [[https://yt.artemislena.eu/watch?v=x9Qws7ZOksc][Learning Elisp - 1 - intro - Invidious]]
 + [[https://www.youtube.com/playlist?list=PL9KxKa8NpFxKGctwh4-BqjQvdSRhh4NV-][learning-elisp - YouTube]]
 
-*** Gaving Freeborn
+*** Gavin Freeborn
 
 + [[https://piped.video/watch?v=NocDm4zzToo][LEARN EMACS LISP - Mostly The Strange Parts - Piped]]
 + [[https://piped.video/watch?v=AfY_zGR_QBI][Why Lisp Is One Of The Most Productive Programming Languages]]
