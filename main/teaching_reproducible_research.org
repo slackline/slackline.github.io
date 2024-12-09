@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ecaeb512-f4d8-4f3a-8788-71291515bcf5
-:mtime:    20241110212055 20241110185043 20230620153945 20230620135143
+:mtime:    20241206213743 20241110212055 20241110185043 20230620153945 20230620135143
 :ctime:    20230620135143
 :END:
 #+TITLE: Teaching Reproducible Research
@@ -91,6 +91,11 @@ Really good talk on teaching reproducibility to students.
 
 * Links
 
+** Papers
+
++ [[https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0308729][Using Glittr.org to find, compare and re-use online materials for training and education | PLOS ONE]]
+
 ** Teaching Resources
 
 + [[https://qubeshub.org/community/groups/coursesource/][CouresSource]] - evidence-based teaching resources for undergraduate biology and physics
++ [[https://glittr.org/][Glittr.org | Educational materials for the computational life sciences]]
