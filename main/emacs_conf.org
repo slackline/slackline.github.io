@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f76ac811-6c1a-4aa6-9492-8cbae7cb50ca
-:mtime:    20241031080307 20231204134451 20230103103314 20221224191223
+:mtime:    20241207224639 20241207180917 20241031080307 20231204134451 20230103103314 20221224191223
 :ctime:    20221224191223
 :END:
 #+TITLE: Emacs Conf
@@ -20,4 +20,45 @@ I use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] as my primary IDE (and 
 + [[https://emacsconf.org/2015/][2015]]
 + [[https://emacsconf.org/2013/][2013]]
 
-* 2022 Highlights
+* 2024
+
++ [[https://live.emacsconf.org/2024/watch/gen/#sched][General Schedule]] - includes links to Etherpad
++ [[https://live.emacsconf.org/2024/watch/dev/][Development Scehdule]] - includes links to Etherpad
++ [[https://emacsconf.org/2024/talks/papers][Papers & Pads]] - archive of papers and pads from the conference
+
+** Managing Writing Project Metadata with Org-mode
++ Log files for writing research articles. [[https://github.com/MooersLab#emacs-related]]
++ [[https://github.com/MooersLab/writingLogTemplateInOrg][MooersLab/writingLogTemplateInOrg: Template for writing.log in org-mode]]
+
+** The Future of Org
++ [[https://list.orgmode.org/orgmode/][emacs-orgmode@gnu.org]] mailing list archives
++ Plan to modularise the existing libraries into many smaller ones.
++ Look to upstream libraries to Emacs.
++ Migrate to ~transient.el~ menus for org-mode.
++ Move documentation from Org Wiki to internal Info system.
++ ~org-contrib~ is depreacated as of Org 9.5
++ [[https://orgmode.org/word/org-orphanage.html][Libraries in search of maintainers]] see also [[https://github.com/emacsorphanage][Emacs Orphanage]]
++ ~yantar92~ on Matrix
+
+** Perfect Theme
++ Themes from [[https://github.com/MetroWind?tab=repositories&type=source][MetroWind]]
+  + [[https://github.com/MetroWind/notink-theme][notink-theme]] inspired by e-ink displays
+  + [[https://github.com/MetroWind/flucui-theme][flucui-theme]] inspired by http://flatuicolors.com. Has both light and dark variants.
+  + [[https://github.com/MetroWind/lab-theme][lab-theme]] next iteration of flucui-theme
++ Applies random themes now which led to...
++ [[https://github.com/MetroWind/monte-carlo-theme][monte-carlo-theme]] : A Emacs theme to test your luck! which picks random themes.
++ Adjusts hue, lightness and chroma
++ Needs to convert HLC colourspace to sRGB
+
+** Emacs as a Shell
++ Emacs won't perform as well as a dedicated terminal but that isn't what is meant here.
++ ~ehsell~ is available though which combines a Bash like shell with Elisp.
++ Emacs allows working with other programmes on your system.
+
+** Re-imagining the Emacs User Experience with Casual Suite
+
++ [[https://emacsconf.org/2024/talks/casual/][EmacsConf - 2024 - talks - Re-imagining the Emacs User Experience with Casual Suite]]
+
+** Exploring shared philosophies in Julia and Emacs
+
++ [[https://emacsconf.org/2024/talks/julia/][EmacsConf - 2024 - talks - Exploring shared philosophies in Julia and Emacs]]
