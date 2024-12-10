@@ -17,3 +17,7 @@
 + [[https://economicsfromthetopdown.com/2024/02/17/nixing-technological-lock-in/][Nixing Technological Lock In – Economics from the Top Down]]
 + [[https://www.software.ac.uk/blog/reproducible-environments-nix][Reproducible Environments With Nix | Software Sustainability Institute]]
 + [[https://www.youtube.com/watch?v=cJJa0ztEVD8][NixOS: Pros and cons of truly reproducible builds - Ben Orchard - YouTube]]
+
+** Video
+
++ [[https://www.youtube.com/watch?v=CwfKlX3rA6E][NixOS: Everything Everywhere All At Once - YouTube]]
