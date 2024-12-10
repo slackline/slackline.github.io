@@ -1,11 +1,17 @@
 :PROPERTIES:
 :ID:       e4b22dd5-edf1-4801-9e82-e8786c18de09
-:mtime:    20240326100253
+:mtime:    20241210202948 20240326100253
 :ctime:    20240326100253
 :END:
 #+TITLE: R Tidymodels
 #+FILETAGS: :r:statistics:modelling:tidymodels:
 
+
+* Packages
+
+** Orbital
+
+[[https://orbital.tidymodels.org/index.html][Predict with tidymodels Workflows in Databases • orbital]]
 
 * Links
 
