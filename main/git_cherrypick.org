@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       99f96237-270e-4c2c-81c1-0503ee2725bf
+:mtime:    20241210164138
+:ctime:    20241210164138
+:END:
+#+TITLE: Git Cherrypick
+#+FILETAGS: :git:vc:versioncontrol:magit:
+
+Cherry picking allows you to select specific commits, or a range of commits from one branch and apply them to your
+current branch.
+
+* Individual Files
+
+If you just want the state of a file from another branch you can the following to pull the ~file_of_interest~ onto the
+current branch
+
+#+begin_src
+git checkout <commit|branch> -- file_of_interest
+#+end_src
+
+Alternatively you can use `git diff` to show the difference between ~HEAD~ and a commit.
+
+#+begin_src
+git diff HEAD^..<commit|branch> -- file_of_interest | git apply
+#+end_src
+
+Note however that if you have enabled [[https://difftastic.wilfred.me.uk/][difftastic]] as your default for ~git diff~ this won't work as it doesn't produce a
+valid diff!
