@@ -6,6 +6,31 @@
 #+TITLE: Python Typing
 #+FILETAGS: :python:typing:mypy:
 
+* Configuration
+
+Should ideally be done via ~pyproject.toml~ and example follows
+
+#+begin_src toml
+[tool.mypy]
+files = [
+  "isoslam",
+  "tests"
+]
+python_version = "3.10"
+strict = true
+enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
+warn_unreachable = true
+warn_unused_ignores = true
+exclude = [
+  '^all_introns_counts_and_info\.py$',
+  '^pipeline_slam_3UIs\.py$',
+]
+
+[[tool.mypy.overrides]]
+module = [ "numpy.*", "loguru", "ruamel.yaml", "pysam"]
+ignore_missing_imports = true
+
+#+end_src
 * Links
 
 + [[https://www.mypy-lang.org/][mypy - Optional Static Typing for Python]] ([[https://mypy.readthedocs.io/en/stable/index.html][documentation]])
