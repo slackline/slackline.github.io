@@ -1,7 +1,6 @@
-
 :PROPERTIES:
 :ID:       a37b61ba-8699-4ee3-b407-38f256c186c4
-:mtime:    20240630205259 20240204192058
+:mtime:    20241211112128 20240630205259 20240204192058
 :ctime:    20240204192058
 :END:
 #+TITLE: Jujutsu
@@ -32,4 +31,5 @@ commit this introduces a new working-copy commit where changes are recorded (no 
 ** Blogs
 
 + [[https://v5.chriskrycho.com/essays/jj-init/][jj init — Sympolymathesy, by Chris Krycho]]
++ [[https://reasonablypolymorphic.com/blog/jj-strategy/index.html][Jujutsu Strategies :: Reasonably Polymorphic]]
 + [[https://ofcr.se/jujutsu-merge-workflow][A Better Merge Workflow with Jujutsu | ofcrse by Benjamin Tan]]
