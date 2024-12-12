@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5e4b0759-696f-47a7-81c1-a7506aab41a0
-:mtime:    20241110182359 20241110164410 20241006205543 20240502093004 20240426165410 20240422071430 20240306145316
+:mtime:    20241213210224 20241110182359 20241110164410 20241006205543 20240502093004 20240426165410 20240422071430 20240306145316
 :ctime:    20240306145316
 :END:
 #+TITLE: Reading
@@ -148,7 +148,8 @@ nature v nurture.
 *** Economics
 + <2024-04-26 Fri> [[https://rooseveltinstitute.org/publications/the-cultural-contradictions-of-neoliberalism/][The Cultural Contradictions of Neoliberalism: The Longing for an Alternative Order and the Future of
   Multiracial Democracy in an Age of Authoritarianism - Roosevelt Institute]]
-
+*** Computing
++ [[https://lil.law.harvard.edu/century-scale-storage/][Century-Scale Storage]]
 *** Long Reads
 + [[https://www.slow-journalism.com/][Delayed Gratification | The Slow Journalism Magazine | Last to breaking news]]L
 * Not Yet Read
