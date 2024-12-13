@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c3d85b0a-29e6-49e4-9349-0072a9604cfa
-:mtime:    20241115191626 20240809213446 20240120102519
+:mtime:    20241213162427 20241115191626 20240809213446 20240120102519
 :ctime:    20240120102519
 :END:
 #+TITLE: Music Electronic
@@ -92,3 +92,7 @@ on Soundcloud.
 + [[https://o-o-music.bandcamp.com/music][O'o]]
 + [[https://orathemolecule.bandcamp.com/music][Ora The Molecule]]
 + [[https://richardfearless.bandcamp.com/][Richard Fearless]]
+
+* Cosmicleaf
+
+A Greek record label with a bunch of stuff on [[https://cosmicleaf.bandcamp.com/][Bandcamp]] but also a load of [[https://cosmicleaf.gr/tag/63/free-download/releases][Free downloads]].
