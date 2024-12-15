@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       01336e19-dc8a-41ca-8534-6a790b39b1b6
+:mtime:    20241215081001
+:ctime:    20241215081001
+:END:
+#+TITLE: NixOS - HomeManager
+#+FILETAGS: :nixos:linux:homemanager:
+
+[[https://nix-community.github.io/home-manager/][Home Manager]] is a tool for managing users ~$HOME~ directories. It allows configuration of programs such as [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]]
+, [[id:868b46bc-3594-4cf2-aecb-ca6e1389ac27][Kitty]], GIMP and many others in NixOS' declarative manner.
+
+* Links
+
++ [[https://nix-community.github.io/home-manager/][Home Manager Manual]]

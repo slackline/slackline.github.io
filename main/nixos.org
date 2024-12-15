@@ -1,267 +1,16 @@
 :PROPERTIES:
 :ID:       69291a6b-c253-44bc-ad9d-8d899bb90529
-:mtime:    20241214235221 20241214074620 20241214064000 20241213214801 20241213074524 20241212212528 20241211115355 20241211103642 20241210065459 20240324205532 20240305091938 20240304160447
+:mtime:    20241215084508 20241214235221 20241214074620 20241214064000 20241213214801 20241213074524 20241212212528 20241211115355 20241211103642 20241210065459 20240324205532 20240305091938 20240304160447
 :ctime:    20240304160447
 :END:
 #+TITLE: NixOS
 #+FILETAGS: :linux:unix:nixos:
 
-* Installation
-
-The [[https://nixos.org/manual/nixos/stable/#sec-booting-from-usb][installation]] requires creating a bootable USB, there are two [[https://nixos.org/download/#nixos-iso][options]] a a Graphical ISO image (with GNOME or
-Plasma Desktop to choose between) or a Minimal ISO image that uses the console. I opted for the later.
-
-Once downloaded you need to copy the ISO to a USB drive. Tweak the following to reflect the location you have saved the
-~.iso~ to and the device your USB drive is detected as (use ~dmesg | tail~ after inserting the USB or ~lsblk~ to list
-the available devices and compare to your ~/etc/fstab~ you don't want to get the target device wrong as it could wipe
-your installation!)
-
-#+begin_src sh
-dd bs=4M conv=fsync oflag=direct status=progress if=/path/to/nixos-minimal-24.11.710650.e2605d0744c2-x86_64-linux.iso of=/dev/sd<#>
-#+end_src
-
-** Boot NixOS
-
-Depends on your computers BIOS settings but insert the USB drive and enable booting from the USB drive.
-
-** Partitioning
-
-I'm familiar with ~cfdisk~ having used it over the years when installing various [[id:88fc1e91-d928-485e-83b4-1991663fa267][GNU/Linux]] operating systems such as
-[[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]] and more recently [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] so opted to use that to partition my hard drive. I have a 1TB drive and opted to
-create four physical partitions with a separate ~/home/~ partition and despite having 32GB of RAM opted for an 8GB swap
-partition.
-
-| Partition   | Label   | Size |
-|-------------+---------+------|
-| ~/dev/sda1~ | ~boot~  | 512M |
-| ~/dev/sda2~ | ~nixos~ | 100G |
-| ~/dev/sda3~ | ~swap~  | 8G   |
-| ~/dev/sda4~ | ~home~  | 832G |
-
-** Formatting Filesystems
-
-I opted to go with the reliable ~ext4~ file system.
-
-#+begin_src sh
-mkfs.ext4 -L nixos /dev/sda2
-mkfs.ext4 -L home /dev/sda4
-mkfs.fat -F 32 -n boot /dev/sda1
-mkswap -L swap /dev/sda3
-#+end_src
-
-** Install
-
-Once partitions had been formatted the next step, as with any other boot-strap installation, is you need to mount the
-partitions to perform the installation, although unlike [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]] and [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] you don't have to ~chroot~ into the
-environment.
-
-#+begin_src sh
-mount /dev/disk/by-label/nixos /mnt/
-mkdir /mnt/{boot,home}
-mount -o umask=077 /dev/disk/by-label/boot /mnt/boot
-mount /dev/disk/by-label/home /mnt/home
-swapon /dev/disk/by-label/swap
-#+end_src
-
-Of course you could use the partitions you created rather than the labels...
-
-#+begin_src sh
-mount /dev/sda2 /mnt/
-mkdir /mnt/{boot,home}
-mount -o umask=077 /dev/sda1 /mnt/boot
-mount /dev/sda4 /mnt/home
-swapon /dev/sda3
-#+end_src
-
-** Generate ~configuration.nix~
-
-Being a declarative operating system a file is required that declares all of your desired options and preferences.
-
-This is created using ~nixos-generate-config~ and requires an option saying where the ~--root~ of the system should be
-(in this case where the disk labelled ~nixos~ has been mounted).
-
-#+begin_src sh
-nixos-generate-config --root /mnt
-#+end_src
-
-** Configure the System
-
-You can now edit the generated ~/mnt/etc/nixos/configuration.nix~ using ~nano~.
-
-#+begin_src sh
-nano /mnt/etc/nixos/configuration.nix
-#+end_src
-
-It is very well commented and many fields are already uncommented. I changed and the values of some to leave myself with
-the following...
-
-#+begin_src
-{ config, lib, pkgs, ...}:
-
-{
-  imports =
-    [ # Include the results of the hardware scan
-      ./hardware-configuration.nix
-    ];
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  networking.hostname = "crow";
-  networking.networkmanager.enable = true;
-  time.timeZone = "Europe/London";
-  i18n.defaultLocale = "en_GB.UTF-8";
-  services.xserver.enable = true;
-  services.xserver.xkb.layout = "gb";
-  service.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
-  services.libinpu = true;
-  users.users.username = {
-    isNormalUser = true;
-    packages = with pkgs; [
-      tree
-    ];
-  };
-  programs.firefox.enable = true;
-  environment.systemPackages = with pkgs; [
-    emacs
-    wget
-  ];
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
-  services.openssh.enable = true;
-  system.stateVersion = "24.11";
-}
-#+end_src
-
-Save the file and exit (in ~nano~ this is ~C-o Enter~ then ~C-x~).
-
-** Install the System
-
-To install the system its
-
-#+begin_src sh
-nixos-install
-#+end_src
-
-At the end of the process you are prompted to set a ~root~ password. And if you have configured a user account you can
-set the password for that account with...
-
-#+begin_src sh
-nixos-enter --root /mnt -c 'passwd username'
-#+end_src
-
-** Reboot
-
-Its then a simple case of rebooting.
-
-#+begin_src sh
-reboot
-#+end_src
-
-
-** Trouble Shooting
-
-The system rebooted into a graphical user interface, but I was unable to login with either the account I created or the
-~root~ account.  However switching to TTY1 with ~Ctrl-Alt-F1~ and I could login with my user account and ~sudo su~ to
-root so I have a working system, although its not currently connected to the WiFi. To connect I repeated the steps from
-the installation manual. Before doing anything else though I decided to reboot into the installation disk, reconnect to
-Wifi so I could update my configuration to enable Flakes. Went round a few times in circles and ended up disabling
-~NetworkManager~ from the configuration and enabling ~wpa_supplicant~ from the installation disk then rebooting and
-ensuring that ~NetworkManager~ was disabled and configured and enabled [[https://nixos.wiki/wiki/Wpa_supplicant][~wpa_supplicant~]] from the new installation.
-
-I took the time to enable Flakes at the same time (see next section) so I didn't had on less configuration in my history.
-
-#+begin_src
-networking.wireless = {
-    enable = true;
-    networks."my-network".psk = "somerandompassword";
-    extraConfig = "ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=wheel";
-}
-networking.networkmanager.enable = false;
-#+end_src
-
-Restarting the service and I could connect \o/, I might have had to explicitly start the service, I can't remember, but
-because the service was configured declaratively under ~/etc/nixos/configuration.nix~ I didn't have to use ~wpa_cli~ to
-establish the connection as I did from the Live boot disk.
-
-#+begin_src
-sudo nixos-rebuild
-sudo systemctl start wpa_supplicant
-#+end_src
-
-Because I enabled Flakes at the same time as switching to ~wpa_supplicant~ I could now check out templates with ~nix
-flake show templates~, which brings us up-to-date with the need to introduce and understand Flakes
-
-* Nix Flakes
-
-One of my colleagues has also been experimenting with NixOS and put me onto the [[https://nixos-and-flakes.thiscute.world/introduction/][NixOS & Flakes Book]]. As it clearly
-states Flakes is experimental, but has seen wide-spread adoption in the community. I therefore opted to go with the
-flow, willing to accept there may be some breaking changes down the line. I don't mind this, I first installed [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]]
-about 20 years ago and before that ran Slackware for a few years after getting frustrated with circular dependency hell
-under Red Hat Linux 7.3.
-
-The configuration to enable this is declared, as [[https://nixos-and-flakes.thiscute.world/nixos-with-flakes/nixos-with-flakes-enabled#enable-nix-flakes][described]], in ~/etc/nixos/configuration.nix~...
-
-#+begin_src
-{ config, pkgs, ... }:
-
-{
-  imports = [
-    ./hardware-configuration.nix
-  ];
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  environment.systemPackages = withpkgs; [
-    emacs
-    git
-    wget
-  ]
-};
-#+end_src
-
-And after making any changes we need to ~nixos-rebuild switch~. This again failed so I regenerated a basic ~flake.nix~
-with
-
-#+begin_src
-nix flake new example -t github:nix-community/home-manager#nixos
-#+end_src
-
-I had to modify the ~hostname~ variable in this generated file to reflect the hostname that I had set. but still got an
-error when trying to ~nixos-rebuild switch~ that ended with ~system.copySystemConfiguration is not supported with
-flakes~. A quick search on the forums threw up [[https://discourse.nixos.org/t/nixos-config-error-while-combining-configuration-nix-and-flakes/23918][this thread]] which suggested disabling ~system.copySystemConfiguration =
-false~ in the ~configuration.nix~ file.
-
-* Configuration of Services
-
-** SSH
-
-Having an ~sshd~ service running allows remote access. For security I use [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] keys and remove password
-authentication. I explicitly disable interactive authenticaion and root login and configure the port to be something
-other than the default (~22~).
-
-#+begin_src
-services.openssh = {
-  enable = true;
-  settings = {
-    passwordAuthentication = false;
-    AllowUsers = [ "user" ];
-    KbdInteractiveAuthentication = false;
-    X11Forwarding = false;
-    PermitRootLogin = "no";
-    Port = "12345";
-  };
-};
-#+end_src
-
-When SSHing from this system to others I also have password authentication disabled. So that I don't have to enter the
-key for my password each time I need to enable an ~ssh-agent~ to hold the keys.
-
-#+begin_src
-programs.ssh.startAgent = true;
-#+end_src
-
++ [[id:5249c437-1ff7-4925-937d-9e9c42256ef1][Installation]]
++ [[id:c9eb0e6d-b152-487c-90d4-3786fcfd0889][Flakes]]
++ [[id:01336e19-dc8a-41ca-8534-6a790b39b1b6][Home Manager]]
++ [[id:c345f901-5a1f-4868-b8bf-bc352554ee58][Security]]
++
 
 
 * Links
@@ -290,6 +39,9 @@ I keep a list of useful [[https://github.com/stars/slackline/lists/nixos][GitHub
 + [[https://github.com/nix-community/templates][nix-community/templates: Nix flake templates managed by the community [maintainer=@IogaMaster]]]
 + [[https://github.com/numtide/flake-utils][numtide/flake-utils: Pure Nix flake utility functions [maintainer=@zimbatm]]]
 
+**** nix-plugins
+
++ [[https://github.com/shlevy/nix-plugins][GitHub - shlevy/nix-plugins: Collection of miscellaneous plugins for the nix expression language]]
 *** [[https://nixos.wiki/wiki/][Wiki]]
 
 + [[https://wiki.nixos.org/wiki/Emacs][Emacs]] ([[https://nix-community.github.io/home-manager/options.xhtml#opt-programs.emacs.enable][Home Manager - Emacs]])
@@ -310,6 +62,9 @@ I keep a list of useful [[https://github.com/stars/slackline/lists/nixos][GitHub
 
 + [[https://stephank.nl/p/2023-02-28-using-flakes-for-nixos-configs.html][Using flakes for NixOS configurations]]
 
+*** NixOps
+
++ [[https://elvishjerricco.github.io/2018/06/24/secure-declarative-key-management.html][Secure, Declarative Key Management with NixOps, Pass, and nix-plugins]]
 ** Video
 
 + [[https://www.youtube.com/watch?v=CwfKlX3rA6E][NixOS: Everything Everywhere All At Once - YouTube]]

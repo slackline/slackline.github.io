@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       c9eb0e6d-b152-487c-90d4-3786fcfd0889
+:mtime:    20241215075655
+:ctime:    20241215075655
+:END:
+#+TITLE: NixOS - Flakes
+#+FILETAGS: :nixos:linux:configuration:
+
+One of my colleagues has also been experimenting with NixOS and put me onto the [[https://nixos-and-flakes.thiscute.world/introduction/][NixOS & Flakes Book]]. As it clearly
+states Flakes is experimental, but has seen wide-spread adoption in the community. I therefore opted to go with the
+flow, willing to accept there may be some breaking changes down the line. I don't mind this, I first installed [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]]
+about 20 years ago and before that ran Slackware for a few years after getting frustrated with circular dependency hell
+under Red Hat Linux 7.3.
+
+The configuration to enable this is declared, as [[https://nixos-and-flakes.thiscute.world/nixos-with-flakes/nixos-with-flakes-enabled#enable-nix-flakes][described]], in ~/etc/nixos/configuration.nix~...
+
+#+begin_src
+{ config, pkgs, ... }:
+
+{
+  imports = [
+    ./hardware-configuration.nix
+  ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  environment.systemPackages = withpkgs; [
+    emacs
+    git
+    wget
+  ]
+};
+#+end_src
+
+And after making any changes we need to ~nixos-rebuild switch~. This again failed so I regenerated a basic ~flake.nix~
+with
+
+#+begin_src
+nix flake new example -t github:nix-community/home-manager#nixos
+#+end_src
+
+I had to modify the ~hostname~ variable in this generated file to reflect the hostname that I had set. but still got an
+error when trying to ~nixos-rebuild switch~ that ended with ~system.copySystemConfiguration is not supported with
+flakes~. A quick search on the forums threw up [[https://discourse.nixos.org/t/nixos-config-error-while-combining-configuration-nix-and-flakes/23918][this thread]] which suggested disabling ~system.copySystemConfiguration =
+false~ in the ~configuration.nix~ file.

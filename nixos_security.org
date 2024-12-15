@@ -1,0 +1,95 @@
+:PROPERTIES:
+:ID:       c345f901-5a1f-4868-b8bf-bc352554ee58
+:mtime:    20241215084441
+:ctime:    20241215084441
+:END:
+#+TITLE: NixOS - Security
+#+FILETAGS: :nixos:linux:security:ssh:gpg:
+
+There are many layers of security to be considered when setting up and using any computer, NixOS is no different. One
+important thing to consider is NixOS stores /everything/ in its own special file store under ~/nix/store~ so you should
+be very careful about putting passwords in any ~/etc/nixos/*.nix~ file.
+
+* NixOps
+
+* SSH
+
+** ~sshd~ Configuration
+
+Having an ~sshd~ service running allows remote access. For security I use [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] keys and remove password
+authentication. I explicitly disable interactive authenticaion and root login and configure the port to be something
+other than the default (~22~).
+
+#+begin_src
+services.openssh = {
+  enable = true;
+  settings = {
+    passwordAuthentication = false;
+    AllowUsers = [ "user" ];
+    KbdInteractiveAuthentication = false;
+    X11Forwarding = false;
+    PermitRootLogin = "no";
+    Port = "12345";
+  };
+};
+#+end_src
+
+
+** SSH Agent
+
+When SSHing from this system to others I also have password authentication disabled. So that I don't have to enter the
+key for my password each time I need to enable an ~ssh-agent~ to hold the keys.
+
+#+begin_src
+programs.ssh.startAgent = true;
+#+end_src
+
+** User Configuration
+
+* GPG
+
+[[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] offers secure encryption for all your secrets and files and works seamlessly with tools such as ~pass~ and [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]].
+
+** System Configuration
+
+Install system wide by adding it to ~environment.systemPacjages~ in ~/etc/nixos/configuration.nix~
+
+#+begin_src
+environment.systemPackages = with pkgs; [
+  ...
+  gnupg
+  pass
+  ...
+];
+#+end_src
+
+** GPG Agent
+
+* ~pass~
+
+~pass~ is the [[https://www.passwordstore.org/][standard unix password manager]] and encrypts passwords using [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] under ~~/.password-store~.
+
+Install system wide by adding it to ~environment.systemPacjages~ in ~/etc/nixos/configuration.nix~
+
+#+begin_src
+environment.systemPackages = with pkgs; [
+  ...
+  gnupg
+  pass
+  ...
+];
+#+end_src
+
+* Links
+
+** NixOps
+
++ [[https://elvishjerricco.github.io/2018/06/24/secure-declarative-key-management.html][Secure, Declarative Key Management with NixOps, Pass, and nix-plugins]]
+
+** SSH
+
+** GPG
+
+** pass
+
++ [[https://github.com/shlevy/nix-plugins][GitHub - shlevy/nix-plugins: Collection of miscellaneous plugins for the nix expression language]]
