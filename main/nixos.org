@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       69291a6b-c253-44bc-ad9d-8d899bb90529
-:mtime:    20241215084508 20241214235221 20241214074620 20241214064000 20241213214801 20241213074524 20241212212528 20241211115355 20241211103642 20241210065459 20240324205532 20240305091938 20240304160447
+:mtime:    20241215222630 20241215203017 20241215120453 20241215084508 20241214235221 20241214074620 20241214064000 20241213214801 20241213074524 20241212212528 20241211115355 20241211103642 20241210065459 20240324205532 20240305091938 20240304160447
 :ctime:    20240304160447
 :END:
 #+TITLE: NixOS
@@ -10,17 +10,19 @@
 + [[id:c9eb0e6d-b152-487c-90d4-3786fcfd0889][Flakes]]
 + [[id:01336e19-dc8a-41ca-8534-6a790b39b1b6][Home Manager]]
 + [[id:c345f901-5a1f-4868-b8bf-bc352554ee58][Security]]
-+
++ [[id:535a0cab-3321-4153-b581-83e9ec65ee33][Maintenance]]
 
 
 * Links
 
 ** Documentation
 
-+ [[https://nixos.org/manual/nix/stable/][Nix Reference Manual]]
++ [[https://nixos.org/manual/nixos/stable/][NixOS Manual]]
 + [[https://wiki.nixos.org/wiki/NixOS_Wiki][NixOS Wiki]]
 + [[https://nixos-and-flakes.thiscute.world/introduction/][NixOS & Flakes Book]]
-+ [[https://nix-community.github.io/home-manager/][Home Manager Manual]]g
++ [[https://search.nixos.org/packages][NixOS Packages]]
++ [[https://nix-community.github.io/home-manager/][Home Manager Manual]]
++ [[https://nixos.org/manual/nix/stable/][Nix Reference Manual]]
 
 *** GitHub
 
@@ -42,6 +44,15 @@ I keep a list of useful [[https://github.com/stars/slackline/lists/nixos][GitHub
 **** nix-plugins
 
 + [[https://github.com/shlevy/nix-plugins][GitHub - shlevy/nix-plugins: Collection of miscellaneous plugins for the nix expression language]]
+
+**** Miscellaneous
+
++ [[https://github.com/novoid/nixos-config][novoid/nixos-config: NixOS + flakes + home-manager with xfce, zsh, tmux, ...]] A nice example of a modularised
+  configuration for multiple hosts with many of the tools I use .
++ [[https://github.com/NixOS/nixos-hardware][NixOS/nixos-hardware: A collection of NixOS modules covering hardware quirks.]] (includes settings for [[https://github.com/NixOS/nixos-hardware/tree/master/lenovo/thinkpad/t490][T490]], see above
+  for possible examples of how to use).
+
+
 *** [[https://nixos.wiki/wiki/][Wiki]]
 
 + [[https://wiki.nixos.org/wiki/Emacs][Emacs]] ([[https://nix-community.github.io/home-manager/options.xhtml#opt-programs.emacs.enable][Home Manager - Emacs]])
@@ -61,10 +72,13 @@ I keep a list of useful [[https://github.com/stars/slackline/lists/nixos][GitHub
 *** Flakes
 
 + [[https://stephank.nl/p/2023-02-28-using-flakes-for-nixos-configs.html][Using flakes for NixOS configurations]]
++ [[https://vtimofeenko.com/posts/practical-nix-flake-anatomy-a-guided-tour-of-flake.nix/][Practical Nix flake anatomy: a guided tour of flake.nix | Vladimir Timofeenko's blog]]
++ [[https://karl-voit.at/2023/09/12/nix/][I Started With Nix, NixOS, Home Manager and Flakes]]
 
 *** NixOps
 
 + [[https://elvishjerricco.github.io/2018/06/24/secure-declarative-key-management.html][Secure, Declarative Key Management with NixOps, Pass, and nix-plugins]]
+
 ** Video
 
 + [[https://www.youtube.com/watch?v=CwfKlX3rA6E][NixOS: Everything Everywhere All At Once - YouTube]]

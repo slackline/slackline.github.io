@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       535a0cab-3321-4153-b581-83e9ec65ee33
+:mtime:    20241215223320 20241215130509 20241215101855
+:ctime:    20241215101855
+:END:
+#+TITLE: NixOS - Maintenance
+#+FILETAGS: :nixos:linux:maintenance:
+
+* Garbage Collection
+
+Over time the ~/nix/store~ will grow, this is because Nix is functional and packages are not upgraded in place, rather
+new versions of packages are installed in a different location /within/ ~/nix/store~ this is what allows you to roll
+back to earlier installs when things go wrong and your system isn't working.
+
+NixOS comes with a /garbage collector/ which removes old, unreferenced packages and it can be run with
+~nix-collect-garbage~. It has an associated ~systemd~ module that can be enabled/run with ~systemctl start
+nix-gc.service~ but to enable this to run periodically in a declarative manner from your configuration add the following
+to ~/etc/nixos/configuration.nix~. which will  remove
+
+#+begin_src
+{
+  nix.gc.automatic = true;
+  nix.gx.dates = "08:14";
+}
+#+end_src
+
+
+This doesn't however remove old system configurations ("roots") and the ability to roll back to them. To remove these
+you can run.
+
+#+begin_src
+nix-collect-garbage -d
+#+end_src
+
+You can also clear out old, identical files in the store and replace them with a single copy with.
+
+#+begin_src
+nix-store --optimise
+#+end_src
+
+* Updating
+
+#+begin_src
+nixos-rebuild switch --update
+#+end_src

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c345f901-5a1f-4868-b8bf-bc352554ee58
-:mtime:    20241215084441
+:mtime:    20241215211752 20241215084441
 :ctime:    20241215084441
 :END:
 #+TITLE: NixOS - Security
@@ -35,6 +35,18 @@ services.openssh = {
 #+end_src
 
 
+To be able to use SSH keys you need to copy your public key from the computer you wish to SSH into NixOS from. You can
+add this to ~home.nix~ by pasting in your public key (e.g. ~/.ssh/id_ed25519.pub~). These keys are public so sharing
+them shouldn't be an issue.
+
+#+begin_src
+  # Set authorized SSH keys in file
+  home.file.".ssh/authorized_keys" = ''
+    ssh-ed25519 ############################ user@host1
+    ssh-ed25519 ############################ user@host2
+  '';
+#+end_src
+
 ** SSH Agent
 
 When SSHing from this system to others I also have password authentication disabled. So that I don't have to enter the
@@ -52,13 +64,15 @@ programs.ssh.startAgent = true;
 
 ** System Configuration
 
-Install system wide by adding it to ~environment.systemPacjages~ in ~/etc/nixos/configuration.nix~
+Install system wide by adding ~gnupg~ and at least one ~pinentry~ package to ~environment.systemPackages~ in
+~/etc/nixos/configuration.nix. I opted for two..
 
 #+begin_src
 environment.systemPackages = with pkgs; [
   ...
   gnupg
-  pass
+  pinentry-curses
+  pinentry-gtk2
   ...
 ];
 #+end_src
@@ -75,10 +89,15 @@ Install system wide by adding it to ~environment.systemPacjages~ in ~/etc/nixos/
 environment.systemPackages = with pkgs; [
   ...
   gnupg
+  pinentry-curses
+  pinentry-gtk2
   pass
   ...
 ];
 #+end_src
+
+* Yubikey
+
 
 * Links
 
@@ -93,3 +112,8 @@ environment.systemPackages = with pkgs; [
 ** pass
 
 + [[https://github.com/shlevy/nix-plugins][GitHub - shlevy/nix-plugins: Collection of miscellaneous plugins for the nix expression language]]
+
+** Yubikey
+
++ [[https://nixos.wiki/wiki/Yubikey][Yubikey - NixOS Wiki]]
++ [[https://nixos.wiki/wiki/Yubikey_based_Full_Disk_Encryption_(FDE)_on_NixOS][Yubikey based Full Disk Encryption (FDE) on NixOS - NixOS Wiki]]
