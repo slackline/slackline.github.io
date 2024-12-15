@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       938af6af-7a0e-46d1-ae76-6157e948151b
-:mtime:    20241023184234 20240706220449 20240115230041 20231222084358 20230114083319 20230103103311 20221229094021
+:mtime:    20241215223039 20241023184234 20240706220449 20240115230041 20231222084358 20230114083319 20230103103311 20221229094021
 :ctime:    20221229094021
 :END:
 #+TITLE: Emacs Configuration
@@ -14,6 +14,17 @@ configurations from ~~/.config/emacs/settings/<pkgnmae>-settings.el~ as I find l
 * Main Configuration
 
 #+INCLUDE: "~/.config/emacs/init.el" example emacs-lisp
+
+** Byte Compilation
+
+Byte compilations will increase the speed of Emacs as text files are converted to binaries which load and are
+interpreted quicker. Source files are text and ~.el~ whilst byte-compiled files are ~.elc~ and are machine read-able.
+
+There are two potions to help with this Jona Bernoulli's (aka [[https://github.com/tarsius][@tarsius]]) [[https://github.com/emacscollective/auto-compile][auto-compile]] which for every ~.elc~ which only
+updates ~.elc~ when they are outdated, it /won't/ compile new ~.el~ files for which there is no corresponding ~.elc~
+(see [[https://github.com/jamescherti/compile-angel.el?tab=readme-ov-file#what-is-the-difference-between-auto-compile-and-compile-angel][note]]). The other option is to use the [[https://github.com/jamescherti/compile-angel.el][compile-angel.el]] which always compiles ~.el~ to ~.elc~ and makes sure they
+are kept up-to-date.
+
 
 * Gentoo
 
