@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd
-:mtime:    20241122002308 20241017134853
+:mtime:    20241215174459 20241122002308 20241017134853
 :ctime:    20241017134853
 :END:
 #+TITLE: Python uv
@@ -30,9 +30,11 @@ for its configuration.
 
 * Tips and Tricks
 
+** Using uv in scripts
+
 [[https://simonwillison.net/2024/Aug/21/usrbinenv-uv-run/][#!/usr/bin/env -S uv run]]
 
-#+begin_src 
+#+begin_src
  !/usr/bin/env -S uv run
    # /// script
    # requires-python = ">=3.12"
@@ -42,4 +44,10 @@ for its configuration.
    # ///
    import flask
    # ...
+#+end_src
+
+** Running pytest
+
+#+begin_src
+uvx pytest
 #+end_src
