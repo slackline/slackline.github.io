@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd
-:mtime:    20241215174459 20241122002308 20241017134853
+:mtime:    20241216094907 20241215174459 20241122002308 20241017134853
 :ctime:    20241017134853
 :END:
 #+TITLE: Python uv
@@ -51,3 +51,11 @@ for its configuration.
 #+begin_src
 uvx pytest
 #+end_src
+
+
+* Links
+
+** Tips and Tricks
+
++ [[https://treyhunner.com/2024/12/lazy-self-installing-python-scripts-with-uv/][Lazy self-installing Python scripts with uv]]
++ [[https://www.bitecode.dev/p/uv-tricks][UV tricks - Bite code!]]
