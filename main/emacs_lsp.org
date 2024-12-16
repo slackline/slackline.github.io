@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a29a1e50-3cf2-4d88-a71d-7c600fdf8f65
-:mtime:    20240304065906 20230114084624
+:mtime:    20241216144645 20240304065906 20230114084624
 :ctime:    20230114084624
 :END:
 #+TITLE: Emacs LSP
@@ -116,3 +116,4 @@ makepkg -sri
 * Links
 
 + [[https://andreyor.st/posts/2023-09-09-migrating-from-lsp-mode-to-eglot/][Migrating from LSP-Mode to Eglot · Andrey Listopadov]]
++ [[https://www.mattduck.com/lsp-python-getting-started.html][Getting started with lsp-mode for Python]]

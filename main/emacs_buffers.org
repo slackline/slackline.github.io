@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       4451966f-b810-4a9d-905b-e2b682578c62
-:mtime:    20241128110356 20241112222216 20240709215159 20231130102352 20230910184222 20230906125824 20230103103310 20221224191223
+:mtime:    20241216142835 20241128110356 20241112222216 20240709215159 20231130102352 20230910184222 20230906125824 20230103103310 20221224191223
 :ctime:    20221224191223
 :END:
 #+TITLE: Emacs Buffers
@@ -32,6 +32,8 @@ kill with ~C-SPACE~ and kill the selected ones with ~M-D~.
 you can kill them all quickly with ~IbufferMode~ using ~C-x C-b * / D yes Ret~ (from [[https://www.emacswiki.org/emacs/KillingBuffers#h5o-6][here]]).
 
 * Managing Buffers
+
+A good overview of why things work the way they do is [[https://www.masteringemacs.org/article/demystifying-emacs-window-manager][Demystifying Emacs's Window Manager - Mastering Emacs]]
 
 ** What modes are enabled?
 
