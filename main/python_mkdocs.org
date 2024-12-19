@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       9e8265ee-95d1-4218-90cd-74357aec1ea5
+:mtime:    20241219150940
+:ctime:    20241219150940
+:END:
+#+TITLE: MkDocs
+#+FILETAGS: :python:docs:staticsite:
+
+Very easy to use way to build documentation.
+
+* Links
+
++ [[https://www.mkdocs.org/][MkDocs]]
+  + [[https://www.mkdocs.org/getting-started/][Getting Started]]
+
+** Extensions
+
++ [[https://mkdocstrings.github.io/][mkdocstrings]]
+  + [[https://mkdocstrings.github.io/griffe/][Griffe]]
+  + [[https://mkdocstrings.github.io/python/][mkdocstrings-python]]
++ [[https://mkdocs-mermaid2.readthedocs.io/en/master/][MkDocs-Mermaid2]]
++ [[https://squidfunk.github.io/mkdocs-material/][Material for MkDocs]]
+
+** Articles
++ [[https://realpython.com/python-project-documentation-with-mkdocs/][Build Your Python Project Documentation With MkDocs – Real Python]]
++ [[https://thomasthornton.cloud/2024/05/01/deploying-mkdocs-to-github-pages-with-github-actions/][Deploying MkDocs to GitHub Pages with GitHub Actions - Thomas Thornton Azure Blog]]
