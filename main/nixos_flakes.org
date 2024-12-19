@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c9eb0e6d-b152-487c-90d4-3786fcfd0889
-:mtime:    20241215075655
+:mtime:    20241216062755 20241215075655
 :ctime:    20241215075655
 :END:
 #+TITLE: NixOS - Flakes
@@ -41,3 +41,25 @@ I had to modify the ~hostname~ variable in this generated file to reflect the ho
 error when trying to ~nixos-rebuild switch~ that ended with ~system.copySystemConfiguration is not supported with
 flakes~. A quick search on the forums threw up [[https://discourse.nixos.org/t/nixos-config-error-while-combining-configuration-nix-and-flakes/23918][this thread]] which suggested disabling ~system.copySystemConfiguration =
 false~ in the ~configuration.nix~ file.
+
+* Templates
+
+You can create templates using ~nix flake~, to get a list of available templates...
+
+#+begin_src
+nix flake show templates
+#+end_src
+
+** Troubleshooting
+
+I found that just trying to show the templates resulted in an error.
+
+#+begin_src
+error:
+       … while fetching the input 'github:NixOS/templates'
+
+       error: opening Git repository '"/home/neil/.cache/nix/tarball-cache"': repository path '/home/neil/.cache/nix/tarball-cache' is not owned by current user
+#+end_src
+
+A crude, temporary solution was provided [[https://discourse.nixos.org/t/home-manager-and-git-repo-ownership/41567/3][here]] but this didn't feel quite right, I think the cache should point somewhere
+else that the ~root~ user (or whatever user the ~nix~ command runs as) can access by default.

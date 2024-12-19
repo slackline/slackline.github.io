@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       69291a6b-c253-44bc-ad9d-8d899bb90529
-:mtime:    20241215222630 20241215203017 20241215120453 20241215084508 20241214235221 20241214074620 20241214064000 20241213214801 20241213074524 20241212212528 20241211115355 20241211103642 20241210065459 20240324205532 20240305091938 20240304160447
+:mtime:    20241220225930 20241220210309 20241215222630 20241215203017 20241215120453 20241215084508 20241214235221 20241214074620 20241214064000 20241213214801 20241213074524 20241212212528 20241211115355 20241211103642 20241210065459 20240324205532 20240305091938 20240304160447
 :ctime:    20240304160447
 :END:
 #+TITLE: NixOS
@@ -11,7 +11,7 @@
 + [[id:01336e19-dc8a-41ca-8534-6a790b39b1b6][Home Manager]]
 + [[id:c345f901-5a1f-4868-b8bf-bc352554ee58][Security]]
 + [[id:535a0cab-3321-4153-b581-83e9ec65ee33][Maintenance]]
-
++ [[id:6b30f891-f1a4-493f-a666-677a012d1b4b][Development]]
 
 * Links
 
@@ -21,8 +21,10 @@
 + [[https://wiki.nixos.org/wiki/NixOS_Wiki][NixOS Wiki]]
 + [[https://nixos-and-flakes.thiscute.world/introduction/][NixOS & Flakes Book]]
 + [[https://search.nixos.org/packages][NixOS Packages]]
++ [[https://nix.dev/tutorials/nix-language][Nix language basics — nix.dev documentation]]
 + [[https://nix-community.github.io/home-manager/][Home Manager Manual]]
 + [[https://nixos.org/manual/nix/stable/][Nix Reference Manual]]
++ [[https://mynixos.com][MyNixOS]] create flake configurations online
 
 *** GitHub
 

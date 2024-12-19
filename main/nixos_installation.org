@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5249c437-1ff7-4925-937d-9e9c42256ef1
-:mtime:    20241215075449
+:mtime:    20241220233308 20241220211555 20241219072505 20241218230424 20241218072440 20241217231752 20241216230955 20241216082451 20241216060801 20241215075449
 :ctime:    20241215075449
 :END:
 #+TITLE: NixOS - Installation
@@ -23,28 +23,91 @@ dd bs=4M conv=fsync oflag=direct status=progress if=/path/to/nixos-minimal-24.11
 
 Depends on your computers BIOS settings but insert the USB drive and enable booting from the USB drive.
 
-* Partitioning
+* Networking
+
+#+begin_src
+systemctl start wpa_supplicant
+wpa_cli
+> add_network
+> set_network 0 ssid "yourhomenetwork"
+> set_network 0 psk "yourhomenetworkpassword"
+> enable_network 0
+#+end_src
+
+Yous should now have a connection. To check look for an IP address in the output of ~ip a~), you'll need it in the next
+step.
+
+** SSH
+
+If you want to SSH into the machine to complete the installation the easiest way is to set password on the ~nixos~
+account (~passwd nixos~).
+
+You should then be able to ~ssh~ into the machine.
+
+#+begin_src
+ssh nixos@192.168.1.156
+The authenticity of host '192.168.1.46 (192.168.1.46)' can't be established.
+ED25519 key fingerprint is SHA256:IUzmuNZJkwcUlbpHd7GOEKC+8SlkA9MH48OCvKVf2S4.
+Warning: Permanently added '192.168.1.46' (ED25519) to the list of known hosts.
+Last login: Mon Dec 16 08:12:23 2024
+
+[nixos@nixos:~]$
+#+end_src
+
+You can continue with the installation.
+
+* LUKS encryption
+
+I decided I wanted to encrypt my partitions so opted for a 512M boot partition which would remain unencrypted and the
+remainder was an encrypted partition with logical volumes for ~/~ (root) of 100G, ~swap~ of 32GB and the remainder
+~/home~. A useful guide is in this [[https://gist.github.com/martijnvermaat/76f2e24d0239470dd71050358b4d5134][gist]]  (another using BTRFS is [[https://gist.github.com/Le0xFF/21942ab1a865f19f074f13072377126b][here]])
+
+#+begin_src
+wipefs -a /dev/sda
+#+end_src
+
+
+
+** Partitioning
 
 I'm familiar with ~cfdisk~ having used it over the years when installing various [[id:88fc1e91-d928-485e-83b4-1991663fa267][GNU/Linux]] operating systems such as
 [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]] and more recently [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] so opted to use that to partition my hard drive. I have a 1TB drive and opted to
-create four physical partitions with a separate ~/home/~ partition and despite having 32GB of RAM opted for an 8GB swap
-partition.
+create a 512Mb boot partition and a second, encrypted LUKS partition
 
-| Partition   | Label   | Size |
-|-------------+---------+------|
-| ~/dev/sda1~ | ~boot~  | 512M |
-| ~/dev/sda2~ | ~nixos~ | 100G |
-| ~/dev/sda3~ | ~swap~  | 8G   |
-| ~/dev/sda4~ | ~home~  | 832G |
+| Partition   | Label  | Size   | Type       | Format |
+|-------------+--------+--------+------------+--------|
+| ~/dev/sda1~ | ~boot~ | 512M   | EFI System | fat32  |
+| ~/dev/sda2~ |        | 953.4G | Linux LVM  |        |
 
-* Formatting Filesystems
+
+#+begin_src
+cryptsetup luksFormat /dev/sda2         # You will be propmted to enter a password twice
+cryptsetup luksOpen /dev/sda2 enc-pv    # You will be prompted for the password to decrypt the partition
+#+end_src
+
+I then created a three logical volumes
+
+| Partition      | Size   | Type  | Format |
+|----------------+--------+-------+--------|
+| ~/dev/vg/swap~ | 32G    | swap  | swap   |
+| ~/dev/vg/root~ | 100G | Linux | ext4   |
+| ~/dev/vg/home~ | 953.4G | Linux | ext4   |
+
+#+begin_src
+pvcreate /dev/mapper/enc-pv
+vgcreate vg /dev/mapper/enc-pv
+lvcreate -L 32G -n swap vg
+lvcreate -L 100G -n root vg
+lvcreate -l '100%FREE' -n home vg
+#+end_src
 
 I opted to go with the reliable ~ext4~ file system.
 
-#+begin_src sh
-mkfs.ext4 -L nixos /dev/sda2
-mkfs.ext4 -L home /dev/sda4
+#+begin_src
 mkfs.fat -F 32 -n boot /dev/sda1
+
+mkfs.ext4 -L root /dev/vg/root
+mkfs.ext4 -L home /dev/vg/home
 mkswap -L swap /dev/sda3
 #+end_src
 
@@ -54,22 +117,12 @@ Once partitions had been formatted the next step, as with any other boot-strap i
 partitions to perform the installation, although unlike [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]] and [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] you don't have to ~chroot~ into the
 environment.
 
-#+begin_src sh
-mount /dev/disk/by-label/nixos /mnt/
+#+begin_src
+mount /dev/vg/root /mnt/
 mkdir /mnt/{boot,home}
 mount -o umask=077 /dev/disk/by-label/boot /mnt/boot
 mount /dev/disk/by-label/home /mnt/home
 swapon /dev/disk/by-label/swap
-#+end_src
-
-Of course you could use the partitions you created rather than the labels...
-
-#+begin_src sh
-mount /dev/sda2 /mnt/
-mkdir /mnt/{boot,home}
-mount -o umask=077 /dev/sda1 /mnt/boot
-mount /dev/sda4 /mnt/home
-swapon /dev/sda3
 #+end_src
 
 * Generate ~configuration.nix~
@@ -91,51 +144,160 @@ You can now edit the generated ~/mnt/etc/nixos/configuration.nix~ using ~nano~.
 nano /mnt/etc/nixos/configuration.nix
 #+end_src
 
-It is very well commented and many fields are already uncommented. I changed and the values of some to leave myself with
-the following...
+It is very well commented and many fields are already uncommented. Having gone through this process once on an initial
+trial run without encrypted partitions I had a basic configuration. I also used those listed above, particularly the
+strategy of splitting configurations into multiple files and importing them, along with inspiration from
+[[https://github.com/novoid/nixos-config][novoid/nixos-config]] to craft my configuration.
+
+In particular I added additional configuration for the hardware I have using the [[https://github.com/NixOS/nixos-hardware][NixOS/nixos-hardware]] repository to
+include a specific set of modules for the Lenovo ThinkPad T490. This configuration is in the ~/etc/nixos/flake.nix~
+file.
+
+
+** ~agenix.nix~
+
+I opted for [[https://github.com/ryantm/agenix?tab=readme-ov-file#install-via-nix-channel][agenix]] as a method of encrypting secrets (e.g. network passwords) under ~/nix/store~. The [[https://nixos.wiki/wiki/Agenix][NixOS Wiki |
+Agenix]] article was useful but I seemed unable to follow it successfully to install ~agenix~ in the first instance,
+bearing in mind that I was doing so from the install media.
+
+What worked was adding the channel
 
 #+begin_src
-{ config, lib, pkgs, ...}:
+nix-channel --add https://github.com/ryantm/agenix/archive/main.tar.gz agenix
+nix-channel --update
+#+end_src
+then the following to ~configuration.nix~
 
-{
-  imports =
-    [ # Include the results of the hardware scan
-      ./hardware-configuration.nix
-    ];
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  networking.hostname = "crow";
-  networking.networkmanager.enable = true;
-  time.timeZone = "Europe/London";
-  i18n.defaultLocale = "en_GB.UTF-8";
-  services.xserver.enable = true;
-  services.xserver.xkb.layout = "gb";
-  service.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
-  services.libinpu = true;
-  users.users.username = {
-    isNormalUser = true;
-    packages = with pkgs; [
-      tree
-    ];
-  };
-  programs.firefox.enable = true;
-  environment.systemPackages = with pkgs; [
-    emacs
-    wget
+#+begin_src
+imports =
+  [
+    ...
+    ./agenix.nix
+    ...
   ];
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
-  services.openssh.enable = true;
-  system.stateVersion = "24.11";
+#+end_src
+
+...and writing a dedicated ~agenix.nix~.
+
+#+begin_src
+ip a{
+  environment.systemPackages = [ (pkgs.callPackage <agenix/pkgs/agenix.nix> {}) ];
 }
 #+end_src
 
+** ~flake.nix~
+
+#+begin_src
+{
+  description = "NixOS configuration";
+
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+  };
+
+  outputs = inputs@{ nixpkgs, home-manager, nixos-hardware, agenix, ... }: {
+    nixosConfigurations = {
+      crow = nixpkgs.lib.nixosSystem {
+        inherit pkgs system;
+        system = "x86_64-linux";
+        modules = [
+          ./configuration.nix
+          nixos-hardware.nixosModules.lenovo-thinkpad-t490
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.neil = import ./home.nix;
+
+            # Optionally, use home-manager.extraSpecialArgs to pass
+            # arguments to home.nix
+          }
+        ]; # end modules
+      }; # end crow
+    };
+  };
+}
+#+end_src
+
+** ~audio.nix~
+
+#+begin_src
+{ config, pkgs, ... }:
+
+{
+
+  # sound = {
+  #   enable = false;
+  #   mediaKeys.enable = true;
+  # };
+
+  hardware = {
+    pulseaudio.enable = false;
+  };
+
+  services = {
+    pipewire = {
+      enable = true;
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
+      pulse.enable = true;
+      jack.enable = true;
+    };
+  };
+
+}
+#+end_src
+
+** ~bluetooth.nix~
+
+#+begin_src
+{ config, pkgs, ... }:
+
+{
+
+  hardware = {
+      bluetooth = {
+        enable = true;
+        settings = {
+          General = {
+            Enable = "Source,Sink,Media,Socket";
+          };
+        };
+      };
+    };
+
+    services = {
+      blueman.enable = true;
+    };
+
+}
+#+end_src
+
+** ~home.nix~
+
+#+begin_src
+#+end_src
+
+
+** ~xfce.nix~
+
+#+begin_src
+#+end_src
+
 Save the file and exit (in ~nano~ this is ~C-o Enter~ then ~C-x~).
+
+** ~configuration.nix~
+
+This has to import all of the above files so that their configuration is included when installing/building the system
+
+#+begin_src
+#+end_src
+
 
 * Install the System
 
@@ -161,18 +323,75 @@ reboot
 #+end_src
 
 
+* Hardware
+
+There is a dedicated [[https://github.com/NixOS/nixos-hardware][NixOS/nixos-hardware]] channel which is a collection of NixOS modules covering hardware quirks. They
+have a configuration for the [[https://github.com/NixOS/nixos-hardware/tree/master/lenovo/thinkpad/t490][Lenovo T490]] that I am initially experimenting with. Mindful that I may deploy NixOS on
+other hardware using the same configuration I opted to add the configuration to  [[id:c9eb0e6d-b152-487c-90d4-3786fcfd0889][Flake]]. In ~/etc/nixos/flake.nix~ I
+added the ~nixos.hardware.url~ to ~inputs~ and defined the ~nixos-hardware.nixosModules.lenovo-thinkpad-t490~ under the
+configuration for the ~crow~ profile/system, lines are noted below.
+
+#+begin_src
+{
+  description = "NixOS configuration";
+
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixos-hardware.url = "github:NixOS/nixos-hardware";   # Add the hardware channel
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+  };
+
+  outputs = inputs@{ nixpkgs, home-manager, nixos-hardware, ... }: {
+    nixosConfigurations = {
+      crow = nixpkgs.lib.nixosSystem {
+	system = "x86_64-linux";
+	modules = [
+          ./configuration.nix
+	  nixos-hardware.nixosModules.lenovo-thinkpad-t490  # Add the modules
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.neil = import ./home.nix;
+
+            # Optionally, use home-manager.extraSpecialArgs to pass
+            # arguments to home.nix
+          }
+	]; # end modules
+      }; # end crow
+    };
+  };
+}
+#+end_src
+
+* Emacs
+
+I use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] for the majority of my work and so need to configure it. Typically I run in ~daemon~ mode and connect a
+~emacsclient~. I discovered [[https://mynixos.com][MyNixOS]] for helping build configurations.
+
 * Trouble Shooting
 
 The system rebooted into a graphical user interface, but I was unable to login with either the account I created or the
-~root~ account.  However switching to TTY1 with ~Ctrl-Alt-F1~ and I could login with my user account and ~sudo su~ to
-root so I have a working system, although its not currently connected to the WiFi. To connect I repeated the steps from
+~root~ account.  However switching to TTY1 with ~Ctrl-Alt-F1~ and I could login with my user account and ~su~ to
+~root~ so I have a working system, although its not currently connected to the WiFi, this was easy to resolve using the
+the NetworkManager front end ~nmtui~. Disabling the "slick" greeter with the ~Zukitre-dark~ theme I had copy and pasted
+gave me a graphical login that worked and some tinkering adding packages and getting ~agenix~ correctly installed (see
+[[id:c345f901-5a1f-4868-b8bf-bc352554ee58][NixOS - Security]]) and I was able to re-enable the "slick" ~Zukitre-dark~ theme and on rebooting I could login.
+
+** Why can't I login via display manager
+** Old
+To connect I repeated the steps from
 the installation manual. Before doing anything else though I decided to reboot into the installation disk, reconnect to
 Wifi so I could update my configuration to enable Flakes. Went round a few times in circles and ended up disabling
 ~NetworkManager~ from the configuration and enabling ~wpa_supplicant~ from the installation disk then rebooting and
 ensuring that ~NetworkManager~ was disabled and configured and enabled [[https://nixos.wiki/wiki/Wpa_supplicant][~wpa_supplicant~]] from the new installation.
 
-I took the time to enable Flakes at the same time (see next section) so I didn't had on less configuration in my history.
+I took the time to enable [[id:c9eb0e6d-b152-487c-90d4-3786fcfd0889][Flakes]] at the same time (see next section) so I didn't had on less configuration in my history.
 
+* Mistakes
+
+One one attempt I forgot about ~nmtui~ so decided to enable ~wpa_supplicant~ instead with a configuration similar to this
 #+begin_src
 networking.wireless = {
     enable = true;
@@ -184,12 +403,13 @@ networking.networkmanager.enable = false;
 
 Restarting the service and I could connect \o/, I might have had to explicitly start the service, I can't remember, but
 because the service was configured declaratively under ~/etc/nixos/configuration.nix~ I didn't have to use ~wpa_cli~ to
-establish the connection as I did from the Live boot disk.
+establish the connection as I did from the Live boot disk. However, this included my network password which is then
+stored in ~/nixos/store~ permanently which is a bad idea. Read up more in [[id:c345f901-5a1f-4868-b8bf-bc352554ee58][NixOS - Security]] on how to avoid this using
+~agenix~ to encrypt secrets with SSH keys.
 
-#+begin_src
-sudo nixos-rebuild
-sudo systemctl start wpa_supplicant
-#+end_src
+* Links
 
-Because I enabled Flakes at the same time as switching to ~wpa_supplicant~ I could now check out templates with ~nix
-flake show templates~, which brings us up-to-date with the need to introduce and understand Flakes
++ [[https://gist.github.com/martijnvermaat/76f2e24d0239470dd71050358b4d5134][Installation of NixOS with encrypted root]] - mainly followed this.
++ [[https://gist.github.com/Le0xFF/21942ab1a865f19f074f13072377126b][NixOS installation with: Full Disk Encryption using LUKS2, BTRFS filesystem, systemd-boot]] - used for split
+  configuration, particularly useful for Xfce.
++ [[https://gist.github.com/nat-418/1101881371c9a7b419ba5f944a7118b0][A sensible NixOS Xfce configuration]]

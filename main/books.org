@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       18820a48-4ec2-43d7-a0a3-01fc5beca40d
-:mtime:    20241202080209 20240910123408 20240603215054 20240215074645 20240212071535 20240204194822
+:mtime:    20241220092318 20241202080209 20240910123408 20240603215054 20240215074645 20240212071535 20240204194822
 :ctime:    20240204194822
 :END:
 #+TITLE: Books
@@ -79,8 +79,11 @@ Good places to buy that aren't Amazon
 *** Biography
 
 + Dawes, Johnny /Full of Myself/
++ Fowler, Mick
++ McClure, Steve
 + Moffatt, Jerry /Revelations/
 + Moon, Ben /Statement of Youth/
+
 
 *** Training
 
@@ -103,6 +106,7 @@ Good places to buy that aren't Amazon
 + Dennet, Daniel C [[https://en.wikipedia.org/wiki/Darwin%27s_Dangerous_Idea][/Darwin's Dangerous Idea/]]
 + Dennet, Daniel C [[https://en.wikipedia.org/wiki/Freedom_Evolves][/Freedom Evolves/]]
 + Darwin, Charles /The Origin of Species/ (see also [[http://darwin-online.org.uk/AboutUs.html][The Complete Work of Charles Darwin Online]])
++ Ridley, Mark /Mendel's Demon: Gene Justice and the Complexity of Life/
 
 ** Statistics
 

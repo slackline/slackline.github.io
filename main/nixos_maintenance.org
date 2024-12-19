@@ -1,26 +1,40 @@
 :PROPERTIES:
 :ID:       535a0cab-3321-4153-b581-83e9ec65ee33
-:mtime:    20241215223320 20241215130509 20241215101855
+:mtime:    20241217231650 20241217070842 20241215223320 20241215130509 20241215101855
 :ctime:    20241215101855
 :END:
 #+TITLE: NixOS - Maintenance
 #+FILETAGS: :nixos:linux:maintenance:
 
+Using the system invariable involves updating the configuration, whether that is the default
+~/etc/nixos/configuration.nix~, [[id:c9eb0e6d-b152-487c-90d4-3786fcfd0889][Flakes]] or [[id:01336e19-dc8a-41ca-8534-6a790b39b1b6][HomeManager]]. If you're anything like me you won't get things write first time
+and to avoid having innumerable boot options to choose from and wasting valuable hard-drive space you can rebuild the
+system with ~test~ option rather than ~switch~ which builds and activates it but does not add it to the GRUB boot menu.
+
+#+begin_src
+nixos-rebuild test
+#+end_src
+
+
 * Garbage Collection
 
 Over time the ~/nix/store~ will grow, this is because Nix is functional and packages are not upgraded in place, rather
 new versions of packages are installed in a different location /within/ ~/nix/store~ this is what allows you to roll
-back to earlier installs when things go wrong and your system isn't working.
+back to earlier installs when things go wrong and your system isn't working. Its worth reading the [[https://nixos.wiki/wiki/Storage_optimization][Storage optimization]]
+page.
 
 NixOS comes with a /garbage collector/ which removes old, unreferenced packages and it can be run with
 ~nix-collect-garbage~. It has an associated ~systemd~ module that can be enabled/run with ~systemctl start
 nix-gc.service~ but to enable this to run periodically in a declarative manner from your configuration add the following
-to ~/etc/nixos/configuration.nix~. which will  remove
+to ~/etc/nixos/configuration.nix~. which will remove "garbage" older than 30 days once a week
 
 #+begin_src
 {
-  nix.gc.automatic = true;
-  nix.gx.dates = "08:14";
+  nix.gc. = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
 }
 #+end_src
 
@@ -38,8 +52,24 @@ You can also clear out old, identical files in the store and replace them with a
 nix-store --optimise
 #+end_src
 
+Again this can be tedious having to remember to run this command and scheduling by ~cron~ doesn't fit with the NixOS
+declarative philosophy. Unsurprisingly you can configure this option in ~/etc/nixos/configuration.nix~
+
+#+begin_src
+  ## Save space by enabling hard links in the nix store (not a default).
+  ## Running the optimization once after enabling this setting by doing nix-store --optimise (can take a while). 50-100GB saved right there…
+  ## Source: https://github.com/novoid/nixos-config/blob/47829d10f5c5408e8e50c52767584e09c991996f/configuration.nix#L19
+  nix.settings.auto-optimise-store = true;
+#+end_src
 * Updating
 
 #+begin_src
 nixos-rebuild switch --update
 #+end_src
+
+
+* Links
+
+** Wiki
+
++ [[https://nixos.wiki/wiki/Storage_optimization][Storage Optimization]]
