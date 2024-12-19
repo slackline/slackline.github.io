@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       67964093-4994-4910-9e8a-d2c418b8e634
-:mtime:    20240602201416
+:mtime:    20241219131716 20240602201416
 :ctime:    20240602201416
 :END:
 #+TITLE: Cycling
@@ -13,3 +13,8 @@ for fun, its an excellent, cheap, healthy and environmentally friendly way of mo
 * Links
 
 + [[https://solar.lowtechmagazine.com/2023/02/can-we-make-bicycles-sustainable-again/][Can We Make Bicycles Sustainable Again? | LOW←TECH MAGAZINE]]
+
+** Safety
+
++ [[https://slate.com/business/2024/12/giant-cars-suvs-pick-up-trucks-global-europe.html?tpcc=giftedarticle][Big cars are going global. I hope other countries don't make these mistakes.]]
++ [[https://www.economist.com/interactive/united-states/2024/08/31/americans-love-affair-with-big-cars-is-killing-them][Americans’ love affair with big cars is killing them | The Economist]]
