@@ -329,3 +329,7 @@ found useful.
 ** Articles
 
 + [[https://www.mdpi.com/2075-1729/12/5/648][The R Language: An Engine for Bioinformatics and Data Science]]
+
+** Generative Art
+
++ [[https://blog.djnavarro.net/posts/2024-12-18_art-from-code-1/][Art from code I: Generative art with R – Notes from a data witch]]
