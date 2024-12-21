@@ -337,6 +337,7 @@ You can easily backup Forgejo to a zip using [[https://forgejo.org/docs/latest/a
 
 + [[https://forgejo.org/docs/next/user/actions/][Forgejo Actions user guide]]
 + [[https://forgejo.org/docs/next/admin/actions/][Forgejo Actions administrator guide]]
++ [[https://forgejo.org/docs/next/admin/runner-installation/][Forgejo Runner installation guide]]
 
 ** Emacs Support
 
