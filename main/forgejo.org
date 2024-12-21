@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       736537b3-75e0-4c24-9156-364937e0e8a2
-:mtime:    20240708222139 20240708205417 20240309204131 20240215065336 20240214220237 20240214203455 20240213073417 20240211204231 20240211163700 20240211140707
+:mtime:    20241221213704 20240708222139 20240708205417 20240309204131 20240215065336 20240214220237 20240214203455 20240213073417 20240211204231 20240211163700 20240211140707
 :ctime:    20240211140707
 :END:
 #+TITLE: Forgejo
@@ -332,6 +332,11 @@ You can easily backup Forgejo to a zip using [[https://forgejo.org/docs/latest/a
 ** Mirroring
   + [[https://docs.gitlab.com/ee/user/project/repository/mirror/][Repository mirroring | GitLab]]
   + [[https://docs.gitlab.com/ee/user/project/repository/mirror/pull.html][Pull from a remote repository | GitLab]]
+
+** Continuous Integration
+
++ [[https://forgejo.org/docs/next/user/actions/][Forgejo Actions user guide]]
++ [[https://forgejo.org/docs/next/admin/actions/][Forgejo Actions administrator guide]]
 
 ** Emacs Support
 
