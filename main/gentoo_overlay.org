@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       83017000-6081-4787-83c3-5e1639684909
-:mtime:    20240705080346
+:mtime:    20241221211809 20240705080346
 :ctime:    20240705080346
 :END:
 #+TITLE: Gentoo Overlays
@@ -14,6 +14,14 @@ commands to ~enable~, ~disable~, ~list -i~ (installed) and ~remove~.
 [[https://wiki.gentoo.org/wiki/Layman][Layman]] used to be a package for handling overlays but is now obsolete. These days everything is done via Git repos and
 handled by ~eselect~
 
+
+* Managing
+
+To add an overlay
+
+#+begin_src
+eselect repository enable guru
+#+end_src
 
 * Overlays
 
