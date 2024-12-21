@@ -1,12 +1,18 @@
 :PROPERTIES:
 :ID:       ae1e9b97-feb0-4f1a-b804-b89edaf5a790
-:mtime:    20240214212843 20240124091633 20231121210648
+:mtime:    20241221202607 20240214212843 20240124091633 20231121210648
 :ctime:    20231121210648
 :END:
 #+TITLE: SSH
 #+FILETAGS: :privacy:ssh:security:linux:
 
+* Create Keys
+
+#+begin_src
+ssh-keygen -o -a 100 -t ed25519
+#+end_src
+
 * Links
 
 + [[https://en.wikibooks.org/wiki/OpenSSH][OpenSSH - Wikibooks, open books for an open world]]
-+ [[https://blog.g3rt.nl/upgrade-your-ssh-keys.html][Upgrade your SSH keys! · blog.g3rt.nl]] good article on `ed25519`
++ [[https://blog.g3rt.nl/upgrade-your-ssh-keys.html][Upgrade your SSH keys! · blog.g3rt.nl]] good article on ~ed25519~
