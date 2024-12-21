@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c345f901-5a1f-4868-b8bf-bc352554ee58
-:mtime:    20241215211752 20241215084441
+:mtime:    20241221211807 20241215211752 20241215084441
 :ctime:    20241215084441
 :END:
 #+TITLE: NixOS - Security
@@ -45,6 +45,14 @@ them shouldn't be an issue.
     ssh-ed25519 ############################ user@host1
     ssh-ed25519 ############################ user@host2
   '';
+#+end_src
+
+** SSH Keys
+
+Make new keys for the machine as user with the usual command
+
+#+begin_src
+ssh-keygen -o -a 100 -t ed25519
 #+end_src
 
 ** SSH Agent
@@ -107,6 +115,8 @@ environment.systemPackages = with pkgs; [
 
 ** SSH
 
++ [[https://nixos.wiki/wiki/SSH_public_key_authentication][SSH public key authentication - NixOS Wiki]]
+
 ** GPG
 
 ** pass
@@ -117,3 +127,7 @@ environment.systemPackages = with pkgs; [
 
 + [[https://nixos.wiki/wiki/Yubikey][Yubikey - NixOS Wiki]]
 + [[https://nixos.wiki/wiki/Yubikey_based_Full_Disk_Encryption_(FDE)_on_NixOS][Yubikey based Full Disk Encryption (FDE) on NixOS - NixOS Wiki]]
+
+** Articles
+
++ [[https://rzetterberg.github.io/yubikey-gpg-nixos.html][Setting up GnuPG + Yubikey on NixOS for SSH authentication]]

@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       6b30f891-f1a4-493f-a666-677a012d1b4b
+:mtime:    20241220205540
+:ctime:    20241220205540
+:END:
+#+TITLE: NixOS - Dev
+#+FILETAGS: :nixos:linux:dev:reference:
+
+Nix uses its own functional, declarative language.
+
+
+* Links
+
++ [[https://nix.dev/tutorials/nix-language][Nix language basics — nix.dev documentation]]
