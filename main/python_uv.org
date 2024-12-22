@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd
-:mtime:    20241216094907 20241215174459 20241122002308 20241017134853
+:mtime:    20241222103302 20241216094907 20241215174459 20241122002308 20241017134853
 :ctime:    20241017134853
 :END:
 #+TITLE: Python uv
@@ -52,6 +52,19 @@ for its configuration.
 uvx pytest
 #+end_src
 
+* Related
+
+** ~uv-secure~
+
+[[https://github.com/owenlamont/uv-secure][uv-secure]] will scan your ~uv.lock~ file for dependencies with known vulnerabilities. There is a [[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] hook that can
+be enabled.
+
+#+begin_src yaml
+  - repo: https://github.com/owenlamont/uv-secure
+    rev: 0.2.0
+    hooks:
+      - id: uv-secure
+#+end_src
 
 * Links
 
