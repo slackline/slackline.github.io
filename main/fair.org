@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b902439b-7bed-4493-8423-fab4c85f79a8
-:mtime:    20241209195457
+:mtime:    20241222214642 20241209195457
 :ctime:    20241209195457
 :END:
 #+TITLE: FAIR Principles
@@ -19,6 +19,8 @@ Principles.
 
 * Findable
 
+DOIs are one of the key components for making digital output findable.
+
 * Accessible
 
 * Interoperable
@@ -26,3 +28,5 @@ Principles.
 * Reusable
 
 * Links
+
++ [[https://shortdoi.org/][shortDOI Service]]
