@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       01336e19-dc8a-41ca-8534-6a790b39b1b6
-:mtime:    20241215081001
+:mtime:    20241226213213 20241225093335 20241215081001
 :ctime:    20241215081001
 :END:
 #+TITLE: NixOS - HomeManager
@@ -9,6 +9,31 @@
 [[https://nix-community.github.io/home-manager/][Home Manager]] is a tool for managing users ~$HOME~ directories. It allows configuration of programs such as [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]]
 , [[id:868b46bc-3594-4cf2-aecb-ca6e1389ac27][Kitty]], GIMP and many others in NixOS' declarative manner.
 
+* Dotfiles
+
+Its possible to configure HomeManager to work with a [[id:31304184-2fad-4cc5-824b-3ab4b9d2e126][Dotfiles]] repository and create symbolic links (see example in [[https://discourse.nixos.org/t/nixos-gnu-stow-dotfiles/469][this
+thread]]).
+
+#+begin_src
+home.file.".bashrc".source = ./dotfiles/bash/.bashrc;
+home.file.".bash_aliases".source = ./dotfiles/bash/.bash_aliases;
+home.file.".zshrc".source = ./dotfiles/zsh/.zshrc;
+home.file.".tmux.config".source = ./dotfiles/tmux/.tmux.config;
+#+end_src
+
+But this avoids using useful tools such as [[https://www.gnu.org/software/stow/][GNU Stow]] to automatically symlink a whole bunch of files.
+
+** GNU Stow
+
+To get this working a possible solution is to a [[https://nix.dev/tutorials/nix-language#shell-environment][Shell environment]] to clone the repository and ~stow .~.
+
+#+begin_src
+cd /home/neil
+git clone https://gitlab.com/nshephard/dotfiles
+stow .
+#+end_src
+
 * Links
 
 + [[https://nix-community.github.io/home-manager/][Home Manager Manual]]
++ [[https://home-manager-options.extranix.com/][Home Manager - Option Search]]

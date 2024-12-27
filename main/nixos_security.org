@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c345f901-5a1f-4868-b8bf-bc352554ee58
-:mtime:    20241221211807 20241215211752 20241215084441
+:mtime:    20241225135036 20241225120544 20241224191557 20241223215106 20241222234038 20241221211807 20241215211752 20241215084441
 :ctime:    20241215084441
 :END:
 #+TITLE: NixOS - Security
@@ -11,6 +11,38 @@ important thing to consider is NixOS stores /everything/ in its own special file
 be very careful about putting passwords in any ~/etc/nixos/*.nix~ file.
 
 * NixOps
+
+* Agenix
+
+[[https://github.com/ryantm/agenix][agenix]] provides age-encrypted secrets for NixOS and Home manager. The [[https://github.com/ryantm/agenix?tab=readme-ov-file#tutorial][tutorial]] should be the primary reference for
+working with ~agenix~, although note that there are several different ways of [[https://github.com/ryantm/agenix?tab=readme-ov-file#installation][installing]].
+
+Usage involves configuring ~/etc/nixos/secretes.nix~ (default location) with details of the public SSH keys that are
+permitted to be used in the system. You can define individual users or groups within a ~let~ block, you then define
+within an ~in~ block which users or groups keys are permitted to access which files.
+
+The following defines two users who are part of the ~users~ group, ~user1~ and ~system1~ have permission to decrypt the
+"vpn.age" file.
+
+#+begin_src
+let
+  user1 = "ssh-ed25519 ###################";
+  user2 = "ssh-ed25519 ###################";
+  users = [ user1 user2 ];    # A group consisting of user1 and user2
+
+  system1 = "ssh-ed25519 ###################";
+in
+{
+  "vpn.age".publicKeys = [ users system1 ];
+}
+#+end_src
+
+You create the encrypted ~vpn.age~ file with the following, adding the content (passwords etc.) the file should provide.
+
+#+begin_src
+agenix -e vpn.age
+#+end_src
+
 
 * SSH
 
@@ -85,8 +117,20 @@ environment.systemPackages = with pkgs; [
 ];
 #+end_src
 
+Despite this I encountered an error about ~No pinentry~ which stopped me from decrypting encrypted files such as my
+passwords (see below), kind of important to be able to do this on a system I want to use. I found [[https://discourse.nixos.org/t/cant-get-gnupg-to-work-no-pinentry/15373/8][this thread]] which
+suggested I needed to enable ~pcscd~ but that didn't work. Reading through the thread ~@exa~ mentions having to modify
+~.gnupg/gpg-agent.conf~ so I had a look through and sure enough I had an explicit entry for ~pinentry-program
+/usr/bin/pinentry~ as the file came from my [[id:31304184-2fad-4cc5-824b-3ab4b9d2e126][Dotfiles]] but on NixOS this isn't the path to executables, instead its
+~/run/current-system/sw/bin/pinentry~. Bingo! Commenting this line and killing ~gpg-agent~ and restarting I was prompted
+for my Yubikey to unlock my passwords.
+
+**TODO** I need to work out whether I'm going to have a custom configuration for this NixOS or maintain a global configuration in
+my dotfiles and tweak it to use the correct path based on ~$HOSTNAME~.
+
 ** GPG Agent
 
+I
 * ~pass~
 
 ~pass~ is the [[https://www.passwordstore.org/][standard unix password manager]] and encrypts passwords using [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] under ~~/.password-store~.
@@ -104,24 +148,40 @@ environment.systemPackages = with pkgs; [
 ];
 #+end_src
 
-* Yubikey
+* Wireguard
 
+[[id:ba01e998-be25-43d4-81f0-ff4228c252ea][Wireguard]] is a VPN that runs in-kernel. It is fast and efficient and relatively simple, but it requires [[https://nixos.wiki/wiki/WireGuard][configuration on
+both your NixOS installation]] and the server which is providing the VPN service.
+
+** Server Setup
+
+You need to start by generating a key pair on the server for your system, if your server is already setup and running
+Wireguard then it already has a ~PrivateKey~ and you can find it to generate the public key for the new client.
+#+begin_src
+# Find your servers public key
+umask 077
+grep 'PrivateKey = ' /etc/wireguard/wg0.conf | tail -n 1 | sed -e 's/.* = //g' > server_private.key
+wg genkey  | tee server_private.key | wg_pubkey > client-public.key)
+wg genpsk > client-psk
+#+end_src
+
+
+** Install
+
+#+begin_src
+{
+  environment.systemPackages = with pkgs; [
+    ...
+    wireguard-tools
+    ...
+  ];
+}
+
+#+end_src
+
+Once installed you need to create public and private key-pairswg
 
 * Links
-
-** NixOps
-
-+ [[https://elvishjerricco.github.io/2018/06/24/secure-declarative-key-management.html][Secure, Declarative Key Management with NixOps, Pass, and nix-plugins]]
-
-** SSH
-
-+ [[https://nixos.wiki/wiki/SSH_public_key_authentication][SSH public key authentication - NixOS Wiki]]
-
-** GPG
-
-** pass
-
-+ [[https://github.com/shlevy/nix-plugins][GitHub - shlevy/nix-plugins: Collection of miscellaneous plugins for the nix expression language]]
 
 ** Yubikey
 
@@ -131,3 +191,10 @@ environment.systemPackages = with pkgs; [
 ** Articles
 
 + [[https://rzetterberg.github.io/yubikey-gpg-nixos.html][Setting up GnuPG + Yubikey on NixOS for SSH authentication]]
++ [[https://sekun.net/blog/manage-secrets-in-nixos/][Manage secrets in NixOS - sekun]]
+
+** Forum
+
+Useful posts in the forums
+
++ [[https://discourse.nixos.org/t/module-to-automatic-encrypt-secrets-provided-as-files/28790/5][Encrypting secrets under NixOS]]
