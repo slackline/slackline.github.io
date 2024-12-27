@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       ba01e998-be25-43d4-81f0-ff4228c252ea
+:mtime:    20241223214926
+:ctime:    20241223214926
+:END:
+#+TITLE: Wireguard
+#+FILETAGS: :linux:vpn:wireguard:
+
+Wireguard is an in-kernel VPN system that his fast and simple.
+
+* Links
+
++ [[https://www.wireguard.com/][WireGuard: fast, modern, secure VPN tunnel]]
