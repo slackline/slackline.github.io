@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       18820a48-4ec2-43d7-a0a3-01fc5beca40d
-:mtime:    20241220092318 20241202080209 20240910123408 20240603215054 20240215074645 20240212071535 20240204194822
+:mtime:    20241224182800 20241220092318 20241202080209 20240910123408 20240603215054 20240215074645 20240212071535 20240204194822
 :ctime:    20240204194822
 :END:
 #+TITLE: Books
@@ -110,11 +110,14 @@ Good places to buy that aren't Amazon
 
 ** Statistics
 
-+ Efront & Hastie /Computer Age Statistical Inference/
++ Efron & Hastie /Computer Age Statistical Inference/
 + Harrell /Regression MOdelling Strategies/
 + Kuhn & Johnson /Applied Predictive Modelling/
 + McElreath /Statistical Rethinking (2e)/
 
+** Misc
+
++ [[id:425ab165-8f86-4295-8bcf-6661eb55409c][books_4000_weeks]]
 * To Read
 
 ** Evolution

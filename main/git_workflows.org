@@ -1,12 +1,21 @@
 :PROPERTIES:
 :ID:       36b4612a-63df-4858-afb1-f35d4f44dba5
-:mtime:    20240901100226
+:mtime:    20241225215253 20241225153610 20240901100226
 :ctime:    20240901100226
 :END:
 #+TITLE: Git Workflows
 #+FILETAGS: :git:dev:workflows:
 
+* Git Flow
+
+* GitHub Flow
+
+* Patch Stack
+
+[[https://book.git-ps.sh/tool/][Git Patch Stack]] is a different workflow (and Git extension) to feature branches which are used in both Git Flow and
+GitHub Flow.
 
 * Links
 
 + [[https://www.git-tower.com/blog/stacked-prs/][Understanding the Stacked Pull Requests Workflow | Tower Blog]]
++ [[https://drewdeponte.com/blog/journey-to-small-pull-requests/][Journey to Small Pull Requests]]
