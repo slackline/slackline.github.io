@@ -289,6 +289,7 @@ found useful.
 
 + [[https://www.stephaniehicks.com/jhustatcomputing2022/schedule][Statistical Computing]]
 + [[https://healthyr.surgicalinformatics.org/index.html#top][HealthyR]]
++ [[https://stringhinilab.github.io/GitHubProceduresLab/][Code Management Guidelines]] 
 
 ** HowTos
 
