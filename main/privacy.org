@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b5000932-0fec-4353-acc4-0cb02127c9ac
-:mtime:    20240716155322 20240323194442 20240301231300 20240122165548 20240107095430 20231221072710 20231211080603 20231121210843
+:mtime:    20241229195114 20240716155322 20240323194442 20240301231300 20240122165548 20240107095430 20231221072710 20231211080603 20231121210843
 :ctime:    20231121210843
 :END:
 #+TITLE: Privacy and Encryption
@@ -39,6 +39,7 @@ Privacy is important, it underpins free speech, but many chose to sacrifice thei
 ** Articles
 
 + [[https://www.eff.org/deeplinks/2023/11/address-online-harms-we-must-first-do-privacy][To Address Online Harms, We Must Consider Privacy First | Electronic Frontier Foundation]]
++ [[https://www.newyorker.com/culture/the-weekend-essay/what-is-privacy-for][What Is Privacy For? | The New Yorker]]
 
 ** Miscellaneous
 

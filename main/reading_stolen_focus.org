@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       6df8ea24-1041-4e12-9cee-ee235ff7a6ca
-:mtime:    20241006205539
+:mtime:    20241229195119 20241006205539
 :ctime:    20241006205539
 :END:
 #+TITLE: Stolen Focus
@@ -12,3 +12,4 @@ compared to when I was studying in my undergraduate degree, post-graduate degree
 * Links
 
 + [[https://cmsthomas.substack.com/p/the-atlantic-did-me-dirty][The Atlantic Did Me Dirty - Carrie M. Santo-Thomas]]
++ [[https://www.newyorker.com/culture/the-weekend-essay/what-is-privacy-for][What Is Privacy For? | The New Yorker]]
