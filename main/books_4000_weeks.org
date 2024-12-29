@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       425ab165-8f86-4295-8bcf-6661eb55409c
+:mtime:    20241229200118 20241224182713
+:ctime:    20241224182713
+:END:
+#+TITLE: 4000 Weeks : Time Management for Meer Mortals by Oliver Burkeman
+#+FILETAGS: ::books:productivity:read:life:
+
+I picked up via [[id:d08d1fe6-5317-4f09-95f7-d47e8811e007][Kobo]] Oliver Burkeman's [[https://www.oliverburkeman.com/fourthousandweeks][Four Thousand Weeks : Time Management for Mortals]] and really enjoyed reading
+it. It provides a fresh alternative to the common narrative of working yourself to the bone for others benefit,
+continually trying to optimise every moment of your life to get better organised so you can make more use of your time
+to achieve "improvement" for a plethora of goals that ultimately you won't ever fully complete. Instead focusing on and
+prioritising that which matters to you is more important, and avoiding distractions as these far too often prevent us
+from achieving what is important to us.
+
+I thought it worth noting the advice given at the end and will return to these to expand my thoughts on how I stack up
+against them and what I can do to improve.
+
+1. Adopt a 'fixed volume' approach to productivity
+2. Serialise, serialise, serialise
+3. Decide in advance what to fail at
+4. Focus  on what you've already completed, no just on what's left to complete
+5. Consolidate your caring
+6. Embrace boring and single-purpose technology
+7. Seek out novelty in the mundane
+8. Be a 'researcher' in relationships
+9. Cultivate instantaneous generosity
+10. Practise doing nothing
