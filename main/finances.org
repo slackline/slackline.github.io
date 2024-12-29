@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       66929a19-e6c6-476c-9b80-d2c002f6ba91
+:mtime:    20241222074427
+:ctime:    20241222074427
+:END:
+#+TITLE: Finances
+#+FILETAGS: :money:finances:
+
+
+* Links
+
++ [[https://portfoliocharts.com/charts/withdrawal-rates/][Withdrawal Rates – Portfolio Charts]]
