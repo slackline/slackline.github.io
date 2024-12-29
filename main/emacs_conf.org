@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f76ac811-6c1a-4aa6-9492-8cbae7cb50ca
-:mtime:    20241207224639 20241207180917 20241031080307 20231204134451 20230103103314 20221224191223
+:mtime:    20241229204339 20241207224639 20241207180917 20241031080307 20231204134451 20230103103314 20221224191223
 :ctime:    20221224191223
 :END:
 #+TITLE: Emacs Conf
@@ -25,6 +25,7 @@ I use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] as my primary IDE (and 
 + [[https://live.emacsconf.org/2024/watch/gen/#sched][General Schedule]] - includes links to Etherpad
 + [[https://live.emacsconf.org/2024/watch/dev/][Development Scehdule]] - includes links to Etherpad
 + [[https://emacsconf.org/2024/talks/papers][Papers & Pads]] - archive of papers and pads from the conference
++ [[https://sachachua.com/blog/2024/12/emacsconf-2024-notes/][EmacsConf 2024 notes :: Sacha Chua]] - retrospective on organising the conference
 
 ** Managing Writing Project Metadata with Org-mode
 + Log files for writing research articles. [[https://github.com/MooersLab#emacs-related]]
