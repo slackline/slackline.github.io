@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c345f901-5a1f-4868-b8bf-bc352554ee58
-:mtime:    20241225135036 20241225120544 20241224191557 20241223215106 20241222234038 20241221211807 20241215211752 20241215084441
+:mtime:    20250103151626 20250102164607 20241225135036 20241225120544 20241224191557 20241223215106 20241222234038 20241221211807 20241215211752 20241215084441
 :ctime:    20241215084441
 :END:
 #+TITLE: NixOS - Security
@@ -102,6 +102,23 @@ programs.ssh.startAgent = true;
 
 [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] offers secure encryption for all your secrets and files and works seamlessly with tools such as ~pass~ and [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]].
 
+** GPG Key Forwarding
+
+You can configure [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] to forward [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] keys so that they work on a remote as though they were local. In order to make
+this work seamlessly you need to add the ~StreamLocalBindUnlink yes~ option to ~sshd_config~ which can be done by adding
+the following.
+
+#+begin_src
+openssh = {
+  enable = true;
+  ...
+  extraConfig = ''
+    StreamLocalBindUnlink yes
+  '';
+}; # end openssh
+#+end_src
+
+
 ** System Configuration
 
 Install system wide by adding ~gnupg~ and at least one ~pinentry~ package to ~environment.systemPackages~ in
@@ -112,7 +129,8 @@ environment.systemPackages = with pkgs; [
   ...
   gnupg
   pinentry-curses
-  pinentry-gtk2
+  pinentry-emacs
+  pinentry-gnome3
   ...
 ];
 #+end_src

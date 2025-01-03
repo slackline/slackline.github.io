@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       8dbfd602-d467-4c47-b446-066c392f7dd4
+:mtime:    20250102180319
+:ctime:    20250102180319
+:END:
+#+TITLE: NixOS - Tips and Tricks
+#+FILETAGS: :nixos:linux:config:
+
+* Search NixOS for configuration
+
+The site [[https://search.nixos.org/][search.nixos.org]] doesn't just list [[https://search.nixos.org/packages][packages]], there is the option to search [[https://search.nixos.org/options][NixOS options]] too. It lists all of
+the modules configuration and you can search it for sub-options and examples. For example, you want to know what
+configuration options are available for the [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]] shell under NixOS, search for [[https://search.nixos.org/options?channel=24.11&show=programs.zsh.autosuggestions.async&from=0&size=50&sort=relevance&type=packages&query=programs.zsh][~programs.zsh~]] and you get a list of all
+the options that are available, click on one and you can expand each and see a succinct example of its usage.
+
+* Switching to old generations and deleting new ones
+
+If you find an update or change to your system is unstable and want to revert to an old one you can do so easily with
+the following (where ~14~ is the working generation and ~15~ is the broken one to be removed)
+
+#+begin_src
+nix-env --list-generations
+nix-env --switch-generation 14
+nix-env --delete-generation 15
+#+end_src

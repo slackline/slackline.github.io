@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       befac7d2-0086-4da1-8534-ce4379275db4
-:mtime:    20241229202218
+:mtime:    20250102234210 20241229202218
 :ctime:    20241229202218
 :END:
 #+TITLE: 38C3
@@ -15,3 +15,4 @@ Yet another conference I've not heard of but its been running for 38 years it se
 + [[https://events.ccc.de/congress/2024/hub/de/event/resource-consumption-of-ai-degrow-or-die/][Resource Consumption of AI - Degrow or Die - 38C3]] ([[https://thomasfricke.de/38c3.pdf][slides]], other [[https://media.ccc.de/search?p=Thomas+Fricke][talks]])
 + [[https://media.ccc.de/v/38c3-wir-wissen-wo-dein-auto-steht-volksdaten-von-volkswagen#t=865][Wir wissen wo dein Auto steht - Volksdaten von Volkswagen - media.ccc.de]] - Volkswagen have been recording data from
   800000 cars and have 10 billion journeys!
++ [[https://media.ccc.de/v/38c3-sixos-a-nix-os-without-systemd][sixos: a nix os without systemd - media.ccc.de]]

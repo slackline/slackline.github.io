@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       69291a6b-c253-44bc-ad9d-8d899bb90529
-:mtime:    20241231141855 20241231115858 20241227164143 20241226211846 20241224191552 20241221211808 20241221142059 20241220225930 20241220210309 20241215222630 20241215203017 20241215120453 20241215084508 20241214235221 20241214074620 20241214064000 20241213214801 20241213074524 20241212212528 20241211115355 20241211103642 20241210065459 20240324205532 20240305091938 20240304160447
+:mtime:    20250102180337 20241231141855 20241231115858 20241227164143 20241226211846 20241224191552 20241221211808 20241221142059 20241220225930 20241220210309 20241215222630 20241215203017 20241215120453 20241215084508 20241214235221 20241214074620 20241214064000 20241213214801 20241213074524 20241212212528 20241211115355 20241211103642 20241210065459 20240324205532 20240305091938 20240304160447
 :ctime:    20240304160447
 :END:
 #+TITLE: NixOS
@@ -13,15 +13,9 @@
   + [[id:c345f901-5a1f-4868-b8bf-bc352554ee58][Security]]
 + [[id:535a0cab-3321-4153-b581-83e9ec65ee33][Maintenance]]
 + [[id:6b30f891-f1a4-493f-a666-677a012d1b4b][Development]]
++ [[id:8dbfd602-d467-4c47-b446-066c392f7dd4][Tips and Tricks]]
 
 * Tips and Tricks
-
-** Search NixOS for configuration
-
-The site [[https://search.nixos.org/][search.nixos.org]] doesn't just list [[https://search.nixos.org/packages][packages]], there is the option to search [[https://search.nixos.org/options][NixOS options]] too. It lists all of
-the modules configuration and you can search it for sub-options and examples. For example, you want to know what
-configuration options are available for the [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]] shell under NixOS, search for [[https://search.nixos.org/options?channel=24.11&show=programs.zsh.autosuggestions.async&from=0&size=50&sort=relevance&type=packages&query=programs.zsh][~programs.zsh~]] and you get a list of all
-the options that are available, click on one and you can expand each and see a succinct example of its usage.
 
 * Links
 
