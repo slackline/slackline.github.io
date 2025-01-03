@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ce08bd82-0146-49cb-8a64-048ffe7210f2
-:mtime:    20241227171141 20241216105142 20240510223935 20240417110830 20240317085317 20240315224355 20231231085314 20231210095348 20231126223255 20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
+:mtime:    20250102163117 20241227171141 20241216105142 20240510223935 20240417110830 20240317085317 20240315224355 20231231085314 20231210095348 20231126223255 20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
 :ctime:    20221229210308
 :END:
 #+TITLE: GnuPG
@@ -249,6 +249,59 @@ The instructions on [[https://keys.openpgp.org/about/usage][openpgp.org]] are ve
 
 Once this is done you should visit the URL that is shown and click on the link to verify the email address, check your
 inbox and then you have verified your email address.
+
+* GPG Forwarding over SSH
+
+The ability to forward your GPG keys over SSH makes working on remote systems seamless. This has been supported as of
+OpenSSH 6.7 and GnuPG >= 2.1.1. There is [[https://wiki.gnupg.org/AgentForwarding][official documentation]] on how to do this and I found a [[https://superuser.com/questions/161973/how-can-i-forward-a-gpg-key-via-ssh-agent][thread]] and [[https://blog.alt255.com/post/gpg_forwarding/][blog post]]
+useful.
+
+** GPG Configuration
+
+On the **local** machine (that you SSH /from/) you need to know the location of ~agent-extra-socket~, this can be found
+with the following...
+
+#+begin_src
+gpgconf --list-dir agent-extra-socket
+#+end_src
+
+On the **remote** machine (that you SSH /to/) you need to know the location of ~agent-socket~, this can be found in a
+similar manner...
+
+#+begin_src
+gpgconf --list-dir agent-socket
+#+end_src
+
+Armed with this information you can now configure SSH.
+
+** SSH Configuration
+
+Add this information to your ~~/.ssh/config~ in the format shown below...
+
+#+begin_src
+Host gpgtunnel
+  HostName server.domain
+  RemoteForward <socket_on_remote_box> <extra_socket_on_local_box>
+#+end_src
+
+If I want to connect to ~kimura~  where ~agent-extra-socket~ is ~/run/user/1000/gnupg/S.gpg-agent-extra~ to ~crow~ where
+~agent-socket~ is ~/run/user/1001/gnupg/S.gpg-agent~ I added the last line shown below.
+
+#+begin_src
+Host crow
+     HostName 192.168.10.201
+     Port 9876
+     User user1
+     IdentityFile ~/.ssh/id_ed25519
+     ForwardAgent yes
+     RemoteForward /run/user/1001/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
+#+end_src
+
+As mentioned should, if you have access to ~root~ add ~StreamLocalBindUnlink yes~ to ~/etc/ssh/sshd_config~ as this
+removes stale sockets and with the correct ~RemoteForward~ entry use of GnuPG is seamless. Without it you have to first
+remove the socket on the remote. How you do this will depend on your operating system for [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]] and [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch]] Linux you can
+edit ~/etc/ssh/sshd_config~ directly. If you're on [[id:c345f901-5a1f-4868-b8bf-bc352554ee58][NixOS]] you need to add it to via ~services.openssh.extraConfig~ since
+it is not an explicitly defined configuration option.
 
 * Yubikey and OpenPGP
 
