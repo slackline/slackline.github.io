@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       970f08b7-210c-41ad-a25e-b9ed0000c34f
-:mtime:    20241010102833
+:mtime:    20250103151110 20241010102833
 :ctime:    20241010102833
 :END:
 #+TITLE: Git Ignore
@@ -23,3 +23,13 @@ This would add the following to your ~/.gitconfig~
 #+end_src
 
 On a local repository level as well as configuring ~.gitignore~ you can add patterns to the ~.git/info/exclude~ file.
+
+Patterns that exclude editor specific changes should go in the global file as they are not relevant to the project.
+
+* OSX
+
+OSX adds a ~.DS_Store~ file to every directory and this should therefore be included in your global ~/.gitignore~.
+
+* Links
+
++ [[https://blog.sugoi.be/posts/2025/stop-polluting-gitignore-files/][Stop Polluting .Gitignore Files]]
