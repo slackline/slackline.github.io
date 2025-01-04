@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a37b61ba-8699-4ee3-b407-38f256c186c4
-:mtime:    20241229195347 20241224191824 20241223211940 20241223113355 20241223083247 20241221221347 20241221211157 20241221201119 20241221163742 20241221152122 20241221072719 20241211112128 20240630205259 20240204192058
+:mtime:    20250104211131 20241229195347 20241224191824 20241223211940 20241223113355 20241223083247 20241221221347 20241221211157 20241221201119 20241221163742 20241221152122 20241221072719 20241211112128 20240630205259 20240204192058
 :ctime:    20240204192058
 :END:
 #+TITLE: Jujutsu
@@ -29,9 +29,9 @@ emerge -av dev-vcs/jj
 
 ** NixOS
 
-~jj~ is also available for [[id:69291a6b-c253-44bc-ad9d-8d899bb90529][NixOS]]. You can use [[id:c9eb0e6d-b152-487c-90d4-3786fcfd0889][flake]] or [[id:01336e19-dc8a-41ca-8534-6a790b39b1b6][HomeManager]], I opted for the former and added the following to
-~/etc/nixos/flake.nix~. Just add the following to ~/etc/nixos/configuration.nix~ to install the most recent release
-system wide.
+~jj~ is also available for [[id:69291a6b-c253-44bc-ad9d-8d899bb90529][NixOS]]. You can install system wide or for specific users using [[id:01336e19-dc8a-41ca-8534-6a790b39b1b6][HomeManager]], I opted for the
+former and added the following to ~/etc/nixos/flake.nix~. Just add the following to ~/etc/nixos/configuration.nix~ to
+install the most recent release system wide.
 
 #+begin_src
 environment.systemPackages = with pkgs{
@@ -63,6 +63,7 @@ There is integration with both [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]]
 #+begin_src
 source <(jj util completion bash)
 #+end_src
+
 *** ZSH
 
 #+begin_src
@@ -101,7 +102,7 @@ which nano
 
 #+begin_src
 jj config set --user ui.editor "/run/current-system/sw/bin/nano"
-#+end_jj config set --user ui.pager "/run/current-system/sw/bin/most"
+jj config set --user ui.pager "/run/current-system/sw/bin/most"
 #+end_src
 
 * Usage
@@ -134,7 +135,7 @@ Working copy : vpqtltus 35cc03d2 (no description set)
 Parent commit: zzzzzzzz 00000000 (empty) (no description set)
 #+end_src
 
-First things first, I don't want to the temporary emacs files included. According to the [[https://jj-vcs.github.io/jj/latest/working-copy/#ignored-files][documentation]] there is no
+First things first, I don't want the temporary [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] files included. According to the [[https://jj-vcs.github.io/jj/latest/working-copy/#ignored-files][documentation]] there is no
 ~.jjignore~ yet so we use ~.gitignore~ instead listing our files and patterns there.
 
 #+begin_src
@@ -146,11 +147,11 @@ First things first, I don't want to the temporary emacs files included. Accordin
 need to untrack them with...
 
 #+begin_src
-jj file untrack
+jj file untrack *~
 #+end_src
 
 This failed because ~~~ is used in the syntax for [[https://jj-vcs.github.io/jj/latest/filesets/][jj filesets]] which is a method of defining patterns of files. I tried a
-few things but in the end couldn't suss it out in the five minutes so took the brute force option of ~rm -rf .jj~ and
+few things but in the end couldn't suss it out in five minutes so took the brute force option of ~rm -rf .jj~ and
 initialising the repository anew. We can look at the status with ~jj st~ and it will use our configured pager (which
 I've set to ~most~) to show the changes.
 
@@ -176,16 +177,22 @@ Parent commit: zzzzzzzz 00000000 (empty) (no description set)
 
 We can see the changes (i.e. all new files) are already noted as being under the working copy. We can also use ~jj
 describe~ to look at the changes, if we use the ~-m "A message"~ flag and value we can add a message and it will replace
-the ~no description set~ shown by ~jj st~.  With ~jj describe~ the information is opened up in an editor, and if a
-message has already been set it will be shown at the top. Note that lines begining with ~JJ~ will be removed (i.e. they
-are comment lines). On adding a message or changing it the commit ID changes, the change ID remains the same but the
-commit ID changes over time allowing us to refer to individual commits rather than a whole change set.
+the ~no description set~ shown by ~jj st~ with the given message.  With ~jj describe~ the information is opened up in an
+editor, and if a message has already been set it will be shown at the top. Note that lines begining with ~JJ~ will be
+removed (i.e. they are comment lines). On adding a message or changing it the commit ID changes, the change ID remains
+the same but the commit ID changes over time allowing us to refer to individual commits rather than a whole change set.
 
 #+begin_src
 jj describe -m "Initial commit with jj :)"
 Working copy now at: nxzzlvzo d2d192ec Initial commit with jj :)
 Parent commit      : zzzzzzzz 00000000 (empty) (no description set)
 #+end_src
+
+This is I think quite a subtle yet important difference with Git where typically branches are made to undertake changes
+and after making a series of small commits you can then squash them with an interactive rebase or squash them when
+merging. With Jujutsu you can instead edit the commit message each time you make a change/addition to the work you are
+undertaking using ~jj describe~ so you are incrementally building up the changes you are making. This can of course be
+done with [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] by using ~git commit --amend~ as you build on and add features.
 
 ** New commits
 
@@ -199,7 +206,7 @@ Parent commit      : nxzzlvzo d2d192ec Initial commit with jj :)
 #+end_src
 
 We can now modify a file, in this case I tidied up ~/etc/nixos/configuration.nix~ and put all ~network.*~ options within
-a ~network = {...};~ block and similar aggregated all ~nix.*~ options into a ~nix = {...};~ block.
+a ~network = {...};~ block and similarly aggregated all ~nix.*~ options into a ~nix = {...};~ block.
 
 #+begin_src
 jj st
@@ -227,7 +234,7 @@ current commit. When you are ready to start the next piece of work you ~jj new~ 
 start a new piece of work.
 
 This naturally leads to the question of how to undo work that you have done, its a pain to have to edit files and can be
-next to impossible. With ~jj~ you can move back to commits using ~jj edit @-~ and then use
+next to impossible. With ~jj~ you can move back to commits using ~jj edit @-~ and then use ~jj abandon~ to trash commits.
 
 #+begin_src
 jj edit @-
