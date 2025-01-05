@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c345f901-5a1f-4868-b8bf-bc352554ee58
-:mtime:    20250103151626 20250102164607 20241225135036 20241225120544 20241224191557 20241223215106 20241222234038 20241221211807 20241215211752 20241215084441
+:mtime:    20250105213209 20250103151626 20250102164607 20241225135036 20241225120544 20241224191557 20241223215106 20241222234038 20241221211807 20241215211752 20241215084441
 :ctime:    20241215084441
 :END:
 #+TITLE: NixOS - Security
@@ -197,7 +197,84 @@ wg genpsk > client-psk
 
 #+end_src
 
-Once installed you need to create public and private key-pairswg
+Once installed you need to create public and private key-pair on both the server, where a private key will already exist
+and should be used, and on the new client.
+
+*** Server
+
+Create a new public key and pre-shared for your new host with the following...
+
+#+begin_src
+(umask 077 && grep 'PrivateKey = ' /etc/wireguard/wg0.conf  | tail -n 1 | sed -e 's/.* = //g' | wg pubkey > public.key)
+(unask 077 && wg genpsk > preshared.key)
+#+end_src
+
+You will use the public and preshared key from the server on the client.
+
+*** Client
+
+Create private, public and preshared keys on the client.
+
+#+begin_src
+(umask 077 && wg genkey | tee client_private.key | wg pubkey > client_public.key)
+(umask 077 && wg genpsk > client_preshared.key)
+#+end_src
+
+Ultimately the private and preshared keys will be saved to encrypted files using ~agenix~. You can save the private key
+to ~/etc/nixos/secrets/wg0.age~ and the pre-shared key to ~/etc/nixos/secrets/wg0-preshared.age~. See above for how to
+create these keys, remember that you will have to include them in the ~age.secrets = { ... }~ section of your
+configuration.
+
+There are several methods documented on the [[https://wiki.nixos.org/wiki/WireGuard][wiki]] for configuring Wireguard clients.
+
+** Troubleshooting
+
+All sorts of woes, in no small part because I failed to open the correct port in the firewall
+
+#+begin_src
+    firewall = {
+      enable = true;
+      allowedUDPPorts = [ 51820 ];
+      checkReversePath = false;
+      logReversePathDrops = true;
+    }; # end firewall
+#+end_src
+
+Once enabled this got me a bit closer with a manual ~/etc/wireguard/wg0.conf~ but still no joying. I enabled kernel
+messages for the wireguard module on both server and client (see [[https://documentation.ubuntu.com/server/how-to/wireguard-vpn/troubleshooting/#kernel-debug-messages][kernel debug messages]] with ~echo "module wirebuard
++p" | sudo tee /sys/kernel/debu/dynamic_debug/control~) which showed the handshake whilst initiated from
+the client was received by the server and a response was sent (server output below)
+
+#+begin_src
+[  +5.637585] wireguard: wg0: Receiving handshake initiation from peer 22 (w.x.y.z:54456)
+[  +0.000012] wireguard: wg0: Sending handshake response to peer 22 (w.x.y.z:54456)
+[  +0.000380] wireguard: wg0: Keypair 3750 destroyed for peer 22
+[  +0.000003] wireguard: wg0: Keypair 3751 created for peer 22
+[  +5.147949] wireguard: wg0: Receiving handshake initiation from peer 22 (w.x.y.z:54456)
+[  +0.000019] wireguard: wg0: Sending handshake response to peer 22 (w.x.y.z:54456)
+[  +0.000613] wireguard: wg0: Keypair 3751 destroyed for peer 22
+[  +0.000007] wireguard: wg0: Keypair 3752 created for peer 22
+[  +5.599320] wireguard: wg0: Receiving handshake initiation from peer 22 (w.x.y.z:54456)
+[  +0.000010] wireguard: wg0: Sending handshake response to peer 22 (w.x.y.z:54456)
+[  +0.000250] wireguard: wg0: Keypair 3752 destroyed for peer 22
+[  +0.000004] wireguard: wg0: Keypair 3753 created for peer 22
+#+end_src
+
+...always failed on the client end (output below)...
+
+#+begin_src
+[  +5.611551] wireguard: wg0: Handshake for peer 39 (a.b.c.d:51820) did not complete after 5 seconds, retrying (try 2)
+[  +0.000141] wireguard: wg0: Sending handshake initiation to peer 39 (a.b.c.d:51820)
+[  +0.026726] wireguard: wg0: Invalid handshake response from a.b.c.d:51820
+[  +5.092787] wireguard: wg0: Handshake for peer 39 (a.b.c.d:51820) did not complete after 5 seconds, retrying (try 3)
+[  +0.000114] wireguard: wg0: Sending handshake initiation to peer 39 (a.b.c.d:51820)
+[  +0.053666] wireguard: wg0: Invalid handshake response from a.b.c.d:51820
+[  +5.578102] wireguard: wg0: Handshake for peer 39 (a.b.c.d:51820) did not complete after 5 seconds, retrying (try 4)
+[  +0.000022] wireguard: wg0: Sending handshake initiation to peer 39 (a.b.c.d:51820)
+[  +0.021524] wireguard: wg0: Invalid handshake response from a.b.c.d:51820
+#+end_src
+
+I've double and triple checked the passwords are correct so suspect its an issue with the firewall on the laptop.
 
 * Links
 
@@ -210,6 +287,9 @@ Once installed you need to create public and private key-pairswg
 
 + [[https://rzetterberg.github.io/yubikey-gpg-nixos.html][Setting up GnuPG + Yubikey on NixOS for SSH authentication]]
 + [[https://sekun.net/blog/manage-secrets-in-nixos/][Manage secrets in NixOS - sekun]]
+
+** Wireguard
+
 
 ** Forum
 
