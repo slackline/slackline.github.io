@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       3fd5d8a5-5c07-49b6-bfe2-b6168f88f167
+:mtime:    20250106222348
+:ctime:    20250106222348
+:END:
+#+TITLE: Python Rio
+#+FILETAGS: :python:webdev:framework:
+
+[[https://rio.dev/][Rio]] is a web-development framework written in pure Python.
+
+* Links
+
++ [[https://github.com/rio-labs/rio][rio-labs/rio: WebApps in pure Python. No JavaScript, HTML and CSS needed]]
++ [[https://rio.dev/][Rio - Home]]

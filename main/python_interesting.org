@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       4ca15b37-1436-45fc-8a81-7f1f03b0ee64
-:mtime:    20240501131554 20230103103310 20221212181558
+:mtime:    20250106221426 20240501131554 20230103103310 20221212181558
 :ctime:    20221212181558
 :END:
 #+TITLE: Useful Python Packages
@@ -28,3 +28,7 @@
 + [[https://requests.readthedocs.io/en/latest/][requests]]
 + [[https://textual.textualize.io][textual]]
 + [[https://tqdm.github.io][tqdm]]
+
+** Annua "Top"
+
++ [[https://tryolabs.com/blog/top-python-libraries-2024][Top Python libraries of 2024 | Tryolabs]]
