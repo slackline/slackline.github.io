@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a37b61ba-8699-4ee3-b407-38f256c186c4
-:mtime:    20250104211131 20241229195347 20241224191824 20241223211940 20241223113355 20241223083247 20241221221347 20241221211157 20241221201119 20241221163742 20241221152122 20241221072719 20241211112128 20240630205259 20240204192058
+:mtime:    20250106104827 20250104211131 20241229195347 20241224191824 20241223211940 20241223113355 20241223083247 20241221221347 20241221211157 20241221201119 20241221163742 20241221152122 20241221072719 20241211112128 20240630205259 20240204192058
 :ctime:    20240204192058
 :END:
 #+TITLE: Jujutsu
@@ -702,4 +702,5 @@ which is one of the best [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] pack
 + [[https://v5.chriskrycho.com/essays/jj-init/][jj init — Sympolymathesy, by Chris Krycho]]
 + [[https://reasonablypolymorphic.com/blog/jj-strategy/index.html][Jujutsu Strategies :: Reasonably Polymorphic]]
 + [[https://ofcr.se/jujutsu-merge-workflow][A Better Merge Workflow with Jujutsu | ofcrse by Benjamin Tan]]
-+ [[https://tonyfinn.com/blog/jj/][Jujutsu (jj), a git compatible VCS - Tony Finn]]
++ [[https://tonyfinn.com/blog/jj/][Jujutsu (jj), a git compatible VCS - Tony Finn]]+
++ [[https://www.felesatra.moe/blog/2024/12/23/jj-is-great-for-the-wrong-reason][Jujutsu is great for the wrong reason]]
