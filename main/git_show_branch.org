@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       4fb509b0-65d7-401f-bc14-e6657daabda3
+:mtime:    20250110155802
+:ctime:    20250110155802
+:END:
+#+TITLE: Git Show Branch
+#+FILETAGS: :git:history:log:
+
+* Links
+
++ [[https://commandmasters.com/commands/git-show-branch-common/][Mastering the `git show-branch` Command (with examples)]]
