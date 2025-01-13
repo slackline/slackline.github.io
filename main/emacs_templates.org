@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a8c134c6-bb0f-408d-96ee-48b02da8cffe
-:mtime:    20230203235048
+:mtime:    20250113223832 20230203235048
 :ctime:    20230203235048
 :END:
 #+TITLE: Emacs Templates
@@ -8,8 +8,11 @@
 
 * Templates
 
-* Yasnippets
+* YASnippets
 
+** Slurm
+
+Its possible to write YASnippets templates for Slurm jobs, see the article [[https://plantarum.ca/2025/01/10/slurm-yasnippet/][Taming Slurm with Yasnippet]].
 
 * Links
 
@@ -17,3 +20,4 @@
 
 + [[https://www.youtube.com/watch?v=xmBovJvQ3KU][Supercharge your Emacs / Spacemacs / Doom with Yasnippets! - YouTube]]
 + [[https://www.youtube.com/watch?v=UWJRgmAIZcg][Emacs YASnippet Timothy Unkert Timothy Unkert • • 868 views 10 months ago]]
++ [[https://plantarum.ca/2025/01/10/slurm-yasnippet/][Taming Slurm with Yasnippet - plantarum.ca]]
