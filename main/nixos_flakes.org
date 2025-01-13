@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c9eb0e6d-b152-487c-90d4-3786fcfd0889
-:mtime:    20241229162826 20241216062755 20241215075655
+:mtime:    20250112203353 20241229162826 20241216062755 20241215075655
 :ctime:    20241215075655
 :END:
 #+TITLE: NixOS - Flakes
@@ -69,3 +69,9 @@ else that the ~root~ user (or whatever user the ~nix~ command runs as) can acces
 ** Forum
 
 + [[https://discourse.nixos.org/t/flakes-impure-error-installing-package-from-local-file-system/22185/2?u=slackline][Flakes - impure error installing package from local filesystem]] - a nice explanation of what "impure" means.
+
+** Examples
+
+Various useful examples of using Flakes
+
++ [[https://codeberg.org/noflcl/nix][noflcl/nix - Codeberg.org]]
