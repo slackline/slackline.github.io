@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f66d7674-508b-471a-ba04-87c36ae2cdd6
-:mtime:    20240927100511 20231230222808 20231113230944
+:mtime:    20250115223429 20240927100511 20231230222808 20231113230944
 :ctime:    20231113230944
 :END:
 #+TITLE: HPC
@@ -11,6 +11,10 @@
 + [[https://hpsfoundation.github.io/][High Performance Software Foundation]]
 + [[https://e4s-project.github.io/][E4S: A Software Stack for HPC-AI Applications]]
 + [[https://www.eessi.io/docs/][EESSI]]
+
+** SLURM
+
++ [[https://plantarum.ca/2025/01/10/slurm-yasnippet/][Taming Slurm with Yasnippet - plantarum.ca]]
 
 ** Books
 

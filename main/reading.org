@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5e4b0759-696f-47a7-81c1-a7506aab41a0
-:mtime:    20241229201335 20241213210224 20241110182359 20241110164410 20241006205543 20240502093004 20240426165410 20240422071430 20240306145316
+:mtime:    20250115224517 20241229201335 20241213210224 20241110182359 20241110164410 20241006205543 20240502093004 20240426165410 20240422071430 20240306145316
 :ctime:    20240306145316
 :END:
 #+TITLE: Reading
@@ -207,6 +207,10 @@ Most of these I read a long time ago when studying hence a distinct lack of note
 ** History
 
 + Thompson, EP [[https://en.wikipedia.org/wiki/The_Making_of_the_English_Working_Class][/The Making of the English Working Class/]]
+
+** Health
+
++ [[https://www.fastcompany.com/91256533/alcohol-warning-label-design][Warning labels worked for cigarettes. They could work for alcohol too - Fast Company]]
 
 ** Tech
 
