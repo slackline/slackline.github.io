@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b5000932-0fec-4353-acc4-0cb02127c9ac
-:mtime:    20241229195114 20240716155322 20240323194442 20240301231300 20240122165548 20240107095430 20231221072710 20231211080603 20231121210843
+:mtime:    20250113132748 20241229195114 20240716155322 20240323194442 20240301231300 20240122165548 20240107095430 20231221072710 20231211080603 20231121210843
 :ctime:    20231121210843
 :END:
 #+TITLE: Privacy and Encryption
@@ -44,3 +44,4 @@ Privacy is important, it underpins free speech, but many chose to sacrifice thei
 ** Miscellaneous
 
 + [[https://www.eff.org/deeplinks/2024/03/how-figure-out-what-your-car-knows-about-you-and-opt-out-sharing-when-you-can][How to Figure Out What Your Car Knows About You (and Opt Out of Sharing When You Can) | Electronic Frontier Foundation]]
++ [[https://dogsheep.github.io/][Dogsheep]] - for converting your data to an SQLite database and looking at what is there.
