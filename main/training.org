@@ -1,0 +1,1495 @@
+:PROPERTIES:
+:ID:       470e9f37-f4f8-4e7f-adf2-3dbac9b8bf06
+:mtime:    20250118204303
+:END:
+#+STARTUP: align
+#+FILENAME: training.R
+#+TITLE: Training Log
+#+FILE_TAGS: :training:erxercise:
+#+AUTHOR: Neil Shephard
+#+email: nshephard@gmail.com
+#+PROPERTY: header-args:R :session *training-R*
+#+PROPERTY: header-args:R+ :cache no :tangle yes
+#+PROPERTY: header-args:R+ :width 1024 :height 768
+#+SETUPFILE: export/setup/theme-solarized-dark-local.setup
+
+#+begin_src R :session *training-R* :eval yes :exports none :results output silent
+  library(ascii)
+  library(chron)
+  library(dplyr)
+  library(ggdark)
+  library(ggplot2)
+  library(ggridges)
+## library(plotly)
+  library(lubridate)
+  library(orgutils)
+  library(readxl)
+  library(stringr)
+##  library(tmaptools)
+  library(xtable)
+  library(tidyr)
+  options(asciiType = "org", digits=3)
+  options(pillar.sigfig = 3)
+  setwd('~/org/training/')
+#+end_src
+
+#+begin_src R :session *training-R* :eval no :exports none :results output silent
+  ## gpx_location <- '~/work/gpx/opentracks/'
+  ## gpx_files <- dir(gpx_dir, pattern = "*.gpx", full.names = TRUE) |>
+  ##                             as_tibble_col(column_name = "full_path")
+  ## This requires a Python virtual environment
+  ## gpx_dict <- dict()
+  ## for gpx_file in gpx_files{
+  ##     gpx_dict[[gpx]] <- read_GPX(gpx)
+  ## }
+#+end_src
+
+* Goals
+** Long Term
+*** IN-PROGRESS Return to 5min/km pace
+- State "IN-PROGRESS" from "TODO"       [2022-04-10 Sun 20:21] \\
+  Made a brief return to this pace but knees started playing up, don't think it was the running, rather the kneeling
+  office chair that was the problem, have now switched to a conventional chair so lets see how I get on and if I can
+  return to running more frequently and get the pace down.
+*** TODO Rehab shoulder
+*** IN-PROGRESS Lose weight (75kg)
+- State "IN-PROGRESS" from "TODO"       [2022-04-10 Sun 20:20] \\
+  This will take time and possibly reducing my "pointless carbs" in-take (i.e. beer!)
+*** TODO Front Lever
+*** DONE <2021-04-15 Thu> Be able to run freely without worry of injury again
+CLOSED: [2023-04-16 Sun 19:26]
+- State "DONE"       from "IN-PROGRESS" [2023-04-16 Sun 19:26]
+Injured myself in January 2021 and have (as of writing) been unable to run for three months, would like
+to get back to running freely again (although unlikely to return to the ridiculous volume I was running
+when I injured myself).
+- State "IN-PROGRESS" from "TODO"       [2022-04-10 Sun 20:22] \\
+  Working on this, have to be careful how far I run, long distances definitely aggravate hip and now my knees but
+  hopefully the change in office chair at home will help with the knees.
+
+*** DONE 12km woods run in an hour (i.e. with uphill)
+    CLOSED: [2021-01-03 Sun 11:10]
+    + Now done several long runs with uphill of 12km or more, passing the 12km mark in under an hour.
+*** DONE Run the Round Sheffield Walk (short version)
+    CLOSED: [2020-11-09 Mon 09:01]
+*** DONE 6km woods run in 30 minutes
+    CLOSED: [2020-10-09 Fri 14:46]
+*** DONE Reduce waist (Waist/Hip Ratio of <= 0.85)
+    CLOSED: [2020-09-03 Thu 22:37]
+*** DONE 12km in an hour (flat)
+    CLOSED: [2020-09-03 Thu 22:37]
+** Short Term
+*** IN-PROGRESS Lose weight (80kg)
+- State "IN-PROGRESS" from "TODO"       [2022-04-10 Sun 20:19] \\
+  Currently clocking in at 81.3 after a > 10km run.
+*** TODO Regular basic calisthenics workout every other day that works core, shoulder and legs.
+*** DONE <2021-05-26 Wed> 5km in half an hour (i.e. 6min/km)
+CLOSED: [2021-12-10 Fri 21:41]
+*** DONE Rehab left leg and get back into gentle running
+CLOSED: [2021-12-10 Fri 21:40]
+*** DONE 10 good form press-ups with elbows in.
+    CLOSED: [2020-09-30 Wed 09:27]
+* Injuries
+
+* Climbing
+:PROPERTIES:
+:ID:       63c286fc-5d2b-4c44-8069-1e2df0b57922
+:END:
+
+  Climbing statistics are for outdoor climbs only and are based on those that have been logged in [[https://www.ukclimbing.com/logbook/showlog.php?id=45235][UKClimbing Logbook]].
+  Unfortunately its not yet been possible to automatically download this file so it has to be manually downloaded.
+
+  There are various graphs showing the number of climbs by month ([[climbs-by-month]]), year ([[climbs-by-year]]), by grade
+  ([[climbs-by-grade-sport]], [[climbs-by-grade-traditional]], [[climbs-by-grade-bouldering]]) and by crag ([[climbs-by-crag]]).
+
+** Log
+#+begin_src R :session *training-R* :eval yes :exports none :results output silent
+    climbing_table <- read_excel('data/xls/slacky_Logbook.xls')
+    names(climbing_table) <- c("climb", "grade", "style", "partner", "notes", "date", "crag")
+    climbing_table <- climbing_table |>
+        separate(grade, into=c("grade", "technical_orig", "stars"), sep=" ", remove=TRUE) |>
+        mutate(date = dmy(date),
+               month = month(date),
+               year = year(date),
+               first = as.numeric(substr(grade, 1, 1)),
+               type = ifelse(is.na(first), "Traditional", "Sport"),
+               type = ifelse(substr(grade, 1, 1) == "f", "Bouldering", type),
+               technical = technical_orig,
+               technical = ifelse(technical_orig == "" | is.na(technical_orig), grade, technical_orig),
+               technical_sport = ifelse(!is.na(first), technical, NA),
+               technical = ifelse(is.na(first) & is.na(as.numeric(substr(technical_orig, 1, 1))), NA, technical)) |>
+        select(climb, grade, technical, technical_sport, stars, type, style, partner, notes, date, crag, month, year)
+    # climbing_table |> select(climb, grade, technical, technical_sport)
+#+end_src
+*** 2023
+#+CAPTION: Logging training and climbing
+| Date             | Routes/Sets        | Notes                                                         |
+|------------------+--------------------+---------------------------------------------------------------|
+| <2023-04-13 Thu> | 5b, 5b, 5b, 5b, 6a | Two weeks of noticeably impacts stamina/endurance!            |
+|                  | 5c, 6a+, 6a+       | Was knackering, and arms stupidly pumped. 6a+'s were actually |
+|                  | 5b, 6a+, 6a+       | 6b's that I didn't finish properly.                           |
+|                  | 6a, 6a, 4c         |                                                               |
+|------------------+--------------------+---------------------------------------------------------------|
+| <2023-04-06 Thu> |                    | No climbing Northumberland.                                   |
+|------------------+--------------------+---------------------------------------------------------------|
+| <2023-03-30 Thu> |                    | Heeley Boulder with Ben and Dan.                              |
+|------------------+--------------------+---------------------------------------------------------------|
+| <2023-03-23 Thu> | 5b+,5b+, 5b+       | Not too bad, felt pumped towards the end of most climbs and   |
+|                  | 5b, 6b, 5a         | definitely knackered towards the end but never too pumped.    |
+|                  | 6a, 6b, 5c+        | Climbed slowly and under control and remembered to breath!    |
+|                  | 5a+, 6a+, 6a+      |                                                               |
+|                  | 6a+, 6a+, 6a+      |                                                               |
+|------------------+--------------------+---------------------------------------------------------------|
+| <2023-03-16 Thu> | 5b+,5b+,5b+        | Knackering, never felt massively pumped on anything really.   |
+|                  | 5b, 6a, 5b         | Need to climb slower to simulate trad climbing, but temper    |
+|                  | 6a, 6b, 5c+        | against the benefit of pushing through and continuing whilst  |
+|                  | 5b+, 6a, 6a        | pumped.                                                       |
+|                  | 6a, 6a, 5b         | Met Henry (Stanage, Tower Chimney) again, nice friendly guy.  |
+|------------------+--------------------+---------------------------------------------------------------|
+** Summary
+#+begin_src R :session *training-R* :eval yes :exports results :width 1024 :height 768 :results output graphics file :file png/climbing_by_date.png
+    climbing_table |> ggplot(aes(date, )) +
+        geom_bar() +
+        ggtitle("Climbs") +
+        scale_x_date(name="Date") +
+        scale_y_continuous(name="Count") +
+        dark_theme_bw() +
+        guides(fill=FALSE) +
+        theme(axis.text.x = element_text(angle = 270, hjust = 1))
+  #+end_src
+
+  #+NAME: climbs-by-date
+  #+CAPTION: Climbs by Date.
+  #+RESULTS:
+  [[file:png/climbing_by_date.png]]
+
+
+  #+begin_src R :session *training-R* :eval yes :exports results :width 1024 :height 768 :results output graphics file :file png/climbing_by_month.png
+    climbing_table |> ggplot(aes(month, )) +
+        geom_bar(aes(fill=month)) +
+        ggtitle("By Month...") +
+                                        # scale_x_date(name="Month") +
+        scale_y_continuous(name="Count") +
+        dark_theme_bw() +
+        guides(fill=FALSE) +
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  #+end_src
+
+  #+NAME: climbs-by-month
+  #+CAPTION: Climbs by Month.
+  #+RESULTS:
+  [[file:png/climbing_by_month.png]]
+
+
+  #+begin_src R :session *training-R* :eval yes :exports results :width 1024 :height 768 :results output graphics file :file png/climbing_by_year.png
+    climbing_table |> ggplot(aes(year, )) +
+        geom_bar(aes(fill=year)) +
+        ggtitle("By Year...") +
+                                        # scale_x_date(name="Month") +
+        scale_y_continuous(name="Count") +
+        dark_theme_bw() +
+        guides(fill=FALSE) +
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  #+end_src
+
+  #+NAME: climbs-by-year
+  #+CAPTION: Climbs by Year.
+  #+RESULTS:
+  [[file:png/climbing_by_year.png]]
+
+
+  #+begin_src R :session *training-R* :eval yes :exports results :width 1024 :height 768 :results output graphics file :file png/climbing_by_type.png
+    climbing_table |> ggplot(aes(type, )) +
+        geom_bar(aes(fill=type)) +
+        ggtitle("By Type...") +
+                                        # scale_x_date(name="Date") +
+        scale_y_continuous(name="Count") +
+        dark_theme_bw() +
+        guides(fill=FALSE) +
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  #+end_src
+
+  #+NAME: climbs-by-type
+  #+CAPTION: Climbs by Type.
+  #+RESULTS:
+  [[file:png/climbing_by_type.png]]
+
+
+  #+begin_src R :session *training-R* :eval no :exports results :width 1024 :height 768 :results output graphics file :file png/climbing_by_grade.png
+    climbing_table |> ggplot(aes(grade, )) +
+        geom_bar() +
+        facet_grid(type ~ .) +
+        ggtitle("By Grade...") +
+                                        # scale_x_date(name="Date") +
+        scale_y_continuous(name="Count") +
+        dark_theme_bw() +
+        guides(fill=FALSE) +
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  #+end_src
+
+  #+NAME: climbs-by-grade
+  #+CAPTION: Climbs by Grade.
+  #+RESULTS:
+
+  #+begin_src R :session *training-R* :eval yes :exports results :width 1024 :height 768 :results output graphics file :file png/climbing_by_grade_sport.png
+    climbing_table |> dplyr::filter(type == "Sport") |>
+        ggplot(aes(grade, )) +
+        geom_bar(aes(fill=grade)) +
+        ggtitle("By Grade (Sport)...") +
+                                        # scale_x_date(name="Date") +
+        scale_y_continuous(name="Count") +
+        dark_theme_bw() +
+        guides(fill=FALSE) +
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  #+end_src
+
+  #+NAME: climbs-by-grade-sport
+  #+CAPTION: Climbs by Grade (Sport).
+  #+RESULTS:
+  [[file:png/climbing_by_grade_sport.png]]
+
+  #+begin_src R :session *training-R* :eval yes :exports results :width 1024 :height 768 :results output graphics file :file png/climbing_by_grade_traditional.png
+    climbing_table |> dplyr::filter(type == "Traditional") |>
+        ggplot(aes(grade, )) +
+        geom_bar(aes(fill=grade)) +
+        ggtitle("By Grade (Traditional)...") +
+                                        # scale_x_date(name="Date") +
+        scale_y_continuous(name="Count") +
+        dark_theme_bw() +
+        guides(fill=FALSE) +
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  #+end_src
+
+  #+NAME: climbs-by-grade-traditional
+  #+CAPTION: Climbs by Grade (Traditional).
+  #+RESULTS:
+  [[file:png/climbing_by_grade_traditional.png]]
+
+
+  #+begin_src R :session *training-R* :eval yes :exports results :width 1024 :height 768 :results output graphics file :file png/climbing_by_grade_bouldering.png
+    climbing_table |> dplyr::filter(type == "Bouldering") |>
+        ggplot(aes(grade)) +
+        geom_bar(aes(fill=grade)) +
+        ggtitle("By Grade (Bouldering)...") +
+                                        # scale_x_date(name="Date") +
+        scale_y_continuous(name="Count") +
+        dark_theme_bw() +
+        guides(fill=FALSE) +
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  #+end_src
+
+  #+NAME: climbs-by-grade-bouldering
+  #+CAPTION: Climbs by Grade (Bouldering).
+  #+RESULTS:
+  [[file:png/climbing_by_grade_bouldering.png]]
+
+
+  #+begin_src R :session *training-R* :eval yes :exports results :width 1024 :height 768 :results output graphics file :file png/climbing_crag.png
+    climbing_table |> ggplot(aes(crag, )) +
+        geom_bar(aes(fill=crag)) +
+        ggtitle("Crags") +
+                                        # scale_x_date(name="Date") +
+        scale_y_continuous(name="Count") +
+        dark_theme_bw() +
+        guides(fill=FALSE) +
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  #+end_src
+
+  #+NAME: climbs-by-crag
+  #+CAPTION: Climbs by Crag.
+  #+RESULTS:
+  [[file:png/climbing_crag.png]]
+* Cycling
+:PROPERTIES:
+:ID:       061505c9-ea58-489f-b2a5-c72e2714fa46
+:END:
+
+Cycling pace is shown in figure [[cycling-pace]] broadly accurate but sometimes I forget to pause timing when I'm in shops.
+
+#+include: log/cycling.org
+** Summary
+   Total number of rides between src_R[:session *training-R* :exports results :results value]{cycling_table$date |>
+   min()} and src_R[:session *training-R* :exports results :results value]{cycling_table$date |> max()} is
+   src_R[:session *training-R* :exports results :results value]{cycling_table |> nrow()}. The total distance covered is
+   src_R[:session *training-R* :exports results :results value]{cycling_table$distance |> sum()}km whilst the mean
+   distance is src_R[:session *training-R* :exports results :results value]{cycling_table$distance |> mean()}km (SD :
+   src_R[:session *training-R* :exports results :results value]{cycling_table$distance |> sd()}). The longest cycle was
+   src_R[:session *training-R* :exports results :results value]{cycling_table$distance |>  max()}km. The average
+   cycling pace for each journey is shown in figure [[cycling-pace]].
+
+
+
+   #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_pace.png
+     cycling_table |> ggplot(aes(date, pace)) + geom_point(aes(colour=distance, size=distance, alpha=0.45)) +
+         ## geom_smooth(method="loess", data=no_outliers) +
+         geom_smooth(method="loess") +
+         ggtitle("Pace over time by Distance") +
+         dark_theme_bw() +
+         ylab("Pace") +
+         xlab("Date") +
+         scale_color_gradient(colors = c("#00AFBB", "#E7B800", "#FC4E07")) +
+         theme(legend.position = "right")
+   #+end_src
+
+   #+NAME: cycling-pace
+   #+CAPTION: Cycling Pace
+   #+RESULTS:
+   [[file:png/cycling_pace.png]]
+
+*** Yearly
+**** Distance
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_yearly_distance.png
+      cycling_table |> ggplot(aes(year)) +
+          geom_bar(aes(weight = distance, fill=year)) +
+          ggtitle("Cycling : Yearly Distance") +
+          dark_theme_bw() +
+          ylab("Distance (km)") +
+          xlab("Year/Year")
+    #+end_src
+    #+NAME: cycling-yearly-distance
+    #+CAPTION: Cycling : Yearly Distance
+    #+RESULTS:
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_yearly_distance_median.png
+      cycling_table |> ggplot(aes(factor(year), distance)) +
+          geom_boxplot() +
+          ggtitle("Cycling : Yearly Distance") +
+                                        # scale_x_categorical(name="Year") +
+          scale_y_continuous(name="Distance (km)") +
+          dark_theme_bw() +
+          ylab("Distance (km)") +
+          xlab("Year")
+    #+end_src
+    #+NAME: cycling-yearly-distance-boxplot
+    #+CAPTION: Cycling : Yearly Distance
+    #+RESULTS:
+
+    #+begin_src R :session *training-R* :eval yes :exports results :results value table
+      cycling_table |>
+          group_by(year) |>
+          summarise(Mean = mean(distance, na.rm = TRUE),
+                    SD = sd(distance, na.rm = TRUE),
+                    p25 = quantile(distance, c(0.25), na.rm = TRUE),
+                    p50 = quantile(distance, c(0.50), na.rm = TRUE),
+                    p75 = quantile(distance, c(0.75), na.rm = TRUE),
+                    Min = min(distance, na.rm = TRUE),
+                    Max = max(distance, na.rm = TRUE),
+                    Total = sum(distance, na.rm = TRUE))
+    #+end_src
+    #+NAME: cycling-distance-year
+    #+CAPTION: Cycling distance by Year
+    #+RESULTS:
+**** Pace
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_yearly_pace_median.png
+      cycling_table |> ggplot(aes(factor(year), pace)) +
+          geom_boxplot() +
+          ggtitle("Cycling : Yearly Pace") +
+                                        # scale_x_categorical(name="Year") +
+          dark_theme_bw() +
+          ylab("Pace (km)") +
+          xlab("Year")
+    #+end_src
+    #+NAME: cycling-yearly-pace-boxplot
+    #+CAPTION: Cycling : Yearly Pace
+    #+RESULTS:
+
+    #+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+      cycling_table |>
+          group_by(year) |>
+          summarise(Mean = mean(pace, na.rm = TRUE),
+                    SD = sd(pace, na.rm = TRUE),
+                    p25 = quantile(pace, c(0.25), na.rm=TRUE),
+                    p50 = quantile(pace, c(0.50), na.rm=TRUE),
+                    p75 = quantile(pace, c(0.75), na.rm=TRUE),
+                    Min = min(pace, na.rm = TRUE),
+                    Max = max(pace, na.rm = TRUE))
+
+    #+end_src
+    #+NAME: cycling-pace-year
+    #+CAPTION: Cycling pace by Year
+    #+RESULTS:
+
+**** Number
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_yearly_n.png
+cycling_table |> ggplot(aes(year)) +
+      geom_bar() +
+      ggtitle("Cycling : Yearly Rides") +
+      dark_theme_bw() +
+      ylab("Rides") +
+      xlab("Year")
+#+end_src
+#+NAME: cycling-yearly-runs
+#+CAPTION: Rides per year
+#+RESULTS:
+
+*** Monthly
+**** Distance
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_monthly_distance.png
+      cycling_table |> ggplot(aes(year_month)) +
+          geom_bar(aes(weight = distance, fill=year_month)) +
+          ggtitle("Cycling : Monthly Distance") +
+          dark_theme_bw() +
+          ylab("Distance (km)") +
+          xlab("Month/Year")
+    #+end_src
+    #+NAME: cycling-monthly-distance
+    #+CAPTION: Cycling : Monthly Distance
+    #+RESULTS:
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_monthly_distance_median.png
+      cycling_table |> ggplot(aes(factor(year_month), distance)) +
+          geom_boxplot() +
+          ggtitle("Cycling : Monthly Distance") +
+                                        # scale_x_categorical(name="Month") +
+          scale_y_continuous(name="Distance (km)") +
+          dark_theme_bw() +
+          ylab("Distance (km)") +
+          xlab("Month/Year")
+    #+end_src
+    #+NAME: cycling-monthly-distance-boxplot
+    #+CAPTION: Cycling : Monthly Distance
+    #+RESULTS:
+
+    #+begin_src R :session *training-R* :eval yes :exports results :results value table
+      cycling_table |>
+          group_by(year_month) |>
+          summarise(Mean = mean(distance, na.rm = TRUE),
+                    SD = sd(distance, na.rm = TRUE),
+                    p25 = quantile(distance, c(0.25), na.rm = TRUE),
+                    p50 = quantile(distance, c(0.50), na.rm = TRUE),
+                    p75 = quantile(distance, c(0.75), na.rm = TRUE),
+                    Min = min(distance, na.rm = TRUE),
+                    Max = max(distance, na.rm = TRUE),
+                    Total = sum(distance, na.rm = TRUE))
+    #+end_src
+    #+NAME: cycling-distance-month
+    #+CAPTION: Cycling distance by Month
+    #+RESULTS:
+**** Pace
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_monthly_pace_median.png
+      cycling_table |> ggplot(aes(factor(year_month), pace)) +
+          geom_boxplot() +
+          ggtitle("Cycling : Monthly Pace") +
+                                        # scale_x_categorical(name="Month") +
+          dark_theme_bw() +
+          ylab("Pace (km)") +
+          xlab("Month/Year")
+    #+end_src
+    #+NAME: cycling-monthly-pace-boxplot
+    #+CAPTION: Cycling : Monthly Pace
+    #+RESULTS:
+
+    #+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+      cycling_table |>
+          group_by(year_month) |>
+          summarise(Mean = mean(pace, na.rm = TRUE),
+                    SD = sd(pace, na.rm = TRUE),
+                    p25 = quantile(pace, c(0.25), na.rm=TRUE),
+                    p50 = quantile(pace, c(0.50), na.rm=TRUE),
+                    p75 = quantile(pace, c(0.75), na.rm=TRUE),
+                    Min = min(pace, na.rm = TRUE),
+                    Max = max(pace, na.rm = TRUE))
+
+    #+end_src
+    #+NAME: cycling-pace-month
+    #+CAPTION: Cycling pace by Month
+    #+RESULTS:
+**** Number
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_monthly_n.png
+cycling_table |> ggplot(aes(year_month)) +
+      geom_bar() +
+      ggtitle("Cycling : Monthly Rides") +
+      dark_theme_bw() +
+      ylab("Rides") +
+      xlab("Month/Year")
+#+end_src
+#+NAME: cycling-monthly-runs
+#+CAPTION: Rides per month
+#+RESULTS:
+
+*** Weekly
+**** Distance
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_weekly_distance.png
+      cycling_table |> ggplot(aes(year_week)) +
+          geom_bar(aes(weight = distance, fill=year_week)) +
+          ggtitle("Cycling : Weekly Distance") +
+          dark_theme_bw() +
+          ylab("Distance (km)") +
+          xlab("Week")
+    #+end_src
+    #+NAME: cycling-weekly-distance
+    #+CAPTION: Cycling : Weekly Distance
+    #+RESULTS:
+
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_weekly_distance_median.png
+      cycling_table |> ggplot(aes(factor(year_week), distance)) +
+          geom_boxplot() +
+          ggtitle("Cycling : Weekly Distance") +
+                                        # scale_x_categorical(name="Week") +
+          dark_theme_bw() +
+           ylab("Distance (km)") +
+           xlab("Week")
+    #+end_src
+    #+NAME: cycling-weekly-distance-boxplot
+    #+CAPTION: Cycling : Weekly Distance
+    #+RESULTS:
+**** Pace
+    #+begin_src R :session *training-R* :eval yes :exports results :results value table
+      cycling_table |>
+          group_by(year_week) |>
+          summarise(Mean = mean(distance, na.rm = TRUE),
+                    SD = sd(distance, na.rm = TRUE),
+                    p25 = quantile(distance, c(0.25), na.rm = TRUE),
+                    p50 = quantile(distance, c(0.50), na.rm = TRUE),
+                    p75 = quantile(distance, c(0.75), na.rm = TRUE),
+                    Min = min(distance, na.rm = TRUE),
+                    Max = max(distance, na.rm = TRUE),
+                    Total = sum(distance, na.rm = TRUE))
+    #+end_src
+    #+NAME: cycling-distance-week
+    #+CAPTION: Cycling Distance by Week
+    #+RESULTS:
+
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_weekly_pace_median.png
+      cycling_table |> ggplot(aes(factor(year_week), pace)) +
+          geom_boxplot() +
+          ggtitle("Cycling : Weekly Pace") +
+                                        # scale_x_categorical(name="Month") +
+          dark_theme_bw() +
+          ylab("Pace") +
+          xlab("Week")
+    #+end_src
+    #+NAME: cycling-weekly-pace-boxplot
+    #+CAPTION: Cycling : Weekly Pace
+    #+RESULTS:
+
+
+    #+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+      cycling_table |>
+          group_by(year_week) |>
+          summarise(Mean = mean(pace, na.rm = TRUE),
+                    SD = sd(pace, na.rm = TRUE),
+                    p25 = quantile(pace, c(0.25), na.rm=TRUE),
+                    p50 = quantile(pace, c(0.50), na.rm=TRUE),
+                    p75 = quantile(pace, c(0.75), na.rm=TRUE),
+                    Min = min(pace, na.rm = TRUE),
+                    Max = max(pace, na.rm = TRUE))
+
+    #+end_src
+    #+NAME: cycling-pace-month
+    #+CAPTION: Cycling pace by Week
+    #+RESULTS:
+**** Number
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_weekly_n.png
+cycling_table |> ggplot(aes(year_week)) +
+      geom_bar() +
+      ggtitle("Cycling : Weekly Rides") +
+      dark_theme_bw() +
+      ylab("Rides") +
+      xlab("Month/Year")
+#+end_src
+#+NAME: cycling-weekly-runs
+#+CAPTION: Rides per week
+#+RESULTS:
+
+* Hiking
+:PROPERTIES:
+:ID:       a1481dee-909a-4588-9d1a-a35f27de9824
+:mtime:    20250118204303
+:ctime:    20250118204303
+:END:
+
+I love going hiking on the moors and up mountains. I've done some big hikes and longer walks, in 2023 I hiked for 12
+days around the Julian Alps of Slovenia covering some ~130km wtih about 11km of ascent/descent. In 2024 I hiked the
+[[https://blog.nshephard.dev/posts/pennine-way/][Pennine Way in 12 days]] camping wild some nights, others at campsites, it was amazing!
+
+#+include: /home/neil/org/training/log/hiking.org
+
+** Summary
+   #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/hiking_pace.png
+     hiking_table |> ggplot(aes(date, pace)) + geom_point(aes(colour=distance, size=distance, alpha=0.45)) +
+         geom_smooth(method="loess") +
+         ggtitle("Pace") +
+         dark_theme_bw() +
+         ylab("Pace") +
+         xlab("Date") +
+         scale_color_gradient(colors = c("#00AFBB", "#E7B800", "#FC4E07")) +
+         theme(legend.position = "right")
+   #+end_src
+   #+NAME: hikiing-pace
+   #+CAPTION: Average hiking pace
+   #+RESULTS:
+
+   #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/hiking_weekly_distance.png
+     hiking_table |> ggplot(aes(year_week)) +
+         geom_bar(aes(weight = distance, fill=year_week)) +
+         ggtitle("Hiking : Weekly Distance") +
+         dark_theme_bw() +
+         ylab("Distance (km)") +
+         xlab("Week")
+   #+end_src
+
+   #+NAME: hiking-weekly-distance
+   #+CAPTION: Hiking : Weekly Distance
+   #+RESULTS:
+   #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/hiking_monthly_distance.png
+     hiking_table |> ggplot(aes(year_month)) +
+         geom_bar(aes(weight = distance, fill=year_month)) +
+         ggtitle("Hiking : Monthly Distance") +
+         scale_x_date(name="Month") +
+         scale_y_continuous(name="Distance (km)") +
+         dark_theme_bw() +
+         ylab("Distance (km)") +
+         xlab("Month/Year")
+   #+end_src
+   #+NAME: hiking-monthly-distance
+   #+CAPTION: Hiking : Monthly Distance
+   #+RESULTS:
+
+   #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/hiking_monthly_distance_median.png
+     hiking_table |> ggplot(aes(factor(year_month), distance)) +
+         geom_boxplot() +
+         ggtitle("Hiking : Monthly Distance") +
+                                        # scale_x_categorical(name="Month") +
+         scale_y_continuous(name="Distance (km)") +
+         dark_theme_bw() +
+         ylab("Distance (km)") +
+         xlab("Month/Year")
+   #+end_src
+   #+NAME: hiking-monthly-distance-boxplot
+   #+CAPTION: Hiking : Monthly Distance
+   #+RESULTS:
+
+   #+NAME: hiking-distance-month
+   #+CAPTION: Hiking distance by Month
+   #+RESULTS:
+   #+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+     hiking_table |>
+         group_by(year_month) |>
+         summarise(Mean = mean(distance, na.rm = TRUE),
+                   SD = sd(distance, na.rm = TRUE),
+                   p25 = quantile(distance, c(0.25), na.rm = TRUE),
+                   p50 = quantile(distance, c(0.50), na.rm = TRUE),
+                   p75 = quantile(distance, c(0.75), na.rm = TRUE),
+                   Min = min(distance, na.rm = TRUE),
+                   Max = max(distance, na.rm = TRUE),
+                   Total = sum(distance, na.rm = TRUE))
+   #+end_src
+
+   #+NAME: hiking-pace-month
+   #+CAPTION: Hiking pace by Month
+   #+RESULTS:
+   #+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+     hiking_table |>
+         group_by(year_month) |>
+         summarise(Mean = mean(pace, na.rm = TRUE),
+                   SD = sd(pace, na.rm = TRUE),
+                   p25 = quantile(pace, c(0.25), na.rm = TRUE),
+                   p50 = quantile(pace, c(0.50), na.rm = TRUE),
+                   p75 = quantile(pace, c(0.75), na.rm = TRUE),
+                   Min = min(pace, na.rm = TRUE),
+                   Max = max(pace, na.rm = TRUE),
+                   Total = sum(pace, na.rm = TRUE))
+   #+end_src
+* Running
+After giving up smoking on 2019-03-06 I decided to start running, didn't really enjoy it much at first but persevered
+and enjoy it.  Mostly run from home around local woods but will also run on the moors in the Peak
+District. Zero interest in racing, the only person I need to beat is my old-self (and that is starting to become
+challenging!).
+
+
+** Log
+#+include: log/running_2025.org
+#+include: log/running_2024.org
+#+include: log/running_2023.org
+#+include: log/running_2022.org
+#+include: log/running_2021.org
+#+include: log/running_2020.org
+#+begin_src R :session *training-R* :exports  none :colnames nil :results output silent
+  running_table <- rbind(running_table_2020,
+                         running_table_2021,
+                         running_table_2022,
+                         running_table_2023,
+                         running_table_2024,
+                         running_table_2025)
+  running_table <- running_table |> mutate(time = str_replace(Time, "min \\+ ", " "),
+             time = str_replace(time, "s", ""),
+             Date = str_extract(Date, "[0-9]+-[0-9]+-[0-9]+"),
+             date = ymd(Date),
+             year = floor_date(date, "year"),
+             year_month = floor_date(date, "month"),
+             year_week = floor_date(date, "week")) |>
+      separate(time, c("min", "sec")) |>
+      mutate(min = as.integer(min),
+             sec = as.integer(sec),
+             hour = floor(min / 60),
+             min = min - (hour * 60),
+             # time = chron(time=paste(hour, min, sec, sep=":")),
+             time = hms(paste(hour, min, sec, sep=":")),
+             pace = as.numeric(time) / (60 * distance)) |>
+             # pace = Pace) |>
+      select(-c(Date, Distance, Time, Pace, hour, min, sec))
+#+end_src
+
+** Summary
+Total number of runs between src_R[:session *training-R* :exports results :results value]{running_table$date |> min()} and
+ src_R[:session *training-R* :exports results :results value]{running_table$date |> max()}
+ is src_R[:session *training-R* :exports results :results value]{running_table |> nrow()}.  The total distance covered
+ is src_R[:session *training-R* :exports results :results value]{running_table$distance |> sum()} km whilst the mean
+ distance is src_R[:session *training-R* :exports results :results value]{running_table$distance |> mean()} km (SD :
+ src_R[:session *training-R* :exports results :results value]{running_table$distance |> sd()}).  The longest run was
+ src_R[:session *training-R* :exports results :results value]{running_table$distance |> max()} km. The average running
+ pace for each run is shown in figure [[running-pace]].
+
+
+*TODO* Modify next figure to distinguish between areas of runs based on presence of different strings e.g. "cat lane"
+       or "Coal Aston". Needs to parse the ~comments~ field of the table for these and categorise them.
+
+#+NAME: running-distance-pace
+#+CAPTION: Running Distance and pace Overall
+#+RESULTS:
+
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_pace.png
+  # Shading by distance from https://www.datanovia.com/en/lessons/ggplot-scatter-plot/
+  no_outliers <- running_table |>
+      dplyr::filter(pace < 7)
+  # running_table |> ggplot(aes(date, pace)) + geom_point(aes(color=distance)) +
+  running_table |> ggplot(aes(date, pace)) + geom_point(aes(color=distance, size=distance, alpha=0.45)) +
+      geom_smooth(method="loess", data=no_outliers) +
+      # geom_smooth(method="loess") +
+      ggtitle("Running Pace") +
+      dark_theme_bw() +
+      ylab("Pace (minutes/km)") +
+      xlab("Date") +
+      scale_color_gradient(colors = c("#00AFBB", "#E7B800", "#FC4E07")) +
+      theme(legend.position = "right")
+#+end_src
+#+NAME: running-pace
+#+CAPTION: Average running pace
+#+RESULTS:
+[[file:png/running_pace.png]]
+
+#+begin_src R :session *training-R* :eval no :exports results :width 1024 :height 768 :results output graphics file :file png/running_distance_pace.png
+  # Shading by distance from https://www.datanovia.com/en/lessons/ggplot-scatter-plot/
+  no_outliers <- running_table |>
+      dplyr::filter(pace < 7)
+  # running_table |> ggplot(aes(distance, pace)) +
+  no_outliers |> ggplot(aes(distance, pace)) +
+      # geom_point() +
+      geom_hex(bins=30) +
+      # geom_bin2d() +
+      # stat_density_2d(aes(fill = ..level..), geom = "polygon", colour="white") +
+      scale_fill_continuous(type="viridis") +
+      ggtitle("Pace") +
+      scale_x_continuous(name="Distance") +
+      scale_y_continuous(name="Running Pace") +
+      dark_theme_bw() +
+      ylab("Distance (km)") +
+      xlab("Week")
+      theme(legend.position = "right")
+#+end_src
+#+NAME: running-distance_pace
+#+CAPTION: Running : Distance v Pace
+#+RESULTS:
+
+*** Yearly
+**** Distance
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_yearly_distance.png
+  running_table |> ggplot(aes(year)) +
+      geom_bar(aes(weight = distance, fill=year)) +
+      ggtitle("Running : Total Distance") +
+      dark_theme_bw() +
+      ylab("Distance (km)") +
+      xlab("Year")
+#+end_src
+#+NAME: running-yearly-distance
+#+CAPTION: Running : Yearly Distance
+#+RESULTS:
+
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_yearly_distance_median.png
+  running_table |> ggplot(aes(factor(year), distance)) +
+      geom_boxplot() +
+      ggtitle("Running : Yearly Distance") +
+      dark_theme_bw() +
+      ylab("Distance (km)") +
+      xlab("Year")
+#+end_src
+#+NAME: running-yearly-distance-boxplot
+#+CAPTION: Running : Distance of Runs
+#+RESULTS:
+
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_yearly_distance_ggridges.png
+  running_table |> ggplot(aes(x=distance, y=factor(year), group=year, fill=stat(x))) +
+      geom_density_ridges_gradient(scale=1, gradient_lwd=1.) +
+      scale_x_continuous(expand = c(0, 0)) +
+      scale_y_discrete(expand = expand_scale(mult = c(0.01, 0.25))) +
+      scale_fill_viridis_c(name="Distance (km)", option="C") +
+      ggtitle("Running : Yearly Distance") +
+      dark_theme_bw() +
+      ylab("Year") +
+      xlab("Distance (km)")
+#+end_src
+#+NAME: running-yearly-distance-ggridges
+#+CAPTION: Running : Distance of Runs
+#+RESULTS:
+
+#+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+  # monthly_distance <- running_table |>
+      running_table |> group_by(year) |>
+      summarise(Total = sum(distance, na.rm = TRUE),
+                Mean = mean(distance, na.rm = TRUE),
+                SD = sd(distance, na.rm = TRUE),
+                p25 = quantile(distance, c(0.25), na.rm = TRUE),
+                p50 = quantile(distance, c(0.50), na.rm = TRUE),
+                p75 = quantile(distance, c(0.75), na.rm = TRUE),
+                Min = min(distance, na.rm = TRUE),
+                Max = max(distance, na.rm = TRUE)) |>
+      as.data.frame()
+  # kable(monthly_distance, digits=3)
+#+end_src
+#+NAME: running-distance-month
+#+CAPTION: Running distance by Year
+#+TBLFM: ;%.3f
+
+**** Pace
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_yearly_pace_median.png
+  running_table |> ggplot(aes(factor(year), pace)) +
+      geom_boxplot() +
+      ggtitle("Running : Pace by Year") +
+      dark_theme_bw() +
+      ylab("Pace (min/km)") +
+      xlab("Year")
+#+end_src
+#+NAME: running-yearly-pace-boxplot
+#+CAPTION: Running : Yearly Pace
+#+RESULTS:
+
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_yearly_pace_ggridges.png
+  running_table |> ggplot(aes(x=pace, y=factor(year), group=year, fill=stat(x))) +
+      geom_density_ridges_gradient(scale=1, gradient_lwd=1.) +
+      scale_x_continuous(expand = c(0, 0)) +
+      scale_y_discrete(expand = expand_scale(mult = c(0.01, 0.25))) +
+      scale_fill_viridis_c(name="Pace (km)", option="C") +
+      ggtitle("Running : Yearly Pace") +
+      dark_theme_bw() +
+      ylab("Year") +
+      xlab("Pace (min/km)")
+#+end_src
+#+NAME: running-weekly-pace-ggridges
+#+CAPTION: Running : Pace of Runs
+#+RESULTS:
+
+#+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+  running_table |>
+      group_by(year) |>
+      summarise(Mean = mean(pace, na.rm = TRUE),
+                SD = sd(pace, na.rm = TRUE),
+                p25 = quantile(pace, c(0.25), na.rm = TRUE),
+                p50 = quantile(pace, c(0.50), na.rm = TRUE),
+                p75 = quantile(pace, c(0.75), na.rm = TRUE),
+                Min = min(pace, na.rm = TRUE),
+                Max = max(pace, na.rm = TRUE)) |>
+      as.data.frame()
+#+end_src
+
+#+NAME: running-pace-year
+#+CAPTION: Running pace by Year
+#+RESULTS:
+#+TBLFM: $3;%.3f::$4;%.3f::$5;%.3f::$6;%.3f
+
+**** Number
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_yearly_n.png
+running_table |> ggplot(aes(year)) +
+      geom_bar() +
+      ggtitle("Running : Yearly Runs") +
+      dark_theme_bw() +
+      ylab("Runs") +
+      xlab("Year")
+#+end_src
+#+NAME: running-yearly-runs
+#+CAPTION: Runs per year
+#+RESULTS:
+
+*** Monthly
+**** Distance
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_monthly_distance.png
+  running_table |> ggplot(aes(year_month)) +
+      geom_bar(aes(weight = distance, fill=year_month)) +
+      ggtitle("Running : Monthly Distance") +
+      dark_theme_bw() +
+      ylab("Distance (km)") +
+      xlab("Month/Year")
+#+end_src
+#+NAME: running-monthly-distance
+#+CAPTION: Running : Monthly Distance
+#+RESULTS:
+
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_monthly_distance_median.png
+  running_table |> ggplot(aes(factor(year_month), distance)) +
+      geom_boxplot() +
+      ggtitle("Running : Pace by Month") +
+      dark_theme_bw() +
+      ylab("Distance (km)") +
+      xlab("Month/Year")
+#+end_src
+#+NAME: running-monthly-distance-boxplot
+#+CAPTION: Running : Monthly Distance
+#+RESULTS:
+
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_monthly_distance_ggridges.png
+  running_table |> ggplot(aes(x=distance, y=factor(year_month), group=year_month, fill=stat(x))) +
+      geom_density_ridges_gradient(scale=1, gradient_lwd=1.) +
+      scale_x_continuous(expand = c(0, 0)) +
+      scale_y_discrete(expand = expand_scale(mult = c(0.01, 0.25))) +
+      scale_fill_viridis_c(name="Distance (km)", option="C") +
+      ggtitle("Running : Monthly Distance") +
+      dark_theme_bw() +
+      ylab("Year") +
+      xlab("Distance (km)")
+#+end_src
+#+NAME: running-monthly-distance-ggridges
+#+CAPTION: Running : Distance of Runs
+#+RESULTS:
+
+#+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+  monthly_distance <- running_table |>
+      group_by(year_month) |>
+      summarise(Total = sum(distance, na.rm = TRUE),
+                Mean = mean(distance, na.rm = TRUE),
+                SD = sd(distance, na.rm = TRUE),
+                p25 = quantile(distance, c(0.25), na.rm = TRUE),
+                p50 = quantile(distance, c(0.50), na.rm = TRUE),
+                p75 = quantile(distance, c(0.75), na.rm = TRUE),
+                Min = min(distance, na.rm = TRUE),
+                Max = max(distance, na.rm = TRUE))
+#+end_src
+#+NAME: running-distance-month
+#+CAPTION: Running distance by Month
+#+TBLFM: ;%.3f
+
+**** Pace
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_monthly_pace_median.png
+  running_table |> ggplot(aes(factor(year_month), pace)) +
+      geom_boxplot() +
+      ggtitle("Running : Pace by Month") +
+      dark_theme_bw() +
+      ylab("Pace (min/km)") +
+      xlab("Month/Year")
+#+end_src
+#+NAME: running-monthly-pace-boxplot
+#+CAPTION: Running : Monthly Pace
+#+RESULTS:
+
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_monthly_pace_ggridges.png
+  running_table |> ggplot(aes(x=pace, y=factor(year_month), group=year_month, fill=stat(x))) +
+      geom_density_ridges_gradient(scale=1, gradient_lwd=1.) +
+      scale_x_continuous(expand = c(0, 0)) +
+      scale_y_discrete(expand = expand_scale(mult = c(0.01, 0.25))) +
+      scale_fill_viridis_c(name="Pace (km)", option="C") +
+      ggtitle("Running : Monthly Pace") +
+      dark_theme_bw() +
+      ylab("Year") +
+      xlab("Pace (min/km)")
+#+end_src
+#+NAME: running-monthly-pace-ggridges
+#+CAPTION: Running : Pace of Runs
+#+RESULTS:
+
+#+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+  running_table |>
+      group_by(year_month) |>
+      summarise(Mean = mean(pace, na.rm = TRUE),
+                SD = sd(pace, na.rm = TRUE),
+                p25 = quantile(pace, c(0.25), na.rm = TRUE),
+                p50 = quantile(pace, c(0.50), na.rm = TRUE),
+                p75 = quantile(pace, c(0.75), na.rm = TRUE),
+                Min = min(pace, na.rm = TRUE),
+                Max = max(pace, na.rm = TRUE)) |>
+      as.data.frame()
+#+end_src
+
+#+NAME: running-pace-month
+#+CAPTION: Running pace by Month
+#+RESULTS:
+#+TBLFM: $3;%.3f::$4;%.3f::$5;%.3f::$6;%.3f
+
+**** Number
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_monthly_n.png
+running_table |> ggplot(aes(year_month)) +
+      geom_bar() +
+      ggtitle("Running : Monthly Runs") +
+      dark_theme_bw() +
+      ylab("Runs") +
+      xlab("Month/Year")
+#+end_src
+#+NAME: running-monthly-runs
+#+CAPTION: Runs per month
+#+RESULTS:
+
+*** Weekly
+**** Distance
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_weekly_distance.png
+  running_table |> ggplot(aes(year_week)) +
+      geom_bar(aes(weight=distance, fill=year_week, colour=distance)) +
+      ggtitle("Running : Weekly Distance") +
+      scale_x_date(name="Week") +
+      scale_y_continuous(name="Distance (km)") +
+      dark_theme_bw() +
+      ylab("Distance (km)") +
+      xlab("Week") +
+      scale_color_gradient(colors = c("#00AFBB", "#E7B800", "#FC4E07")) +
+      theme(legend.position = "right")
+#+end_src
+#+NAME: running-weekly-distance
+#+CAPTION: Running : Weekly Distance
+#+RESULTS:
+
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_weekly_distance_median.png
+  running_table |> ggplot(aes(factor(year_week), distance)) +
+      geom_boxplot() +
+      ggtitle("Running : Distance by Week") +
+      dark_theme_bw() +
+      ylab("Distance (km)") +
+      xlab("Week")
+#+end_src
+#+NAME: running-weekly-distance-boxplot
+#+CAPTION: Running : Weekly Distance
+#+RESULTS:
+
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_weekly_distance_ggridges.png
+  running_table |> ggplot(aes(x=distance, y=factor(year_week), group=year_week, fill=stat(x))) +
+      geom_density_ridges_gradient(scale=1, gradient_lwd=1.) +
+      scale_x_continuous(expand = c(0, 0)) +
+      scale_y_discrete(expand = expand_scale(mult = c(0.01, 0.25))) +
+      scale_fill_viridis_c(name="Distance (km)", option="C") +
+      ggtitle("Running : Weekly Distance") +
+      dark_theme_bw() +
+      ylab("Year") +
+      xlab("Distance (km)")
+#+end_src
+#+NAME: running-weekly-distance-ggridges
+#+CAPTION: Running : Distance of Runs
+#+RESULTS:
+
+#+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+  running_table |>
+      group_by(year_week) |>
+      summarise(Total = sum(distance, na.rm = TRUE),
+                Mean = mean(distance, na.rm = TRUE),
+                SD = sd(distance, na.rm = TRUE),
+                p25 = quantile(distance, c(0.25), na.rm = TRUE),
+                p50 = quantile(distance, c(0.50), na.rm = TRUE),
+                p75 = quantile(distance, c(0.75), na.rm = TRUE),
+                Min = min(distance, na.rm = TRUE),
+                Max = max(distance, na.rm = TRUE))
+#+end_src
+
+**** Pace
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_weekly_pace_median.png
+  no_outliers |> ggplot(aes(factor(year_week), pace)) +
+      geom_boxplot() +
+      ggtitle("Running : Pace by Week") +
+      dark_theme_bw() +
+      ylab("Pace (min/km)") +
+      xlab("Week")
+#+end_src
+#+NAME: running-weekly-pace-boxplot
+#+CAPTION: Running : Weekly Pace
+#+RESULTS:
+
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_weekly_pace_ggridges.png
+  running_table |> ggplot(aes(x=pace, y=factor(year_week), group=year_week, fill=stat(x))) +
+      geom_density_ridges_gradient(scale=1, gradient_lwd=1.) +
+      scale_x_continuous(expand = c(0, 0)) +
+      scale_y_discrete(expand = expand_scale(mult = c(0.01, 0.25))) +
+      scale_fill_viridis_c(name="Distance (km)", option="C") +
+      ggtitle("Running : Weekly Pace") +
+      dark_theme_bw() +
+      ylab("Year") +
+      xlab("Pace (min/km)")
+#+end_src
+#+NAME: running-weekly-pace-ggridges
+#+CAPTION: Running : Pace of Runs
+#+RESULTS:
+
+#+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+  running_table |>
+      group_by(year_week) |>
+      summarise(Mean = mean(pace, na.rm = TRUE),
+                SD = sd(pace, na.rm = TRUE),
+                p25 = quantile(pace, c(0.25), na.rm = TRUE),
+                p50 = quantile(pace, c(0.50), na.rm = TRUE),
+                p75 = quantile(pace, c(0.75), na.rm = TRUE),
+                Min = min(pace, na.rm = TRUE),
+                Max = max(pace, na.rm = TRUE)) |>
+      as.data.frame()
+#+end_src
+
+#+NAME: running-pace-month
+#+CAPTION: Running pace by Week
+#+RESULTS:
+
+**** Number
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/running_weekly_n.png
+running_table |> ggplot(aes(year_week)) +
+      geom_bar() +
+      ggtitle("Running : Weekly Runs") +
+      dark_theme_bw() +
+      ylab("Runs") +
+      xlab("Week")
+#+end_src
+#+NAME: running-weekly-runs
+#+CAPTION: Runs per week
+#+RESULTS:
+
+* Pilates
+Decided I need to improve my core strength and Pilates seemed a good choice. [[https://symmetrypilates.co.uk/][Symmetry Pilates]] run by Sam Webster are
+local so I signed up to her classes. I've found I really enjoy the classes Sam is an excellent instructor and keep it
+interesting and challenging. Since I started I've seen how we (there are regulars at the same calss) all progress
+through the movements making them harder as we get stronger by destabilising the position more to force engagement of
+the core more.
+
+Struggled with doing this in my own time, never felt I had sufficient time but then found [[https://www.waterstones.com/book/15-minute-everyday-pilates/alycea-ungaro/9781405326582][15 Minute Everyday Pilates by
+Alicia Ungaro]] and realised I didn't need to spend an hour each time. These four short (15 minute!) videos guide me throw
+a work out that I can do without feeling I've got to find a big chunk of time to focus on doing them. Often I've found
+that by the time I'm done I'm wondering why it is over so quickly and started doing two back to back. Recommend grabbing
+a copy with the DVD if you can find one.
+
+#+INCLUDE: "log/pilates_2025.org"
+#+INCLUDE: "log/pilates_2024.org"
+#+INCLUDE: "log/pilates_2023.org"
+#+INCLUDE: "log/pilates_payments.org"
+
+** Notes
+*** <2023-03-14 Tue>
++ Lots to do on my hip flexibility, I found I was cheating and rolling on a lot of exercises rather than keeping hips
+  vertical when lying on my side, work on that.
++ Clam exercise seems really useful.
++ Lying on back with legs in table (thighs vertical, knees bent at 90-degrees) and lifting head and shoulders off the
+  ground then with arms by side short up and down motions, five whilst breathing in, five whilst breathing out. Repeat
+  ten times (i.e. 100).
++ Most floor exercises back should be in correct posture, with slight bend in lower back.
+
+* Metrics
+Tracking weight and waist-hip ratio to see what effects all the exercise has on my body composition.
+** Weight/Waist Hip Ratio
+
+#+include: log/metrics_weight.org
+*** Summary
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/weight.png
+  metrics_table |> ggplot(aes(date, Weight)) + geom_point() +
+      geom_smooth(method="loess") +
+      ggtitle("Weight") +
+      scale_x_date(name="Date") +
+      scale_y_continuous(name="Weight (kg)") +
+      dark_theme_bw()
+#+end_src
+
+#+NAME: metrics
+#+CAPTION: Weight over time.
+#+RESULTS:
+[[file:png/weight.png]]
+
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/waist_hip.png
+  metrics_table |> ggplot(aes(date, waist_hip)) + geom_point() +
+      geom_smooth(method="loess") +
+      ggtitle("Waist/Hip") +
+      scale_x_date(name="Date") +
+      scale_y_continuous(name="Waist/Hip (cm)") +
+      dark_theme_bw()
+#+end_src
+
+#+NAME: waist-hip
+#+CAPTION: Waist-hip ratio over time.
+#+RESULTS:
+[[file:png/waist_hip.png]]
+
+** Daily Steps
+I got a [[https://www.pine64.org/pinetime/][PineTime]] watch and whilst it supposedly works with [[https://gadgetbridge.org/][Gadgetbridge]] I found it to be unreliable at the moment
+although that may be down to the flaky Bluetooth on my phone the database on Gadgetbridge itself seemed to lose some
+days.
+
+#+include: log/metrics_steps.org
+*** Summary
+
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/daily_steps.png
+  metrics_steps |>
+      ggplot(aes(date, Steps)) + geom_point() +
+      geom_line() +
+      geom_smooth(method="loess") +
+      ggtitle("Daily Steps") +
+      dark_theme_bw() +
+      ylab("Steps") +
+      xlab("Date")
+#+end_src
+#+NAME: temperature
+#+CAPTION: Daily Steps over time.
+#+RESULTS:
+**** Monthly
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/steps_monthly.png
+  metrics_steps |> ggplot(aes(year_month)) +
+      geom_bar(aes(weight = Steps, fill=year_month)) +
+      ggtitle("Steps : Monthly Steps") +
+      dark_theme_bw() +
+      ylab("Total Steps") +
+      xlab("Month/Year")
+#+end_src
+#+NAME: steps-monthly
+#+CAPTION: Steps : Monthly
+#+RESULTS:
+
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/steps_monthly_median.png
+  metrics_steps |> ggplot(aes(factor(year_month), Steps)) +
+      geom_boxplot() +
+      ggtitle("Steps : Monthly") +
+      dark_theme_bw() +
+      ylab("Steps") +
+      xlab("Month/Year")
+#+end_src
+#+NAME: steps-monthly-boxplot
+#+CAPTION: Steps : Monthly
+#+RESULTS:
+
+#+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+  monthly_distance <- metrics_steps |>
+      group_by(year_month) |>
+      summarise(Total = sum(Steps, na.rm = TRUE),
+                Mean = mean(Steps, na.rm = TRUE),
+                SD = sd(Steps, na.rm = TRUE),
+                p25 = quantile(Steps, c(0.25), na.rm = TRUE),
+                p50 = quantile(Steps, c(0.50), na.rm = TRUE),
+                p75 = quantile(Steps, c(0.75), na.rm = TRUE),
+                Min = min(Steps, na.rm = TRUE),
+                Max = max(Steps, na.rm = TRUE))
+  kable(monthly_distance, digits=3)
+#+end_src
+#+NAME: steps-month
+#+CAPTION: Steps by Month
+#+TBLFM: ;%.3f
+
+**** Weekly
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/steps_weekly.png
+  metrics_steps |> ggplot(aes(year_week)) +
+      geom_bar(aes(weight = Steps, fill=year_week)) +
+      ggtitle("Steps : Weekly") +
+      dark_theme_bw() +
+      ylab("Total Steps") +
+      xlab("Month/Year")
+#+end_src
+#+NAME: steps-weekly
+#+CAPTION: Steps : Weekly
+#+RESULTS:
+
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/steps_weekly_median.png
+  metrics_steps |> ggplot(aes(factor(year_week), Steps)) +
+      geom_boxplot() +
+      ggtitle("Steps : Week") +
+      dark_theme_bw() +
+      ylab("Steps") +
+      xlab("Month/Year")
+#+end_src
+#+NAME: steps-weekly-boxplot
+#+CAPTION: Steps : Weekly
+#+RESULTS:
+
+#+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+  weekly_distance <- metrics_steps |>
+      group_by(year_week) |>
+      summarise(Total = sum(Steps),
+                Mean = mean(Steps, na.rm = TRUE),
+                SD = sd(Steps, na.rm = TRUE),
+                p25 = quantile(Steps, c(0.25), na.rm = TRUE),
+                p50 = quantile(Steps, c(0.50), na.rm = TRUE),
+                p75 = quantile(Steps, c(0.75), na.rm = TRUE),
+                Min = min(Steps, na.rm = TRUE),
+                Max = max(Steps, na.rm = TRUE))
+#+end_src
+#+NAME: steps-month
+#+CAPTION: Steps by Month
+#+TBLFM: ;%.3f
+
+** Blood
+
+#+include: log/metrics_blood.org
+
+*** Summary
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/bloods_temp.png
+  blood_table |> dplyr::filter(!is.na(Temp)) |>
+      ggplot(aes(date, Temp)) + geom_point() +
+      geom_smooth(method="loess") +
+      ggtitle("Temperature") +
+      dark_theme_bw() +
+      ylab("Temperature (C)") +
+      xlab("Date")
+#+end_src
+#+NAME: temperature
+#+CAPTION: Temperature over time.
+#+RESULTS:
+
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/bloods_o2sat.png
+  blood_table |> dplyr::filter(!is.na(O2.Sat)) |>
+      ggplot(aes(date, O2.Sat)) + geom_point() +
+      geom_smooth(method="loess") +
+      ggtitle("Oxygen Saturation") +
+      dark_theme_bw() +
+      ylab("Oxygen Saturation (%)") +
+      xlab("Date")
+#+end_src
+#+NAME: o2sat
+#+CAPTION: Oxygen Saturation over time.
+#+RESULTS:
+
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/bloods_pulse.png
+  blood_table |> dplyr::filter(!is.na(Pulse)) |>
+      ggplot(aes(date, Pulse)) + geom_point() +
+      geom_smooth(aes(x=date, y=Pulse), method="loess") +
+      ggtitle("Pulse") +
+      dark_theme_bw() +
+      ylab("Pulse (BPM))") +
+      xlab("Date")
+#+end_src
+#+NAME: pulse
+#+CAPTION: Pulse over time.
+#+RESULTS:
+
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/bloods_pressure.png
+  blood_table |> dplyr::filter(date > ymd("2021-01-19")) |>
+      ggplot(aes(date)) +
+      geom_point(aes(x=date, y=Systolic), color="red") +
+      geom_point(aes(x=date, y=Diastolic), color="blue") +
+      geom_smooth(aes(x=date, y=Systolic), method="loess", color="red") +
+      geom_smooth(aes(x=date, y=Diastolic), method="loess", color="blue") +
+      ggtitle("Blood Pressure") +
+      dark_theme_bw() +
+      ylab("Blood Pressure (mmHg)") +
+      xlab("Date")
+#+end_src
+#+NAME: blood_pressure
+#+CAPTION: Blood Pressure over time.
+#+RESULTS:
+
+* Resources
+Various pieces and resources I've read (or intend to).
+** Climbing
+*** Fingerboarding
++ [[http://eveningsends.com/five-minute-fingers/][Five Minute Fingers | Evening Sends]]
+*** Lattice
++ [[https://www.youtube.com/c/LatticeTraining/videos][Lattice Training - All Videos]]
++ [[https://www.youtube.com/watch?v=hJ_LhlF9YRs][Lattice : Fingerboarding & Hangboarding: A Beginner's Guide]]
++ [[https://www.youtube.com/watch?v=GRMqKnQyfZE][Lattice : Fingerboard Training - 3 Common Mistakes]]
++ [[https://www.youtube.com/watch?v=FEq_QANqEmI][Lattice : Climbing Training At Home - What Is Best?]]
+*** Dave Macleod
++ [[https://www.youtube.com/watch?v=Z5HZTN4MR-o][Dave Macleod : Hangboard for beginners]]
++ [[https://www.youtube.com/watch?v=VeKE5VH5-qg][Dave Macleod : How to Hangboard]]
++ [[https://www.youtube.com/watch?v=PebF3NyEGPc][Dave MacLeod : Hangboard 30min follow along workout intermediate/beginner]]
+*** The Science of Climbing Training by Sergio Consuegra
+A good book from Vertebrate publishing. I've collated most of the bibliography into a [[file:science_of_climbing_trainining.bib][BibTeX citation file]].
+*** Hoopers Beta
++ [[https://www.youtube.com/watch?v=GkBSx6iBqSM][Top 12 WORST Exercises for Climbers (THAT EVERYONE DOES!)]]
++ [[https://www.youtube.com/watch?v=W-N2Vp_7obs][A Simple Shoulder Warm-Up for Climbers]]
++ [[https://www.youtube.com/watch?v=qv9nQhyuKzk][Top 6 Exercises for Rotator Cuffs | Strong Shoulders Pt. 1]]
++ [[https://www.youtube.com/watch?v=E4xnKZXynkY][Shoulder Impingement Syndrome in Rock Climbers (SIS, Pinching in Shoulder)]]
++ [[https://www.hoopersbeta.com/][Hooper's Beta]] / [[https://www.youtube.com/c/HoopersBeta/videos][Hooper's Beta (All Videos)]]
++ [[https://www.youtube.com/watch?v=PKpweUFGlSo][Should Climbers run?]]
++ [[https://www.youtube.com/watch?v=etAwQ4jzyNY][How to NOT Get Injured Climbing (NO GYM - PRO’S ROUTINE) - YouTube]]
+*** Miscellaneous
++ [[https://www.climbinginjuriessolved.com/][Solve that Injury | Dr. Lisa Erikson DC | Climbing Injuries Solved l The Climbing Doc]]
++ [[https://eveningsends.com/climb-like-a-supple-leopard-mobility-with-kelly-starrett/][Like a Supple Leopard: Climbing Mobility with Kelly Starrett]]
++ [[https://eveningsends.com/from-weak-to-strong-an-expert-gymnasts-training-guide/][From Weak to Strong: An Expert Gymnast’s Training Guide | Evening Sends]]
++ [[https://rockandice.com/rock-climbing-training/gutbusters-core-exercises-for-rock-climbing/][Gutbusters: Core Exercises for Rock Climbing - Rock and Ice]]
++ [[https://www.climber.co.uk/indoor/indoor-climbing/how-and-when-will-climbing-walls-re-open/][How and when will climbing walls re-open? | Climber Magazine]]
++ [[https://www.thebmc.co.uk/bmc-launches-covid19-recovery-plan-for-climbing--hill-walking][BMC launches Covid-19 recovery plan for climbing and hill walking]]
++ [[https://steve-mcclure.com/articles/151-training-for-old-folk][Steve McClure: Training for old folk!]]
++ [[https://alpkit.com/blogs/deeds/keeping-climbing-fit-at-home][Keeping Climbing Fit at Home – Alpkit]]
++ [[https://www.outsideonline.com/2411335/strength-training-home-exercises-rock-climbing#close][At-Home Strength Training for Rock Climbing | Outside Online]]
++ [[https://www.uphillathlete.com/free-at-home-rock-climbing-training-plan/][FREE At-Home Rock Climbing Training Plan — Uphill Athlete]]
++ [[https://www.youtube.com/watch?v=x-1OJW3OMb4][Climbers Mobility Workout]]
++ [[https://www.outsideonline.com/2399826/wellness-industry-lies-what-really-works][We've Reached Peak Wellness. Most of It Is Nonsense. | Outside Online]]
+*** Shaun Coxy
++ [[https://www.youtube.com/watch?v=il_fa8DQ0R4][Mobility Warm Ups for Climbers - YouTube]]
++ [[https://www.youtube.com/watch?v=RtpugHJb71k][Fingerboard Warm Ups for Climbers - YouTube]]
++ [[https://www.youtube.com/watch?v=rA5laLQ-0Xc][Max Hang Fingerboard Sessions - YouTube]]
++ [[https://www.youtube.com/watch?v=jN6qIUD71Ls][Booty Burners for Climbers PART 1 - YouTube]]
++ [[https://www.youtube.com/watch?v=j1dq3WZ2x6o][Booty Burners for Climbers Part 2 - YouTube]]
+** Running
++ <2024-04-29 Mon> [[https://www.theguardian.com/lifeandstyle/2024/apr/29/dont-push-into-pain-how-to-rescue-your-knees-from-everything-from-torn-ligaments-to-injured-tendons][‘Don’t push into pain!’ How to rescue your knees from everything from torn ligaments to injured tendons]]
++ <2022-06-21 Tue> [[https://getpocket.com/explore/item/the-case-for-running-lower-mileage-to-avoid-overtraining][The Case for Running Lower Mileage to Avoid Overtraining]]
++ <2022-06-21 Tue> [[https://www.theguardian.com/lifeandstyle/the-running-blog/2014/mar/11/stability-exercises-runners-guide-strengthen-stabilise][Stability exercises: a runner's guide | Running | The Guardian]]
++ <2022-05-04 Wed> [[https://thereader.mitpress.mit.edu/running-and-the-science-of-mental-toughness/][Running and the Science of Mental Toughness | The MIT Press Reader]]
++ <2021-11-04 Thu> [[https://getpocket.com/explore/item/how-to-breathe-while-running-using-a-rhythmic-method][How to Breathe While Running Using a Rhythmic Method]]
++ <2021-11-01 Mon> [[https://getpocket.com/explore/item/how-to-boost-your-vo2-max-so-running-faster-feels-easier][How to Boost Your VO2 Max So Running Faster Feels Easier]]
++ <2021-07-10 Sat> [[https://byrd.run/][Byrd Running App Coach]]
++ <2021-06-19 Sat> [[https://www.outsideonline.com/2424363/exercise-pain-research-2021][How to Harness the Pain-Blocking Effects of Exercise | Outside Online]]
++ <2021-05-03 Mon> [[https://www.theguardian.com/lifeandstyle/2021/may/03/sick-of-the-same-old-route-14-fabulous-ways-to-get-out-of-your-running-rut][Sick of the same old route? 14 fabulous ways to get out of your running rut]]
++ <2020-12-16 Wed> [[https://www.irishtimes.com/news/science/evolved-to-run-but-not-to-exercise-1.4412604][Evolved to run – but not to exercise]]
++ <2020-12-16 Wed> [[https://www.theguardian.com/lifeandstyle/2020/dec/06/i-run-to-keep-fit-but-i-hate-it][I run to keep fit, but I hate it]]
+** Calisthenics
+*** General
++ [[https://www.nytimes.com/2020/10/10/at-home/exercises-for-better-sleep.html][Exercises for Better Sleep]]
++ [[https://musclewiki.com/][MuscleWiki]]
++ [[https://www.theguardian.com/lifeandstyle/2024/feb/05/touch-your-toes-six-fast-easy-ways-to-improve-your-mobility-and-live-a-longer-life][Touch your toes! Six fast, easy ways to improve your mobility – and live a longer life]]
++ [[https://www.outsideonline.com/2413554/no-equipment-bodyweight-strength-workout][Get Ripped with This No-Equipment 6-Move Workout | Outside Online]]
++ [[https://getpocket.com/explore/item/add-this-daily-ab-workout-to-your-training-routine][Add This Daily Ab Workout to Your Training Routine]]
+
+*** Recommended Routine
++ [[https://rr.coach/#/][Recommended Routine (RR) Coach]]
++ [[https://www.youtube.com/watch?v=8Z96BBDtPPU][Reddit BodyWeightFitness : Recommended Routine Video]]
++ [[https://drive.google.com/file/d/1IdrvTC4IqJ4Wn4GIgOWWncHhSstUoTrL/view][Reddit BodyWeightFitness : Recommended Routine CheatSheat]]
++ [[https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine][Reddit BodyWeightFitness : Recommended Routine Full Description]]
+*** Stretching
++ [[https://www.precisionmovement.coach/shoulder-impingement-rehab/][Shoulder Impingement Rehab Guide - Precision Movement]]
++ [[https://getpocket.com/explore/item/9-stretches-to-relieve-lower-back-pain][9 Stretches to Relieve Lower Back Pain]]
++ [[https://www.stylist.co.uk/fitness-health/workouts/worlds-greatest-stretch/497840][The worlds greatest stretch: the one stretch you need to know]]
++ [[https://getpocket.com/explore/item/stretching-4-hip-flexor-stretches-to-reduce-tight-and-sore-hips][Stretching: 4 Hip Flexor Stretches to Reduce Tight and Sore Hips]]
++ [[https://www.stylist.co.uk/fitness-health/best-hip-stretches-how-to-stretch-hips-flexors-workouts/369293][Hip pain: 4 best hip stretches to prevent and relieve hip pain]]
+
+** Pilates
++ [[https://www.nhs.uk/conditions/nhs-fitness-studio/chronic-back-pain-pilates-exercise-video/][Back pain pilates video workout - Sam Webster]]
+** Swimming
+*** Outdoors
++ [[https://www.outdoorswimmingsociety.com/][Outdoor Swimming Society]]
++ [[https://www.outdoorswimmingsociety.com/sixteen-reasons-reservoirs/][16 reasons for swimming access in reservoirs – Outdoor Swimming Society Outdo...]]
+** Research
++ [[https://www.sciencedirect.com/science/article/pii/S2095254623001187?via%3Dihub][Sport and exercise during viral acute respiratory illness—Time to revisit - ScienceDirect]]
++ <2023-10-10 Tue> [[https://journals.physiology.org/doi/full/10.1152/japplphysiol.00106.2022][Walking or body weight squat “activity snacks” increase dietary amino acid utilization for myofibrillar protein synthesis during prolonged sitting | Journal of Applied Physiology]]
++ <2023-02-18 Sat> [[https://www.nature.com/articles/s41467-023-36546-5][Associations of timing of physical activity with all-cause and cause-specific mortality in a prospective cohort study]]
++ <2022-12-27 Tue> [[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5473370/][Running Technique is an Important Component of Running Economy and Performance]]
++ <2022-12-09 Fri> [[https://www.tandfonline.com/doi/full/10.1080/1750984X.2022.2116723][Full article: The performance and psychological effects of goal setting in sport: A systematic review
+  and meta-analysis]] ([[https://twitter.com/stevemagness/status/1601211883209781248][via]]).
++ <2022-10-06 Thu> [[https://journals.lww.com/acsm-essr/Fulltext/2022/04000/Inactivity_Causes_Resistance_to_Improvements_in.4.aspx][Inactivity Causes Resistance to Improvements in Metabolism A... : Exercise and Sport Sciences Reviews]]
++ <2022-05-04 Wed> [[https://pubmed.ncbi.nlm.nih.gov/28044281/][The Effects of Mental Fatigue on Physical Performance: A Systematic Review - PubMed]]
++ <2022-03-07 Mon> [[https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2783711][Steps per Day and All-Cause Mortality in Middle-aged Adults in the Coronary Artery Risk Development in Young Adults Study | Lifestyle Behaviors | JAMA Network Open]]
++ <2022-02-27 Sun> [[https://getpocket.com/explore/item/50-year-old-muscles-just-can-t-grow-big-like-they-used-to-the-biology-of-how-muscles-change-with-age][50-Year-Old Muscles Just Can’t Grow Big Like They Used to—The Biology of How Muscles Change With Age]]+ [[https://journals.lww.com/nsca-jscr/pages/articleviewer.aspx?year=2020&issue=01000&article=00006&type=Fulltext][Comparison of Velocity-Based and Traditional Percentage-Base... : The Journal of Strength & Conditioning Research]]
++ [[https://journals.lww.com/acsm-msse/Fulltext/2020/11000/Exercise_for_Weight_Loss__Further_Evaluating.22.aspx][Exercise for Weight Loss: Further Evaluating Energy Compensa... : Medicine & Science in Sports & Exercise]]
++ [[https://www.jospt.org/doi/abs/10.2519/jospt.2020.9675][Training Load and Injury: Part 1—The Devil Is in the Detail—Challenges to Applying the Current Research in the Training Load and Injury Field]]
++ [[https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0210292][Comparative effectiveness of aerobic, resistance, and combined training on ca...]]
++ [[https://pubmed.ncbi.nlm.nih.gov/33629972/][Maintaining Physical Performance: The Minimal Dose of Exercise Needed to Preserve Endurance and Strength Over Time]]
++ [[https://osf.io/preprints/sportrxiv/eq485][Long-term time-course of strength adaptation to minimal dose resistance training: Retrospective longitudinal growth modelling of a large cohort through training records]]
+
+** Nutrition and Diet
++ [[https://dberkholz.com/2024/01/17/the-lazy-technologists-guide-to-weight-loss/][The lazy technologist’s guide to weight loss – Striving for greatness]]
++ [[https://metabolichealth.guide/][Metabolic Health Guide]]
+** Apps
++ [[https://www.theclimbingapp.com][The Climbing App]]
++ [[https://www.crimpd.com/][Crimpd – Powered by Lattice Training]]
++ [[https://opentracksapp.com/][OpenTracksApp]]
++ [[https://www.beastmaker.co.uk/collections/the-beastmaker-app][Beastmaker App – beastmaker]]
++ [[https://github.com/oliexdev/openWorkout][openWorkout]]
++ [[https://github.com/SamAmco/track-and-graph][track-and-graph: An android app for tracking personal data and creating custom graphs]]
+** Summarising Data
++ [[https://www.r-bloggers.com/2021/02/map-my-run-in-r/][Map my run in R | R-bloggers]]
++ [[https://www.r-bloggers.com/2014/09/stay-on-track-plotting-gps-tracks-with-r/][Stay on track: Plotting GPS tracks with R]]
++ [[https://www.r-bloggers.com/2021/02/map-my-run-in-r/][Map my run in R | R-bloggers]]
++ [[https://github.com/curatedmess/TidyTuesday/blob/main/2024/01022024/runs_2024.R][Git commit like plotting of run
+ distances]]
+
+** The Guardian
+
++ [[https://www.theguardian.com/lifeandstyle/article/2024/aug/11/the-foot-phenomenon-simple-surprising-ways-to-improve-your-balance-health-and-longevity][The foot phenomenon: simple, surprising ways to improve your balance, health – and longevity | Life and style | The Guardian]]
++ [[https://www.theguardian.com/lifeandstyle/2023/may/24/the-truth-about-booze-how-alcohol-really-affects-your-body-from-first-flush-of-happiness-to-hangover-hell][The truth about booze: how alcohol really affects your body, from first flush of happiness to hangover hell | Health & wellbeing ]]
++ [[https://www.theguardian.com/lifeandstyle/2023/mar/06/no-pain-plenty-of-gain-why-taking-it-easy-can-be-the-key-to-getting-fitter-and-happier][No pain, plenty of gain: why taking it easy can be the key to getting fitter – and happier | Fitness ]]
++ [[https://www.theguardian.com/lifeandstyle/article/2024/may/26/music-helps-you-get-fit-but-the-right-mix-will-keep-you-coming-back][Music helps you get fit – but the right mix will keep you coming back… | Life and style ]]
++ [[https://www.theguardian.com/lifeandstyle/2023/oct/15/should-i-worry-about-my-clicking-joints-and-stop-cracking-my-knuckles][Guardian | Should I worry about clicking joints - and stop cracking my knuckles?]]
++ [[https://www.theguardian.com/lifeandstyle/article/2024/aug/04/the-dead-hang-delight-how-this-quick-surprisingly-simple-exercise-can-change-your-life][The dead hang delight: how this quick, surprisinglysimple exercise can change your life | Fitness ]]
++ [[https://www.theguardian.com/lifeandstyle/article/2024/jul/28/get-fit-in-two-minutes-17-micro-workouts-that-will-change-your-life-even-if-youre-stuck-in-the-office][Get fit in two minutes! 17 micro-workouts that will change your life – even if you’re stuck in the office | Health &
+  wellbeing ]]
++ [[https://www.theguardian.com/lifeandstyle/2023/aug/08/the-isometric-secret-15-ways-to-get-much-fitter-without-moving-a-muscle][The isometric secret: 15 ways to get much fitter – without moving a muscle | Fitness ]]
++ [[https://www.theguardian.com/lifeandstyle/the-running-blog/2014/mar/11/stability-exercises-runners-guide-strengthen-stabilise][Stability exercises: a runner's guide | Running ]]
++ [[https://www.theguardian.com/lifeandstyle/2020/dec/06/i-run-to-keep-fit-but-i-hate-it][I run to keep fit, but I hate it]]
