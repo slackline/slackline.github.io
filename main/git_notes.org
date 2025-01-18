@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d8720ab9-a43e-45e4-834e-e4c5ce4f4e43
-:mtime:    20241010141151
+:mtime:    20250118222340 20241010141151
 :ctime:    20241010141151
 :END:
 #+TITLE: Git Notes
@@ -9,6 +9,48 @@
 Git Notes allow you to store additional information about specific commits. It is also possible to copy all GitHub
 comments to notes and store them (see [[https://wouterj.nl/2024/08/git-notes][Store Code Discussions in Git using Git Notes ~ Wouter J]]).
 
+* Configuration
+
+** Global
+
+Prevent your notes from being orphaned when you rebase by adding the following to your global ~.gitconfig~ (or
+~.config/git/config~ if you use the XDG directory).
+
+#+begin_src
+[notes]
+  rewriteRef = refs/notes/commits
+#+end_src
+
+** Local
+
+You local configuration needs tweaking in order to keep notes in sync with each other. You should expand on the default
+settings by adding the following...
+
+#+begin_src
+[remote "origin"]
+  url = <address>
+  fetch = +refs/heads/*:refs/remotes/origin/*
+  fetch = refs/notes/*:refs/notes/*
+  fetch = refs/tags/*:refs/tags/*
+  push = refs/heads/*:refs/heads/*
+  push = refs/notes/*:refs/notes/*
+  push = refs/tags/*:refs/tags/*
+#+end_src
+
+* Aliases
+
+Some useful aliases suggested in [[https://www.alchemists.io/articles/git_notes][Git Notes | Alchemists]]
+
+#+begin_src bash
+alias gna="git notes add"
+alias gnd="git notes remove"
+alias gne="git notes edit"
+alias gnl="git notes list"
+alias gnp="git notes prune"
+alias gns="git notes show"
+#+end_src
+
 * Links
 
 + [[https://wouterj.nl/2024/08/git-notes][Store Code Discussions in Git using Git Notes ~ Wouter J]]
++ [[https://www.alchemists.io/articles/git_notes][Git Notes | Alchemists]]
