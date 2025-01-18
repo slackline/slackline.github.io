@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       91804dc9-887f-44f9-95b6-62a804f1f282
+:mtime:    20250118214740
+:ctime:    20250118214740
+:END:
+#+TITLE: Git Trailers
+#+FILETAGS: :git:trailers:metadata:
+
+
+* Links
+
++ [[https://alchemists.io/articles/git_trailers][Git Trailers | Alchemists]]
