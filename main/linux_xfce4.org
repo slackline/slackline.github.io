@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       63fa9747-24ef-40e2-a2ed-d6bd4133374f
-:mtime:    20240929164147 20240529091827 20240107103809
+:mtime:    20250118215731 20240929164147 20240529091827 20240107103809
 :ctime:    20240107103809
 :END:
 #+TITLE: Xfce4
@@ -15,3 +15,7 @@ This can be set permanently using [[https://forum.endeavouros.com/t/thunar-split
 #+begin_src sh
 xfconf-query -c thunar -p /misc-open-new-windows-in-split-view -n -t bool -s true
 #+end_src
+
+* Picom
+
+[[https://picom.app/][Picom]] ([[https://github.com/yshui/picom][yshui/picom]]) is an alternative compositor that plays well with Xfce4.
