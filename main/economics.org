@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       06e11786-bbbe-42c1-8f97-dde66d8f844e
-:mtime:    20240518155014
+:mtime:    20250118215127 20240518155014
 :ctime:    20240518155014
 :END:
 #+TITLE: Economics
@@ -9,6 +9,10 @@
 * The Jevons Paradox
 
 Read this interesting piece [[https://economicsfromthetopdown.com/2024/05/18/a-tour-of-the-jevons-paradox-how-energy-efficiency-backfires/][A Tour of the Jevons Paradox: How Energy Efficency Backfires]].
+
+* UK Specific
+
++ [[https://ukfoundations.co/][Foundations]] - an essay on the stagnation of the UK economy since 2004
 
 * Links
 
