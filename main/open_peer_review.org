@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0cb02a27-253c-42aa-8496-a9520c3d63a6
-:mtime:    20240515164051
+:mtime:    20250119221720 20240515164051
 :ctime:    20240515164051
 :END:
 #+TITLE: Open Peer Review
@@ -13,8 +13,14 @@
 * Links
 
 + [[https://www.opennessinitiative.org/][Peer Reviewers' Openness Initiative | Supporting the spread of open research practices]]
++ [[https://pubpeer.com/][PubPeer - Search publications and join the conversation.]]
 
 ** Papers
 
 + [[https://f1000research.com/articles/7-969/v1][Ten considerations for open peer review | F1000Research]]
 + [[https://f1000research.com/articles/3-271/v2][An Open Science Peer Review Oath | F1000Research]]
+
+
+** Fraud
+
++ [[https://www.irit.fr/~Guillaume.Cabanac/problematic-paper-screener][Problematic Paper Screener]]
