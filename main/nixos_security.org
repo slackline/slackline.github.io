@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c345f901-5a1f-4868-b8bf-bc352554ee58
-:mtime:    20250105213209 20250103151626 20250102164607 20241225135036 20241225120544 20241224191557 20241223215106 20241222234038 20241221211807 20241215211752 20241215084441
+:mtime:    20250119221715 20250105213209 20250103151626 20250102164607 20241225135036 20241225120544 20241224191557 20241223215106 20241222234038 20241221211807 20241215211752 20241215084441
 :ctime:    20241215084441
 :END:
 #+TITLE: NixOS - Security
@@ -13,11 +13,16 @@ be very careful about putting passwords in any ~/etc/nixos/*.nix~ file.
 * NixOps
 
 * Agenix
+:PROPERTIES:
+:ID:       017ac43b-f73e-4422-8b32-5277a0aabf7b
+:mtime:    20250119221715
+:ctime:    20250119221715
+:END:
 
 [[https://github.com/ryantm/agenix][agenix]] provides age-encrypted secrets for NixOS and Home manager. The [[https://github.com/ryantm/agenix?tab=readme-ov-file#tutorial][tutorial]] should be the primary reference for
 working with ~agenix~, although note that there are several different ways of [[https://github.com/ryantm/agenix?tab=readme-ov-file#installation][installing]].
 
-Usage involves configuring ~/etc/nixos/secretes.nix~ (default location) with details of the public SSH keys that are
+Usage involves configuring ~/etc/nixos/secrets.nix~ (default location) with details of the public SSH keys that are
 permitted to be used in the system. You can define individual users or groups within a ~let~ block, you then define
 within an ~in~ block which users or groups keys are permitted to access which files.
 
@@ -43,6 +48,58 @@ You create the encrypted ~vpn.age~ file with the following, adding the content (
 agenix -e vpn.age
 #+end_src
 
+** ~age.identityPaths~
+
+[[https://github.com/ryantm/agenix#ageidentitypaths][~age.identityPaths~]] needs setting so that ~age~ knows where to find the keys that are defined in
+~/etc/nixos/secrets.nix~. It will default to the value defined in [[https://search.nixos.org/options?channel=24.11&show=services.openssh.hostKeys][~config.services.openssh.hostKeys~]] therefore if this
+/isn't/ set you need to set it in the ~age~ configuration.
+
+You can set the ~identityPaths~ with the following pattern...
+
+#+begin_src
+{
+  age = {
+    ...
+    identityPaths = [
+      "/home/user1/.ssh/id_ed25519"
+    ]; # end identityPaths
+  }; # end age
+}
+#+end_src
+
+I found this didn't work though and caused a ~no identity matched any of the recipients~ error (which had cascading
+effects of being unable to decrypt keys to ~/run/agenix.d/<#>/<file>~)...
+
+#+begin_src
+[agenix] creating new generation in /run/agenix.d/7
+[agenix] decrypting secrets...
+decrypting '/nix/store/1k819s4h9mnpbaqzz94p7s0nk81nlms7-ovh-vpn-preshared.age' to '/run/agenix
+age: error: no identity matched any of the recipients
+age: report unexpected or unhelpful errors at https://filippo.io/age/report
+...
+#+end_src
+
+I therefore fell back on the default value and set ~config.services.openssh.hostKeys~ the following sets it to the
+default for your system...
+
+#+begin_src
+{
+  ...
+  services = with pkgs; {
+    ...
+    openssh = {
+      ...
+      hostkeys = [
+        {
+          path = "/etc/ssh/ssh_host_ed25519_key";
+          type = "ed25519";
+        }
+      ]; # end hostKeys
+    }; # end openssh
+
+  }; # end services
+}
+#+end_src
 
 * SSH
 
