@@ -1,0 +1,53 @@
+:PROPERTIES:
+:ID:       498abde2-0f65-4a10-bf84-8bf6a3410d67
+:mtime:    20250122211546
+:ctime:    20250122211546
+:END:
+#+TITLE: PostgreSQL
+#+FILETAGS: :database:sql:postgresql:
+
+A more comprehensive SQL database than [[id:749d5f0f-09bd-47a8-a351-2432f38ff3d9][SQLite3]] is [[https://www.postgresql.org/][PostgreSQL]].
+
+* Upgrading
+
+When upgrading between major versions the database(s) need migrating. Most systems include a set of migration tools
+which allow the old and new versions of postgresql binaries to be installed along with a script that does the upgrade
+for you.  Under [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] this is a ~pgsql-<old_version>~ available from AUR. Once installed you can run follow the
+[[https://wiki.archlinux.org/title/PostgreSQL#Upgrading_PostgreSQL][upgrade instructions]] to perform the upgrade.
+
+#+begin_src
+[postgres@somewhere]$ pg_upgrade -b /opt/pgsql-16/bin -B /usr/bin -d /var/lib/postgres/olddata -D /var/lib/postgres/data
+#+end_src
+
+** Troubleshooting
+
+I found this didn't work in one instance as the target cluster hadn't been shutdown cleanly
+
+#+begin_src
+Performing Consistency Checks
+-----------------------------
+Checking cluster versions                                     ok
+
+The target cluster was not shut down cleanly, state reported as: "in production"
+Failure, exiting
+#+end_src
+
+The solution to this was to manually start the /new/ version and then use ~pg_ctl~ to cleanly shutdown. For good measure
+I also performed this on the /old/ database (before I engaged my brain and realised it was the /target/ that was the
+problem). These steps are performed as the ~postgres~ used since you can't run commands as root.
+
+
+#+begin_src
+# Start the new database and background the process
+postgres -D /var/lib/postgres/data/ &
+# Now cleanly terminate it
+pg_ctl stop -D /var/lib/postgres/data/ -m smart
+# Start the old database and background the process
+/opt/pgsql-16/bin/postgres -D /var/lib/postgres/olddata &
+# Now cleanly terminate it
+/opt/pgsql-16/bing/pg_ctl stop -D /var/lib/postgres/olddata -m smart
+#+end_src
+
+You should now be able to upgrade the database.
+
+Useful points on this, but not quite the exact answer were [[https://ivdl.co.za/2023/11/07/upgrading-from-postgresql-15-to-16-installed-with-homebrew-on-an-apple-silicon-mac/][here]] and [[https://www.philihp.com/2019/postgres-10-11-upgrade.html][here]].
