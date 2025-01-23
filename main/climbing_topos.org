@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       9dd5bb41-2bbf-4754-a1a2-5ec5b66ecf9e
+:mtime:    20250122160310
+:ctime:    20250122160310
+:END:
+#+TITLE: Climbing Topos
+#+FILETAGS: :climbing:topos:
+
+I've a lot of links on my [[https://wiki.nshephard.dev/doku.php?id=climbing:climbing][old wiki]].
+
+
+* Links
+
+** Europe
+
+*** Picos de Europa
+
++ [[https://fernandozamoraguiadepicos.com/en/climbing-topos/][Climbing routes Directory | Fernando Zamora]]
