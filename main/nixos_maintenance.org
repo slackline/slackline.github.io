@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       535a0cab-3321-4153-b581-83e9ec65ee33
-:mtime:    20241217231650 20241217070842 20241215223320 20241215130509 20241215101855
+:mtime:    20250124105207 20241217231650 20241217070842 20241215223320 20241215130509 20241215101855
 :ctime:    20241215101855
 :END:
 #+TITLE: NixOS - Maintenance
@@ -61,6 +61,13 @@ declarative philosophy. Unsurprisingly you can configure this option in ~/etc/ni
   ## Source: https://github.com/novoid/nixos-config/blob/47829d10f5c5408e8e50c52767584e09c991996f/configuration.nix#L19
   nix.settings.auto-optimise-store = true;
 #+end_src
+
+** ~/boot~
+
+The boot partition has the potential to become full which blocks updates to kernels (see [[https://github.com/NixOS/nixpkgs/issues/23926][thread]]). As mentioned though it
+is possible to set the option ~boot.loader.grub.configurationLimit~ to ensure that only a fixed number of kernel images
+are installed/retained at any given time.
+
 * Updating
 
 #+begin_src
