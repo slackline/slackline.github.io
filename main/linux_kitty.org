@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d0998286-1c36-47d7-943d-6b5f641a9e4d
-:mtime:    20231005134500
+:mtime:    20250126172038 20231005134500
 :ctime:    20231005134500
 :END:
 #+NAME: Kitty
@@ -26,7 +26,7 @@ solution was found [[https://redgreen.no/2020/05/10/kitty-unknown-terminal-type.
 $ kitty +kitten ssh you@remote.server
 #+end_src
 
-Alternatively you can try the solution suggested in the [[https://unix.stackexchange.com/a/470682/39149][UNIX Stackexchange]] question I asked which manually copies the
+Alternatively you can try the solution suggested in the [[https://unix.stackexchange.com/a/470682/39149][UNIX Stackexchange]] [[https://unix.stackexchange.com/questions/470676/tmux-under-kitty-terminal][question]] I asked which manually copies the
 information over.
 
 #+begin_src bash

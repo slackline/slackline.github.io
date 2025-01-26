@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       e1ef1f56-6f9b-4512-ba34-79bd6448839c
+:mtime:    20250126152856 20250126141447 20250126112037
+:ctime:    20250126112037
+:END:
+#+TITLE: Linux Administration
+#+FILETAGS: ::linux:admin:sysadmin::
+
+* Creating Users
+
+When creating users you should choose which ~group~ they will belong to common options are...
+
++ ~audio~ to allow access to audio devices
++ ~cron~ to allow users to scheduled events (may be ~fcron~ depending on your installed packages)
++ ~qemu~ if you want to be able to use emulation.
++ ~syncthing~ to allow user to use syncthing.
++ ~video~ for access to video.
++ ~wheel~ to allow administration access to ~root~
+
+* Modifying Users
+
+You can change the ~uid~ and/or the ~gid~ following the instructions [[https://www.thegeekdiary.com/how-to-correctly-change-the-uid-and-gid-of-a-user-group-in-linux/][here]].
