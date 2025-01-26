@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       48c0d280-8330-4f65-a5da-098ea186c6b6
-:mtime:    20241014114724 20230330221120 20230330142947
+:mtime:    20250126215110 20241014114724 20230330221120 20230330142947
 :ctime:    20230330142947
 :END:
 #+TITLE: Bash xarg
@@ -39,6 +39,20 @@ We want to use [[https://github.com/Instagram/MonkeyType][MonkeyType]] to automa
   # Generate stubs for everything using xargs so we canreview these first before applying!
   monkeytype list-modules | xargs -I '{}' monketype stub {} ;
 #+end_src
+
+** Move files based on regex
+
+We can search files and use matches to conditionally move the files.
+
+#+begin_src
+cd ~/gpx/opentracks
+mkdir -p ../sorted/{cycling,running,hiking}
+grep -l -Z -r "cycling" . | xargs -0 -I{} cp ../by_activity/cycling/.
+grep -l -Z -r "running" . | xargs -0 -I{} cp ../by_activity/running/.
+grep -l -Z -r "hiking" . | xargs -0 -I{} cp ../by_activity/hiking/.
+#+end_src
+
+
 * Links
 
 + [[https://www.ibm.com/docs/en/zos/2.2.0?topic=descriptions-xargs-construct-argument-list-run-command][IBM | xargs - Contruct an argument list and run a command]]
