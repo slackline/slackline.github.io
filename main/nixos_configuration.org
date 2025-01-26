@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c7db0a19-b880-4fd6-862c-bc3c17605bf9
-:mtime:    20241222212315 20241221144125
+:mtime:    20250126172113 20250124204356 20241222212315 20241221144125
 :ctime:    20241221144125
 :END:
 #+TITLE: NixOS - Configuration
@@ -44,7 +44,39 @@ I use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] for most things and Nix
 }
 #+end_src
 
-* ZSH / Oh-my-zsh
+* Shell
+
+More a Nix Language feature really but you can add simple functions to a script to colour output but found it in a [[https://gist.github.com/maikelthedev/21e834074228e6433563ecaf6df2bcd0][gist
+on customising shell]] which had the following in ~shell.nix~.
+
+ #+begin_src
+{ pkgs ? import <nixpkgs> {} }:
+pkgs.mkShell {
+  shellHook = ''
+    ...
+    # Color-coded functions for output
+    red() { echo -e "\e[31m🚨 $1\e[0m"; }
+    green() { echo -e "\e[32m✅ $1\e[0m"; }
+    yellow() { echo -e "\e[33m⚙️  $1\e[0m"; }
+    blue() { echo -e "\e[34m🔷 $1\e[0m"; }
+    # Step headers
+    step_header() {
+      echo -e "\e[35m\n======> $1\e[0m\n";
+    }
+    # Use the red() / green() / yellow() / blue() / stepheader() functions as required.
+    some_function() {
+      step_header "Running Some Function"
+      yellow "Doing something"
+      echo "Something"
+      green "Doing more"
+      echo "More stuff!"
+    }_
+  ''; # end shellHook
+} # end pkgs.mkShell
+ #+end_src
+
+
+** ZSH / Oh-my-zsh
 
 I use [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]] with the excellent ~oh-my-zsh~ plugin/theme. This is done via [[id:01336e19-dc8a-41ca-8534-6a790b39b1b6][HomeManager]] and a full list of configuration
 options can be found [[https://nix-community.github.io/home-manager/options.xhtml#opt-programs.zsh.enable][starting here]].
