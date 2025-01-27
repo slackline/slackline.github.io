@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       beef0eda-374a-4ea0-9894-967850fbe0ce
-:mtime:    20240905200019 20240315230653
+:mtime:    20250127074647 20240905200019 20240315230653
 :ctime:    20240315230653
 :END:
 #+TITLE: Git Signing
@@ -8,11 +8,11 @@
 
 * Setup
 
-You can find these out what your [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] signing key is by checking.
+You can find out what your [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] signing key is by checking with
 
 #+begin_src bash
 gpg -K --keyid-format SHORT
-src
+#+src
 
 If you have subkeys the signing one will be deonted with ~[S]~ at the end (after the creation date). You can use the
 short code (after the type e.g. ~ed25519/########~) to then set your global signing key with...
