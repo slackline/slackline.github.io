@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       8a95fc3b-ef22-4978-8220-525f85db46a5
-:mtime:    20241227135042
+:mtime:    20250127121906 20241227135042
 :ctime:    20241227135042
 :END:
-#+TITLE: NixOS Shells
+#+TITLE: NixOS - Shells
 #+FILETAGS: :nixos:linux:shell:
 
 * Links
@@ -11,3 +11,4 @@
 + [[https://nix.dev/tutorials/first-steps/declarative-shell.html][Declarative shell environments with shell.nix — nix.dev documentation]]
 + [[https://nixos.org/manual/nixpkgs/stable/#sec-pkgs-mkShell][mkShell documentation]]
 + [[https://discourse.nixos.org/t/nix-shells-tips-tricks-and-best-practices/22332][Nix shells - tips, tricks, and best practices - Guides - NixOS Discourse]]
++ [[https://ertt.ca/nix/shell-scripts/#org30a3b8a][Shell Scripts with Nix — ertt.ca]]
