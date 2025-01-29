@@ -1,0 +1,69 @@
+:PROPERTIES:
+:ID:       a4af96d2-f895-4a68-9419-d482d2850f4d
+:mtime:    20250129091630
+:ctime:    20250129091630
+:END:
+#+TITLE: Direnv
+#+FILETAGS: :linux:shell:virtualenv:
+
+[[https://direnv.net/][Direnv]] is a tool for managing virtual environments based on the directory you are currently in.
+
+* Installation
+
+Depends on your distribution.
+
+#+begin_src
+# Gentoo (via guru overlay)
+emerge -av direnv
+# Arch
+pacman -Syu direnv
+#+end_src
+
+If you use [[id:69291a6b-c253-44bc-ad9d-8d899bb90529][NixOS]] include it in your packages somewhere!
+
+** Shell Integration
+
+After installing you need to ensure that ~direnv~ is [[https://direnv.net/docs/hook.html][hooked]] into your shell. This will depend on the shell you use. I
+typically use [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]] and also use oh-my-zsh so there were two options.
+
+#+begin_src
+# plain ZSH integration
+eval "$(direnv hook zsh)"
+# oh-my-zsh plugin
+plugins=(... direnv)
+#+end_src
+
+I opted for the second.
+
+* Configuration
+
+After installing you can setup a ~.envrc~ file for each directory which defines which environment to use.
+
+#+begin_src
+# Check if the environment variable DEFAULT exists in a given directory
+cd ~/dotfiles
+echo ${DEFAULT-nope}
+# ...you'll see 'nope' if its not defined.
+# Create a .envrc that sets the environment name, in this case 'default' to 'DEFAULT'
+echo export DEFAULT=default > .envrc
+# You now need to tell direnv to use this file on entering the directory, in essence activate direnv on this directory
+direnv allow .[/.direnv]
+#+end_src
+
+* Emacs Integration
+
+It is possible to integrate with [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] using the [[https://github.com/wbolster/emacs-direnv][emacs-direnv]] package
+
+#+begin_src elisp
+(use-package direnv
+  :config
+  (direnv-mode))
+#+end_src
+
+...and that is it! Emacs will detect the presence of ~.envrc~ when you open a file within a directory and enable that
+environment.
+
+* Links
+
++ [[https://direnv.net/][direnv]]
++ [[https://github.com/wbolster/emacs-direnv][emacs-direnv]]

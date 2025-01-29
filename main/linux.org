@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0e6300c6-7025-4f45-820d-4d9da82b41a6
-:mtime:    20250126124211 20250118215315 20241014185041 20241009203940 20240910211009 20240418114040 20240304160438 20240302204630 20240121200503 20240121115714 20240107103825 20231219213305 20231126221347 20231121204845 20231120130321 20231015172332 20231005133759 20230926220759 20230917083604 20230905212306 20230724174038
+:mtime:    20250129091643 20250126124211 20250118215315 20241014185041 20241009203940 20240910211009 20240418114040 20240304160438 20240302204630 20240121200503 20240121115714 20240107103825 20231219213305 20231126221347 20231121204845 20231120130321 20231015172332 20231005133759 20230926220759 20230917083604 20230905212306 20230724174038
 :ctime:    20230724174038
 :END:
 #+TITLE: Linux
@@ -46,7 +46,12 @@ back. I still use Bash for my ~root~ account though just to make me a little mor
 
 * Web Hosting
 
-I use Linux on my VPS and various places to host websites. I've written more on this at [[id:e1dcf5fc-2125-455d-b800-d3f1b318c8c9][Web-hosting.]]
+I use Linux on my VPS and various places to host websites. I've written more on this at [[id:e1dcf5fc-2125-455d-b800-d3f1b318c8c9][Web-hosting.]] Useful topics on
+specific services are also written up at.
+
++ [[id:3774439d-af75-453e-b3e9-9d578b6bec46][nginx]]
++ [[id:13de4e0e-4c14-48c8-897e-42862be8cfc1][discourse]]
+
 
 * Live USB
 :PROPERTIES:
@@ -61,24 +66,25 @@ It can be handy to have a live distribution to carry around and boot as and when
 * Topics
 :PROPERTIES:
 :ID:       f67cfdbc-32de-4a45-8e04-72d94c11ddd8
-:mtime:    20250118215315 20240304160438 20240302204630 20240107103825
+:mtime:    20250129091643 20250118215315 20240304160438 20240302204630 20240107103825
 :ctime:    20240107103825
 :END:
 
 Miscellaneous topics
 
-+ [[id:d0998286-1c36-47d7-943d-6b5f641a9e4d][Kitty]] - an excellent Terminal Emulator.
-+ [[id:d1ce8192-41ce-4073-9fe8-654fd17fdadb][Security]] - includes [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] and [[id:1f44c0fe-5b1c-4a02-a623-18c4eebbc851][Yubikey]].
 + [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]]
-+ [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]]
-+ [[id:76578fdf-d00f-4eb6-ad74-13bb08fc5d65][qemu]]
-+ [[id:0539fa9c-fc0e-4cb8-a3f4-eee46899240a][Node Package Manager]]
-+ [[id:5d906b68-22c8-4169-8b0d-d3f3a02d2faa][Etherpad]]
-+ [[id:63fa9747-24ef-40e2-a2ed-d6bd4133374f][Xfce4]]
-+ [[id:3774439d-af75-453e-b3e9-9d578b6bec46][Nginx]]
-+ [[id:13de4e0e-4c14-48c8-897e-42862be8cfc1][discourse]]
-+ [[id:fab2461a-c95a-47e3-9e5d-64af083c92e0][QEMU]]
 + [[id:20a2e57f-b3bf-441a-87f5-e4a5c162eb71][coolify]]
++ [[id:a4af96d2-f895-4a68-9419-d482d2850f4d][direnv]]
++ [[id:13de4e0e-4c14-48c8-897e-42862be8cfc1][discourse]]
++ [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]]
++ [[id:5d906b68-22c8-4169-8b0d-d3f3a02d2faa][Etherpad]]
++ [[id:d0998286-1c36-47d7-943d-6b5f641a9e4d][Kitty]] - an excellent Terminal Emulator.
++ [[id:3774439d-af75-453e-b3e9-9d578b6bec46][Nginx]]
++ [[id:0539fa9c-fc0e-4cb8-a3f4-eee46899240a][Node Package Manager]]
++ [[id:76578fdf-d00f-4eb6-ad74-13bb08fc5d65][qemu]]
++ [[id:fab2461a-c95a-47e3-9e5d-64af083c92e0][QEMU]]
++ [[id:d1ce8192-41ce-4073-9fe8-654fd17fdadb][Security]] - includes [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] and [[id:1f44c0fe-5b1c-4a02-a623-18c4eebbc851][Yubikey]].
++ [[id:63fa9747-24ef-40e2-a2ed-d6bd4133374f][Xfce4]]
 
 * Android
 
