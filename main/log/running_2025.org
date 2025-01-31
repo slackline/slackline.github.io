@@ -3,6 +3,7 @@
 #+NAME: running-log-2025
 | Date                   | Route                                                                                                                                                 | Distance | Time        | Pace                          | Notes                                                                                                                                                                                               |
 |------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+----------+-------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [2025-01-28 Tue 13:41] | Usual loop | 9.01km | 50min + 29s | | Felt good, aimed for a steady pace throughout seemed to work well. Breathing, lifting knees and landing on ball of foot. |
 | [2025-01-26 Sun 13:22] | Carrfield Avenue, Meersbrook Road, Cat Lane Woods, Water Tower and back | 7.14 | 42min + 26s |   | Wet, windy and muddy! Short uphill run (until turning around!) |
 
 | [2025-01-25 Sat 10:24] | Carrfield Avenue, Meerbrook Road, Cat Lane Woods, Water Tower, Graves Park, Derbyshire Lane, Norton Lees Lane | 11.13km | 63min + 57s | | Later start due to not going to be early, felt ok, legs good, didn't push too hard (due to lots of uphill). Legs feel good. |
