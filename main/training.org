@@ -1,6 +1,7 @@
 :PROPERTIES:
 :ID:       470e9f37-f4f8-4e7f-adf2-3dbac9b8bf06
-:mtime:    20250118204303
+:mtime:    20250202173405 20250201184321 20250118204303
+:ctime:    20250118204303
 :END:
 #+STARTUP: align
 #+FILENAME: training.R
@@ -93,6 +94,8 @@ CLOSED: [2021-12-10 Fri 21:40]
 * Climbing
 :PROPERTIES:
 :ID:       63c286fc-5d2b-4c44-8069-1e2df0b57922
+:mtime:    20250201184340
+:ctime:    20250201184340
 :END:
 
   Climbing statistics are for outdoor climbs only and are based on those that have been logged in [[https://www.ukclimbing.com/logbook/showlog.php?id=45235][UKClimbing Logbook]].
@@ -298,12 +301,10 @@ CLOSED: [2021-12-10 Fri 21:40]
   #+CAPTION: Climbs by Crag.
   #+RESULTS:
   [[file:png/climbing_crag.png]]
-* Cycling
-:PROPERTIES:
-:ID:       061505c9-ea58-489f-b2a5-c72e2714fa46
-:END:
 
-Cycling pace is shown in figure [[cycling-pace]] broadly accurate but sometimes I forget to pause timing when I'm in shops.
+* Cycling
+
+Cycling pace is shown in figure cycling-pace broadly accurate but sometimes I forget to pause timing when I'm in shops.
 
 #+include: log/cycling.org
 ** Summary
