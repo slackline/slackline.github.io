@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       769577eb-1af5-4640-a8e6-525270e44c64
+:mtime:    20250202100459
+:ctime:    20250202100459
+:END:
+#+TITLE: NixOS - R
+#+FILETAGS: :nixos:linux:r:install:packages:reproducible:
+
+
+* Install
+
+
+* Packages
+
+** With Flakes
+
+
+
+* Links
+
++ [[https://nixos.wiki/wiki/R][R - NixOS Wiki]]
++ [[https://github.com/nix-community/nix-direnv][nix-direnv]]
