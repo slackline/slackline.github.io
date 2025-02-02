@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       2b7bd9a6-cf65-460b-a080-bf865d14be9b
-:mtime:    20241116094759
+:mtime:    20250202100524 20241116094759
 :ctime:    20241116094759
 :END:
 #+TITLE: R Maintenance
@@ -27,6 +27,11 @@ packages_to_install <- c("tidyverse", "tidymodels", "ggplot2")
 > install.packages(packages_to_install)
 #+end_src
 
+
+** NixOS
+
+Installing packages under [[id:69291a6b-c253-44bc-ad9d-8d899bb90529][NixOS]] is tied in to the ~nix~ package manager. There are a few options available and these are
+covered in [[id:769577eb-1af5-4640-a8e6-525270e44c64][NixOS - R]].
 
 ** R Universe
 
