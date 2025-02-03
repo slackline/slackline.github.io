@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       535a0cab-3321-4153-b581-83e9ec65ee33
-:mtime:    20250127121444 20250124105207 20241217231650 20241217070842 20241215223320 20241215130509 20241215101855
+:mtime:    20250202173801 20250127121444 20250124105207 20241217231650 20241217070842 20241215223320 20241215130509 20241215101855
 :ctime:    20241215101855
 :END:
 #+TITLE: NixOS - Maintenance
@@ -85,6 +85,10 @@ are installed/retained at any given time.
 nixos-rebuild switch --update
 #+end_src
 
+
+* Packages
+
+The [[https://github.com/OleMussmann/nps][~nps~]] package makes it easy to search locally the available packages.
 
 * Links
 
