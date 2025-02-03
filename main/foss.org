@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f277da12-5d6d-46e3-a49c-7bda9254d469
-:mtime:    20240924101703 20240504161600 20240329071409 20240222094145 20240218160428 20240217180720 20240215130935 20240209160828 20240123221325 20240121200647
+:mtime:    20250202194029 20240924101703 20240504161600 20240329071409 20240222094145 20240218160428 20240217180720 20240215130935 20240209160828 20240123221325 20240121200647
 :ctime:    20240121200647
 :END:
 #+TITLE: FOSS
@@ -92,10 +92,12 @@ that page, if not they take you to the projects site.
 ** Lists of Software
 
 + [[https://awesome-selfhosted.net/index.html][awesome-selfhosted]]
+
 ** Guides
 
 + [[https://opensource.guide/][Open Source Guides | Learn how to launch and grow your project.]]
 + [[https://www.contributor-covenant.org/][Contributor Covenant: A Code of Conduct for Open Source and Other Digital Commons Communities]]
++ [[https://antonin.delpeuch.eu/posts/off-the-shelf-governance-models-for-small-foss-projects/][Off-the-shelf governance models for small FOSS projects? | Antonin Delpeuch]]
 
 ** Essays
 
