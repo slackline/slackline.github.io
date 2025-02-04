@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       cf1405ab-6d1d-4d55-92b7-9271773c499d
-:mtime:    20231109095657
+:mtime:    20250204230411 20231109095657
 :ctime:    20231109095657
 :END:
 #+TITLE: Emacs Themes and Appearance
@@ -9,3 +9,4 @@
 * Links
 
 + [[https://jdhao.github.io/2021/09/30/emacs_custom_tabline/][Customize Tabline in Emacs - jdhao's digital space]]
++ [[https://gist.github.com/rougier][rougier]] simple and clean [[https://gist.github.com/rougier/8d5a712aa43e3cc69e7b0e325c84eab4][NANO in 256 lines]] is very neat (copy on Opengist)
