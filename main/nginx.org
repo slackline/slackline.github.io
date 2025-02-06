@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3774439d-af75-453e-b3e9-9d578b6bec46
-:mtime:    20241128103141 20241117170240 20241114174544 20230911222107 20230528222513 20230215120711
+:mtime:    20250206173224 20250206100320 20241128103141 20241117170240 20241114174544 20230911222107 20230528222513 20230215120711
 :ctime:    20230215120711
 :END:
 #+TITLE: Nginx
@@ -48,6 +48,9 @@ For each ~server{...}~ entry under ~/etc/nginx/nginx.conf~ I then added the foll
 Restart the server and test by changing the "user agent" in any browser to one that matches the above and I was asked if
 I wanted to download a ~10GB.bin~ file.
 
+*** Serve AI Bots Junk
+
+Came across [[https://zadzmo.org/code/nepenthes/][Nepenthes]] which infinitely generates junk pages when web-crawlers hit it. Not yet deployed this.
 
 ** Dokuwiki
 
@@ -61,6 +64,8 @@ keep the domain and one day I might update the installation and get it working a
 ** LetsEncrypt
 
 I use LetsEncrypt to provide certificates for my sites so they are secure.
+
+A useful tool for debugging why certificate issue may fail is [[https://letsdebug.net/][Let's Debug]]
 
 
 * Links
