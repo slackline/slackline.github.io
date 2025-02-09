@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       470e9f37-f4f8-4e7f-adf2-3dbac9b8bf06
-:mtime:    20250202173405 20250201184321 20250118204303
+:mtime:    20250209203305 20250202173405 20250201184321 20250118204303
 :ctime:    20250118204303
 :END:
 #+STARTUP: align
@@ -1382,7 +1382,7 @@ days.
 * Resources
 :PROPERTIES:
 :ID:       ea9dd233-64c4-493f-a4dc-9ec73df0c7cd
-:mtime:    20250118204443
+:mtime:    20250209203305 20250118204443
 :ctime:    20250118204443
 :END:
 
@@ -1513,3 +1513,4 @@ A good book from Vertebrate publishing. I've collated most of the bibliography i
 + [[https://www.theguardian.com/lifeandstyle/2023/aug/08/the-isometric-secret-15-ways-to-get-much-fitter-without-moving-a-muscle][The isometric secret: 15 ways to get much fitter – without moving a muscle | Fitness ]]
 + [[https://www.theguardian.com/lifeandstyle/the-running-blog/2014/mar/11/stability-exercises-runners-guide-strengthen-stabilise][Stability exercises: a runner's guide | Running ]]
 + [[https://www.theguardian.com/lifeandstyle/2020/dec/06/i-run-to-keep-fit-but-i-hate-it][I run to keep fit, but I hate it]]
++ [[https://www.theguardian.com/lifeandstyle/2025/jan/12/the-squat-secret-why-this-simple-move-is-the-key-to-long-term-health-and-how-to-improve-yours][The squat secret: why this simple move is the key to long-term health – and how to improve yours]]
