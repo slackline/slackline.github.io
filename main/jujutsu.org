@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a37b61ba-8699-4ee3-b407-38f256c186c4
-:mtime:    20250204230408 20250109123853 20250106104827 20250104211131 20241229195347 20241224191824 20241223211940 20241223113355 20241223083247 20241221221347 20241221211157 20241221201119 20241221163742 20241221152122 20241221072719 20241211112128 20240630205259 20240204192058
+:mtime:    20250209181233 20250204230408 20250109123853 20250106104827 20250104211131 20241229195347 20241224191824 20241223211940 20241223113355 20241223083247 20241221221347 20241221211157 20241221201119 20241221163742 20241221152122 20241221072719 20241211112128 20240630205259 20240204192058
 :ctime:    20240204192058
 :END:
 #+TITLE: Jujutsu
@@ -240,6 +240,15 @@ next to impossible. With ~jj~ you can move back to commits using ~jj edit @-~ an
 jj edit @-
 jj abandon <hash_of_latest_commit>
 #+end_src
+
+** Removing or Ignoring Files
+
+Because the current working version of a repository is always under version control any file that is created within a
+repository is automatically included. If you want to add files to your local repository and /not/ include them in ~jj~'s
+working commit you need to add it to the ~.gitignore~ file.
+
+Similarly if you have files that you want to /remove/ from ~jj~'s repository you must first ignore it by adding it to
+~.gitignore~ and to then remove it from version control you use ~jj file untrack <FILESET>~.
 
 * Diffing
 
@@ -698,6 +707,7 @@ which is one of the best [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] pack
 
 + [[https://git.sr.ht/~puercopop/jujutsushi][jujutsushi - A emacs interface to jujutsu]]
 + [[https://github.com/bennyandresen/jujutsu.el][jujutsu.el: An Emacs interface for jujutsu, inspired by magit and humbly not attempting to match it in scope.]]
++ [[https://codeberg.org/vifon/vc-jj.el][jj backend]]
 
 ** Blogs
 

@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       0911a63f-4b82-4bf1-9235-f1e41e93d210
 :ROAM_ALIASES: "Open Research Overview"
-:mtime:    20241022150421 20241001165443 20240919150818 20240912124356 20240910123405 20240515164155
+:mtime:    20250207185829 20241022150421 20241001165443 20240919150818 20240912124356 20240910123405 20240515164155
 :ctime:    20240515164155
 :END:
 #+title: Open Research
@@ -48,6 +48,7 @@ to validate and contribute to the research.
 
 + [[https://www.coalition-s.org/]['Plan S' and 'cOAlition S' – Accelerating the transition to full and immediate Open Access to scientific publications]]
 + [[https://sfdora.org/][Declaration On Research Assessment (DORA)]]
++ [[https://barcelona-declaration.org/][Barcelona Declaration]] on Open Research Information
 
 ** Training
 

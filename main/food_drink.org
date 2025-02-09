@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b0c654b8-a875-40e7-a672-7567ccee5052
-:mtime:    20240410201123 20240410161614 20240405180857 20240225215224
+:mtime:    20250207212530 20240410201123 20240410161614 20240405180857 20240225215224
 :ctime:    20240225215224
 :END:
 #+TITLE: Food and Drink
@@ -8,7 +8,7 @@
 #+SETUPFILE: export/setup/theme-solarized-dark-local.setup
 
 Recipes and notes on food and drink I've come across over the years. I found [[https://cooked.wiki/user/slackline][cooked.wiki]] which is a neat site that given
-a URL will strip out the ingredients and the instructions for making a recipe and have started using it to record recipes. 
+a URL will strip out the ingredients and the instructions for making a recipe and have started using it to record recipes.
 
 I love hot and spicy food and in particular [[id:5a8671e1-f402-4725-9f73-f344dfd4de77][Chillis]]
 
@@ -77,6 +77,9 @@ I love hot and spicy food and in particular [[id:5a8671e1-f402-4725-9f73-f344dfd
 + [[https://micro-bites.org/2024/02/23/a-cheesy-story-of-microbial-cooperation/][A cheesy story of microbial cooperation]] ([[https://www.nature.com/articles/s41467-023-41059-2][Microbial interactions shape cheese flavour formation | Nature
   Communications]])
 + [[https://news.cnrs.fr/articles/french-cheese-under-threat][French cheese under threat | CNRS News]]
+
+** Foraging
+
 
 * Books
 + [[https://www.goodreads.com/book/show/6534803-the-complete-chile-pepper-book][The Complete Chile Pepper Book: A Gardener's Guide to Choosing, Growing, Preserving, and Cooking by Dave DeWitt | Goodreads]]

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f277da12-5d6d-46e3-a49c-7bda9254d469
-:mtime:    20250202194029 20240924101703 20240504161600 20240329071409 20240222094145 20240218160428 20240217180720 20240215130935 20240209160828 20240123221325 20240121200647
+:mtime:    20250207212133 20250202194029 20240924101703 20240504161600 20240329071409 20240222094145 20240218160428 20240217180720 20240215130935 20240209160828 20240123221325 20240121200647
 :ctime:    20240121200647
 :END:
 #+TITLE: FOSS
@@ -76,6 +76,13 @@ that page, if not they take you to the projects site.
 + SyncThing Fork
 + Tasker
 
+** Attribution
+
+Interesting talks at CHAOSScon2025 [[https://github.com/chaoss/website/blob/main/CHAOSScon/2025Europe/slides/glasnt%20-%20talks%20-%20who%20does%20the%20dev.pdf][who does the dev]] and there is a [[https://github.com/chaoss/wg-funding-impact][CHAOSS Working Group on OSS Funding Impacts]] which
+aims to develop frameworks, metrics, and methodologies for measuring and understanding the impacts of funding on open
+source software development. The group will bring together researchers, developers, funders, and policymakers to create
+practical tools and approaches for evaluating funding outcomes.
+
 * Hardware
 
 ** BangleJS
@@ -122,3 +129,4 @@ that page, if not they take you to the projects site.
 ** Community
 
 + [[https://chaoss.community/][CHAOSS]] - Community Health Analytics in Open Source Software
++ [[https://whodoesthe.dev/][Attributing Contributor Roles in Open Source Software]]
