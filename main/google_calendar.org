@@ -1,0 +1,58 @@
+:PROPERTIES:
+:ID:       e620a918-3c87-4abf-a94e-5b358759e91d
+:mtime:    20250212091320
+:ctime:    20250212091320
+:END:
+#+TITLE: Google Calendar
+#+FILETAGS: :google:calendar:scheduling:
+
+I wanted to create a Google Calendar from a spreadsheet that I could share with the rest of the [[https://peakclimbingclub.co.uk][Peak Climbing Club]].
+
+* Data
+
+The schedule of events was created in a spreadsheet and shared a CSV with me.
+
+** Tidying Spreadsheet
+
+After importing the spreadsheet to Google Docs some work was required to tidy it up and get it ready to work.
+
++ Format date as Date/Time with format ~YYYY-MM-DD~
++ Add a start time and end time ensure they are recognised as times
++ Generate ~EventStart~ and ~EventEnd~ column using formula ~=A2 + B2~
++ Generate ~EventName~ by Concatenating Primary and Backup Venue with formula ~=IF(G2 = "", F2, CONCATENATE(F2, "
+  (Limestone : ", G2,")"))~
++ Generate ~EventDetails~ by concatenating ~Pub~ and ~Notes~ with formula ~=IF(J2 = "", I2, CONCATENATE("Pub : ",I2,
+  CHAR(10), CHAR(10), J2))~ (~CHAR(10)~ is carriage return to give space).
+
+** Scripting Events
+
+You can now use the following script (from [[https://scribe.rip/@ppraveen2150/how-to-automate-google-calendar-events-creation-from-google-sheets-using-google-apps-script-9951f9cd7adf][here]]) although note that the column numbers within the loop need adjusting to
+reflect those used in the spreadsheet
+
+#+begin_src
+// Function to create events on Google Calendar
+function createEventsFromSheet() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Sheet1'); // Change 'Sheet1' if needed
+  var data = sheet.getDataRange().getValues(); // Fetch all data from the sheet
+  var calendar = CalendarApp.getDefaultCalendar(); // Get the default calendar
+  for (var i = 1; i < data.length; i++) { // Start from 1 to skip header row
+    var eventName = data[i][0]; // Event Name
+    var eventDate = new Date(data[i][1]); // Event Date
+    var eventTime = data[i][2]; // Event Time
+    var eventDescription = data[i][3]; // Event Description
+    // Combine event date and time
+    var eventDateTime = new Date(eventDate.toDateString() + ' ' + eventTime);
+    // Create the event on the Google Calendar
+    calendar.createEvent(eventName, eventDateTime, eventDateTime, {
+      description: eventDescription
+    });
+  }
+}
+#+end_src
+
+
+* Links
+
++ [[https://gbtimes.com/how-to-create-calendar-events-from-google-sheets/][How to create calendar events from Google sheets? - GB Times]]
++ [[https://scribe.rip/@ppraveen2150/how-to-automate-google-calendar-events-creation-from-google-sheets-using-google-apps-script-9951f9cd7adf][How to Automate Google Calendar Events Creation from Google Sheets using Google Apps Script]]
++ [[https://github.com/ryanrwatkins/Google-Sheet-to-Calendar][Google-Sheet-to-Calendar]]
