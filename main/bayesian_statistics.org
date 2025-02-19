@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       38feb454-ee1e-440b-939c-c413009c609d
-:mtime:    20240602194324
+:mtime:    20250219145207 20240602194324
 :ctime:    20240602194324
 :END:
 #+TITLE: Bayesian Statistics
@@ -35,9 +35,11 @@ before I started to rectify the situation.
 
 Read more on [[id:7ced9fda-ff1e-4ff0-a80b-2193255e511d][Gaussian Processes]]
 
-* Learning Resources
+* Learning Bayesian Resources
 :PROPERTIES:
 :ID:       bdfa2000-29b5-4147-b7f1-0b78f6138064
+:mtime:    20250219145207
+:ctime:    20250219145207
 :END:
 There are some great resources available that can be used to teach yourself Bayesian principles and methodologies to
 then apply to your own areas of research.

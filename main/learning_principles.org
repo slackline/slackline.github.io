@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       66110c4b-30c7-47fa-8a7a-9d1f233eeb07
+:mtime:    20250219145341
+:ctime:    20250219145341
+:END:
+#+TITLE: Learning Principles
+#+FILETAGS: :learning:cognition:teaching:
+
+* Links
+
++ [[https://carpentries.github.io/instructor-training/files/papers/science-of-learning-2015.pdf][The Science of Learning]] - useful oversight of principles.

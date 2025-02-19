@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8c97a5ea-6a80-4569-a7fa-6223200a0ea6
-:mtime:    20240130211231
+:mtime:    20250219145404 20240130211231
 :ctime:    20240130211231
 :END:
 #+TITLE: Git Teaching
@@ -10,3 +10,5 @@
 I've ended up teaching people the basics of Git and GitHub using the excellent [[https://srse-git-github-zero2hero.netlify.app/][srse-git-github-zero2hero.netlify.app/]]
 (Git Repo : [[https://github.com/RSE-Sheffield/git-github-zero-to-hero][RSE-Sheffield/git-github-zero-to-hero]]).  Feedback for this module often requested more advanced materials,
 to which end I have undertaken developing an intermediate course [[id:09da049c-9288-4856-af3e-e67de566588b][Git Collaboration]].
+
+It is useful to bear in mind [[id:66110c4b-30c7-47fa-8a7a-9d1f233eeb07][Learning Principles]] when developing materials.
