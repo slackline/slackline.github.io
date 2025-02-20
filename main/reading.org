@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5e4b0759-696f-47a7-81c1-a7506aab41a0
-:mtime:    20250115224517 20241229201335 20241213210224 20241110182359 20241110164410 20241006205543 20240502093004 20240426165410 20240422071430 20240306145316
+:mtime:    20250220083856 20250218222433 20250115224517 20241229201335 20241213210224 20241110182359 20241110164410 20241006205543 20240502093004 20240426165410 20240422071430 20240306145316
 :ctime:    20240306145316
 :END:
 #+TITLE: Reading
@@ -14,7 +14,8 @@ As a consequence I also love buying books, although these days I have found usin
 lugging books around.
 
 I have a list of books I own on [[https://www.goodreads.com/user/show/112820224-slackline][GoodReads.com]] but being Amazon owned have divested my interests and listed most of them
-on [[https://bookrastinating.com/user/slackline][BookRastinating.com]].
+on [[https://bookrastinating.com/user/slackline][BookRastinating.com]]. I'm not very good at keeping any of these up-to-date! Recently I came across [[https://www.thestorygraph.com/][The
+StoryGraph]] to recommend me books and transferred my library over.
 
 * Buying
 
@@ -81,17 +82,15 @@ Physical books I've actually spent time reading!
 
 ** Science
 *** Genetics
+
 + /An Introduction to Population Genetics/ James F Crow, Motoo Kimura
 + /The Neutral Theory of Molecular Evolution/ Motoo Kimura
 + /Basic Concepts in Population, Quantitative and Evolutionary Genetics/ James F Crow
+
 *** Evolution
 
-+ Dennet, Daniel C
-+ Dennet, Daniel C
-+ Darwin, Charles /The Origin of Species/
-+ Ridley, Mark /Mendel's Demon: Gene Justice and the Complexity of Life/
-
 Most of these I read a long time ago when studying hence a distinct lack of notes about them.  I've grouped by author.
+
 ***** Richard Dawkins
 + /The Selfish Gene/
 + /The Extended Phenotype/
