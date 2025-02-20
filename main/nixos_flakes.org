@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c9eb0e6d-b152-487c-90d4-3786fcfd0889
-:mtime:    20250203090146 20250112203353 20241229162826 20241216062755 20241215075655
+:mtime:    20250220080156 20250203090146 20250112203353 20241229162826 20241216062755 20241215075655
 :ctime:    20241215075655
 :END:
 #+TITLE: NixOS - Flakes
@@ -47,6 +47,10 @@ false~ in the ~configuration.nix~ file.
 ** Rust-overlay
 
 [[https://github.com/oxalica/rust-overlay][oxalica/rust-overlay]] a "/Pure and reproducible nix overlay of binary distributed rust toolchains/"
+
+** Stylix
+
+[[https://stylix.danth.me/installation.html][Stylix]] makes styling/themeing your desktop simple (supposedly)!
 
 * Templates
 
