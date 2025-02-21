@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       9b51fa51-1d84-4efe-ba23-94f2b6ef1ea8
+:mtime:    20250221103205
+:ctime:    20250221103205
+:END:
+#+TITLE: Machine Learning
+#+FILETAGS: :statistics:ml:machinelearning:ai:
+
+* Links
+
+** Books
+
++ [[https://mlsysbook.ai/][Machine Learning Systems]]
+
+** Articles
+
++ [[https://hdsr.mitpress.mit.edu/pub/0gbwdele/release/5][Widening Access to Applied Machine Learning With TinyML · Issue 4.1, Winter 2022]]
++ [[https://www.science.org/content/article/what-s-tinyml-global-south-s-alternative-power-hungry-pricey-ai][What’s tinyML? The Global South’s alternative to power-hungry, pricey AI | Science | AAAS]]
