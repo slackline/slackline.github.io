@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d9c960c2-71b6-45e6-b388-dcd07b9da3e1
-:mtime:    20240812084832 20240602222241 20240601082743 20230730204045 20230730112159
+:mtime:    20250224202433 20250224081624 20250223214102 20250223190038 20240812084832 20240602222241 20240601082743 20230730204045 20230730112159
 :ctime:    20230730112159
 :END:
 #+TITLE: FitTrackee
@@ -137,7 +137,7 @@ INFO  [alembic.runtime.migration] Running upgrade d22670a89a54 -> 24eb097614e4, 
 
 ** systemd
 
-Systemd service files are also provided in the [[https://samr1.github.io/FitTrackee/en/installation.html#deployment][Deplyment]] section.
+Systemd service files are also provided in the [[https://samr1.github.io/FitTrackee/en/installation.html#deployment][Deployment]] section.
 
 Add these to ~/etc/systemd/system/fittrackee.service~ and  ~/etc/systemd/system/fittrackee_workers.service~.
 
@@ -180,6 +180,69 @@ systemd restart nginx.service
 
 
 
+
+ * Importing Legacy Tracks
+
+I have a lot (>5000) tracks that I've recorded over the years and manually uploading these one by one was never going to
+happen. Fortunately a recent update (insert version) allowed customising how many ~.gpx~ files could be placed in a
+~.zip~ and uploaded in one go. This appealed as a way of getting all of my legacy tracks in place but required some
+planning.
+
+** Split tracks into Activities
+
+Each of the tracks is a ~.gpx~ file, these are a form of XML and so they are text files that can be searched. As they
+record the activity type it is straight-forward to use a little [[id:48c0d280-8330-4f65-a5da-098ea186c6b6][Bash xarg]]
+to split them into their own directories since uploading a Zip file you specify the "Activity" in FitTrackee
+
+#+begin_src
+cd ~/path/to/gpx/tracks~
+mkdir -p ../by_activity/{running,cycling,hiking}
+grep -l -Z -r "hiking" . | xargs -0 -I{} cp {} ../by_activity/hiking/.
+grep -l -Z -r "biking" . | xargs -0 -I{} cp {} ../by_activity/cycling/.
+grep -l -Z -r "cycling" . | xargs -0 -I{} cp {} ../by_activity/cycling/.
+grep -l -Z -r "running" . | xargs -0 -I{} cp {} ../by_activity/running/.
+#+end_src
+
+Each directory can now be zipped up and uploaded individually.
+
+** Database
+
+The database that sits behind FitTrackee already has events in it and I didn't want duplicates to deal with. There are a
+couple of strategies available here from starting anew and uploading everything or adding everything and then removing
+duplicates. First though, start by making a backup of your existing system/database so you don't lose anything
+
+#+begin_src
+cd
+cp -r postgresql postgresql-$(date +%Y%m%d)
+#+end_src
+
+As this is an existing installation then you need to remove the database and create it again.
+
+#+begin_src
+dropdb 'fittrackee'
+#+end_src
+
+#+begin_src
+1psql -U postgres
+postgres=# CREATE DATABASE fittrackee OWNER fittrackee;
+postgres=# \q
+ftcli db upgrade
+#+end_src
+
+You can now restart the ~fittrackee~ application, but you will have to register anew since this is a new database. I hit
+problems with this as I did the [[https://github.com/SamR1/FitTrackee/issues/568][first time]] I installed and ran
+Fittrackee. To get round this I manually connected to the database, checked the ~confirmation_token~ then manually
+visited ~https://fittrackee.nshephard.dev/account-confirmation?token=<confirmation_token~> and I was logged in. I then
+changed the role of the user I had created to be admin with...
+
+#+begin_src
+ftcli users update <username> --set-role owner
+#+end_src
+
+...and I was good to go. I tweaked the maximum size of individual ~.gpx~ files (to 10Mb), the size of ~.zip~ files (to
+100Mb) and the maximum number of workouts in an individual ~.zip~ (to 10,000).
+
+Hit some errors about ~user_raw_gpx_speed~ which was ~FALSE~ by default
 
 * Links
 + [[https://samr1.github.io/FitTrackee/en/][FitTrackee]]
