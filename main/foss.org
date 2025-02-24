@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f277da12-5d6d-46e3-a49c-7bda9254d469
-:mtime:    20250207212133 20250202194029 20240924101703 20240504161600 20240329071409 20240222094145 20240218160428 20240217180720 20240215130935 20240209160828 20240123221325 20240121200647
+:mtime:    20250224100943 20250207212133 20250202194029 20240924101703 20240504161600 20240329071409 20240222094145 20240218160428 20240217180720 20240215130935 20240209160828 20240123221325 20240121200647
 :ctime:    20240121200647
 :END:
 #+TITLE: FOSS
@@ -99,6 +99,8 @@ practical tools and approaches for evaluating funding outcomes.
 ** Lists of Software
 
 + [[https://awesome-selfhosted.net/index.html][awesome-selfhosted]]
++ [[https://european-alternatives.eu/alternatives-to][European alternatives for popular services | European Alternatives]]
++ [[https://www.privacyguides.org/en/tools/][Ad-Free Privacy Tool/Service Recommendations - Privacy Guides]]
 
 ** Guides
 
