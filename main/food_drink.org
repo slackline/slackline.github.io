@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b0c654b8-a875-40e7-a672-7567ccee5052
-:mtime:    20250207212530 20240410201123 20240410161614 20240405180857 20240225215224
+:mtime:    20250225095330 20250207212530 20240410201123 20240410161614 20240405180857 20240225215224
 :ctime:    20240225215224
 :END:
 #+TITLE: Food and Drink
@@ -80,6 +80,7 @@ I love hot and spicy food and in particular [[id:5a8671e1-f402-4725-9f73-f344dfd
 
 ** Foraging
 
++ [[https://docs.nationaltrust.org.uk/nt-magazine-spring-2025/p/11][National Trust Magazine Spring | 2025 - Fridge Foraging]]
 
 * Books
 + [[https://www.goodreads.com/book/show/6534803-the-complete-chile-pepper-book][The Complete Chile Pepper Book: A Gardener's Guide to Choosing, Growing, Preserving, and Cooking by Dave DeWitt | Goodreads]]
