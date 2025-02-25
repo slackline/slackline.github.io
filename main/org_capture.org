@@ -1,14 +1,19 @@
 :PROPERTIES:
 :ID:       2b1518bf-c76c-4780-9274-41beb7e91cf0
-:mtime:    20240514070619
+:mtime:    20250225094956 20240514070619
 :ctime:    20240514070619
 :END:
 #+TITLE: Org Capture
 #+FILETAGS: :orgmode:capture:templates:productivity:
 
+* [[https://orgmode.org/worg/org-contrib/org-protocol.html][org-protocol]]
+
+This is a neat way of capturing in
+
 * Links
 
 + [[https://orgmode.org/manual/Capture.html][Capture (The Org Manual)]]
++ [[https://orgmode.org/worg/org-contrib/org-protocol.html][Protocol]]
 
 ** Articles
 

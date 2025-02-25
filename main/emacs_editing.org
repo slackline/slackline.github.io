@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       00092001-9bac-4434-b098-a72d6b00385a
-:mtime:    20240113162844
+:mtime:    20250225094538 20240113162844
 :ctime:    20240113162844
 :END:
 #+TITLE: Emacs Editing
@@ -18,7 +18,13 @@ You can search for strings with ~C-s~ which allows interactive searching but a m
 You can use Elisp functions in the replacement string of regular expressions which is quite useful. See [[https://susam.net/maze/elisp-in-replacement-string.html][Elisp in
 Replacement String]] for examples.
 
+** ~replace-regexp-as-diff~
+
+This is a neat way of looking at what a regular expression would change in form of a [[https://christiantietze.de/posts/2025/02/preview-mass-text-replacements-with-emacs-30-1-replace-regexp-as-diff/][diff]]. A neat consequence is that
+you can then choose hunk-by-hunk whether to make the change.
+
 * Links
 
 + [[https://susam.net/maze/elisp-in-replacement-string.html][Elisp in Replacement String - Susam's Maze]]
 + [[https://www.masteringemacs.org/article/searching-buffers-occur-mode][Searching and Editing in Buffers with Occur Mode - Mastering Emacs]]
++ [[https://christiantietze.de/posts/2025/02/preview-mass-text-replacements-with-emacs-30-1-replace-regexp-as-diff/][Preview Mass Text Replacements with Emacs 30.1 replace-regexp-as-diff • Christian Tietze]]
