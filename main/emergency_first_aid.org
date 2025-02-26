@@ -1,0 +1,122 @@
+:PROPERTIES:
+:ID:       875ad9b3-cd01-4372-a3d5-590077252fe8
+:mtime:    20250216173533 20250216081135 20250215232147 20250215212225 20250215125443
+:ctime:    20250215125443
+:END:
+#+TITLE: Emergency First Aid
+#+FILETAGS: :firstaid:training:emergency:health:
+
+Took an emergency First Aid course courtesy of Peak Climbing Club <2025-02-15 Sat>. Run by Alan Shaw.
+
+Need to demonstrate...
+
+1. Check over case without missing anything.
+2. Recovery Position
+3. CPR
+4. Defibrilator
+5. Bleeding
+6. Choing
+
++ First Aid principles don't change much over the years, some subtleties.
++ Legally you can not be prosecuted for attempting to save some one's life (exception is Americans)
+
+When outdoors the cold can kill quicker than anything else, so we need to give people a source of energy (sugar, jam,
+marmalade, honey) so they can shiver and generate heat. Insulate them from the bottom not the top as they lose a large
+amount of heat to the ground.
+
+Bleeding should be the first priority /after/ having made sure there is no danger. Assess the Mechanism of Injury (how
+someone got injured) and whether it presents an immediate risk to yourself.
+
+Assess the patient with...
+
++ **R**response - are they responding to you.
++ **A**lert - are they alert and aware of their surroundings.
++ **V**oice - can they talk to you are they coherent.
++ **P**ain - are they in pain can they tell you where it hurts and what the problem is. Pressing knuckle hard on
+  forehead is a good way of assessing this, it should leave a dint whjich should retutrnm
++ **U** repsonsive - are they unable to respond.
+
+Once that has been done you have...
+
++ **L**ife threatening Bleeding - people die quickly when they lose blood as its the means of getting gases around the
+  body, CO2 away and O2, to organs.
++ Airway - is it blocked or not, recovery position helps protect this.
++ Breathing - are they breathing
++ Circulation - do they have circulation
++ Damage - what is wrong, ask them if possible, assess top to toe.
++ Evaluate their environment, equipment and evacuate
+
+Emergency numbers are 911/999/112
+
+
+* Recovery position
+
++ Mechanism of Injury - look at the environment and see what might have caused the injury, is there any immediate danger
+  that can affect you, don't put yourself in danger.
++ Place on left if possible as stomach is then lower than the mouth and the larger right lungs get
+  more air into the body rather than being compressed.
+
+** Top to Toe Assessment
+
++ Approach from the side, speak and call out as you do so.
++ Shake on shoulder first to see if there is a response.
++ Check for pain response, knuckle on forehead hard, on removal should leave a white dint that returns to red if
+  circulation is good, if it doesn't then there is a good indication that there is a problem with circulation.
++ Assess whether they are breathing, hand near chin and other hand up under clothing to feel stomach moving as breathing
+  is often very shallow (unless impeded).
++ Check eyes/pupils, should both be similar and responsive (remove glasses and put them somewhere safe).
++ Check head before opening airways, feel around all areas and hands underneath back, check for blood on removal.
++ Tilt head back and open chin.
++ Look for necklace around neck in case it has information/tag about health conditions.
++ Both hands run down arms to check for breakages.
++ Undo jacket and for men both hands down chest, women three fingers down sternum
++ Check underneath as best as possible, looking for blood on hands.
++ Abdomen press across with two hands, looking for hard lumps which suggest internal bleeding, two lines. Bottom right
+  of abdomen with sharp pain would indicate appendicitis.
++ Look for erection in men which is indicative of having snapped their neck.
++ Have they defecated/soiled themselves, also indicative of spinal injury.
++ Look at legs, if one leg is long it suggests hip injury, if one is short it could be femur.
++ Feet should be flat/similar to each other.
++ Both hands down thighs feeling for problems. Knees can dislocate easily be gentle on the shins
+
+* First Aid Kit
+
+Should be appropriate to the proximity of help and the environment. Remember though that even being relatively close to
+civilisation it can take considerable time for help and rescue to arrive.
+
+** Basic
+
+** Extended
+
+** Specific Items
+
++ [[https://www.rapidtq.com/products/r-a-t-s-tourniquet?variant=34841528402082][RATs tourniquet]]
++ Israeli bandage
++ TraumaFX bandage (velcro alternative to Israeli, company has changed name not easy to buy )
+
+* Splinting
+
+** Assisted Walking
+
++ Rucksack and get them to use the bottom under the arm for support.
+
+* Links
+
+From
+
+
+MHRA issues clarification on use of spare pens in schools | Anaphylaxis UK This is the link explaining the use of spare epi pens in schools
+
+[[https://www.legislation.gov.uk/uksi/2012/1916/schedule/19/made][The Human Medicines Regulations 2012 (legislation.gov.uk) schedule 19]] medicines list of drugs anyone can legally give someone else to save their life
+[[https://www.youtube.com/watch?v=fn2oinVuryw][Dr. Silverberg - How to get the extra doses from an epipen]] - YouTube
+[[https://www.youtube.com/watch?v=w32PUDL2lb8&amp;t=90s][Chris Solomons Sudden Cardiac Arrest Rescue - BBC Helicopter Heroes]] - YouTube
+[[https://www.youtube.com/watch?v=88uCTEmuuGI][Agonal Gasps - Bondi Beach Rescue]] - YouTube
+[[https://www.citizenaid.org/][citizenAID]], the home of the Tourni-Key & FREE cA App
+[[https://www.defibfinder.uk][Defib finder]] – find the defibrillators nearest you.
+what3words /// The simplest way to talk about location
+[[https://www.legislation.gov.uk/uksi/2012/1916/schedule/19/made][The Human Medicines Regulations 2012 (legislation.gov.uk)]]
+[[https://basicsscotland.org.uk/podcasts/?fbclid=IwAR2X1gwfEBTpT0cWFMPGEnjMHeLYaHeF592w4CIIVQl-2FmWfIXJAlp2ub8][BASICS Scotland]] - Podcast
+[[https://bicorescue.com/][BICO]] – educational program about hypothermia & cold injuries – Hypothermia & cold injury online learning resources for
+first responders
+
+[[https://ashawexperiencefirstaid.co.uk/][Allan Shaw Experience First Aid]] ([[https://g.page/r/CaoqASoZ0q-_EBM/review][Google Review Page]])
