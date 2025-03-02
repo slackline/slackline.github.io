@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3070e6ed-1788-44ff-8498-8af6c84f588f
-:mtime:    20230203235516 20230103103309 20221228103630
+:mtime:    20250302075459 20230203235516 20230103103309 20221228103630
 :ctime:    20221228103630
 :END:
 #+TITLE: Emacs Tree-Sitter
@@ -56,6 +56,7 @@ The excellent [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]] presentati
 features available with Tree-Sitter, one of which is [[https://github.com/emacs-tree-sitter/ts-fold][Code folding with Tree-Sitter]].
 
 * Links
+
 + [[https://emacs-tree-sitter.github.io/installation/][Emacs Tree-Sitter]] ([[https://github.com/emacs-tree-sitter/elisp-tree-sitter][GitHub]])
 + [[https://tree-sitter.github.io/tree-sitter/][Tree-Sitter]]
 + [[https://github.com/emacs-tree-sitter/ts-fold][Emacs Code folding with Tree-Sitter]]
@@ -66,3 +67,4 @@ features available with Tree-Sitter, one of which is [[https://github.com/emacs-
 
 + [[https://www.reddit.com/r/emacs/comments/zbpa42/how_to_use_emacs_29_treesitter/][/r/emacs : How to use Emacs 29 Tree-sitter?]]
 + [[https://mastodon.social/@spaceotter@mastodon.online/109774686483526367][@spaceotter : Using tree-sitter to write docstrings]]
++ [[https://amitp.blogspot.com/2025/02/emacs-tree-sitter-custom-highlighting.html][Amit's Thoughts: Emacs Tree-sitter custom highlighting, part 1]]

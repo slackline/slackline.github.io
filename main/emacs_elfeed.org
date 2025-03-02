@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c5b2b8ae-46fc-4d91-8227-7116c7885de4
-:mtime:    20240209123255 20240125173429 20230103103313 20221228110232
+:mtime:    20250301212221 20240209123255 20240125173429 20230103103313 20221228110232
 :ctime:    20221228110232
 :END:
 #+TITLE: Emacs Elfeed
@@ -32,3 +32,7 @@ my RSS feeds.
 ** Alternatives
 
 + [[https://feedbase.org/][Feedbase]] - server (free, permanent?) that co-ordinates feeds and you subscribe with an ~nntp~ client (i.e. Emacs).
+
+** Articles
+
++ [[https://takeonrules.com/2025/03/01/reorganizing-my-rss-feed-reading/][Reorganizing My RSS Feed Reading // Take on Rules]] - useful example of how to mark feeds with priority.
