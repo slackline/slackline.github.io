@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d9c960c2-71b6-45e6-b388-dcd07b9da3e1
-:mtime:    20250224202433 20250224081624 20250223214102 20250223190038 20240812084832 20240602222241 20240601082743 20230730204045 20230730112159
+:mtime:    20250228080846 20250226203815 20250226192133 20250225224811 20250225210838 20250224202433 20250224081624 20250223214102 20250223190038 20240812084832 20240602222241 20240601082743 20230730204045 20230730112159
 :ctime:    20230730112159
 :END:
 #+TITLE: FitTrackee
@@ -223,7 +223,9 @@ dropdb 'fittrackee'
 #+end_src
 
 #+begin_src
-1psql -U postgres
+psql -U postgres
+postgres=# CREATE DATABASE fittrackee OWNER fittrackee;
+postgres=# CREATE SCHEMA fittrackee AUTHORIZATION fittrackee;
 postgres=# CREATE DATABASE fittrackee OWNER fittrackee;
 postgres=# \q
 ftcli db upgrade
@@ -243,6 +245,59 @@ ftcli users update <username> --set-role owner
 100Mb) and the maximum number of workouts in an individual ~.zip~ (to 10,000).
 
 Hit some errors about ~user_raw_gpx_speed~ which was ~FALSE~ by default
+
+*** Miscellaneous
+
+#+begin_src
+-- List tables
+\dt+
+-- List details of a given table
+\d+ users
+-- Switch to Dark Mode
+UPDATE users SET use_dark_mode = TRUE WHERE username = 'username';
+-- Give username admin role
+UPDATE users SET role = 100 WHERE username = 'neil';
+-- Set limits on application
+UPDATE app_config SET max_users = 1 WHERE id = 1;
+UPDATE app_config SET max_zip_file_size = 104857600 WHERE id = 1;    -- 100Mb zip file limits
+UPDATE app_config SET max_single_file_size = 20971520 WHERE id = 1;  -- 20Mb single GPX file
+UPDATE app_config SET gpx_limit_import = 10000 WHERE id = 1;         -- 10000 files per zip
+UPDATE app_config SET stats_workouts_limit = 0 WHERE id = 1;         -- No limit on stats for workouts
+-- Disable various sports
+UPDATE sports SET is_active = FALSE WHERE id = 9;                    -- Alpine Skiing
+UPDATE sports SET is_active = FALSE WHERE id = 10;                    -- Cross Country Skiing
+UPDATE sports SET is_active = FALSE WHERE id = 11;                    -- Rowing
+UPDATE sports SET is_active = FALSE WHERE id = 12;                    -- Snowshoes
+UPDATE sports SET is_active = FALSE WHERE id = 13;                    -- Cycling (Virtual)
+UPDATE sports SET is_active = FALSE WHERE id = 15;                    -- Paragliding
+UPDATE sports SET is_active = FALSE WHERE id = 16;                    -- Open Water Swimming
+UPDATE sports SET is_active = FALSE WHERE id = 17;                    -- Cycling (Trekking)
+UPDATE sports SET is_active = FALSE WHERE id = 18;                    -- Swimrun
+#+end_src
+
+#+:CAPTION
+
+| id | label                      | is_active | stopped_speed_threshold |
+|----+----------------------------+-----------+-------------------------|
+|  1 | Cycling (Sport)            | t         |                       1 |
+|  2 | Cycling (Transport)        | t         |                       1 |
+|  3 | Hiking                     | t         |                     0.1 |
+|  4 | Mountain Biking            | t         |                       1 |
+|  5 | Running                    | t         |                       1 |
+|  6 | Walking                    | t         |                     0.1 |
+|  7 | Mountain Biking (Electric) | t         |                       1 |
+|  8 | Trail                      | t         |                     0.1 |
+|  9 | Skiing (Alpine)            | t         |                       1 |
+| 10 | Skiing (Cross Country)     | t         |                     0.1 |
+| 11 | Rowing                     | t         |                       1 |
+| 12 | Snowshoes                  | t         |                     0.1 |
+| 13 | Cycling (Virtual)          | t         |                       1 |
+| 14 | Mountaineering             | t         |                     0.1 |
+| 15 | Paragliding                | t         |                     0.1 |
+| 16 | Open Water Swimming        | t         |                     0.1 |
+| 17 | Cycling (Trekking)         | t         |                       1 |
+| 18 | Swimrun                    | t         |                     0.1 |
+
 
 * Links
 + [[https://samr1.github.io/FitTrackee/en/][FitTrackee]]
