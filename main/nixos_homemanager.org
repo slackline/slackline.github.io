@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       01336e19-dc8a-41ca-8534-6a790b39b1b6
-:mtime:    20241226213213 20241225093335 20241215081001
+:mtime:    20250301213624 20241226213213 20241225093335 20241215081001
 :ctime:    20241215081001
 :END:
 #+TITLE: NixOS - HomeManager
@@ -37,3 +37,7 @@ stow .
 
 + [[https://nix-community.github.io/home-manager/][Home Manager Manual]]
 + [[https://home-manager-options.extranix.com/][Home Manager - Option Search]]
+
+** Examples
+
++ [[https://codeberg.org/jevans/nix-config/src/branch/main/homeManagerModules/gui-applications/firefox/default.nix][jevans/nix-config]] - shows how to configure Firefox/LibreWolf with packages.
