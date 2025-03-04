@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f4f7b185-7263-418d-bb53-e5280e2b9068
-:mtime:    20241025200654
+:mtime:    20250304204632 20241025200654
 :ctime:    20241025200654
 :END:
 #+TITLE: Git Commit
@@ -10,3 +10,4 @@
 
 + [[https://www.conventionalcommits.org/en/v1.0.0/][Conventional Commits]]
 + [[https://dev.to/craicoverflow/enforcing-conventional-commits-using-git-hooks-1o5p][Enforcing Conventional Commits using Git Hooks]]
++ [[https://github.com/RomuloOliveira/commit-messages-guide/tree/master][commit-messages-guide: A guide to understand the importance of commit messages and how to write them well]]
