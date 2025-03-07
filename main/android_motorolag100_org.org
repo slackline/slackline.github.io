@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       349c1607-ca60-4ea2-bb53-4eb45a0e9189
-:mtime:    20241021192025 20241020132011
+:mtime:    20250305071008 20250304222343 20241021192025 20241020132011
 :ctime:    20241020132011
 :END:
 #+TITLE: Motorolla g100
@@ -13,8 +13,48 @@
 3. Once installed reboot.
 4. Start Magisk and follow the instructions to the letter to patch the ~boot.img~, copy back to your computer and flash
    using ~fastboot~. **NB** Rebooting into ~fastbootd~ mode is _not_ what is required, rather it is the ~bootloader~
-   mode which can be reached via ~Volume Down~ + ~Power~  when the phone is switched off or via ~adb -d reboot bootloade~
-* Links*
+   mode which can be reached via ~Volume Down~ + ~Power~  when the phone is switched off or via ~adb -d reboot
+   bootloader~. Once in ~bootloader~ mode flash with ~fastboot flash boot ./magisk_patched-<something>.img~
+
+** ~root~
+
+Magisk is the /de facto/ goto for rooting your device, at least in my experience of +10yrs of rooting Android devices,
+its fantastic and "Just Works (TM)". Don't fuck around though, follow the  [[https://topjohnwu.github.io/Magisk/install.html][Official Installation Instructions]] and _only_
+use the official binaries. Take heed of only using the patch created for the specific device too.
+
+*** Enable Systemless Hosts
+
+This allows AdAway to work.
+
+*** Hiding ~root~
+
+Banking apps and others don't like you having a rooted device, but you can play cat and mouse and get around
+it. /Settings > |Configure DenyList/  and check the apps you want to hide. Then /Hide the Magisk app/, you get the to
+rename it, I reverse the name to ~Ksigam~. You don't even need to reboot (at least for the banking app I use!).
+
+*** Modules
+
+There are a couple of other Magisk modules I use. They used to be accessible from the app, but alas no more. Once you
+have re-rooted your device with Magisk it should detect previously installed modules (at least it did when I moved from
+LineageOS 21 > 22 and at the same time went from Magisk 27 > 28).
+
+**** Motorola Stock Camera Applications
+
+As this is a Motorola Phone I wanted to be able to use the stock camera app which enabled all the funky functions around
+the macro camera. There is a module on the  [[https://xdaforums.com/t/stock-camera-app.4443113/][XDA Forums]] for this. Once installed you can start the app and it will update
+itself from the Play Store, neat.
+
+**** Play Integrity Fix
+
+Possibly related to hiding ~root~ but I've had this installed on my phones for I don't know how long so I keep on using
+it.
+
+* Links
 
 + [[https://wiki.lineageos.org/devices/nio/variant2/][Info about nio | LineageOS Wiki]]
 + [[https://topjohnwu.github.io/Magisk/install.html][Installation | Magisk]]
+
+** Magisk
+
++ [[https://xdaforums.com/t/stock-camera-app.4443113/][Motorola - Stock Camera App | XDA Forums]]
++ [[https://github.com/chiteroman/PlayIntegrityFix/releases][Releases · chiteroman/PlayIntegrityFix]]

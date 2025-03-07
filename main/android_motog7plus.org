@@ -1,10 +1,16 @@
 :PROPERTIES:
 :ID:       65c60c32-dcc3-4d6b-a074-bb076fd4db24
-:mtime:    20240930074826
+:mtime:    20250306063826 20240930074826
 :ctime:    20240930074826
 :END:
 #+TITLE: Motorolla G7 Plus
 #+FILETAGS: :android:phone:mobile:linux:
+
+* Upgrade
+
+The [[https://wiki.lineageos.org/devices/lake/upgrade/][LineageOS Wiki]] has excellent instructions on upgrading. As noted it appears to hang at 47%, just be patient and let
+it finish in its own time and remember to flash ~MindTheGapps~. After an upgrade you lose ~root~ so have to go through
+[[https://topjohnwu.github.io/Magisk/install.html][installing Magisk]] again.
 
 * Links
 
