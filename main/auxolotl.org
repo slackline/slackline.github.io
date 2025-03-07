@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       d9cc7fab-0528-4356-ad3a-a8710f780f99
+:mtime:    20250307071740
+:ctime:    20250307071740
+:END:
+#+TITLE: linux:distro:declarative:nixos
+#+FILETAGS: :Auxolotl:
+
+Some people seemed to find the community and environment of [[id:69291a6b-c253-44bc-ad9d-8d899bb90529][NixOS]] toxic. [[https://auxolotl.org/en/][Auxolotl]] is a fork/alternative to this that
+seeks to avoid some of the pitfalls.
+
+* Links
+
++ [[https://auxolotl.org/en/][auxolotl.org]]
++ [[https://wiki.auxolotl.org/][Wiki]]
++ [[https://forum.aux.computer/][Community]]
++ [[https://git.auxolotl.org/auxolotl][Aux Forge]]
