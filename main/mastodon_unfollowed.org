@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       0a2a0723-3be7-4b78-8899-0e5c1752ab50
+:mtime:    20250307065146
+:ctime:    20250307065146
+:END:
+#+TITLE: Mastodon Unfollowed
+#+FILETAGS: :mastodon:
+
+Mastodon accounts I've unfollowed but don't want to forget about completely.
+
++ [[https://mas.to/@jobRxiv][@jobRxiv]]
