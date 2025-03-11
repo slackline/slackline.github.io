@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d9c960c2-71b6-45e6-b388-dcd07b9da3e1
-:mtime:    20250228080846 20250226203815 20250226192133 20250225224811 20250225210838 20250224202433 20250224081624 20250223214102 20250223190038 20240812084832 20240602222241 20240601082743 20230730204045 20230730112159
+:mtime:    20250308205721 20250308073752 20250228080846 20250226203815 20250226192133 20250225224811 20250225210838 20250224202433 20250224081624 20250223214102 20250223190038 20240812084832 20240602222241 20240601082743 20230730204045 20230730112159
 :ctime:    20230730112159
 :END:
 #+TITLE: FitTrackee
@@ -216,10 +216,12 @@ cd
 cp -r postgresql postgresql-$(date +%Y%m%d)
 #+end_src
 
-As this is an existing installation then you need to remove the database and create it again.
+As this is an existing installation then you need to remove the database and create it again as well as remove the
+existing ~uploads~ to avoid conflicts. The number in the ~uploads/workouts/~ directory relates to the user.
 
 #+begin_src
 dropdb 'fittrackee'
+rm -rf uploads/workouts/1/*
 #+end_src
 
 #+begin_src
@@ -249,12 +251,13 @@ Hit some errors about ~user_raw_gpx_speed~ which was ~FALSE~ by default
 *** Miscellaneous
 
 #+begin_src
+psql -U fittrackee
 -- List tables
 \dt+
 -- List details of a given table
-\d+ users
+\d+ usesr
 -- Switch to Dark Mode
-UPDATE users SET use_dark_mode = TRUE WHERE username = 'username';
+UPDATE users SET use_dark_mode = TRUE WHERE username = 'neil';
 -- Give username admin role
 UPDATE users SET role = 100 WHERE username = 'neil';
 -- Set limits on application
