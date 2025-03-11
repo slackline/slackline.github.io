@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       bed29d9d-404a-4236-b0ff-97a5eab5c9b7
+:mtime:    20250307213159
+:ctime:    20250307213159
+:END:
+#+TITLE: Lix
+#+FILETAGS: :linux::nixos:declarative:
+
+* Links
+
++ [[https://lix.systems/resources/][Lix Resources]]
