@@ -334,3 +334,8 @@ found useful.
 ** Generative Art
 
 + [[https://blog.djnavarro.net/posts/2024-12-18_art-from-code-1/][Art from code I: Generative art with R – Notes from a data witch]]
+
+** Benchmarking
+
++ [[https://blog.schochastics.net/posts/2025-03-10_practical-benchmark-duckplyr/index.html][A practical benchmark of
+  duckplyr – schochastics - all things R]]
