@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       01336e19-dc8a-41ca-8534-6a790b39b1b6
-:mtime:    20250301213624 20241226213213 20241225093335 20241215081001
+:mtime:    20250311204727 20250301213624 20241226213213 20241225093335 20241215081001
 :ctime:    20241215081001
 :END:
 #+TITLE: NixOS - HomeManager
@@ -40,4 +40,7 @@ stow .
 
 ** Examples
 
++ [[https://github.com/novoid/nixos-config][novoid/nixos-config: NixOS + flakes + home-manager with xfce, zsh, tmux, ...]] A nice example of a modularised
+  configuration for multiple hosts with many of the tools I use.
 + [[https://codeberg.org/jevans/nix-config/src/branch/main/homeManagerModules/gui-applications/firefox/default.nix][jevans/nix-config]] - shows how to configure Firefox/LibreWolf with packages.
++ [[https://github.com/SylviaWhittle/nixos-config][SylviaWhittle/nixos-config: my public nixos config]]

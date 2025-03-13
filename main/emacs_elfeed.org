@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c5b2b8ae-46fc-4d91-8227-7116c7885de4
-:mtime:    20250301212221 20240209123255 20240125173429 20230103103313 20221228110232
+:mtime:    20250312220440 20250301212221 20240209123255 20240125173429 20230103103313 20221228110232
 :ctime:    20221228110232
 :END:
 #+TITLE: Emacs Elfeed
@@ -28,6 +28,10 @@ my RSS feeds.
 + [[https://github.com/skeeto/elfeed][skeeto/elfeed: An Emacs web feeds client]]
 + [[https://github.com/remyhonig/elfeed-org][remyhonig/elfeed-org: Configure the Elfeed RSS reader with an Orgmode file]]
 + [[https://github.com/rougier/nano-elfeed][rougier/nano-elfeed: Emacs configuration file for elfeed (news reader)]]
+
+** Extensions
+
++ [[https://github.com/rtrppl/cuckoo-search][rtrppl/cuckoo-search: Content-based search for Elfeed.]]
 
 ** Alternatives
 

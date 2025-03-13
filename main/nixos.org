@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       69291a6b-c253-44bc-ad9d-8d899bb90529
-:mtime:    20250307213552 20250307071743 20250214090300 20250210082156 20250202173404 20250131210621 20250131121451 20250127121913 20250127105902 20250112203441 20250111165858 20250102180337 20241231141855 20241231115858 20241227164143 20241226211846 20241224191552 20241221211808 20241221142059 20241220225930 20241220210309 20241215222630 20241215203017 20241215120453 20241215084508 20241214235221 20241214074620 20241214064000 20241213214801 20241213074524 20241212212528 20241211115355 20241211103642 20241210065459 20240324205532 20240305091938 20240304160447
+:mtime:    20250313085155 20250307213552 20250307071743 20250214090300 20250210082156 20250202173404 20250131210621 20250131121451 20250127121913 20250127105902 20250112203441 20250111165858 20250102180337 20241231141855 20241231115858 20241227164143 20241226211846 20241224191552 20241221211808 20241221142059 20241220225930 20241220210309 20241215222630 20241215203017 20241215120453 20241215084508 20241214235221 20241214074620 20241214064000 20241213214801 20241213074524 20241212212528 20241211115355 20241211103642 20241210065459 20240324205532 20240305091938 20240304160447
 :ctime:    20240304160447
 :END:
 #+TITLE: NixOS
@@ -60,8 +60,6 @@ I keep a list of useful [[https://github.com/stars/slackline/lists/nixos][GitHub
 
 **** Miscellaneous
 
-+ [[https://github.com/novoid/nixos-config][novoid/nixos-config: NixOS + flakes + home-manager with xfce, zsh, tmux, ...]] A nice example of a modularised
-  configuration for multiple hosts with many of the tools I use .
 + [[https://github.com/NixOS/nixos-hardware][NixOS/nixos-hardware: A collection of NixOS modules covering hardware quirks.]] (includes settings for [[https://github.com/NixOS/nixos-hardware/tree/master/lenovo/thinkpad/t490][T490]], see above
   for possible examples of how to use).
 
@@ -76,6 +74,13 @@ I keep a list of useful [[https://github.com/stars/slackline/lists/nixos][GitHub
 *** [[https://discourse.nixos.org/][Forums]]
 
 + [[https://discourse.nixos.org/t/tips-tricks-for-nixos-desktop/28488][Tips&Tricks for NixOS Desktop - Guides - NixOS Discourse]]
+
+** Example configurations
+
++ [[https://github.com/novoid/nixos-config][novoid/nixos-config: NixOS + flakes + home-manager with xfce, zsh, tmux, ...]] A nice example of a modularised
+  configuration for multiple hosts with many of the tools I use.
++ [[https://codeberg.org/jevans/nix-config/src/branch/main/homeManagerModules/gui-applications/firefox/default.nix][jevans/nix-config]] - shows how to configure Firefox/LibreWolf with packages.
++ [[https://github.com/SylviaWhittle/nixos-config][SylviaWhittle/nixos-config: my public nixos config]]
 
 ** Tutorials
 

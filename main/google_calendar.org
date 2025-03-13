@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e620a918-3c87-4abf-a94e-5b358759e91d
-:mtime:    20250212091320
+:mtime:    20250313083847 20250212091320
 :ctime:    20250212091320
 :END:
 #+TITLE: Google Calendar
@@ -26,33 +26,101 @@ After importing the spreadsheet to Google Docs some work was required to tidy it
 
 ** Scripting Events
 
-You can now use the following script (from [[https://scribe.rip/@ppraveen2150/how-to-automate-google-calendar-events-creation-from-google-sheets-using-google-apps-script-9951f9cd7adf][here]]) although note that the column numbers within the loop need adjusting to
-reflect those used in the spreadsheet
+Scripting events requires using Googles [[https://script.google.com/][Apps Script]] which leverages JavaScript. I setup the following based on a [[https://github.com/ryanrwatkins/Google-Sheet-to-Calendar/blob/master/script][Gist]] I
+found. Work use a much more complicated system that [[https://opengist.nshephard.dev/nshephard/a3a260ed0f1d4be78eea18df261532f0][links]] form submissions to Sheets and books calendar events.
 
 #+begin_src
-// Function to create events on Google Calendar
-function createEventsFromSheet() {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Sheet1'); // Change 'Sheet1' if needed
-  var data = sheet.getDataRange().getValues(); // Fetch all data from the sheet
-  var calendar = CalendarApp.getDefaultCalendar(); // Get the default calendar
-  for (var i = 1; i < data.length; i++) { // Start from 1 to skip header row
-    var eventName = data[i][0]; // Event Name
-    var eventDate = new Date(data[i][1]); // Event Date
-    var eventTime = data[i][2]; // Event Time
-    var eventDescription = data[i][3]; // Event Description
-    // Combine event date and time
-    var eventDateTime = new Date(eventDate.toDateString() + ' ' + eventTime);
-    // Create the event on the Google Calendar
-    calendar.createEvent(eventName, eventDateTime, eventDateTime, {
-      description: eventDescription
-    });
+// Documentation
+// https://developers.google.com/apps-script/reference/spreadsheet/sheet
+// https://developers.google.com/apps-script/reference/calendar
+// Based on : https://github.com/ryanrwatkins/Google-Sheet-to-Calendar/blob/master/script
+// Useful : https://opengist.nshephard.dev/nshephard/a3a260ed0f1d4be78eea18df261532f0
+// Settings
+var commiteeEmails = ["nshephard@protonmail.com",
+                      "secretary.peakclimbingclub@gmail.com"]
+var pccCalID = "3412ff22d718172b3eccf2e345bb09be43f8c46771e10dc29f9f8d085fa2a053@group.calendar.google.com";
+var sheetID = "14bFheHdIk8RrWQsDYKMBgmciu9zmjT80zzLd8skBSug";
+var sheetNameID = "schedule";
+// Column indexes (starting from 1)
+var eventStart = 9;
+var eventEnd = 10;
+var eventName = 11;
+var eventDetails = 12;
+
+// This creates a new menu in the menu bar of the Spreadsheet, and then inserts menu item for running the script.
+//function onOpen() {
+//  var ui = SpreadsheetApp.getUi();
+//  ui.createMenu('Sync to Calendar')
+//      //.addItem('Update Calendar', 'FunctionGWcodersSchedule')
+//      .addItem('Update Calendar', 'schedule')
+//      .addToUi();
+//}
+
+function schedule() {
+
+  // Get the spreadsheet and sheet/tab within, then get the calendar ID from the spreadsheet, and get the calendar
+  var spreadsheet = SpreadsheetApp.openById(sheetID).getSheetByName(sheetNameID);
+  // Get the event calendar based on the ID
+  var eventCal = CalendarApp.getCalendarById(pccCalID);
+
+  // We get the data from row 1, column eventStart for 100 rows and 4 columns
+  var topics = spreadsheet.getRange(1, eventStart, 100, 4).getValues();  //Get the section of the spreadsheet we are using
+
+  // Since we don't want duplicates, we first delete all the events and then we will replace them with the edited events
+  // Date function starts at 0 for the month (January=0)
+  var fromDate = new Date(2025,0,1); //This is January 1, 2025 at 00h00'00"
+  var toDate = new Date(2030,0,1);   //This is January 1, 2022 at 00h00'00"
+
+  function clearEvents(calendar, start, end) {
+    var events = calendar.getEvents(start, end);   //Get all events in the time range
+
+    for(var i=0; i<events.length;i++)
+    {
+      var ev = events[i];   // Get each individual event
+      ev.deleteEvent();     // delete the event
+    }
   }
+  clearEvents(eventCal, fromDate, toDate)
+
+  // now we create the new events one at a time
+  for (x=0; x<topics.length; x++){
+
+    var meetup = topics[x];   // Get each event, row, from the Sheet
+
+    var begin = meetup[0];    // Assign a variable to each column
+    var end = meetup[1];
+    var venue = meetup[2];
+    var description = meetup[3];
+
+    // Check if all necessary fields have valid data
+    // if (!isNaN(begin.getTime()) && !isNaN(end.getTime()) && venue && presenter) {
+
+    // Convert start and end strings to Date/Time
+
+    //Create the event
+    eventCal.createEvent(venue,
+                         new Date(begin),
+                         new Date(end)).addPopupReminder(30).setDescription(description);
+
+    // Pause briefly since you can only edit the ccalendar so many times per sec
+    Utilities.sleep(2000);
+  //}
+  }
+
 }
 #+end_src
 
+A few iterations and it seems to have worked and populated my calendar. I need to uncomment the ~onOpen()~ function and
+get it deployed/linked to the spreadsheet. Long term I need to setup a system that everyone can use without making it
+too awkward.
 
 * Links
 
 + [[https://gbtimes.com/how-to-create-calendar-events-from-google-sheets/][How to create calendar events from Google sheets? - GB Times]]
 + [[https://scribe.rip/@ppraveen2150/how-to-automate-google-calendar-events-creation-from-google-sheets-using-google-apps-script-9951f9cd7adf][How to Automate Google Calendar Events Creation from Google Sheets using Google Apps Script]]
 + [[https://github.com/ryanrwatkins/Google-Sheet-to-Calendar][Google-Sheet-to-Calendar]]
+
+** Apps Script Docs
+
++ [[https://developers.google.com/apps-script/reference/calendar][Calendar]]
++ [[https://developers.google.com/apps-script/reference/spreadsheet/][Spreadsheets]]

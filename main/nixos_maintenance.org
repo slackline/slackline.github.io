@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       535a0cab-3321-4153-b581-83e9ec65ee33
-:mtime:    20250302103054 20250202173801 20250127121444 20250124105207 20241217231650 20241217070842 20241215223320 20241215130509 20241215101855
+:mtime:    20250311221122 20250302103054 20250202173801 20250127121444 20250124105207 20241217231650 20241217070842 20241215223320 20241215130509 20241215101855
 :ctime:    20241215101855
 :END:
 #+TITLE: NixOS - Maintenance
@@ -83,6 +83,30 @@ are installed/retained at any given time.
 
 #+begin_src
 nixos-rebuild switch --upgrade
+#+end_src
+
+
+* Switching Channels
+
+To switch channels to unstable you need to update the ~nix-channel~ for ~nixos~ and [[id:01336e19-dc8a-41ca-8534-6a790b39b1b6][NixOS - HomeManager]] if you are using
+it.
+
+#+begin_src
+nix-channel --add https://nixos.org/channels/nixos-unstable nixos
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+nix-channel --update
+nix-channel --list
+nixos-rebuild switch [--impure]
+#+end_src
+
+To revert you back to a specific ~<version>~ you would...
+
+#+begin_src
+nix-channel --add https://nixos.org/channels/nixos-<version> nixos
+nix-channel --add https://github.com/nix-community/home-manager/archive/release-<version>.tar.gz home-manager
+nix-channel --update
+nix-channel --list
+nixos-rebuild switch [--impure]
 #+end_src
 
 

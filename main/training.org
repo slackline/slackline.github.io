@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       470e9f37-f4f8-4e7f-adf2-3dbac9b8bf06
-:mtime:    20250209203305 20250202173405 20250201184321 20250118204303
+:mtime:    20250312091850 20250209203305 20250202173405 20250201184321 20250118204303
 :ctime:    20250118204303
 :END:
 #+STARTUP: align
@@ -1382,7 +1382,7 @@ days.
 * Resources
 :PROPERTIES:
 :ID:       ea9dd233-64c4-493f-a4dc-9ec73df0c7cd
-:mtime:    20250209203305 20250118204443
+:mtime:    20250312091850 20250209203305 20250118204443
 :ctime:    20250118204443
 :END:
 
@@ -1439,7 +1439,6 @@ A good book from Vertebrate publishing. I've collated most of the bibliography i
 + <2021-06-19 Sat> [[https://www.outsideonline.com/2424363/exercise-pain-research-2021][How to Harness the Pain-Blocking Effects of Exercise | Outside Online]]
 + <2021-05-03 Mon> [[https://www.theguardian.com/lifeandstyle/2021/may/03/sick-of-the-same-old-route-14-fabulous-ways-to-get-out-of-your-running-rut][Sick of the same old route? 14 fabulous ways to get out of your running rut]]
 + <2020-12-16 Wed> [[https://www.irishtimes.com/news/science/evolved-to-run-but-not-to-exercise-1.4412604][Evolved to run – but not to exercise]]
-+ <2020-12-16 Wed> [[https://www.theguardian.com/lifeandstyle/2020/dec/06/i-run-to-keep-fit-but-i-hate-it][I run to keep fit, but I hate it]]
 ** Calisthenics
 *** General
 + [[https://www.nytimes.com/2020/10/10/at-home/exercises-for-better-sleep.html][Exercises for Better Sleep]]
@@ -1476,7 +1475,8 @@ A good book from Vertebrate publishing. I've collated most of the bibliography i
 + <2022-10-06 Thu> [[https://journals.lww.com/acsm-essr/Fulltext/2022/04000/Inactivity_Causes_Resistance_to_Improvements_in.4.aspx][Inactivity Causes Resistance to Improvements in Metabolism A... : Exercise and Sport Sciences Reviews]]
 + <2022-05-04 Wed> [[https://pubmed.ncbi.nlm.nih.gov/28044281/][The Effects of Mental Fatigue on Physical Performance: A Systematic Review - PubMed]]
 + <2022-03-07 Mon> [[https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2783711][Steps per Day and All-Cause Mortality in Middle-aged Adults in the Coronary Artery Risk Development in Young Adults Study | Lifestyle Behaviors | JAMA Network Open]]
-+ <2022-02-27 Sun> [[https://getpocket.com/explore/item/50-year-old-muscles-just-can-t-grow-big-like-they-used-to-the-biology-of-how-muscles-change-with-age][50-Year-Old Muscles Just Can’t Grow Big Like They Used to—The Biology of How Muscles Change With Age]]+ [[https://journals.lww.com/nsca-jscr/pages/articleviewer.aspx?year=2020&issue=01000&article=00006&type=Fulltext][Comparison of Velocity-Based and Traditional Percentage-Base... : The Journal of Strength & Conditioning Research]]
++ <2022-02-27 Sun> [[https://getpocket.com/explore/item/50-year-old-muscles-just-can-t-grow-big-like-they-used-to-the-biology-of-how-muscles-change-with-age][50-Year-Old Muscles Just Can’t Grow Big Like They Used to—The Biology of How Muscles Change With Age]]
++ [[https://journals.lww.com/nsca-jscr/pages/articleviewer.aspx?year=2020&issue=01000&article=00006&type=Fulltext][Comparison of Velocity-Based and Traditional Percentage-Base... : The Journal of Strength & Conditioning Research]]
 + [[https://journals.lww.com/acsm-msse/Fulltext/2020/11000/Exercise_for_Weight_Loss__Further_Evaluating.22.aspx][Exercise for Weight Loss: Further Evaluating Energy Compensa... : Medicine & Science in Sports & Exercise]]
 + [[https://www.jospt.org/doi/abs/10.2519/jospt.2020.9675][Training Load and Injury: Part 1—The Devil Is in the Detail—Challenges to Applying the Current Research in the Training Load and Injury Field]]
 + [[https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0210292][Comparative effectiveness of aerobic, resistance, and combined training on ca...]]
@@ -1515,3 +1515,4 @@ A good book from Vertebrate publishing. I've collated most of the bibliography i
 + [[https://www.theguardian.com/lifeandstyle/2020/dec/06/i-run-to-keep-fit-but-i-hate-it][I run to keep fit, but I hate it]]
 + [[https://www.theguardian.com/lifeandstyle/2025/jan/12/the-squat-secret-why-this-simple-move-is-the-key-to-long-term-health-and-how-to-improve-yours][The squat secret: why this simple move is the key to long-term health – and how to improve yours]]
 + [[https://www.theguardian.com/wellness/2025/mar/11/older-adults-strength-training][The ninetysomethings who revolutionized how we think about strength training | Well actually | The Guardian]]
++ [[https://www.theguardian.com/lifeandstyle/2025/mar/09/push-up-power-the-exercise-you-need-for-a-healthy-happy-life-and-eight-ways-to-make-it-easier][Push-up power! The exercise you need for a healthy, happy life – and eight ways to make it easier | Life and style | The Guardian]]
