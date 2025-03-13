@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       ee9d5008-ffcc-4493-a596-3c0dde8c1c46
+:mtime:    20250313164107
+:ctime:    20250313164107
+:END:
+#+TITLE: R Tables - Emphatic
+#+FILETAGS: :R:tables:
+
+* Links
+
++ [[https://coolbutuseless.github.io/package/emphatic/][Highlight R Output • emphatic]]

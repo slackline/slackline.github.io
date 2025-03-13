@@ -50,11 +50,12 @@ towards ~ggplot2~)
 
 * Tables
 
++ [[id:ee9d5008-ffcc-4493-a596-3c0dde8c1c46][~emphatic~]]
 + [[id:9d2317d5-06f3-45de-9cd0-cc4b7307e1db][~flextable~]]
 + [[id:c285d6f1-79d3-4970-8e7f-b6873b565382][~gt~]]
 + [[id:aae6948d-da09-47e8-93f5-85c1a9287c1d][~huxtable~]]
 + [[id:b2af442f-2afd-46ac-8cc3-862a2234dfc1][~kableExtra~]]
-    + [[id:c00d4b6b-5c29-4033-a1d6-472159a9c0eb][~tinytable~]]
++ [[id:c00d4b6b-5c29-4033-a1d6-472159a9c0eb][~tinytable~]]
 
 * IDE
 
@@ -90,8 +91,8 @@ Machine Learning interfaces.
 It's possible to parallelise conducive code using R, one such package is [[https://www.futureverse.org/][Futureverse]] but there are other options some of
 which are summarised in this [[https://bookdown.org/rdpeng/rprogdatascience/parallel-computation.html][Chapter 22 Parallel]] of Roger Peng's [[https://bookdown.org/rdpeng/rprogdatascience/][R Programming for Data Science]].
 
-* Community
-:PROPERTIES:
+* Community:
+PROPERTIES:
 :TITLE: R community
 :ID:       e7011db4-16fc-4cde-bb81-4d172cb0db14
 :mtime:    20230103103313 20221228150524
