@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       a77c5a39-c3ef-4b4b-80a2-6a492674f701
+:mtime:    20250312090615
+:ctime:    20250312090615
+:END:
+#+TITLE: Home
+#+FILETAGS: :home:house:diy:
+
+* DIY
+
+* Windows
+
++ [[https://sheffieldsashwindowcompany.co.uk/][A Sheffield-based supplier of quality wooden sash windows – Sheffield Sash Windows]]
+
+* Plastering
+
+* Solar Panels
+
++ [[https://www.theecoexperts.co.uk/solar-panels/balconies][Balcony Solar Panels | Costs & Benefits (2023)]]
+
+* Advice
+
++ [[https://www.theecoexperts.co.uk][The Eco Experts]]

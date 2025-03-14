@@ -1,17 +1,14 @@
 :PROPERTIES:
 :ID:       e1dcf5fc-2125-455d-b800-d3f1b318c8c9
-:mtime:    20230917083313
+:mtime:    20250314091139 20230917083313
 :ctime:    20230917083313
 :END:
-#+TITLE: Web Hosting
+#+TITLE: OVH
 #+TILETAGS: :linux:vps:
 
-* nginx
+This page is about services I run locally (well on my VPS) myself. For hosted services I use (or might) see [[id:e1eadb76-06e9-4d89-8a5a-f30e5e8ad5e7][Web Services]].
 
-* DokuWiki
-
-* WordPress
-
-* Links
-
-+ [[https://git.0x0.st/mia/0x0][mia/0x0: No-bullshit file hosting and URL shortening service - 0x0 - git.0x0.st]]
++  [[id:3761aada-6cd3-485a-9b2f-79da7cc5adf3][Etherpad]]
++  [[id:d9c960c2-71b6-45e6-b388-dcd07b9da3e1][FitTrackee]]
++  [[id:736537b3-75e0-4c24-9156-364937e0e8a2][ForgeJo]]
++  [[id:3774439d-af75-453e-b3e9-9d578b6bec46][Nginx]]

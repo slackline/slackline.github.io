@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       e1eadb76-06e9-4d89-8a5a-f30e5e8ad5e7
+:mtime:    20250314091508 20250314000803
+:ctime:    20250314000803
+:END:
+#+TITLE: Web Services
+#+FILETAGS: :web:online:
+
+* Links
+
++ [[https://cryptpad.fr/][CryptPad.fr]]
++ [[https://joplinapp.org/][Joplin]] - online note hosting
++ [[https://git.0x0.st/mia/0x0][mia/0x0: No-bullshit file hosting and URL shortening service - 0x0 - git.0x0.st]]
