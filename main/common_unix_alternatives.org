@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       58938b15-84c8-48dc-8b7e-64e54f1d5c42
+:mtime:    20250314221223
+:ctime:    20250314221223
+:END:
+#+TITLE: UNIX Alternatives
+#+FILETAGS: :unix:linux:cli
+
+I wrote a blog post with some [[https://blog.nshephard.dev/posts/cli-alternatives/][Linux Command Line Alternatives – blog.nshephard.dev]]
+
+| Traditional | Alternative   |
+|-------------+---------------|
+| ~cat~       | ~bat~         |
+| ~diff~      | ~difftastic~  |
+| ~du~        | ~duf~         |
+| ~find~      | ~fd~          |
+| ~htop~      | ~btop~        |
+| ~ls~        | ~lsd~ / ~eza~ |
+
+* ~duf~
+
+~duf~ for a nice alternative to ~du~
