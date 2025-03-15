@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       d6f6ab23-c429-4852-87c3-c6bb3db95609
+:mtime:    20250315200927
+:ctime:    20250315200927
+:END:
+#+TITLE: Mushrooms
+#+FILETAGS: :mushrooms:
+
+* Links
+
++ [[https://mushroomreferences.com/][mushroomreferences.com – A Curated List of References Relevant to Physicians, Scientists, and the Intellectually
+  Curious]]
