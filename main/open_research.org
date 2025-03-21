@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       0911a63f-4b82-4bf1-9235-f1e41e93d210
 :ROAM_ALIASES: "Open Research Overview"
-:mtime:    20250207185829 20241022150421 20241001165443 20240919150818 20240912124356 20240910123405 20240515164155
+:mtime:    20250321094135 20250207185829 20241022150421 20241001165443 20240919150818 20240912124356 20240910123405 20240515164155
 :ctime:    20240515164155
 :END:
 #+title: Open Research
@@ -43,6 +43,7 @@ to validate and contribute to the research.
 + [[https://investinopen.org/][Invest in Open Infrastructure]]
 + [[https://delightful.club/delightful-open-science/][delightful open science]]
 + [[https://github.com/nalgeon/codapi][nalgeon/codapi: Interactive code examples for documentation, education and fun]]
++ [[https://rescience.github.io/read/][ReScience]] - replication publications
 
 ** Community Consensus
 
