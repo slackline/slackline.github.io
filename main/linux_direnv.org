@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a4af96d2-f895-4a68-9419-d482d2850f4d
-:mtime:    20250131200030 20250129091630
+:mtime:    20250321105030 20250131200030 20250129091630
 :ctime:    20250129091630
 :END:
 #+TITLE: Direnv
@@ -37,18 +37,27 @@ I opted for the second.
 
 * Configuration
 
-After installing you can setup a ~.envrc~ file for each directory which defines which environment to use.
+After installing you can setup a ~.envrc~ file for each directory which defines which environment to use. I typically
+use Python for my development and [[id:4bf1c297-d00a-4857-9339-8017c27138c6][Python Virtual Environments]] are managed using ~virtualenvwrapper~. As such my
+environments live under ~${HOME}/.virtualenv/<env_name>~. We can activate the respective environment automatically in a
+given directory by adding the following to ~.envrc~.
 
 #+begin_src
-# Check if the environment variable DEFAULT exists in a given directory
-cd ~/dotfiles
-echo ${DEFAULT-nope}
-# ...you'll see 'nope' if its not defined.
-# Create a .envrc that sets the environment name, in this case 'default' to 'DEFAULT'
-echo export DEFAULT=default > .envrc
-# You now need to tell direnv to use this file on entering the directory, in essence activate direnv on this directory
-direnv allow .[/.direnv]
+export VIRTUAL_ENV=${HOME}/.virtualenvs/<env_name>
+export PATH=${VIRTUAL_ENV}/bin:${PATH}
 #+end_src
+
+You now need to tell direnv to use this file on entering the directory, in essence activate direnv on this directory
+
+#+begin_src
+direnv allow .
+#+end_src
+
+
+** Extending
+
+You can add functions globally to ~/.direnvrc~ which will be sourced and use the relevant environment variables you use
+in each projects ~.envrc~.
 
 * Emacs Integration
 
@@ -68,6 +77,8 @@ environment.
 + [[https://direnv.net/][direnv]]
 + [[https://github.com/wbolster/emacs-direnv][emacs-direnv]]
 
+
 ** Blog
 
++ [[https://erick.navarro.io/blog/activate-python-virtualenv-automatically-with-direnv/][Activate python virtualenv automatically with direnv]]
 + [[https://treyhunner.com/2024/10/switching-from-virtualenvwrapper-to-direnv-starship-and-uv/][Switching from virtualenvwrapper to direnv, Starship, and uv]]
