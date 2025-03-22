@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5253f936-28e2-416c-8541-6081c1ac4f0c
-:mtime:    20240715081115 20240701052946 20240630202230 20240617091334 20240511204735 20240511084447
+:mtime:    20250317072302 20240715081115 20240701052946 20240630202230 20240617091334 20240511204735 20240511084447
 :ctime:    20240511084447
 :END:
 #+TITLE: Photography
@@ -30,6 +30,11 @@ I've been a long time [[https://www.flickr.com/photos/slackline][Flickr]] user a
 *** API
 
 Details of Flickr API are at [[https://www.flickr.com/services/feeds/][Flickr Services]].
+
+*** Flickr.org
+
+There is also [[https://www.flickr.org/about-us/][Flickr Foundation]] which aims to preserve and make available the corpus of photos to future generations
+which seems like a great idea as in the future when I'm dead I won't care if people use my photos.
 
 ** [[https://unsplash.com/][Unsplash]]
 
