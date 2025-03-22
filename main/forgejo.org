@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       736537b3-75e0-4c24-9156-364937e0e8a2
-:mtime:    20250314091326 20250214202539 20250212211450 20241221213704 20240708222139 20240708205417 20240309204131 20240215065336 20240214220237 20240214203455 20240213073417 20240211204231 20240211163700 20240211140707
+:mtime:    20250322195213 20250321090032 20250314091326 20250214202539 20250212211450 20241221213704 20240708222139 20240708205417 20240309204131 20240215065336 20240214220237 20240214203455 20240213073417 20240211204231 20240211163700 20240211140707
 :ctime:    20240211140707
 :END:
 #+TITLE: Forgejo
@@ -343,6 +343,13 @@ You can easily backup Forgejo to a zip using [[https://forgejo.org/docs/latest/a
 + [[https://forgejo.org/docs/next/admin/actions/][Forgejo Actions administrator guide]]
 + [[https://forgejo.org/docs/next/admin/runner-installation/][Forgejo Runner installation guide]]
 
+** Runners
+
++ [[https://jan.wildeboer.net/2024/08/Running-a-runner-codeberg/][Running a runner for Codeberg/Forgejo on RHEL9 as user]]
+
+*** Actions
+
++ [[https://codeberg.org/kemitix/forgejo-commit-path-rules][kemitix/forgejo-commit-path-rules: Enforce consistency between commit messages and file changes in your repository.]]
 ** API
 
 + [[https://forgejo.nshephard.dev/api/swagger#/][API : forgejo.nshephard.dev]]

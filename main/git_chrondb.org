@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       1c0d6bfa-bdab-4a89-ae65-c4ef26be2ed7
+:mtime:    20250316141237
+:ctime:    20250316141237
+:END:
+#+TITLE: Git - ChronDB
+#+FILETAGS: :git:db:database:
+
+* Links
+
++ [[https://www.moclojer.com/blog/git-as-database-harnessing-hidden-power-internals-chronological-data-storage/][Git as a Database: Harnessing the Hidden Power of Internals for Chronological Data Storage]]
++ [[https://github.com/moclojer/chrondb][moclojer/chrondb: Chronological key/value Database storing based on database-shaped git (core) architecture]]
