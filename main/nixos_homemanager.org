@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       01336e19-dc8a-41ca-8534-6a790b39b1b6
-:mtime:    20250311204727 20250301213624 20241226213213 20241225093335 20241215081001
+:mtime:    20250320182158 20250315230213 20250311204727 20250301213624 20241226213213 20241225093335 20241215081001
 :ctime:    20241215081001
 :END:
 #+TITLE: NixOS - HomeManager
@@ -38,9 +38,15 @@ stow .
 + [[https://nix-community.github.io/home-manager/][Home Manager Manual]]
 + [[https://home-manager-options.extranix.com/][Home Manager - Option Search]]
 
+** Blogs
+
++ [[https://gvolpe.com/blog/home-manager-dotfiles-management/][Home Manager: dotfiles management • gvolpe's blog]] - appears to show how to use plain [[id:31304184-2fad-4cc5-824b-3ab4b9d2e126][Dotfiles]] within the HomeManager
+  framework.
+
 ** Examples
 
 + [[https://github.com/novoid/nixos-config][novoid/nixos-config: NixOS + flakes + home-manager with xfce, zsh, tmux, ...]] A nice example of a modularised
   configuration for multiple hosts with many of the tools I use.
 + [[https://codeberg.org/jevans/nix-config/src/branch/main/homeManagerModules/gui-applications/firefox/default.nix][jevans/nix-config]] - shows how to configure Firefox/LibreWolf with packages.
+  + [[https://github.com/britter/nix-configuration/commit/83e5d1a77eda68e89c1128cdfceb44a3027b0445][Simple firefox > librewolf config]]
 + [[https://github.com/SylviaWhittle/nixos-config][SylviaWhittle/nixos-config: my public nixos config]]
