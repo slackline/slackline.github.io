@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       83df78ca-e349-418f-ab71-b7735c16d027
+:mtime:    20250322214422
+:ctime:    20250322214422
+:END:
+#+TITLE: MPD
+#+FILETAGS: :linux:mpd:music:
+
+I use the venerable [[https://www.musicpd.org][Music Player Daemon]] to play my music. It runs on a server and I output to Snapcast which runs on the
+same server and multiple other computers I have dotted around the house and connected to amps/speakers (most of these
+are Raspberry Pi ZeroWs). This means I can control my music from my phone and it all plays back across the various
+speakers in a synchronised manner (thanks to Snapcast).
+
+* Installation
+
+* Configuration
+
+Configuration resides in the ~/etc/mpd.conf~.
+
+* Clients
+
+I have a penchant for ~gmpc~ even though its old and hasn't been updated its nice and light weight (I copied the [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]]
+ebuild to a local overlay before it was removed). I occasionally use ~mpc~ and as ~gmpc~ isn't available on [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] I
+use ~ymuse~ which seems to be built on Electron and very bloated.
+
+On Android I use [[https://gitlab.com/gateship-one/malp/-/wikis/home][M.A.L.P.]] which is perfect, no need for anything else.
+
+* Troubleshooting
+
+At some point I found I couldn't update my database. This turns out to be because I had hit a hard limit on either
+memory or number of files that can be opened/touched (I think it was memory limits). I found this via the repository
+issues (see [[https://github.com/MusicPlayerDaemon/MPD/issues/972][#972]] and [[https://github.com/MusicPlayerDaemon/MPD/issues/974][#974]]).
+
+I set ~ulimit -l 65535~ and restarted the server manually as ~root~ (rather than via ~systemd~ which starts it as ~mpd~
+user....I think! This may have been what imposed the limit as the ~Max locked memory~ shown by ~cat /proc/$pidof
+mpd)/limits~ changed and when I restarted the daemon using ~systemctl restart mpd.service~ the values reverted).
