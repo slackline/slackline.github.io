@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       169b9c5f-df34-46ab-b64f-8ee98946ee69
-:mtime:    20241019092502 20240811084949 20240514070639 20240513075658 20240330210731 20240126213839 20240123221444 20230920063141 20230718145501 20230613223232 20230515080140 20230513163615 20230424102336 20230413154310 20230408213646 20230319195017 20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
+:mtime:    20250322221114 20250316191219 20241019092502 20240811084949 20240514070639 20240513075658 20240330210731 20240126213839 20240123221444 20230920063141 20230718145501 20230613223232 20230515080140 20230513163615 20230424102336 20230413154310 20230408213646 20230319195017 20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
 :ctime:    20221217184411
 :END:
 #+TITLE: Orgmode
@@ -106,7 +106,9 @@ There are hundreds!
 + [[https://www.orgroam.com/][Org-roam]]
 + [[https://github.com/org-roam/org-roam-ui][org-roam-ui: A graphical frontend for exploring your org-roam Zettelkasten]]
 + [[https://github.com/Trevoke/org-gtd.el][org-gtd : A package for using GTD using org-mode]]
-+ [[https://github.com/jkitchin/org-ref][org-ref: org-mode modules for citations, cross-references, bibliographies in org-mode and useful bibtex tools to go with it.]]
++ [[https://github.com/jkitchin/org-ref][org-ref: org-mode modules for citations, cross-references, bibliographies in org-mode and useful bibtex tools to go
+  with it.]]
++ [[https://github.com/meedstrom/indexed/][meedstrom/indexed]] an efficient cache of metadata about all your org files.
 
 *** Org Babel
 
