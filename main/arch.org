@@ -122,6 +122,10 @@ removed using the following.
 pacman -Qqtd | pacman -Rns -p
 #+end_src
 
+** Java
+
+There are many options for [[https://wiki.archlinux.org/title/Java][Java]] on Arch Linux, to list and switch between the different versions you should use
+~archlinux-java~ which will list the available options and allow you to ~set~ the default.
 
 ** Downgrading Packages
 
