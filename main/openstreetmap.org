@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a5f391b-0f61-48d8-a4c3-a204d55538de
-:mtime:    20241209102640 20241006212915 20240828121857 20231220115205 20231126082848 20230530082045 20230528222034
+:mtime:    20250324091338 20241209102640 20241006212915 20240828121857 20231220115205 20231126082848 20230530082045 20230528222034
 :ctime:    20230528222034
 :END:
 #+TITLE: OpenStreetMap
@@ -16,6 +16,12 @@ you wish to have routing for. These will be downloaded and stored in the selecte
 
 You then need to configure OSMAnd+, go to ~Settings > Cycling > Navigation Settings > Navigation Type~ and select
 ~BRouter (offline)~. That's it when you choose to find a route for cycling it should use BRouter.
+
+* Privacy
+
+OSMAnd uses telematics to keep track of some aspects, this is enabled when you [[https://fosstodon.org/@ai6yr@m.ai6yr.org/114215691886378067][download maps]]. They us it to "/monitor fair
+usage, predict traffic patterns and generate anonymous monthly map reports/". To disable it go to /Settings > OsmAnd
+Settings > Identifiers/ and toggle the option.
 
 * Beat The Street
 
