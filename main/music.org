@@ -13,6 +13,12 @@ I like a lot of different types of music, figured I should start making some not
 + [[id:604b59c7-4ca0-44a7-bbec-7f1486bc5bd8][Software]] - Have to play music somehow these days, this is what I use.
 + [[id:47e9469b-b4fd-4228-bf1e-de212230a3ef][Miscellaneous]] - Other random stuff.
 
+* Discovering
+
+** BBC Orbit
+
+An interesting way of finding new music from the BBC in the form of [[https://www.bbc.co.uk/orbitmusic][Orbit]].
+
 * Buying
 
 + [[https://bandcamp.com][Bandcamp]]
@@ -23,3 +29,9 @@ I like a lot of different types of music, figured I should start making some not
 ** Statistics
 
 + [[https://metalstats.wordpress.com/][Metal Statistics – Statistical analytics about metal bands.]]
+
+** BBC Orbit Music
+
++ [[https://www.bbc.co.uk/orbitmusic][Orbit]]
++ [[https://www.bbc.co.uk/rd/articles/2025-03-orbit-music-discovery-organise-analysis/][Organising music for organic discovery]]
++ [[https://www.bbc.co.uk/rd/articles/2025-03-orbit-music-discovery-design/][Designing for intentional discovery]]
