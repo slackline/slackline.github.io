@@ -25,3 +25,7 @@ packages I've selected.
 + [[https://kdpsingh.github.io/Tidier.jl/dev/][Tidier.jl]] - [[id:b4510762-8409-4e5e-8ee8-c27574977772][Tidyverse]] implementation in Julia.
 + [[https://dataframes.juliadata.org/stable/][DataFrames.jl]] - ~pd.DataFrame~/~data.table~/~data.frame~ like tabular data in Julia.
 + [[https://tidierorg.github.io/Tidier.jl/dev/][Tidier.jl]] - implementation of may [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]] [[id:b4510762-8409-4e5e-8ee8-c27574977772][Tidyverse]] packages in Julia.
+
+** Blogs
+
++ [[https://ucidatascienceinitiative.github.io/IntroToJulia/Html/WhyJulia][WhyJulia]]
