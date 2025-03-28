@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b68f81ac-3256-4282-ba1a-da203da3c58d
-:mtime:    20250213153334 20241209195432
+:mtime:    20250328161718 20250326105025 20250213153334 20241209195432
 :ctime:    20241209195432
 :END:
 #+TITLE: FAIR4RS
@@ -17,6 +17,7 @@
 * Links
 
 + [[https://www.nature.com/articles/s41597-022-01710-x][Introducing the FAIR Principles for Research Software]]
-+ [[https://doi.org/10.15497/RDA00068][FAIR Principles for Research Software 1.0]] (supersedes [[https://doi.org/10.15497/RDA00068][FAIR Principles for Research Software]])
++  (supersedes [[https://doi.org/10.15497/RDA00068][FAIR Principles for Research Software]])
 + [[https://content.iospress.com/articles/data-science/ds190026][Towards FAIR principles for research software - IOS Press]]
 + [[https://fairsoftwarechecklist.net/v0.2/][FAIR software checklist]]
++ [[https://doi.org/10.15497/RDA00068][FAIR Principles for Research Software 1.0]]
