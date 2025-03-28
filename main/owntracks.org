@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       5315e7ee-0ed9-4514-b1a9-0a03114d8191
+:mtime:    20250328170851
+:ctime:    20250328170851
+:END:
+#+TITLE: OwnTracks
+#+FILETAGS: :linux:gps:tracking:
+
+* Installation
+
+** Arch Linux
+I found ~owntracks-recorder~ required me to manually install ~pkg-config~ first as the ~PKGBUILD~ doesn't currently list
+it as a dependency.
+
+#+begin_src
+cd ~/aur
+git clone https://aur.archlinux.org/owntracks-{recorder,frontend}.git
+cd owntracks-recorder
+makepkg -sri
+cd ../owntracks-frontend
+makepkg -sri
+#+end_src
+
+** Gentoo
+
+Only the recorder appears to be available in Portage for now.
+
+#+begin_src
+emerge -av owntracks-recorder
+#+end_src
+
+* Configuration
+
+The following applies to the installation under [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] as I deployed this on my VPS.
+
+| Files                         | Description |
+|-------------------------------+-------------|
+| ~/etc/owntacks-recorder.conf~ |             |
+
+
+
+** User Configuration
+
+
+** Nginx Reverse Proxy
+
+Helpfully there is a [[https://github.com/owntracks/recorder#nginx][clear]] example of a reverse proxy. It recommend password protecting the site.
+
+* Links
+
++ [[https://github.com/owntracks/recorder#building-from-source][Building from Source]]
