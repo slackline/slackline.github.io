@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8178219c-ef79-4b59-ad51-e4204a8f369c
-:mtime:    20240309205745 20231106164927
+:mtime:    20250401210413 20240309205745 20231106164927
 :ctime:    20231106164927
 :END:
 #+TITLE: Fediverse
@@ -30,3 +30,5 @@ it with his personal agenda.
 * Matrix
 
 [[id:7c18f6c4-375e-4832-9e40-f44d04245e8a][matrix]]
+
+* [[https://wueride.bike/][WueRide]]
