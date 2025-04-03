@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       fe1f6380-9217-482c-bb5e-91817ae3e8f8
-:mtime:    20240201145038 20240201125118 20240131094721 20240116101258 20240109225151 20240109203109 20240109175658 2024010914295 20240109120558 20231012133551 20231011113735 20230103103314 20220524201346
+:mtime:    20250403115814 20240201145038 20240201125118 20240131094721 20240116101258 20240109225151 20240109203109 20240109175658 2024010914295 20240109120558 20231012133551 20231011113735 20230103103314 20220524201346
 :ctime:    20220524201346
 :END:
 #+TITLE: R Shiny
@@ -151,3 +151,7 @@ of the modules.
 + [[https://unleash-shiny.rinterface.com/][Outstanding User Interfaces with Shiny]]
 + [[https://engineering-shiny.org/][Engineering Production-Grade Shiny Apps]]
 + [[https://business-science.github.io/shiny-production-with-aws-book/][The Shiny AWS Book]]
+
+** Blogs
+
++ [[https://blog.thecoatlessprofessor.com/programming/r/rethinking-shiny-containerization-the-shinydocker-experiment/][Rethinking Shiny Containerization: The shinydocker Experiment – TheCoatlessProfessor]]
