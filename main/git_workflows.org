@@ -1,6 +1,7 @@
 :PROPERTIES:
 :ID:       36b4612a-63df-4858-afb1-f35d4f44dba5
-:mtime:    20250403115627 20241225215253 20241225153610 20240901100226
+:mtime:    20250403225558 20250325214541 20241225215253 20241225153610 20240901100226
+:mtime:    20250325214541 20241225215253 20241225153610 20240901100226
 :ctime:    20240901100226
 :END:
 #+TITLE: Git Workflows
@@ -9,6 +10,10 @@
 * Git Flow
 
 * GitHub Flow
+
+* Trunk Based Development
+
+[[https://trunkbaseddevelopment.com/][Trunk Based Development]] is a concept that engenders Continuous Integration and Development.
 
 * Patch Stack
 
@@ -24,3 +29,4 @@ Forgejo instance by using the [[https://forgejo.org/docs/latest/user/agit-suppor
 
 + [[https://www.git-tower.com/blog/stacked-prs/][Understanding the Stacked Pull Requests Workflow | Tower Blog]]
 + [[https://drewdeponte.com/blog/journey-to-small-pull-requests/][Journey to Small Pull Requests]]
++ [[https://trunkbaseddevelopment.com/][Trunk Based Development]]

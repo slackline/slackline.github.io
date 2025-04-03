@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5315e7ee-0ed9-4514-b1a9-0a03114d8191
-:mtime:    20250328170851
+:mtime:    20250330091626 20250329110559 20250329095813 20250328170851
 :ctime:    20250328170851
 :END:
 #+TITLE: OwnTracks
@@ -21,6 +21,7 @@ cd ../owntracks-frontend
 makepkg -sri
 #+end_src
 
+You also need to explicitly install the
 ** Gentoo
 
 Only the recorder appears to be available in Portage for now.
@@ -33,19 +34,34 @@ emerge -av owntracks-recorder
 
 The following applies to the installation under [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] as I deployed this on my VPS.
 
-| Files                         | Description |
-|-------------------------------+-------------|
-| ~/etc/owntacks-recorder.conf~ |             |
+| Files                           | Description                                     |
+|---------------------------------+-------------------------------------------------|
+| ~/etc/mosquitto/mosquitto.conf~ | Configuration for the [[https://mosquitto.org/][Mosquitto]] message broker. |
+| ~/etc/owntacks-recorder.conf~   | Recorder configuration.                         |
+|                                 |                                                 |
 
 
 
 ** User Configuration
 
 
+** LetsEncrypt Certificate
+
+#+begin_src
+certbot certonly -d owntracks.nshephard.dev
+#+end_src
+
 ** Nginx Reverse Proxy
 
 Helpfully there is a [[https://github.com/owntracks/recorder#nginx][clear]] example of a reverse proxy. It recommend password protecting the site.
 
+** Start Services
+
+#+begin_src
+systemctl enable --now mosquitto.service
+systemctl enable --now owntracks-recorder.service
+systemctl restart nginx.service
+#+end_src
 * Links
 
 + [[https://github.com/owntracks/recorder#building-from-source][Building from Source]]

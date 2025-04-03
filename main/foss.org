@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f277da12-5d6d-46e3-a49c-7bda9254d469
-:mtime:    20250224100943 20250207212133 20250202194029 20240924101703 20240504161600 20240329071409 20240222094145 20240218160428 20240217180720 20240215130935 20240209160828 20240123221325 20240121200647
+:mtime:    20250329095909 20250323110323 20250224100943 20250207212133 20250202194029 20240924101703 20240504161600 20240329071409 20240222094145 20240218160428 20240217180720 20240215130935 20240209160828 20240123221325 20240121200647
 :ctime:    20240121200647
 :END:
 #+TITLE: FOSS
@@ -49,7 +49,7 @@ that page, if not they take you to the projects site.
 
 ** Web
 
-+ nginx
++ [[id:3774439d-af75-453e-b3e9-9d578b6bec46][Nginx]]
 
 ** Browsers
 
@@ -95,12 +95,14 @@ practical tools and approaches for evaluating funding outcomes.
 * Links
 
 + [[https://www.eff.org/][Electronic Frontier Foundation | Defending your rights in the digital world]]
++ [[https://unite.un.org/news/osi-first-endorse-united-nations-open-source-principles][The OSI First to Endorse United Nations Open Source Principles | Office of Information and Communications Technology]]
 
 ** Lists of Software
 
 + [[https://awesome-selfhosted.net/index.html][awesome-selfhosted]]
 + [[https://european-alternatives.eu/alternatives-to][European alternatives for popular services | European Alternatives]]
 + [[https://www.privacyguides.org/en/tools/][Ad-Free Privacy Tool/Service Recommendations - Privacy Guides]]
++ [[https://switching.software/][switching.software]] - Ethical, easy-to-use and privacy-conscious alternatives to well-known software
 
 ** Guides
 
