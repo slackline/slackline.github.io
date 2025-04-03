@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       36b4612a-63df-4858-afb1-f35d4f44dba5
-:mtime:    20241225215253 20241225153610 20240901100226
+:mtime:    20250403115627 20241225215253 20241225153610 20240901100226
 :ctime:    20240901100226
 :END:
 #+TITLE: Git Workflows
@@ -14,6 +14,11 @@
 
 [[https://book.git-ps.sh/tool/][Git Patch Stack]] is a different workflow (and Git extension) to feature branches which are used in both Git Flow and
 GitHub Flow.
+
+* AGit Flow
+
+[[id:736537b3-75e0-4c24-9156-364937e0e8a2][Forgejo]] isn't yet federated, although its an aspiration, in the meantime you can avoid having to sign-up to every
+Forgejo instance by using the [[https://forgejo.org/docs/latest/user/agit-support/][AGit Workflow]].
 
 * Links
 
