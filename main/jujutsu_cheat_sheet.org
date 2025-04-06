@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       c298c10b-118d-4b4c-9078-1f71ae3926b9
+:mtime:    20250323120901
+:ctime:    20250323120901
+:END:
+#+TITLE: Jujutsu Cheat Sheet
+#+FILETAGS: :jujutsu:versioncontrol:vc:
+
+Cheat sheet for [[id:a37b61ba-8699-4ee3-b407-38f256c186c4][Jujutsu]] as I'm useless at learning these things.
+
+| Action               | Command                                 |
+|----------------------+-----------------------------------------|
+| New commit           | ~jj new -m "commit message"~            |
+| Edit commit          | ~jj describe~                           |
+| Log                  | ~jj log~                                |
+| Move bookmark        | ~jj bookmark move <name> --to <commit>~ |
+| Push to remote Forge | ~jj git push~                           |
