@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ae1e9b97-feb0-4f1a-b804-b89edaf5a790
-:mtime:    20241221202607 20240214212843 20240124091633 20231121210648
+:mtime:    20250406203702 20241221202607 20240214212843 20240124091633 20231121210648
 :ctime:    20231121210648
 :END:
 #+TITLE: SSH
@@ -11,6 +11,24 @@
 #+begin_src
 ssh-keygen -o -a 100 -t ed25519
 #+end_src
+
+Keep the private key on your server (or any other machine you wish to establish a ~ssh~ connection /from/) and place the
+public key (that ends ~.pub~) on the remote server you wish connect /to/. Ideally you should add the public key to the
+~~/.ssh/authorized_keys~ file in the format...
+
+#+begin_src
+ssh-ed25519 ########## <user>@<host>
+#+end_src
+
+
+* Server Configuration
+
+Make the following changes to help improve security on your server.
+
+- ~PermitRootLogin no~
+- ~PasswordAuthentication no~ although only /after/ you have setup a user account and transferred keys.
+- ~Port ###~ set the port on which connections are made to something other than the default (which is ~22~).
+- ~X11Forwarding false~
 
 * Links
 

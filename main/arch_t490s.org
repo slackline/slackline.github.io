@@ -1,0 +1,369 @@
+:PROPERTIES:
+:ID:       84523969-a4c2-4349-ac23-09894939ed54
+:mtime:    20250406200453 20250406180541 20250406134048 20250406120730
+:ctime:    20250406120730
+:END:
+#+TITLE: Arch Linux - T490s
+#+FILETAGS: :linux:arch:laptop:install:config:
+
+
+* Initial Setup
+
+After booting the install media a few key steps are required before getting started.
+
+** Keyboard layout
+
+#+begin_src
+localectl list-keymaps
+loadkeys uk
+#+end_src
+
+** Verify boot mode
+#+begin_src
+cat /sys/firmware/efi/fw_platform_size
+64
+#+end_src
+
+** Connect to Wifi
+
+Using [[https://wiki.archlinux.org/title/Iwd#iwctl][iwctl]]
+
+#+begin_src
+iwctl
+device list
+device wlan0 set-property Powered on
+station wlan0 scan
+station wlan0 get-networks
+station wlan0 connect <SSID>
+#+end_src
+
+You will typically be prompted for the password.
+
+** Update system clock
+
+#+begin_src
+timedatectl
+timedatectl list-timezones
+timedatectl set-timezone Europe/London
+#+end_src
+** Partition Disks
+
+I wanted to encrypt my harddrives so split it into two, one for ~/boot~ and the other that is encrypted using LUKS and
+within that I setup Logical Volume Management (LVM) with a ~/~ (root) and ~/home~ partition as well as a 32GB Swap
+partition (so that I could suspend to disk).
+
+Initial partitioning was done using ~cfdisk~ so no explicit commands as its a TUI, but you could do this using ~fdisk~
+(I'm just too lazy to learn and remember all the steps!). This left me with...
+
+#+begin_src
+fdisk -l /dev/sda
+Disk /dev/sda: 953.87 GiB, 1024209543168 bytes, 2000409264 sectors
+Disk model: HX1TSSDM2
+Units: sectors of 1 *512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Dislabel type: gpt
+Disk Identifier: ####
+
+Device       Start        End    Sectors   Size Type
+/dev/sda1     2048    1050623    1048576   512M EFI System
+/dev/sda2  1050624 2000408575 1999357952 953.4G Linux LVM
+#+end_src
+
+
+*** Encrypting Partition
+
+The [[https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#LVM_on_LUKS][Encrypting an entire system - LVM on LUKS]] article is instructive on how to do this.
+
+#+begin_src
+cryptsetup luksFormat /dev/sda2       # You will be propmted for the password twice
+cryptsetup open /dev/sda2 cryptlvm    # Unencrypts the partition, you'll be prompted for the password
+#+end_src
+
+*** Prepare logical volumes
+
+Create a physical volume (not required if returning to a chrooted environment to fix things).
+
+#+begin_src
+pvcreate /dev/mapper/cryptlvm
+#+end_src
+
+Create a volume group
+
+#+begin_src
+vgcreate crow /dev/mapper/cryptlvm
+#+end_src
+
+Create logical volumes (not required if returning to a chrooted environment to fix things).
+
+#+begin_src
+lvcreate -L 100G -n root crow
+lvcreate -L 32G -n swap crow
+lvcreate -l 100%FREE -n home crow
+lvreduce -L -256M crow/home      # Leave 256Mb for e2scrub as advised
+#+end_src
+
+Format file systems (not required if returning to a chrooted environment to fix things).
+
+#+begin_src
+mkfs.ext4 /dev/crow/root
+mkfs.ext4 /dev/crow/home
+mkfs.fat -F32 /dev/sda1
+mkswap /dev/crow/swap
+#+end_src
+
+Mount partitions (omit ~--mkdir~ if you return to a chrooted environment to fix things).
+
+#+begin_src
+mount /dev/crow/root /mnt
+mount --mkdir /dev/crow/home /mnt/home
+mount --mkdir /dev/sda1 /mnt/boot
+swapon /dev/crow/swap
+#+end_src
+
+
+* Installation
+
+Select mirrors
+
+#+begin_src
+reflector
+#+end_src
+
+Install essential packages (you can include here anything you know you will want)
+
+#+begin_src
+pacstrap -K /mnt base linux linux-firmware nano emacs lsd bat networkmanager grub efibootmgr etckeeper
+#+end_src
+
+* Configure the System
+
+Generate a ~/etc/fstab~ on the target drives, if you would rather use disk labels than UUID's then replace ~-U~ with
+~-L~ (note that you should have mounted the drives under ~/mnt~ first for this to work).
+
+#+begin_src
+genfstab -U /mnt >> /mnt/etc/fstab
+#+end_src
+
+Change ~root~ to the the mounted partitions.
+
+#+begin_src
+arch-chroot /mnt/
+#+end_src
+
+
+Set the timezone
+
+#+begin_src
+ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
+hwclock --systohc
+#+end_src
+
+Locallisation
+
+Edit ~/etc/locale.gen~, I'm in the UK so opted for ~en_GB.UTF-8~
+
+#+begin_src
+en_GB-UTF-8 UTF-8
+en_GB ISO-8829-1
+#+end_src
+
+** Kernel Configuration
+
+Because the ~/~ (root) partition has been encrypted some additional parameters need to be passed to the GRUB to ensure
+it knows where to find the encrypted partition and where within it the ~root~ partition is. These are naturally
+documented under [[https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Configuring_mkinitcpio_3][here]] and instructions on permanently adding kernel parameters are detailed [[https://wiki.archlinux.org/title/Kernel_parameters#GRUB][here]]. You should edit the
+~/etc/default/grub~ file and add the ~cryptdevice~ and ~root~ parameters to ~GRUB_CMDLINE_LINUX_DEFAULT=""~ .
+You can find the ~device-UUID~ by looking at ~ls -lha /dev/disk/by-uuid~
+
+#+begin_src
+cryptdevice=UUID=<device-UUID>:cryptlvm root=/dev/crow/root
+#+end_src
+
+You also need to configure ~mkinitcpio~ to use the appropriate hooks (~keyboard~, ~encrypte~ and ~lvm2~) to handle
+these as well as ~keymap~ and ~consolefont~ if you have configured these. Add these hooks to the ~/etc/mkinitcpio.conf~
+(note that the following assumes the default busybox-based initramfs, if you use a systemd-based initramfs then the
+options are slightly different, refer to the [[https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Configuring_mkinitcpio_3][documentation]] for details).
+
+
+#+begin_src
+HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)
+#+end_src
+
+
+** Reboot
+
+Exit the ~chroot~ environment and reboot.
+
+#+begin_src
+exit
+reboot
+#+end_src
+
+* Post Installation
+
+There are excellent [[https://wiki.archlinux.org/title/General_recommendations][Post Installation Recommendations]] which you can work for, here is what I did.
+
+** Troubleshooting
+
+*** Keyboard
+
+I found the keymap was not correctly configured on rebooting and as a consequence couldn't access some of the key
+command line characters such as ~|~ (pipe)  or ~-~. These were reset quickly with ~loadkeys uk~
+
+*** NetworkManager configuration
+
+I found that I wasn't able to configure NetworkManager from within the ~chroot~ because I couldn't start the ~systemd~
+module...by virtue of being within the ~chroot~. Enable the service and use ~nmtui~ to configure your connection.
+
+#+begin_src
+systemctl enable --now NetworkManager.service
+nmtui
+#+end_src
+
+** Install Programs
+
+I have a lot of programs I know I'll use and opted to install some of these early. In particular I wanted to get [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]]
+installed so I could create a user account with that as the default shell but opted to add in a bunch of other things at
+the same time.
+
+
+#+begin_src
+pacman -Syu \
+bat \
+  btop \
+  cups \
+  direnv \
+  duf \
+  fcron \
+  fd \
+  gcc-fortran \
+  git-absorb \
+  htop \
+  keychain \
+  kitty \
+  logrotate \
+  lsd \
+  lshw \
+  lshw \
+  most \
+  pipewire \
+  pulseaudio \
+  r \
+  rsync \
+  snapcast \
+  stow
+  tldr \
+  tmux \
+  tree \
+  wget \
+  which \
+  yadm \
+  zsh
+#+end_src
+
+** User Account
+
+It's useful to setup a user account at this point so you can SSH in and continue making changes (I prefer using my
+desktops ergonomic keyboard where possible). Useful instructions on [[https://wiki.archlinux.org/title/Users_and_groups#User_management][Users and groups#User management]].
+
+#+begin_src
+useradd -m -G audio,users,wheel, -s /usr/bin/zsh <username>
+passwd <username>
+#+end_src
+
+
+** SSH Configuration
+
+[[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] configuration can be used to improve security by editing some fields in ~/etc/ssh/sshd_config~. Only set
+~PasswordAuthentication no~ /after/ you have copied SSH keys to the target and added them to ~~/.ssh/auhtorized_keys~.
+
+#+begin_src
+PermitRootLogin no
+Port ###
+PasswordAuthentication no  # although only /after/ you have setup a user account and transferred keys.
+Port ###    # set the port on which connections are made to something other than the default (which is ~22~).
+X11Forwarding false
+#+end_src
+
+Remember to ~systemctl restart sshd.service~ after making changes. Make sure to add the appropriate configuration in
+your ~/.ssh/config~ so that all other hosts can use the correct ports. The following sets a host name and associates it
+with and IP address and Port, sets the username and SSH key as well as setting up SSH and GnuPG forwarding.
+
+#+begin_src
+Host crow
+     HostName 192.168.0.###
+     Port ###
+     User user
+     IdentityFile ~/.ssh/id_ed25519
+     ForwardAgent yes
+     RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
+#+end_src
+
+** Dotfiles
+
+I have a repository of my [[https://gitlab.com/nshephard/dotfiles][dotfiles]] and use [[https://www.gnu.org/software/stow/][~stow~]] to making setting up new systems easy (one day I might switch to
+[[id:01336e19-dc8a-41ca-8534-6a790b39b1b6][NixOS - HomeManager]] for this but unless I need to spin up VMs regularly and set them up I don't need the convenience of
+declarative configurations right at the moment).
+
+#+begin_src
+cd ~
+git clone git@gitlab.com:nshephard/dotfiles
+cd dotfiles
+#+end_src
+
+*** Beyond Dotfiles
+
+I've some things I deliberately /don't/ keep in my dotfiles repositories like my private SSH and GPG keys. They can be
+securely copied over after setting up and configuring SSH using ~rsync~ which makes life a little easier.
+
+#+begin_src
+rsync -av {~/.gnupg} crow:~/.
+#+end_src
+
+
+** Install more Programmes
+
+There is of course a lot more that I use, so lets install them.
+
+#+begin_src
+BROWSERS=(lynx nyxt vivaldi browserpass-firefox browserpass-chromium)
+COMPRESSION=(bzip2 gzip xz)
+FONTS=(ttf-font-awesome-5 ttf-material-design-icons ttf-weather-icons ttf-octicons ttf-atom-file-icons ttf-all-the-icons
+       ttf-hack)
+FINGERPRINT=(fwupd)
+GRAPHICS=(darktable gimp hugin ristretto)
+LATEX=(pandoc texlab texlive-most texlive-bibtexextra texlive-fontsextra)
+MISC=(bluez)
+OFFICE=(libreoffice evince)
+PYTHON=(python python-virtualenvwrapper python-pre-commit python-lsp-server python-lsp-black ruff uv python-setuptools python-pip)
+SECURITY=(age keychain pass xclip xdotool)
+VIDEO=(ffmpeg mpv vlc)
+YUBIKEY=(age-plugin-yubikey yubico-pam yubikey-personalization yubikey-manager)
+XFCE4=(labwc lightdm xfce4 xfce4-goodies xorg-xwayland)
+pacman -Syu "${BROWSERS[@]}"
+#+end_src
+
+*** AUR Packages
+
+Not everything I use is in ~core~ or ~extra~ so there are a few more to install.
+
+#+begin_src bash
+  cd ~ && mkdir aur && cd aur
+  for pkg in [ "jj" "librewolf-bin"| ]; do
+    git clone https://aur.archlinux.org/${pkg}.git
+    cd ${pkg}
+    makepkg -sri
+  done
+#+end_src
+* Links
+
+** Arch Wiki
+
++ [[https://wiki.archlinux.org/title/Installation_guide][Installation Guide]]
++ [[https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#LVM_on_LUKS][Encrypting an entire system - LVM on LUKS]]
++ [[https://wiki.archlinux.org/title/EFI_system_partition#Mount_the_partition][EFI system partition]]
+  + [[https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface][Unified Extensible Firmware Interface]]
++ [[https://wiki.archlinux.org/title/GRUB][GRUB]]
+  + [[https://wiki.archlinux.org/title/Kernel_parameters][Kernel parameters]]
++ [[https://wiki.archlinux.org/title/Lenovo_ThinkPad_T490s][Lenovo ThinkPad T490s]]
