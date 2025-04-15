@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       69864d74-8ec2-42e4-a227-f824a521a5ce
-:mtime:    20250118215647 20230623075248
+:mtime:    20250409122121 20250118215647 20230623075248
 :ctime:    20230623075248
 :END:
 #+TITLE: Raspberry Pi
@@ -21,3 +21,7 @@ Player Daemon]] which I can control from my phone using [[https://gitlab.com/gat
 ** Monitoring
 
 + [[https://github.com/nekromoff/rpi-monitor-dashboard][nekromoff/rpi-monitor-dashboard: Raspberry Pi (and Linux) simple remote monitoring tool with dashboard for multiple RPi devices. It works for any Linux device.]]
+
+** Alternatives
+
++ [[https://citronics.eu][Citronics - Circular Microcomputers]] - repurposed mobile phones
