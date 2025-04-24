@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       5a8472a1-d189-4aa1-b889-2edd264b871b
+:mtime:    20250424230846
+:ctime:    20250424230846
+:END:
+#+TITLE: Python GUI
+#+FILETAGS: :python:gui:
+
+* Links
+
++ [[https://nicegui.io/documentation][NiceGUI Documentation]]
