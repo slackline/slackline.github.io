@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ce08bd82-0146-49cb-8a64-048ffe7210f2
-:mtime:    20250224215214 20250124124540 20250102163117 20241227171141 20241216105142 20240510223935 20240417110830 20240317085317 20240315224355 20231231085314 20231210095348 20231126223255 20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
+:mtime:    20250414184409 20250224215214 20250124124540 20250102163117 20241227171141 20241216105142 20240510223935 20240417110830 20240317085317 20240315224355 20231231085314 20231210095348 20231126223255 20231126212041 20231126191413 20230504101907 20230103103313 20221229210308
 :ctime:    20221229210308
 :END:
 #+TITLE: GnuPG
@@ -249,6 +249,30 @@ The instructions on [[https://keys.openpgp.org/about/usage][openpgp.org]] are ve
 
 Once this is done you should visit the URL that is shown and click on the link to verify the email address, check your
 inbox and then you have verified your email address.
+
+** Copying to new systems
+
+If you have an SSH connection available the simplest method is to ~rsync~ your ~\~/.gnupg~ directory to the new computer
+and update the ownership recursively.
+
+From your current system (assuming you have alias' setup in your [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] configuration)...
+
+#+begin_src
+cd ~/.gnupg target_computer:~/.
+#+end_src
+
+On the ~target_computer~ then
+
+#+begin_src
+chown -R $USER:$USER ~/.gnupg/
+#+end_src
+
+If you don't have a secure connection you will have to look at using the ~--export~ and ~--export-secret-keys~ to
+securely transfer them to a new system.
+
+*** Android
+
+Getting your keys on [[id:2c46e54a-d704-4e7e-bca3-d8c3e042ab43][Android]] to use can also present some challenges.
 
 * GPG Forwarding over SSH
 
