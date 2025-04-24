@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       84523969-a4c2-4349-ac23-09894939ed54
-:mtime:    20250406200453 20250406180541 20250406134048 20250406120730
+:mtime:    20250414200336 20250407182036 20250407150731 20250407083437 20250406200453 20250406180541 20250406134048 20250406120730
 :ctime:    20250406120730
 :END:
 #+TITLE: Arch Linux - T490s
@@ -202,15 +202,24 @@ reboot
 
 * Post Installation
 
-There are excellent [[https://wiki.archlinux.org/title/General_recommendations][Post Installation Recommendations]] which you can work for, here is what I did.
+There are excellent [[https://wiki.archlinux.org/title/General_recommendations][Post Installation Recommendations]] which you can work through, here is what I did.
 
 ** Troubleshooting
 
 *** Keyboard
 
 I found the keymap was not correctly configured on rebooting and as a consequence couldn't access some of the key
-command line characters such as ~|~ (pipe)  or ~-~. These were reset quickly with ~loadkeys uk~
+command line characters such as ~|~ (pipe)  or ~-~. These were reset quickly within the session with ~loadkeys uk~ but
+to make it permanent required.
 
+#+begin_src
+localectl set-keymap uk
+#+end_src
+
+**** Backslash
+
+The Lenovo T490s does not have any key that is labelled ~\~ (backslash) which is really annoying since it is used all
+the time in to escape characters. It is available via ~Alt-Gr + -~, that is the right ~Alt~ and the dash/underscore key.
 *** NetworkManager configuration
 
 I found that I wasn't able to configure NetworkManager from within the ~chroot~ because I couldn't start the ~systemd~
@@ -221,6 +230,17 @@ systemctl enable --now NetworkManager.service
 nmtui
 #+end_src
 
+** Firmware Update
+
+You can update firmware using [[https://wiki.archlinux.org/title/Fwupd][fwupd]].
+
+#+begin_src
+fwupdmgr get-devices
+fwupdmgr refresh
+fwupdmgr get-updates
+fwupdmgr update
+
+#+end_src
 ** Install Programs
 
 I have a lot of programs I know I'll use and opted to install some of these early. In particular I wanted to get [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]]
@@ -230,11 +250,14 @@ the same time.
 
 #+begin_src
 pacman -Syu \
-bat \
+  base-devel \
+  bat \
   btop \
   cups \
+  debuedit \
   direnv \
   duf \
+  fakeroot \
   fcron \
   fd \
   gcc-fortran \
@@ -250,9 +273,11 @@ bat \
   pipewire \
   pulseaudio \
   r \
+  ripgrep  \`
   rsync \
   snapcast \
-  stow
+  stow \
+  sudo \
   tldr \
   tmux \
   tree \
@@ -300,16 +325,12 @@ Host crow
      RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
 #+end_src
 
-** Dotfiles
-
-I have a repository of my [[https://gitlab.com/nshephard/dotfiles][dotfiles]] and use [[https://www.gnu.org/software/stow/][~stow~]] to making setting up new systems easy (one day I might switch to
-[[id:01336e19-dc8a-41ca-8534-6a790b39b1b6][NixOS - HomeManager]] for this but unless I need to spin up VMs regularly and set them up I don't need the convenience of
-declarative configurations right at the moment).
+In ~/etc/ssh/sshd_config~ you can also set the following which removes stale sockets when forwarding (see [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] for more
+information).
 
 #+begin_src
-cd ~
-git clone git@gitlab.com:nshephard/dotfiles
-cd dotfiles
+# Remove stale sockets to facilitate GPG forwarding
+StreamLocalBindUnlink yes
 #+end_src
 
 *** Beyond Dotfiles
@@ -328,7 +349,6 @@ There is of course a lot more that I use, so lets install them.
 
 #+begin_src
 BROWSERS=(lynx nyxt vivaldi browserpass-firefox browserpass-chromium)
-COMPRESSION=(bzip2 gzip xz)
 FONTS=(ttf-font-awesome-5 ttf-material-design-icons ttf-weather-icons ttf-octicons ttf-atom-file-icons ttf-all-the-icons
        ttf-hack)
 FINGERPRINT=(fwupd)
@@ -340,9 +360,60 @@ PYTHON=(python python-virtualenvwrapper python-pre-commit python-lsp-server pyth
 SECURITY=(age keychain pass xclip xdotool)
 VIDEO=(ffmpeg mpv vlc)
 YUBIKEY=(age-plugin-yubikey yubico-pam yubikey-personalization yubikey-manager)
-XFCE4=(labwc lightdm xfce4 xfce4-goodies xorg-xwayland)
-pacman -Syu "${BROWSERS[@]}"
+XFCE4=(labwc lightdm lightdm-gtk-greeter xfce4 xfce4-goodies xorg-xwayland)
+pacman -Syu \
+"${BROWSERS[@]}" \
+"${FINGERPRINT[@]}" \
+"${GRAPHICS[@]}" \
+"${LATEX[@]}" \
+"${MISC[@]}" \
+"${OFFICE[@]}" \
+"${PYTHON[@]}" \
+"${SECURITY[@]}" \
+"${VIDEO[@]}" \
+"${YUBIKEY[@]}" \
+"${XFCE4[@]}" \
+
 #+end_src
+
+*** Windowing
+
+First check what the graphics device is.
+
+#+begin_src
+[root@crow .config]# lspci -v -nn -d ::03xx
+00:02.0 VGA compatible controller [0300]: Intel Corporation WhiskeyLake-U GT2 [UHD Graphics 620] [8086:3ea0] (rev 02) (prog-if 00 [VGA controller])
+        Subsystem: Lenovo Device [17aa:2279]
+        Flags: bus master, fast devsel, latency 0, IRQ 131
+        Memory at 90000000 (64-bit, non-prefetchable) [size=16M]
+        Memory at 80000000 (64-bit, prefetchable) [size=256M]
+        I/O ports at 2000 [size=64]
+        Expansion ROM at 000c0000 [virtual] [disabled] [size=128K]
+        Capabilities: [40] Vendor Specific Information: Len=0c <?>
+        Capabilities: [70] Express Root Complex Integrated Endpoint, IntMsgNum 0
+        Capabilities: [ac] MSI: Enable+ Count=1/1 Maskable- 64bit-
+        Capabilities: [d0] Power Management version 2
+        Capabilities: [100] Process Address Space ID (PASID)
+        Capabilities: [200] Address Translation Service (ATS)
+        Capabilities: [300] Page Request Interface (PRI)
+        Kernel driver in use: i915
+        Kernel modules: i915
+#+end_src
+
+From this it seems the Intel graphics driver ~xf86-video-intel~ ([[https://wiki.archlinux.org/title/Intel_graphics#Installation][Intel graphics]]) along with ~mesa~ would be the way to
+go but I tried that and it resulted in errors about the ~i965~ driver not being available. This [[https://bbs.archlinux.org/viewtopic.php?id=291537][thread]] indicates that
+support for that was removed from ~mesa~ and suggests either using the legacy (unmaintained) ~mesa-amber~ or going with
+~mesa~ and "modesetting ddx". I duly removed the package and the ~/etc/X11/xorg.conf.d/20-intel.conf~ file I had created
+and found ~startx~ worked (after installing the basic ~xterm~ which is configured in
+~/etc/X11/xinit/xinitrc~). ~startxfce4~ also worked, unfortunately ~lightdm~ failed as it couldn't find
+~lightdm-gtk-greeter~ which I had initially omitted. Installing this fixed things and ~lightdm~ started and gave a nice
+login screen. Progress!!!
+
+
+[[https://wiki.archlinux.org/title/Kernel_mode_setting][Kernel mode setting]] (KMS) is required and already enabled as the ~kms~ hook is included by default in the
+~/etc/mkinitcpio.conf~.
+
+
 
 *** AUR Packages
 
@@ -356,6 +427,66 @@ Not everything I use is in ~core~ or ~extra~ so there are a few more to install.
     makepkg -sri
   done
 #+end_src
+
+* Configuration
+
+** Dotfiles
+
+I have a repository of my [[https://gitlab.com/nshephard/dotfiles][dotfiles]] and use [[https://www.gnu.org/software/stow/][~stow~]] to making setting up new systems easy (one day I might switch to
+[[id:01336e19-dc8a-41ca-8534-6a790b39b1b6][NixOS - HomeManager]] for this but unless I need to spin up VMs regularly and set them up I don't need the convenience of
+declarative configurations right at the moment).
+
+#+begin_src
+cd ~
+git clone git@gitlab.com:nshephard/dotfiles
+cd dotfiles
+stow -n .
+stow .
+#+end_src
+
+** Fingerprint Scanner
+
+I'd already installed the [[https://wiki.archlinux.org/title/Fwupd][fwupd]] and [[https://wiki.archlinux.org/title/Fprint][fprint]]. The user needs to be in the ~input~ group, if this wasn't done on creating
+the account edit ~/etc/group~ and add the user to the end of the line that begins with ~input~.
+
+Now add ~auth      sufficient pam_fprintd.so~ to the following files so they read...
+
+#+begin_src
+auth      sufficient pam_fprintd.so
+auth      include   system-login
+...
+#+end_src
+
++ ~/etc/pam.d/lightdm~
++ ~/etc/pam.d/system-auth~
++ ~/etc/pam.d/system-login~
++ ~/etc/pam.d/xfce4-screensaver~
+
+Restrict who can enroll fingerprints with the following in
+~/etc/polkit-1/rules.d/50-net.reactivated.fprint.device.enroll.rules~.
+
+#+begin_src
+polkit.addRule(function (action, subject) {
+  if (action.id == "net.reactivated.fprint.device.enroll") {
+    return subject.user == "root" ? polkit.Result.YES : polkit.Result.NO
+  }
+})
+#+end_src
+
+Then as ~root~ enroll fingers with...
+
+#+begin_src
+fprintd-enroll -f right-index-finger neil
+fprintd-enroll -f left-index-finger neil
+
+# All fingers can be enrolled with...
+fprintd-delete "$USER"
+for finger in {left,right}-{thumb,{index,middle,ring,little}-finger}; do
+  fprintd-enroll -f "$finger" "$USER";
+done
+#+end_src
+
+
 * Links
 
 ** Arch Wiki
@@ -367,3 +498,14 @@ Not everything I use is in ~core~ or ~extra~ so there are a few more to install.
 + [[https://wiki.archlinux.org/title/GRUB][GRUB]]
   + [[https://wiki.archlinux.org/title/Kernel_parameters][Kernel parameters]]
 + [[https://wiki.archlinux.org/title/Lenovo_ThinkPad_T490s][Lenovo ThinkPad T490s]]
+
+*** Graphics
+
++ [[https://wiki.archlinux.org/title/Intel_graphics#Installation][Intel graphics]]
+*** Configuration
+
++ [[https://man.archlinux.org/man/pacman.conf.5.en][pacman.conf(5) — Arch manual pages]]
+
+** Wayland
+
++ [[https://www.fosskers.ca/en/blog/wayland][Colin Woodbury - Full Wayland Setup on Arch Linux]]
