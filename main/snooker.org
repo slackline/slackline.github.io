@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       123decf4-c8ba-4d37-939b-f251f5626d5a
+:mtime:    20250424231104 20250407210139
+:ctime:    20250407210139
+:END:
+#+TITLE: Snooker
+#+FILETAGS: :sport:snooker:
+
+* Links
+
++ [[https://www.newyorker.com/magazine/2015/03/30/follow-the-white-ball][The Unhappy King of Snooker | The New Yorker]] ([[https://web.archive.org/web/2/https://www.newyorker.com/magazine/2015/03/30/follow-the-white-ball][archive.org]])
++ [[https://www.nybooks.com/articles/2025/03/27/angles-of-approach-unbreakable-ronnie-osullivan/][Angles of Approach | Sally Rooney | The New York Review of Books]] ([[https://web.archive.org/web/20250407193132/https://www.nybooks.com/articles/2025/03/27/angles-of-approach-unbreakable-ronnie-osullivan/][archive.org]])
+
+** Results
+
++ [[https://cuetracker.net/][CueTracker - Welcome To CueTracker - Snooker Results & Statistics]]
++ [[https://www.snooker.org/index.shtml][Snooker.org]]
