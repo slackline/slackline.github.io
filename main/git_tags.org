@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       8c1f5398-11fb-42c6-aea0-0fd2f18043a4
+:mtime:    20250501132113
+:ctime:    20250501132113
+:END:
+#+TITLE: Git Tags
+#+FILETAGS: :git:vc:versioncontrol:tags:
+
+* Applying Tags
+
+** To Old Commits
+
+Really useful [[https://stackoverflow.com/a/21759466/1444043][post]] that shows how to apply tags to old commits with the correct date.
+
+ #+begin_src
+git checkout 123456asd
+GIT_COMMITER_DATE="$(git show --format=%aD | head -1)" git tag -a v2.3.0 -m "v2.3.0"
+git push origin --tags
+git checkout main
+ #+end_src
