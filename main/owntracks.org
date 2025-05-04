@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5315e7ee-0ed9-4514-b1a9-0a03114d8191
-:mtime:    20250330091626 20250329110559 20250329095813 20250328170851
+:mtime:    20250504065636 20250330091626 20250329110559 20250329095813 20250328170851
 :ctime:    20250328170851
 :END:
 #+TITLE: OwnTracks
@@ -22,6 +22,7 @@ makepkg -sri
 #+end_src
 
 You also need to explicitly install the
+
 ** Gentoo
 
 Only the recorder appears to be available in Portage for now.
@@ -41,6 +42,17 @@ The following applies to the installation under [[id:a53fa3c5-f091-4715-a1a4-a94
 |                                 |                                                 |
 
 
+
+** Enable Services
+
+You need to start the Mosquitto Database service as well as the OwnTracks Recorder to be able to get things up and
+running. ~owntracks-recorder.service~ is dependent on ~mosquitto.service~ (even though the systemctl doesn't make this
+explicit).
+
+#+begin_src
+systemctl enable --now mosquitto.service
+systemctl enable --now owntracks-recorder.service
+#+end_src
 
 ** User Configuration
 
