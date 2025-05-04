@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       84523969-a4c2-4349-ac23-09894939ed54
-:mtime:    20250414200336 20250407182036 20250407150731 20250407083437 20250406200453 20250406180541 20250406134048 20250406120730
+:mtime:    20250504210440 20250504195919 20250502222446 20250414200336 20250407182036 20250407150731 20250407083437 20250406200453 20250406180541 20250406134048 20250406120730
 :ctime:    20250406120730
 :END:
 #+TITLE: Arch Linux - T490s
@@ -220,6 +220,7 @@ localectl set-keymap uk
 
 The Lenovo T490s does not have any key that is labelled ~\~ (backslash) which is really annoying since it is used all
 the time in to escape characters. It is available via ~Alt-Gr + -~, that is the right ~Alt~ and the dash/underscore key.
+
 *** NetworkManager configuration
 
 I found that I wasn't able to configure NetworkManager from within the ~chroot~ because I couldn't start the ~systemd~
@@ -241,6 +242,7 @@ fwupdmgr get-updates
 fwupdmgr update
 
 #+end_src
+
 ** Install Programs
 
 I have a lot of programs I know I'll use and opted to install some of these early. In particular I wanted to get [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]]
@@ -253,8 +255,10 @@ pacman -Syu \
   base-devel \
   bat \
   btop \
+  cmake \
   cups \
   debuedit \
+  difftastic \
   direnv \
   duf \
   fakeroot \
@@ -273,7 +277,7 @@ pacman -Syu \
   pipewire \
   pulseaudio \
   r \
-  ripgrep  \`
+  ripgrep  \
   rsync \
   snapcast \
   stow \
@@ -281,6 +285,7 @@ pacman -Syu \
   tldr \
   tmux \
   tree \
+  usbutils \
   wget \
   which \
   yadm \
@@ -359,7 +364,7 @@ OFFICE=(libreoffice evince)
 PYTHON=(python python-virtualenvwrapper python-pre-commit python-lsp-server python-lsp-black ruff uv python-setuptools python-pip)
 SECURITY=(age keychain pass xclip xdotool)
 VIDEO=(ffmpeg mpv vlc)
-YUBIKEY=(age-plugin-yubikey yubico-pam yubikey-personalization yubikey-manager)
+YUBIKEY=(age-plugin-yubikey yubico-pam yubkiey-full-disk-encryption yubikey-personalization yubikey-manager)
 XFCE4=(labwc lightdm lightdm-gtk-greeter xfce4 xfce4-goodies xorg-xwayland)
 pacman -Syu \
 "${BROWSERS[@]}" \
@@ -486,6 +491,14 @@ for finger in {left,right}-{thumb,{index,middle,ring,little}-finger}; do
 done
 #+end_src
 
+** Yubikey
+
+You /have/ to make sure that the ~pcscd~ service is enabled for a Yubikey to work if you have moved you [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] keys to
+your key.
+
+#+begin_src
+systemctl enable --now pcscd.service
+#+end_src
 
 * Links
 
