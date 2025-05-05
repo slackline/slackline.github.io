@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       2c46e54a-d704-4e7e-bca3-d8c3e042ab43
-:mtime:    20250208110958 20241021184849 20241020132022 20240930074837 20240620095958 20240228094314 20231015172236
+:mtime:    20250505215608 20250208110958 20241021184849 20241020132022 20240930074837 20240620095958 20240228094314 20231015172236
 :ctime:    20231015172236
 :END:
 #+TITLE: Android
@@ -63,3 +63,7 @@ An alternative system to the default is [[https://unifiedpush.org/][UnifiedPush]
 + [[https://www.didgeridoohan.com/magisk/HomePage][Magisk and MagiskHide Installation and Troubleshooting guide]]
 + [[https://www.xda-developers.com/google-updates-safetynet-temporary-fix-available-for-magisk-official-update-coming/][Magisk SafetyNet work around]]
 + [[https://droidwin.com/how-to-hide-root-from-apps-via-magisk-denylist/][How to Hide Root from Apps via Magisk DenyList [Android 14]]] / [[https://droidwin.com/how-to-pass-meets-device-and-basic-integrity-via-play-integrity-fix/][How to pass 'Meets Device and Basic Integrity' via Play Integrity Fix]]
+
+** Alternatives
+
++ [[https://tzovar.as/ios-to-grapheneos/][Bastian Greshake Tzovaras · Switching from iOS to GrapheneOS]]
