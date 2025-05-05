@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       84523969-a4c2-4349-ac23-09894939ed54
-:mtime:    20250504210440 20250504195919 20250502222446 20250414200336 20250407182036 20250407150731 20250407083437 20250406200453 20250406180541 20250406134048 20250406120730
+:mtime:    20250505214317 20250505201149 20250504210440 20250504195919 20250502222446 20250414200336 20250407182036 20250407150731 20250407083437 20250406200453 20250406180541 20250406134048 20250406120730
 :ctime:    20250406120730
 :END:
 #+TITLE: Arch Linux - T490s
@@ -252,6 +252,7 @@ the same time.
 
 #+begin_src
 pacman -Syu \
+  alsa-utils \
   base-devel \
   bat \
   btop \
@@ -274,11 +275,14 @@ pacman -Syu \
   lshw \
   lshw \
   most \
+  myrepos \
   pipewire \
   pulseaudio \
+  pulseaudio-alsa \
   r \
   ripgrep  \
   rsync \
+  signal \
   snapcast \
   stow \
   sudo \
@@ -288,9 +292,20 @@ pacman -Syu \
   usbutils \
   wget \
   which \
+  wireplumber \
   yadm \
   zsh
 #+end_src
+
+*** Audio
+
+The following programs were required to get audio working
+
+- ~alsa-utils~
+- ~pavucontrol~
+- ~pulseaudio~ and ~pulseaudio-alsa~
+- ~pipewire~
+- ~wireplumber~
 
 ** User Account
 
