@@ -1,4 +1,9 @@
 :PROPERTIES:
+:ID:       2adc5f4a-59d5-4d28-8b21-5670df918c14
+:mtime:    20250506215351
+:ctime:    20250506215351
+:END:
+:PROPERTIES:
 :ID:       1181fb5b-ac5e-4416-8d62-34b9de1b393f
 
 :END:
@@ -114,3 +119,7 @@ You can automatically create Mermaid diagrams of Git repositories using [[https:
 + [[https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/][GitHib : Include diagraims in your Markdown files with Mermaid]]
 + [[https://gitdiagram.com/][GitDiagram]] - generate overviews of Git repositories automagically
 + [[https://mermaid.live/][Mermaid Live Editor]]:
+
+** Alternatives
+
++ [[https://pikchr.org/home/doc/trunk/homepage.md][Pikchr: Documentation]]
