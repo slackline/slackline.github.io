@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3469c33e-7c61-46c7-b01e-655695f3b93c
-:mtime:    20250305161816 20241230224459 20241008125606 20240908221038 20240806173539 20240410205343 20240119090258 20230912131821 20230623074206 20230622081612 20230305215056 20230217212451 20230215001041 20230103103309 20221224191223
+:mtime:    20250506080308 20250305161816 20241230224459 20241008125606 20240908221038 20240806173539 20240410205343 20240119090258 20230912131821 20230623074206 20230622081612 20230305215056 20230217212451 20230215001041 20230103103309 20221224191223
 :ctime:    20221224191223
 :END:
 #+TITLE: Rust
@@ -34,6 +34,11 @@ Use ~{:#?}~ to [[https://mastodon.social/@feoh@oldbytes.space/113744176681957353
 There are lots of libraries in Rust
 
 + [[https://doc.rust-lang.org/std/index.html][std]] the Rust Standard Library
+
+** Learning Resources
+
++ [[https://corrode.dev/blog/flattening-rusts-learning-curve/][Flattening Rust's Learning Curve | corrode Rust Consulting]]
+
 ** Python
 
 + [[https://github.com/RustPython/RustPython][RustPython]] - Python interpreter written in Rust so that Python scripts can be interpreted in [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]]. Can be compiled
