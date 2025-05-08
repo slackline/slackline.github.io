@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a5f391b-0f61-48d8-a4c3-a204d55538de
-:mtime:    20250324091338 20241209102640 20241006212915 20240828121857 20231220115205 20231126082848 20230530082045 20230528222034
+:mtime:    20250508132648 20250324091338 20241209102640 20241006212915 20240828121857 20231220115205 20231126082848 20230530082045 20230528222034
 :ctime:    20230528222034
 :END:
 #+TITLE: OpenStreetMap
@@ -87,6 +87,10 @@ to get me there, I can add additional boxes to visit along the route as way poin
 + [[https://www.mdpi.com/2220-9964/8/5/232][Corporate Editors in the Evolving Landscape of OpenStreetMap]]
 + [[https://www.openstreetmap.org/user/Jennings%20Anderson/diary/396271][Paid editing of OSM]]
 + [[https://www.theguardian.com/politics/2021/jun/30/openstreetmap-looks-to-relocate-to-eu-due-to-brexit-limitations][OpenStreetMap looks to relocate to EU due to Brexit limitations]]
++ [[https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2493076][Full article: Corporate mapping in OpenStreetMap – shifting trends in global evolution and small-scale effects]]
+  ([[https://heigit.org/new-paper-corporate-mapping-in-openstreetmap-shifting-trends-in-global-evolution-and-small-scale-effects/][Commentary]])
++ [[https://www.sciencedirect.com/science/article/pii/S0924271625000784][Paved or unpaved? A deep learning derived road surface global dataset from mapillary street-view imagery -
+  ScienceDirect]] ([[https://heigit.org/new-paper-paved-or-unpaved-a-deep-learning-derived-road-surface-global-dataset-from-mapillary-street-view-imagery-2/][Commentary]])
 
 ** Hardware
 
