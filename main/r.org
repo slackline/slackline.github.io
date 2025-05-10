@@ -264,6 +264,7 @@ found useful.
 
 + [[https://www.tmwr.org/][Tidy Modeling with R]]
 + [[https://tellingstorieswithdata.com/][Telling Stories with Data]]
++ [[https://reproducibility.rocks/][An R reproducibility toolkit for the practical researcher]]
 
 *** Miscellaneous
 
