@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ff8ee302-7518-4179-9bcb-63b13199f897
-:mtime:    20250225095909 20250224214920 20241024163702 20240417065736 20231222084359 20230912203338 20230802131215 20230702160646 20230412135517 20230309070314 20230305214004 20230221192929
+:mtime:    20250512091234 20250225095909 20250224214920 20241024163702 20240417065736 20231222084359 20230912203338 20230802131215 20230702160646 20230412135517 20230309070314 20230305214004 20230221192929
 :ctime:    20230221192929
 :END:
 #+TITLE: Emacs Packages
@@ -81,6 +81,33 @@ For more on this see [[https://stackoverflow.com/questions/1217180/how-do-i-byte
 
 Does what it says on the tin and (supposedly) recompiles all installed packages.
 
+* Trouble Shooting
+
+Sometimes the [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GPG]][[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] keys won't be in the keyring (looking at you Ubuntu 22.04). To work round this create
+~~/.config/emacs/gnupg/gpg.conf~ and add...
+
+#+begin_src
+keyserver hkp://keys.gnupg.net
+keyserver hkp://keyserver.ubuntu.com
+#+end_src
+
+Then get the public key for ELPA using
+
+#+begin_src
+gpg --homedir ~/.emacs.d/elpa/gnupg --receive-keys 645357D2883A0966
+#+end_src
+
+This still didn't sort things out for me though because ~use-package~ needs to be installed from GNU ELPA and the
+signature was not recognised. The solution was to
+
+1. Manually download the tar-ball from [[https://elpa.gnu.org/packages/gnu-elpa-keyring-update.html][ELPA GNU | gnu-elpa-keyring-update]]
+2. Disable signature checking ~M-: (setq package-check-signature nil)~.
+3. Manually install from file ~M-: package-install-file~ and give it the path to the downloaded ~.tar~
+4. Enable signature checking ~M-: (setq package-check-signature t)~.
+
+** References
+
++ [[SO Thread with key from 2024-09-08]]
 
 * Links
 
