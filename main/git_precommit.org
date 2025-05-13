@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c76767c4-2a49-42f8-a323-a6d6105e0bce
-:mtime:    20240919222900 20231008074712 20230910194920 20230910183127
+:mtime:    20250513083634 20240919222900 20231008074712 20230910194920 20230910183127
 :ctime:    20230910183127
 :END:
 #+TITLE: Pre-commit
@@ -307,6 +307,10 @@ A non-exhaustive list of hooks that I use by language.
 + ~pylint~
 + ~pyupgrade~
 + ~ruff~
+
+** Security
+
++ [[https://github.com/gitleaks/gitleaks][gitleaks/gitleaks: Find secrets with Gitleaks 🔑]]
 
 * Links
 :PROPERTIES:
