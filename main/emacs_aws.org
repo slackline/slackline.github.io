@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       126bd875-23f1-4f06-b96a-b832f410fb12
+:mtime:    20250514112939
+:ctime:    20250514112939
+:END:
+#+TITLE: Emacs AWS
+#+FILETAGS: :emacs:aws:packages:
+
+Some options for interacting with AWS from within Emacs
+
+* Links
+
++ [[https://github.com/snowiow/aws.el#][snowiow/aws.el: Emacs major modes wrapping the AWS CLI]]
++ [[https://github.com/jcs090218/aws-toolkit-emacs][jcs090218/aws-toolkit-emacs: AWS Toolkit for Emacs - a plugin for interacting with AWS from Emacs editor]]
++ [[https://github.com/cniles/axe][cniles/axe: AWS Extensions for Emacs]]
