@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a53fa3c5-f091-4715-a1a4-a94071407abf
-:mtime:    20250406203704 20250406160925 20250226152510 20241124190532 20240523145115 20240523132208 20240502105958 20231022214824 20230908084133 20230907222812 20230813184404 20230812222550 20230623080100 20230215101306
+:mtime:    20250514112953 20250406203704 20250406160925 20250226152510 20241124190532 20240523145115 20240523132208 20240502105958 20231022214824 20230908084133 20230907222812 20230813184404 20230812222550 20230623080100 20230215101306
 :ctime:    20230215101306
 :END:
 #+TITLE: Arch Linux
@@ -75,6 +75,25 @@ Description = Update R packages on upgrade
 When = PostTransaction
 Exec = /usr/bin/Rscript -e 'update.packages(ask = FALSE, checkBuilt = TRUE)'
 #+end_src
+
+** Downgrading packages
+
+Arch keeps packages in /var/cache/pacman/pkg and these can be used to downgrade packages.
+
+#+begin_src
+pacman -U file://var/cache/pacman/pkg/<package>.pkg.tar.xz
+#+end_src
+
+This will downgrade a package but next time you ~pacman -Syu~ it will be upgraded. To mask upgrades of a package add the
+following to ~/etc/pacman.conf~...
+
+#+begin_src
+IgnorePkg = <package>
+#+end_src
+
+If you limit the number of historical packages retained in order to save space then the [[https://wiki.archlinux.org/title/Arch_Linux_Archive][Arch Linux Archive]] can be used
+to obtain older packages (for ArchLinuxARM there are [[http://tardis.tiny-vps.com/aarm][tardis]] and [[https://alaa.ad24.cz/][alaa]]).
+
 
 ** Removing Orphaned Packages
 
