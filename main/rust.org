@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3469c33e-7c61-46c7-b01e-655695f3b93c
-:mtime:    20250506080308 20250305161816 20241230224459 20241008125606 20240908221038 20240806173539 20240410205343 20240119090258 20230912131821 20230623074206 20230622081612 20230305215056 20230217212451 20230215001041 20230103103309 20221224191223
+:mtime:    20250521203219 20250506080308 20250305161816 20241230224459 20241008125606 20240908221038 20240806173539 20240410205343 20240119090258 20230912131821 20230623074206 20230622081612 20230305215056 20230217212451 20230215001041 20230103103309 20221224191223
 :ctime:    20221224191223
 :END:
 #+TITLE: Rust
@@ -22,6 +22,7 @@ Use ~{:#?}~ to [[https://mastodon.social/@feoh@oldbytes.space/113744176681957353
 
 + [[https://www.rust-lang.org/learn][Learn Rust - Rust Programming Language]]
 + [[https://google.github.io/comprehensive-rust/][Welcome to Comprehensive Rust - Comprehensive Rust]] ([[id:9445ca44-1e8a-4b58-92b7-5f43894f4ff3][rust_comprehensive]])
++ [[https://doc.rust-lang.org/rust-by-example/][Rust By Example]]
 + [[https://jesselawson.github.io/getting-started-with-rust/][Getting Started with Programming in Rust]]
 + [[https://rustwasm.github.io/docs/book/][Introduction - Rust and WebAssembly]]
 + [[https://doc.rust-lang.org/book/][The Rust Programming Language - The Rust Programming Language]] ([[https://rust-book.cs.brown.edu/][with quizes]])
