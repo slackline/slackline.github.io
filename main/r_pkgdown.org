@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       d6eed2a9-1a49-4360-89ab-bf9d7267a176
+:mtime:    20250521133612
+:ctime:    20250521133612
+:END:
+#+TITLE: R Pkgdown
+#+FILETAGS: :r:package:development:
+
+There is the ~usethis::use_pkgdown_github_pages()~ function which will setup ~pkgdown~ and configure [[id:e19b6eb6-46b2-440a-ba35-be29feb33407][GitHub Actions]] and pages. If
+you're using [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]] ~pkgdown~ can be configured with ~use_pkgdown()~ instead (build locally with
+~pkgdown::build_site()~).
+
+* Links
+
++ [[https://pkgdown.r-lib.org/][Build websites for R packages • pkgdown]]

@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       91d9f0e3-1511-4f89-a6a1-6ec33e84c698
+:mtime:    20250521133100
+:ctime:    20250521133100
+:END:
+#+TITLE: R Roxygen
+#+FILETAGS: :r:packaging:development:
+
+* Links
+
++ [[https://roxygen2.r-lib.org/][In-Line Documentation for R • roxygen2]]

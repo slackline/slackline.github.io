@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       74019262-2ecd-4123-9089-33bae72d55de
+:mtime:    20250521132955
+:ctime:    20250521132955
+:END:
+#+TITLE: R Usethis
+#+FILETAGS: :r:packaging:development:
+
+
+* Links
+
++ [[https://usethis.r-lib.org/][Automate Package and Project Setup • usethis]]
