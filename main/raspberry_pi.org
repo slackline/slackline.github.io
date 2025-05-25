@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       69864d74-8ec2-42e4-a227-f824a521a5ce
-:mtime:    20250409122121 20250118215647 20230623075248
+:mtime:    20250525181422 20250409122121 20250118215647 20230623075248
 :ctime:    20230623075248
 :END:
 #+TITLE: Raspberry Pi
@@ -15,6 +15,7 @@ speakers around the house for a simple, cheap but effective multi-room audio exp
 Player Daemon]] which I can control from my phone using [[https://gitlab.com/gateship-one/malp][M.A.L.P.]].
 
 * Links
+
 + [[https://www.raspberrypi.com/][Raspberry Pi]]
 + [[https://shop.pimoroni.com/][Pimoroni: Raspberry Pi, Adafruit, micro:bit, and Arduino in the UK]]
 
@@ -25,3 +26,7 @@ Player Daemon]] which I can control from my phone using [[https://gitlab.com/gat
 ** Alternatives
 
 + [[https://citronics.eu][Citronics - Circular Microcomputers]] - repurposed mobile phones
+
+** Arduino
+
++ [[https://peppe8o.com/raspberry-pi-arduino-usb-control/][Control Arduino with Raspberry PI Computer Board via USB]]
