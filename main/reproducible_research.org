@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       97d138e1-015a-406a-b7ec-c046f01246d2
-:mtime:    20250316202626 20250118215506 20241101100212 20240715150601 20240320215203 20240314095442 20231203195042 20231128101130 20230927144330 20230916171030 20230905215133 20230629094349 20230620125955 20230508192755 20230421130128 20230103103311 20221224191223 20230103103308
+:mtime:    20250525101334 20250316202626 20250118215506 20241101100212 20240715150601 20240320215203 20240314095442 20231203195042 20231128101130 20230927144330 20230916171030 20230905215133 20230629094349 20230620125955 20230508192755 20230421130128 20230103103311 20221224191223 20230103103308
 :ctime:    20221224191223 20230103103308
 :END:
 #+TITLE: Reproducible Research
@@ -18,7 +18,8 @@
 ** GUIX
 
 [[https://guix.gnu.org/][GNU Guix]] is /GNU's advanced distro and transactional package manager/ and allows declarative system configuration which
-means the configured systems are transparent and reproducible.
+means the configured systems are transparent and reproducible. An overview of how it works can be found in [[https://www.softwareheritage.org/2025/05/21/software-heritage-guix-deployment/][How Software
+Heritage ensures reliable Guix deployment]].
 
 *** rde
 
@@ -49,6 +50,7 @@ and pulled from just like a Git repository.
 * Links
 
 ** Reproducible Environments
+
 + [[https://devenv.sh/][devenv - Fast, Declarative, Reproducible, and Composable Developer Environments]]
 + [[https://maneage.org/][Maneage -- Managing data lineage]]
 
