@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5315e7ee-0ed9-4514-b1a9-0a03114d8191
-:mtime:    20250504065636 20250330091626 20250329110559 20250329095813 20250328170851
+:mtime:    20250524134848 20250504065636 20250330091626 20250329110559 20250329095813 20250328170851
 :ctime:    20250328170851
 :END:
 #+TITLE: OwnTracks
@@ -66,6 +66,39 @@ certbot certonly -d owntracks.nshephard.dev
 ** Nginx Reverse Proxy
 
 Helpfully there is a [[https://github.com/owntracks/recorder#nginx][clear]] example of a reverse proxy. It recommend password protecting the site.
+
+Its important that you change the ~location~ to point to the install which for Arch install should be...
+
+#+begin_src
+        location / {
+            root   /usr/share/webapps/owntracks-frontend/;
+            index  index.html index.htm;
+        }
+#+end_src
+
+*** Password Protection
+
+You will probably want to setup password protection to the OwnTracks front end. This is [[https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/][documented]] and you will need to
+install [[https://aur.archlinux.org/apache-tools.git][apache-tools]] from the AUR repository.
+
+Create passwords for two users
+
+#+begin_src
+htpasswd -c /etc/nginx/.htpasswd user1
+htpasswd /etc/nginx/.htpasswd user2
+#+end_src
+
+Add authentication to the ~location~ section of the reverse proxy
+
+#+begin_src
+        location / {
+            root   /usr/share/webapps/owntracks-frontend/;
+            index  index.html index.htm;
+            auth_basic "OwnTracks Site";
+            auth_basic_user_file /etc/nginx/.htpasswd;
+        }
+#+end_src
+
 
 ** Start Services
 
