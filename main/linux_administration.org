@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e1ef1f56-6f9b-4512-ba34-79bd6448839c
-:mtime:    20250126152856 20250126141447 20250126112037
+:mtime:    20250526201918 20250126152856 20250126141447 20250126112037
 :ctime:    20250126112037
 :END:
 #+TITLE: Linux Administration
@@ -17,6 +17,41 @@ When creating users you should choose which ~group~ they will belong to common o
 + ~video~ for access to video.
 + ~wheel~ to allow administration access to ~root~
 
+#+begin_src
+useradd -g <groups> <username>
+#+end_src
+
 * Modifying Users
 
 You can change the ~uid~ and/or the ~gid~ following the instructions [[https://www.thegeekdiary.com/how-to-correctly-change-the-uid-and-gid-of-a-user-group-in-linux/][here]].
+
+#+begin_src
+# Ensure there are no processes for the uid/gid
+ps -ef | grep <username|uid|gid>
+# Backup /etc/passwd and /etc/group
+cp -p /etc/passwd /etc/passwd.bkp
+cp -p /etc/group /etc/group.bkp
+# Change GID
+groupmod -g 1111 <group>
+# Change UID
+usermod -u 9999 -g 1111 <user>
+# Check
+id <user>
+#+end_src
+
+If a group has multiple users you must modify all of their membership
+
+You should also change the UID and GID of files otherwise they will not be accessible.
+
+#+begin_src
+# Find files
+find / -uid 9999 -perm /6000 -ls
+find / -gid 1111 -perm /6000 -ls
+# Change permissions
+find / -uid <old_uid> -exec chown -v -h 9999 '{}' \;
+find / -gid <old_gid> -exec chgrp -v 11111 '{}' \;
+#+end_src
+
+* Administration
+
++ [[id:191117d7-b413-4409-84b5-0183599d9f4e][Ansible]]
