@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       470e9f37-f4f8-4e7f-adf2-3dbac9b8bf06
-:mtime:    20250312091850 20250209203305 20250202173405 20250201184321 20250118204303
+:mtime:    20250526075929 20250312091850 20250209203305 20250202173405 20250201184321 20250118204303
 :ctime:    20250118204303
 :END:
 #+STARTUP: align
@@ -696,9 +696,9 @@ days around the Julian Alps of Slovenia covering some ~130km wtih about 11km of 
 
 
 After giving up smoking on 2019-03-06 I decided to start running, didn't really enjoy it much at first but persevered
-and enjoy it.  Mostly run from home around local woods but will also run on the moors in the Peak
-District. Zero interest in racing, the only person I need to beat is my old-self (and that is starting to become
-challenging!).
+and have reversed that and really enjoy getting out regularly.  Mostly run from home around local woods but will also run
+on the moors in the Peak District. Zero interest in racing, the only person I need to beat is my old-self (and that is
+starting to become challenging!).
 
 
 ** Log
@@ -1324,6 +1324,10 @@ days.
 #+include: log/metrics_blood.org
 
 *** Summary
+:PROPERTIES:
+:mtime:    20250526075929
+:ctime:    20250526075929
+:END:
 #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/bloods_temp.png
   blood_table |> dplyr::filter(!is.na(Temp)) |>
       ggplot(aes(date, Temp)) + geom_point() +
@@ -1422,7 +1426,7 @@ A good book from Vertebrate publishing. I've collated most of the bibliography i
 + [[https://www.uphillathlete.com/free-at-home-rock-climbing-training-plan/][FREE At-Home Rock Climbing Training Plan — Uphill Athlete]]
 + [[https://www.youtube.com/watch?v=x-1OJW3OMb4][Climbers Mobility Workout]]
 + [[https://www.outsideonline.com/2399826/wellness-industry-lies-what-really-works][We've Reached Peak Wellness. Most of It Is Nonsense. | Outside Online]]
-*** Shaun Coxy
+*** Shauna Coxy
 + [[https://www.youtube.com/watch?v=il_fa8DQ0R4][Mobility Warm Ups for Climbers - YouTube]]
 + [[https://www.youtube.com/watch?v=RtpugHJb71k][Fingerboard Warm Ups for Climbers - YouTube]]
 + [[https://www.youtube.com/watch?v=rA5laLQ-0Xc][Max Hang Fingerboard Sessions - YouTube]]
@@ -1439,6 +1443,7 @@ A good book from Vertebrate publishing. I've collated most of the bibliography i
 + <2021-06-19 Sat> [[https://www.outsideonline.com/2424363/exercise-pain-research-2021][How to Harness the Pain-Blocking Effects of Exercise | Outside Online]]
 + <2021-05-03 Mon> [[https://www.theguardian.com/lifeandstyle/2021/may/03/sick-of-the-same-old-route-14-fabulous-ways-to-get-out-of-your-running-rut][Sick of the same old route? 14 fabulous ways to get out of your running rut]]
 + <2020-12-16 Wed> [[https://www.irishtimes.com/news/science/evolved-to-run-but-not-to-exercise-1.4412604][Evolved to run – but not to exercise]]
++ [[https://www.ukclimbing.com/articles/features/more_than_a_font_rest_day_trois_pignons_and_the_25_bosses-16345][UKC Articles - FEATURE: More Than a Font Rest Day: Trois Pignons and the 25 Bosses]]
 ** Calisthenics
 *** General
 + [[https://www.nytimes.com/2020/10/10/at-home/exercises-for-better-sleep.html][Exercises for Better Sleep]]
@@ -1484,8 +1489,10 @@ A good book from Vertebrate publishing. I've collated most of the bibliography i
 + [[https://osf.io/preprints/sportrxiv/eq485][Long-term time-course of strength adaptation to minimal dose resistance training: Retrospective longitudinal growth modelling of a large cohort through training records]]
 
 ** Nutrition and Diet
+
 + [[https://dberkholz.com/2024/01/17/the-lazy-technologists-guide-to-weight-loss/][The lazy technologist’s guide to weight loss – Striving for greatness]]
 + [[https://metabolichealth.guide/][Metabolic Health Guide]]
+
 ** Apps
 + [[https://www.theclimbingapp.com][The Climbing App]]
 + [[https://www.crimpd.com/][Crimpd – Powered by Lattice Training]]
@@ -1493,6 +1500,7 @@ A good book from Vertebrate publishing. I've collated most of the bibliography i
 + [[https://www.beastmaker.co.uk/collections/the-beastmaker-app][Beastmaker App – beastmaker]]
 + [[https://github.com/oliexdev/openWorkout][openWorkout]]
 + [[https://github.com/SamAmco/track-and-graph][track-and-graph: An android app for tracking personal data and creating custom graphs]]
+
 ** Summarising Data
 + [[https://www.r-bloggers.com/2021/02/map-my-run-in-r/][Map my run in R | R-bloggers]]
 + [[https://www.r-bloggers.com/2014/09/stay-on-track-plotting-gps-tracks-with-r/][Stay on track: Plotting GPS tracks with R]]
