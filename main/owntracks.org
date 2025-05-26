@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5315e7ee-0ed9-4514-b1a9-0a03114d8191
-:mtime:    20250524134848 20250504065636 20250330091626 20250329110559 20250329095813 20250328170851
+:mtime:    20250526205651 20250525203108 20250524134848 20250504065636 20250330091626 20250329110559 20250329095813 20250328170851
 :ctime:    20250328170851
 :END:
 #+TITLE: OwnTracks
@@ -35,11 +35,11 @@ emerge -av owntracks-recorder
 
 The following applies to the installation under [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] as I deployed this on my VPS.
 
-| Files                           | Description                                     |
-|---------------------------------+-------------------------------------------------|
-| ~/etc/mosquitto/mosquitto.conf~ | Configuration for the [[https://mosquitto.org/][Mosquitto]] message broker. |
-| ~/etc/owntacks-recorder.conf~   | Recorder configuration.                         |
-|                                 |                                                 |
+| Files                             | Description                                     |
+|-----------------------------------+-------------------------------------------------|
+| ~/etc/mosquitto/mosquitto.conf~   | Configuration for the [[https://mosquitto.org/][Mosquitto]] message broker. |
+| ~/etc/owntacks-recorder.conf~     | Recorder configuration.                         |
+| ~/etc/owntracks-frontend.js.conf~ | Front end customisation (*NB* symbolic links) |
 
 
 
@@ -54,8 +54,61 @@ systemctl enable --now mosquitto.service
 systemctl enable --now owntracks-recorder.service
 #+end_src
 
-** User Configuration
+** OwnTracks Recoder Configuration
 
+This was a bit tricky, initially the web servers were working but there was no connection between ~owntracks-recorder~
+and the ~mosquitto~ database.
+
+** Mosquitto Configuration
+
+Configuration resides in ~/etc/mosquitto/mosquitto.conf~. I wanted to turn on logging so created a file.
+
+#+begin_src
+touch /var/log/mosquitto.log
+chown root:mosquitto /var/log/mosquitto.log
+chmod 664 /var/log/mosquitto.log
+#+end_src
+
+Add the following to the configuration...
+
+#+begin_src
+log_dest file /var/log/mosquitto.log
+log_type error
+log_type warning
+log_type notice
+log_type information
+#+end_src
+
+Restart the service
+
+#+begin_src
+systemctl restart mosquitto.service
+#+end_src
+
+*** Adding users
+
+Having eschewed the comprehensive and helpful [[https://owntracks.org/booklet/guide/quicksetup/][QuickSetup]] path I had to manually create user accounts for the Mosquitto
+database. These are [[https://mosquitto.org/documentation/authentication-methods/][documented]] (and are very similar to creating passwords for Nginx configuration) and you must make it
+readable to the process the database runs as (typically ~mosquitto~)
+
+#+begin_src
+mosquitto_passwd -c /etc/mosquitto/.passwd admin
+mosquitto_passwd /etc/mosquitto/.passwd user1
+mosquitto_passwd /etc/mosquitto/.passwd user2
+mosquitto_passwd /etc/mosquitto/.passwd user3
+chown mosquitto:mosquitto /etc/mosquitto/.passwd
+#+end_src
+
+Mosquitto needs to know where to look for the passwords (which are hashed to the ~/etc/mosquitto/.passwd~ file in this
+example) so you need to add the following to ~/etc/mosquitto/mosquitto.conf~ (and restart the service, always restart
+the service!)
+
+#+begin_src
+password_file /etc/mosquitt/o/.passwd
+#+end_src
+
+*NB* - Note that the ~-c~ flag is only used in the first instance to create the target file, if used more than once it wipes
+whatever existed before hand.
 
 ** LetsEncrypt Certificate
 
@@ -81,7 +134,8 @@ Its important that you change the ~location~ to point to the install which for A
 You will probably want to setup password protection to the OwnTracks front end. This is [[https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/][documented]] and you will need to
 install [[https://aur.archlinux.org/apache-tools.git][apache-tools]] from the AUR repository.
 
-Create passwords for two users
+Create passwords for two users. As with Mosquitto passwords the ~-c~ flag is only used in the first instance, using it
+again would wipe previous saved passwords.
 
 #+begin_src
 htpasswd -c /etc/nginx/.htpasswd user1
