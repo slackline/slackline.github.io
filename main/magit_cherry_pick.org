@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       52ed221e-c7a3-44f5-8b74-872b22373a2e
+:mtime:    20250522153345
+:ctime:    20250522153345
+:END:
+#+TITLE: Magit Cherry Pick
+#+FILETAGS: :magit:git:cherrypick:
+
+Magit allows you to perform [[id:99f96237-270e-4c2c-81c1-0503ee2725bf][~git cherrypick~]] simplifying the workflow.
+
+The [[https://magit.vc/manual/magit/Cherry-Picking.html][manual]] covers everything but a quick and easy workflow copied from  [[https://emacs.stackexchange.com/questions/10611/how-to-easily-cherry-pick-with-magit][Emacs Stack Exchange]]...
+
+1. ~magit-status~ (~C-x g~)
+2. ~l~ then ~o~ and select the branch you want to cherry pick /from/.
+3. Move to the commit/line, or select the a range of commits/lines by using ~C-space~
+4. ~A~ to open the Cherry Pick transient then ~A~ again to select the range.
+
+If you have conflicts you have to resolve them, as with [[id:1f4a3e9c-900d-4f73-b2e0-ac4e8c4037e9][Rebase]]. You can then hit ~A~ again and select to continue with
+~A~.
+
+* Links
+
++ [[https://magit.vc/manual/magit/Cherry-Picking.html][Cherry Picking (Magit User Manual)]]
++ [[https://emacs.stackexchange.com/questions/10611/how-to-easily-cherry-pick-with-magit][How to easily cherry pick with magit? - Emacs Stack Exchange]]
