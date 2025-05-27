@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       169b9c5f-df34-46ab-b64f-8ee98946ee69
-:mtime:    20250526205650 20250322221114 20250316191219 20241019092502 20240811084949 20240514070639 20240513075658 20240330210731 20240126213839 20240123221444 20230920063141 20230718145501 20230613223232 20230515080140 20230513163615 20230424102336 20230413154310 20230408213646 20230319195017 20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
+:mtime:    20250527214203 20250522152922 20250322221114 20250316191219 20241019092502 20240811084949 20240514070639 20240513075658 20240330210731 20240126213839 20240123221444 20230920063141 20230718145501 20230613223232 20230515080140 20230513163615 20230424102336 20230413154310 20230408213646 20230319195017 20230314201150 20230227182543 20230128092019 20230119212624 20230107085901 20230103103308 20221217184411
 :ctime:    20221217184411
 :END:
 #+TITLE: Orgmode
@@ -74,11 +74,13 @@ acting as input to code blocks in literate documents. Lots of options for manipu
 + If large files are slow it may be due to how [[https://list.orgmode.org/orgmode/Zqjm0hyy5DjFNrgm@swain.home.arpa/][space/tab/newline]] are rendered.
 
 * Links
+
 + [[https://orgmode.org][OrgMode]]
 + [[https://orgmode.org/worg/org-configs/org-customization-guide.html][Org Customisation Guide]]
 + [[https://leanpub.com/lit-config/read][Literate Configuration]]
 
 ** Zettelkasten
+
 + [[https://zettelkasten.de/introduction/][Introduction to the Zettelkasten Method • Zettelkasten Method]]
 
 ** Guides
@@ -98,6 +100,10 @@ acting as input to code blocks in literate documents. Lots of options for manipu
 + [[https://blog.jethro.dev/posts/processing_inbox/][Part 2: Processing The Inbox]]
 + [[https://blog.jethro.dev/posts/zettelkasten_with_org/][Part 3: Zettelkasten with Org-mode]]
 + [[https://blog.jethro.dev/posts/automatic_publishing/][Part 4: Automatic Web Publishing]]
+
+*** Academic Papers
+
++ [[https://roosnaflak.com/tech-and-research/academic-formatting-org-mode/][Formatting Academic Papers in Emacs Orgmode]]
 
 ** Extensions
 

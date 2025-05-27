@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       f78acb37-60a0-4e4d-95f4-099b0195f380
+:mtime:    20250527092108
+:ctime:    20250527092108
+:END:
+#+TITLE: GitHub Issue Templates
+#+FILETAGS: :github:templates:issues:
+
+You can create issue templates (Markdown) or issue forms (YAML) by adding the relevant files to the
+~.github/ISSUE_TEMPLATE~ directory of your project.
+
+* Issue Templates
+
+These are Markdown files that populate the issue box with details and users have to edit/change relevant sections.
+
+* Issue Forms
+
+These are YAML files that when selected generate a form that users reporting an issue have to complete. It is possible
+to make some fields mandatory and leave others as optional.
+
+
+* Links
+
+** GitHub Docs
+
++ [[https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests][Using templates to encourage useful issues and pull requests]]
+  + [[https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository][Configuring issue templates for your repository]]
+  + [[https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms][Syntax for issue forms]]
+  + [[https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema][Syntax for GitHub's form schema]]
+  + [[https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/manually-creating-a-single-issue-template-for-your-repository][Manually creating a single issue template for your repository]]
+  + [[https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/common-validation-errors-when-creating-issue-forms][Common validation errors when creating issue forms]]
