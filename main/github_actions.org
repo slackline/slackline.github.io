@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e19b6eb6-46b2-440a-ba35-be29feb33407
-:mtime:    20241011150440 20241001110834 20240905150013 20240221074022 20240128232536 20240127115829 20231015151623 20230318204943 20230103103313 20221216215027
+:mtime:    20250528075937 20241011150440 20241001110834 20240905150013 20240221074022 20240128232536 20240127115829 20231015151623 20230318204943 20230103103313 20221216215027
 :ctime:    20221216215027
 :END:
 #+TITLE: GitHub Actions
@@ -35,9 +35,21 @@ above these options. You can click on this and it may take a little while to bui
 the repository separetly and spent some time scratching my head how to do this until I came across [[https://www.cazzulino.com/github-actions-repository.html][this short post]] that
 uses [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] parameter expansion.
 
+* Debugging with tmate
+
+[[https://tmate.io/][tmate]] is a fork of [[id:b9f12c22-08db-46c1-a4fa-5ab9ee1a734c][Tmux]] and has been used in a very handy GitHub Action [[https://github.com/mxschmitt/action-tmate][action-tmate]] ([[https://mxschmitt.github.io/action-tmate/][Debug your GitHub Actions by using
+tmate]]). This allows you to add a section to your GitHub Action that on failure of an existing job will start a ~tmate~
+session on the runner, keeping it alive for a specified amount of time to allow you to [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] in to the machine and debug
+why the test has failed.
+
+There are quite a few options available to the action but the first thing you should do is ensure that you have a public
+SSH key on your GitHub profile. This should be the case as GitHub disabled working with ~https~ if you want to push
+anything to GitHub.
+
+
 * Publishing to PyPI
 
-It is possible to use a GitHub Action to automate [[id:5e1f167e-5c0c-4206-b2ac-6694e08524d8][publishing to PyPI from GitHub]].
+It is possible to use a GitHub Action to automate [[id:83206ac1-1108-4151-ad24-f3654b650dd6][publishing to PyPI from GitHub]].
 
 * Tips and Tricks
 
