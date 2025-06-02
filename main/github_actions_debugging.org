@@ -1,0 +1,75 @@
+:PROPERTIES:
+:ID:       fdc25464-121c-41bd-b6fc-cc5fb3229122
+:mtime:    20250602184313
+:ctime:    20250602184313
+:END:
+#+TITLE: GitHub Actions : Debugging
+#+FILETAGS: :git:github:ci:debugging:tmate:ssh:
+
+If you work with remote computer systems regularly there is a high chance you are familiar with [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] for making your
+connections. There is also a high chance that you have used [[https://tmate.io/][tmate]] (a fork of [[id:14337801-2e65-44e8-bffb-02efb67906e1][Tmux)]] to maintain and/or share a session on
+a remote system.
+
+The ability to connect remotely to a machine is invaluable, but what does that have to do with debugging GitHub Actions?
+You have your development environment on your local computer where you have made sure all tests pass and the
+documentation builds. Well often tests are run on a multitiude of operating systems and you may not always have access
+to these locally, even with the availability of emulators.
+
+This is where ~tmate~ comes in handy because thanks to a very handy because there is a [[id:e19b6eb6-46b2-440a-ba35-be29feb33407][GitHub Actions]] which sets up
+~tmate~ on the runner that was spun on the GitHub servers and if you've setup your SSH keys correctly then you can
+connect to this machine and set about debugging errors.
+
+The  [[https://mxschmitt.github.io/action-tmate/][official documentation]] is comprehensive and easy to read and I would recommend you read through it if you want to
+know more. Here I give a brief overview of how I've used ~tmate~ in my work. Its pretty basic but has been invaluable.
+
+
+* Setup and Configuration
+
+** SSH Keys
+
+It is essential that you have your public SSH key stored in your GitHub account. A while back GitHub started enforcing
+this for development so chances are you have already got this setup, if not follow the instructions . These are part of
+an excellent series of articles on SSH keys and GitHub. First
+
+1. [[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys][Check for existing SSH keys]]
+2. [[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent][Generating a new SSH key and adding it to the ssh-agent]]
+3. [[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account][Adding a new SSH key to your GitHub account]]
+4. [[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection][Testing your SSH connection]]
+5. [[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases][Working with SSH key passphrases]] (Optional but highly recommended)
+
+Once you are setup you can move onto the next step.
+
+** ~tmate~ GitHub action
+
+To use ~tmate~ to debug your workflow you need to add the [[https://mxschmitt.github.io/action-tmate/][action-tmate]] to the ~.github/workflows/<action>.yaml~. There
+are a lot of options available but a very basic configuration is shown below and you should add this as the last steps
+in your workflow.
+
+#+begin_src yaml
+    steps:
+      ...
+      - name: Setup tmate session
+        if: ${{ failure() }}
+        uses: mxschmitt/action-tmate@v3
+        timeout-minutes: 5
+#+end_src
+
+This will use the ~action-tmate~ action /only/ if there is a failure and will make the SSH session on the runner
+available for just 5 minutes. Its quite likely that it will take me than 5 minutes to work out what is causing the
+error and so after have encountered an error I typically increase this amount to allow me longer to work on debugging
+the problem.
+
+* Usage
+
+Once you are setup usage is pretty straight-forward
+
+
+* Links
+
++ [[https://github.com/mxschmitt/action-tmate][GitHub - mxschmitt/action-tmate: Debug your GitHub Actions via SSH by using tmate to get access to the runner system
+  itself.]]
++ [[https://mxschmitt.github.io/action-tmate/][Debug your GitHub Actions by using tmate | action-tmate]]
+
+** SSH and GitHub
+
++ [[https://docs.github.com/en/authentication/connecting-to-github-with-ssh][Connecting to GitHub with SSH]]

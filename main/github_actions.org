@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e19b6eb6-46b2-440a-ba35-be29feb33407
-:mtime:    20250528075937 20241011150440 20241001110834 20240905150013 20240221074022 20240128232536 20240127115829 20231015151623 20230318204943 20230103103313 20221216215027
+:mtime:    20250602185038 20250528075937 20241011150440 20241001110834 20240905150013 20240221074022 20240128232536 20240127115829 20231015151623 20230318204943 20230103103313 20221216215027
 :ctime:    20221216215027
 :END:
 #+TITLE: GitHub Actions
@@ -10,24 +10,9 @@
 GitHub Actions allow you to perform Continuous Integration (CI)/Continuous Development (CD) actions, triggering certain
 workflows and events based on pushes, commits, pulls, approvals and merges.
 
-* Building Sphinx Documentation
++ [[id:cd090ada-cd74-4402-8d89-0fbfe13be6dd][Sphinx Documentation]]
++ [[id:fdc25464-121c-41bd-b6fc-cc5fb3229122][Debugging]]
 
-A useful action if you have a Python project with documentation built and configured using [[https://www.sphinx-doc.org/][Sphinx]] is to have the
-documentation built automatically by GitHub. An action for this is provided by [[https://github.com/marketplace/actions/sphinx-docs-to-github-pages][action-sphinx-docs-to-gh-pages]]. Save this
-to your ~.github/workflows/~ directory (you can call it what you like but as always something descriptive is useful
-e.g. ~sphinx_docx_to_gh_pages.yaml~). You will also need to create a ~devtools/conda-env/docs_env.yml~ file which
-defines the Conda repository that is to be used for installing various Sphinx packages you are using. I found
-~conda-forge~ didn't include all the packages I required and so I modified the ~run:~ section of the main YAML
-configuration to install all required packages directly from PyPi using ~pip~.  When first setting things up you will
-want to set the ~branch:~ in the main YAML configuration to reflect that on which you are doing the development so the
-action is triggered on the branch and you can view the results. Stage, commit and push the two files and you should be
-able to find the build being made by going to the commits page on the branch you are working on, initially there is a
-yellow dot next to the commit you've just pushed which you can click on to see the actions being run.
-
-When complete this creates a new branch called ~gh-pages~ which contains all of the HTML documentation that has been
-created by Sphinx. You now need to configure your repository to use [[https://pages.github.com/][GitHub Pages]]. Go to ~Settings > Pages~ and select
-the ~gh-pages~ branch and select the ~root~ directory and then ~Save~. You will get a link to the pages appear just
-above these options. You can click on this and it may take a little while to build the pages but the will appear.
 
 * Environment Variables
 

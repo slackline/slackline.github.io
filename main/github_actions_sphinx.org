@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       cd090ada-cd74-4402-8d89-0fbfe13be6dd
+:mtime:    20250602180949
+:ctime:    20250602180949
+:END:
+#+TITLE: GitHub Actions : Sphinx
+#+FILETAGS: :github:ci:documentation:sphinx:python:
+
+A useful action if you have a Python project with documentation built and configured using [[https://www.sphinx-doc.org/][Sphinx]] is to have the
+documentation built automatically by GitHub. An action for this is provided by [[https://github.com/marketplace/actions/sphinx-docs-to-github-pages][action-sphinx-docs-to-gh-pages]]. Save this
+to your ~.github/workflows/~ directory (you can call it what you like but as always something descriptive is useful
+e.g. ~sphinx_docx_to_gh_pages.yaml~). You will also need to create a ~devtools/conda-env/docs_env.yml~ file which
+defines the Conda repository that is to be used for installing various Sphinx packages you are using. I found
+~conda-forge~ didn't include all the packages I required and so I modified the ~run:~ section of the main YAML
+configuration to install all required packages directly from PyPi using ~pip~.  When first setting things up you will
+want to set the ~branch:~ in the main YAML configuration to reflect that on which you are doing the development so the
+action is triggered on the branch and you can view the results. Stage, commit and push the two files and you should be
+able to find the build being made by going to the commits page on the branch you are working on, initially there is a
+yellow dot next to the commit you've just pushed which you can click on to see the actions being run.
+
+When complete this creates a new branch called ~gh-pages~ which contains all of the HTML documentation that has been
+created by Sphinx. You now need to configure your repository to use [[https://pages.github.com/][GitHub Pages]]. Go to ~Settings > Pages~ and select
+the ~gh-pages~ branch and select the ~root~ directory and then ~Save~. You will get a link to the pages appear just
+above these options. You can click on this and it may take a little while to build the pages but the will appear.
