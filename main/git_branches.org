@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       661f45c0-cec7-4b57-b2b1-7da8f9d8d0e6
-:mtime:    20250118214836 20241009132912 20240804174300 20240217093159 20240130203610
+:mtime:    20250602122216 20250118214836 20241009132912 20240804174300 20240217093159 20240130203610
 :ctime:    20240130203610
 :END:
 #+TITLE: Git Branches
@@ -97,7 +97,9 @@ Lots of articles out there on [[https://railsware.com/blog/git-housekeeping-tuto
 git fetch -p
 #+end_src
 
-...which will prune branches locally that have been merged on ~origin~.
+...which will prune branches locally that have been merged on ~origin~ by removing them from ~refs/remotes~. It
+/doesn't/ delete the local branch though, just the reference to it under ~refs/remotes~. This is to protect against
+deleting local branches that have not been pushed to remote.  A useful article on this [[https://dillionmegida.com/p/delete-outdated-branches/][here]].
 
 * Keep up with ~main~
 
@@ -243,6 +245,7 @@ Focused more on production environments.
 ** Learning
 
 + [[https://learngitbranching.js.org/][Learn Git Branching]]
++ [[https://graphite.dev/guides/git-orphan-branches][Understanding orphan branches in Git]]
 
 ** Tools
 
