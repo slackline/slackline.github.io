@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       b9f12c22-08db-46c1-a4fa-5ab9ee1a734c
+:mtime:    20250528080147
+:ctime:    20250528080147
+:END:
+#+TITLE: Tmux
+#+FILETAGS: :tmux:terminal:commandline:ssh:
+
+* Links
+
++ [[https://tmux.github.io/][tmux]]
++ [[https://tmuxcheatsheet.com/][Tmux Cheat Sheet & Quick Reference | Session, window, pane and more]]
