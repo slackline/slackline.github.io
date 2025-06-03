@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       982c7c92-4abc-46cd-a7fc-fee326ff60cd
-:mtime:    20250603081645
+:mtime:    20250603144041 20250603081645
 :ctime:    20250603081645
 :END:
 #+TITLE: Git Config
@@ -61,7 +61,7 @@ configuration file.
 
 #+begin_src conf
 [core]
-    sshCommand = ssh -i ~/.ssh/another_key_ed24419 -F /dev/null
+    sshCommand = ssh -i ~/.ssh/another_key_ed25519 -F /dev/null
 #+end_src
 
 ** ~.git-blame-ignore-rev~
