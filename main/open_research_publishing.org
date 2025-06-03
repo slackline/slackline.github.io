@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       3df9f7ea-12c0-47ab-97a8-e2b3d6c72606
 :ROAM_ALIASES: "Open Research : Publishing"
-:mtime:    20231118213020 20231031201838 20231017154505 20230602072325 20230506081901 20230103103309 20220429104307
+:mtime:    20250603222356 20231118213020 20231031201838 20231017154505 20230602072325 20230506081901 20230103103309 20220429104307
 :ctime:    20220429104307
 :END:
 #+title: Open-research Publishing
@@ -19,11 +19,42 @@ obtain a DOI for yourself via [[https://orcid.org/][ORCiD]].
 
 * Links
 
+
+* Links
+
+** Tools
+
++ [[https://osf.io/][OSF]]
++ [[https://www.octopus.ac/][Octopus | Built for Researchers]]
++ [[https://openalex.org/][OpenAlex]]
++ [[https://shortdoi.org/][shortDOI]]
++ [[https://nanopub.net/][Nanopublications]]
++ [[https://core.ac.uk/][CORE – Aggregating the world’s open access research papers]]
++ [[https://www.researchequals.com/][ResearchEquals.com]]
++ [[https://www.coar-repositories.org/][Confederation of Open Access Repositories (COAR)]]  – Building a sustainable, global knowledge commons
+
+** Journals
+
 + [[https://octopuspublishing.org/][Octopus Publishing]]
 + [[https://joss.theoj.org/][Journal of Open Source Software]]
+
+** DOIs
+
 + [[https://datacite.org/index.html][DataCite]]
 + [[https://zenodo.org/][Zenodo - Research. Shared.]]
-+ [[https://www.researchequals.com/][ResearchEquals.com]]
+
+** Free Books
+
++ [[https://open.umn.edu/opentextbooks/][Open Textbook Library - Open Textbook Library]]
++ [[https://www.gutenberg.org/][Project Gutenberg]]
+
+** Open Software
+
 + [[https://www.pyopensci.org/][Welcome to pyOpenSci - pyOpenSci]]
-+ [[https://www.coar-repositories.org/][Confederation of Open Access Repositories (COAR)]]  – Building a sustainable, global knowledge commons
-+ [[https://core.ac.uk/][CORE – Aggregating the world’s open access research papers]]
++ [[https://ropensci.org/][rOpenSci - open tools for open science]]
+
+** Blogs
+
++ [[https://www.highwirepress.com/blog/the-future-of-peer-review-diversification-and-decentralization/][The Future of Peer Review: Diversification and Decentralisation]]
++ [[https://absolutelymaybe.plos.org/2025/02/14/what-if-we-cant-rely-on-pubmed/][What if We Can't Rely on PubMed? - Absolutely Maybe]]
++ [[https://asterainstitute.substack.com/p/scientific-publishing-enough-is-enough][Scientific Publishing: Enough is Enough - by Seemay Chou]]
