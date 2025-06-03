@@ -1,0 +1,82 @@
+:PROPERTIES:
+:ID:       982c7c92-4abc-46cd-a7fc-fee326ff60cd
+:mtime:    20250603081645
+:ctime:    20250603081645
+:END:
+#+TITLE: Git Config
+#+FILETAGS: :git:config:github:gitlab:forgejo:codeberg:
+
+Configuration of Git is plain text files. There is a global configuration file either ~~/.gitconfig~ or
+~~/.config/git/config~ but each repository has its own configuration that lives in ~/.git/config~ which will override
+the global settings.
+
+* Global Configuration
+
+** Conditional configuration
+
+You may have more than one account on GitHub/GitLab/Codeberg and want to use specific account settings conditional on
+the directory you are using.
+
+The ~includeIf~ directive evaluates its argument and if true executes the subsequent configuration options. Setting
+~path~ to point to another configuration file with alternative settings will override those in the global
+configuration. Here we have two directives, one setup to include ~config_work~ for any directories that are nested under
+~~/work/git/hub/employer~ and one to include ~config_personal~ for any directories that are nested under ~~/work/git/codeberg/~
+#+begin_src conf
+[includeIf "gitdir:~/work/git/hub/employer"]
+    path = ~/.config/git/config_work
+[includeIf "gitdir:~/work/git/codeberg"]
+    path = ~/.config/git/config_personal
+
+#+end_src
+** Useful Settings
+
+*** ~[rebase]~
+
+*** ~[rerere]~
+
+*** ~[diff]~
+
+**** Improved colors for moved text
+
+The ~color-moved~ [[https://git-scm.com/docs/diff-options/2.19.0#Documentation/diff-options.txt---color-movedltmodegt][setting]] determines what moved code looks like, there are six options, a useful one which makes things
+clearer is to use ~zebra~ (via [[https://sergiswriting.com/better-colors-for-moved-text-in-git/][this post]]).
+
+#+begin_src conf
+[diff]
+    color-moved = zebra
+#+end_src
+
+** Alias'
+
+
+* Local Configuration
+
+** ~.gitattributes~
+
+** Custom SSH settings
+
+As well as having conditional configuration settings dependent on the directory (see above) it is also possible to
+override the SSH settings on any given repository by modifying the ~sshCommand~ under the ~[core]~ section of a local
+configuration file.
+
+#+begin_src conf
+[core]
+    sshCommand = ssh -i ~/.ssh/another_key_ed24419 -F /dev/null
+#+end_src
+
+** ~.git-blame-ignore-rev~
+
+The presence of this file within a repository allows you to ignore the "blame" for a given commit. All you need to do is
+add the full commit hash to the file and it's blame will be ignored. This can be useful if for example you are [[id:55581960-395e-443c-bd5d-bc00c496b6ae][linting]] a
+code base so that it follows style guides. GitHub also recognises the file and will not show blame associated with
+commits in these files.
+
+* Links
+
++ [[https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration][Git - Git Configuration]]
++ [[https://fair2-for-research-software.github.io/git-collaboration/introduction.html#git-configuration][Git Collaboration: Introduction]]
+
+** Useful Articles
+
++ [[https://www.jamescherti.com/better-git-diff-emacs-lisp-elisp/][Enhancing Git Diff for Emacs Lisp: Better Git Diff of Elisp function or macro]]
++ [[https://sergiswriting.com/better-colors-for-moved-text-in-git/][Better colors for moved text in Git]]
