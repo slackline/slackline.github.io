@@ -1,12 +1,17 @@
 :PROPERTIES:
-:ID:       b9f12c22-08db-46c1-a4fa-5ab9ee1a734c
-:mtime:    20250528080147
-:ctime:    20250528080147
+:ID:       14337801-2e65-44e8-bffb-02efb67906e1
+:mtime:    20250602181548
+:ctime:    20250602181548
 :END:
 #+TITLE: Tmux
-#+FILETAGS: :tmux:terminal:commandline:ssh:
+#+FILETAGS: :ssh:tmux:remote:
+
+Tmux (Terminal Multiplexer) is a piece of software that allows you to have persistent sessions on remote machines that
+you connect to over SSH. It is ideal for running jobs which will take longer than you want to stay actively logged into
+the remote machine allowing you to detach from the session and connect at a later job without having to actively
+nackground jobs.
 
 * Links
 
-+ [[https://tmux.github.io/][tmux]]
++ [[https://github.com/tmux/tmux][tmux]]
 + [[https://tmuxcheatsheet.com/][Tmux Cheat Sheet & Quick Reference | Session, window, pane and more]]
