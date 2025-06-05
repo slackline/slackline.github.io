@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       4451966f-b810-4a9d-905b-e2b682578c62
-:mtime:    20241216142835 20241128110356 20241112222216 20240709215159 20231130102352 20230910184222 20230906125824 20230103103310 20221224191223
+:mtime:    20250605181423 20241216142835 20241128110356 20241112222216 20240709215159 20231130102352 20230910184222 20230906125824 20230103103310 20221224191223
 :ctime:    20221224191223
 :END:
 #+TITLE: Emacs Buffers
@@ -73,6 +73,11 @@ There are some related functions for appending (~append-to-buffer~), prepending 
 (~insert-to-buffer~) and copying (~copy-to-buffer~) that are worth remembering when moving text around.
 
 * Code Folding
+:PROPERTIES:
+:ID:       562bb26b-e506-476c-86b7-4f919f84ea6b
+:mtime:    20250605181441
+:ctime:    20250605181441
+:END:
 
 The useful ~hs-minor-mode~ can be used to enable cold-folding where the code underneath function definitions is hidden
 from view. To enable this globally for all programming modes (and others) you can add the following to your
@@ -98,3 +103,9 @@ hide code in different amounts. Very neat.
 | ~C-c @ C-c~ | Toggle hiding |
 | ~C-c @ C-h~ | Hide block    |
 | ~C-c @ C-h~ | Show block    |
+
+* Font Size
+
+You can change the font size of a buffer with ~M-x text-scale-increase~ or you can do it across all buffers using ~M-x
+global-text-scale-adjust~. The later is bound to ~C-M-<scroll-wheel>~ if you have a mouse with a wheel which is really
+neat ([[https://mastodon.social/@samebchase@fantastic.earth/114631865753599026][source]]).
