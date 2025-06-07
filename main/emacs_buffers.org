@@ -108,4 +108,5 @@ hide code in different amounts. Very neat.
 
 You can change the font size of a buffer with ~M-x text-scale-increase~ or you can do it across all buffers using ~M-x
 global-text-scale-adjust~. The later is bound to ~C-M-<scroll-wheel>~ if you have a mouse with a wheel which is really
-neat ([[https://mastodon.social/@samebchase@fantastic.earth/114631865753599026][source]]).
+neat ([[https://mastodon.social/@samebchase@fantastic.earth/114631865753599026][source]]). Further you can use ~C-x C-M-[+|-]~ to change the font size whilst ~C-x C-M-=~  will reset it (from a
+[[https://mastodon.social/@prjorgensen@social.sdf.org/114637303148609545][follow-up post]]). 
