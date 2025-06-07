@@ -19,7 +19,7 @@ This is where ~tmate~ comes in handy because thanks to a very handy because ther
 ~tmate~ on the runner that was spun on the GitHub servers and if you've setup your SSH keys correctly then you can
 connect to this machine and set about debugging errors.
 
-The  [[https://mxschmitt.github.io/action-tmate/][official documentation]] is comprehensive and easy to read and I would recommend you read through it if you want to
+The  [[https://mxschmitt.github.io/action-tmate/][official documentation]] is comprehensive and well written and I would recommend you read through it if you want to
 know more. Here I give a brief overview of how I've used ~tmate~ in my work. Its pretty basic but has been invaluable.
 
 
@@ -61,7 +61,89 @@ the problem.
 
 * Usage
 
-Once you are setup usage is pretty straight-forward
+Once you are setup usage is pretty straight-forward. If everything runs ok you will see this in your workflows log
+because the step only runs on failure.
+
+
+If however there _is_ a failure in one of the preceeding steps of your workflow then the ~tmate~ job kicks in and you
+will see the following in your jobs logs.
+
+The full raw log looks like this.
+
+#+begin_src 
+2025-06-03T15:29:16.1340333Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2025-06-03T15:29:16.1627994Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2025-06-03T15:29:16.1641178Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2025-06-03T15:29:16.1688870Z Get:6 https://packages.microsoft.com/repos/azure-cli noble InRelease [3564 B]
+2025-06-03T15:29:16.1697379Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2025-06-03T15:29:16.1720857Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2025-06-03T15:29:16.1749965Z Hit:7 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease
+2025-06-03T15:29:16.3094697Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1110 kB]
+2025-06-03T15:29:16.3246020Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [161 kB]
+2025-06-03T15:29:16.3268721Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1068 kB]
+2025-06-03T15:29:16.3368485Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [376 kB]
+2025-06-03T15:29:16.3384049Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+2025-06-03T15:29:16.3391687Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+2025-06-03T15:29:16.3668210Z Get:14 https://packages.microsoft.com/repos/azure-cli noble/main amd64 Packages [1377 B]
+2025-06-03T15:29:16.4190544Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [7084 B]
+2025-06-03T15:29:16.4204136Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [16.4 kB]
+2025-06-03T15:29:16.4216780Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+2025-06-03T15:29:16.4226831Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+2025-06-03T15:29:16.5064997Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Components [21.6 kB]
+2025-06-03T15:29:16.5075844Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Components [52.2 kB]
+2025-06-03T15:29:16.5087724Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+2025-06-03T15:29:16.5096013Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [208 B]
+2025-06-03T15:29:20.3449636Z Fetched 3198 kB in 1s (5910 kB/s)
+2025-06-03T15:29:21.0535949Z Reading package lists...
+2025-06-03T15:29:21.0882040Z Reading package lists...
+2025-06-03T15:29:21.2790461Z Building dependency tree...
+2025-06-03T15:29:21.2797454Z Reading state information...
+2025-06-03T15:29:21.4815179Z openssh-client is already the newest version (1:9.6p1-3ubuntu13.11).
+2025-06-03T15:29:21.4816354Z xz-utils is already the newest version (5.6.1+really5.4.5-1ubuntu0.2).
+2025-06-03T15:29:21.4817296Z 0 upgraded, 0 newly installed, 0 to remove and 28 not upgraded.
+2025-06-03T15:29:22.4080716Z ssh 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
+2025-06-03T15:29:22.4113791Z 
+2025-06-03T15:29:22.4125076Z SSH: ssh 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
+2025-06-03T15:29:22.4125623Z or: ssh -i <path-to-private-SSH-key> 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
+2025-06-03T15:29:27.4141023Z SSH: ssh 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
+2025-06-03T15:29:27.4141669Z or: ssh -i <path-to-private-SSH-key> 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
+2025-06-03T15:29:32.4195574Z SSH: ssh 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
+2025-06-03T15:29:32.4196463Z or: ssh -i <path-to-private-SSH-key> 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
+2025-06-03T15:29:37.4249783Z SSH: ssh 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
+2025-06-03T15:29:37.4250529Z or: ssh -i <path-to-private-SSH-key> 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
+2025-06-03T15:29:42.4303252Z SSH: ssh 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
+2025-06-03T15:29:42.4304233Z or: ssh -i <path-to-private-SSH-key> 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
+2025-06-03T15:29:47.4357936Z SSH: ssh 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
+2025-06-03T15:29:47.4358753Z or: ssh -i <path-to-private-SSH-key> 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
+#+end_src
+
+This installs and configures ~tmate~ on the runner and after doing so tells you how to connect using [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]]. If you have
+your SSH key loaded in a [[id:5f040d28-2aa8-4cac-91aa-43f5e3d515a3][Keychain]] then you can use the first form.
+
+#+begin_src 
+ssh 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
+#+end_src
+
+If you get a ~Permission Denied~ error then try the second form, substituting ~<path-to-private-SSH-key>~ for the
+private key that corresponds to the one you have on your GitHub account.
+
+#+begin_src 
+ssh -i <path-to-private-SSH-key> 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
+#+end_src
+
+Once connected you have all the tools in the current version of Ubuntu, which at the time of writing is 24.04, along
+with any other packages and software that your Workflow installs (remember this is the machine on which the job failed
+:wink:).
+
+You can now set about debugging why the job failed in more detail. You may want to run ~pytest --lf~ to re-run the last
+failed jobs and start poking around. If you use [[https://docs.python.org/3/library/pdb.html][~pdb~]] to debug then you can add ~breakpoint()~ at the point you want to
+start debugging.
+
+The options are (almost) endless, however, astute readers will have noticed that you are time-limited as the
+configuration for this step in the workflow specified ~timeout-minutes: 5~ which means the runner and your SSH
+connection will terminate after five minutes. Typically its going to take you longer to solve your problem so you should
+tweak your ~/.github/workflow/<job>.yaml~ to increase this value whilst you trouble shoot. Once you've solved the
+problem reduce it back to a few minutes as this frees up resources that whilst notionally free actually cost resources.
 
 
 * Links
