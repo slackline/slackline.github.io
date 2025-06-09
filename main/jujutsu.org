@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a37b61ba-8699-4ee3-b407-38f256c186c4
-:mtime:    20250323151929 20250313085514 20250302204650 20250209181233 20250204230408 20250109123853 20250106104827 20250104211131 20241229195347 20241224191824 20241223211940 20241223113355 20241223083247 20241221221347 20241221211157 20241221201119 20241221163742 20241221152122 20241221072719 20241211112128 20240630205259 20240204192058
+:mtime:    20250608183502 20250608152257 20250323151929 20250313085514 20250302204650 20250209181233 20250204230408 20250109123853 20250106104827 20250104211131 20241229195347 20241224191824 20241223211940 20241223113355 20241223083247 20241221221347 20241221211157 20241221201119 20241221163742 20241221152122 20241221072719 20241211112128 20240630205259 20240204192058
 :ctime:    20240204192058
 :END:
 #+TITLE: Jujutsu
@@ -608,6 +608,64 @@ The revest language also includes a number of functions that help filter log mes
 I'm not going to dig too deep into these at the moment as I have limited use for them right now but see the [[https://steveklabnik.github.io/jujutsu-tutorial/branching-merging-and-conflicts/revsets.html][Figuring out
 where our changes are with revsets - Steve's Jujutsu Tutorial]] and the [[https://jj-vcs.github.io/jj/latest/revsets/][Revset language]] of the official documentation.
 
+
+* Private Commits
+
+Its possible to make commits in Jujutsu that are private as described in the [[https://jj-vcs.github.io/jj/latest/FAQ/#how-can-i-avoid-committing-my-local-only-changes-to-tracked-files][FAQ]]. The following examples are verbatim
+copy and pastes from the FAQ.
+
+In essence you make a new branch from the point prior you want to start work, to do this you
+
+#+begin_src
+$ jj log
+@  xxxxxxxx me@example.com 2024-08-21 11:13:21 ef612875
+│  Add new feature
+◉  yyyyyyyy me@example.com 2024-08-21 11:13:09 main b624cf12
+│  Existing work
+~
+#+end_src
+
+You then make a new commit (from ~yyyyyyyy~) to add your private changes, use a conventional commit style pattern such
+as starting with ~private:~ and make your changes.
+
+#+begin_src
+$ jj new main -m "private: my credentials"
+Working copy  (@) now at: wwwwwwww 861de9eb (empty) private: my credentials
+Parent commit (@-)      : yyyyyyyy b624cf12 main | Existing work
+Added 0 files, modified 1 files, removed 0 files
+
+$ echo '{ "password": "p@ssw0rd1" }' > secret_config.json
+#+end_src
+
+Now merge the private commit and the branch you are working on.
+
+#+begin_src
+$ jj new xxxxxxxx wwwwwwww
+Working copy  (@) now at: vvvvvvvv ac4d9fbe (empty) (no description set)
+Parent commit (@-)      : xxxxxxxx ef612875 Add new feature
+Parent commit (@-)      : wwwwwwww 2106921e private: my credentials
+Added 0 files, modified 1 files, removed 0 files
+
+$ jj log
+@    vvvvvvvv me@example.com 2024-08-22 08:57:40 ac4d9fbe
+├─╮  (empty) (no description set)
+│ ◉  wwwwwwww me@example.com 2024-08-22 08:57:40 2106921e
+│ │  private: my credentials
+◉ │  xxxxxxxx me@example.com 2024-08-21 11:13:21 ef612875
+├─╯  Add new feature
+◉  yyyyyyyy me@example.com 2024-08-21 11:13:09 main b624cf12
+│  Existing work
+~
+#+end_src
+
+The real trick though is to squash your changes into ~xxxxxxxx~, if you need a new commit on top you can use
+~--insert-[after|before]~ (~-A~ / ~-B~ respectively) and to avoid pushing your ~wwwwwwww~ commit/branch you use the
+~git.private-commits~ configuration option to look for the glob pattern (hence using a "conventional commit" style
+pattern).
+
+#+begin_src
+jj config set --user git.private-commits "'''description(glob:'private:*')'''"
+#+end_src
 
 * Configuration
 
