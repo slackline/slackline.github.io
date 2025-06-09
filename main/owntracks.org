@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5315e7ee-0ed9-4514-b1a9-0a03114d8191
-:mtime:    20250526205651 20250525203108 20250524134848 20250504065636 20250330091626 20250329110559 20250329095813 20250328170851
+:mtime:    20250609072812 20250526205651 20250525203108 20250524134848 20250504065636 20250330091626 20250329110559 20250329095813 20250328170851
 :ctime:    20250328170851
 :END:
 #+TITLE: OwnTracks
@@ -161,6 +161,21 @@ systemctl enable --now mosquitto.service
 systemctl enable --now owntracks-recorder.service
 systemctl restart nginx.service
 #+end_src
+
+* Docker
+
+I decided to investigate whether using the [[https://github.com/owntracks/docker-recorder][docker-recorder]] image on my RaspberryPi would be a viable option to the faff
+of trying to unpick the [[id:191117d7-b413-4409-84b5-0183599d9f4e][Ansible]] script that contains all the easy setup or suss out how to configure the Mosquitto
+database manually.
+
+
 * Links
 
 + [[https://github.com/owntracks/recorder#building-from-source][Building from Source]]
++ [[https://github.com/owntracks/docker-recorder][owntracks/docker-recorder: Docker image for OwnTracks Recorder]]
+
+** Blogs
+
+Other peoples notes on setting things up.
+
++ [[https://www.reddit.com/r/selfhosted/comments/raade4/quick_owntracksrecorderindocker_dummies_guide/][Quick OwnTracks-Recorder-in-Docker dummies guide. : r/selfhosted]]
