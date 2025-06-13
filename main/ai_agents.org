@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       a916807b-112d-40c3-81fd-f0d4c6e45712
+:mtime:    20250613202156
+:ctime:    20250613202156
+:END:
+#+TITLE: AI Agents
+#+FILETAGS: :ai:agents:tools:
+
+* Links
+
++ [[https://ferd.ca/the-gap-through-which-we-praise-the-machine.html][The Gap Through Which We Praise the Machine]]
