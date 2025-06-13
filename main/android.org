@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       2c46e54a-d704-4e7e-bca3-d8c3e042ab43
-:mtime:    20250505215608 20250208110958 20241021184849 20241020132022 20240930074837 20240620095958 20240228094314 20231015172236
+:mtime:    20250613002059 20250505215608 20250208110958 20241021184849 20241020132022 20240930074837 20240620095958 20240228094314 20231015172236
 :ctime:    20231015172236
 :END:
 #+TITLE: Android
@@ -28,9 +28,16 @@ them, and root them and flash an alternative OS, typically LineageOS).
 + Motorolla G7 Power
 + [[id:349c1607-ca60-4ea2-bb53-4eb45a0e9189][Motorola G100 XT2125-4]]
 
+* ADB
+
+Stuff about using adb.
+
++ [[id:05ac9c63-4b61-4192-b305-69e531064c22][ADB Pull]]
+
 * Push Notifications
 
 An alternative system to the default is [[https://unifiedpush.org/][UnifiedPush]] and the [[https://github.com/binwiederhier/ntfy-android][ntfy]] app.
+
 
 * Links
 

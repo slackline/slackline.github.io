@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       05ac9c63-4b61-4192-b305-69e531064c22
+:mtime:    20250613002047
+:ctime:    20250613002047
+:END:
+#+TITLE: Android ADB Pull
+#+FILETAGS: :android:bash:shell:
+
+You can get files from (and too) your phone if you have USB Debugging enabled and the Android SDK installed on your
+computer.
+
+* Pull multiple files
+
+Typically you can only pull one file, but with a bit of [[id:48c0d280-8330-4f65-a5da-098ea186c6b6][Bash xarg]] magic you can pull multiple files across. Based on
+answers in [[https://stackoverflow.com/questions/11074671/adb-pull-multiple-files][this thread]] the following got me all pictures for a given day onto my local computer.
+
+#+begin_src
+adb shell 'find /storage/self/primary/DCIM/Camera/IMG_20250522_*.jpg -print0' | xargs -0 -n 1 adb pull
+#+end_src
