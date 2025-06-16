@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       136364e7-1a6d-4b28-b284-0e415b860699
 :ROAM-ALIASES: "Org Roam : Overview"
-:mtime:    20250513083029 20250508122559 20240701060633 20231026121908 20231016222532 20230727234008 20230331110207 20230116172234 20230103103313 20221224191223 20230103103308
+:mtime:    20250616211626 20250513083029 20250508122559 20240701060633 20231026121908 20231016222532 20230727234008 20230331110207 20230116172234 20230103103313 20221224191223 20230103103308
 :ctime:    20221224191223
 :END:
 #+TITLE: Org-roam
@@ -115,7 +115,12 @@ hugo]].
 Currently running/exporting the site is not possible, although there is an example mentioned in RSE Slack of this being
 [[https://ukrse.slack.com/archives/CDBHZCDQE/p1680256552958189][possible/in the pipeline]].
 
+You can even add the [[id:e19b6eb6-46b2-440a-ba35-be29feb33407][GitHub Actions]] from [[https://github.com/ikoamu/publish-org-roam-ui][ikoamu/publish-org-roam-ui]] that will build and host your UI on GitHub Pages for
+you.
+
+
 * Links
+
 ** Reference
 
 + [[https://www.orgroam.com/manual.html#A-Brief-Introduction-to-the-Zettelkasten-Method][Org-roam User Manual]]
