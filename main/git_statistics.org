@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       cd2b297d-b2b4-4f7e-9396-71504c76c5c5
+:mtime:    20250617104441
+:ctime:    20250617104441
+:END:
+#+TITLE: Git Statistics
+#+FILETAGS: :git:statistics:summary:
+
+There are a number of different packages for summarising a repository. Most center around making tabular summaries and
+calendar "tile graphs" showing the relative number of contributions made per day.
+
+* [[https://github.com/git-quick-stats/git-quick-stats][git-quick-stats]]
+
+* [[https://github.com/IonicaBizau/git-stats-html][git-stats-html]]
+
+* [[https://github.com/IonicaBizau/git-stats][git-stats]]
+
+* Links
+
++ [[https://github.com/arzzen/git-quick-stats][arzzen/git-quick-stats: ▁▅▆▃▅ Git quick statistics is a simple and efficient way to access various statistics in git
+  repository.]]
++ [[https://github.com/IonicaBizau/git-stats][IonicaBizau/git-stats: 🍀 Local git statistics including GitHub-like contributions calendars.]]
++ [[https://github.com/IonicaBizau/git-stats-html][IonicaBizau/git-stats-html: Turn git-stats result into HTML output.]]
