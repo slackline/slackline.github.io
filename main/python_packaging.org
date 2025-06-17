@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       bb57f65e-58f4-45de-9620-901dc998f6d6
-:mtime:    20250616211714 20250528084823 20250426130852 20250308215814 20250224190536 20250213175539 20250115211312 20241220095351 20241122224906 20240807093255 20240530191643 20240529142914 20240218135759 20240121220239 20240117072308 20231117101119 20231015151206 20230919101558 20230811133355 20230811112305 20230714185857 20230629212250 20230509145004 20230331162046 20230329204528 20230319195324 20230319124004 20230318215853 20230318205506 20230316065623 20230312225913 20230311130516 20230301211740 20230301095721 20230227221806 20230207111629 20230103103312 20221228113913 20230103103309
+:mtime:    20250617113230 20250616211714 20250528084823 20250426130852 20250308215814 20250224190536 20250213175539 20250115211312 20241220095351 20241122224906 20240807093255 20240530191643 20240529142914 20240218135759 20240121220239 20240117072308 20231117101119 20231015151206 20230919101558 20230811133355 20230811112305 20230714185857 20230629212250 20230509145004 20230331162046 20230329204528 20230319195324 20230319124004 20230318215853 20230318205506 20230316065623 20230312225913 20230311130516 20230301211740 20230301095721 20230227221806 20230207111629 20230103103312 20221228113913 20230103103309
 :ctime:    20221228113913 20230103103309
 :END:
 #+TITLE: Python Packaging
@@ -526,6 +526,103 @@ jobs:
 #+END_SRC
 
 
+** Trusted Publishing
+
+PyPI have enabled [[https://docs.pypi.org/trusted-publishers/][trusted publishing]] which negates the need to generate and store tokens in your GitHub account.
+
+On PyPI (and TestPyPI) log into your account and got to /Publishing/ where you can /Add a New Publisher/. You need to
+know the repository owner, repository name, the workflow name and ideally the environment you define within the job that
+will upload the artifacts.
+
+The Python Packaging Guide has an excellent walk-through of how to [[https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/][Publishing package distribution releases using GitHub
+Actions CI/CD workflows]] and I would recommend reading that in detail as I can't say it any better. Their example
+workflow is shown below for convenience.
+
+It splits the process into three jobs, ~build~, ~publish-to-pypi~ and ~publish-to-testpypi~. The first job clones the
+repository under ~ubuntu-latest~ and builds the package, uploading the resulting artifact to...somewhere!
+
+The second two jobs are almost identical but they target different PyPI servers, one main which /only/ runs on "tag
+pushes" and the other to Test PyPI which always runs. These download the built artefact and then use the
+[[https://github.com/pypa/gh-action-pypi-publish][pypa/gh-action-pypi-publish]] action to publish these to their respective target servers.
+
+#+begin_src yaml
+name: Publish Python 🐍 distribution 📦 to PyPI and TestPyPI
+
+on: push
+
+jobs:
+  build:
+    name: Build distribution 📦
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+    - name: Install pypa/build
+      run: >-
+        python3 -m
+        pip install
+        build
+        --user
+    - name: Build a binary wheel and a source tarball
+      run: python3 -m build
+    - name: Store the distribution packages
+      uses: actions/upload-artifact@v4
+      with:
+        name: python-package-distributions
+        path: dist/
+
+  publish-to-pypi:
+    name: >-
+      Publish Python 🐍 distribution 📦 to PyPI
+    if: startsWith(github.ref, 'refs/tags/')  # only publish to PyPI on tag pushes
+    needs:
+    - build
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/<package-name>  # Replace <package-name> with your PyPI project name
+    permissions:
+      id-token: write  # IMPORTANT: mandatory for trusted publishing
+
+    steps:
+    - name: Download all the dists
+      uses: actions/download-artifact@v4
+      with:
+        name: python-package-distributions
+        path: dist/
+    - name: Publish distribution 📦 to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+
+  publish-to-testpypi:
+    name: Publish Python 🐍 distribution 📦 to TestPyPI
+    needs:
+    - build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/p/<package-name>
+
+    permissions:
+      id-token: write  # IMPORTANT: mandatory for trusted publishing
+
+    steps:
+    - name: Download all the dists
+      uses: actions/download-artifact@v4
+      with:
+        name: python-package-distributions
+        path: dist/
+    - name: Publish distribution 📦 to TestPyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        repository-url: https://test.pypi.org/legacy/
+#+end_src
 ** Releasing via GitHub
 :PROPERTIES:
 :mtime:    20230103103311
