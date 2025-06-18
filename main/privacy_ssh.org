@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ae1e9b97-feb0-4f1a-b804-b89edaf5a790
-:mtime:    20250406203702 20241221202607 20240214212843 20240124091633 20231121210648
+:mtime:    20250618091212 20250406203702 20241221202607 20240214212843 20240124091633 20231121210648
 :ctime:    20231121210648
 :END:
 #+TITLE: SSH
@@ -29,6 +29,8 @@ Make the following changes to help improve security on your server.
 - ~PasswordAuthentication no~ although only /after/ you have setup a user account and transferred keys.
 - ~Port ###~ set the port on which connections are made to something other than the default (which is ~22~).
 - ~X11Forwarding false~
+
+* Forwarding
 
 * Links
 
