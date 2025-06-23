@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       6568f39b-6497-4e93-93fb-7c6e545a3ab5
+:mtime:    20250622163614
+:ctime:    20250622163614
+:END:
+#+TITLE: Visualisation
+#+DATE: [2025-06-22 Sun 16:44]
+#+FILETAGS: :statistics:visualisation:
+
+
+There are many ways to create your data visualisation, two popular languages I'm familiar with and use are [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] and [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]].
+
+
+* Links
+
+** Neat visualisations
+
++ [[https://showyourstripes.info][#ShowYourStripes]]
