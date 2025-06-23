@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       938af6af-7a0e-46d1-ae76-6157e948151b
-:mtime:    20250304224048 20241215223039 20241023184234 20240706220449 20240115230041 20231222084358 20230114083319 20230103103311 20221229094021
+:mtime:    20250622203020 20250304224048 20241215223039 20241023184234 20240706220449 20240115230041 20231222084358 20230114083319 20230103103311 20221229094021
 :ctime:    20221229094021
 :END:
 #+TITLE: Emacs Configuration
@@ -25,6 +25,12 @@ updates ~.elc~ when they are outdated, it /won't/ compile new ~.el~ files for wh
 (see [[https://github.com/jamescherti/compile-angel.el?tab=readme-ov-file#what-is-the-difference-between-auto-compile-and-compile-angel][note]]). The other option is to use the [[https://github.com/jamescherti/compile-angel.el][compile-angel.el]] which always compiles ~.el~ to ~.elc~ and makes sure they
 are kept up-to-date.
 
+** System Configuration
+
+Configuration options specific to the OS or machine can be made for ideas and guidance see...
+
++ [[https://olddeuteronomy.github.io/post/multiplatform-emacs-config/][Making a Multiplatform Emacs Configuration]]
++ [[https://irreal.org/blog/?p=13072][Running Emacs On Multiple Platforms | Irreal]]
 
 * Gentoo
 
@@ -38,6 +44,7 @@ packages from ELPA repositories. It works with Layman.
   layman -a gnu-elpa
   emerge -va
 #+end_src
+
 
 * Package Specifics
 

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3774439d-af75-453e-b3e9-9d578b6bec46
-:mtime:    20250603081658 20250403122443 20250328170850 20250223131954 20250208103833 20250206173224 20250206100320 20241128103141 20241117170240 20241114174544 20230911222107 20230528222513 20230215120711
+:mtime:    20250622203534 20250622162759 20250603081658 20250403122443 20250328170850 20250223131954 20250208103833 20250206173224 20250206100320 20241128103141 20241117170240 20241114174544 20230911222107 20230528222513 20230215120711
 :ctime:    20230215120711
 :END:
 #+TITLE: Nginx
@@ -53,6 +53,12 @@ I wanted to download a ~10GB.bin~ file.
 Came across [[https://zadzmo.org/code/nepenthes/][Nepenthes]] which infinitely generates junk pages when web-crawlers hit it. Not yet deployed this.
 
 This isn't the only approach its possible [[https://tzovar.as/algorithmic-sabotage-ii/][Algorithmic sabotage for static sites II: Images]] too.
+
+*** Codeberg/GitHub static stites
+
+You can also serve up junk on static sites that are hosted on Codeberg/GitHub pages using the approach described in
+[[\[\[https://tzovar.as/algorithmic-sabotage-ssg/\]\[Bastian Greshake Tzovaras · Algorithmic sabotage for static
+sites\]\]][Algorithmic sabotage for static sites]]. It uses the [[https://marcusb.org/hacks/quixotic.html][Quixotic]] tool to achieve this.
 
 ** LetsEncrypt
 

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d8720ab9-a43e-45e4-834e-e4c5ce4f4e43
-:mtime:    20250118222340 20241010141151
+:mtime:    20250623080342 20250118222340 20241010141151
 :ctime:    20241010141151
 :END:
 #+TITLE: Git Notes
@@ -54,3 +54,4 @@ alias gns="git notes show"
 
 + [[https://wouterj.nl/2024/08/git-notes][Store Code Discussions in Git using Git Notes ~ Wouter J]]
 + [[https://www.alchemists.io/articles/git_notes][Git Notes | Alchemists]]
++ [[https://tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/][Git Notes: git's coolest, most unloved­ feature - Tyler Cipriani]]
