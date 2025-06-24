@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b9961a9e-e833-4160-aa8f-1c69b9cbb397
-:mtime:    20231222084356 20230228201359 20230225220747 20230114083258 20230103103312 20221228105320
+:mtime:    20250623181634 20231222084356 20230228201359 20230225220747 20230114083258 20230103103312 20221228105320
 :ctime:    20221228105320
 :END:
 #+TITLE: Emacs TRAMP
@@ -75,3 +75,7 @@ variable ~tramp-terminal-type~ to ~tramp~ and use that in the above snippet too.
 
 + [[https://www.gnu.org/software/tramp/][GNU TRAMP]]
 + [[https://www.emacswiki.org/emacs/TrampMode][EmacsWiki : Tramp Mode]]
+
+** Blogs
+
++ [[https://coredumped.dev/2025/06/18/making-tramp-go-brrrr./][Making TRAMP go Brrrr…. • Core Dumped]]
