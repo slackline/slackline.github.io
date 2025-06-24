@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a120ecf3-70bb-46e7-9709-37dc59db883c
-:mtime:    20250611145118
+:mtime:    20250624075952 20250611145118
 :ctime:    20250611145118
 :END:
 #+TITLE: Privacy Tracking
@@ -8,6 +8,7 @@
 
 * Links
 
+**
 ** Meta Tracking
 
 + [[https://www.zeropartydata.es/p/localhost-tracking-explained-it-could]["Localhost tracking" explained]] - how Meta track people

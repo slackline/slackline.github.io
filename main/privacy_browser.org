@@ -1,13 +1,18 @@
 :PROPERTIES:
 :ID:       899eb7a6-22d6-493a-a67f-b05bd89917d0
-:mtime:    20240716154936
+:mtime:    20250624075947 20240716154936
 :ctime:    20240716154936
 :END:
 #+TITLE: Browsing Privacy
 #+FILETAGS: :privacy:browser:firefox:
 
 
-* Firefox
+* Librefwolf
+Using the modified [[https://librewolf.net/][Librewolf]] (based on Firefox) is a good option to minimise tracking by default. It is worth reading
+their [[https://librewolf.net/docs/settings/][settings]] documentation on how to enable/disable certain features.
+
+
+* Extensions
 
 There are a wealth of browser extensions available for Firefox (and many on mobile too).
 
@@ -24,6 +29,11 @@ There are a wealth of browser extensions available for Firefox (and many on mobi
 + UntrackMe
 + uBlock Origin
 
+
 ** Mobile
 
 You can disable Firefox's Facebook data collection by following the instructions [[https://fosstodon.org/@thomholwerda@exquisite.social/112795429462507951][here]].
+
+* Links
+
++ [[https://dl.acm.org/doi/10.1145/3696410.3714548][The First Early Evidence of the Use of Browser Fingerprinting for Online Tracking | Proceedings of the ACM on Web Conference 2025]]
