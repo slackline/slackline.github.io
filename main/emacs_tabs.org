@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9bc4e3ad-1d0e-49a0-a6f5-932679ab8c4e
-:mtime:    20241009152619
+:mtime:    20250625203749 20241009152619
 :ctime:    20241009152619
 :END:
 #+TITLE: Emacs Tabs
@@ -16,3 +16,7 @@ An excellent [[https://themkat.net/2024/01/04/emacs_centaur_tabs.html][article]]
 
 + [[https://github.com/ema2159/centaur-tabs][Centaur-tabs]]
 + [[https://themkat.net/2024/01/04/emacs_centaur_tabs.html][Centaur Tabs - The best tab (UI) system for Emacs!]]
+
+** Blogs
+
++ [[https://www.rahuljuliato.com/posts/emacs-tab-bar-groups][Setting up Emacs native tab-bar and tab-bar-groups for a tmux-like experience | Rahul's Blog]]
