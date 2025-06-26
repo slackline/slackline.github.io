@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       13b7052b-62f1-4e6c-8698-fc9a6938e8c9
+:mtime:    20250626103047
+:ctime:    20250626103047
+:END:
+#+TITLE: Python Schemas
+#+FILETAGS: :python:schema:
+
+Schemas are useful in defining the expected type of data.
+
+* Validate
+
+* Data Schemas
+
+For data validation there is the [[https://pandera.readthedocs.io/en/stable/][Pandera]] framework which supports [[id:fa283f95-40b0-4be0-ab9d-7672d67b7f27][Python Pandas]], [[id:decb0531-e02a-42ab-b101-8ea79e149a09][Polars]], Dask, Modin and PySpark.
+
+
+* Links
+
++ [[https://pandera.readthedocs.io/en/stable/][Pandera documentation]]
++ [[https://github.com/unionai-oss/pandera][unionai-oss/pandera: A light-weight, flexible, and expressive statistical data testing library]]
