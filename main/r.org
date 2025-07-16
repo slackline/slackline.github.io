@@ -88,8 +88,10 @@ Machine Learning interfaces.
 
 * Parallelisation
 
-It's possible to parallelise conducive code using R, one such package is [[https://www.futureverse.org/][Futureverse]] but there are other options some of
-which are summarised in this [[https://bookdown.org/rdpeng/rprogdatascience/parallel-computation.html][Chapter 22 Parallel]] of Roger Peng's [[https://bookdown.org/rdpeng/rprogdatascience/][R Programming for Data Science]].
+It's possible to parallelise conducive code using R, one such package is [[https://www.futureverse.org/][Futureverse]] and the [[https://furrr.futureverse.org][furrr]] package but there are
+other options some of which are summarised in this [[https://bookdown.org/rdpeng/rprogdatascience/parallel-computation.html][Chapter 22 Parallel]] of Roger Peng's [[https://bookdown.org/rdpeng/rprogdatascience/][R Programming for Data Science]].
+
+The [[https://www.tidyverse.org/blog/2025/07/purrr-1-1-0-parallel/][purrr]] package also provides parallel processing.
 
 * Community:
 PROPERTIES:
