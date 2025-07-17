@@ -1,10 +1,16 @@
 :PROPERTIES:
 :ID:       56e77917-c81f-4910-ac8b-206f712e336c
-:mtime:    20241118163519
+:mtime:    20250715215817 20241118163519
 :ctime:    20241118163519
 :END:
 #+TITLE: Git Clone
 #+FILETAGS: :git:clone:github:gitlab:codeberg:forgejo:
+
+Typically [[id:28ffcc43-9dff-4de8-a211-277c5346a642][Git Forges]] are used to share repositories and work, although this is possible (and was originally done) via
+email.
+
+~git clone~ is the main command used to clone repositories, ideally you should use the [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] protocol with your keys to do
+so (see below on how to use specific keys).
 
 * Clone with specific SSH key
 
@@ -21,4 +27,11 @@ This will add the following to your ~.git/config~ file.
     sshcommand = ssh -i ~/.ssh/other_ed25519 -F /dev/null~
 #+end_src
 
+* Other Ways of Sharing
+
+There are other ways of sharing a repository such as [[https://adamj.eu/tech/2025/07/15/git-share-fast-export/][~git fast-export~]] which allows you to share a whole repository as a
+single compressed file which recipients can uncompress.
+
 * Links
+
++ [[https://adamj.eu/tech/2025/07/15/git-share-fast-export/][Git: share a full repository as a file with git fast-export - Adam Johnson]]
