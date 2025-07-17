@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       2c43d94e-dc0c-4c05-915e-8cd32770c064
+:mtime:    20250717135725
+:ctime:    20250717135725
+:END:
+#+TITLE: Python Security
+#+FILETAGS: :python:security:
+
+* Links
+
++ [[https://bandit.readthedocs.io/en/latest/start.html][Getting Started — Bandit documentation]]
