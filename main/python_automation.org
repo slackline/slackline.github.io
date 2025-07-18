@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       10170af7-0bdf-48bf-89ab-3ee586db2989
+:mtime:    20250718115156
+:ctime:    20250718115156
+:END:
+#+TITLE: Python Automation
+#+FILETAGS: :python:programming:automation:
+
+A popular book for learning Python is [[https://automatetheboringstuff.com/#toc][Automate the Boring Stuff with Python - Automate the Boring Stuff with
+Python]]. There is an additional chapter that didn't make the cut that shows how to [[https://inventwithpython.com/blog/lost-av-chapter.html][Audio, Video, and Webcams in Python
+(Lost Chapter from Automate the Boring Stuff) - Invent with Python]]
