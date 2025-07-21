@@ -1,6 +1,12 @@
 :PROPERTIES:
 :ID:       60bd7406-c4c2-4316-8517-cb9d1cac8f35
+<<<<<<< HEAD
 :mtime:    20250721065203 20230914192913 20230528221730
+||||||| parent of 879139f (sheffield: adding weather details)
+:mtime:    20230914192913 20230528221730
+=======
+:mtime:    20250721083639 20250721065203 20230914192913 20230528221730
+>>>>>>> 879139f (sheffield: adding weather details)
 :ctime:    20230528221730
 :END:
 #+TITLE: Sheffield
@@ -22,3 +28,4 @@ parents don't live too far away.
 ** Weather
 
 + [[https://www.sheffieldweather.co.uk/index.htm][South West Sheffield weather]]
++ [[https://check-for-flooding.service.gov.uk/station/9441][Meers Brook level at Sheffield Meersbrook]] (wider [[https://check-for-flooding.service.gov.uk/river-and-sea-levels?v=map-live&lyr=mv,ri,ti,gr,rf&ext=-1.556249,53.325115,-1.37907,53.386163&fid=stations.9441][map]])
