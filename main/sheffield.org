@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       60bd7406-c4c2-4316-8517-cb9d1cac8f35
-:mtime:    20230914192913 20230528221730
+:mtime:    20250721065203 20230914192913 20230528221730
 :ctime:    20230528221730
 :END:
 #+TITLE: Sheffield
@@ -18,3 +18,7 @@ parents don't live too far away.
 ** Council
 
 + [[https://sheffieldactivetravelmap.commonplace.is][Sheffield Commonplace Active Travel Map]]
+
+** Weather
+
++ [[https://www.sheffieldweather.co.uk/index.htm][South West Sheffield weather]]
