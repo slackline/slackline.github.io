@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       ddb08b45-3bec-404b-8a67-dd4982f631cd
+:mtime:    20250718203342
+:ctime:    20250718203342
+:END:
+#+TITLE: Emacs Spellcheck
+#+FILETAGS: :emacs:spelling:lsp:
+
+Emacs has a few options to help with spellchecking, some on the fly and others manual.
+
+* Harper
+
+* Links
+
+** Harper
+
++ [[https://taonaw.com/2025/07/08/harper-quick-light-and-private.html][Harper: quick, light and private grammer check for Emacs | The Art Of Not Asking Why]]
++ [[https://www.cyan.sh/blog/posts/goodbye-languagetool-hello-harper.html][Goodbye LanguageTool, Hello Harper | cyan.sh]]
