@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       00092001-9bac-4434-b098-a72d6b00385a
-:mtime:    20250225094538 20240113162844
+:mtime:    20250721171112 20250225094538 20240113162844
 :ctime:    20240113162844
 :END:
 #+TITLE: Emacs Editing
@@ -23,6 +23,31 @@ Replacement String]] for examples.
 This is a neat way of looking at what a regular expression would change in form of a [[https://christiantietze.de/posts/2025/02/preview-mass-text-replacements-with-emacs-30-1-replace-regexp-as-diff/][diff]]. A neat consequence is that
 you can then choose hunk-by-hunk whether to make the change.
 
+* Yanking and Pasting
+
+Emacs has a sophisticated kill-ring/history that stores lots of things when you want to paste something you can use
+~C-y~ to paste from this ring and the last item will go in. If you want the second from last ~C-x 2 C-y~ and so on. BUt
+that gets challenging to remember everything that is in the history, instead using ~M-y~ and a mini-buffer opens showing
+the history and you can navigate through them and select what you want to insert.
+
+** Rectangles
+
+Rectangle select in Emacs is magic, how anyone survives without it I don't know. However, the default behaviour is to
+insert as is, at the point of pasting, over-writing lines below. I found a [[https://emacs.stackexchange.com/a/46352/10100][neat solution]] that allows you to push rows
+down so that the rectangle gets inserted in its entirety.
+
+#+begin_src elisp
+(defun my-insert-rectangle-push-lines ()
+  "Yank a rectangle as if it was an ordinary kill."
+  (interactive "*")
+  (when (and (use-region-p) (delete-selection-mode))
+    (delete-region (region-beginning) (region-end)))
+  (save-restriction
+    (narrow-to-region (point) (mark))
+    (yank-rectangle)))
+
+(global-set-key (kbd "C-x r C-y") #'my-insert-rectangle-push-lines)
+#+end_src
 * Links
 
 + [[https://susam.net/maze/elisp-in-replacement-string.html][Elisp in Replacement String - Susam's Maze]]
