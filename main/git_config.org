@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       982c7c92-4abc-46cd-a7fc-fee326ff60cd
-:mtime:    20250603144041 20250603081645
+:mtime:    20250721122423 20250603144041 20250603081645
 :ctime:    20250603081645
 :END:
 #+TITLE: Git Config
@@ -80,3 +80,7 @@ commits in these files.
 
 + [[https://www.jamescherti.com/better-git-diff-emacs-lisp-elisp/][Enhancing Git Diff for Emacs Lisp: Better Git Diff of Elisp function or macro]]
 + [[https://sergiswriting.com/better-colors-for-moved-text-in-git/][Better colors for moved text in Git]]
+
+** Multiple Identities
+
++ [[https://www.micah.soy/posts/setting-up-git-identities/][Setting Up Git Identities · Micah Henning]]

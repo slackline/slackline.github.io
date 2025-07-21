@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       01336e19-dc8a-41ca-8534-6a790b39b1b6
-:mtime:    20250320182158 20250315230213 20250311204727 20250301213624 20241226213213 20241225093335 20241215081001
+:mtime:    20250721123324 20250320182158 20250315230213 20250311204727 20250301213624 20241226213213 20241225093335 20241215081001
 :ctime:    20241215081001
 :END:
 #+TITLE: NixOS - HomeManager
@@ -42,6 +42,7 @@ stow .
 
 + [[https://gvolpe.com/blog/home-manager-dotfiles-management/][Home Manager: dotfiles management • gvolpe's blog]] - appears to show how to use plain [[id:31304184-2fad-4cc5-824b-3ab4b9d2e126][Dotfiles]] within the HomeManager
   framework.
++ [[https://pickard.cc/posts/git-identity-home-manager/][multiple git identities with home-manager and fzf]]
 
 ** Examples
 
