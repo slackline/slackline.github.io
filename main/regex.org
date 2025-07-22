@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       ee3e277e-908a-4716-a1c0-f6dafb75ba9b
+:mtime:    20250722112248
+:ctime:    20250722112248
+:END:
+#+TITLE: Regular Expressions
+#+FILETAGS: :regex:
+
+This way madness lies!
+
+* Links

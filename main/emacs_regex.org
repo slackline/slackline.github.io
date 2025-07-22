@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       0b1b62a7-dcf8-4eeb-86c2-75b465744936
+:mtime:    20250722113054
+:ctime:    20250722113054
+:END:
+#+TITLE: Emacs Regex
+#+FILETAGS: :emacs:regex:
+
+At some point you're going to want to use [[id:ee3e277e-908a-4716-a1c0-f6dafb75ba9b][regular expressions]] to edit your text (typically find and replace).
+
+* ~re-builder~
+
+A simple way of building your regular expression is to invoke ~M-x re-builder~ which starts a buffer for you to type
+your regular expression in and shows you matches. It has two "modes" for syntax ~read~ and ~string~.
+
+Once you have built your regular expression you should change the mode using ~C-c Tab~ and selecting ~string~, copy and
+paste your regular expression (without double-quotes) and return to your buffer and invoke ~query-regex-replace~
+(typically bound to ~C-M-%~) and paste your regular expression in.
+
+* Syntax
+
+You can use the usual ~*~, ~+~, ~.~, ~^~ and ~$~ special characters for globbing and anchoring with
+newlines. Alpha-numeric ranges aren't case-sensitive so you can use ~[a-z]~ to get all upper and lower case letters. All
+upper and lower case letters and numbers would be ~[a-z0-9]~.
+
+** Grouping
+
+You group by surrounding in parentheses (and this is contingent on the mode, see below). You refer to groups with ~\#~
+with a number for the grouping in the replacement.
+
+** Modes
+There are two modes as mentioned, ~read~ and ~string~, they seem to differ in how they escape grouping.
+
+| Mode     | Escaping Grouping |
+|----------+-------------------|
+| ~read~   | ~\\( \\)~         |
+| ~string~ | ~\( \)~           |
+
+* Links
+
++ [[https://emacs.stackexchange.com/a/51190/10100][Using re-builder in query-replace]]
