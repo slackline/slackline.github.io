@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       da64b178-e02b-4665-bae2-667bddf8885e
+:mtime:    20250724122224
+:ctime:    20250724122224
+:END:
+#+TITLE: AI Hype
+#+FILETAGS: :ai:hype:
+
+* Links
+
++ [[https://ludic.mataroa.blog/blog/i-will-fucking-piledrive-you-if-you-mention-ai-again/][I Will Fucking Piledrive You If You Mention AI Again — Ludicity]]
++ [[https://www.theguardian.com/commentisfree/article/2024/jul/27/harm-ai-artificial-intelligence-backlash-human-labour][Robots sacked, screenings shut down: a new movement of luddites is rising up against AI | Ed Newton-Rex | The Guardian]]
+  ([[https://www.theguardian.com/technology/article/2024/aug/02/we-must-be-wary-of-the-power-of-ai][We must be wary of the power of AI | Letters]])
++ [[https://www.techpolicy.press/challenging-the-myths-of-generative-ai/][Challenging The Myths of Generative AI | TechPolicy.Press]]
++ [[https://www.noemamag.com/the-danger-of-superhuman-ai-is-not-what-you-think/][The Danger Of Superhuman AI Is Not What You Think - NOEMA]]
++ [[https://savvykenya.wordpress.com/2025/07/24/raging-against-the-gen-ai-machine/][Raging Against the (Gen) AI Machine | Savvy Kenya in Japan]]
++ [[https://blogs.ed.ac.uk/s2670773_future-governance-kipp--futures-project-2024-25/2025/03/03/the-great-ai-paradox-why-this-bubble-will-burst-and-why-it-doesnt-matter/][The Great AI Paradox: Why This Bubble Will Burst—And Why It Doesn’t Matter – J.E. Van Clief]]

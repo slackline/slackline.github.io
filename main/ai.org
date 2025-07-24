@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5
-:mtime:    20250722225031 20250715130511 20250618203245 20250616211720 20250613202235 20250611091333 20250607215947 20250605184112 20250602184925 20250529141210 20250526205646 20250524094933 20250523205617 20250520121528 20250515225241 20250510203234 20250508133151 20250505115632 20250423150042 20250311213041 20250212214625 20250207140124 20250112204253 20250109142657 20250101222855 20241229195120 20241227135035 20241203234039 20241117224047 20241110212058 20241020115925 20241006094739 20240927072528 20240916085950 20240829150248 20240825203610 20240807135153 20240805160240 20240804210618 20240716140526 20240714231345 20240706170213 20240701065359 20240626230330 20240615183601 20240530093111 20240514223948 20240329211826 20240310181610 20240203204843 20240122164607 20240120110521 20231231180655 20231218184621 20231206221404 20231104081218 20231023063845 20231013000730 20230924112611 20230907232738 20230803211138 20230722230042 20230721144339 20230720100255 20230705092829 20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
+:mtime:    20250724121716 20250722225031 20250715130511 20250618203245 20250616211720 20250613202235 20250611091333 20250607215947 20250605184112 20250602184925 20250529141210 20250526205646 20250524094933 20250523205617 20250520121528 20250515225241 20250510203234 20250508133151 20250505115632 20250423150042 20250311213041 20250212214625 20250207140124 20250112204253 20250109142657 20250101222855 20241229195120 20241227135035 20241203234039 20241117224047 20241110212058 20241020115925 20241006094739 20240927072528 20240916085950 20240829150248 20240825203610 20240807135153 20240805160240 20240804210618 20240716140526 20240714231345 20240706170213 20240701065359 20240626230330 20240615183601 20240530093111 20240514223948 20240329211826 20240310181610 20240203204843 20240122164607 20240120110521 20231231180655 20231218184621 20231206221404 20231104081218 20231023063845 20231013000730 20230924112611 20230907232738 20230803211138 20230722230042 20230721144339 20230720100255 20230705092829 20230611202222 20230511092515 20230508183957 20230506200631 20230504213113 20230426225543 20230416130557 20230322073223 20230305175434 20230305082620 20230304230340
 :ctime:    20230304230340
 :END:
 #+TITLE: Artificial Intelligence
@@ -11,6 +11,9 @@ intelligence. Its a tricky area, what defines "human intelligence" is a basic ax
 possible to define whether anything "artificial" can mimic it.
 
 + [[id:a916807b-112d-40c3-81fd-f0d4c6e45712][AI Agents]]
++ [[id:da64b178-e02b-4665-bae2-667bddf8885e][Hype]]
++ [[id:87301ef3-87da-4826-8862-533bdb0052ac][Environment]]
++ [[id:7a9deb85-fb4d-4d18-b2be-ed8048a5a1d4][Critique]]
 
 * Applications
 
@@ -153,22 +156,6 @@ also linked [[https://reproducible.cs.princeton.edu/][Leakage and the Reproducib
 
 + [[https://restofworld.org/2023/ai-image-stereotypes/][Generative AI like Midjourney creates images full of stereotypes - Rest of World]]
 
-** Hype
-
-+ [[https://ludic.mataroa.blog/blog/i-will-fucking-piledrive-you-if-you-mention-ai-again/][I Will Fucking Piledrive You If You Mention AI Again — Ludicity]]
-+ [[https://www.theguardian.com/commentisfree/article/2024/jul/27/harm-ai-artificial-intelligence-backlash-human-labour][Robots sacked, screenings shut down: a new movement of luddites is rising up against AI | Ed Newton-Rex | The Guardian]]
-  ([[https://www.theguardian.com/technology/article/2024/aug/02/we-must-be-wary-of-the-power-of-ai][We must be wary of the power of AI | Letters]])
-+ [[https://www.techpolicy.press/challenging-the-myths-of-generative-ai/][Challenging The Myths of Generative AI | TechPolicy.Press]]
-+ [[https://www.noemamag.com/the-danger-of-superhuman-ai-is-not-what-you-think/][The Danger Of Superhuman AI Is Not What You Think - NOEMA]]
-
-** Environmental Impact
-
-+ [[https://www.theguardian.com/commentisfree/2023/dec/23/ai-chat-gpt-environmental-impact-energy-carbon-intensive-technology][Why AI is a disaster for the climate | John Naughton | The Guardian]]
-+ [[https://arxiv.org/abs/1906.02243v1][[1906.02243v1] Energy and Policy Considerations for Deep Learning in NLP]]
-+ [[https://arxiv.org/abs/2311.16863][[2311.16863] Power Hungry Processing: Watts Driving the Cost of AI Deployment?]]
-+ [[https://www.sustainabilitybynumbers.com/p/carbon-footprint-chatgpt][What's the carbon footprint of using ChatGPT?]]
-
-
 ** Learning Materials
 
 *** Coding
@@ -183,21 +170,6 @@ also linked [[https://reproducible.cs.princeton.edu/][Leakage and the Reproducib
 
 ** Misc
 
-+ [[https://writings.stephenwolfram.com/2023/01/wolframalpha-as-the-way-to-bring-computational-knowledge-superpowers-to-chatgpt/][Wolfram|Alpha as the Way to Bring Computational Knowledge Superpowers to ChatGPT—Stephen Wolfram Writings]]
-+ [[https://www.theguardian.com/technology/2023/feb/08/biased-ai-algorithms-racy-women-bodies][‘There is no standard’: investigation finds AI algorithms objectify women’s bodies | Artificial intelligence (AI) | The Guardian]]
-+ [[https://www.reddit.com/r/ChatGPT/comments/10s79h2/new_jailbreak_just_dropped/][New jailbreak just dropped! : ChatGPT]]
-+ [[https://www.technologyreview.com/2023/02/14/1068498/why-you-shouldnt-trust-ai-search-engines/][Why you shouldn’t trust AI search engines | MIT Technology Review]]
-+ [[https://www.theguardian.com/technology/2023/feb/08/biased-ai-algorithms-racy-women-bodies][‘There is no standard’: investigation finds AI algorithms objectify women’s bodies | Artificial intelligence (AI) |
-  The Guardian]]
-+ [[https://vickiboykis.com/2023/02/26/what-should-you-use-chatgpt-for/][What should you use ChatGPT for? | ★❤✰ Vicki Boykis ★❤✰]]
-+ [[https://www.semianalysis.com/p/google-we-have-no-moat-and-neither][Google "We Have No Moat, And Neither Does OpenAI"]] - leaked internal article on how closed source AI systems are losing
-  the "race" to open-source systems.
-+ [[https://www.theatlantic.com/technology/archive/2023/05/problem-counterfeit-people/674075/][The Problem With Counterfeit People - The Atlantic]]
-+ [[https://www.nature.com/articles/d41586-023-02990-y][How to stop AI deepfakes from sinking society — and science]]
-+ [[https://www.oreilly.com/radar/how-to-fix-ais-original-sin/][How to Fix “AI’s Original Sin” – O’Reilly]]
-+ [[https://www.theguardian.com/news/article/2024/aug/08/no-god-in-the-machine-the-pitfalls-of-ai-worship][No god in the machine: the pitfalls of AI worship | Artificial intelligence (AI) | The Guardian]]
-+ [[https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art][Why A.I. Isn't Going to Make Art]]
-+ [[https://privacyinternational.org/news-analysis/5591/are-ai-assistants-built-us-or-exploit-us-and-other-questions-ai-industry][Are AI Assistants built for us or to exploit us? and other questions for the AI industry | Privacy International]]
 
 ** Books
 
@@ -243,42 +215,17 @@ also linked [[https://reproducible.cs.princeton.edu/][Leakage and the Reproducib
 
 ** Reading
 
-+ [[https://nymag.com/intelligencer/article/ai-artificial-intelligence-chatbots-emily-m-bender.html][On the Dangers of  Stochastic Parrots: Can Language Models Be Too Big?]]
-+ [[https://www.newyorker.com/magazine/2023/04/03/the-data-delusion][The Data Delusion | The New Yorker]]
-+ [[https://time.com/6273743/thinking-that-could-doom-us-with-ai/?][The 'Don't Look Up' Thinking That Could Doom Us With AI | Time]]
-+ [[https://www.theguardian.com/commentisfree/2023/jun/11/big-tech-warns-of-threat-from-ai-but-the-real-danger-is-the-people-behind-it][Fantasy fears about AI are obscuring how we already abuse machine intelligence | Kenan Malik | The Guardian]]
-+ [[https://simonwillison.net/2023/Aug/3/weird-world-of-llms/][Catching up on the weird world of LLMs]]
-+ [[https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey][Will A.I. Become the New McKinsey? | The New Yorker]]
-+ [[https://www.secondbest.ca/p/ai-and-leviathan-part-i][AI and Leviathan: Part I - by Samuel Hammond - Second Best]]
-+ [[https://www.secondbest.ca/p/ai-and-leviathan-part-ii][AI and Leviathan: Part II - by Samuel Hammond - Second Best]]
-+ [[https://statmodeling.stat.columbia.edu/wp-content/uploads/2023/10/carpenter-transformer-decoder-pseudocode.pdf][Transformer decoding in fifty lines of pseudocode]]
-+ [[https://www.nature.com/articles/d41586-023-03144-w][How ChatGPT and other AI tools could disrupt scientific publishing]]
-+ [[https://vickiboykis.com/2024/01/15/whats-new-with-ml-in-production/][Vicki Boykis - What's new with ML in Production (2024-01-15)]]
-+ [[https://www.theguardian.com/commentisfree/article/2024/aug/24/ai-cheating-chat-gpt-openai-writing-essays-school-university][AI cheating is overwhelming the education system – but teachers shouldn’t despair | John Naughton | The Guardian]]
-+ [[https://www.programmablemutter.com/p/ai-fight-club-and-what-it-hides][AI Fight Club and what it hides - by Henry Farrell]]
-+ [[https://www.theguardian.com/commentisfree/2024/dec/28/llms-large-language-models-gen-ai-agents-spreadsheets-corporations-work][How will AI reshape 2025? Well, it could be the spreadsheet of the 21st century | John Naughton | The Guardian]]
-  + [[https://www.programmablemutter.com/p/the-management-singularity][The Management Singularity - by Henry Farrell]]
-  + [[https://backofmind.substack.com/p/the-spreadsheet-revolution][the spreadsheet revolution - Dan Davies - "Back of Mind"]]
-+ [[https://simonwillison.net/2024/Dec/31/llms-in-2024/][Things we learned about LLMs in 2024]]
-+ [[https://www.oreilly.com/radar/the-end-of-programming-as-we-know-it/][The End of Programming as We Know It – O’Reilly]]
-+ [[https://theconversation.com/is-ai-sparking-a-cognitive-revolution-that-will-lead-to-mediocrity-and-conformity-256940][Is AI sparking a cognitive revolution that will lead to mediocrity and conformity?]]
-+ [[https://knightcolumbia.org/content/ai-as-normal-technology][AI as Normal Technology | Knight First Amendment Institute]]
-+ [[https://www.theregister.com/2025/06/15/ai_model_collapse_pollution/][The launch of ChatGPT polluted the world forever, like the first atomic weapons tests]]
-+ [[https://nealstephenson.substack.com/p/emerson-ai-and-the-force][Emerson, AI, and The Force - by Neal Stephenson]]
 
 ** Books
 
 + [[https://github.com/ageron/handson-ml3][Hands-On Machine Learning with Scikit-Learn, Keras and TensorFlow]] - Jupyter Notebooks to accompany the book.
 
-** Open AI
-
-+ [[https://www.technologyreview.com/2024/03/25/1090111/tech-industry-open-source-ai-definition-problem/][MIT Technology Review : The tech industry can't agree on what open-source AI means. That is a problem.]]
-+ [[https://www.nature.com/articles/s41586-024-08141-1][Why ‘open’ AI systems are actually closed, and why this matters | Nature]]
-
 ** Licenses
 
 + [[https://www.licenses.ai][Responsible AI Licenses (RAILS)]]
-
++ [[https://www.technologyreview.com/2024/03/25/1090111/tech-industry-open-source-ai-definition-problem/][MIT Technology Review : The tech industry can't agree on what open-source AI means. That is a problem.]]
++ [[https://www.nature.com/articles/s41586-024-08141-1][Why ‘open’ AI systems are actually closed, and why this matters | Nature]]
++ [[https://pivot-to-ai.com/2025/07/22/open-source-projects-reject-ai-code-over-copyright-concerns/][Open source projects reject AI code over copyright concerns – Pivot to AI]]
 
 ** Emacs
 

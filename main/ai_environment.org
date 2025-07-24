@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       87301ef3-87da-4826-8862-533bdb0052ac
+:mtime:    20250724122354
+:ctime:    20250724122354
+:END:
+#+TITLE: AI Environmental Impact
+#+FILETAGS: :ai:environment:
+
+* Links
+
++ [[https://www.theguardian.com/commentisfree/2023/dec/23/ai-chat-gpt-environmental-impact-energy-carbon-intensive-technology][Why AI is a disaster for the climate | John Naughton | The Guardian]]
++ [[https://arxiv.org/abs/1906.02243v1][[1906.02243v1] Energy and Policy Considerations for Deep Learning in NLP]]
++ [[https://arxiv.org/abs/2311.16863][[2311.16863] Power Hungry Processing: Watts Driving the Cost of AI Deployment?]]
++ [[https://www.sustainabilitybynumbers.com/p/carbon-footprint-chatgpt][What's the carbon footprint of using ChatGPT?]]

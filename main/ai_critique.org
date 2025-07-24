@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       7a9deb85-fb4d-4d18-b2be-ed8048a5a1d4
+:mtime:    20250724122628
+:ctime:    20250724122628
+:END:
+#+TITLE: AI Critique
+#+FILETAGS: :ai:critique:
+
+* Links
+
++ [[https://writings.stephenwolfram.com/2023/01/wolframalpha-as-the-way-to-bring-computational-knowledge-superpowers-to-chatgpt/][Wolfram|Alpha as the Way to Bring Computational Knowledge Superpowers to ChatGPT—Stephen Wolfram Writings]]
++ [[https://www.theguardian.com/technology/2023/feb/08/biased-ai-algorithms-racy-women-bodies][‘There is no standard’: investigation finds AI algorithms objectify women’s bodies | Artificial intelligence (AI) | The Guardian]]
++ [[https://www.reddit.com/r/ChatGPT/comments/10s79h2/new_jailbreak_just_dropped/][New jailbreak just dropped! : ChatGPT]]
++ [[https://www.technologyreview.com/2023/02/14/1068498/why-you-shouldnt-trust-ai-search-engines/][Why you shouldn’t trust AI search engines | MIT Technology Review]]
++ [[https://www.theguardian.com/technology/2023/feb/08/biased-ai-algorithms-racy-women-bodies][‘There is no standard’: investigation finds AI algorithms objectify women’s bodies | Artificial intelligence (AI) |
+  The Guardian]]
++ [[https://vickiboykis.com/2023/02/26/what-should-you-use-chatgpt-for/][What should you use ChatGPT for? | ★❤✰ Vicki Boykis ★❤✰]]
++ [[https://www.semianalysis.com/p/google-we-have-no-moat-and-neither][Google "We Have No Moat, And Neither Does OpenAI"]] - leaked internal article on how closed source AI systems are losing
+  the "race" to open-source systems.
++ [[https://www.theatlantic.com/technology/archive/2023/05/problem-counterfeit-people/674075/][The Problem With Counterfeit People - The Atlantic]]
++ [[https://www.nature.com/articles/d41586-023-02990-y][How to stop AI deepfakes from sinking society — and science]]
++ [[https://www.oreilly.com/radar/how-to-fix-ais-original-sin/][How to Fix “AI’s Original Sin” – O’Reilly]]
++ [[https://www.theguardian.com/news/article/2024/aug/08/no-god-in-the-machine-the-pitfalls-of-ai-worship][No god in the machine: the pitfalls of AI worship | Artificial intelligence (AI) | The Guardian]]
++ [[https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art][Why A.I. Isn't Going to Make Art]]
++ [[https://privacyinternational.org/news-analysis/5591/are-ai-assistants-built-us-or-exploit-us-and-other-questions-ai-industry][Are AI Assistants built for us or to exploit us? and other questions for the AI industry | Privacy International]]
++ [[https://nymag.com/intelligencer/article/ai-artificial-intelligence-chatbots-emily-m-bender.html][On the Dangers of  Stochastic Parrots: Can Language Models Be Too Big?]]
++ [[https://www.newyorker.com/magazine/2023/04/03/the-data-delusion][The Data Delusion | The New Yorker]]
++ [[https://time.com/6273743/thinking-that-could-doom-us-with-ai/?][The 'Don't Look Up' Thinking That Could Doom Us With AI | Time]]
++ [[https://www.theguardian.com/commentisfree/2023/jun/11/big-tech-warns-of-threat-from-ai-but-the-real-danger-is-the-people-behind-it][Fantasy fears about AI are obscuring how we already abuse machine intelligence | Kenan Malik | The Guardian]]
++ [[https://simonwillison.net/2023/Aug/3/weird-world-of-llms/][Catching up on the weird world of LLMs]]
++ [[https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey][Will A.I. Become the New McKinsey? | The New Yorker]]
++ [[https://www.secondbest.ca/p/ai-and-leviathan-part-i][AI and Leviathan: Part I - by Samuel Hammond - Second Best]]
++ [[https://www.secondbest.ca/p/ai-and-leviathan-part-ii][AI and Leviathan: Part II - by Samuel Hammond - Second Best]]
++ [[https://statmodeling.stat.columbia.edu/wp-content/uploads/2023/10/carpenter-transformer-decoder-pseudocode.pdf][Transformer decoding in fifty lines of pseudocode]]
++ [[https://www.nature.com/articles/d41586-023-03144-w][How ChatGPT and other AI tools could disrupt scientific publishing]]
++ [[https://vickiboykis.com/2024/01/15/whats-new-with-ml-in-production/][Vicki Boykis - What's new with ML in Production (2024-01-15)]]
++ [[https://www.theguardian.com/commentisfree/article/2024/aug/24/ai-cheating-chat-gpt-openai-writing-essays-school-university][AI cheating is overwhelming the education system – but teachers shouldn’t despair | John Naughton | The Guardian]]
++ [[https://www.programmablemutter.com/p/ai-fight-club-and-what-it-hides][AI Fight Club and what it hides - by Henry Farrell]]
++ [[https://www.theguardian.com/commentisfree/2024/dec/28/llms-large-language-models-gen-ai-agents-spreadsheets-corporations-work][How will AI reshape 2025? Well, it could be the spreadsheet of the 21st century | John Naughton | The Guardian]]
+  + [[https://www.programmablemutter.com/p/the-management-singularity][The Management Singularity - by Henry Farrell]]
+  + [[https://backofmind.substack.com/p/the-spreadsheet-revolution][the spreadsheet revolution - Dan Davies - "Back of Mind"]]
++ [[https://simonwillison.net/2024/Dec/31/llms-in-2024/][Things we learned about LLMs in 2024]]
++ [[https://www.oreilly.com/radar/the-end-of-programming-as-we-know-it/][The End of Programming as We Know It – O’Reilly]]
++ [[https://theconversation.com/is-ai-sparking-a-cognitive-revolution-that-will-lead-to-mediocrity-and-conformity-256940][Is AI sparking a cognitive revolution that will lead to mediocrity and conformity?]]
++ [[https://knightcolumbia.org/content/ai-as-normal-technology][AI as Normal Technology | Knight First Amendment Institute]]
++ [[https://www.theregister.com/2025/06/15/ai_model_collapse_pollution/][The launch of ChatGPT polluted the world forever, like the first atomic weapons tests]]
++ [[https://nealstephenson.substack.com/p/emerson-ai-and-the-force][Emerson, AI, and The Force - by Neal Stephenson]]
