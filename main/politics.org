@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8068c739-f291-48b7-8de7-31e6b7e5a5e0
-:mtime:    20241229204346 20231217185347
+:mtime:    20250724122625 20241229204346 20231217185347
 :ctime:    20231217185347
 :END:
 #+TITLE: Politics
@@ -8,6 +8,9 @@
 
 * UK
 
+** [[https://timetoassemble.org/][House of the People]]
+
+A grass roots initiative their first sitting came up with [[https://timetoassemble.org/uks-first-independent-grassroots-democracy-calls-for-immediate-and-total-embargo-on-arms-trade-and-support-for-israel/][5 top priorities]]
 
 ** National
 
