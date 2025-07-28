@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       315e51e1-9ad0-469a-a434-9ed9288889bb
-:mtime:    20250224101053
+:mtime:    20250725121746 20250224101053
 :ctime:    20250224101053
 :END:
 #+TITLE: Proton
@@ -8,4 +8,7 @@
 
 * Links
 
++ [[https://proton.me/community/open-source][Proton Open Source]]
+
+** Hot Air
 + [[https://medium.com/@ovenplayer/does-proton-really-support-trump-a-deeper-analysis-and-surprising-findings-aed4fee4305e][Does Proton really support Trump? A deeper analysis (and surprising findings)]]
