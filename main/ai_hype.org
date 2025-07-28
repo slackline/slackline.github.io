@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       da64b178-e02b-4665-bae2-667bddf8885e
-:mtime:    20250724122224
+:mtime:    20250728201810 20250724122224
 :ctime:    20250724122224
 :END:
 #+TITLE: AI Hype
@@ -15,3 +15,4 @@
 + [[https://www.noemamag.com/the-danger-of-superhuman-ai-is-not-what-you-think/][The Danger Of Superhuman AI Is Not What You Think - NOEMA]]
 + [[https://savvykenya.wordpress.com/2025/07/24/raging-against-the-gen-ai-machine/][Raging Against the (Gen) AI Machine | Savvy Kenya in Japan]]
 + [[https://blogs.ed.ac.uk/s2670773_future-governance-kipp--futures-project-2024-25/2025/03/03/the-great-ai-paradox-why-this-bubble-will-burst-and-why-it-doesnt-matter/][The Great AI Paradox: Why This Bubble Will Burst—And Why It Doesn’t Matter – J.E. Van Clief]]
++ [[https://www.wheresyoured.at/the-haters-gui/][The Hater's Guide To The AI Bubble]]
