@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       5de2c921-cecf-4c1b-9d43-4552e34b1688
+:mtime:    20250729074142
+:ctime:    20250729074142
+:END:
+#+TITLE: Wayland
+#+FILETAGS: :linux:x11:desktop:
+
+[[https://wayland.freedesktop.org/][Wayland]] is a modern replacement for the X11 window system, it requires you to use an independent compositor to give the
+desktop environment and there are a number of options.
+
+* Installation
+
+** Arch Linux
+
+#+begin_src sh
+pacman -Syu wayland Xwayland
+# Optional alternative compositor
+pacman -Syu labwc wayfire
+#+end_src
+
+** Gentoo
+
+#+begin_src sh
+emerge -av wayland xwayland wayland-scanner
+#+end_src
+
+* Compositor
+
+** Hyprland
+
+I opted to use [[id:7dd30b1c-c484-4b49-88e2-4f3fec755a79][Hyprland]]
+
+** Wayfire
+
+** labwc
+
+* Links

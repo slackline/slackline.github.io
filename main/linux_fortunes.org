@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       7dab8680-502c-448d-ab75-3e362e0a42e7
+:mtime:    20250723232030
+:ctime:    20250723232030
+:END:
+#+TITLE: Linux - Fortunes
+#+FILETAGS: :linux:shell:
+
+* Links
+
++ [[https://www.judy.co.uk/blog/using-fortune-to-reinforce-habits/][Using fortune to reinforce habits]]

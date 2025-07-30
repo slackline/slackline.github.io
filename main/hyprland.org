@@ -1,0 +1,88 @@
+:PROPERTIES:
+:ID:       7dd30b1c-c484-4b49-88e2-4f3fec755a79
+:mtime:    20250730232002 20250729221516 20250729073038
+:ctime:    20250729073038
+:END:
+#+TITLE: Hyprland
+#+FILETAGS: :linux:x11:desktop:
+
+[[https://wiki.hypr.land/][Hyprland]] is a compositor for [[id:5de2c921-cecf-4c1b-9d43-4552e34b1688][Wayland]].
+
+* Installation
+
+Here are all the individual programmes I installed under both [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] and [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]]
+
+** Arch Linux
+
+#+begin_src
+pacman -Syu \
+ hypridle \
+ hyprland \
+ hyprlock \
+ hyprpaper \
+ hyprpolkitagent
+ hyprshot \
+ hyprwayland-scanner \
+ otf-font-awesome \
+ swayidle \
+ swaylock \
+ waybar \
+#+end_src
+
+*** AUR
+
+#+begin_src
+hyprpanel
+#+end_src
+** Gentoo
+
+#+begin_src
+emerge -av \
+ fontawesome \
+ fontawesome-extension \
+ hyprland \
+ hyprland-contrib \
+ hyprlock \
+ hyprpaper \
+ hyprpolkitagent \
+ hyprshot \
+ hyprwayland-scanner \
+ nwg-look \
+ swayidle \
+ swaylock \
+ waybar
+#+end_src
+
+* Wallpaper
+
+Wallpapers come courtesy of [[https://wiki.hypr.land/Hypr-Ecosystem/hyprpaper/][hyprpaper]]
+
+* Panel
+
+Panel comes courtesy of [[https://github.com/pdf/hyprpanel][hyprpanel]]
+
+* Authentication
+
+** Elevated Priveliges
+
+Install and use [[https://wiki.hypr.land/Hypr-Ecosystem/hyprpolkitagent/][~hyprpolkitagent~]] to get a GUI that requests elevated privileges.
+
+* Taskbar
+
+Install ~waybar~ and if you want the default icons you should also install ~otf-font-awesome~ (under Arch, for Gentoo
+its ~media-fonts/fontawesome~ and perhaps ~media-fonts/fontawesome-extension~)
+
+* ScreenSaver
+
+
+
+* Screen Lock / Hibernate
+
+
+* Links
+
++ [[https://wiki.hypr.land/][Hyprland]]
++ [[https://github.com/Alexays/Waybar/wiki/Configuration][Waybar]] (wiki)
++ [[https://github.com/horriblename/hyprgrass][hyprgrass]] gestures for touch screens
++ [[https://github.com/hyprwm/hyprlock][hyprlock]]
++ [[https://github.com/pdf/hyprpanel][hyprpanel]]
