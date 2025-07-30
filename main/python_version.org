@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       1fe19d13-aa30-48ae-a765-5f96c0b03484
+:mtime:    20250730233018
+:ctime:    20250730233018
+:END:
+#+TITLE: Python Versioning
+#+FILETAGS: :python:versioning:
+
+
+[[https://packaging.pypa.io/en/stable/version.html][Version Handling]] is fairly important and when you have highly complex [[https://packaging.python.org/en/latest/specifications/version-specifiers/][version specifiers]] the task becomes
+challenging. But they ~packaging.version~ module is there to help.
+
+* Links
+
++ [[https://packaging.pypa.io/en/stable/version.html][Version Handling - Packaging]]
++ [[https://adamj.eu/tech/2025/07/30/python-check-package-version-importlib-metadata-version/][Python: check a package version with importlib.metadata.version() - Adam Johnson]]
++ [[https://github.com/hmallen/numpyencoder/pull/8#pullrequestreview-2909627932][Using parse_version to compare versions]]
