@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d9176707-8c60-4557-a181-7780d3215cbe
-:mtime:    20230223120312
+:mtime:    20250731103802 20230223120312
 :ctime:    20230223120312
 :END:
 #+TITLE: Python Pickle
@@ -22,9 +22,11 @@ saved to disk and can be loaded again in the future for subsequent usage and mod
 
   out_dir = Path().cwd()
   outfile = out_dir / "my.pkl"
-  with outfile.open(mode="wb", encoding="utf-8") as f:
+  with outfile.open(mode="w", encoding="utf-8") as f:
       pkl.dump(dummy_array, f)
 #+end_src
+
+Note if you are saving in binary mode (~mode="wb"~) encoding is not required.
 
 * Loading Pickles
 
