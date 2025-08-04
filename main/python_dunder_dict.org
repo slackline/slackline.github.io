@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       0f637683-6a7e-422a-bed8-5aa5fadd5e5a
+:mtime:    20250804153531
+:ctime:    20250804153531
+:END:
+#+TITLE: Python Dunder : dict
+#+FILETAGS: :python:dunder:

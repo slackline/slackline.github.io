@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       77b1cbdc-5acc-43c6-a8b0-b65f3c8c07ac
+:mtime:    20250804153636
+:ctime:    20250804153636
+:END:
+#+TITLE: Python Dunder
+#+FILETAGS: :python:methods:attributes:properties:
+
+Dunder methods are added to any object created in [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] automatically on creation. They're really useful as they
+provide functionality right out of the box.
+
++ [[id:0f637683-6a7e-422a-bed8-5aa5fadd5e5a][~__dict__~]]
++ [[id:cb9da886-ad9c-42de-a8b2-6583df6b6a36][~__slots__~]]

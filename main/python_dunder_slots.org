@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       cb9da886-ad9c-42de-a8b2-6583df6b6a36
+:mtime:    20250804153437
+:ctime:    20250804153437
+:END:
+#+TITLE: Python Dunder : Slots
+#+FILETAGS: :python:dunder:slots:
+
+
+* Links
+
++ [[https://www.kdnuggets.com/what-does-pythons-__slots__-actually-do][What does Python ~__slots__~ actually do?]]
