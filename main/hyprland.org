@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       7dd30b1c-c484-4b49-88e2-4f3fec755a79
-:mtime:    20250730232002 20250729221516 20250729073038
+:mtime:    20250801153333 20250730232002 20250729221516 20250729073038
 :ctime:    20250729073038
 :END:
 #+TITLE: Hyprland
@@ -53,6 +53,10 @@ emerge -av \
  waybar
 #+end_src
 
+* Workspace
+
+The [[https://github.com/levnikmyskin/hyprland-virtual-desktops][levnikmyskin/hyprland-virtual-desktops]] plugin implements virtual-desktop functionality which groups screens into
+workspaces (by default in Hyprland treats each monitor/screen as its own workspace).
 * Wallpaper
 
 Wallpapers come courtesy of [[https://wiki.hypr.land/Hypr-Ecosystem/hyprpaper/][hyprpaper]]
