@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       7a9deb85-fb4d-4d18-b2be-ed8048a5a1d4
-:mtime:    20250724122628
+:mtime:    20250805173615 20250724122628
 :ctime:    20250724122628
 :END:
 #+TITLE: AI Critique
@@ -45,3 +45,4 @@
 + [[https://knightcolumbia.org/content/ai-as-normal-technology][AI as Normal Technology | Knight First Amendment Institute]]
 + [[https://www.theregister.com/2025/06/15/ai_model_collapse_pollution/][The launch of ChatGPT polluted the world forever, like the first atomic weapons tests]]
 + [[https://nealstephenson.substack.com/p/emerson-ai-and-the-force][Emerson, AI, and The Force - by Neal Stephenson]]
++ [[https://maggieappleton.com/ai-enlightenment/][A Treatise on AI Chatbots Undermining the Enlightenment]]
