@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       470e9f37-f4f8-4e7f-adf2-3dbac9b8bf06
-:mtime:    20250621075602 20250527214044 20250526075929 20250312091850 20250209203305 20250202173405 20250201184321 20250118204303
+:mtime:    20250805212553 20250621075602 20250527214044 20250526075929 20250312091850 20250209203305 20250202173405 20250201184321 20250118204303
 :ctime:    20250118204303
 :END:
 #+STARTUP: align
@@ -1386,7 +1386,7 @@ days.
 * Resources
 :PROPERTIES:
 :ID:       ea9dd233-64c4-493f-a4dc-9ec73df0c7cd
-:mtime:    20250621075602 20250527213847 20250312091850 20250209203305 20250118204443
+:mtime:    20250805212553 20250621075602 20250527213847 20250312091850 20250209203305 20250118204443
 :ctime:    20250118204443
 :END:
 
@@ -1394,11 +1394,12 @@ Various pieces and resources I've read (or intend to).
 ** Climbing
 *** Fingerboarding
 + [[http://eveningsends.com/five-minute-fingers/][Five Minute Fingers | Evening Sends]]
-*** Lattice
+*** Lattice/Wide Boys
 + [[https://www.youtube.com/c/LatticeTraining/videos][Lattice Training - All Videos]]
 + [[https://www.youtube.com/watch?v=hJ_LhlF9YRs][Lattice : Fingerboarding & Hangboarding: A Beginner's Guide]]
 + [[https://www.youtube.com/watch?v=GRMqKnQyfZE][Lattice : Fingerboard Training - 3 Common Mistakes]]
 + [[https://www.youtube.com/watch?v=FEq_QANqEmI][Lattice : Climbing Training At Home - What Is Best?]]
++ [[https://www.youtube.com/watch?v=AXdevbFqBuI][Get Stronger Fingers with Less Hang Time - Pete Whittaker]]
 *** Dave Macleod
 + [[https://www.youtube.com/watch?v=Z5HZTN4MR-o][Dave Macleod : Hangboard for beginners]]
 + [[https://www.youtube.com/watch?v=VeKE5VH5-qg][Dave Macleod : How to Hangboard]]
