@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       b7f7d939-b310-48c5-90a4-96046d7001e4
+:mtime:    20250806065130
+:ctime:    20250806065130
+:END:
+#+TITLE: Emacs Daemon
+#+FILETAGS: :emacs:startup:configuration:daemon:
+
+Daemon mode allows a headless server of Emacs to be started which you can connect clients to. This is useful as it
+allows Emacs to be started in the background when booting and gives persistent sessions.
+
+** Finding the Socket
+
+I found on occassions the socket changed.
+
+[[https://stackoverflow.com/questions/23148787/why-emacsclient-cant-find-socket-after-executing-emacs-daemon][This]] allows you to find out where it is.
+
+#+begin_src
+lsof -c emacs | grep server | grep -E -o '[^[:blank:]]*$'
+#+end_src
+
+* Links
