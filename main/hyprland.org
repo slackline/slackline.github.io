@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       7dd30b1c-c484-4b49-88e2-4f3fec755a79
-:mtime:    20250801153333 20250730232002 20250729221516 20250729073038
+:mtime:    20250806065755 20250801153333 20250730232002 20250729221516 20250729073038
 :ctime:    20250729073038
 :END:
 #+TITLE: Hyprland
@@ -53,10 +53,35 @@ emerge -av \
  waybar
 #+end_src
 
-* Workspace
+* General
 
-The [[https://github.com/levnikmyskin/hyprland-virtual-desktops][levnikmyskin/hyprland-virtual-desktops]] plugin implements virtual-desktop functionality which groups screens into
-workspaces (by default in Hyprland treats each monitor/screen as its own workspace).
+You can set general/default settings under ~general {...}~ and ~decoration {...}~ but these can be over-ridden on a per
+monitor/programme basis.
+
+* [[https://wiki.hypr.land/0.46.0/Configuring/Monitors/][Monitors]]
+
+Find out what monitors you have with ~hyprctl monitors~.
+
+#+begin_src
+# = name, resolution, offset, scale
+monitor = eDP-1, highres, 0x0, 1
+#+end_src
+
+Here ~highres~ sets the maximum resolution for the monitor. ~0x0~ is the offset from the top-left. For the first monitor
+this is irrelevant its always anchored to the top-left, but for subsequent monitors it defines whether they are placed
+to the left/right/above/below the first monitor.
+
+* [[https://wiki.hypr.land/0.46.0/Configuring/Workspace-Rules/][Workspace]]
+
+By default in Hyprland treats each monitor/screen as its own workspace. The [[https://github.com/levnikmyskin/hyprland-virtual-desktops][levnikmyskin/hyprland-virtual-desktops]]
+plugin implements virtual-desktop functionality which groups screens into workspaces.
+
+You can then configure a workspace to be on a specific monitor.
+
+#+begin_src
+workspace = name:terminal, monitor:DP-1
+#+end_src
+
 * Wallpaper
 
 Wallpapers come courtesy of [[https://wiki.hypr.land/Hypr-Ecosystem/hyprpaper/][hyprpaper]]
