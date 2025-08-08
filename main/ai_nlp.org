@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       2edc9393-31c6-404f-8d73-bb364c0cd461
+:mtime:    20250808165505
+:ctime:    20250808165505
+:END:
+#+TITLE: AI Natural Language Processing
+#+FILETAGS: :llm:nlp:
+
+* Links
+
+** Books
+
++ [[https://web.stanford.edu/~jurafsky/slp3/][Speech and Language Processing]]
