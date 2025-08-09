@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       0911a63f-4b82-4bf1-9235-f1e41e93d210
 :ROAM_ALIASES: "Open Research Overview"
-:mtime:    20250322220654 20250321094135 20250207185829 20241022150421 20241001165443 20240919150818 20240912124356 20240910123405 20240515164155
+:mtime:    20250809220726 20250322220654 20250321094135 20250207185829 20241022150421 20241001165443 20240919150818 20240912124356 20240910123405 20240515164155
 :ctime:    20240515164155
 :END:
 #+title: Open Research
@@ -10,6 +10,8 @@
 Open Research seeks to make the practice of scientific method one that has rigour. reliability and reproducibility as
 this supports the interpretation and re-use of research. Further it promotes the dissemination of work to allow others
 to validate and contribute to the research.
+
++ [[id:3df9f7ea-12c0-47ab-97a8-e2b3d6c72606][Open Research : Publishing]]
 
 + [[id:4c9eab3d-4ae2-4f48-a32c-925929fe60bf][Open Research Data]]
 + [[id:8a38a071-9901-4e35-9aec-213a0c65af00][Open Research Software]]
@@ -105,3 +107,8 @@ to validate and contribute to the research.
 + [[https://www.openbookpublishers.com/books/10.11647/OBP.0364][The Predatory Paradox: Ethics, Politics, and Practices in Contemporary Scholarly Publishing | Open Book Publishers]]
 + [[https://uu.trialanderror.org/projects/the-university-in-transition][The University in Transition | Utrecht University Manifold]]
 + [[https://pluralistic.net/2024/08/16/the-public-sphere/#not-the-elsevier][Pluralistic: MIT libraries are thriving without Elsevier (16 Aug 2024) – Pluralistic: Daily links from Cory Doctorow]]
+
+*** Beyond Publishing
+
++ [[https://blogs.nottingham.ac.uk/makingsciencepublic/2025/06/20/my-blog-end-of-an-era-or-new-beginning/][My blog: End of an era or new beginning? - Making Science Public]]
++ [[https://science-in-the-digital-era.khinsen.net/#Research%20outputs][Science in the digital era]]

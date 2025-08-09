@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       15e87379-9d63-4500-b730-90b9834d7225
+:mtime:    20250809220715
+:ctime:    20250809220715
+:END:
+#+TITLE: Open Alex
+#+FILETAGS: :openresearch:publishing:
+
+[[https://openalex.org/][OpenAlex]]
+
+* Links
+
+** Blog Posts
+
++ [[https://blog.ourresearch.org/were-rebuilding-openalex-while-its-running-heres-whats-changing/][We’re Rebuilding OpenAlex While It’s Running — Here’s What’s Changing - OurResearch blog]]
