@@ -1,12 +1,6 @@
 :PROPERTIES:
 :ID:       60bd7406-c4c2-4316-8517-cb9d1cac8f35
-<<<<<<< HEAD
-:mtime:    20250721065203 20230914192913 20230528221730
-||||||| parent of 879139f (sheffield: adding weather details)
-:mtime:    20230914192913 20230528221730
-=======
-:mtime:    20250721083639 20250721065203 20230914192913 20230528221730
->>>>>>> 879139f (sheffield: adding weather details)
+:mtime:    20250810212537 20250721083639 20250721065203 20230914192913 20230528221730
 :ctime:    20230528221730
 :END:
 #+TITLE: Sheffield
@@ -21,6 +15,10 @@ parents don't live too far away.
 
 * Links
 
+** Town Planning
+
++ [[https://lecorbusiersheffield.weebly.com/index.html][LE CORBUSIER & SHEFFIELD - Home]]
+
 ** Council
 
 + [[https://sheffieldactivetravelmap.commonplace.is][Sheffield Commonplace Active Travel Map]]
@@ -29,3 +27,8 @@ parents don't live too far away.
 
 + [[https://www.sheffieldweather.co.uk/index.htm][South West Sheffield weather]]
 + [[https://check-for-flooding.service.gov.uk/station/9441][Meers Brook level at Sheffield Meersbrook]] (wider [[https://check-for-flooding.service.gov.uk/river-and-sea-levels?v=map-live&lyr=mv,ri,ti,gr,rf&ext=-1.556249,53.325115,-1.37907,53.386163&fid=stations.9441][map]])
+
+** Stories
+
++ [[https://issuu.com/madeinn/docs/made_julyaug_issue17_issuu/s/10719854][The Day They Pulled The Plug - Issuu]] - draining the Chesterfield Canal
++ [[https://www.sheffieldtribune.co.uk/gleadless-valley-might-look-skint/][Gleadless Valley might look skint, but it’s owed £100 million. Seven years on, why are residents still waiting?]]
