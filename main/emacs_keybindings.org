@@ -6,9 +6,13 @@
 #+TITLE: Emacs Key Bindings
 #+FILETAGS: :emacs:keys:
 
-Useful keybindings I am slowly trying to commit to memory
+Useful keybindings I am slowly trying to commit to memory, really helps to use [[https://github.com/justbur/emacs-which-key][which-key]] (now part of Emacs core) and
+the ~helpful~ commands are useful too.
 
-* Navigation
+
+* Key-bindings
+
+** Navigation
 
 | Key Sequence | Action                        |
 |--------------+-------------------------------|
@@ -16,13 +20,13 @@ Useful keybindings I am slowly trying to commit to memory
 | ~C-M-n~      | Backward a parentetical group |
 
 
-* Org-mode
+** Org-mode
 
 | Key Sequence | Action                    |
 |--------------+---------------------------|
 | ~M-S-Ret~    | Add entry in orgmode      |
 
-** Tables
+*** Tables
 
 | Key Sequence | Action                    |
 |--------------+---------------------------|
@@ -31,15 +35,41 @@ Useful keybindings I am slowly trying to commit to memory
 | ~M-S-Down~   | Insert row above          |
 | ~M-S-Down~   | Remove row above          |
 
-* Buffer
+** Buffer
 
 | Key Sequence | Action             |
 |--------------+--------------------|
 | ~C-x C-+~    | Increase font size |
 | ~C-x C--~    | Decrease font size |
 
-* Other
+** Other
 
 | Key Sequence | Action                                 |
 |--------------+----------------------------------------|
 | ~M-y~        | Brings up the history of the kill-ring |
+
+
+** Helpful
+
+| Key Sequence | Action                                   |
+|--------------+------------------------------------------|
+| ~C-h b~      | Information on the current buffer        |
+| ~C-h k~      | Find out what a key sequence is bound to |
+| ~C-h m~      | Information on the current buffers modes |
+| ~C-h v~      | Describe a variable                      |
+| ~C-h x~      | Describe a command                       |
+
+
+* Which Key
+
+Which key tells you what the next key, or combination, will do, its invaluable as there are so many (which is why its
+now part of Emacs Core).
+
+** Prefix expansion
+
+That said if a key is a prefix to another set of commands it doesn't, by default expand on what that is. I found a
+useful [[https://gist.github.com/mmarshall540/a12f95ab25b1941244c759b1da24296d][Gist]] which shows how to add specific replacements and have adapted that.
+
+See lines 29-61 (on writing) of the configuration.
+
+#+INCLUDE: "~/.config/emacs/settings/key-bindings.el" src emacs-lisp
