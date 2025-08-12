@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       6bb6b516-a3df-452a-adb3-f5aa8a32857c
+:mtime:    20250812234955
+:ctime:    20250812234955
+:END:
+#+TITLE: Emacs Key Bindings
+#+FILETAGS: :emacs:keys:
+
+Useful keybindings I am slowly trying to commit to memory
+
+* Navigation
+
+| Key Sequence | Action                        |
+|--------------+-------------------------------|
+| ~C-M-n~      | Forward a parentetical group  |
+| ~C-M-n~      | Backward a parentetical group |
+
+
+* Org-mode
+
+| Key Sequence | Action                    |
+|--------------+---------------------------|
+| ~M-S-Ret~    | Add entry in orgmode      |
+
+** Tables
+
+| Key Sequence | Action                    |
+|--------------+---------------------------|
+| ~M-S-Left~   | Insert column to the left |
+| ~M-S-Right~  | Remove column to the left |
+| ~M-S-Down~   | Insert row above          |
+| ~M-S-Down~   | Remove row above          |
+
+* Buffer
+
+| Key Sequence | Action             |
+|--------------+--------------------|
+| ~C-x C-+~    | Increase font size |
+| ~C-x C--~    | Decrease font size |
+
+* Other
+
+| Key Sequence | Action                                 |
+|--------------+----------------------------------------|
+| ~M-y~        | Brings up the history of the kill-ring |
