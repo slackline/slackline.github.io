@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       57ba7f41-cf41-493c-bbf4-9d1e05a0602d
-:mtime:    20240625153309 20231209102351 20230729071312 20230509150839 20230314223425 20230103103310 20221226212438
+:mtime:    20250812155234 20240625153309 20231209102351 20230729071312 20230509150839 20230314223425 20230103103310 20221226212438
 :ctime:    20221226212438
 :END:
 #+TITLE: Git Rebase
@@ -53,6 +53,20 @@ Check whether [[https://mastodon.social/@develwithoutacause@techhub.social/11079
 #+begin_src bash
 git rebase main --exec "pytest"
 #+end_src
+
+** Changing Author Details
+
+If you need to change the author details of a commit you can do so with a [[https://stackoverflow.com/a/1320317/1444043][rebase]].
+
+#+begin_src
+# First change the user name and email
+git config --global user.name "New User"
+git config --global user.email "<new@email.org>"
+# Rewrite metadata for a range of commits using rebase
+git rebase -r <hash for oldest commit to change> --exec 'git commit --amend --no-edit --reset-author'
+#+end_src
+
+
 * Links
 
 ** HowTos
