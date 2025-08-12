@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       2be7868d-784b-4450-901c-c3fe9b5e7ad5
+:mtime:    20250810180930
+:ctime:    20250810180930
+:END:
+#+TITLE: Delta Chat
+#+FILETAGS: :privacy:email:encryption:
+
+* Links
+
+** Articles
+
++ [[https://cnoceda.com/tecnologia/posts/20250615T191346--delta-chat-and-org-mode__blog_tecnologia.html][Delta Chat and Org-Mode]]
+
+** Blogs
+
++ [[https://delta.chat/en/2025-08-04-encryption-v2][Delta Chat V2: a major security upgrade, beautified contact profiles, new email action and direct app access in chats]]
+
+** Bots
+
++ [[https://git.sr.ht/~bgtdsword/deltachat-inbox-bot][deltachat-inbox-bot - helps you capture tasks and ideas to an org-mode file]] ([[https://thibaut.dev/blog/deltachat-inbox-bot.html][Deltachat inbox bot]])
