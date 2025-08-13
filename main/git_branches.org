@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       661f45c0-cec7-4b57-b2b1-7da8f9d8d0e6
-:mtime:    20250602122216 20250118214836 20241009132912 20240804174300 20240217093159 20240130203610
+:mtime:    20250813234527 20250602122216 20250118214836 20241009132912 20240804174300 20240217093159 20240130203610
 :ctime:    20240130203610
 :END:
 #+TITLE: Git Branches
@@ -250,3 +250,4 @@ Focused more on production environments.
 ** Tools
 
 + [[https://github.com/yaoyuannnn/gerritlab][yaoyuannnn/gerritlab: GerritLab: Gerrit-style code review for GitLab projects.]]
++ [[https://github.com/chmouel/git-branches][chmouel/git-branches: select git branches with style]]

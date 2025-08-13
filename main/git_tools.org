@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       a620a74f-3dae-4ac3-afc0-474ce16c9ab8
+:mtime:    20250813234719
+:ctime:    20250813234719
+:END:
+#+TITLE: Git Tools
+#+FILETAGS: :git:extensions:tools:
+
+By far the most powerful tool is [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] but outside of that there are many additional and useful options.
+
+* Links
+
++ [[https://tissue.systemreboot.net/][tissue]] an issue tracker and project information management system built on plain text files and Git.
++ [[https://github.com/klaussilveira/gitlist][gitlist]] webUI to Git repositories.
++ [[https://octobox.io/][Octobox]] - manage GitHub Notifications in a WebUI.
++ [[https://github.com/MichaelMure/git-bug][git-bug: Distributed, offline-first bug tracker embedded in git, with bridges]]
++ [[https://github.com/dandavison/delta][delta: A syntax-highlighting pager for git, diff, and grep output]]
++ [[https://myrepos.branchable.com/][myrepos]]
++ [[https://git.holly.sh/git-mirror-sync.git][git-mirror-sync]]
++ [[https://github.com/AGWA/git-crypt][git-crypt - Transparent file encryption in git]]
++ [[https://github.com/mystor/git-revise][mystor/git-revise: A handy tool for doing efficient in-memory commit rebases & fixups]]
++ [[https://github.com/scmbreeze/scm_breeze][GitHub - scmbreeze/scm_breeze: Adds numbered shortcuts to the output git status, and much more]]
++ [[https://github.com/yaoyuannnn/gerritlab][yaoyuannnn/gerritlab: GerritLab: Gerrit-style code review for GitLab projects.]]
++ [[https://github.com/chmouel/git-branches][chmouel/git-branches: select git branches with style]]
