@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       493c1442-d362-4a3b-9c04-f7933e2bcb44
+:mtime:    20250813235310
+:ctime:    20250813235310
+:END:
+#+TITLE: UTF-8
+#+FILETAGS: :encoding:utf-8:characters:
+
+* Links
+
++ [[https://utf8.xyz/][UTF8.XYZ]]
