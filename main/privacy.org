@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b5000932-0fec-4353-acc4-0cb02127c9ac
-:mtime:    20250812235224 20250731062327 20250730233619 20250613202249 20250217215737 20250113132748 20241229195114 20240716155322 20240323194442 20240301231300 20240122165548 20240107095430 20231221072710 20231211080603 20231121210843
+:mtime:    20250815001707 20250812235224 20250731062327 20250730233619 20250613202249 20250217215737 20250113132748 20241229195114 20240716155322 20240323194442 20240301231300 20240122165548 20240107095430 20231221072710 20231211080603 20231121210843
 :ctime:    20231121210843
 :END:
 #+TITLE: Privacy and Encryption
@@ -28,7 +28,7 @@ Privacy is important, it underpins free speech, but many chose to sacrifice thei
 + [[https://threema.ch/en/home][Threema – The Secure Messaging App Without Data Collection]]
 + [[https://ente.io/][Ente - Encrypted photo backup]]
 + [[https://incogni.com/pricing][Incogni]] remove your data from data brokers
-
++ [[https://www.statichost.eu/][statichost.eu]] - European servers and no personal data collection for static site hosting
 
 * Advocacy
 
