@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       fdc25464-121c-41bd-b6fc-cc5fb3229122
-:mtime:    20250602184313
+:mtime:    20250609181033 20250602184313
 :ctime:    20250602184313
 :END:
 #+TITLE: GitHub Actions : Debugging
@@ -15,9 +15,9 @@ You have your development environment on your local computer where you have made
 documentation builds. Well often tests are run on a multitiude of operating systems and you may not always have access
 to these locally, even with the availability of emulators.
 
-This is where ~tmate~ comes in handy because thanks to a very handy because there is a [[id:e19b6eb6-46b2-440a-ba35-be29feb33407][GitHub Actions]] which sets up
-~tmate~ on the runner that was spun on the GitHub servers and if you've setup your SSH keys correctly then you can
-connect to this machine and set about debugging errors.
+This is where ~tmate~ comes in handy because is a [[id:e19b6eb6-46b2-440a-ba35-be29feb33407][GitHub Actions]] which sets up ~tmate~ on the runner that was spun up on
+the GitHub servers and if you've setup your SSH keys correctly then you can connect to this machine and set about
+debugging errors.
 
 The  [[https://mxschmitt.github.io/action-tmate/][official documentation]] is comprehensive and well written and I would recommend you read through it if you want to
 know more. Here I give a brief overview of how I've used ~tmate~ in my work. Its pretty basic but has been invaluable.
@@ -41,9 +41,9 @@ Once you are setup you can move onto the next step.
 
 ** ~tmate~ GitHub action
 
-To use ~tmate~ to debug your workflow you need to add the [[https://mxschmitt.github.io/action-tmate/][action-tmate]] to the ~.github/workflows/<action>.yaml~. There
-are a lot of options available but a very basic configuration is shown below and you should add this as the last steps
-in your workflow.
+To use ~tmate~ to debug your workflow you need to add the [[https://mxschmitt.github.io/action-tmate/][action-tmate]] to the ~.github/workflows/<action>.yaml~ action
+you want to debug. There are a lot of options available but a very basic configuration is shown below and you should add
+this as the last steps in your workflow.
 
 #+begin_src yaml
     steps:
@@ -54,7 +54,7 @@ in your workflow.
         timeout-minutes: 5
 #+end_src
 
-This will use the ~action-tmate~ action /only/ if there is a failure and will make the SSH session on the runner
+This will use the ~mxschmitt/action-tmate~ step /only/ if there is a failure and will make the SSH session on the runner
 available for just 5 minutes. Its quite likely that it will take me than 5 minutes to work out what is causing the
 error and so after have encountered an error I typically increase this amount to allow me longer to work on debugging
 the problem.
@@ -70,7 +70,7 @@ will see the following in your jobs logs.
 
 The full raw log looks like this.
 
-#+begin_src 
+#+begin_src
 2025-06-03T15:29:16.1340333Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
 2025-06-03T15:29:16.1627994Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
 2025-06-03T15:29:16.1641178Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
@@ -102,7 +102,7 @@ The full raw log looks like this.
 2025-06-03T15:29:21.4816354Z xz-utils is already the newest version (5.6.1+really5.4.5-1ubuntu0.2).
 2025-06-03T15:29:21.4817296Z 0 upgraded, 0 newly installed, 0 to remove and 28 not upgraded.
 2025-06-03T15:29:22.4080716Z ssh 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
-2025-06-03T15:29:22.4113791Z 
+2025-06-03T15:29:22.4113791Z
 2025-06-03T15:29:22.4125076Z SSH: ssh 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
 2025-06-03T15:29:22.4125623Z or: ssh -i <path-to-private-SSH-key> 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
 2025-06-03T15:29:27.4141023Z SSH: ssh 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
@@ -120,14 +120,14 @@ The full raw log looks like this.
 This installs and configures ~tmate~ on the runner and after doing so tells you how to connect using [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]]. If you have
 your SSH key loaded in a [[id:5f040d28-2aa8-4cac-91aa-43f5e3d515a3][Keychain]] then you can use the first form.
 
-#+begin_src 
+#+begin_src
 ssh 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
 #+end_src
 
 If you get a ~Permission Denied~ error then try the second form, substituting ~<path-to-private-SSH-key>~ for the
 private key that corresponds to the one you have on your GitHub account.
 
-#+begin_src 
+#+begin_src
 ssh -i <path-to-private-SSH-key> 7Nus3JTkxyGCmscUBKKV8fp3z@nyc1.tmate.io
 #+end_src
 
