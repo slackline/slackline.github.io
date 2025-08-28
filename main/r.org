@@ -298,6 +298,7 @@ found useful.
 ** HowTos
 
 + [[https://www.tidyverse.org/blog/2019/09/callr-task-q/][Multi Process Task Queue in 100 Lines of R Code]]
++ [[https://www.lewisdoesdata.com/2025/08/11/spark-on-slurm-with-r.html][Spark on SLURM with R - Lewis Does Data]]
 
 *** Labels
 
