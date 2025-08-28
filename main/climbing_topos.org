@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9dd5bb41-2bbf-4754-a1a2-5ec5b66ecf9e
-:mtime:    20250122160310
+:mtime:    20250828185532 20250122160310
 :ctime:    20250122160310
 :END:
 #+TITLE: Climbing Topos
@@ -8,11 +8,35 @@
 
 I've a lot of links on my [[https://wiki.nshephard.dev/doku.php?id=climbing:climbing][old wiki]].
 
+* Open Climbing Resources
+
+There are at least two efforts to collate and make climbing information freely open.
+
+** [[https://openclimbing.org][OpenClimbing.org]]
+
+This is based on [[id:0a5f391b-0f61-48d8-a4c3-a204d55538de][OpenStreetMap]], routes have individual entries as ways
+which are grouped into crags and areas.
+
+** [[https://openbeta.io][OpenBeta.io]]
+
+[[https://openbeta.io/][OpenBeta.io]] is an independent attempt to democratise climbing/boudlering route information.
 
 * Links
 
 ** Europe
 
-*** Picos de Europa
+*** Spain
+
+**** Picos de Europa
 
 + [[https://fernandozamoraguiadepicos.com/en/climbing-topos/][Climbing routes Directory | Fernando Zamora]]
+
+*** UK
+
++ [[https://web.archive.org/web/20220702102808/https://peakbouldering.info/][PeakBouldering.info]] (sadly no longer
+  online this is an Internet Archive snapshot).
+
+
+** Logging Gear
+
++ [[https://gearlog.org/][GearLog]]
