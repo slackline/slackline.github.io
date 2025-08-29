@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       dddcb716-b68c-4c94-b75c-167451208cf8
+:mtime:    20250829111111
+:ctime:    20250829111111
+:END:
+#+TITLE: wgetpaste
+#+FILETAGS: :linux:bash:shell:
+
+[[https://github.com/zlin/wgetpaste][wgetpaste]] is a command line utility to various pastebins for sharing code output.
+
+An example of posting to https://paste.gentoo.zip is below (from [[https://forums.gentoo.org/viewtopic-p-8826210.html][this thread]]).
+
+#+begin_src shell
+wgetpaste -s pgz -c "emerge -pve @preserved-rebuild --bracktrack=0"
+#+end_src
+
+* Links
+
++ [[https://github.com/zlin/wgetpaste][wgetpaste]]
