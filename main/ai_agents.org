@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a916807b-112d-40c3-81fd-f0d4c6e45712
-:mtime:    20250807163224 20250715130557 20250613202156
+:mtime:    20250829223727 20250807163224 20250715130557 20250613202156
 :ctime:    20250613202156
 :END:
 #+TITLE: AI Agents
@@ -11,6 +11,7 @@
 
 + [[https://ferd.ca/the-gap-through-which-we-praise-the-machine.html][The Gap Through Which We Praise the Machine]]
 + [[https://observer.co.uk/news/columnists/article/cloudflare-just-hit-the-ai-web-crawlers-with-a-thunderbolt-pay-for-content-or-be-blocked][Cloudflare just hit the AI web crawlers with a thunderbol...]]
++ [[https://ai-2027.com/slowdown][AI 2027]]
 
 ** Problems
 

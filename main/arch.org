@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a53fa3c5-f091-4715-a1a4-a94071407abf
-:mtime:    20250515103508 20250514112953 20250406203704 20250406160925 20250226152510 20241124190532 20240523145115 20240523132208 20240502105958 20231022214824 20230908084133 20230907222812 20230813184404 20230812222550 20230623080100 20230215101306
+:mtime:    20250829223721 20250515103508 20250514112953 20250406203704 20250406160925 20250226152510 20241124190532 20240523145115 20240523132208 20240502105958 20231022214824 20230908084133 20230907222812 20230813184404 20230812222550 20230623080100 20230215101306
 :ctime:    20230215101306
 :END:
 #+TITLE: Arch Linux
@@ -281,3 +281,10 @@ BTW, installing the package is not enough. What's in falcon-sensor.install gives
 The other pre-instructions and post instructions are fine, just the falconctl stuff is particular. I can't tell if those required where I work are the ones you need, or the ones in this package falcon-sensor.install, you need to find out with the instructions provided to you...
 
 #+end_quote
+
+* Links
+
+** Arch based distros
+
++ [[https://manjaro.org/][Manjaro]]
++ [[https://cachyos.org/][CachyOS]]
