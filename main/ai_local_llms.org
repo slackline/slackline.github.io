@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       761dfe8a-b4e3-440a-af4c-157196cefa7c
+:mtime:    20250831191549
+:ctime:    20250831191549
+:END:
+#+TITLE: Local LLMs
+#+FILETAGS: :ai:neuralnets:llms:
+
+* Links
+
++ [[https://www.theregister.com/2025/08/31/local_llm_opinion_column/][Bring your own brain? Why local LLMs are taking off • The Register]]
