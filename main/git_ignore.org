@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       970f08b7-210c-41ad-a25e-b9ed0000c34f
-:mtime:    20250103151110 20241010102833
+:mtime:    20250830161458 20250103151110 20241010102833
 :ctime:    20241010102833
 :END:
 #+TITLE: Git Ignore
@@ -30,6 +30,12 @@ Patterns that exclude editor specific changes should go in the global file as th
 
 OSX adds a ~.DS_Store~ file to every directory and this should therefore be included in your global ~/.gitignore~.
 
+* Generaters
+
+There are some online generators that use templates for different languages such as [[https://gitignore.io][gitignore.io]] and [[https://codeberg.org/dazfuller/snub][~snub~]] is a command
+line interface tool that uses these templates.
+
 * Links
 
 + [[https://blog.sugoi.be/posts/2025/stop-polluting-gitignore-files/][Stop Polluting .Gitignore Files]]
++ [[https://codeberg.org/dazfuller/snub][dazfuller/snub: Command line tool for generating .gitignore files - Codeberg.org]]

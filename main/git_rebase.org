@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       57ba7f41-cf41-493c-bbf4-9d1e05a0602d
-:mtime:    20250812155234 20240625153309 20231209102351 20230729071312 20230509150839 20230314223425 20230103103310 20221226212438
+:mtime:    20250831191626 20250812155234 20240625153309 20231209102351 20230729071312 20230509150839 20230314223425 20230103103310 20221226212438
 :ctime:    20221226212438
 :END:
 #+TITLE: Git Rebase
@@ -12,6 +12,8 @@
 Rebasing is a very powerful tool as it allows you to "re-write history", that is you can change the history of commits
 in the log, compressing them (or "squashing" in Git parlance). Rebasing can also be used to bring a divergent branch
 up-to-date with another (typically ~main~/~master~) although often it is easier to use ~git merge~ to achieve this.
+
+A concise and clear overview of rebasing is [[https://codeberg.org/dazfuller/snub][archived]].
 
 * Git Merge
 
