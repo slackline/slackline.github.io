@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       5d1766e8-f892-473a-8500-50cbffc50fe7
+:mtime:    20250901080505
+:ctime:    20250901080505
+:END:
+#+TITLE: Lsof
+#+FILETAGS: :linux:admin:files:
+
+~lsof~ is a tool for listing standard output file information about files opened by processes under [[id:0e6300c6-7025-4f45-820d-4d9da82b41a6][Linux]]-like systems
+(where everything is a file!).
+
+* Tips and Tricks
+
+** Search by Process ID
+
+#+begin_src sh
+lsof -p $(pidof emacs)
+#+end_src
