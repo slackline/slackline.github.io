@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       21fb7e52-0f75-45ce-b5e3-cffb6ca51396
+:mtime:    20250902103810
+:ctime:    20250902103810
+:END:
+#+TITLE: Git Backup
+#+FILETAGS: :git:backup:mirror:
+
+It's easy to create backups of repositories via a bare clone but you would want to keep them in sync by setting up a
+[[id:f206a2ed-b9c0-4d7c-a0c0-a2f47bbe8641][Cron]] job to update this regularly.
+
+* Mirroring
+
+Mirroring underpins the process of backing up repositories.
+
+** Forges
+
+
+* Links
+
++ [[https://improveandrepeat.com/2025/09/how-to-back-up-your-github-repositories/][How to Back up Your GitHub Repositories - Improve & Repeat]]
