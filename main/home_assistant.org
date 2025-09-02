@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       066a4ad3-d938-4ee5-a5b9-1bec44012734
+:mtime:    20250902201951
+:ctime:    20250902201951
+:END:
+#+TITLE: Home Assistant
+#+FILETAGS: :linux:automation:home:
+
+* Links
+
+
+** Software
+
++ [[https://www.home-assistant.io/][Home Assistant]]
+
+** Sensors
+
++ [[https://www.frient.com/products][Frient]] (purchase from [[https://www.carefreesmarthomes.co.uk/frient][Carefree Smart Homes]])

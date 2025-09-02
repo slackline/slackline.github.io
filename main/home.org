@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a77c5a39-c3ef-4b4b-80a2-6a492674f701
-:mtime:    20250312090615
+:mtime:    20250902202013 20250312090615
 :ctime:    20250312090615
 :END:
 #+TITLE: Home
@@ -21,3 +21,7 @@
 * Advice
 
 + [[https://www.theecoexperts.co.uk][The Eco Experts]]
+
+* Automation
+
++ [[id:066a4ad3-d938-4ee5-a5b9-1bec44012734][Home Assistant]]
