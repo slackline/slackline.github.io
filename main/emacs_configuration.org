@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       938af6af-7a0e-46d1-ae76-6157e948151b
-:mtime:    20250622203020 20250304224048 20241215223039 20241023184234 20240706220449 20240115230041 20231222084358 20230114083319 20230103103311 20221229094021
+:mtime:    20250902155530 20250622203020 20250304224048 20241215223039 20241023184234 20240706220449 20240115230041 20231222084358 20230114083319 20230103103311 20221229094021
 :ctime:    20221229094021
 :END:
 #+TITLE: Emacs Configuration
@@ -31,6 +31,12 @@ Configuration options specific to the OS or machine can be made for ideas and gu
 
 + [[https://olddeuteronomy.github.io/post/multiplatform-emacs-config/][Making a Multiplatform Emacs Configuration]]
 + [[https://irreal.org/blog/?p=13072][Running Emacs On Multiple Platforms | Irreal]]
+
+** use-package
+
+I typically use [[https://github.com/jwiegley/use-package][use-package]] to install and load packages. Its now part of core Emacs so there is no need to explicitly
+install it. Configuration is simplified but there are still better ways of doing things as covered in [[https://batsov.com/articles/2025/04/17/using-use-package-the-right-way/][Using use-package
+the right way - (think)]].
 
 * Gentoo
 
@@ -71,3 +77,4 @@ Details of each package specific configuration are found on their own pages.
 + [[https://leanpub.com/lit-config/read][Read Literate Configuration | Leanpub]] (via [[https://mastodon.social/@masukomi@connectified.com/112741432091944271][this thread]])
 + [[https://github.com/LionyxML/emacs-kick][LionyxML/emacs-kick: A feature rich Emacs (kickstarter) config for (neo)vi(m)mers]]
 + [[https://sophiebos.io/posts/first-emacs-config/][Building Your First Emacs Config | Sophie Bosio]]
++ [[https://batsov.com/articles/2025/04/17/using-use-package-the-right-way/][Using use-package the right way - (think)]]
