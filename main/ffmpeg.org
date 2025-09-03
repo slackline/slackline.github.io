@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9b22641a-6921-4afa-84fc-1da105a3dfc7
-:mtime:    20240215130934
+:mtime:    20250903071504 20240215130934
 :ctime:    20240215130934
 :END:
 #+TITLE: FFmpeg
@@ -24,6 +24,13 @@ Convert a ~.wav~ to ~.mp3~ at 44.1kHz and 320kbps.
 ffmpeg -i <input>.wav -vn -ar 44100 -ac 2 -b:a 320k <output>.mp3
 #+end_src
 
+** Extracting Audio from Video
+
+#+begin_src 
+ ffmpeg -i Underworld_Boiler_Room_-_London-\[rAOHJqJMYDA\].mkv -acodec libmp3lame -ab 320k "Underworld - Boiler Room 2025.mp3"                                                                                                    
+#+end_src
+
+You can get variable bitrate using ~-q:a 0~.
 
 * Links
 
