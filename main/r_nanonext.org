@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       3791b2cf-f4f7-4678-9e43-b0953aa46972
+:mtime:    20250904173157
+:ctime:    20250904173157
+:END:
+#+TITLE: Nanonext
+#+FILETAGS: :r:wrapper:interaction:
+
+[[https://nanonext.r-lib.org][nanonext]] allows interaction between R and other processes such as Python or C++ programs. It provides bindings in R to
+the [[https://nng.nanomsg.org][Nanomsg Next Gen (nng)]] library.
+
+* Links
+
++ [[https://nanonext.r-lib.org][nanonext]]

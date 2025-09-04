@@ -12,7 +12,7 @@ on the statistical programming S.
 
 
 + [[id:2b7bd9a6-cf65-460b-a080-bf865d14be9b][Maintenance]] - configuring, installing and updating packages
-
++ [[id:3791b2cf-f4f7-4678-9e43-b0953aa46972][Nanonext]] - R interacting with Python and other languages
 
 
 * Base R
