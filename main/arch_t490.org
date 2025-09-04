@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       84523969-a4c2-4349-ac23-09894939ed54
-:mtime:    20250828195848 20250730074100 20250602185001 20250521223306 20250506220715 20250505214317 20250505201149 20250504210440 20250504195919 20250502222446 20250414200336 20250407182036 20250407150731 20250407083437 20250406200453 20250406180541 20250406134048 20250406120730
+:mtime:    20250904090550 20250828195848 20250730074100 20250602185001 20250521223306 20250506220715 20250505214317 20250505201149 20250504210440 20250504195919 20250502222446 20250414200336 20250407182036 20250407150731 20250407083437 20250406200453 20250406180541 20250406134048 20250406120730
 :ctime:    20250406120730
 :END:
-#+TITLE: Arch Linux - T490s
+#+TITLE: Arch Linux - T490
 #+FILETAGS: :linux:arch:laptop:install:config:
 
 
@@ -190,6 +190,12 @@ options are slightly different, refer to the [[https://wiki.archlinux.org/title/
 HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)
 #+end_src
 
+** Network Time Protocol
+
+#+begin_src
+pacman -Syu ntp
+systemctl enable --now ntpd.service
+#+end_src
 
 ** Reboot
 
@@ -307,6 +313,7 @@ git clone https://aur.archlinux.org/ltex-ls-plus-bin.git
 cd ltex-ls-plus-bin
 makepkg -sri
 #+end_src
+
 *** Audio
 
 The following programs were required to get audio working...

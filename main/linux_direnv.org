@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a4af96d2-f895-4a68-9419-d482d2850f4d
-:mtime:    20250321105030 20250131200030 20250129091630
+:mtime:    20250904090628 20250321105030 20250131200030 20250129091630
 :ctime:    20250129091630
 :END:
 #+TITLE: Direnv
@@ -82,3 +82,4 @@ environment.
 
 + [[https://erick.navarro.io/blog/activate-python-virtualenv-automatically-with-direnv/][Activate python virtualenv automatically with direnv]]
 + [[https://treyhunner.com/2024/10/switching-from-virtualenvwrapper-to-direnv-starship-and-uv/][Switching from virtualenvwrapper to direnv, Starship, and uv]]
++ [[https://joshthomas.dev/til/direnv/using-direnv-to-add-a-personal-gitignore-file-to-repos/][Using direnv to add a personal `.gitignore` file to repos]]
