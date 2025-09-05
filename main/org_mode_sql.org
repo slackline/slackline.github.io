@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       6902c5a0-e96d-4b02-89b9-e45036e5d3fd
+:mtime:    20250905063910
+:ctime:    20250905063910
+:END:
+#+TITLE: Orgmode SQL
+#+FILETAGS: :orgmode:sql:literateprogramming:
+
+[[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]] natively supports SQL (albeit via external programmes) meaning you can run queries via [[id:6e75f9df-df3d-4402-b5ad-ed98d0834e08][Org Babel]] and use the
+results in your document.
+
+* Links
+
++ [[https://gitlab.com/ryanprior/emacs-org-data-starter/][Emacs Org Data Starter]]
