@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       58938b15-84c8-48dc-8b7e-64e54f1d5c42
-:mtime:    20250314221223
+:mtime:    20250909101822 20250314221223
 :ctime:    20250314221223
 :END:
 #+TITLE: UNIX Alternatives
@@ -19,4 +19,8 @@ I wrote a blog post with some [[https://blog.nshephard.dev/posts/cli-alternative
 
 * ~duf~
 
-~duf~ for a nice alternative to ~du~
+~duf~ for a nice alternative to ~du~.
+
+* ~lsd~
+
+A modern version of ~ls~ with coloured output and file details by default.
