@@ -1,0 +1,94 @@
+:PROPERTIES:
+:ID:       7239d6b8-0270-4cea-b06e-22d1d1b3c0f5
+:mtime:    20250911144035
+:ctime:    20250911144035
+:END:
+#+TITLE: Kurbernetes Workshop RSECon25
+#+FILETAGS: :containerisation:kubernetes:rsecon25:
+
+* Why Kubernetes?
+
+Powerful container orchestration platform that automates deployment, scaling, and management of containerised
+  applications.
++ High availability, self-healing, rolling updates.
++ Declarative configuraiont and resource management including networking and secirty
++ Stateful applications with backups and restoration
+
+* Architecture
++ Control plane nodes and work notes
+
+** Control plane
+The brain of the kubernetes clister it manages the cluster state and makes decisions about scehduling, scaling and
+responding to events. The Control Plane has individual comoponents.
+
+** Worker Nodes
+
+Where application runs in the container.
++ Kubelet - an agent that runs on each node it comminicates with the API server and ensures containers are running as
+  expected.
++ Container Runtime - software responsible for running containers.
+
+* [[https://minikube.sigs.k8s.io/docs/][Minikube]]
+
+A lightweight version of Kubernetes, ideal for testing and developing.
+
+** Starting a cluser
+
+#+begin_src
+minikube start
+#+end_src
+
+Launch the dashboard
+
+#+begin_src
+minikube dashboard
+#+end_src
+
+#+begin_src
+kubectl delete pod kubechaos-<id>
+#+end_src
+
+This deleted it but because `spec.replicas: 1` in `deployment/manifests.yaml` is `1` it ensures there is /always/ a
+replica running and so it was restarted automatically by Kubernetes.
+
+
+** Updating
+
+If we modify the website (`image/app.js`) we need to modify `deployment/manifest.yaml` then `build`  and `apply` this
+new version
+#+begin_src
+minikube image build -t local/kubechaos:v2 image
+kubectl apply -f deployment/manifests
+#+end_src
+
+This updates the running node/pod in place and refreshing the page will show the changes. If the job is large you can
+check its progress with
+
+#+begin_src
+kubectl rollout status deployment kubechaos
+#+end_src
+
+**NB** - To make it easy to control changes then version control `deployment/manifest.yaml` so you can easily roll back
+
+* ConfigMap
+
++ Stores data in key-value pairs.
++ Only store non-confidential data, secrets can be stored securely elsewhere.
++ Either environmental variables or mounting a configuration as a volume.
+
+After making changes you /have/ to restart the pod for the environment variables to be updated. This can be done by
+deleting the pod and it will, because of the manifest configuration, will be restarted automatically.
+
+* Helm
+
+Helm is a package manager for Kubernetes, package manifests are stored in reusable "charts"
+
+Vet charts using Helm's ~template~ and ~verify~. See further reading in course notes
+
+* Links
+
++ [[https://rosalindfranklininstitute.github.io/rsecon25-intro-to-kubernetes/][RSECon25 Workshop- Deploying a Web Application with Kubernetes]]
++  [[https://minikube.sigs.k8s.io/docs/][Minikube]]
++ [[https://helm.sh/docs/intro/using_helm/][Helm | Using Helm]]
++ [[https://artifacthub.io][Artifacthub.io]]
++ [[https://cloudnative-sig.ac.uk/][cloudnative-sig.ac.uk]]
