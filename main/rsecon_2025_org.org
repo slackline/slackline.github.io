@@ -1,0 +1,284 @@
+:PROPERTIES:
+:ID:       0f86b256-4f35-483e-a55a-1097f405b428
+:mtime:    20250912072700
+:ctime:    20250912072700
+:END:
+#+TITLE: RSE Con 2025
+#+FILETAGS: :rse:conference:
+
+
+* <2025-09-09 Tue>
+** <2025-09-09 Tue 09:15> Amanda Brock
++ [[https://academic.oup.com/book/44727?login=true][Open Source Law, Policy and Practice | Oxford Academic]] (more books [[https://amandabrock.com/books/][here]])
++ https://openaccessgoverment.org/open-source-technology/129261
++ Anti-commercialisation/academic restrictions are /not/ open-source.
++ Free flow of information (source code) is why open-source has been so popular.
++ Increasingly adopted by public sector as government want to avoid vendor lock-in.
++ [[https://www.elastic.co/blog/licensing-change][Doubling down on open, Part II]]
++ Critical that users understand what open-source is.
++ Critical infrastructure is based on open-source and increasingly is coming under greater scrutiny and critique if it
+  doesn't meet certain standards.
++ RSEs should be moving towards industry standard code but need acknowledgement for the work done,
++ Do NOT need to be certified, which requires paying for a piece of pointless paper.
++ Open source should be a public good.
+** <2025-09-09 Tue 10:00>
++ [[https://nuvolos.com/][Nuvolos - Powering Education and Research in Data Science]] cloud based system for reproducible and replicable analyses.
+  + Keen to learn the pain points of our research.
++ 2I2C resolutely open-source stacks for analysis and research, monitoring resource usage etc.
+** <2025-09-09 Tue 10:00> Hands on Reproducible Computing with GUIX
++ [[https://guix-workshop-d08bc1.gitlabpages.inria.fr/][Guix workshop]]
++ [[https://gitlab.inria.fr/rt-santenum/guix-workshop][GitLab repo]]
+*** Motivation
++ Reproducibility is the ability of independent investigators to draw the same conclusions from an expieriment folowing
+  the documentation shared by the original investigators.
++ Replicability s a poort substitute for reproducibility [...] reproducibility requires changes, replicability avoids
+  them.
++ Deal with sources of variations in a given experiment.
++ Sources may be controlled by / induced by the observer.
++ Goal for reproducilibity.
+  + Ensure control of sources of variation in an experiment.
+  + Decouple experimental results from the observer
++ "More than 70% of researchers have tried and failed to reproduce another scientists experiments and more than half
+  have failed to reproduce their own experiments."
++ Scientific findings are often inaccurate.
++ Non-reproducible science costs money.
++ Academic retractions are on the rise of which experimental errors account for an estimated 25%
++ Why is science difficult to reproduce.
+
+| Reproducibility | Target      | Addressed By                     |
+| Empiricial      | Collection  | Experimental protocol, open data |
+| Statistical     | Analysis    | Pre-registration                 |
+| Coputational    | Measurement | Documentation, FAIR principles   |
+
++ Challenges for computation reproducibility...
++ Availability of code, data and programs (archiving)
++ Sufficiently detailed instructions (documentation)
++ Capturing and deploying the computational environment.
++ The case for Guix : Trasparent, verifiable and long term reproducibiliity with a single command.
++ Time traps are a problem, software relying on expired resources such as certificates, software that no longer builds
+  on modern hardware.
++ Retention period (currently 2 years) of substitutes increases the build time.
++ Can reproducibility issue ever be solved, need societal changes, the research community has got bigger fish to fry, AI
+  shit! that enshittifiying via generative AI.
++ "_There are some things that can't be reproduced; for everything else there;s Guix"
+*** Live coding
+*** Going Further
++ If no ~root~ access then you can use ~guix pack~ which can be wrapped in Docker.
++ Multiple channels for Guix - ~guix-science~ / ~guix-science-nonfree~ / ~guix-hpc~ / ~guix-cran~ / ~guix-bioc~.
++ [[https://guix.gnu.org/manual/devel/en/html_node/][Guix Manual]] and [[https://guix.gnu.org/cookbook/en/html_node/][Guix Cookbook]] are really useful.
++ Guix is connecting with Software Heritage to archive projects should they disappear from say GitHub.
+** [2025-09-09 Tue 14:00] Sustainable Data Sharing
++ Riva is a "RSE"  from Chille, but its not called RSE there.
++ Researchers wanted to share data that they had collected over three years analyzing the generation of scientific
+  knowledge 600,000 research articles.
++ researcher goals : outreach and open science
++ RSE goals : Sustainability
++ ~5.5 million rows (740Mb) too large for computer to run.
++ Split into a relational database which changed the way researchers think about their data.
++ Still too large so had to go back to researchers and rethink the goals, split outreach and open science.
++ Outreach was useful for policy makers
++ Open Science is different goals perhaps an app with the data.
++ Fondecyt
++ Collaboration networks were too large, opted to reduce granularity
++ Funding for sustainability was challenging, not possible to host on Shiny Apps free tier.
++ Opted to build a package to make it sustainable in the long term (Did this include the data?)
++ https://rivaquiroga.cl
+** [2025-09-09 Tue 14:15]  Reflections on cross-cutting software tools born out of project work with
++ [[https://cambridge-iccs.github.io/FTorch/][F-torch]]
+** [2025-09-09 Tue 14:30] Building Robust Practices for Research Outputs: Supporting Quality and Assessment
+
++ RSEs as Infrastructure
++ [[https://kdl.kcl.ac.uk][Kings Digital Lab]]
++ WHy Quality Assessment in Digital Outputs Matter
+ + Computing increasingly important (software datasets)
+ + Digital outputs most meet research domain criteria and data sharing
+ + REF
++ Dual role of RSEs
+  + Holisitic role in research process and production, key part ofhuman digital infrastructure, design and
+    implementation of research projects.
++ [[https://zenodo.org/records/15147897][Checklist]] fo Digial Output Assessment is available.
++ [[https://github.com/kingsdigitallab/sdlc-for-rse/wiki/P1.-Project-Release-Document][Project Release Document]]
++ Distinct but complement each other.
++ [[http://github.om/GreenScheduler/cats][GreenScheduler/cats]] - schedule jobs for when energy is greener.
+** Lightning Talks
++ Kirsty Pringle [[https://www.researchprofessionalnews.com/rr-news-uk-views-of-the-uk-2025-april-it-s-time-to-decarbonise-digital-research/][It’s time to decarbonise digital research - Research Professional News]]
++ [[https://discourse-network.github.io/][Welcome to DisCouRSE - DisCouRSE: Developing a Community of Leaders]]
+** [2025-09-09 Tue 16:00] Automated CI/CD with GitHub Actions - Starting From Scratch
++ CI/CD automates the tedious
++ Continuous Integration (Build, Test Merge) > Continuous Delivery / Deployment (Release, deploy respectively).
++ GitHub has runners which gives clean environments with specific versions on different OS's.
++ Customisable triggers
++ Contributes to making software FAIR as is then repeatable and reusable.
++ Why GitHub Actions, over Travis, Jenkins, Bamboo, all have paywalls, require additional integrations.
++ GH Actions are uniqutious, "free" to use on small projects with generous monthly allowance, code is already there.
++ GitLab
++ Templated YAL system, resuable actions available from the marketplace to plug-and-play.
++ Starting is simple, build complexity only when needed.
++ [[https://github.com/haessar/rsecon25-gha-walkthrough][Walkthrough template repo]]
+
+* <2025-09-10 Wed>
+** [2025-09-10 Wed 10:35] Where do RSEs come from?
++ Blogs are an example of people performing.
++ Skills gap persists, most people need sofware skills and are self-taught or peer mentored. Little RSE led mentorship.
++ RSEs lack a consistently defined body of knowledge and its autonomy, service and status are precarious, often
+  perceived as "granted" by Principal Investigators. RSE is often perceived as a struggle for recognition against
+  "traditional, snobbish academic cultures".
++ Practical implication is that RSEs need to proactively define and articulate their unique value proposition and
+  advocate for clearer career pathways and recognition, distinguishing themselves from technical roles that make
+  less-direct research contributions.
++ RSE is highly dependent on academic structures (funding, career paths) and adopts academic logics to maintain
+  legitimacy Software engineering practices are often adopted incompletely and mimetically (copying visible practices)
+  rather than systematically. Key SE areas like requirements management and software maintenance are consistently
+  problematic or ignored.
++ Practica Implication is that RSEs must strategically navigate academic politics, emphasising the tangible benefits of
+  good software practice (reproducibility, impact) in terms that resonate with traditional academic incentives
+  (publications, grants). This includes championing neglected areas like robust requirements and maintenance.
++ Research doesn't mean the software specification can't be defined, the same is true of software start-ups though.
+*** A Manifesto for RSE Change
+Funders
++ Systematically identify software tat needs to be sustainable using a clear checklist.
++ Ensure dedicated funding for ongoing maintenance for sustainable software.
+Research producing organisations
++ Establish parallel career pathways and job descriptions for software roles.
++ Incorporate software responsibility into codes of ethical practice.
+RSE Leaders & educators
++ Address skills gaps in areas like requirements engineering and sofware maintenance through targeted, evidence-based
+  training.
++ Formalise outreach mentoring programmes where RSEs teach software engineering skills to a broader range of
+  researchers.
++ Adopt an open source by default approach for sustainable and FAIR research software, guided by maturity models such as
+  OSSWatch
+
++ RSE is more than a technical discipline, its a social movement aiming to revolutionise how research engages with
+  software.
+** [2025-09-10 Wed 11:00] Evidencing the impact of RSEs
++ [[https://zenodo.org/records/15083632][Evidencing the Impact of Research Software Engineers on Arts & Humanities Scholarship]]
++ [[https://zenodo.org/records/15083632][Evidencing the Impact of Research Software Engineers on Arts & Humanities Scholarship]]
++ Lots of evidence on how RSE groups contribute to university aims, less so funders, particularly in Arts and
+  Humanities.
++ Make (better) outputs possible.
++ Accelerate research
++ Expand research possibilities
++ Facilitate progress
++ Cut Costs
++ RSEs and researchers help each other across disciplines.
+** [2025-09-10 Wed 11:30] From Lab to Launch
++ [[https://www.ucl.ac.uk/centre-digital-innovation/][UCL Centre for Digital Innovation | UCL Centre for Digital Innovation - UCL – University College London]]
+** [2025-09-10 Wed 12:00] Building a project team : Experience from the Turin
+- Team variables
+  - How manu?
+  - Seniority
+  - Full time or part time
+  - Skill set
+  - What are the individuals needs
+- Project Variables
+  - Duration
+  - Size
+  - Domain knowledge needed
+  - Technical expertise
+  - Chance to shape the project?
+- Teams include
+  - Researchers, post-docs, industry
+  - Project/Programme managers - communicate with funders and external collaborators
+  - Research Engineers - RSE, Research Data Scientist, Research Computing Engineer, Research Data Wrangler
+  - Research Application managers
++ Turing 1.0
+  - Mostly small
+  - People work on any project
+  - As many projects as people
++ Turing 2.0
+  - Environment and Sustainability / Transformation of Health / Defence and National Security / Fundamental Research
+  - Focus on real-world impact
+  - Collaborate with external partners
+  - Larger projects of longer duration
+  - People transition much less frequently (who should be on which projects and how does it affect their careers
++ Maintaining a Team Culture
+  - Hack Week
+  - Away days
+Most teams based around domain knowledge.
+** [2025-09-10 Wed 10:35] [[https://hackmd.io/@jmarshrossney/BJy9adlKxx][RSE perspectives on AI in the workplace (Part I) - HackMD]]
+** [2025-09-10 Wed 13:15] Lets stop pretending we are Unicorns
++ RSEs have achieved a lot and should be proud of that, annual conferences world wide national associations in eight or
+  more countries, funding opportunities, recognition of importance of sofware is increasing.
++ Sounds great, but what is the problem?
+*** Problems
++ Frustration that RSE isn't doing the allocated work, the code base is complicated and they aren't doing the things we
+  think they should be doing.
++ I was promised an expert on X but the RSE is standard.
++ The RSE came ti implement X for me, but now they want to constantly meet to discuss it, I just want it done.
++ The RSE wants to be a co-author on my paper, they didn't have a clue about my research.
++ The software the RSE wrote for me is falling over after the project ended but the RSE does not want to come back and
+  fix it,
+*** RSE Pesrpective
++ I am always on two or three projects and context switching is slowing me down.
++ My team lead put on a project with a technology I have some basic knowledge and would like to know more. That's great
+  but it means progress is slower (researcher is unhappy).
++ I know nothing about the research that project is about and it makes it hard to understand the software, create
+  examples.
+*** Manager Perspective
++ Have to shoe-horn skills into projects.
+*** What can we do?
++ Be more bespoke
++ Computational researcher might need embedded RSEs and understand the research.
++ Non-computational researchers might need [r]SEs that deliver black/grey box software solutions.
++ A small RSE team might need to specialise (e.g. HPC, web dev) rather than promise to be able to do any type of RSE
+  work.
++ Communicate
++ Set expectations right, be clear and onest about what they can do.
++ Have templates, example timelines and guidelines.
++ Say no when the skill and/or time is not available (being over capacity is not a good problem to have)
++ Learn from other RSE groups, there is a lot of good practice out there.
++ Be clear with applicants too, especially if they are from industry/other career paths
+*** Collaborate don't compete
++ Avoid us v them language
++ Don't claim to be "better"
++ Building relationships is an important part of RSE work
++ Learn from other RSE groups
+*** Mental Health in RSE
++ Break the academic stigma around saying "I don't know", research is team work.
++ Don't paint this superhuman picture of an RSEcorn
+*** What do you think?
++ Do we need more embedded RSEs?
++ Are more specialised small RSE teams the way forward?
++ How can academic RSE career paths be positively interwoven?
+** [2025-09-10 Wed 13:45] The Research Software Analyst role
++ RSEs do research and business analysis.
++ [[https://zenodo.org/records/2564790][Research Software (RS) Careers: Generic Learnings from King's Digital Lab, King's College London]]
+* <2025-09-11 Thu>
+** <2025-09-11 Thu 09:05> [[https://bit.ly.rse2025-tallard][Tania Allard]] ([[https://www.trallard.dev][tallard.dev]])
++ FOSS is worth around $8 trillion annually and a lot of private companies rely on OSS but they aren't contributing or
+  funding development.
++ RSEs are a key, critical part of the FOSS infrastructure, many popular libraries come from RSE-like work.
++ Tricky balancing act for RSEs though as the incentives are still misplaced in academic, research and corporate
+  environments.
++ Python is incredibly popular and the hype would lead you to believe PSF is well funded. But spotlight is on GenAI
+  where the money already is...private companies.
++ GenAI s being pushed into everything.
++ "Don't confuse raising the floor with raising the ceiling"
++ Ceiling - high value ML drive research accelerates drug candidate discovery process, reduces cost opportunities for
+  untreated. Hotel booking platform improves recommendation system.
++ Floor - high adoption Local business sets up a website without requiring help from a developer. AI app ads
+  summarisation capability for research papers.
++ Reports show that Gen AI is failing at the flooor.
++ Ceiling foundational Python/Conda/Jupyter/Scikit-Laern
+  Middle Frameworks Pytorch JAX Hugging Face
+  Floor AI Features Copilot Chat
++ High value use cases (Ceiling) are worth development and maintenance effort.
++ Maintenance translates to long-term impact and relevance
++ The development process lets you take control, RSEs identify opportunities and push boundaries
++ Development v Maintenance is another balancing act. E.g. Conda forge spends considerably more time on maintenance than
+  development has 15yrs of technical debt.
++ Maintenance is all encompasing...
+  - Goal and metrics
+  - People
+  - Infrastructure
+  - Technology
+  - Culture
+  - Processes
++ Systematic change: we need funding and incentives that support and prioritise sustainability (high value efforts)
+** [2025-09-11 Thu 11:00] Deployung a Web Application with Kubernetes
+
+* Miscellaneous
+
++ [[https://www.w3.org/WAI/GL/wiki/Using_aria-describedby_to_provide_descriptions_of_images][Using aria-describedby to
+  provide descriptions of images - WCAG WG]]
