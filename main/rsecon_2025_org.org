@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0f86b256-4f35-483e-a55a-1097f405b428
-:mtime:    20250915094947 20250912072700
+:mtime:    20250915105834 20250915094947 20250912072700
 :ctime:    20250912072700
 :END:
 #+TITLE: RSE Con 2025
@@ -283,5 +283,5 @@ Most teams based around domain knowledge.
 
 * Miscellaneous
 
-+ [[https://www.w3.org/WAI/GL/wiki/Using_aria-describedby_to_provide_descriptions_of_images][Using aria-describedby to
-  provide descriptions of images - WCAG WG]]
++ [[https://www.w3.org/WAI/GL/wiki/Using_aria-describedby_to_provide_descriptions_of_images][Using aria-describedby to provide descriptions of images - WCAG WG]]
++ [[https://events.zoom.us/ejl/Apdaq-nVaQzOXS6_4QNb4Rp-Oc0tBRvZ6wJndm9fnoM4gTa20Epr~A9CiXGhfA_MrqIkE-lI4ttaG6tYJNr0si-Q1BGKFDWvIYcAlCl-fFi9fWvdx8QNLDjb-e4gfIMkpSDZ4goIV-ETj7ag4tTd-p79r9-I7aP1UHb3IZpjWj--iO-uHamf-63NKqQW-LaN0r_9trDbrXzOw-UAMe9XY93nCAdkc/sessions][Zoom Videos]]

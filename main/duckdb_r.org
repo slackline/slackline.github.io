@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       3687771a-0222-4cbd-bc0c-5b9189c6949d
+:mtime:    20250915133534
+:ctime:    20250915133534
+:END:
+#+TITLE: DuckDB R
+#+FILETAGS: :duckdb:sql:database:r:
+
+There are bindings for [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]] making it simple to use [[id:3b212da7-a12b-47e9-97e6-112e2286a484][DuckDB]] from R code.
+
+* Install
+
+#+begin_src
+install.packages("duckdb")
+#+end_src
+
+* Usage

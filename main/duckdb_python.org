@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       837aa614-2408-4c7f-b245-05ce832a26f7
+:mtime:    20250915133459
+:ctime:    20250915133459
+:END:
+#+TITLE: DuckDB Python
+#+FILETAGS: :duckdb:sql:database:python:
+
+There are bindings for [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] making it simple to use [[id:3b212da7-a12b-47e9-97e6-112e2286a484][DuckDB]] from Python code.
+
+* Install
+
+#+begin_src
+pip install duckdb
+#+end_src
+
+* Usage

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f7b43309-58ec-4f6d-8cc7-b53e64916742
-:mtime:    20241006211350 20230701220951
+:mtime:    20250915131824 20241006211350 20230701220951
 :ctime:    20230701220951
 :END:
 #+TITLE: Structured Query Language (SQL)
@@ -10,21 +10,13 @@ If you do a lot of [[id:f7c491f4-c557-4a68-916a-4e883a15e8ac][Data Analysis]] at
 popular are SQL (Structured Query Language) databases. There are many different options only some of which are covered
 here.
 
-* MySQL/MariaDB
 
-* SQLite
-
-* PostgreSQL
++ [[id:749d5f0f-09bd-47a8-a351-2432f38ff3d9][SQLite3]]
++ [[id:498abde2-0f65-4a10-bf84-8bf6a3410d67][PostgreSQL]]
++ [[id:3b212da7-a12b-47e9-97e6-112e2286a484][DuckDB]]
++ MySQL/MariaDB
 
 * Links
 
-** MySQL/MariaDB
-
-** SQLite
-
-
-
-+ [[https://sqlpkg.org/][sqlpkg - SQLite Package Registry]]
-+ [[https://sqlite.org/draft/rsync.html][SQLite rsync]] make copies of SQLite3 databases.
-
-** PostgreSQL
++ [[https://www.sqltutorial.org/][SQL Tutorial: Learn SQL from Scratch for Beginners]]
++ [[https://sqlfiddle.com/][SQL Fiddle - Online SQL Compiler for learning & practice]]

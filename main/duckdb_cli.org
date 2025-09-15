@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       f3af66c4-bebf-4a99-ba53-e8801512f8ab
+:mtime:    20250915132403
+:ctime:    20250915132403
+:END:
+#+TITLE: DuckDB CLI
+#+FILETAGS: :sql:duckdb:database:
+
+* Running SQL queries
+
+Typically you will write your SQL queries in plain-text files (using [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] of course which has excellent support for SQL
+syntax). Once you have your query you will want to run it and there are a couple of ways to run code from a file I found
+in this [[https://duckdbsnippets.com/snippets/198/run-sql-file-in-duckdb-cli][snippet]].
+
+#+begin_src
+# Execute the commands in my.sql then prompts for additional statements interactively
+duckdb -init my.sql
+# Execute the commands in my.sql then exits
+duckdb -init my.sql -no-stdin
+# Pipe the contents into duckdb
+duckdb < my.sql
+#+end_src
+
+This is really useful for debugging your scripts, although if they are wrapped up in DuckDBR you will want to write your
+query to file first to make this easier.

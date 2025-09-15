@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       7b248fb6-5df4-469c-b408-8c3621d87bf3
+:mtime:    20250915133421
+:ctime:    20250915133421
+:END:
+#+TITLE: DuckDB Installation
+#+FILETAGS: :duckdb:sql:database:installation:
+
+DuckDB should be available in the package manager of most major distributions.
+
+* Gentoo
+
+#+begin_src
+emerge -av duckdb
+#+end_src
+
+* Arch
+
+#+begin_src
+pacman -Syu duckdb
+#+end_src
+
+* User
+
+If not you can install as a user under your account using the following [[https://duckdb.org/docs/installation/][instructions]].
+
+#+begin_src
+curl https://install.duckdb.org | sh
+#+end_src
