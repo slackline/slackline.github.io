@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0f86b256-4f35-483e-a55a-1097f405b428
-:mtime:    20250912072700
+:mtime:    20250915094947 20250912072700
 :ctime:    20250912072700
 :END:
 #+TITLE: RSE Con 2025
@@ -244,8 +244,8 @@ Most teams based around domain knowledge.
 ** [2025-09-10 Wed 13:45] The Research Software Analyst role
 + RSEs do research and business analysis.
 + [[https://zenodo.org/records/2564790][Research Software (RS) Careers: Generic Learnings from King's Digital Lab, King's College London]]
-* <2025-09-11 Thu>
-** <2025-09-11 Thu 09:05> [[https://bit.ly.rse2025-tallard][Tania Allard]] ([[https://www.trallard.dev][tallard.dev]])
+* [2025-09-11 Thu]
+** [2025-09-11 Thu 09:05] [[https://bit.ly.rse2025-tallard][Tania Allard]] ([[https://www.trallard.dev][tallard.dev]])
 + FOSS is worth around $8 trillion annually and a lot of private companies rely on OSS but they aren't contributing or
   funding development.
 + RSEs are a key, critical part of the FOSS infrastructure, many popular libraries come from RSE-like work.
@@ -276,7 +276,10 @@ Most teams based around domain knowledge.
   - Culture
   - Processes
 + Systematic change: we need funding and incentives that support and prioritise sustainability (high value efforts)
-** [2025-09-11 Thu 11:00] Deployung a Web Application with Kubernetes
+** [2025-09-11 Thu 10:00] Awards etc.
++ RSECon26 will be in Sheffield 9-11th September 2026, volunteering details are [[https://society-rse.org/volunteer-at-rsecon/][here]].
++ Aligns with inaugral [[https://www.researchsoft.org/irsc/][International Research Software Conference]] 7-8th Spetember 2025.
+** [2025-09-11 Thu 11:00] Deploying a Web Application with Kubernetes
 
 * Miscellaneous
 
