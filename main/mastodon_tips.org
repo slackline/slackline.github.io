@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       6c59d64a-af0e-446f-a81c-b6fed29bca51
+:mtime:    20250916084716
+:ctime:    20250916084716
+:END:
+#+TITLE: Mastodon Tips
+#+FILETAGS: :mastodon:tips:faq:fediverse:
+
+* Searching Posts
+
++ Include ~from:me~ in search to search your own posts
++ Include ~in:library~ to search for posts you have interacted with or written yourself.
++ Search a specific users posts with ~from:<username>~.
+
+* Splitting Posts
+
+** Splinter
+
+A simple app for splitting longer posts is [[https://splinter.hastily.cc/][Splinter - Mastodon Thread Splitter]].
+
+* Reminders
+
+[[https://mstdn.social/@remindme][@remindme@mstdn.social]] can be used to create reminders for various things.

@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       07e44490-d830-4645-bc9d-5e52becc24d3
+:mtime:    20250916084439
+:ctime:    20250916084439
+:END:
+#+TITLE: Mastodon Bots
+#+FILETAGS: :mastodon:bots:automation:
+
+Mastodon bots can be really useful.
+
+* My Bots
+
+** RSEConBot
+
+I setup the [[https://mastodon.social/@RSEConBot][@RSEConBot@mastodon.social]] to post about upcoming sessions at [[https://rsecon.society-rse.org][RSECon25]]. I documented how to do this at
+[[https://socrse.github.io/rsecon-code/][RSECon Code]].
+
+* Links
+
++ [[https://explore.mastodon.bot/faq][explore.mastodon.bot - Frequently Asked Questions]]

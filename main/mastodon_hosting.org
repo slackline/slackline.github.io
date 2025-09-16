@@ -1,0 +1,93 @@
+:PROPERTIES:
+:ID:       9aeca9f3-5ff2-4ff3-90f8-6bd1f6d7bab0
+:mtime:    20250916084822
+:ctime:    20250916084822
+:END:
+#+TITLE: Mastodon Hosting
+#+FILETAGS: :mastodon:hosting:fediverse:
+
+* Server Setup
+
+I have a VPS (I use [[https://ovh.co.uk][OVH]]) and figured I could just host my own. My VPS runs [[https://archlinux.org][Arch Linux]] and there is a package for [[https://aur.archlinux.org/packages/mastodon][Mastodon
+on AUR]] appear
+
+#+begin_src sh
+$ cd ~
+$ git clone https://aur.archlinux.org/mastodon.git
+$ cd mastodon
+$ makepkg -sri
+<<< enter password >>>
+#+end_src
+
+Ok installed but unfortunately the [[https://wiki.archlinux.org/title/Mastodon][promised post-install message]] didn't appear. So lets read the [[https://docs.joinmastodon.org/admin/prerequisites/][official documentation]]
+which recommends three things...
+
+1. Only allowing SSH key-based login (I already have this configured).
+2. Installing
+   [[https://www.fail2ban.org/wiki/index.php/Main_Page][fail2ban]] to
+   block repeated logins.
+3. Install a firewall and only allow SSH, HTTP and HTTPS ports
+
+** SSH key-based login
+
+I took some steps to
+[[https://kimura.no-ip.info/doku.php?id=linux:security:ssh#ssh_hardening][harden
+my SSH login]] some time ago. They are minor but make a small difference. In ~/etc/ssh/sshd.config~ change the
+following...
+
+#+begin_src sh
+PermitRootLogin no
+Port <insert-port-number>
+PasswordAuthentication no
+#+end_src
+
+Note however that before changing ~PasswordAuthentication~ to ~no~ you *MUST* upload your public SSH key to your account
+on your VPS otherwise you will lock yourself out.
+
+#+begin_src sh
+rsync -av ~/.ssh/<keyname>.pub <username>@<vps-server-name|ip-address>:~/.ssh/.
+#+end_src
+
+You should now be able to login using your SSH key and its even easier if you use
+[[linux:security:ssh#public_key_generation|keychain]].
+
+** fail2ban
+
+Under Arch Linux install with the following (as ~root~)...
+
+#+begin_src sh
+# pacman -Syu fail2ban
+#+end_src
+
+As per instructions you could add the following to
+~/etc/fail2ban/jail.local~.
+
+#+begin_src sh
+  [DEFAULT] destemail = your@email.here sendername = Fail2Ban
+
+  [sshd] enabled = true port = 22
+
+  [sshd-ddos] enabled = true port = 22
+#+end_src
+
+However, I don't...
+
+1. Want lots of emails telling me about failed login attempts (like anyone is ever going to read what I write here!).
+2. Don't run ~sshd~ on port ~22~ and instead use some other random port to reduce exposure to attacks (not perfect but
+   its one simple step to take).
+
+For obvious reasons I'm not posting what I have entered here and you should interpolate your own values for the relevant
+fields. Once you have configured ~fail2ban~ appropriately you can enable/restart the service.
+
+#+begin_src sh
+  systemctl enable --now fail2ban.service
+#+end_src
+
+** Firewall, SSH and HTTPS (not HTTP)
+
+I've already configured [[https://nginx.org/en/][nginx]] which I use for serving the sites I host on my VPS to redirect ~http~ requests on port 80
+to ~https~ on port 443 and use [[https://certbot.eff.org/][certbot]] to provide valid certificates. I'm not going to allow any firewall to allow
+~http~ connections then. As mentioned above I configure ~sshd~ to run on a port other than ~22~. To which end my
+installation of ~iptables~ is somewhat different from the recommended.
+
+*TODO* Finish off.
