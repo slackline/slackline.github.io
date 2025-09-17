@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       62d4406f-68ce-418b-90aa-25a8978b0248
-:mtime:    20240130203857
+:mtime:    20250917132247 20240130203857
 :ctime:    20240130203857
 :END:
 #+TITLE: Git Stash
@@ -51,3 +51,18 @@ Sometimes you may not want to keep your stashes, you can discard the most recent
   git stash drop stash@{1}
   git stash clear
 #+end_src
+
+* Tips and Tricks
+
+** Stashing worktree
+
+Stashing just the worktree can be really useful when you've made a bunch of changes but only want to commit some of them
+(~git add --patch~) because linting can modify the files you are working on or you may need to make further changes to
+the sections you do want to stage and commit. This can be confusing if you've got to sort through and find just the bits
+that have changed since your last staging (~git add~) and select those to be included again.
+
+Instead, ~git add --patch~ the bits you want to stage then stash everything else that you don't want to include in the
+commit with ~git stash push --keep-index~ (or in [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] this is ~z w~). You can then commit the changes you want to, deal
+with any linting errors or changes you need to make without having to ~git add --patch~. Once you have everything sorted
+and you've made your commit you can the unstash all the other changes you've been working on and continue with your
+work.

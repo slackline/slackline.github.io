@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       343f06e6-de81-46ab-bc6f-dca479ad15e9
+:mtime:    20250917132600
+:ctime:    20250917132600
+:END:
+#+TITLE: Magit Stash
+#+FILETAGS: :magit:git:stashing:
+
+Stashing from Magit is soooo simple, just hit ~z~ and a transient appears with all your options.
+
+Sometimes you'll only want to stash unstaged changes, e.g. if you are doing a partial commit and have staged a bunch of
+sections that you want to lint. This is simple ~z w~ (akin to ~git stash push --keep-index~ which isn't very easy to
+remember, but then the description in the [[https://magit.vc/manual/magit/Stashing.html][Magit manual]] requires that you know the difference between ~index~ and
+~worktree~ too!).
