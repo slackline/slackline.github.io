@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       3150b126-53ea-43db-b726-981ad0d314eb
+:mtime:    20250917073007
+:ctime:    20250917073007
+:END:
+#+TITLE: Codeberg Pages
+#+FILETAGS: :git:forges:codeberg:ci:
+
+* Links
+
++ [[https://andre601.ch/blog/2023/11-05-using-codeberg-pages/][How to use Codeberg Pages for MkDocs - Andre_601]]

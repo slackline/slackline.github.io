@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       284615e5-516f-4b04-a3d8-2a5ea9480f8e
+:mtime:    20250917072819
+:ctime:    20250917072819
+:END:
+#+TITLE: Codeberg Woodpecker CI
+#+FILETAGS: :git:codeberg:forge:ci:
+
+[[https://ci.codeberg.org/][Codeberg Woodpecker CI]] is an instance of [[https://woodpecker-ci.org/][Woodpecker CI]] that authorised users of Codeberg are allowed to access. Unlike
+[[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]] [[id:240b85db-27c9-4848-9d3f-c3be841a193b][Codeberg]] is a non-profit and don't have unlimited resources to offer for free. To apply for access [[https://codeberg.org/Codeberg-e.V./requests/issues/new?template=ISSUE_TEMPLATE%2fWoodpecker-CI.yaml][fill out this
+form]]. I found turn around was pretty quick and was granted access within a couple of hours.
+
+* Configuration
+
+Configuration files live in the ~.woodpecker/~ directory and are, as with [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]] and [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]], [[id:fac7a695-9bdf-4a79-9ec3-9945e9a0cba4][YAML]] files.
+
+* Templates
+
+There is a useful repository of [[https://codeberg.org/Codeberg-CI/examples][Codeberg CI examples]] that can be perused for inspiration. Useful one's I've spotted so
+far are...
+
++ [[https://codeberg.org/Codeberg-CI/examples/src/branch/main/Python/.woodpecker/mkdocs.yaml][Python/.woodpecker/mkdocs.yaml]] - Static Site Generator mkdocs example
++ [[https://codeberg.org/Codeberg-CI/examples/src/branch/main/Python/.woodpecker/code-quality.yaml][Python/.woodpecker/code-quality.yaml]] - Standard CI pipeline to test Python packages code on multiple Python distributions.
++ [[https://codeberg.org/Codeberg-CI/examples/src/branch/main/Typst/.woodpecker.yaml][R/.woodpecker.yaml]] - Installs R package dependencies and runs R CMD check
+
+* Examples
+
+** Build and deploy mkdocs
+
+See also Codeberg Pages.
+
+** Python Test Suite
+
+** Pre-commit checks

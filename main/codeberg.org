@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       240b85db-27c9-4848-9d3f-c3be841a193b
+:mtime:    20250917073025
+:ctime:    20250917073025
+:END:
+#+TITLE: Codeberg
+#+FILETAGS: :git:forge:codeberg:
+
+I've opted to migrate my personal repositories away from [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]] and [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]] as whilst they provide a lot of great free
+services they are big companies pushing [[id:e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5][AI]] features that I detest and subject to the whims of their share holders. In
+contrast [[https://codeberg.org][Codeberg e.V.]] is non-profit (so please make donations 😉).
+
++ [[id:284615e5-516f-4b04-a3d8-2a5ea9480f8e][Codeberg CI - woodpecker]]
++ [[id:3150b126-53ea-43db-b726-981ad0d314eb][Codeberg Pages]]
+
+* Links

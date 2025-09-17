@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       28ffcc43-9dff-4de8-a211-277c5346a642
-:mtime:    20250306202811 20240310181605 20240217133735 20240211172814 20240130202744
+:mtime:    20250917073545 20250306202811 20240310181605 20240217133735 20240211172814 20240130202744
 :ctime:    20240130202744
 :END:
 #+TITLE: Git Forges
@@ -23,11 +23,13 @@ the linked pages.
 | [[https://git.zx2c4.com/cgit/about/][cgit]]      | A hyperfast web frontend for git repositories written in C.                                                                      |
 | Bare repo | It is also relatively simple to [[https://maddie.info//2023/09/05/simple-and-small-git-hosting.html][self-host over SSH]].                                                                              |
 | [[https://radicle.xyz/][Radicle]]   | Peer-to-peer code collaboration stack built on Git.                                                                              |
+| [[https://tangled.sh][tangled.sh]] | ActivityPub (peer-to-peer) Git forge.
 
 The Gittea based offerings have far less complete CI but there is a growing number of tools such as [[https://davejansen.com/publish-to-netlify-using-gitea-actions/][deploying to Netlify]].
 
-
++ [[id:240b85db-27c9-4848-9d3f-c3be841a193b][Codeberg]]
 + [[id:736537b3-75e0-4c24-9156-364937e0e8a2][Forgejo]]
++ [[id:edd39410-26d9-45c0-a6bb-44cae001acae][Tangled]]
 + [[id:609f694f-40bb-4f7b-92f4-9e478d743442][Git Remotes]]
 
 * No Forges!
