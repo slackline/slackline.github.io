@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b68f81ac-3256-4282-ba1a-da203da3c58d
-:mtime:    20250328161718 20250326105025 20250213153334 20241209195432
+:mtime:    20250918130623 20250328161718 20250326105025 20250213153334 20241209195432
 :ctime:    20241209195432
 :END:
 #+TITLE: FAIR4RS
@@ -21,3 +21,4 @@
 + [[https://content.iospress.com/articles/data-science/ds190026][Towards FAIR principles for research software - IOS Press]]
 + [[https://fairsoftwarechecklist.net/v0.2/][FAIR software checklist]]
 + [[https://doi.org/10.15497/RDA00068][FAIR Principles for Research Software 1.0]]
++ [[https://carpentries-incubator.github.io/better-research-software/][Building Better Research Software: Summary and Setup]]

@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       8a38a071-9901-4e35-9aec-213a0c65af00
 :ROAM-ALIASES: "Open Research Software"
-:mtime:    20241209231730 20241209194259 20240219222840 20240118162908 20240109124736 20231002105158 20230519121737 20230316215314 20230315120054 20230103103311 20221231171719
+:mtime:    20250918130711 20241209231730 20241209194259 20240219222840 20240118162908 20240109124736 20231002105158 20230519121737 20230316215314 20230315120054 20230103103311 20221231171719
 :ctime:    20221231171719
 :END:
 #+TITLE: Open Research Software
@@ -46,6 +46,10 @@ There are a number of criteria that are useful in ensuring that code is sustaina
 ** Miscellaneous
 
 + [[https://www.pluralsight.com/resource-center/guides/developer-thriving-research-paper][Research Paper | Developer Thriving: The four factors that drive Software Developer Productivity across Industries]]
+
+** Learning Resources
+
++ [[https://carpentries-incubator.github.io/better-research-software/][Building Better Research Software: Summary and Setup]]
 
 * Bibliography
 
