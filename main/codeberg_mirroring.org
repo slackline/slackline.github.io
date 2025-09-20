@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       516bd2e7-bd0e-4daf-9122-7cf49a082398
+:mtime:    20250920213816
+:ctime:    20250920213816
+:END:
+#+TITLE: Codeberg Mirroring
+#+FILETAGS: :coderberg:forge:git:mirror:github:gitlab:
+
+Codeberg has a neat feature which allows you to mirror your hosted repository to other forges such as [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]], [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]] or
+other [[id:736537b3-75e0-4c24-9156-364937e0e8a2][Forgejo]] instances. This is really neat, it allows me to continue having another backup on remotes and means I
+don't have to have my local copies setup to push to multiple remotes.
+
+* Configuration
+
+From a repositories /Settings/ you can find the /Mirror Settings/ section and you can add the URL of the remote
+repository.
+
+You then have two options for authentication, you can add your username and password (and trust that
+Codeberg will keep these encrypted and secure) or you can select the /Use SSH authentication/ option (you can't select
+both as I found!). I opted for the later as it felt more secure and meant I wasn't revealing my password to another
+service. Once added there is an entry under /Pushed repository/ and the option to /Copy public key/ which you should
+click on and add to the other forge you have configured to mirror to.
+
+** Gotchas
+
+Couple of things caught me out initially.
+
++ I found using the SSH version ~git@gitlab.com:<username>/<repo>.git~ was required to use SSH credentials.
++ Make sure you don't have any branch protection rules on the mirror otherwise pushing will fail.

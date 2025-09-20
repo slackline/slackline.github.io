@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       240b85db-27c9-4848-9d3f-c3be841a193b
-:mtime:    20250917073025
+:mtime:    20250920213835 20250917073025
 :ctime:    20250917073025
 :END:
 #+TITLE: Codeberg
@@ -12,5 +12,6 @@ contrast [[https://codeberg.org][Codeberg e.V.]] is non-profit (so please make d
 
 + [[id:284615e5-516f-4b04-a3d8-2a5ea9480f8e][Codeberg CI - woodpecker]]
 + [[id:3150b126-53ea-43db-b726-981ad0d314eb][Codeberg Pages]]
++ [[id:516bd2e7-bd0e-4daf-9122-7cf49a082398][Mirroring]]
 
 * Links
