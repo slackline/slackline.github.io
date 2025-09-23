@@ -1,13 +1,13 @@
 :PROPERTIES:
 :ID:       0c371287-128d-4e46-8128-b2d4f5fc604c
-:mtime:    20250219081429 20250116155044 20231210114502 20230331125517 20230103103308 20221212181558
+:mtime:    20250923220805 20250219081429 20250116155044 20231210114502 20230331125517 20230103103308 20221212181558
 :ctime:    20221212181558
 :END:
 #+TITLE: Markdown
 #+DATE: [2022-02-16 Wed 06:36]
 #+FILETAGS: :markup:literate programming:mermaid:
 
-In a similar vein to [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]], [[https://daringfireball.net/projects/markdown/][Markdown]] is a markup language for formatting plain text. Its simple yet pretty functional
+In a similar vein to [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]], [[https://daringfireball.net/projects/markdown/][Markdown]] is a [[id:0f476b36-8eb9-48c3-afc2-f194f701abeb][markup]] language for formatting plain text. Its simple yet pretty functional
 and forms the basis of several [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]] frameworks such as [[id:0c371287-128d-4e46-8128-b2d4f5fc604c][RMarkdown]].
 
 * Formatting

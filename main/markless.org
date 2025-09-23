@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       b97bd5c6-f1fe-4b26-8a3d-b801f156abe9
+:mtime:    20250923220735
+:ctime:    20250923220735
+:END:
+#+TITLE: Markless
+#+FILETAGS: :markup:markless:
+
+[[https://shirakumo.org/docs/markless/][Markless]] is yet another take on [[id:0f476b36-8eb9-48c3-afc2-f194f701abeb][Markup]] languages for formatting documents.
