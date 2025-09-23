@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       00092001-9bac-4434-b098-a72d6b00385a
-:mtime:    20250919195630 20250721171112 20250225094538 20240113162844
+:mtime:    20250923222042 20250919195630 20250721171112 20250225094538 20240113162844
 :ctime:    20240113162844
 :END:
 #+TITLE: Emacs Editing
@@ -12,6 +12,16 @@ You can search for strings with ~C-s~ which allows interactive searching but a m
 ~occur-mode~ which searches for regular expressions and shows matching lines in a buffer.
 
 * Tips and Tricks
+
+** Indenting Regions
+
+White space not only makes it easier to read code but in Python it has meaning and nesting should use four spaces. This
+is great when writing code but sometimes if you have ~try: ... except: ...~ statements you want to disable them to find
+out where errors are occurring and this requires you to comment out the  ~try: ... except: ...~ and de-indent the neste
+region. For too long I've wasted my time deleting white space then putting it back in or doing a find and replace to
+remove excessive white spaces. Then I [[https://stackoverflow.com/a/2585406/1444043][learnt]] about ~C-c <~ / ~C-c >~ w
+left or right respectively. Another simple command that has been around for ages but has passed me by but will now make
+a big difference and improve my efficiency.
 
 ** Use Elisp in Replacement String
 
