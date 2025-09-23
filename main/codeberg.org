@@ -10,8 +10,9 @@ I've opted to migrate my personal repositories away from [[id:52b4db29-ba21-4a8a
 services they are big companies pushing [[id:e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5][AI]] features that I detest and subject to the whims of their share holders. In
 contrast [[https://codeberg.org][Codeberg e.V.]] is non-profit (so please make donations 😉).
 
-+ [[id:284615e5-516f-4b04-a3d8-2a5ea9480f8e][Codeberg CI - woodpecker]]
-+ [[id:3150b126-53ea-43db-b726-981ad0d314eb][Codeberg Pages]]
++ [[id:284615e5-516f-4b04-a3d8-2a5ea9480f8e][CI - Woodpecker]]
++ [[id:3150b126-53ea-43db-b726-981ad0d314eb][Pages]]
++ [[id:f0c5f9b5-8d4c-4b68-9676-62df10ce13e0][Migration]]
 + [[id:516bd2e7-bd0e-4daf-9122-7cf49a082398][Mirroring]]
 
 * Links
