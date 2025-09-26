@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       661f45c0-cec7-4b57-b2b1-7da8f9d8d0e6
-:mtime:    20250813234527 20250602122216 20250118214836 20241009132912 20240804174300 20240217093159 20240130203610
+:mtime:    20250926161911 20250813234527 20250602122216 20250118214836 20241009132912 20240804174300 20240217093159 20240130203610
 :ctime:    20240130203610
 :END:
 #+TITLE: Git Branches
@@ -237,6 +237,10 @@ Focused more on production environments.
 + [[https://web.archive.org/web/20241009122606/https://docs.gitlab.co.jp/ee/topics/gitlab_flow.html][GitLab Flow]] article (see also [[https://docs.gitlab.co.jp/ee/topics/gitlab_flow.html][original]])
 + [[https://docs.github.com/get-started/quickstart/github-flow][GitHub flow - GitHub Docs]]
 + [[https://nvie.com/posts/a-successful-git-branching-model/][A successful Git branching model » nvie.com]] by Cincent Driessen on Git Flow.
+
+*** Stacked Branches
+
++ [[https://tomisoft.dev/blog/04_gitstackedbranches/][Mastering Your GitLab Flow: The Power of Advanced Git Rebase | TomiSoft Solutions]]
 
 ** Blogs
 

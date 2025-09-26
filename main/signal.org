@@ -1,10 +1,7 @@
 :PROPERTIES:
-:mtime:    20250925225909
-:ctime:    20250925225909
-:END:
-
-:PROPERTIES:
 :ID:       06db84e0-bb77-4c56-8dec-c3506cfbc030
+:mtime:    20250926200759 20250925225909
+:ctime:    20250925225909
 :END:
 #+TITLE: Signal
 #+FILETAGS: :signal:prviacy:e2ee:
@@ -29,3 +26,4 @@ collect your WhatsApp data, as you cannot use the app if you decline to share yo
 + [[https://www.malwarebytes.com/blog/news/2025/03/moving-from-whatsapp-to-signal-a-good-idea][Moving from WhatsApp to Signal: A good idea? | Malwarebytes]]
 + [[https://privacysavvy.com/news/privacy/whatsapp-to-share-data-with-facebook-after-privacy-policy-update/][WhatsApp to share users' data with Facebook after recent Privacy Policy update - PrivacySavvy]]
 + [[https://privacysavvy.com/security/mobile/signal-vs-whatsapp/][Signal vs. WhatsApp: Which One is Good to Use? - PrivacySavvy]]
++ [[https://en.todoandroid.es/meta-collects-data-from-users-this-is-how-it-does-it/][How Meta collects, uses, and protects users' personal data: a comprehensive analysis]] - Comprehensive
