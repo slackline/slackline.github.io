@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3cca0dfd-0c82-4685-b9ed-6314f7c8b78f
-:mtime:    20250618134341 20241110212615 20241002091737 20241001110421 20240529091921 20240523125824 20240507153851 20240417074159 20240416215946 20240315123523 20240206174808 20240102123440 20240101130614 20231231095334 20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
+:mtime:    20250926101805 20250618134341 20241110212615 20241002091737 20241001110421 20240529091921 20240523125824 20240507153851 20240417074159 20240416215946 20240315123523 20240206174808 20240102123440 20240101130614 20231231095334 20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
 :ctime:    20221212233350
 :END:
 #+TITLE: Python Pytest
@@ -214,6 +214,28 @@ unstable process that might not return what you expect (if for example a web-ser
 
 Running tests takes time and ideally tests should run as quickly as possible. You can check how long it takes for tests
 and fixtures to run using the [[https://github.com/blake-r/pytest-durations][pytest-durations]] plugin which adds the option `--durations` and prints out a nice report.
+
+** Profiling
+
+Profiling your code helps identify bottlenecks that can be targeted for improving performance and there are a number of
+different [[id:dd7c615f-cd8b-426d-aec0-cfd3803437cc][Python Profiling]] options available to do this as a standalone exercise. However there is the [[https://pypi.org/project/pytest-profiling/][pytest-profiling]]
+plugin.
+
+After installing the package it adds a number of options to ~pytest~
+
+| Option             | Description                                                         |
+|--------------------+---------------------------------------------------------------------|
+| ~--profile~        | Generate profiling information                                      |
+| ~--profile-svg~    | Generate profiling graph                                            |
+| ~--pstats-dir~     | Configure the dump directory of profile data files                  |
+| ~--element-number~ | Defines how many elements will display in a result                  |
+| ~--strip-dirs~     | Configure to show/hide the leading path information from file names |
+
+There is, according to the documentation, a fixture which can be added to tests but I haven't worked out what that is or
+how to use it just yet.
+
+Another possibly useful plugin I came across but haven't investigated is [[https://github.com/ionelmc/pytest-benchmark][pytest-benchmark]] which allows benchmarking of
+individual functions (one per test).
 
 * Documentation Tests
 

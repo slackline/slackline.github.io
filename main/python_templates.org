@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       14310dd9-647a-4532-9a50-d75becb0d409
+:mtime:    20250924124508
+:ctime:    20250924124508
+:END:
+#+TITLE: Python Templates
+#+FILETAGS: :python:templates:cookiecutter:
+
+Using templates can massively simplify the amount of boiler plate code you need to write when setting up new projects.
+
+* Templates
+
++ [[https://github.com/cookiecutter/cookiecutter][cookiecutter/cookiecutter: A cross-platform command-line utility that creates projects from cookiecutters (project templates), e.g. Python package projects, C projects.]]
++ [[https://github.com/scientific-python/cookie][scientific-python/cookie: Scientific Python Library Development Guide and Cookiecutter]]
++ [[https://github.com/napari/napari-plugin-template/#napari-plugin-template][napari/napari-plugin-template: A template repo used to make new napari plugins]]
++ [[https://github.com/NLeSC/python-template][NLeSC/python-template: Netherlands eScience Center Python Template]]
++ [[https://github.com/alan-turing-institute/python-project-template][alan-turing-institute/python-project-template]]
++ [[https://github-pages.arc.ucl.ac.uk/python-tooling/pages/templates.html][Templates | UCL ARC Python tooling]]
