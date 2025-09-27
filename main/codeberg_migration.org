@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       f0c5f9b5-8d4c-4b68-9676-62df10ce13e0
+:mtime:    20250927210758 20250920223128
+:ctime:    20250920223128
+:END:
+#+TITLE: Codeberg Migration
+#+FILETAGS: :codeberg:forge:git:github:gitlab:forgejo:
+
+Migration is a very useful feature for moving existing repositories, I opted however to [[id:516bd2e7-bd0e-4daf-9122-7cf49a082398][mirror]] my repositories back straight-away.
+
+* How to Migrate
+
+1. Click on the ~+~ symbol at the top right and select /New Migration/.
+2. Copy the ~https://~ URL for cloning from the existing forge and paste into the field on Codeberg
+3. Add an Access Token generated on the forge you are migrating from (see below).
+4. Select all tick-boxes (although I exclude Git LFS as I don't use this).
+5. Optionally make the repository private.
+6. Click on /Migrate repository/.
+
+That its simple!
+
+** Access Tokens
+
+These allow you to bring the issues, pull requests, labels, milestones and releases over when migrating.
+
+You should create an access token on the Forge you are migrating from.
+
+*** GitLab
+
+*** ForgeJo
+
+1. Under /Settings > Applications/ generate a new token, I called mine ~codeberg-migration~.
+2. Select whether the token has access to /Public only/ or /All (public, private and limited)/ repositories and
+   organisations.
+3. I selected 'Read' permissions for all API routes.
+
+* Links
+
+** Blogs from Others
+
++ [[https://www.andrlik.org/dispatches/migrating-from-github-to-codeberg/][Migrating my open source repositories to Codeberg · Ministry of Intrigue]]
