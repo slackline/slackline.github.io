@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3150b126-53ea-43db-b726-981ad0d314eb
-:mtime:    20250920213838 20250920080647 20250917073007
+:mtime:    20250928115426 20250920213838 20250920080647 20250917073007
 :ctime:    20250917073007
 :END:
 #+TITLE: Codeberg Pages
@@ -16,6 +16,31 @@ isn't  the case, it happens auto-magically in the first step of the pipeline whe
 * Configuration
 
 Woodpecker needs to be able to push to your repository in order to publish the pages. To do this you need to add a
+
+* ReadTheDocs
+
+An alternative is to off-load page hosting to [[https://readthedocs.org/][ReadTheDocs.org]]. If you use [[id:9e8265ee-95d1-4218-90cd-74357aec1ea5][MkDocs]] then the configuration of that requires
+adding ~mkdocs.yml~ and deployment to ReadTheDocs requires add ~.readthedocs.yaml~ as [[https://docs.readthedocs.com/platform/stable/intro/mkdocs.html][documented]].
+
+You may have additional dependencies required by ~mkdocs~ (typically defined in ~pyproject.toml~ for Python projects)
+and so you should add a section which installs the requirements.
+
+#+begin_src yaml
+# Optional but recommended, declare the Python requirements required
+# to build your documentation
+# See https://docs.readthedocs.io/en/stable/guides/reproducible-builds.html
+python:
+    install:
+        - method: pip
+          path: ./
+          extra_requirements:
+              - docs
+#+end_src
+
+Another useful article is [[https://docs.codeberg.org/integrations/read-the-docs/][Integrating with Read the Docs | Codeberg Documentation]].
+
+
 * Links
 
 + [[https://andre601.ch/blog/2023/11-05-using-codeberg-pages/][How to use Codeberg Pages for MkDocs - Andre_601]]
++ [[https://docs.codeberg.org/integrations/read-the-docs/][Integrating with Read the Docs | Codeberg Documentation]]
