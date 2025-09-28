@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       ee9d2bb3-1758-4ca7-b056-7d059ff2a3f5
+:mtime:    20250928195558
+:ctime:    20250928195558
+:END:
+#+TITLE: Sequoia-PGP
+#+FILETAGS: :pgp:privacy:encryption:
+
+An implementation of PGP in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]].
+
+* Links
+
++ [[https://sequoia-pgp.org/][Sequoia-PGP]]
