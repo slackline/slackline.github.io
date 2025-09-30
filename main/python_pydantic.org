@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       e19d541f-dc10-4ca8-b74e-63595ec2d97d
+:mtime:    20250929193847
+:ctime:    20250929193847
+:END:
+#+TITLE: Python Pydantic
+#+FILETAGS: :python:pydantic:typing:config:
+
+* Links
+
++ [[https://hackernoon.com/the-end-of-config-hell-in-python-thanks-to-pydantic-v2][The End of Config Hell in Python, Thanks to Pydantic v2 | HackerNoon]]
