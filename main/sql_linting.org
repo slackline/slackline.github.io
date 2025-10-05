@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       9c9a6c9a-c406-4229-b20c-14e9f2adada5
+:mtime:    20251004204124
+:ctime:    20251004204124
+:END:
+#+TITLE: SQL Linting
+#+FILETAGS: :sql:linting:precommit:
+
+[[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linting]] your code is a great idea as it makes it readable to others and [[id:f7b43309-58ec-4f6d-8cc7-b53e64916742][Structured Query Language (SQL)]] is no
+exception. Unfortunately there are many dialects, but not to worry, tools like [[https://www.sqlfluff.com][SQLFluff]] support many of these different
+dialects and it has a [[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] hook [[https://docs.sqlfluff.com/en/stable/production/pre_commit.html][available]] to make life that little bit easier.
+
+* SQLFluff
+
+There are two hooks available in SQLFluff ~sqlfluff-lint~ which reports linting errors and ~sqlfluff-fix~ which attempts
+to fix errors in style.
+
+* Links
+
++  [[https://github.com/sqlfluff/sqlfluff][sqlfluff/sqlfluff: A modular SQL linter and auto-formatter with support for multiple dialects and templated code.]]
