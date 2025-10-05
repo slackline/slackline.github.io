@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       60363eb0-6272-4c26-8f2e-d7c237bd6609
-:mtime:    20241122224542 20240601165006 20240513200626 20240120092829
+:mtime:    20251005205222 20241122224542 20240601165006 20240513200626 20240120092829
 :ctime:    20240120092829
 :END:
 #+TITLE: Music
@@ -23,6 +23,10 @@ An interesting way of finding new music from the BBC in the form of [[https://ww
 
 + [[https://bandcamp.com][Bandcamp]]
 + [[https://mirlo.space][Mirlo]]
+
+* Hardware
+
+I have a [[id:e93f90d5-0917-440b-8c85-d534cf239294][Sandisk Clip+]] which I occasionally use in preference to my Android phone.
 
 * Links
 

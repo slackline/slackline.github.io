@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       e93f90d5-0917-440b-8c85-d534cf239294
+:mtime:    20251005205135
+:ctime:    20251005205135
+:END:
+#+TITLE: SanDisk Clip+
+#+FILETAGS: :hardware:mp3:
+
+* Rockbox
+
+[[https://www.rockbox.org/][Rockbox]] is an alternative firmware for the SanDisk Clip+ and many other mp3 players.
+
+** Installation
+
+Instructions for installing the /Rockbox Utility/ on [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]] and [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]].
+
+#+begin_src sh
+# Install on Gentoo
+emerge -av rbutil
+# Install on Arch
+git clone https://aur.archlinux.org/rbutil-git.git
+cd rbutil-git
+makepkg -sri
+#+end_src
+
+Once installed this provides the ~/usr/bin/RockboxUtility~ which can be used to manager your device.
+
+*NB* - You need to use a decent USB cable for the device to be detected by your system.
+
+** TTS Voice
+
+To get this working I installed [[https://github.com/espeak-ng/espeak-ng][espeak-ng]] and selected it as the TTS voice driver when upgrading to Rockbox 4.0.
+
+* Links
+
++ [[Link: https://www.rockbox.org/][Rockbox]]
