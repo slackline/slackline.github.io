@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       c3d85b0a-29e6-49e4-9349-0072a9604cfa
-:mtime:    20250426130847 20250118230437 20241219132701 20241213162427 20241115191626 20240809213446 20240120102519
+:mtime:    20251009113642 20250426130847 20250118230437 20241219132701 20241213162427 20241115191626 20240809213446 20240120102519
 :ctime:    20240120102519
 :END:
 #+TITLE: Music Electronic
@@ -16,6 +16,10 @@ If artist is a link its to their ba
 
 + [[https://acidpauli.bandcamp.com/music][Bandcamp]]
 + [[https://soundcloud.com/acidpauli][Soundcloud - Acid Pauli]]
+
+** Androcell
+
++ [[https://androcell.bandcamp.com/][Bandcamp]]
 
 ** Bonobo
 
