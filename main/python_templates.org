@@ -1,12 +1,322 @@
 :PROPERTIES:
 :ID:       14310dd9-647a-4532-9a50-d75becb0d409
-:mtime:    20250924124508
+:mtime:    20251009133248 20251003200347 20251003135643 20251003123356 20250924124508
 :ctime:    20250924124508
 :END:
 #+TITLE: Python Templates
 #+FILETAGS: :python:templates:cookiecutter:
 
 Using templates can massively simplify the amount of boiler plate code you need to write when setting up new projects.
+
+* [[https://github.com/scientific-python/cookie][Scientific Python Cookie Cutter]]
+
+#+begin_src
+uv tool install --with copier-templates-extensions copier
+copier copy gh:scientific-python/cookie <pkg> --trust --vcs-ref=HEAD
+#+end_src
+
+Then answer the questions when prompted, sensible to use ~setuptools~ as the build system as this ensures
+~setuptools-scm~ is used to manage versions based on Git tags.
+
+To bring the package under [[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][Python uv]] and Git version control
+
+#+begin_src sh
+cd <pkg>
+mv pyproject.toml pyproject.toml.bak
+uv init
+mv pyproject.toml.bak pyproject.toml
+# Generate lock file
+uv lock
+# Generate environment
+uv venv
+# Bring under version control
+git init
+# Remove unwanted files
+rm main.py docs/conf.py LICENSE
+# Get GNU GPLv3 license in Markdown
+wget https://www.gnu.org/licenses/gpl-3.0.md && mv gpl-3.0.md COPYING.md
+git add .gitattributes .github/* .gitignore .pre-commit-config.yaml .readthedocs.yaml COPYING.md
+git commit -m "pkg: Initial commit"
+#+end_src
+
+Can now go about modifying the following.
+
+** Changes
+
+
+*** README.md
+
+Won't use all the badges or URLs that are included here so comment out those that aren't needed (NB [[id:8dbde866-810a-48e4-981f-2fcbc19ec5cf][Pre-commit
+Markdownlint-cli2]] will sort out which links are used for you). Best to comment out sections so they can easily restored
+if/when they are required.
+
+*** pyproject.toml
+
+**** License
+
+As noted above I opted to switch to [[https://www.gnu.org/licenses/gpl-3.0.en.html][GNU GPLv3]] this meant that the ~license~ field needed updating. I found ~uv~ uses the
+[[https://spdx.dev/learn/handling-license-info/][SPDX License]] and so you _have_ to conform with this otherwise ~uv run~ will fail.
+
+#+begin_src toml
+license = "GPL-3.0-or-later"
+#+end_src
+
+**** Dependencies
+
+I have a good idea of the packages I wish to use for development, linting and docs so modified these.
+
+#+begin_src toml
+[project.optional-dependencies]
+test = [
+  "pytest",
+  "pytest-cov",
+]
+dev = [
+  "afmslicer[test]",
+  "black",
+  "codespell",
+  "ipdb",
+  "pre-commit",
+  "pydocstyle[toml]",
+  "pylint",
+  "pytest-testmon",
+  "ruff",
+  "tomli"
+]
+docs = [
+  "mkdocs",
+  "mkdocs-material",
+  "mkdocs-mermaid2-plugin",
+  "mkdocstrings[python]",
+  "numpydoc",
+]
+#+end_src
+
+I then setup [[id:a4af96d2-f895-4a68-9419-d482d2850f4d][Direnv]] to use the ~uv~ environment and installed all dependencies.
+
+#+begin_src sh
+uv env
+echo "#!/bin/bash\nsource .venv/bin/activate" > .envrc && direnv allow
+uv pip install -e ".[docs,dev]"
+#+end_src
+
+**** Ruff
+
+Additional configuration of Ruff
+
+#+begin_src sh
+
+#+end_src
+
+**** Codespell
+
+Tweaks to Codespell configuration
+
+#+begin_src sh
+#+end_src
+
+*** Mkdocs
+
+I prefer [[id:9e8265ee-95d1-4218-90cd-74357aec1ea5][MkDocs]] for documentation these days, this requires changing the ~pyproject.toml~ (see above). Once installed we
+could initalise a project in the working directory.
+
+#+begin_src sh
+mkdocs new .
+mkdir -p docs/api && touch docs/{index,introduction,installation,usage,workflow}.md docs/api/afmslicer.md
+#+end_src
+
+...and edited ~mkdocs.yaml~ to match the following template.
+
+#+begin_src yaml
+---
+site_name: AFMSlicer
+site_url: https://AFMSlicer.readthedocs.org/
+repo_url: https://github.com/ns-rse/AFMSlicer/
+theme:
+    name: material
+    palette:
+    # Palette toggle for automatic mode
+        - media: (prefers-color-scheme)
+          toggle:
+              icon: material/brightness-auto
+              name: Switch to light mode
+    # Palette toggle for light mode
+        - media: '(prefers-color-scheme: light)'
+          scheme: default
+          primary: custom
+          accent: custom
+          toggle:
+              icon: material/brightness-7
+              name: Switch to dark mode
+    # Palette toggle for dark mode
+        - media: '(prefers-color-scheme: dark)'
+          scheme: slate
+          primary: custom
+          accent: custom
+          toggle:
+              icon: material/brightness-4
+              name: Switch to system preference
+nav:
+    - Home: index.md
+    - Introduction: introduction.md
+    - Installation: installation.md
+    - Usage: usage.md
+    - Workflow: workflow.md
+    - Contributing: contributing.md
+    - API:
+          - afmslicer: api/afmslicer.md
+extra:
+    version:
+        provider: mike
+plugins:
+    - autorefs
+    - mermaid2
+    - search
+    - mkdocstrings
+markdown_extensions:
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences:
+          custom_fences:
+              - name: mermaid
+                class: mermaid
+                format: !!python/name:mermaid2.fence_mermaid
+#+end_src
+
+Finally add and commit the changes
+
+#+begin_src sh
+git add pyproject.toml mkdocs.yml docs/* uv.lock
+#+end_src
+
+*** Pre-commit
+
+I modified the following hooks and introduced additional hooks for [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Pylint]] and [[id:8dbde866-810a-48e4-981f-2fcbc19ec5cf][Markdownlint-cli2]] along with configuration
+files required for each.
+
+#+begin_src yaml
+ci:
+  autofix_prs: true
+  autofix_commit_msg: "[pre-commit.ci] Fixing issues with pre-commit"
+  autoupdate_schedule: monthly
+  autoupdate_commit_msg: "[pre-commit.ci] pre-commit-autoupdate"
+  skip: [pylint, pytest] # Optionally list ids of hooks to skip on CI
+
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.18.1
+    hooks:
+      - id: markdownlint-cli2
+        args: []
+
+  - repo: https://github.com/numpy/numpydoc
+    rev: v1.9.0
+    hooks:
+      - id: numpydoc-validation
+
+  - repo: local
+    hooks:
+      - id: pylint
+        args: ["--rcfile=.pylintrc"]
+        name: Pylint
+        entry: python -m pylint
+        language: system
+        files: \.py$
+
+  - repo: local
+    hooks:
+      - id: pytest
+        name: Pytest (testmon)
+        entry: pytest --testmon
+        language: system
+        files: \.py$
+ci:
+  autofix_prs: true
+  autofix_commit_msg: "[pre-commit.ci] Fixing issues with pre-commit"
+  autoupdate_schedule: monthly
+  autoupdate_commit_msg: "[pre-commit.ci] pre-commit-autoupdate"
+  skip: [pylint, pytest] # Optionally list ids of hooks to skip on CI
+#+end_src
+
+Pytest-testmon files were added to ~.gitignore~
+
+#+begin_src
+.testmondata*
+#+end_src
+
+**** numpydoc validation
+
+As I've introduced [[https://numpydoc.readthedocs.io/en/latest/validation.html][numpydoc validation]] as a pre-commit hook I also added the following configuration to
+~pyproject.toml~.
+
+#+begin_src toml
+[tool.numpydoc_validation]
+checks = [
+  "all", # Perform all check except those listed below
+  "ES01",
+  "EX01",
+  "PR10", # Conflicts with black formatting
+  "SA01",
+]
+exclude = [  # don't report on objects that match any of these regex
+    "\\.undocumented_method$",
+    "\\.__repr__$",
+    "^test_",
+    "^conftest",
+    "^conf$",
+]
+override_SS05 = [  # override SS05 to allow docstrings starting with these words
+    "^Process ",
+    "^Assess ",
+    "^Access ",
+]
+#+end_src
+
+** Pros
+
+1. Choice of build tools to select from including ~setuptools~ and ~uv~.
+2. Includes configuration for some tools...
+  + Ruff
+  + Pylint
+3. Good configuration of Metadata
+4. Includes basic [[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] configuration ~.pre-commit-config.yaml~, includes the following which may required tweaking
+   (see above notes)...
+    - [[https://github.com/adamchainz/blacken-docs][black]]
+    - [[https://github.com/python-jsonschema/check-jsonschema][check-jsonschema]]
+    - [[https://github.com/codespell-project/codespell][codespell]]
+    - [[https://github.com/pre-commit/mirrors-mypy][mypy]]
+    - [[https://github.com/pre-commit/pre-commit-hooks][pre-commit-hooks]]
+    - [[https://github.com/rbubley/mirrors-prettier][prettier]]
+    - [[https://github.com/pre-commit/pygrep-hooks][pygrep-hooks]]
+    - [[https://github.com/astral-sh/ruff-pre-commit][ruff]]
+    - [[https://github.com/shellcheck-py/shellcheck-py][shellcheck-py]]
+    - [[https://github.com/abravalheri/validate-pyproject][validate-project]]
+5. Includes basic [[https://readthedocs.org][ReadTheDocs]] configuration ~.readthedocs.yaml~
+6. Includes ~.github/{CONTRIBUTING.md,dependabot.yml,release.yml}~ and workflows ~.github/workflows/{cd,ci}.yml~
+
+** Cons
+
+1. Assumes Sphinx for ~docs~ dependencies, personally I'm preferring [[id:9e8265ee-95d1-4218-90cd-74357aec1ea5][MkDocs]]
+2. Minimum ~pytes>=6~ is a bit dated (current major version is 8)
+3. Limited license choice, BSD, MIT or Apache, no GNU GPLv3
+4. Choosing ~uv~ as build system isn't the same as initialising a package using ~uv init~, there is on ~uv.lock~ and so
+   have to.
+5. Prompted to place repository under version control and whilst it create
+6. Selecting ~uv~ as build system results in a static ~src/<pkg>/_version.pyi~ file. Better to use [[https://github.com/pypa/setuptools-scm][setuptools-scm]] to
+   dynamically version code based on Git tags. But if you select ~setuptools~ as the build system it does use
+   ~setuptools-scm~.
+7. Doesn't warn against spaces in project/package name which could cause problems further down the line.
+8. Additional [[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] hooks that would be nice to include
+    - [[https://www.pylint.org][pylint]] (local)
+    - [[https://testmon.org][pytest-testmon]] (local)
+    - [[id:8dbde866-810a-48e4-981f-2fcbc19ec5cf][markdownlint-cli2]]
+    - [[https://numpydoc.readthedocs.io/en/latest/validation.html][numpydoc-validation]]
+9. ~.gitignore~ doesn't include ~\#*~ to ignore [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] temporary files.
+10. Missing a [[https://citation-file-format.github.io][Citation File Format Template]], although not too unreasonable as often DOIs won't be available for early
+    packages.
 
 * Templates
 
