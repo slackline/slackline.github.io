@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5e4b0759-696f-47a7-81c1-a7506aab41a0
-:mtime:    20250220083856 20250218222433 20250115224517 20241229201335 20241213210224 20241110182359 20241110164410 20241006205543 20240502093004 20240426165410 20240422071430 20240306145316
+:mtime:    20251010152933 20250220083856 20250218222433 20250115224517 20241229201335 20241213210224 20241110182359 20241110164410 20241006205543 20240502093004 20240426165410 20240422071430 20240306145316
 :ctime:    20240306145316
 :END:
 #+TITLE: Reading
@@ -215,12 +215,18 @@ Most of these I read a long time ago when studying hence a distinct lack of note
 
 + [[https://gerrymcgovern.com/world-wide-waste/][World Wide Waste - Gerry McGovern]]
 
+** Career
+
++ [[https://www.jenheemstra.com/book][Labwork to Leadership]]
+
 * Not Books
 
 Other stuff I've read at various points on the net that were interesting.
 
 ** Genetics
+
 + [[https://newleftreview.org/sidecar/posts/away-from-the-guns?pc=1423][Richard Seymour, Away from the Guns — Sidecar]] a piece on E.O. Wilson's legacy and the dispute about nature v nurture.
+
 ** Statistics
 *** Data/Machine Learning/AI
 
@@ -234,6 +240,7 @@ Other stuff I've read at various points on the net that were interesting.
 
 + [[https://www.noemamag.com/we-need-to-rewild-the-internet/][We Need To Rewild The Internet]]
 + [[https://www.newyorker.com/culture/the-weekend-essay/what-is-privacy-for][What Is Privacy For? | The New Yorker]]
++ [[https://www.biennale.net/all-problems-can-be-illuminated-not-all-problems-can-be-solved/index.html][Berlin Biennale | All Problems Can Be Illuminated; Not All Problems Can Be Solved]]
 
 *** Social Media
 
