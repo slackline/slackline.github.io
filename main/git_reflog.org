@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f1395f5b-ba1d-4b32-99e4-f0b107f50a0d
-:mtime:    20240531211501
+:mtime:    20251012203007 20240531211501
 :ctime:    20240531211501
 :END:
 #+TITLE: Git Reflog
@@ -8,6 +8,9 @@
 
 The ~reflog~ records /all/ changes that are made to the history, including ~amend~, ~fixup~ and ~rebase~. As such it is
 what can save you when things go awry.
+
+#+CAPTION: [[https://wizardzines.com/comics/the-reflog/][Wizardzines : Reflog]]
+[[./img/git/git_reflog_julia_evans.png]]
 
 * Undoing a Rebase
 
