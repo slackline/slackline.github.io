@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       938af6af-7a0e-46d1-ae76-6157e948151b
-:mtime:    20250902155530 20250622203020 20250304224048 20241215223039 20241023184234 20240706220449 20240115230041 20231222084358 20230114083319 20230103103311 20221229094021
+:mtime:    20251012200712 20250902155530 20250622203020 20250304224048 20241215223039 20241023184234 20240706220449 20240115230041 20231222084358 20230114083319 20230103103311 20221229094021
 :ctime:    20221229094021
 :END:
 #+TITLE: Emacs Configuration
@@ -36,7 +36,8 @@ Configuration options specific to the OS or machine can be made for ideas and gu
 
 I typically use [[https://github.com/jwiegley/use-package][use-package]] to install and load packages. Its now part of core Emacs so there is no need to explicitly
 install it. Configuration is simplified but there are still better ways of doing things as covered in [[https://batsov.com/articles/2025/04/17/using-use-package-the-right-way/][Using use-package
-the right way - (think)]].
+the right way - (think)]], its not without problems though and it is possible to migrate from ~use-package~ to the default
+Emacs method as described in [[https://eugene-andrienko.com/it/2025/10/10/emacs-ditch-use-package.html][Why and how I ditched use-package?]].
 
 * Gentoo
 
@@ -78,3 +79,4 @@ Details of each package specific configuration are found on their own pages.
 + [[https://github.com/LionyxML/emacs-kick][LionyxML/emacs-kick: A feature rich Emacs (kickstarter) config for (neo)vi(m)mers]]
 + [[https://sophiebos.io/posts/first-emacs-config/][Building Your First Emacs Config | Sophie Bosio]]
 + [[https://batsov.com/articles/2025/04/17/using-use-package-the-right-way/][Using use-package the right way - (think)]]
++ [[https://eugene-andrienko.com/it/2025/10/10/emacs-ditch-use-package.html][Why and how I ditched use-package?]]

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ac85ca6b-4b6e-4e8d-82f8-2f85c5062de6
-:mtime:    20230912205339
+:mtime:    20251012201120 20230912205339
 :ctime:    20230912205339
 :END:
 #+TITLE: Emacs Password
@@ -39,8 +39,15 @@ major mode which uses [[id:d6626ec2-1e95-4d42-b06e-ae45268f2b58][Emacs Transient
 
 Allows interaction with the [[https://github.com/tadfisher/pass-otp/][pass-otp extension]] for managing one-time-password (OTP) token.
 
+* pinentry-emacs
+
+The [[https://github.com/ecraven/pinentry-emacs][pinentry-emacs]] package sets up Emacs's client (~emacsclient~) to be the Pinentry method when being prompted for
+passwords for [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] and [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] keys.
+
 * Links
 
 ** HowTos
 
 + [[https://yejun.dev/posts/simplify-totp-management-in-emacs/][Simplify TOTP management in Emacs - Yejun Su]]
++ [[https://github.com/ecraven/pinentry-emacs][ecraven/pinentry-emacs: a pinentry for gpg that uses emacsclient to prompt for the passphrase.]]
++ [[https://github.com/magit/ssh-agency][magit/ssh-agency: Use ssh-agent on Microsoft Windows from Emacs]]
