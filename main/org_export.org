@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0d480f0d-03dc-4056-a6a0-db35d4046ade
-:mtime:    20240126214439
+:mtime:    20251011212146 20240126214439
 :ctime:    20240126214439
 :END:
 #+TITLE: Org Export
@@ -21,13 +21,15 @@ Quick and easy and anyone can open the file.
 
 The [[https://github.com/fniessen/org-html-themes][org-html-themes]] offers some simple, clean options for exporting your documents and if you're always going to be
 connected to the internet all you need to do is drop the following into your header, substituting ~NAME~ for either
-~readtheorg~ or ~bigblow~.
+~readtheorg~, ~bigblow~ etc.
 
 #+begin_src org
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-NAME.setup
 #+end_src
 
+There is another list of theme [[https://olmon.gitlab.io/org-themes/][here]].
 
 * Links
 
-+  [[https://github.com/fniessen/org-html-themes][org-html-themes]]
++ [[https://github.com/fniessen/org-html-themes][org-html-themes]]
++ [[https://olmon.gitlab.io/org-themes/][Org-themes]]
