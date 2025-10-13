@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       837ecbeb-7f1e-44ca-ae3f-15f6489d1266
+:mtime:    20251013073558
+:ctime:    20251013073558
+:END:
+#+TITLE: BangleJS
+#+FILETAGS: :watch:banglejs:foss:gadgetbridge:oshw:
+
+* Apps
+
+There is a healthy ecosystem of user written [[https://banglejs.com/apps/][Bangle.js Apps]]. Using a blutetooth enabled browser permits loading of apps
+to the phone (*NB* Firefox is not Bluetooth enabled, Vivaldi is).
+
+* GadgetBridge
+
+An enhanced [[https://www.espruino.com/Gadgetbridge][GadgetBridge]] is available which adds a number of features, perhaps the biggest is enabling internet access
+by the watch over BlueTooth meaning updates and queries can be made from the phone.
+
+* Links
+
++ [[https://banglejs.com/][Bangle.js - Hackable Smart Watch]]
++ [[https://banglejs.com/apps/][Bangle.js App Loader]]
