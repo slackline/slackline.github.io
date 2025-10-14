@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e1c2cfef-1b43-47a8-a425-94e6ae58d917
-:mtime:    20240302104634 20230103103313 20221224191223
+:mtime:    20251014095105 20240302104634 20230103103313 20221224191223
 :ctime:    20221224191223
 :END:
 #+TITLE: LaTeX
@@ -12,10 +12,20 @@ used to produce all sorts of documents from scientific reports, beamer slides, c
 and more. Thanks to integration with [[id:1db6158d-cb5d-4b73-b926-95e9c09f878b][RMarkdown]] you can take advantage of the array of markup in LaTeX when writing
 literate documents in [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]].
 
+* Cleaning
+
+LaTeX files can end up having a lot of clutter and potentially containing sensitive information (see [[https://arxiv.org/abs/2510.03761][here]]). A useful
+tool is [[https://github.com/google-research/arxiv-latex-cleaner][arxiv-latex-cleaner]] which attempts to remove clutter and comments from files prior to submission to [[https://arxiv.org/][arXiv]].
+
 * Links
 
 + [[https://detexify.kirelabs.org/classify.html][Detexify]] draw the symbol you seek in LaTeX.
++ [[https://github.com/google-research/arxiv-latex-cleaner][google-research/arxiv-latex-cleaner: arXiv LaTeX Cleaner: Easily clean the LaTeX code of your paper to submit to arXiv]]
 
 ** BibTeX
 
 + [[https://larsgw.blogspot.com/2024/03/including-orcid-identifiers-in-biblatex.html][Including ORCID identifiers in BibLaTeX (and using them)]]
+
+** Papers
+
++ [[https://arxiv.org/abs/2510.03761][You Have Been LaTeXpOsEd: A Systematic Analysis of Information Leakage in Preprint Archives Using Large Language Models]]
