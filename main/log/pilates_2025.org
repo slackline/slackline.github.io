@@ -1,5 +1,31 @@
 ** 2025
 :LOGBOOK:
+CLOCK: [2025-10-14 Tue 18:15]--[2025-10-14 Tue 19:15] =>  1:00
+CLOCK: [2025-10-07 Tue 18:15]--[2025-10-07 Tue 19:15] =>  1:00
+CLOCK: [2025-09-30 Tue 18:15]--[2025-09-30 Tue 19:15] =>  1:00
+CLOCK: [2025-09-23 Tue 18:15]--[2025-09-23 Tue 19:15] =>  1:00
+CLOCK: [2025-09-16 Tue 18:15]--[2025-09-16 Tue 19:15] =>  1:00
+CLOCK: [2025-09-02 Tue 18:15]--[2025-09-02 Tue 19:15] =>  1:00
+CLOCK: [2025-08-12 Tue 18:15]--[2025-08-12 Tue 19:15] =>  1:00
+CLOCK: [2025-08-05 Tue 18:15]--[2025-08-05 Tue 19:15] =>  1:00
+CLOCK: [2025-07-29 Tue 18:15]--[2025-07-29 Tue 19:15] =>  1:00
+CLOCK: [2025-07-22 Tue 18:15]--[2025-07-22 Tue 19:15] =>  1:00
+CLOCK: [2025-07-15 Tue 18:15]--[2025-07-15 Tue 19:15] =>  1:00
+CLOCK: [2025-06-24 Tue 18:15]--[2025-06-24 Tue 19:15] =>  1:00
+CLOCK: [2025-06-17 Tue 18:15]--[2025-06-17 Tue 19:15] =>  1:00
+CLOCK: [2025-06-10 Tue 18:15]--[2025-06-10 Tue 19:15] =>  1:00
+CLOCK: [2025-06-03 Tue 18:15]--[2025-06-03 Tue 19:15] =>  1:00
+CLOCK: [2025-05-27 Tue 18:15]--[2025-05-27 Tue 19:15] =>  1:00
+CLOCK: [2025-05-20 Tue 18:15]--[2025-05-20 Tue 19:15] =>  1:00
+CLOCK: [2025-05-13 Tue 18:15]--[2025-05-13 Tue 19:15] =>  1:00
+CLOCK: [2025-05-06 Tue 18:15]--[2025-05-06 Tue 19:15] =>  1:00
+CLOCK: [2025-04-29 Tue 18:15]--[2025-04-29 Tue 19:15] =>  1:00
+CLOCK: [2025-04-22 Tue 18:15]--[2025-04-22 Tue 19:15] =>  1:00
+CLOCK: [2025-04-15 Tue 18:15]--[2025-04-15 Tue 19:15] =>  1:00
+CLOCK: [2025-04-08 Tue 18:15]--[2025-04-08 Tue 19:15] =>  1:00
+CLOCK: [2025-04-01 Tue 18:15]--[2025-04-01 Tue 19:15] =>  1:00
+CLOCK: [2025-03-25 Tue 18:15]--[2025-03-25 Tue 19:15] =>  1:00
+CLOCK: [2025-03-18 Tue 18:15]--[2025-03-18 Tue 19:15] =>  1:00
 CLOCK: [2025-03-11 Tue 18:15]--[2025-03-11 Tue 19:15] =>  1:00
 CLOCK: [2025-03-04 Tue 18:15]--[2025-03-04 Tue 19:15] =>  1:00
 CLOCK: [2025-02-25 Tue 18:15]--[2025-02-25 Tue 19:15] =>  1:00
@@ -15,6 +41,15 @@ CLOCK: [2025-01-07 Tue 18:15]--[2025-01-07 Tue 19:15] =>  1:00
 #+CAPTION: Pilates Log 2025 (Notes from attending [[https://symmetrypilates.co.uk/][Symmetry Pilates]] with Sam Webster.)
 #+NAME: pilates-log-2024
 | Date                   | Notes                                                                                              | Exercise(s) to practice                                                                                                                                                                                                                                                   |
+|------------------------+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [2025-10-14 Tue 22:17] | Nice session, lots of core work                                                                    | Warm up with ball rolling, up on heels x8 then balancing on both feet, one in front of the other with eyes closed, make sure weight is between feet. Then walk forwards along mat heel to toe and back.                                                                   |
+|                        |                                                                                                    | Leg extensions with band, big circles with arms by side, then move hands up band, bend knee and extend leg, keep toe bending back and calve of opposite leg on floor. Across body (hip allowed to raise).                                                                 |
+|                        |                                                                                                    | Single leg teaser x5 then double leg teaser x3 (full for both)                                                                                                                                                                                                            |
+|                        |                                                                                                    | Frog legs extending out with head and shoulders, lifted. Walking legs up and down with head up followed by hundreds.                                                                                                                                                      |
+|                        |                                                                                                    | Side line as usual but then clams, lifted clams, leg extensions and leg circles all on raised elbow, bloody hard!                                                                                                                                                         |
+|                        |                                                                                                    | Up on elbow at ninety degrees with knees bent slide down and arm under, repeat going up tall with upper arms. Then lift hips up and repeat. Followed by mermaid and arms over, then twisting down.                                                                        |
+|                        |                                                                                                    | On front with (strong) band under hips, palms facing in, raise chest and lift arms up and out then back down, repeat. Do the same with palms facing inwards, keep head down and make sure pevlis is                                                                       |
+|                        |                                                                                                    | engaged and tilted with glutes engaged.                                                                                                                                                                                                                                   |
 |------------------------+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [2025-10-07 Tue 21:23] | Good session, some harder exercises                                                                | Rowing with arms is a good upper body exercise, do more of this with heavier weights!                                                                                                                                                                                     |
 |                        |                                                                                                    | Legs in table top and pelvic tilt as a prelude to Jacknife, do at home with feet on wall, moving further away so there is less support                                                                                                                                    |
