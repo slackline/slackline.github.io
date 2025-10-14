@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       470e9f37-f4f8-4e7f-adf2-3dbac9b8bf06
-:mtime:    20250914194603 20250805212553 20250621075602 20250527214044 20250526075929 20250312091850 20250209203305 20250202173405 20250201184321 20250118204303
+:mtime:    20251014074615 20250914194603 20250805212553 20250621075602 20250527214044 20250526075929 20250312091850 20250209203305 20250202173405 20250201184321 20250118204303
 :ctime:    20250118204303
 :END:
 #+STARTUP: align
@@ -1386,7 +1386,7 @@ days.
 * Resources
 :PROPERTIES:
 :ID:       ea9dd233-64c4-493f-a4dc-9ec73df0c7cd
-:mtime:    20250914194603 20250805212553 20250621075602 20250527213847 20250312091850 20250209203305 20250118204443
+:mtime:    20251014074615 20250914194603 20250805212553 20250621075602 20250527213847 20250312091850 20250209203305 20250118204443
 :ctime:    20250118204443
 :END:
 
@@ -1467,8 +1467,15 @@ A good book from Vertebrate publishing. I've collated most of the bibliography i
 + [[https://www.youtube.com/watch?v=AheZYzk21_w][Hip flexibility is not just muscle but neural]]
 
 ** Pilates
-+ [[https://www.nhs.uk/conditions/nhs-fitness-studio/chronic-back-pain-pilates-exercise-video/][Back pain pilates video workout - Sam Webster]]
-+ [[https://www.pilatesanytime.com/blog/mat/the-34-pilates-mat-exercises-][The 34 Pilates Mat Exercises | Pilates Anytime]]
++ [[https://www.nhs.uk/conditions/nhs-fitness-studio/chronic-back-pain-pilates-exercise-video/][Back pain pilates video
+  workout - Sam Webster]]
+
+*** Pilates Anytime
++ [[https://www.pilatesanytime.com/blog/mat/the-34-pilates-mat-exercises-][The 34 Pilates Mat Exercises | Pilates
+  Anytime]]
++ [[https://www.pilatesanytime.com/blog/legacy/unpacking-the-pilates-legacy-joseph-pilates-and-the-evolution-of-contrology][Unpacking the Pilates Legacy: Joseph Pilates and the Evolution of Contrology | Pilates Anytime]]
++ /Return to Life Through Contrology/ by Joseph Pilates
+
 
 ** Swimming
 *** Outdoors

@@ -92,3 +92,4 @@ remote branch. Only then can you make a ~worktree~ based on it.
 + [[https://dev.to/yankee/practical-guide-to-git-worktree-58o0][Practical Guide to Git Worktree - DEV Community]]
 + [[https://medium.com/ngconf/git-worktrees-in-use-f4e516512feb][Git Worktrees in Use. Most of us use Git every day, but… | by Preston Lamb]] << This seems good, clearest so far.
 + [[https://git-scm.com/docs/git-worktree][Git - git-worktree Documentation]]
++ [[https://www.nickyt.co/blog/git-worktrees-git-done-right-2p7f/][Git Worktrees: Git Done Right - Just Some Dev]]
