@@ -1,10 +1,13 @@
 :PROPERTIES:
 :ID:       e7f8687d-d0f1-4cac-a454-14d1053ec82b
-:mtime:    20250815152152
+:mtime:    20251014071311 20250815152152
 :ctime:    20250815152152
 :END:
 #+TITLE: Python Image Processing
 #+FILETAGS: :python:image:segmentation:processing:opencv:
+
+There are many source of [[id:1cf7307f-a475-451d-884e-8fd1381877a1][images]] but only sometimes do they need processing. When they do though [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] has a number of
+useful packages to help you do so.
 
 * Links
 

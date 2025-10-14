@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       1cf7307f-a475-451d-884e-8fd1381877a1
+:mtime:    20251014071206
+:ctime:    20251014071206
+:END:
+#+TITLE: Images
+#+FILETAGS: :images:pictures:cc:
+
+Useful places to get images that are under permissive licenses.
+
++ [[https://bioicons.com/][BioIcons]]
++ [[https://www.scidraw.io/][SciDraw]]
++ [[https://reactome.org/icon-lib][Reactome Icon Library]]
++ [[https://www.phylopic.org/][PhyloPic]]
++ [[https://public.work/][Cosmos Public Work]]
++ [[https://thenounproject.com/][The Noun Project]]
++ [[https://openverse.org/][OpenVerse]]
++ [[https://smart.servier.com/][Servier Medical Art]]
++ [[https://openclipart.org/][OpenClipArt]]
++ [[https://bioart.niaid.nih.gov/][BioArt]]
