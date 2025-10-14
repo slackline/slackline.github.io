@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       bd3a3a4b-43d7-4034-a830-852092604fbe
+:mtime:    20251014074432
+:ctime:    20251014074432
+:END:
+#+TITLE: Guix
+#+FILETAGS: :guix:reproducibile:declarative:
+
+* Links
+
++ [[https://guix.gnu.org/cookbook/en/html_node/index.html][GNU Guix Cookbook]]
