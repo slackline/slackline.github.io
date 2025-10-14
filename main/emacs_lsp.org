@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a29a1e50-3cf2-4d88-a71d-7c600fdf8f65
-:mtime:    20250120145912 20241216144645 20240304065906 20230114084624
+:mtime:    20251013220243 20250120145912 20241216144645 20240304065906 20230114084624
 :ctime:    20230114084624
 :END:
 #+TITLE: Emacs LSP
@@ -22,33 +22,41 @@ Installation is straight-forward but for optimal benefit requires the use of a n
 + [[https://github.com/emacs-lsp/dap-mode][dap-mode]]
 
 
-** Python
+** Language Servers
+
+*** Mason
+
+The [[https://github.com/deirn/mason.el][Mason]] package provides a means to install and manage Language Servers from the [[https://mason-registry.dev/registry/list][Mason-registry.dev]] which is a large
+repository of Language servers, linters and DAP(?) servers that can ease installation and management of what are often
+niche packages that either aren't available under Gentoo/Arch's package or user maintained build systems.
+
+*** Python
 
 There are multiple options for a Python Language Server.
 
-*** Jedi
+**** Jedi
 I've used Jedi prior to LSP becoming widely available in Emacs so wanted to stick with this. There are two components to
 this [[https://github.com/fredcamps/lsp-jedi][~lsp-jedi~]] which acts as a go-between from Emacs ~lsp-mode~ and the language server itself
 [[https://github.com/pappasam/jedi-language-server][~jedi-language-server~]]. This seems to work perfectly on my work laptop but not on my desktop and I can not for the life
 of me figure out why. I've kept the old configuration just in case I one day sort it out.
 
-*** pylsp
+**** pylsp
 
 
 
-*** pyright
+**** pyright
 
 [[https://emacs-lsp.github.io/lsp-pyright/][~lsp-pyright~]] is another good  option.
-** R
+*** R
 
-** Bash
+*** Bash
 
-** Emacs LISP
+*** Emacs LISP
 
 Strangely there is no language server dedicated to Emacs LISP which is mildly frustrating but internal support for Emacs
 LISP is, unsurprisingly, very good in Emacs.
 
-** Markdown
+*** Markdown
 
 Install [[https://github.com/remarkjs/remark-language-server][remark-language-server]] ...
 
@@ -83,25 +91,27 @@ The [[https://github.com/jrblevin/markdown-mode][markdown-mode]] package can be 
 
 #+end_src
 
-** Ltex
+*** Ltex
 
 [[https://valentjn.github.io/ltex/][LTeX]] is a bit of a magic bullet, it provides "_grammar/spell checking using language tool  with support for LaTeX,
 Markdown and Others_". This includes [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]] which was a real short coming for sometime since I write these notes in
 [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]]!
 
-*** Installing
+The [[https://valentjn.github.io/ltex/][LTeX-ls]] appears to have been abandoned but a fork, [[https://ltex-plus.github.io/ltex-plus/][ltex-plus]], has taken over where things left off.
 
-Under Emacs you can use the [[https://github.com/emacs-languagetool/lsp-ltex][emacs-languagetool/lsp-ltex]] package but yo have to have the language server [[https://valentjn.github.io/ltex/ltex-ls/installation.html][ltex-ls]]
+**** Installing
+
+Under Emacs you can use the [[https://github.com/emacs-languagetool/lsp-ltex][emacs-languagetool/lsp-ltex]] package but you have to have the language server [[https://valentjn.github.io/ltex/ltex-ls/installation.html][ltex-ls]]
 installed. Under Gentoo this is available from the [[https://github.com/msva/mva-overlay/][mva overlay]].
 
-**** Gentoo
+***** Gentoo
 
 #+begin_src bash
 eselect repository mva
 emerge -av ltex-ls
 #+end_src
 
-**** Arch
+***** Arch
 
 For Arch install from [[https://aur.archlinux.org/packages/ltex-ls-bin][AUR (en) - ltex-ls-bin]]
 
