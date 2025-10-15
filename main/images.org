@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       1cf7307f-a475-451d-884e-8fd1381877a1
-:mtime:    20251014071206
+:mtime:    20251015111637 20251014071206
 :ctime:    20251014071206
 :END:
 #+TITLE: Images
@@ -18,3 +18,4 @@ Useful places to get images that are under permissive licenses.
 + [[https://smart.servier.com/][Servier Medical Art]]
 + [[https://openclipart.org/][OpenClipArt]]
 + [[https://bioart.niaid.nih.gov/][BioArt]]
++ [[https://www.bioimages.org.uk][BioImages - Virtual Field-Guide (UK)]]
