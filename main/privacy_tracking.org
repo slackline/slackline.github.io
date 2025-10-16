@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a120ecf3-70bb-46e7-9709-37dc59db883c
-:mtime:    20250724130645 20250624075952 20250611145118
+:mtime:    20251017002846 20250724130645 20250624075952 20250611145118
 :ctime:    20250611145118
 :END:
 #+TITLE: Privacy Tracking
@@ -12,6 +12,13 @@
 ** Meta Tracking
 
 + [[https://www.zeropartydata.es/p/localhost-tracking-explained-it-could]["Localhost tracking" explained]] - how Meta track people
++ [[https://www.wired.com/story/what-is-browser-fingerprinting/][Browser Fingerprinting: What Your Browser Is Telling Everyone About You | WIRED]]
+
+
+** Check your Browser
+
++ [[https://coveryourtracks.eff.org/][EFF - Cover Your Tracks]]
++ [[https://amiunique.org/fingerprint][My Fingerprint- Am I Unique ?]]
 
 ** Facial Recognition
 
