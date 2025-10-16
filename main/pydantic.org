@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ba02ecdf-c35f-4deb-8308-28341922c096
-:mtime:    20230103103312 20220301215133
+:mtime:    20251016113248 20230103103312 20220301215133
 :ctime:    20220301215133
 :END:
 #+TITLE: Pydantic
@@ -9,8 +9,34 @@
 
 [[https://pydantic-docs.helpmanual.io/][Pydantic]] is a validation framework that builds on type-hints.
 
+* Dataclasses
+
+Pydantic extends the built-in ~dataclass~.
+
+** Relaxing types
+
+If using ~pydantic.dataclass~'s then you can relax the permitted types to allow for example
+[[id:d7b0fb90-d668-4e31-bc2d-305f6ee14fc9][Numpy]] data types or your own custom types.
+
+#+begin_src python
+  from pydantic import ConfigDict
+  from pydantic.dataclasses import dataclass
+
+  @dataclass(repr=True, eq=True, config=ConfigDict(arbitrary_types_allowed=True), validate_on_init=True)
+  class MyFunkyClass():
+      """My Funky Class."""
+      a: str
+      b: int
+      c: float
+      d: np.float32
+      e: np.int32
+      f: npt.NDArray[np.float64]
+#+end_src
+
 * Links
 + [[https://pydantic-docs.helpmanual.io/][pydantic]]
+
 ** Articles
 + [[https://betterprogramming.pub/the-beginners-guide-to-pydantic-ba33b26cde89][The Beginner’s Guide to Pydantic. A Python package to parse and validate… | by Ng Wai Foong | Better Programming]]
 + [[https://medium.com/swlh/cool-things-you-can-do-with-pydantic-fc1c948fbde0][Cool Things You Can Do With Pydantic | by Gideon Caller ...]]
++ [[https://hackernoon.com/the-end-of-config-hell-in-python-thanks-to-pydantic-v2][The End of Config Hell in Python, Thanks to Pydantic v2 | HackerNoon]]
