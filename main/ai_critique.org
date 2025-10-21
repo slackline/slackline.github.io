@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       7a9deb85-fb4d-4d18-b2be-ed8048a5a1d4
-:mtime:    20251015215254 20251001214818 20250904154736 20250815132742 20250805173615 20250724122628
+:mtime:    20251021215858 20251019125817 20251019103346 20251015215254 20251001214818 20250904154736 20250815132742 20250805173615 20250724122628
 :ctime:    20250724122628
 :END:
 #+TITLE: AI Critique
@@ -46,10 +46,9 @@
 + [[https://www.theregister.com/2025/06/15/ai_model_collapse_pollution/][The launch of ChatGPT polluted the world forever, like the first atomic weapons tests]]
 + [[https://nealstephenson.substack.com/p/emerson-ai-and-the-force][Emerson, AI, and The Force - by Neal Stephenson]]
 + [[https://maggieappleton.com/ai-enlightenment/][A Treatise on AI Chatbots Undermining the Enlightenment]]
-+ [[https://irisvanrooijcogsci.com/2025/08/12/ai-slop-and-the-destruction-of-knowledge/][AI slop and the destruction of
-  knowledge – Iris van Rooij]]
++ [[https://irisvanrooijcogsci.com/2025/08/12/ai-slop-and-the-destruction-of-knowledge/][AI slop and the destruction of knowledge – Iris van Rooij]]
 + [[https://anthonymoser.github.io/writing/ai/haterdom/2025/08/26/i-am-an-ai-hater.html][I Am An AI Hater | moser’s frame shop]]
 + [[https://www.wheresyoured.at/the-case-against-generative-ai/][The Case Against Generative AI]]
-+ [[https://www.odbms.org/blog/2025/10/beyond-the-ai-hype-guido-van-rossum-on-pythons-philosophy-simplicity-and-the-future-of-programming/][Beyond
-  the AI Hype: Guido van Rossum on Python’s Philosophy, Simplicity, and the Future of Programming. | ODBMS Industry
++ [[https://www.odbms.org/blog/2025/10/beyond-the-ai-hype-guido-van-rossum-on-pythons-philosophy-simplicity-and-the-future-of-programming/][Beyond the AI Hype: Guido van Rossum on Python’s Philosophy, Simplicity, and the Future of Programming. | ODBMS Industry
   Watch]]
++ [[https://www.theguardian.com/technology/2025/oct/18/are-we-living-in-a-golden-age-of-stupidity-technology][Are we living in a golden age of stupidity? | Artificial intelligence (AI) | The Guardian]]
