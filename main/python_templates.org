@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       14310dd9-647a-4532-9a50-d75becb0d409
-:mtime:    20251009133248 20251003200347 20251003135643 20251003123356 20250924124508
+:mtime:    20251020134753 20251009133248 20251003200347 20251003135643 20251003123356 20250924124508
 :ctime:    20250924124508
 :END:
 #+TITLE: Python Templates
@@ -300,7 +300,7 @@ override_SS05 = [  # override SS05 to allow docstrings starting with these words
 ** Cons
 
 1. Assumes Sphinx for ~docs~ dependencies, personally I'm preferring [[id:9e8265ee-95d1-4218-90cd-74357aec1ea5][MkDocs]]
-2. Minimum ~pytes>=6~ is a bit dated (current major version is 8)
+2. Minimum ~pytest>=6~ is a bit dated (current major version is 8)
 3. Limited license choice, BSD, MIT or Apache, no GNU GPLv3
 4. Choosing ~uv~ as build system isn't the same as initialising a package using ~uv init~, there is on ~uv.lock~ and so
    have to.

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       00092001-9bac-4434-b098-a72d6b00385a
-:mtime:    20250923222042 20250919195630 20250721171112 20250225094538 20240113162844
+:mtime:    20251017161408 20250923222042 20250919195630 20250721171112 20250225094538 20240113162844
 :ctime:    20240113162844
 :END:
 #+TITLE: Emacs Editing
@@ -12,6 +12,10 @@ You can search for strings with ~C-s~ which allows interactive searching but a m
 ~occur-mode~ which searches for regular expressions and shows matching lines in a buffer.
 
 * Tips and Tricks
+
+** Line Wrapping
+
+To hard line-wrap a whole buffer to a fixed number of character use ~fill-region~.
 
 ** Indenting Regions
 
