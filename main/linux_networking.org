@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       4dd02747-0388-488b-9297-ba81dbff1581
-:mtime:    20230309185747
+:mtime:    20251019171005 20230309185747
 :ctime:    20230309185747
 :END:
 #+TITLE: Linux Networking
@@ -53,3 +53,9 @@ Set a temporary shell variable for your username and use ~nmcli~ to define a new
 When you activate the connection either via the NetworkManager applet/GUI/CLI (~nmcli conn up tuos-ssl-vpn~) you will be
 prompted for the password associated with your ~$REMOTEUSERNAME~ and once entered will receive a Duo Push notification
 to sign in. My gratitude to my colleague Will Furnass for this solution.
+
+* Links
+
+** History
+
++ [[https://ackreq.github.io/posts/what-are-rfcs/][What Are RFCs? The Forgotten Blueprints of the Internet | Broadcast]]
