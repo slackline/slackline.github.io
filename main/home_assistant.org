@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       066a4ad3-d938-4ee5-a5b9-1bec44012734
-:mtime:    20250902201951
+:mtime:    20251022140344 20250902201951
 :ctime:    20250902201951
 :END:
 #+TITLE: Home Assistant
@@ -8,6 +8,10 @@
 
 * Links
 
+** Hardware
+
++ [[https://www.home-assistant.io/green/][Home Assistant Green - Home Assistant]]
++ [[https://www.ikea.com/us/en/cat/wireless-led-bulbs-36813/][IKEA Smart Bulbs]]
 
 ** Software
 
@@ -16,3 +20,7 @@
 ** Sensors
 
 + [[https://www.frient.com/products][Frient]] (purchase from [[https://www.carefreesmarthomes.co.uk/frient][Carefree Smart Homes]])
+
+** Threads
+
++ [[https://fosstodon.org/@justin@ramble.space/115417870904052209][Mastodon Recommendation for privacy devices]]
