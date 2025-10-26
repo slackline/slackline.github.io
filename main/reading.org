@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5e4b0759-696f-47a7-81c1-a7506aab41a0
-:mtime:    20251010152933 20250220083856 20250218222433 20250115224517 20241229201335 20241213210224 20241110182359 20241110164410 20241006205543 20240502093004 20240426165410 20240422071430 20240306145316
+:mtime:    20251026132000 20251010152933 20250220083856 20250218222433 20250115224517 20241229201335 20241213210224 20241110182359 20241110164410 20241006205543 20240502093004 20240426165410 20240422071430 20240306145316
 :ctime:    20240306145316
 :END:
 #+TITLE: Reading
@@ -35,7 +35,10 @@ Good places to buy that aren't Amazon
 
 
 * Books
-Physical books I've actually spent time reading!
+
+Physical books I've actually spent time reading! By no means exhaustive, I read a lot of books as a youngster which
+aren't included here.
+
 ** Biographies
 
 + David Attenborough
@@ -74,7 +77,9 @@ Physical books I've actually spent time reading!
 
 
 *** Coffee Table
+
 + /Hard Rock: Great British rock climbs from VS to E4 (Hardcover)/ Ian Parnell
++ /Extreme Rock/ by Grant Farquhar
 + /The White Cliff: Epic tales of life and death on the world's best sea cliff/ Grant Farquhar
 + /The Great Mountain Crags of Scotland: A Celebration of Scottish Mountaineering/ Guy Robertson, Adrian Crofton
 
