@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       6409f972-f823-4e30-82bf-b4bea00164aa
+:mtime:    20251026104449
+:ctime:    20251026104449
+:END:
+#+TITLE: Intelligence
+#+FILETAGS: :intelligence:philosophy:
+
+Before considering [[id:e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5][Artificial Intelligence]] one should first have a useful definition of what Intelligence is in and of
+itself.
+
+* Links
+
++ [[https://nautil.us/what-is-intelligence-1242863/][What Is Intelligence?]] ()
