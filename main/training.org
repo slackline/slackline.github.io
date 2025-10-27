@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       470e9f37-f4f8-4e7f-adf2-3dbac9b8bf06
-:mtime:    20251014074615 20250914194603 20250805212553 20250621075602 20250527214044 20250526075929 20250312091850 20250209203305 20250202173405 20250201184321 20250118204303
+:mtime:    20251027164931 20251014074615 20250914194603 20250805212553 20250621075602 20250527214044 20250526075929 20250312091850 20250209203305 20250202173405 20250201184321 20250118204303
 :ctime:    20250118204303
 :END:
 #+STARTUP: align
@@ -1386,7 +1386,7 @@ days.
 * Resources
 :PROPERTIES:
 :ID:       ea9dd233-64c4-493f-a4dc-9ec73df0c7cd
-:mtime:    20251014074615 20250914194603 20250805212553 20250621075602 20250527213847 20250312091850 20250209203305 20250118204443
+:mtime:    20251027164931 20251014074615 20250914194603 20250805212553 20250621075602 20250527213847 20250312091850 20250209203305 20250118204443
 :ctime:    20250118204443
 :END:
 
@@ -1482,6 +1482,7 @@ A good book from Vertebrate publishing. I've collated most of the bibliography i
 + [[https://www.outdoorswimmingsociety.com/][Outdoor Swimming Society]]
 + [[https://www.outdoorswimmingsociety.com/sixteen-reasons-reservoirs/][16 reasons for swimming access in reservoirs – Outdoor Swimming Society Outdo...]]
 ** Research
++ [[https://sportsmedicine-open.springeropen.com/articles/10.1186/s40798-024-00793-7][Effects of Different Loading Programs on Finger Strength in Rock Climbers | Sports Medicine - Open | Full Text]]
 + [[https://www.sciencedirect.com/science/article/pii/S2095254623001187?via%3Dihub][Sport and exercise during viral acute respiratory illness—Time to revisit - ScienceDirect]]
 + <2023-10-10 Tue> [[https://journals.physiology.org/doi/full/10.1152/japplphysiol.00106.2022][Walking or body weight squat “activity snacks” increase dietary amino acid utilization for myofibrillar protein synthesis during prolonged sitting | Journal of Applied Physiology]]
 + <2023-02-18 Sat> [[https://www.nature.com/articles/s41467-023-36546-5][Associations of timing of physical activity with all-cause and cause-specific mortality in a prospective cohort study]]
