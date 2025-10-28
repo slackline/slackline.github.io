@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       06db84e0-bb77-4c56-8dec-c3506cfbc030
-:mtime:    20251001230707 20250926200759 20250925225909
+:mtime:    20251028071300 20251001230707 20250926200759 20250925225909
 :ctime:    20250925225909
 :END:
 #+TITLE: Signal
@@ -33,3 +33,8 @@ collect your WhatsApp data, as you cannot use the app if you decline to share yo
 + [[https://privacysavvy.com/news/privacy/whatsapp-to-share-data-with-facebook-after-privacy-policy-update/][WhatsApp to share users' data with Facebook after recent Privacy Policy update - PrivacySavvy]]
 + [[https://privacysavvy.com/security/mobile/signal-vs-whatsapp/][Signal vs. WhatsApp: Which One is Good to Use? - PrivacySavvy]]
 + [[https://en.todoandroid.es/meta-collects-data-from-users-this-is-how-it-does-it/][How Meta collects, uses, and protects users' personal data: a comprehensive analysis]] - Comprehensive
+
+** Misc
+
++ [[https://www.theregister.com/2025/10/27/signal_ceo_meredith_whittaker_aws_dependency/][Signal president Meredith Whittaker says they had no choice but to use AWS, and that's a problem]] ([[https://mastodon.world/@Mer__edith/115445701583902092][original mastodon
+  thread]])
