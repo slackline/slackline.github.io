@@ -38,3 +38,8 @@ collect your WhatsApp data, as you cannot use the app if you decline to share yo
 
 + [[https://www.theregister.com/2025/10/27/signal_ceo_meredith_whittaker_aws_dependency/][Signal president Meredith Whittaker says they had no choice but to use AWS, and that's a problem]] ([[https://mastodon.world/@Mer__edith/115445701583902092][original mastodon
   thread]])
+
+** Alternatives
+
++ [[https://keet.io/][Keet by Holepunch]]
++ [[https://delta.chat/en/][Delta Chat, decentralized secure messenger]]
