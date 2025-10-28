@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9c6257dc-cbef-4291-8369-b3dc6c173cf2
-:mtime:    20250829111129 20250804095803 20250527130700 20250323205301 20240901104651 20240610155824 20240419192502 20231231085056 20231030220403 20231012172230 20230915150059 20230912203523 20230911222141 20230722093604 20230714103949 20230528213012 20230519194008 20230330135624 20230326125853 20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
+:mtime:    20251028071257 20250829111129 20250804095803 20250527130700 20250323205301 20240901104651 20240610155824 20240419192502 20231231085056 20231030220403 20231012172230 20230915150059 20230912203523 20230911222141 20230722093604 20230714103949 20230528213012 20230519194008 20230330135624 20230326125853 20230310194006 20230224092946 20230105145245 20230103103313 20221231194258 20230103103312
 :ctime:    20221231194258
 :END:
 #+TITLE: Bash
@@ -121,6 +121,20 @@ Sometimes you /don't/ want an alias to be used, even if you have set it. You can
 by encapsulating it in single quotes e.g. ~'ls'~
 
 * Tips and Tricks
+
+** Run the previous command
+
+You can use ~!!~ to recall and execute the last command in [[https://shawnhooper.ca/2025/10/27/bash-history-command/][history]]. In and of itself no that useful but comes in handy
+when combined with other commands such as others for example [[https://fosstodon.org/@salcode@phpc.social/115449044630395087][~git switch <new_remote_branch>~]] which hasn't been fetched
+and will fail. You therefore...
+
+#+begin_src sh
+  $ git switch new_remote_branch
+  fatal: invalid reference: new_remote_branch
+  $ git fetch && !!
+#+end_src
+
+...although you should of course be using [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] to manage all [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] things.
 
 ** Make a directory for every file
 
