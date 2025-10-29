@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0c371287-128d-4e46-8128-b2d4f5fc604c
-:mtime:    20250923220805 20250219081429 20250116155044 20231210114502 20230331125517 20230103103308 20221212181558
+:mtime:    20251029144553 20250923220805 20250219081429 20250116155044 20231210114502 20230331125517 20230103103308 20221212181558
 :ctime:    20221212181558
 :END:
 #+TITLE: Markdown
@@ -78,10 +78,12 @@ See the [[id:1181fb5b-ac5e-4416-8d62-34b9de1b393f][Mermaid]] node for more infor
 
 * Linting
 
+** Markdownlint-cli2
+
 I like to lint my Markdown and use [[https://github.com/DavidAnson/markdownlint-cli2][markdownlint-cli2]] to do so, typically via a [[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] hook. Configuration is via
  ~.markdownlint-cli2.yaml~. The full list of [[https://github.com/DavidAnson/markdownlint/blob/v0.32.1/README.md#rules--aliases][rules and aliases]] is worth keeping to hand.
 
-** Disabling Checks
+*** Disabling Checks
 
 You can [[https://github.com/DavidAnson/markdownlint/blob/v0.32.1/README.md#configuration][disable]] checks globally via the configuration file but often it is more desirable to do so on a per line basis
 and you can do so with the following options.
@@ -113,6 +115,13 @@ and you can do so with the following options.
 <!-- markdownlint-disable-line MD001 MD005 -->
 <!-- markdownlint-disable-next-line MD001 MD005 -->
 #+end_src
+
+** rumdl
+
+An alternative to ~markdownlint-cli2~ is [[https://github.com/rvben/rumdl][rumdl]] which is written in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]] and also available as a [[https://github.com/rvben/rumdl#pre-commit-integration][pre-commit hook]]. It has
+a nice feature which will output annotations in a format that GitHub understands so they are automatically displayed in
+Pull Requests. I'm yet to use this so can't comment but will be looking into it and have a feeling it might replace my
+use of ~markdownlint-cli2~.
 
 
 * Links
