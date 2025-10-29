@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8068c739-f291-48b7-8de7-31e6b7e5a5e0
-:mtime:    20251002104010 20250724122625 20241229204346 20231217185347
+:mtime:    20251029121610 20251002104010 20250724122625 20241229204346 20231217185347
 :ctime:    20231217185347
 :END:
 #+TITLE: Politics
@@ -31,3 +31,7 @@ A grass roots initiative their first sitting came up with [[https://timetoassemb
 
 + [[https://novaramedia.com/2023/12/17/the-secret-plan-to-privatise-everything-aaron-bastani-meets-brett-christophers/][The Secret Plan to Privatise EVERYTHING | Aaron Bastani Meets Brett Christophers | Novara Media]]
 + [[https://www.theguardian.com/news/2025/oct/02/critique-pure-stupidity-understanding-donald-trump-2][A critique of pure stupidity: understanding Trump 2.0 | Donald Trump | The Guardian]] ([[https://web.archive.org/web/20251002092345/https://www.theguardian.com/news/2025/oct/02/critique-pure-stupidity-understanding-donald-trump-2][archive.org]])
+
+* Books
+
++ [[https://academic.oup.com/book/60927][Democratic Commitment: Why Citizens Tolerate Democratic Backsliding | Oxford Academic]]
