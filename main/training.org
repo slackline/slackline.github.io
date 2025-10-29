@@ -1325,7 +1325,7 @@ days.
 
 *** Summary
 :PROPERTIES:
-:mtime:    20250526075929
+:mtime:    20251027165615 20250526075929
 :ctime:    20250526075929
 :END:
 #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/bloods_temp.png
@@ -1394,6 +1394,7 @@ Various pieces and resources I've read (or intend to).
 ** Climbing
 *** Fingerboarding
 + [[http://eveningsends.com/five-minute-fingers/][Five Minute Fingers | Evening Sends]]
++ [[https://www.youtube.com/watch?v=XXrDQ8PCAmI][How To Build Finger Strength (SCIENCE EXPLAINED) - YouTube]]
 *** Lattice/Wide Boys
 + [[https://www.youtube.com/c/LatticeTraining/videos][Lattice Training - All Videos]]
 + [[https://www.youtube.com/watch?v=hJ_LhlF9YRs][Lattice : Fingerboarding & Hangboarding: A Beginner's Guide]]
