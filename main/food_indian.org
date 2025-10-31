@@ -1,12 +1,13 @@
 :PROPERTIES:
 :ID:       b10998ac-94d5-4ff0-940a-fb05d80b6ba8
-:mtime:    20240410161843
+:mtime:    20251031192339 20240410161843
 :ctime:    20240410161843
 :END:
 #+TITLE: Food : Indian
 #+FILETAGS: :food:cooking:indian:
 
 * Starters
++ [[https://greatcurryrecipes.net/2023/04/20/baked-onion-bhajis/][Baked Onion Bhajis | Low Fat Onion Bhajis | The Curry Guy]]
 * Curries
 + [[https://www.omemade.com/fish-pakora-recipe/][Fish Pakora ('Ome Made)]]
 ** From [[https://www.goodreads.com/book/show/2273661.Balti_Curry_Cookbook][Balti Curry Cookbook by Pat Chapman]]
