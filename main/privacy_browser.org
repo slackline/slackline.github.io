@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       899eb7a6-22d6-493a-a67f-b05bd89917d0
-:mtime:    20250624075947 20240716154936
+:mtime:    20251031210041 20250624075947 20240716154936
 :ctime:    20240716154936
 :END:
 #+TITLE: Browsing Privacy
@@ -33,6 +33,12 @@ There are a wealth of browser extensions available for Firefox (and many on mobi
 ** Mobile
 
 You can disable Firefox's Facebook data collection by following the instructions [[https://fosstodon.org/@thomholwerda@exquisite.social/112795429462507951][here]].
+
+* Translations
+
+You can use Firefox/LibreWolf to translate text/URLs by heading to ~about:translations~. Its slow the first time as
+presumably its downloading something in the background to do the translation, but after that initial translation for
+each language it's pretty fast and efficient.
 
 * Links
 
