@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       28ffcc43-9dff-4de8-a211-277c5346a642
-:mtime:    20250917073545 20250306202811 20240310181605 20240217133735 20240211172814 20240130202744
+:mtime:    20251101155751 20251101130306 20250917073545 20250306202811 20240310181605 20240217133735 20240211172814 20240130202744
 :ctime:    20240130202744
 :END:
 #+TITLE: Git Forges
@@ -12,18 +12,19 @@ Forges are places where Git repositories are hosted online for collaborative wor
 Request to have their changes incorporated into the original body of code for a project. Read more about each Forge at
 the linked pages.
 
-| Forge     | Description                                                                                                                      |
-|-----------+----------------------------------------------------------------------------------------------------------------------------------|
-| [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]]    | Perhaps the largest and most widely used forge. Purchased my Micro$oft a few years ago.                                          |
-| [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]]    | Comparable services with strong CI/CD functionality. Its also a free, open source piece of software so you can host it yourself. |
-| [[https://xethub.com/][XetHub]]    | /A collaboration platform for accessing, exploring and iterating on large-scale repositories, backed by the power of Git./       |
-| [[https://codeberg.org/][Codeberg]]  | /Codeberg is a collaboration platform and Git hosting for Free and Open Source Software, content and projects./                  |
-| [[https://gitea.io][Gitea]]     | A self-hosted Git Forge                                                                                                          |
-| [[https://forgejo.org/][Forgejo]]   | A fork of Gitea which aims to allow federation between instances hosted on different servers.                                    |
-| [[https://git.zx2c4.com/cgit/about/][cgit]]      | A hyperfast web frontend for git repositories written in C.                                                                      |
-| Bare repo | It is also relatively simple to [[https://maddie.info//2023/09/05/simple-and-small-git-hosting.html][self-host over SSH]].                                                                              |
-| [[https://radicle.xyz/][Radicle]]   | Peer-to-peer code collaboration stack built on Git.                                                                              |
-| [[https://tangled.sh][tangled.sh]] | ActivityPub (peer-to-peer) Git forge.
+| Forge      | Description                                                                                                                      |
+|------------+----------------------------------------------------------------------------------------------------------------------------------|
+| [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]]     | Perhaps the largest and most widely used forge. Purchased my Micro$oft a few years ago.                                          |
+| [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]]     | Comparable services with strong CI/CD functionality. Its also a free, open source piece of software so you can host it yourself. |
+| [[https://xethub.com/][XetHub]]     | /A collaboration platform for accessing, exploring and iterating on large-scale repositories, backed by the power of Git./       |
+| [[id:240b85db-27c9-4848-9d3f-c3be841a193b][Codeberg]]   | /Codeberg is a collaboration platform and Git hosting for Free and Open Source Software, content and projects./                  |
+| [[https://gitea.io][Gitea]]      | A self-hosted Git Forge                                                                                                          |
+| [[https://forgejo.org/][Forgejo]]    | A fork of Gitea which aims to allow federation between instances hosted on different servers.                                    |
+| [[https://git.zx2c4.com/cgit/about/][cgit]]       | A hyperfast web frontend for git repositories written in C.                                                                      |
+| Bare repo  | It is also relatively simple to [[https://maddie.info//2023/09/05/simple-and-small-git-hosting.html][self-host over SSH]] see also [[https://maurycyz.com/misc/easy_git/][You already have a git server: (Maurycy's blog)]]                      |
+| [[https://radicle.xyz/][Radicle]]    | Peer-to-peer code collaboration stack built on Git.                                                                              |
+| [[https://tangled.sh][tangled.sh]] | ActivityPub (peer-to-peer) Git forge.                                                                                            |
+| [[id:506764c3-8bf9-45dd-b30f-d456be0d66da][GitRoot]]    | Small yet powerful git forge                                                                                                     |
 
 The Gittea based offerings have far less complete CI but there is a growing number of tools such as [[https://davejansen.com/publish-to-netlify-using-gitea-actions/][deploying to Netlify]].
 

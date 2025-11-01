@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       506764c3-8bf9-45dd-b30f-d456be0d66da
+:mtime:    20251101130048
+:ctime:    20251101130048
+:END:
+#+TITLE: GitRoot
+#+FILETAGS: :git:forge:vc:
+
+ [[https://gitroot.dev/][GitRoot]] is "/a small yet powerful git forge/"
+
+* Install
+
+Not yet available in either [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]] or [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]].
+
+* Links
+
++ [[https://gitroot.dev/][GitRoot]]
