@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       0911a63f-4b82-4bf1-9235-f1e41e93d210
 :ROAM_ALIASES: "Open Research Overview"
-:mtime:    20250809220726 20250322220654 20250321094135 20250207185829 20241022150421 20241001165443 20240919150818 20240912124356 20240910123405 20240515164155
+:mtime:    20251102213403 20250809220726 20250322220654 20250321094135 20250207185829 20241022150421 20241001165443 20240919150818 20240912124356 20240910123405 20240515164155
 :ctime:    20240515164155
 :END:
 #+title: Open Research
@@ -25,7 +25,7 @@ to validate and contribute to the research.
 + [[id:0cb02a27-253c-42aa-8496-a9520c3d63a6][Open Peer Review]]
 + [[id:8d52f6c2-84ba-4fa4-9755-7168e3b0b229][Open Science Community Incubator Program]]
 + [[id:ecaeb512-f4d8-4f3a-8788-71291515bcf5][Teaching Reproducible Research]]
-
++ [[id:a945032a-5cdb-4efb-82f9-609e66ae7049][OpenFest 2023]]
 
 * References
 + [[https://www.nature.com/articles/sdata201618][The FAIR Guiding Principles for scientific data management and stewardship | Scientific Data]]

@@ -1,14 +1,14 @@
 :PROPERTIES:
 :ID:       4dd02747-0388-488b-9297-ba81dbff1581
-:mtime:    20251019171005 20230309185747
+:mtime:    20251102212844 20251019171005 20230309185747
 :ctime:    20230309185747
 :END:
 #+TITLE: Linux Networking
 #+FILETAGS: :linux:networking:
 
-Networking is essential to modern computing and GNU/Linux servers sit behind the backbone of a significant majority of
-the internet. But its complicated, not that many people understand quite how complicated it is, but then they shouldn't
-have to.
+Networking is essential to modern computing and GNU/[[id:0e6300c6-7025-4f45-820d-4d9da82b41a6][Linux]] servers sit behind the backbone of a significant majority of
+the internet. But its complicated, not that many people understand quite how complicated it is, including me, but then
+they shouldn't have to.
 
 This page details some of the issues I've encountered and in most cases solved.
 

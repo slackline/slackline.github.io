@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       380cd501-fc14-4e9c-bd26-ad3fd41bace0
-:mtime:    20231211220007 20231211080725
+:mtime:    20251102213217 20231211220007 20231211080725
 :ctime:    20231211080725
 :END:
 #+TITLE: Carpentries
@@ -13,6 +13,8 @@ the material can be freely shared and adapted providing attribution is given.
 The teaching material covers three broad areas [[https://datacarpentry.org/][Data Carpentry]], [[https://librarycarpentry.org/][Library Carpentry]] and [[https://software-carpentry.org/][Software Carpentry]] (in an unrelated
 vein there is also the [[https://programminghistorian.org/][Programming Historian]] which covers similar material).
 
+The courses promote [[id:0911a63f-4b82-4bf1-9235-f1e41e93d210][Open Research]] and [[id:8a38a071-9901-4e35-9aec-213a0c65af00][Open Research Software]] and are very well designed.
+
 * Courses I've Taught
 
 + [[https://swcarpentry.github.io/shell-novice/][The Unix Shell]]
@@ -21,4 +23,5 @@ Records of training delivered are kept at [[https://amy.carpentries.org/dashboar
 
 * Courses I've Taken
 
-+ [[id:1a80c1c9-1f4d-41b7-afc8-e80a7c2aa72f][carpentries_lesson_development]] (self-directed)
++ [[id:0607e15e-3ebc-402b-ad12-c9e9bbd41592][Carpentries Instructor Training]]
++ [[id:1a80c1c9-1f4d-41b7-afc8-e80a7c2aa72f][Carpentries Lesson Development]] (self-directed)
