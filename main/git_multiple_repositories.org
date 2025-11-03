@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       42a81bff-a655-4fe4-b978-4832819ae4b7
+:mtime:    20251103220817
+:ctime:    20251103220817
+:END:
+#+TITLE: Git MyRepos
+#+FILETAGS: :git:mr:repos:forge:
+
+
+Over time the number of repositories you have and use regularly will likely grow. A useful tool for managing these is
+[[https://myrepos.branchable.com/][myrepos]] which helps manage multiple repositories (the command it provisions is ~mr~ for **m**y **r**epos).
+
+In a `git` version controlled directory run ~mr register~ which sets up ~\~/.mrconfig~ you can then update them all (in
+parallel!) with ~mr -j6 update~. Commands run on individual repositories can be customised.
+
+General configuration looks like
+
+#+begin_src conf
+[DEFAULT]
+jobs = 4
+
+fetch = git fetch --all --tags --prune
+pull = git pull
+push =  git push
+#+end_src
+
+* Links
+
++ [[https://myrepos.branchable.com/][myrepos]]

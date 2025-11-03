@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5c6a5268-9f73-46d1-810f-6aa6158101a5
-:mtime:    20250510211245 20240507151058 20240130205353
+:mtime:    20251103220614 20250510211245 20240507151058 20240130205353
 :ctime:    20240130205353
 :END:
 #+TITLE: Git Miscellany
@@ -8,15 +8,6 @@
 
 
 There are tons of options to Git, here I document some that I've come across and found useful.
-
-* Managing Multiple Repositories
-
-Over time the number of repositories you have and use regularly will likely grow. A useful tool for managing these is
-[[https://myrepos.branchable.com/][myrepos]] which helps manage multiple repositories (the command it provisions is ~mr~ for **m**y **r**epos).
-
-In a `git` version controlled directory run ~mr register~ which sets up ~\~/.mrconfig~ you can then update them all (in
-parallel!) with ~mr -j6 update~. Commands run on individual repositories can be customised.
-
 
 * --allow-empty
 
