@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ba02ecdf-c35f-4deb-8308-28341922c096
-:mtime:    20251016113248 20230103103312 20220301215133
+:mtime:    20251103115120 20251016113248 20230103103312 20220301215133
 :ctime:    20220301215133
 :END:
 #+TITLE: Pydantic
@@ -32,6 +32,10 @@ If using ~pydantic.dataclass~'s then you can relax the permitted types to allow 
       e: np.int32
       f: npt.NDArray[np.float64]
 #+end_src
+
+** Numpy
+
+[[https://github.com/caniko/pydantic-numpy][pydantic-numpy]] is a package that integrates [[id:d7b0fb90-d668-4e31-bc2d-305f6ee14fc9][NumPy]] Arrays into Pydantic.
 
 * Links
 + [[https://pydantic-docs.helpmanual.io/][pydantic]]
