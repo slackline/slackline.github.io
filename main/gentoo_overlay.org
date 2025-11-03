@@ -1,12 +1,12 @@
 :PROPERTIES:
 :ID:       83017000-6081-4787-83c3-5e1639684909
-:mtime:    20241221211809 20240705080346
+:mtime:    20251103065539 20241221211809 20240705080346
 :ctime:    20240705080346
 :END:
 #+TITLE: Gentoo Overlays
 #+FILETAGS: :gentoo:linux:portage:
 
-There are a number of [[https://overlays.gentoo.org/][Gentoo Overlays]] which can be enabled with ~eselect repository~. This will list the available
+There are a number of [[https://repos.gentoo.org/][Gentoo Overlays]] which can be enabled with ~eselect repository~. This will list the available
 repository which can be added with ~add <name>~, optionally setting the ~<sync-type>~  and ~<sync-url>~ there are
 commands to ~enable~, ~disable~, ~list -i~ (installed) and ~remove~.
 
@@ -23,8 +23,18 @@ To add an overlay
 eselect repository enable guru
 #+end_src
 
+* Personal
+
+If you want a personal overlay the ~profiles/repo_name~ should be unique and match the entries in
+~/etc/portage/repos.conf/*~.
+
 * Overlays
 
 Old or obsolete overlays I may find useful.
 
 + [[https://github.com/yemouu/moulay][moulay]] - used in the past as it had ~texlab~  a LaTeX Language Server.
+
+* Links
+
++ [[https://repos.gentoo.org/][Gentoo Repos]]
++ [[https://wiki.gentoo.org/wiki/Project:Overlays/Overlays_guide][Project:Overlays/Overlays guide - Gentoo wiki]]
