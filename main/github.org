@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       52b4db29-ba21-4a8a-9b83-6e9a8dc02f41
-:mtime:    20250930214105 20250918131928 20250527092110 20250208154735 20241011150323 20240910110516 20240805204521 20240502231416 20240302150709 20240110125102 20230708080833 20230626121713 20230519193813 20230519143618 20230103103310 20221211233405
+:mtime:    20251103112609 20250930214105 20250918131928 20250527092110 20250208154735 20241011150323 20240910110516 20240805204521 20240502231416 20240302150709 20240110125102 20230708080833 20230626121713 20230519193813 20230519143618 20230103103310 20221211233405
 :ctime:    20221211233405
 :END:
 #+TITLE: GitHub
@@ -90,6 +90,7 @@ Emacs) make you more efficient.
 + [[https://anvaka.github.io/map-of-github/#2/0/0][Map of GitHub]]
 + [[https://blog.gitbutler.com/why-github-actually-won/][Why GitHub Actually Won - Scott Chacon]]
 + [[https://blog.edwardloveall.com/lets-make-sure-github-doesnt-become-the-only-option][Let's Make Sure Github Doesn't Become the only Option - Edward Loveall]]
++ [[https://anonymous.4open.science/][Anonymous GitHub]] - blinding for peer-review.
 
 ** Privacy
 + [[https://trufflesecurity.com/blog/anyone-can-access-deleted-and-private-repo-data-github][Anyone can Access Deleted and Private Repository Data on GitHub ◆ Truffle Security Co.]]
