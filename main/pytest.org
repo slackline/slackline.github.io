@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3cca0dfd-0c82-4685-b9ed-6314f7c8b78f
-:mtime:    20251022135419 20250926101805 20250618134341 20241110212615 20241002091737 20241001110421 20240529091921 20240523125824 20240507153851 20240417074159 20240416215946 20240315123523 20240206174808 20240102123440 20240101130614 20231231095334 20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
+:mtime:    20251103102450 20251022135419 20250926101805 20250618134341 20241110212615 20241002091737 20241001110421 20240529091921 20240523125824 20240507153851 20240417074159 20240416215946 20240315123523 20240206174808 20240102123440 20240101130614 20231231095334 20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
 :ctime:    20221212233350
 :END:
 #+TITLE: Python Pytest
@@ -49,6 +49,22 @@ PyTest provides the [[https://docs.pytest.org/en/7.1.x/how-to/fixtures.html][~@p
 These can be placed in ~conftest.py~ in the top-level, but should be broken down into nested directories if fixtures are
 not required globally. Nested fixtures with the same name take precedence over those defined at a higher level. Useful
 examples are in [[https://stackoverflow.com/a/34520971/1444043][this post on StackOverflow]].
+
+*** Using Fixtures
+
+If you define a fixture in one file and use it within the same file you may find that [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Pylint]] complains about ~redefining
+name '<x>' from outer scope~. The simplest solution is to define your fixtures in ~conftest.py~ as this means they can
+be shared across tests, but if you are defining and using fixtures within ~conftest.py~ the alternative [[https://stackoverflow.com/a/57015304/1444043][solution]] is to
+set things up using the ~name="<fixturename>"~ argument to ~pytest.fixture()~ and prefix the name of the fixture.
+
+#+begin_src python
+@pytest.fixture(name="default_config")
+def fixture_default_config() -> dict[str, int]:
+    return {"a": 1, "b": 2}
+
+def update_default_config(default_config: dict[str, int]) -> dict[str, int]:
+    return default_config["a"] = 3
+#+end_src
 
 *** Fixtures in parametrize
 
