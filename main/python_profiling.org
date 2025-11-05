@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       dd7c615f-cd8b-426d-aec0-cfd3803437cc
-:mtime:    20240812121129 20240215115043 20240215090823 20230125190111 20230125155927
+:mtime:    20251105134236 20240812121129 20240215115043 20240215090823 20230125190111 20230125155927
 :ctime:    20230125155927
 :END:
 #+TITLE: Python Profiling
@@ -46,8 +46,124 @@ REPEATS = 1000000
 NUMBER = 1
 np.mean(timeit.Timer(remove_common_values).repeat(repeat=REPEATS, number=NUMBER))
 np.mean(timeit.Timer(remove_common_values_lc).repeat(repeat=REPEATS, number=NUMBER))
-+end_src
+#+end_src
 
+Here is another worked example of running ~timeit~ on some simple functions.
+
+#+begin_src python
+import numpy as np
+import numpy.typing as npt
+import timeit
+import statistics
+import pandas as pd
+import matplotlib.pyplot as plt
+
+test_arrays = {"left": np.array([[0, 0, 0], [1, 1, 0], [0, 0, 0]]),
+               "right": np.array([[0, 0, 0], [0, 1, 0], [0, 0, 0]]),
+               "top": np.array([[0, 1, 0], [0, 1, 0], [0, 0, 0]]),
+               "bottom" : np.array([[0, 0, 0], [0, 1, 0], [0, 1, 0]]),
+               "big_not" : np.zeros((1000, 1000)),
+               "big_top" : np.zeros((1000, 1000)),
+               "big_bottom" : np.zeros((1000, 1000)),
+               "big_left" : np.zeros((1000, 1000)),
+               "big_right" : np.zeros((1000, 1000)),
+               }
+test_arrays["big_top"][0,50] = 1
+test_arrays["big_bottom"][-1,50] = 1
+test_arrays["big_left"][50,0] = 1
+test_arrays["big_left"][50,-1] = 1
+
+def check_missing_padding(smoothed_mask: npt.NDArray) -> bool:
+    rows, cols = smoothed_mask.shape
+    for r in range(rows):
+        for c in range(cols):
+            if smoothed_mask[r, c]:
+                neighbors = smoothed_mask[r - 1 : r + 2, c - 1 : c + 2]
+                if neighbors.shape != (3, 3):
+                    # Grain pixel found on edge of image
+                    return True
+    # No grain pixels are touching the edge
+    return False
+
+def check_pixels_touching_border(smoothed_mask) -> bool:
+    if np.sum(smoothed_mask[0, :]) > 0:
+        return True
+    if np.sum(smoothed_mask[-1, :]) >0:
+        return True
+    if np.sum(smoothed_mask[:, 0]) > 0:
+        return True
+    if np.sum(smoothed_mask[:, -1]) > 0:
+        return True
+    return False
+
+def check_pixels_touching_border_any(smoothed_mask) -> bool:
+    if smoothed_mask[0, :].any():
+        return True
+    if smoothed_mask[-1, :].any() > 0:
+        return True
+    if smoothed_mask[:, 0].any() > 0:
+        return True
+    if smoothed_mask[:, -1].any() > 0:
+        return True
+    return False
+
+def check_any(mask: npt.NDArray) -> bool:
+    return mask[:, 0].any() or mask[:, -1].any() or mask[0, :].any() or mask[-1, :].any()
+
+def edges_grouped(mask):
+    edges = np.concat((mask[0, :], mask[-1, :], mask[:, 0], mask[:, -1]))
+    return edges.any()
+
+timer_missing_padding = timeit.Timer(lambda: check_missing_padding(test_arrays["big_top"]))
+timer_pixels_touching = timeit.Timer(lambda: check_pixels_touching_border(test_arrays["big_top"]))
+timer_pixels_touching_any = timeit.Timer(lambda: check_pixels_touching_border_any(test_arrays["big_top"]))
+timer_any = timeit.Timer(lambda: check_any(test_arrays["big_top"]))
+timer_edges_grouped = timeit.Timer(lambda: edges_grouped(test_arrays["big_top"]))
+
+def test_methods(timer: timeit.Timer, n_timeit = 1000000, n_trials=30, method="Test", array="something"):
+    results = [timer.timeit(number=n_timeit) for _ in range(n_trials)]
+    return pd.DataFrame.from_dict({"method": [method],
+                                   "array": [array],
+                                   "mean": [statistics.mean(results)],
+                                   "std": [statistics.stdev(results)],
+                                   "min": [min(results)],
+                                   "max": [max(results)]})
+
+kwargs = {"n_timeit": 100, "n_trials": 20}
+results = pd.DataFrame()
+counter = 0
+for array in ["big_bottom", "big_left", "big_right", "big_top",]:
+    timer_missing_padding = timeit.Timer(lambda: check_missing_padding(test_arrays[array]))
+    timer_pixels_touching = timeit.Timer(lambda: check_pixels_touching_border(test_arrays[array]))
+    timer_any = timeit.Timer(lambda: check_any(test_arrays[array]))
+    _stats = test_methods(timer_missing_padding, method="All rows and cols", array=array, **kwargs)
+    if counter == 0:
+        results = _stats
+        counter = 1
+    else:
+        results = pd.concat([results, _stats])
+    _stats = test_methods(timer_pixels_touching, method="Just borders", array=array, **kwargs)
+    results = pd.concat([results, _stats])
+    _stats = test_methods(timer_pixels_touching_any, method="Just borders (any)", array=array, **kwargs)
+    results = pd.concat([results, _stats])
+    _stats = test_methods(timer_any, method="All any", array=array, **kwargs)
+    results = pd.concat([results, _stats])
+    _stats = test_methods(timer_edges_grouped, method="Edges grouped", array=array, **kwargs)
+    results = pd.concat([results, _stats])
+
+colours = {"All rows and cols": "red", "Just borders (sum)": "blue", "Just borders (any)": "green", "All any": "yellow",
+           "Edges grouped": "purple"}
+results["colour"] = results["method"].map(colours)
+results.plot(x="label", y="mean", yerr="std", logy=True, kind="bar", color=results["colour"])
+plt.xlabel("Algorithm (Edge touching)")
+plt.ylabel("log(Mean Execution)")
+plt.title("Comparison of Mean edge finding algorithms with Standard Deviation Error Bars")
+plt.show()
+
+# Look at the means across all methods
+results[["method", "mean"]].groupby("method").mean()
+
+#+end_src
 * [[https://rse.shef.ac.uk/pando-python/][Performance Profiling and Optimisation (Python)]]
 
 ** Introduction to Profiling
