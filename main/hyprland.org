@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       7dd30b1c-c484-4b49-88e2-4f3fec755a79
-:mtime:    20250806065755 20250801153333 20250730232002 20250729221516 20250729073038
+:mtime:    20251106231320 20250806065755 20250801153333 20250730232002 20250729221516 20250729073038
 :ctime:    20250729073038
 :END:
 #+TITLE: Hyprland
@@ -115,3 +115,7 @@ its ~media-fonts/fontawesome~ and perhaps ~media-fonts/fontawesome-extension~)
 + [[https://github.com/horriblename/hyprgrass][hyprgrass]] gestures for touch screens
 + [[https://github.com/hyprwm/hyprlock][hyprlock]]
 + [[https://github.com/pdf/hyprpanel][hyprpanel]]
+
+** Miscellaneous
+
++ [[https://joshblais.com/blog/how-i-am-deeply-integrating-emacs/][How I am deeply integrating emacs - The Universe of Joshua Blais]]
