@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       4a79b54b-96c0-4834-ab7e-c7a50999d2ab
+:mtime:    20251107215236
+:ctime:    20251107215236
+:END:
+#+TITLE: Magit Miscellany
+#+FILETAGS: :magit:emacs:
+
+* Magit Status
+
+** Margins
+
+There are margins available in Magit status windows ~magit-margin-settings~ brings up the [[id:d6626ec2-1e95-4d42-b06e-ae45268f2b58][Transient]] for modifying
+this. Typically its in buffers such as ~magit: log~ and you can toggle margins with ~L L~ cycle through the style with
+~L l~, change details with ~L d~ and basic stats with ~L x~.
