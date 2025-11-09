@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       470e9f37-f4f8-4e7f-adf2-3dbac9b8bf06
-:mtime:    20251027164931 20251014074615 20250914194603 20250805212553 20250621075602 20250527214044 20250526075929 20250312091850 20250209203305 20250202173405 20250201184321 20250118204303
+:mtime:    20251109092228 20251027164931 20251014074615 20250914194603 20250805212553 20250621075602 20250527214044 20250526075929 20250312091850 20250209203305 20250202173405 20250201184321 20250118204303
 :ctime:    20250118204303
 :END:
 #+STARTUP: align
@@ -1386,7 +1386,7 @@ days.
 * Resources
 :PROPERTIES:
 :ID:       ea9dd233-64c4-493f-a4dc-9ec73df0c7cd
-:mtime:    20251027164931 20251014074615 20250914194603 20250805212553 20250621075602 20250527213847 20250312091850 20250209203305 20250118204443
+:mtime:    20251109092228 20251027164931 20251014074615 20250914194603 20250805212553 20250621075602 20250527213847 20250312091850 20250209203305 20250118204443
 :ctime:    20250118204443
 :END:
 
@@ -1466,6 +1466,13 @@ A good book from Vertebrate publishing. I've collated most of the bibliography i
 + [[https://getpocket.com/explore/item/stretching-4-hip-flexor-stretches-to-reduce-tight-and-sore-hips][Stretching: 4 Hip Flexor Stretches to Reduce Tight and Sore Hips]]
 + [[https://www.stylist.co.uk/fitness-health/best-hip-stretches-how-to-stretch-hips-flexors-workouts/369293][Hip pain: 4 best hip stretches to prevent and relieve hip pain]]
 + [[https://www.youtube.com/watch?v=AheZYzk21_w][Hip flexibility is not just muscle but neural]]
+
+*** Squating
+
++ [[https://www.youtube.com/watch?v=a6Na67zUMZk][How to Asian Squat - 3 Exercises You Need - YouTube]]
++ [[https://www.youtube.com/watch?v=2_9Dbl9k-Fo][Unlock Your Asian Squat: Stretch Your Glutes with This Powerful Stretch - YouTube]]
++ [[https://www.youtube.com/watch?v=x4tns1FkcFQ][Asian Squat Tutorial: Knee Strengthening Exercises]]
++ [[https://www.uprighthealth.com/healthy-hips][The Healthy Hips Program]]
 
 ** Pilates
 + [[https://www.nhs.uk/conditions/nhs-fitness-studio/chronic-back-pain-pilates-exercise-video/][Back pain pilates video
