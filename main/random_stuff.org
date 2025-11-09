@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       d5eecb35-2ece-444e-9744-4b1f8ad5e942
+:mtime:    20251108191309
+:ctime:    20251108191309
+:END:
+#+TITLE: Random Stuff
+#+FILETAGS: :random:img:interactive:
+
+Random Shit that is cool.
+
+* Visualisations
+
++ [[https://moebio.com/research/sevensets/][7-set Venn Diagram]]
