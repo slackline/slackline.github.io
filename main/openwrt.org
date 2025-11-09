@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0eca0cca-f5d0-4259-879b-b7f1844c3e90
-:mtime:    20251109121620
+:mtime:    20251109140047 20251109121620
 :ctime:    20251109121620
 :END:
 #+TITLE: OpenWrt
@@ -27,12 +27,17 @@ I use a few additional packages on this device.
 
 + [[https://openwrt.org][OpenWrt]]
 
-** WRT54G
+** Linksys WRT54G
 
 + [[https://downloads.linksys.com/downloads/userguide/1224638367336/wrt54g_ug.pdf][Official User Guide]]
 + [[https://en.wikipedia.org/wiki/Linksys_WRT54G_series][Wikipedia : Linksys WRT54G]]
 + [[https://openwrt.org/toh/linksys/wrt54g][OpenWRT : WRT54G/L/S]]
 
-** WRT1900ACS
+** Linksys WRT1900ACS
 
 + [[https://openwrt.org/toh/linksys/wrt1900acs][OpenWrt : WRT1900ACS]]
+
+
+** GL-iNet GL-MT300N-v2
+
++ [[https://openwrt.org/toh/gl.inet/gl-mt300n_v2][OpenWRT : GL-MT300N-v2]]

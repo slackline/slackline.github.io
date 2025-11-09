@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       11699eb4-1322-442b-b0fa-22d7a56e00e1
-:mtime:    20251109122357
+:mtime:    20251109140044 20251109122357
 :ctime:    20251109122357
 :END:
 #+TITLE: GL-iNet
@@ -31,7 +31,13 @@ Password is reset to the default.
 
 * [[https://www.gl-inet.com/products/gl-mt300n-v2/][GL-MT300N-v2]] (Mango)
 
-A great little pocket router which allows setting up a private and secure network on the go.
+A great little pocket router which allows setting up a private and secure network on the go. [[id:0eca0cca-f5d0-4259-879b-b7f1844c3e90][OpenWrt]] is available.
+
+** Updated
+
++ [[https://dl.gl-inet.com/router/mt300n-v2/stable][Official Firmware]]
++ [[https://docs.gl-inet.com/router/en/4/interface_guide/upgrade/][Upgrade Instructions]]
+
 
 * Links
 
