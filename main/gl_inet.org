@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       11699eb4-1322-442b-b0fa-22d7a56e00e1
+:mtime:    20251109122357
+:ctime:    20251109122357
+:END:
+#+TITLE: GL-iNet
+#+FILETAGS: :hardware:router:networking:
+
+As with the GL-iNet hardware run [[id:0e6300c6-7025-4f45-820d-4d9da82b41a6][Linux]] under the hood. Specifically a modified version of [[id:0eca0cca-f5d0-4259-879b-b7f1844c3e90][OpenWrt]].
+
+I've a couple of devices.
+
+* [[https://www.gl-inet.com/products/gl-ax1800/][GL-AX1800]] (Flint)
+
+I bought this router on their early access but have never used it, only upgraded firmware. I keep it as a backup should
+my main.
+
+** Upgrade
+
++ [[https://dl.gl-inet.com/router/ax1800/stable][Official Firmware]]
++ [[https://docs.gl-inet.com/router/en/4/interface_guide/upgrade/][Upgrade Instructions]]
+
+WebUI has a panel for upgrades and auto-upgrade can be setup.
+
+*** v3 > v4
+
+Not backwards compatible so upgrades lose settings. Advice is to do a manual upgrade using the ~UBoot~ image available
+from the Firmware page.
+
+Password is reset to the default.
+
+* [[https://www.gl-inet.com/products/gl-mt300n-v2/][GL-MT300N-v2]] (Mango)
+
+A great little pocket router which allows setting up a private and secure network on the go.
+
+* Links
+
++ [[https://docs.gl-inet.com/router/en/4/faq/debrick/][Using U-boot to unbrick your router]]

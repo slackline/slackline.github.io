@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       0eca0cca-f5d0-4259-879b-b7f1844c3e90
+:mtime:    20251109121620
+:ctime:    20251109121620
+:END:
+#+TITLE: OpenWrt
+#+FILETAGS: :linux:networking:router:
+
+The alternative firmware for routers which came about because [[id:f2286e26-a0eb-4d99-9c86-2b002a43c310][Linksys]] were forced to open-source the firmware used on their
+original WRT54Gs as they use [[id:0e6300c6-7025-4f45-820d-4d9da82b41a6][Linux]] I still own a couple of units (but don't use them).
+
+* WRT54G
+
+Last official [[https://openwrt.org/toh/linksys/wrt54g][OpenWrt]] support was 19.07.10.
+
+
+* WRT1900ACS
+
+My current workhorse which has been very stable. I'm loathe to upgrade to the current 24.10.4 as the household is so
+reliant on it.
+
+** Extensions
+
+I use a few additional packages on this device.
+
+* Links
+
++ [[https://openwrt.org][OpenWrt]]
+
+** WRT54G
+
++ [[https://downloads.linksys.com/downloads/userguide/1224638367336/wrt54g_ug.pdf][Official User Guide]]
++ [[https://en.wikipedia.org/wiki/Linksys_WRT54G_series][Wikipedia : Linksys WRT54G]]
++ [[https://openwrt.org/toh/linksys/wrt54g][OpenWRT : WRT54G/L/S]]
+
+** WRT1900ACS
+
++ [[https://openwrt.org/toh/linksys/wrt1900acs][OpenWrt : WRT1900ACS]]

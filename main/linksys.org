@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       f2286e26-a0eb-4d99-9c86-2b002a43c310
+:mtime:    20251109122437
+:ctime:    20251109122437
+:END:
+#+TITLE: Linksys
+#+FILETAGS: :hardware:router:networking:
+
+Linksys routers run [[id:0e6300c6-7025-4f45-820d-4d9da82b41a6][Linux]] under the hood.
+
+* WRT54g
+
+I owned a couple of these over the years, they were (are!) brilliant, rock solid and could be flashed with [[id:0eca0cca-f5d0-4259-879b-b7f1844c3e90][OpenWrt]].
+
+* WRT1900ACS
+
+Current workhorse its been just as solid running [[id:0eca0cca-f5d0-4259-879b-b7f1844c3e90][OpenWrt]].
