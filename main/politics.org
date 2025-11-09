@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8068c739-f291-48b7-8de7-31e6b7e5a5e0
-:mtime:    20251107072705 20251029121610 20251002104010 20250724122625 20241229204346 20231217185347
+:mtime:    20251109140523 20251107072705 20251029121610 20251002104010 20250724122625 20241229204346 20231217185347
 :ctime:    20231217185347
 :END:
 #+TITLE: Politics
@@ -41,3 +41,4 @@ A grass roots initiative their first sitting came up with [[https://timetoassemb
 How social media impacts public perception and biases the narrative.
 
 + [[https://news.sky.com/story/the-x-effect-how-elon-musk-is-boosting-the-british-right-13464487][How the world's richest man is boosting the British right | UK News | Sky News]]
++ [[https://www.authoritarian-stack.info/][The Authoritarian Stack]]
