@@ -1,0 +1,61 @@
+:PROPERTIES:
+:ID:       ab5c7c58-f703-402c-8b61-f58ba6814395
+:mtime:    20251109181533
+:ctime:    20251109181533
+:END:
+#+TITLE: MPDel
+#+FILETAGS: :emacs:mpd:music:
+
+[[https://github.com/mpdel/mpdel][mpdel]] is an Emacs package for communicating with [[id:83df78ca-e349-418f-ab71-b7735c16d027][MPD]]. It allows you to browser files, the database, advance tracks, show
+information about the track all without leaving Emacs.
+
+
+* Keybindings
+
+From anywhere the following allow control.
+
+| Binding     | Action                                                  |
+|-------------+---------------------------------------------------------|
+| ~C-x Z SPC~ | toggle between play and pause                           |
+| ~C-x Z M-n~ | play next song                                          |
+| ~C-x Z M-p~ | play previous song                                      |
+| ~C-x Z P~   | restart playing current song                            |
+| ~C-x Z l~   | open the current playlist                               |
+| ~C-x Z L~   | show stored playlists                                   |
+| ~C-x Z N~   | navigate your database from artists                     |
+| ~C-x Z :~   | navigate your database from the browser                 |
+| ~C-x Z v~   | view current song                                       |
+| ~C-x Z s r~ | search songs by artist name                             |
+| ~C-x Z s l~ | search songs by album name                              |
+| ~C-x Z s s~ | search songs by song title                              |
+| ~C-x Z f~   | go forward current song by mpdel-song-normal-increment  |
+| ~C-x Z F~   | go forward current song by mpdel-song-small-increment   |
+| ~C-x Z M-f~ | go forward current song by mpdel-song-large-increment   |
+| ~C-x Z b~   | go backward current song by mpdel-song-normal-decrement |
+| ~C-x Z B~   | go backward current song by mpdel-song-small-decrement  |
+| ~C-x Z M-b~ | go backward current song by mpdel-song-large-decrement  |
+
+In any MPDel buffer you can you don't need the ~C-x Z~ component, i.e. ~SPC~ will pause, ~M-n~ will play the next
+etc. Additional functions are...
+
+| Binding   | Action                               |
+|-----------+--------------------------------------|
+| ~a~       | add item to current playlist         |
+| ~A~       | add item to a stored playlist        |
+| ~r~       | replace current playlist with item   |
+| ~R~       | replace a stored playlist with item  |
+| ~P~       | play selected items immediately      |
+| ~v~       | view currently played song           |
+| ~RET~     | open a buffer showing item at point  |
+| ~^~       | open item’s parent                   |
+| ~C-x C-j~ | open a dired buffer on item at point |
+| ~n~       | move to next line                    |
+| ~p~       | move to previous line                |
+| ~+~       | increase playback volume             |
+| ~-~       | decrease playback volume             |
+| ~C~       | connect to a different profile       |
+
+
+* Links
+
++ [[https://github.com/mpdel/mpdel][mpdel]] repository

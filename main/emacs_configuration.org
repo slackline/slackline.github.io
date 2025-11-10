@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       938af6af-7a0e-46d1-ae76-6157e948151b
-:mtime:    20251012200712 20250902155530 20250622203020 20250304224048 20241215223039 20241023184234 20240706220449 20240115230041 20231222084358 20230114083319 20230103103311 20221229094021
+:mtime:    20251110225146 20251012200712 20250902155530 20250622203020 20250304224048 20241215223039 20241023184234 20240706220449 20240115230041 20231222084358 20230114083319 20230103103311 20221229094021
 :ctime:    20221229094021
 :END:
 #+TITLE: Emacs Configuration
@@ -52,6 +52,11 @@ packages from ELPA repositories. It works with Layman.
   emerge -va
 #+end_src
 
+* Literate Configuration
+
+I opted to make a [[file:~/.config/emacs/config/config.org::\[\[https://github.com/LionyxML/magit-stats\]\]\[magit-stats\]\]][Literate Configuration]] ([[https://wiki.nshephard.dev/~arch/emacs/config.html][website]]) for my configuration using [[id:6e75f9df-df3d-4402-b5ad-ed98d0834e08][Org Babel]]. I've a few things to sort out
+but am pretty happy with it as a starting point and am going to use it as a basis for starting to learn and improve my
+[[id:708f5d99-6040-4306-a323-306d39ce45c3][Emacs Lisp]] skills/knowledge.
 
 * Package Specifics
 
