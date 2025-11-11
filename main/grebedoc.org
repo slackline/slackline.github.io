@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       0c318676-baac-4570-986a-a8ce89cb8650
+:mtime:    20251111091439
+:ctime:    20251111091439
+:END:
+#+TITLE: Grebedoc.dev
+#+FILETAGS: :codeberg:statichosting:
+
+[[https://grebedoc.dev/][grebedoc.dev]] is to [[id:240b85db-27c9-4848-9d3f-c3be841a193b][Codeberg]] what GitHub Pages is to [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]] and is an alternative to [[id:3150b126-53ea-43db-b726-981ad0d314eb][Codeberg Pages]]
+
+* Configuration
+
+This is pretty straight-forward, you don't need an account on Grebedoc.dev but it depends on whether you want to use
+their domain or if you have your own. There are clear [[https://grebedoc.dev/][instructions]] on how to setup either.

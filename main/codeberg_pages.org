@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3150b126-53ea-43db-b726-981ad0d314eb
-:mtime:    20250928115426 20250920213838 20250920080647 20250917073007
+:mtime:    20251111091447 20250928115426 20250920213838 20250920080647 20250917073007
 :ctime:    20250917073007
 :END:
 #+TITLE: Codeberg Pages
@@ -12,6 +12,8 @@ Codeberg Pages are another way to leverage [[id:284615e5-516f-4b04-a3d8-2a5ea948
 I started with the [[https://codeberg.org/Codeberg-CI/examples/src/branch/main/Python/.woodpecker/mkdocs.yaml][Codeberg mkdocs.yaml]] template, I thought I might need to explicitly clone my repository but that
 isn't  the case, it happens auto-magically in the first step of the pipeline when the image is initialised.
 
+
+An alternative to Codeberg pages is [[id:0c318676-baac-4570-986a-a8ce89cb8650][grebedoc]].
 
 * Configuration
 
