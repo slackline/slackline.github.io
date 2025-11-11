@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       fdd7fac9-d26d-4338-b9f0-a3748fda7c54
-:mtime:    20230103103314 20220315220837 20230103103313 20230103103312
+:mtime:    20251111091452 20230103103314 20220315220837 20230103103313 20230103103312
 :ctime:    20220315220837 20230103103312
 :END:
 #+TITLE: Evolution
@@ -81,3 +81,7 @@ There are hundreds of thousands of books out there, here are some I recommend.
 + [[https://www.goodreads.com/book/show/41862.Evolution_and_the_Theory_of_Games][Evolution and the Theory of Games by John Maynard Smith]]
 
 * Links
+
+** Papers
+
++ [[https://www.annualreviews.org/content/journals/10.1146/annurev-ento-121423-013411][Plant Pathogens Moonlighting as Beneficial Insect Symbionts | Annual Reviews]]
