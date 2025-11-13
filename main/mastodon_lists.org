@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       314efbff-60a0-4898-bcfa-e341deec9bb9
+:mtime:    20251113102815
+:ctime:    20251113102815
+:END:
+#+TITLE: Mastodon Lists
+#+FILETAGS: :mastodon:organisation:lists:
+
+An easy way to manage lists is [[https://www.mastodonlistmanager.org/][mastodonlistmanager.org]].
+
+* Links
+
++ [[https://www.mastodonlistmanager.org/][MastodonListManager.org]]
