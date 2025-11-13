@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e7f8687d-d0f1-4cac-a454-14d1053ec82b
-:mtime:    20251014071311 20250815152152
+:mtime:    20251113170202 20251014071311 20250815152152
 :ctime:    20250815152152
 :END:
 #+TITLE: Python Image Processing
@@ -12,3 +12,4 @@ useful packages to help you do so.
 * Links
 
 + [[https://pyimagesearch.com/][PyImageSearch - You can master Computer Vision, Deep Learning, and OpenCV.]]
++ [[https://jni.github.io/i2k-skimage-napari/lectures/0_i2k_bioimage_analysis_fundamentals.html][I2K 2020: Bioimage analysis fundamentals]]
