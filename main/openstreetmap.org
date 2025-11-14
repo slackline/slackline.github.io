@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a5f391b-0f61-48d8-a4c3-a204d55538de
-:mtime:    20251014074636 20250508132648 20250324091338 20241209102640 20241006212915 20240828121857 20231220115205 20231126082848 20230530082045 20230528222034
+:mtime:    20251114170600 20251014074636 20250508132648 20250324091338 20241209102640 20241006212915 20240828121857 20231220115205 20231126082848 20230530082045 20230528222034
 :ctime:    20230528222034
 :END:
 #+TITLE: OpenStreetMap
@@ -41,6 +41,11 @@ to get me there, I can add additional boxes to visit along the route as way poin
 - [[https://www.r-bloggers.com/2021/07/simplevis-making-leaflet-sf-maps/][simplevis]]
 - [[https://ucanr-igis.github.io/tech_notes/inaturalist_map.html][Mapping iNaturalist Data in R]]
 
+
+* Panoramax
+
+[[https://panoramax.fr/][Panoramax]] is an alternative to StreetMaps that allows federated serves to share pictures at the street level. These can
+be geographically isolated, e.g. [[https://www.panoramax.wales/][panoramax.wales]].
 
 * Links
 
