@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a5f391b-0f61-48d8-a4c3-a204d55538de
-:mtime:    20251114170600 20251014074636 20250508132648 20250324091338 20241209102640 20241006212915 20240828121857 20231220115205 20231126082848 20230530082045 20230528222034
+:mtime:    20251115113033 20251114170600 20251014074636 20250508132648 20250324091338 20241209102640 20241006212915 20240828121857 20231220115205 20231126082848 20230530082045 20230528222034
 :ctime:    20230528222034
 :END:
 #+TITLE: OpenStreetMap
@@ -75,6 +75,7 @@ be geographically isolated, e.g. [[https://www.panoramax.wales/][panoramax.wales
 + [[https://github.com/schienenersatzverkehr/byke][byke: bike lane quality analysis]]
 + [[https://www.cyclestreets.net/mobile/android/][CycleStreets » Android - cycle journey planner]]
 + [[https://owntracks.org/booklet/][OwnTracks Booklet]]
++ [[https://github.com/deevroman/better-osm-org][deevroman/better-osm-org: A userscript that adds several useful features to osm.org β]]
 
 *** Overlays
 + [[https://www.cyclosm.org/#map=15/53.3696/-1.4740/cyclosm][CyclOSM]]
