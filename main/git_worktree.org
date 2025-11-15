@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       ddcfed69-2ba5-442a-99b4-eaa5c7a9fe40
-:mtime:    20240916125108 20230128144326 20230103103314 20230102213516
+:mtime:    20251115145459 20240916125108 20230128144326 20230103103314 20230102213516
 :ctime:    20230102213516
 :END:
-#+TITLE: Git Worktree
+#+TITLE: Git Worktrees
 #+DATE: <2023-01-03 Tue 15:07>
 #+FILETAGS: :git:worktree:branching:
 
@@ -93,3 +93,4 @@ remote branch. Only then can you make a ~worktree~ based on it.
 + [[https://medium.com/ngconf/git-worktrees-in-use-f4e516512feb][Git Worktrees in Use. Most of us use Git every day, but… | by Preston Lamb]] << This seems good, clearest so far.
 + [[https://git-scm.com/docs/git-worktree][Git - git-worktree Documentation]]
 + [[https://www.nickyt.co/blog/git-worktrees-git-done-right-2p7f/][Git Worktrees: Git Done Right - Just Some Dev]]
++ [[https://futurepixels.co.uk/posts/improving-my-productivity-and-context-switching-with-git-worktrees/][Futurepixels - Improving my productivity and context switching with git worktrees]]
