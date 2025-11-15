@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       938af6af-7a0e-46d1-ae76-6157e948151b
-:mtime:    20251110225146 20251012200712 20250902155530 20250622203020 20250304224048 20241215223039 20241023184234 20240706220449 20240115230041 20231222084358 20230114083319 20230103103311 20221229094021
+:mtime:    20251115111834 20251110225146 20251012200712 20250902155530 20250622203020 20250304224048 20241215223039 20241023184234 20240706220449 20240115230041 20231222084358 20230114083319 20230103103311 20221229094021
 :ctime:    20221229094021
 :END:
 #+TITLE: Emacs Configuration
@@ -85,3 +85,4 @@ Details of each package specific configuration are found on their own pages.
 + [[https://sophiebos.io/posts/first-emacs-config/][Building Your First Emacs Config | Sophie Bosio]]
 + [[https://batsov.com/articles/2025/04/17/using-use-package-the-right-way/][Using use-package the right way - (think)]]
 + [[https://eugene-andrienko.com/it/2025/10/10/emacs-ditch-use-package.html][Why and how I ditched use-package?]]
++ [[https://jointhefreeworld.org/blog/articles/rust/simple-guix-emacs-rust-development-environment/index.html][Simple Rust Guix Emacs development environment - jointhefreeworld]]
