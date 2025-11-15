@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       dd7c615f-cd8b-426d-aec0-cfd3803437cc
-:mtime:    20251105134236 20240812121129 20240215115043 20240215090823 20230125190111 20230125155927
+:mtime:    20251115120209 20251105134236 20240812121129 20240215115043 20240215090823 20230125190111 20230125155927
 :ctime:    20230125155927
 :END:
 #+TITLE: Python Profiling
@@ -229,3 +229,7 @@ Always available as part of the standard library, call in command line with.
 + [[https://pypi.org/project/scalene/][Scalene]] ([[https://github.com/plasma-umass/scalene][GitHub]])
 + [[https://jiffyclub.github.io/snakeviz/][SnakeViz]]
 + [[https://viztracer.readthedocs.io/en/latest/index.html][VizTracer]]
+
+** Performance Speed Up
+
++ [[https://blog.jetbrains.com/pycharm/2025/11/10-smart-performance-hacks-for-faster-python-code/][10 Smart Performance Hacks For Faster Python Code | The PyCharm Blog]]
