@@ -1,13 +1,14 @@
 :PROPERTIES:
 :ID:       a1b78518-31e8-4fd3-a36f-d8f152832138
-:mtime:    20240419193336 20230911222408 20230103103312 20221211195020
+:mtime:    20251116133853 20240419193336 20230911222408 20230103103312 20221211195020
 :ctime:    20221211195020
 :END:
 #+TITLE: ZSH
 #+DATE: [2022-12-11 Sun 19:36]
 #+FILETAG: :shell:zsh:
 
-[[https://www.zsh.org/][ZSH]] is a shell
+[[https://www.zsh.org/][ZSH]] is a shell, as with [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] it leverages the [[id:2b537cf2-b3aa-486b-a8e7-0d86a4fb1938][Readline]] library to facilitate navigating the text on the prompt and
+searching history.
 
 * Oh-my-zsh
 

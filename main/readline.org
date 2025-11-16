@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       2b537cf2-b3aa-486b-a8e7-0d86a4fb1938
+:mtime:    20251116133646
+:ctime:    20251116133646
+:END:
+#+TITLE: Readline
+#+FILETAGS: :emacs:readline:editing:shell:
+
+Most shells, including [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] and [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]] use the  [[https://www.gnu.org/software/readline/][GNU Readline library]] and the library is also integrated into lots of other
+CLI/REPL environments. By default it comes with [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] keybindings but these can be modified by setting variables in ~~/.inputrc~
+
+* Links
+
++ [[https://readline.kablamo.org/emacs.html][Readline Cheat Sheet]]
++ [[https://twobithistory.org/2019/08/22/readline.html][Things You Didn't Know About GNU Readline]]
