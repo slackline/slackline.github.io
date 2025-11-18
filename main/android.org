@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       2c46e54a-d704-4e7e-bca3-d8c3e042ab43
-:mtime:    20250916101951 20250613002059 20250505215608 20250208110958 20241021184849 20241020132022 20240930074837 20240620095958 20240228094314 20231015172236
+:mtime:    20251118230153 20250916101951 20250613002059 20250505215608 20250208110958 20241021184849 20241020132022 20240930074837 20240620095958 20240228094314 20231015172236
 :ctime:    20231015172236
 :END:
 #+TITLE: Android
@@ -43,6 +43,11 @@ An alternative system to the default is [[https://unifiedpush.org/][UnifiedPush]
 
 ** Apps
 
+*** Stores
+
++ [[https://accrescent.app/][Accrescent | Home]]
++ [[https://f-droid.org/][F-Droid - Free and Open Source Android App Repository]]
+
 *** Keyboard
 
 + [[https://f-droid.org/packages/helium314.keyboard/][HeliBoard]]
@@ -62,6 +67,8 @@ An alternative system to the default is [[https://unifiedpush.org/][UnifiedPush]
 + [[https://lineageos.org/][LineageOS]]
 + [[https://lineage.microg.org/][LineageOS for microG]]
 + [[https://e.foundation/e-solutions/][eSolutions]]
++ [[https://grapheneos.org/][GrapheneOS: the private and secure mobile OS]]
+
 
 ** Root
 
@@ -79,3 +86,9 @@ An alternative system to the default is [[https://unifiedpush.org/][UnifiedPush]
 
 + [[https://murena.com/products/smartphones/][Smartphones – Murena – deGoogled phones and services]]
 + [[https://www.fairphone.com/][We are Fairphone]]
+
+** Developer Issues
+
++ [[https://www.theregister.com/2025/08/26/android_developer_verification_sideloading/][Google to restrict Android app sideloading to verified devs • The Register]]
++ [[https://f-droid.org/2025/09/29/google-developer-registration-decree.html][F-Droid and Google's Developer Registration Decree | F-Droid - Free and Open Source Android App Repository]]
++ [[https://android-developers.googleblog.com/2025/11/android-developer-verification-early.html][Android Developers Blog: Android developer verification: Early access starts now as we continue to build with your feedback]]
