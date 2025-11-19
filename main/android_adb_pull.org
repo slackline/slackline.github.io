@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       05ac9c63-4b61-4192-b305-69e531064c22
-:mtime:    20250613002047
+:mtime:    20251119123519 20250613002047
 :ctime:    20250613002047
 :END:
-#+TITLE: Android ADB Pull
+#+TITLE: Android ADB
 #+FILETAGS: :android:bash:shell:
 
 You can get files from (and too) your phone if you have USB Debugging enabled and the Android SDK installed on your
@@ -16,4 +16,12 @@ answers in [[https://stackoverflow.com/questions/11074671/adb-pull-multiple-file
 
 #+begin_src
 adb shell 'find /storage/self/primary/DCIM/Camera/IMG_20250522_*.jpg -print0' | xargs -0 -n 1 adb pull
+#+end_src
+
+* Push multiple files
+
+Much easier to push multiple files
+
+#+begin_src
+adb push path\ to\ directory /storage/<dev>/target/path/.
 #+end_src
