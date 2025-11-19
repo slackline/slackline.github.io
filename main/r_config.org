@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       a3af37f6-13d0-4ad3-b9b8-4f32be97910d
+:mtime:    20251119194640
+:ctime:    20251119194640
+:END:
+#+TITLE: R Config
+#+FILETAGS: :r:package:develompent:
+
+The [[https://rstudio.github.io/config/][config]] package "/makes it easy to manage environment specific configuration values/".
+
+* Links
+
++ [[https://rstudio.github.io/config/][config]] • Manage Environment Specific Configuration Values
