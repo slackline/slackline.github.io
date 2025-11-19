@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       08b71419-a3fc-4c7e-8fb6-75f613e41315
-:mtime:    20250522092311
+:mtime:    20251119074439 20250522092311
 :ctime:    20250522092311
 :END:
 #+TITLE: Just
@@ -13,3 +13,7 @@ Just is a command runner, similar to ~make~ but without the build components, it
 * Links
 
 + [[https://github.com/casey/just][casey/just: 🤖 Just a command runner]]
+
+** Articles
+
++ [[https://hlfshell.ai/posts/justfiles/][justfiles can feel magical - hlfshell]]
