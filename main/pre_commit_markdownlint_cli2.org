@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8dbde866-810a-48e4-981f-2fcbc19ec5cf
-:mtime:    20231008074648
+:mtime:    20251120130437 20231008074648
 :ctime:    20231008074648
 :END:
 #+TITLE: Pre-commit Markdownlint-cli2
@@ -35,3 +35,4 @@ you want to ignore (source [[https://discourse.gohugo.io/t/ignore-a-line-with-ma
 * Links
 
 + [[https://discourse.gohugo.io/t/ignore-a-line-with-markdownlint/44269][Ignore a line with markdownlint - tips & tricks - HUGO]]
++ [[https://github.com/DavidAnson/markdownlint/blob/v0.39.0/README.md#rules--aliases][Rules and Aliases]]
