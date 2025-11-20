@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       254f1c27-9822-4211-a118-7ae1d21fe485
+:mtime:    20251120133855
+:ctime:    20251120133855
+:END:
+#+TITLE: Pre-commit rumdl
+#+FILETAGS: :precommit:git:hook:markdown:lint:
+
+[[https://github.com/rvben/rumdl/][rumdl]] is a [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]] re-implementation of [[id:8dbde866-810a-48e4-981f-2fcbc19ec5cf][Pre-commit Markdownlint-cli2]]. Its meant to be a drop in replacement and should in
+theory read ~.markdownlint-cli2.yaml~ (although I found this not to be the case on my first try).
+
+* Configuration
+
+[[https://github.com/rvben/rumdl#configuration][Configuration]] is either via ~.rumdl.toml~ or if its a Python based project via ~[tool.rumdl]~ section in
+~pyproject.toml~.
+
+** ~rumdl.toml~
+
+** ~[tool.rumdl]~
+
+* Links
+
++ [[https://github.com/rvben/rumdl/blob/main/docs/RULES.md][Rules!]]
++ [[https://github.com/rvben/rumdl/blob/main/docs/global-settings.md][Global Configuration]]
++ [[https://github.com/rvben/rumdl/blob/main/docs/inline-configuration.md][In-line Configuration]]
