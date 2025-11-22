@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       0ef49d31-3b92-4e34-bd08-e12fd824174d
+:mtime:    20251122210059
+:ctime:    20251122210059
+:END:
+#+TITLE: Git Email
+#+FILETAGS: :git:email:imap:pop3:
+
+* Links
+
++ [[https://git-send-email.io/][Learn to use email with git!]]
