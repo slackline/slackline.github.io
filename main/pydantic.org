@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ba02ecdf-c35f-4deb-8308-28341922c096
-:mtime:    20251103115120 20251016113248 20230103103312 20220301215133
+:mtime:    20251122142315 20251103115120 20251016113248 20230103103312 20220301215133
 :ctime:    20220301215133
 :END:
 #+TITLE: Pydantic
@@ -44,3 +44,4 @@ If using ~pydantic.dataclass~'s then you can relax the permitted types to allow 
 + [[https://betterprogramming.pub/the-beginners-guide-to-pydantic-ba33b26cde89][The Beginner’s Guide to Pydantic. A Python package to parse and validate… | by Ng Wai Foong | Better Programming]]
 + [[https://medium.com/swlh/cool-things-you-can-do-with-pydantic-fc1c948fbde0][Cool Things You Can Do With Pydantic | by Gideon Caller ...]]
 + [[https://hackernoon.com/the-end-of-config-hell-in-python-thanks-to-pydantic-v2][The End of Config Hell in Python, Thanks to Pydantic v2 | HackerNoon]]
++ [[https://www.bitecode.dev/p/pydantic-can-do-what?publication_id=1516188&post_id=179635958&triedRedirect=true][Pydantic can do what? - Bite code!]]
