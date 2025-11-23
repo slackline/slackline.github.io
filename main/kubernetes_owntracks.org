@@ -1,0 +1,156 @@
+:PROPERTIES:
+:ID:       5788c624-ce2d-4763-8467-1795bd53f54e
+:mtime:    20251123145928 20251123122319
+:ctime:    20251123122319
+:END:
+#+TITLE: Kubernetes OwnTracks
+#+FILETAGS: :kubernetes:owntracks:gps:
+
+I wanted to self-host [[https://owntracks.org/][OwnTracks]] but their "easy" Docker install was only available for Debian systems (it uses [[id:191117d7-b413-4409-84b5-0183599d9f4e][Ansible]]
+to detect the version of Debian and install things as appropriate). I realised I might be able to achieve the same thing
+using [[https://kubernetes.io/][Kubernetes]] which I had learnt a little about at the [[id:7239d6b8-0270-4cea-b06e-22d1d1b3c0f5][Kurbernetes Workshop RSECon25]].
+
+* Host
+
+I opted to install on a [[id:69864d74-8ec2-42e4-a227-f824a521a5ce][Raspberry Pi]] running [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] (the ARM version ;-).
+
+* Install
+
+I stuck with the template used in the workshop and installed [[https://minikube.sigs.k8s.io/docs/][minikube]].
+
+#+begin_example shell
+pacman -Syu minikube
+#+end_example
+
+Let's just give things a whirl and try starting ~minikube~
+
+#+begin_example shell
+minikube start
+😄  minikube v1.35.0 on Archarm  (arm)
+👎  Unable to pick a default driver. Here is what was considered, in preference order:
+    ▪ docker: Not healthy: "docker version --format {{.Server.Os}}-{{.Server.Version}}:{{.Server.Platform.Name}}" exit status 1: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+    ▪ docker: Suggestion: Start the Docker service <https://minikube.sigs.k8s.io/docs/drivers/docker/>
+💡  Alternatively you could install one of these drivers:
+    ▪ kvm2: Not installed: exec: "virsh": executable file not found in $PATH
+    ▪ podman: Not installed: exec: "podman": executable file not found in $PATH
+    ▪ qemu2: Not installed: unknown arch: arm
+    ▪ virtualbox: Not installed: unable to find VBoxManage in $PATH
+
+❌  Exiting due to DRV_DOCKER_NOT_RUNNING: Found docker, but the docker service isn't running. Try restarting the docker service.
+#+end_example
+
+Ok, need a container/virtual machine of sorts to get things up and running. I already had [[https://www.docker.com/][Docker]] installed on my system
+but hadn't enabled/started it.
+
+#+begin_example shell
+systemctl enable --now docker.service
+journcalctl -xeu docker.service
+Nov 23 12:20:56 alarmpi-4b systemd[1]: Starting Docker Application Container Engine...
+░░ Subject: A start job for unit docker.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░
+░░ A start job for unit docker.service has begun execution.
+░░
+░░ The job identifier is 12178.
+Nov 23 12:20:57 alarmpi-4b dockerd[19853]: time="2025-11-23T12:20:57.011717411Z" level=info msg="Starting up"
+Nov 23 12:20:57 alarmpi-4b dockerd[19853]: time="2025-11-23T12:20:57.012902292Z" level=info msg="OTEL tracing is not configured, using no-op tracer provider"
+Nov 23 12:20:57 alarmpi-4b dockerd[19853]: time="2025-11-23T12:20:57.013192920Z" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/etc/cdi
+Nov 23 12:20:57 alarmpi-4b dockerd[19853]: time="2025-11-23T12:20:57.013260716Z" level=info msg="CDI directory does not exist, skipping: failed to monitor for changes: no such file or directory" dir=/var/run/cdi
+Nov 23 12:20:57 alarmpi-4b dockerd[19853]: time="2025-11-23T12:20:57.039760935Z" level=info msg="Creating a containerd client" address=/run/containerd/containerd.sock timeout=1m0s
+Nov 23 12:20:57 alarmpi-4b dockerd[19853]: time="2025-11-23T12:20:57.055750462Z" level=error msg="failed to mount overlay: no such device" storage-driver=overlay2
+Nov 23 12:20:57 alarmpi-4b dockerd[19853]: time="2025-11-23T12:20:57.055878813Z" level=error msg="exec: \"fuse-overlayfs\": executable file not found in $PATH" storage-driver=fuse-overlayfs
+Nov 23 12:20:57 alarmpi-4b dockerd[19853]: time="2025-11-23T12:20:57.056556623Z" level=info msg="Loading containers: start."
+Nov 23 12:20:57 alarmpi-4b dockerd[19853]: time="2025-11-23T12:20:57.381030560Z" level=info msg="stopping event stream following graceful shutdown" error="<nil>" module=libcontainerd namespace=moby
+Nov 23 12:20:57 alarmpi-4b dockerd[19853]: failed to start daemon: Error initializing network controller: error obtaining controller instance: failed to register "bridge" driver: failed to create NAT chain DOCKER: iptables failed: iptables --wait -t nat -N DOCKER: iptables v1.8.11 (legacy): can't initialize iptables table `nat': Table does not exist (do you need to insmod?)
+Nov 23 12:20:57 alarmpi-4b dockerd[19853]: Perhaps iptables or your kernel needs to be upgraded.
+Nov 23 12:20:57 alarmpi-4b dockerd[19853]:  (exit status 3)
+Nov 23 12:20:57 alarmpi-4b systemd[1]: docker.service: Main process exited, code=exited, status=1/FAILURE
+░░ Subject: Unit process exited
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░
+░░ An ExecStart= process belonging to unit docker.service has exited.
+░░
+░░ The process' exit code is 'exited' and its exit status is 1.
+#+end_example
+
+Checking I don't have ~iptables.service~ running so lets enable it.
+
+#+begin_example shell
+systemctl enable --now iptables.service
+
+Created symlink '/etc/systemd/system/multi-user.target.wants/iptables.service' → '/usr/lib/systemd/system/iptables.service'.
+Job for iptables.service failed because the control process exited with error code.
+See "systemctl status iptables.service" and "journalctl -xeu iptables.service" for details.
+
+systemctl status iptables.service
+
+× iptables.service - IPv4 Packet Filtering Framework
+     Loaded: loaded (/usr/lib/systemd/system/iptables.service; enabled; preset: disabled)
+     Active: failed (Result: exit-code) since Sun 2025-11-23 12:42:20 UTC; 6s ago
+ Invocation: 1cee4d9bd8824d25a6125447ce33dc15
+    Process: 20082 ExecStart=/usr/bin/iptables-restore /etc/iptables/iptables.rules (code=exited, status=2)
+   Main PID: 20082 (code=exited, status=2)
+        CPU: 17ms
+
+Nov 23 12:42:20 alarmpi-4b systemd[1]: Starting IPv4 Packet Filtering Framework...
+Nov 23 12:42:20 alarmpi-4b iptables-restore[20082]: iptables-restore v1.8.11 (legacy): iptables-restore: unable to initialize table 'filter'
+Nov 23 12:42:20 alarmpi-4b iptables-restore[20082]: Error occurred at line: 2
+Nov 23 12:42:20 alarmpi-4b iptables-restore[20082]: Try `iptables-restore -h' or 'iptables-restore --help' for more information.
+Nov 23 12:42:20 alarmpi-4b systemd[1]: iptables.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Nov 23 12:42:20 alarmpi-4b systemd[1]: iptables.service: Failed with result 'exit-code'.
+Nov 23 12:42:20 alarmpi-4b systemd[1]: Failed to start IPv4 Packet Filtering Framework.
+
+#+end_example
+
+Checking my ~iptables~ configuration which resides in ~/etc/iptables/*~...
+
+#+begin_example shell
+bat /etc/iptables/*
+─────┬──────────────────────────────────────────────────────────────────
+     │ File: iptables/empty.rules
+─────┼──────────────────────────────────────────────────────────────────
+   1 │ # Empty iptables rule file
+   2 │ *filter
+   3 │ :INPUT ACCEPT [0:0]
+   4 │ :FORWARD ACCEPT [0:0]
+   5 │ :OUTPUT ACCEPT [0:0]
+   6 │ COMMIT
+─────┴──────────────────────────────────────────────────────────────────
+─────┬──────────────────────────────────────────────────────────────────
+     │ File: iptables/ip6tables.rules
+─────┼──────────────────────────────────────────────────────────────────
+   1 │ # Empty iptables rule file
+   2 │ *filter
+   3 │ :INPUT ACCEPT [0:0]
+   4 │ :FORWARD ACCEPT [0:0]
+   5 │ :OUTPUT ACCEPT [0:0]
+   6 │ COMMIT
+─────┴──────────────────────────────────────────────────────────────────
+─────┬──────────────────────────────────────────────────────────────────
+     │ File: iptables/iptables.rules
+─────┼──────────────────────────────────────────────────────────────────
+   1 │ # Empty iptables rule file
+   2 │ *filter
+   3 │ :INPUT ACCEPT [0:0]
+   4 │ :FORWARD ACCEPT [0:0]
+   5 │ :OUTPUT ACCEPT [0:0]
+   6 │ COMMIT
+─────┴──────────────────────────────────────────────────────────────────
+─────┬──────────────────────────────────────────────────────────────────
+     │ File: iptables/simple_firewall.rules
+─────┼──────────────────────────────────────────────────────────────────
+   1 │ *filter
+   2 │ :INPUT DROP [0:0]
+   3 │ :FORWARD DROP [0:0]
+   4 │ :OUTPUT ACCEPT [0:0]
+   5 │ -A INPUT -p icmp -j ACCEPT
+   6 │ -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+   7 │ -A INPUT -i lo -j ACCEPT
+   8 │ -A INPUT -p tcp -j REJECT --reject-with tcp-reset
+   9 │ -A INPUT -p udp -j REJECT --reject-with icmp-port-unreachable
+  10 │ -A INPUT -j REJECT --reject-with icmp-proto-unreachable
+  11 │ COMMIT
+─────┴──────────────────────────────────────────────────────────────────
+#+end_example

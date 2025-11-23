@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       7239d6b8-0270-4cea-b06e-22d1d1b3c0f5
-:mtime:    20250911144035
+:mtime:    20251123145953 20251123121131 20250911144035
 :ctime:    20250911144035
 :END:
-#+TITLE: Kurbernetes Workshop RSECon25
+#+TITLE: Kubernetes Workshop RSECon25
 #+FILETAGS: :containerisation:kubernetes:rsecon25:
 
 * Why Kubernetes?
@@ -13,6 +13,10 @@ Powerful container orchestration platform that automates deployment, scaling, an
 + High availability, self-healing, rolling updates.
 + Declarative configuraiont and resource management including networking and secirty
 + Stateful applications with backups and restoration
+
+* My deployments
+
++ [[id:5788c624-ce2d-4763-8467-1795bd53f54e][OwnTracks]]
 
 * Architecture
 + Control plane nodes and work notes
@@ -34,19 +38,19 @@ A lightweight version of Kubernetes, ideal for testing and developing.
 
 ** Starting a cluser
 
-#+begin_src
+#+begin_example shell
 minikube start
-#+end_src
+#+end_example
 
 Launch the dashboard
 
-#+begin_src
+#+begin_example shell
 minikube dashboard
-#+end_src
+#+end_example
 
-#+begin_src
+#+begin_example shell
 kubectl delete pod kubechaos-<id>
-#+end_src
+#+end_example
 
 This deleted it but because `spec.replicas: 1` in `deployment/manifests.yaml` is `1` it ensures there is /always/ a
 replica running and so it was restarted automatically by Kubernetes.
@@ -56,17 +60,17 @@ replica running and so it was restarted automatically by Kubernetes.
 
 If we modify the website (`image/app.js`) we need to modify `deployment/manifest.yaml` then `build`  and `apply` this
 new version
-#+begin_src
+#+begin_example shell
 minikube image build -t local/kubechaos:v2 image
 kubectl apply -f deployment/manifests
-#+end_src
+#+end_example
 
 This updates the running node/pod in place and refreshing the page will show the changes. If the job is large you can
 check its progress with
 
-#+begin_src
+#+begin_example shell
 kubectl rollout status deployment kubechaos
-#+end_src
+#+end_example
 
 **NB** - To make it easy to control changes then version control `deployment/manifest.yaml` so you can easily roll back
 
