@@ -261,6 +261,7 @@ found useful.
 + [[https://bookdown.org/michael_bcalles/gis-crash-course-in-r/][A Crash Course in Geographic Information Systems (GIS) using R]]
 + [[https://ipeagit.github.io/intro_access_book/][Introduction to urban accessibility]]
 + [[https://r.iresmi.net/posts/2024/accident/][Bike accidents – r.iresmi.net]]
++ [[https://nrennie.rbind.io/blog/gps-route-map-r/][Create custom GPS route maps in R – Nicola Rennie]]
 
 *** Reproducibility
 
