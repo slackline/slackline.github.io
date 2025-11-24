@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       75f53f5a-6be0-4264-99ad-fd7f3cbabcec
+:mtime:    20251124075506
+:ctime:    20251124075506
+:END:
+#+TITLE: Disk Partitioning
+#+FILETAGS: :linux:disks:partitioning:
+
+* ~cfdisk~
+
+I find ~cfdisk~ to be a slightly easier tool to use than ~fdisk~ as its a Terminal User Interface (TUI) with informative
+menus.

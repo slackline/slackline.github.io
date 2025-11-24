@@ -1,0 +1,58 @@
+:PROPERTIES:
+:ID:       eaa3b7c6-7c4c-4eb1-9c18-e4fc65c9b1e7
+:mtime:    20251124080416
+:ctime:    20251124080416
+:END:
+#+TITLE: Disk Labelling
+#+FILETAGS: :linux:disks:labelling:
+
+Find out information about drives ("block devices") with ~lsblk~
+
+#+begin_example
+lsblk
+NAME            MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
+sda               8:0    0 465.8G  0 disk
+├─sda2            8:2    0 368.1G  0 part  /mnt/data
+└─sda3            8:3    0  97.7G  0 part  /mnt/personal
+sdb               8:16   0 232.9G  0 disk
+├─sdb1            8:17   0   9.8G  0 part  /var/db/repos
+├─sdb2            8:18   0   7.6G  0 part  [SWAP]
+└─sdb3            8:19   0 215.5G  0 part  /mnt/pics
+sdc               8:32   0   7.3T  0 disk
+└─sdc1            8:33   0   7.3T  0 part
+  └─md127         9:127  0   7.3T  0 raid1
+    ├─vg1-music 252:0    0     2T  0 lvm   /mnt/music
+    ├─vg1-video 252:1    0     2T  0 lvm   /mnt/video
+    └─vg1-work  252:2    0   200G  0 lvm   /mnt/work
+                                           /mnt/8tb/work
+sdd               8:48   0   7.3T  0 disk
+└─sdd1            8:49   0   7.3T  0 part
+  └─md127         9:127  0   7.3T  0 raid1
+    ├─vg1-music 252:0    0     2T  0 lvm   /mnt/music
+    ├─vg1-video 252:1    0     2T  0 lvm   /mnt/video
+    └─vg1-work  252:2    0   200G  0 lvm   /mnt/work
+                                           /mnt/8tb/work
+sde               8:64   1  14.8G  0 disk
+├─sde1            8:65   1 457.8M  0 part
+└─sde2            8:66   1   2.4G  0 part
+sdf               8:80   1     0B  0 disk
+sr0              11:0    1  1024M  0 rom
+nvme0n1         259:0    0 232.9G  0 disk
+├─nvme0n1p1     259:1    0    80G  0 part  /
+├─nvme0n1p2     259:2    0   200M  0 part  /boot
+└─nvme0n1p3     259:3    0 152.7G  0 part  /home
+#+end_example
+
+* Labelling
+
+You can modify the label of devices using ~e2label~, listing the partition will show the label.
+
+#+begin_example
+e2label /dev/sde1
+#+end_example
+
+To modify it add a labelling
+
+#+begin_example
+e2label /dev/sde1 boot
+#+end_example

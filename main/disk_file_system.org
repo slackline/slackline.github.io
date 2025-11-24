@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       d362171c-91ef-4894-ad6a-92d3f8b7c9af
+:mtime:    20251124080033
+:ctime:    20251124080033
+:END:
+#+TITLE: Disk File Systems
+#+FILETAGS: :linux:disks:filesystems:
+
+After [[id:75f53f5a-6be0-4264-99ad-fd7f3cbabcec][Partitioning]] disks they have to have be formatted with a file-system before you can write data to them.
+
+The ~mkfs~ programme handles this and has a variety of sub-commands
+
+| Sub-command | Filesystem              |
+|-------------+-------------------------|
+| ~mkfs.vfat~ | Windows vFat filesystem |
+| ~mkfs.ext4~ | Linux ext4 filesystem   |
