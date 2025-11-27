@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       bb57f65e-58f4-45de-9620-901dc998f6d6
-:mtime:    20250730233030 20250617113230 20250616211714 20250528084823 20250426130852 20250308215814 20250224190536 20250213175539 20250115211312 20241220095351 20241122224906 20240807093255 20240530191643 20240529142914 20240218135759 20240121220239 20240117072308 20231117101119 20231015151206 20230919101558 20230811133355 20230811112305 20230714185857 20230629212250 20230509145004 20230331162046 20230329204528 20230319195324 20230319124004 20230318215853 20230318205506 20230316065623 20230312225913 20230311130516 20230301211740 20230301095721 20230227221806 20230207111629 20230103103312 20221228113913 20230103103309
+:mtime:    20251127072935 20250730233030 20250617113230 20250616211714 20250528084823 20250426130852 20250308215814 20250224190536 20250213175539 20250115211312 20241220095351 20241122224906 20240807093255 20240530191643 20240529142914 20240218135759 20240121220239 20240117072308 20231117101119 20231015151206 20230919101558 20230811133355 20230811112305 20230714185857 20230629212250 20230509145004 20230331162046 20230329204528 20230319195324 20230319124004 20230318215853 20230318205506 20230316065623 20230312225913 20230311130516 20230301211740 20230301095721 20230227221806 20230207111629 20230103103312 20221228113913 20230103103309
 :ctime:    20221228113913 20230103103309
 :END:
 #+TITLE: Python Packaging
@@ -47,13 +47,15 @@ to the flat structure.
       └── ./tests/something/test_module_c.py
 #+END_SRC
 
+It is also possible to use a "src" based structure where the package directory resides within the ~src~ directory. This
+is used in common [[id:14310dd9-647a-4532-9a50-d75becb0d409][templating systems]] such as the [[https://github.com/napari/napari-plugin-template/#napari-plugin-template][napari-plugin-template]] and [[https://github.com/scientific-python/cookie][Scientific Python Cookiecutter]].
+
 ** ~__init__.py~
 
 In older versions of Python (<3.3) a ~__init__.py~ was required in every directory and sub-directory that was to be a
-module/sub-module. In more recent versions of Python (\>\\=3.3) they are not essential though as Python uses [namespace
-packages](https://docs.python.org/3/reference/import.html#namespace-packages). But in most cases its simpler to include
-such a file in the top level of your directory. ~__init__.py~ files can be completely empty or they can contain code
-that is used throughout your package, such as setting up a logger.
+module/sub-module. In more recent versions of Python (\>\\=3.3) they are not essential though as Python uses [[https://docs.python.org/3/reference/import.html#namespace-packages][namespace
+packages]]. But in most cases its simpler to include such a file in the top level of your directory. ~__init__.py~ files
+can be completely empty or they can contain code that is used throughout your package, such as setting up a logger.
 
 * Configuration ~pyproject.toml~
 
@@ -342,10 +344,6 @@ select = ["B", "E", "F", "I001", "W"]
   unfixable = []
 #+end_src
 
-
-
-
-
 * Versioning
 
 Typically the version is defined in the ~__version__~ variable/object in the top-level ~__init__.py~ or as a value in
@@ -421,7 +419,6 @@ The package can now be built locally with...
 #+end_src
 
 ...and the resulting package will be generated in the ~dist/~ directory.
-
 
 
 * Data
@@ -625,6 +622,7 @@ jobs:
       with:
         repository-url: https://test.pypi.org/legacy/
 #+end_src
+
 ** Releasing via GitHub
 :PROPERTIES:
 :mtime:    20230103103311
