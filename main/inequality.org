@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       3bd7d324-53a7-4970-9247-56b2a2cdab5d
+:mtime:    20251127072531 20251126200448
+:ctime:    20251126200448
+:END:
+#+TITLE: Inequality
+#+FILETAGS: :inequality:society:politics:
+
+Inequality abounds and a lot of it is down to the poor [[id:8068c739-f291-48b7-8de7-31e6b7e5a5e0][Politics]] that many countries have. Poor [[id:06e11786-bbbe-42c1-8f97-dde66d8f844e][Economics]] policies also
+compound this and are driven by an elite who wish to maintain the status quo.
+
+* Links
+
+** Organisations
+
++ [[https://equalitytrust.org.uk/][Equality Trust]]
+
+** Books
+
++ [[https://equalitytrust.org.uk/the-spirit-level/][The Spirit Level (2009) - Equality Trust]]
+  + [[https://equalitytrust.org.uk/evidence-base/the-spirit-level-at-15/][The Spirit Level at 15 - Equality Trust]]
++ [[https://inequality.stanford.edu/publications/media/details/200-day-living-almost-nothing-america][$2.00 a Day: Living on Almost Nothing in America - Stanford Center on Poverty and Inequality]]
++ [[https://en.wikipedia.org/wiki/The_Establishment%3A_And_How_They_Get_Away_with_It][The Establishment : And How They Get Away With It]]

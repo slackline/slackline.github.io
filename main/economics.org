@@ -1,10 +1,13 @@
 :PROPERTIES:
 :ID:       06e11786-bbbe-42c1-8f97-dde66d8f844e
-:mtime:    20250407210226 20250118215127 20240518155014
+:mtime:    20251127072610 20250407210226 20250118215127 20240518155014
 :ctime:    20240518155014
 :END:
 #+TITLE: Economics
 #+FILETAGS: :economics:maths:statistics:
+
+Poor economic policy is responsible for growing [[id:3bd7d324-53a7-4970-9247-56b2a2cdab5d][Inequality]] and is a consequence of unjust [[id:8068c739-f291-48b7-8de7-31e6b7e5a5e0][Politics]] where the system is
+rigged.
 
 * The Jevons Paradox
 
@@ -23,3 +26,7 @@ Read this interesting piece [[https://economicsfromthetopdown.com/2024/05/18/a-t
 ** Videos
 
 + [[https://www.youtube.com/watch?v=0F-MQHUSS2U][The Price of Peace: Money, Democracy & the Life of John Maynard Keynes]]
+
+** Books
+
++ [[https://www.danielsusskind.com/growth-a-reckoning][Growth: A Reckoning — Daniel Susskind]]
