@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       f6543837-43ca-4e9b-b55e-0d385fa090d7
+:mtime:    20251128114517
+:ctime:    20251128114517
+:END:
+#+TITLE: Git Checkout
+#+FILETAGS: :git:checkout:surgery:restoring:
+
+~git checkout~ is an old an powerful tool with many functions. It used to be the default way to "checkout" (aka switch)
+branches as well as specific commits. Now a cleaner ~git switch~ command has been introduced to take care of switching
+branches and whilst ~git checkout~ retains this functionality its more useful to use it for checking out specific
+commits.
+
+* Tips and Tricks
+
+~git checkout~ is a powerful command and has lots of useful functionality that is available.
+
+** Restoring Files
+
+If you find you accidentally deleted a file that you wish to restore from an older commit then ~git checkout~ has you
+covered.
+
+#+begin_example shell
+git checkout <commit-hash>^ path/to/file/you/want/to/restore
+#+end_example
+
+In [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] you can do this by navigating to the commit in the log history and viewing the commit.

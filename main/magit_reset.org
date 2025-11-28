@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       c8097d1c-db58-4e6b-a663-fc2779fceb2c
+:mtime:    20251128114648
+:ctime:    20251128114648
+:END:
+#+TITLE: Magit Reset
+#+FILETAGS: :magit:git:reset:
+
+As might be expected [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] has a powerful interface to resetting, accessed via ~X~.
+
+* Reset a file
+
+You can reset or restore deleted files from specific commits using ~X f~.
