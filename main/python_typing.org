@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3f19e1ef-e5c4-45f1-822f-8d4d834acdbd
-:mtime:    20251130190331 20250919201148 20250318092039 20250106221721 20241204135030 20231222190513 20231128102157
+:mtime:    20251201155537 20251130190331 20250919201148 20250318092039 20250106221721 20241204135030 20231222190513 20231128102157
 :ctime:    20231128102157
 :END:
 #+TITLE: Python Typing
@@ -74,3 +74,4 @@ automatically annotate your code.
 + [[https://adamj.eu/tech/2021/05/25/python-type-hints-specific-type-ignore/][Mypy configuration]]
 + [[https://sinon.github.io/future-python-type-checkers/][How Well Do New Python Type Checkers Conform? A Deep Dive into Ty, Pyrefly, and Zuban]]
 + [[https://martynassubonis.substack.com/p/advanced-overlooked-python-typing][Advanced, Overlooked Python Typing - by Martynas Šubonis]]
++ [[https://kobzol.github.io/rust/python/2023/05/20/writing-python-like-its-rust.html][Writing Python like it’s Rust | Kobzol’s blog]]
