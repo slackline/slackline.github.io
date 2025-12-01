@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0c318676-baac-4570-986a-a8ce89cb8650
-:mtime:    20251111091439
+:mtime:    20251130074757 20251111091439
 :ctime:    20251111091439
 :END:
 #+TITLE: Grebedoc.dev
@@ -12,3 +12,7 @@
 
 This is pretty straight-forward, you don't need an account on Grebedoc.dev but it depends on whether you want to use
 their domain or if you have your own. There are clear [[https://grebedoc.dev/][instructions]] on how to setup either.
+
+* Links
+
++ [[https://eldred.fr/blog/forge-migration/][GitHub → Codeberg: my experience — ISSOtm's warehouse]]
