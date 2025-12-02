@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       67964093-4994-4910-9e8a-d2c418b8e634
-:mtime:    20250202094631 20241219131716 20240602201416
+:mtime:    20251202223956 20250202094631 20241219131716 20240602201416
 :ctime:    20240602201416
 :END:
 #+TITLE: Cycling
@@ -8,6 +8,11 @@
 
 I've always cycled lots, from doing my paper-round(s) from the age of 11-16, commuting to school, work and occassionally
 for fun, its an excellent, cheap, healthy and environmentally friendly way of moving around.
+
+* Simulations
+
+[[file:pdf/TwoNeurons.pdf][It Takes Two Neurons to Ride a Bicycle]] ([[https://paradise.caltech.edu/cook/papers/TwoNeurons.pdf][original link]]) is an interesting simulation on how to automate control of a
+bicycle.
 
 
 * Links
