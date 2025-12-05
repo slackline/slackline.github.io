@@ -1,14 +1,18 @@
 :PROPERTIES:
 :ID:       8178219c-ef79-4b59-ad51-e4204a8f369c
-:mtime:    20250430155456 20250401210413 20240309205745 20231106164927
+:mtime:    20251205183323 20250430155456 20250401210413 20240309205745 20231106164927
 :ctime:    20231106164927
 :END:
 #+TITLE: Fediverse
-#+FILETAGS: :fediverse:distributed:mastodon:pixelfed:mobilizon:
+#+FILETAGS: :fediverse:distributed:mastodon:pixelfed:mobilizon:forgejo:gotosocial:
 
 * Bookwyrm
 
 [[https://bookwyrm.social/][Bookwyrm]] offers federated book reading and reviewing. I use [[https://bookrastinating.com/][Bookrastinating]].
+
+* GoToSocial
+
+[[https://docs.gotosocial.org/en/v0.20.2/][GoToSocial]] is "/an ActivityPub social network server, written in Golang/".
 
 * Mastodon
 
@@ -36,5 +40,4 @@ it with his personal agenda.
 
 * Links
 
-+
-[[https://new.fedidb.org/][FediDB]]
++ [[https://new.fedidb.org/][FediDB]]
