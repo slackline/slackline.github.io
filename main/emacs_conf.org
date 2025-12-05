@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f76ac811-6c1a-4aa6-9492-8cbae7cb50ca
-:mtime:    20241229204339 20241207224639 20241207180917 20241031080307 20231204134451 20230103103314 20221224191223
+:mtime:    20251205071915 20241229204339 20241207224639 20241207180917 20241031080307 20231204134451 20230103103314 20221224191223
 :ctime:    20221224191223
 :END:
 #+TITLE: Emacs Conf
@@ -11,6 +11,8 @@
 I use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] as my primary IDE (and more besides) and there are some great talks across the years from [[https://emacsconf.org/][EmacsConf]]
 
 * Conferences
+
++ [[https://emacsconf.org/2025/][2025]]
 + [[https://emacsconf.org/2024/talks/][2024]]
 + [[https://emacsconf.org/2023/][2023]]
 + [[https://emacsconf.org/2022/][2022]]
@@ -19,6 +21,17 @@ I use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] as my primary IDE (and 
 + [[https://emacsconf.org/2019/][2019]]
 + [[https://emacsconf.org/2015/][2015]]
 + [[https://emacsconf.org/2013/][2013]]
+
+* 2025
+
++ [[https://emacsconf.org/2025/talks/][General Schedule]]
+
+
+** [[https://emacsconf.org/2025/talks/reference/][Emacs as a fully-fledged reference manager]]
+** [[https://emacsconf.org/2025/talks/bibliography/][An enhanced bibliography in org-mode for scientific research and self-directed learning]]
+** [[https://emacsconf.org/2025/talks/org-babel/][Making Org-Babel Reactive]]
+** [[https://emacsconf.org/2025/talks/zettelkasten/][Zettelkasten for Regular Emacs Hackers]]
+** [[https://emacsconf.org/2025/talks/hyperboleqa/][Questions and answers to help you fly with Hyperbole]]
 
 * 2024
 
