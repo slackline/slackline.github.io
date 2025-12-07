@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       742ab443-39f4-4cf6-a5ca-cb486578ad94
-:mtime:    20251207194725 20251207121232
+:mtime:    20251207212421 20251207194725 20251207121232
 :ctime:    20251207121232
 :END:
 #+TITLE: Arch Raspberry Pi 4b
@@ -193,7 +193,7 @@ passwords however, account passwords are hashed in the ~/etc/shadow~ file so I w
 the old accounts passwords without having knowledge of them (maybe!). I checked the hashes of ~user~ under ~/etc/shadow~
 and ~/mnt/old/etc/shadow~ to see if they matched (and yes I reused the same password) but they didn't to which end I
 opted to manually recreate the user accounts using the flag/parameter ~-u ####~ to ensure the user ID matched that under
-the old account. I deferred setting the passwords until a later point for these users.
+the olda ccount. I deferred setting the passwords until a later point for these users.
 
 #+begin_example sh
 useradd -u 1002 -G users,wheel user2
