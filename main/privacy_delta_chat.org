@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       2be7868d-784b-4450-901c-c3fe9b5e7ad5
-:mtime:    20250810180930
+:mtime:    20251207194753 20250810180930
 :ctime:    20250810180930
 :END:
-#+TITLE: Delta Chat
+#+TITLE: DeltaChat
 #+FILETAGS: :privacy:email:encryption:
 
 * Links
@@ -11,6 +11,7 @@
 ** Articles
 
 + [[https://cnoceda.com/tecnologia/posts/20250615T191346--delta-chat-and-org-mode__blog_tecnologia.html][Delta Chat and Org-Mode]]
++ [[https://signal-contingency-plan.info/][Signal Contingency Plan]]
 
 ** Blogs
 

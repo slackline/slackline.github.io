@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       06db84e0-bb77-4c56-8dec-c3506cfbc030
-:mtime:    20251028071300 20251001230707 20250926200759 20250925225909
+:mtime:    20251207194737 20251028071300 20251001230707 20250926200759 20250925225909
 :ctime:    20250925225909
 :END:
 #+TITLE: Signal
@@ -43,3 +43,4 @@ collect your WhatsApp data, as you cannot use the app if you decline to share yo
 
 + [[https://keet.io/][Keet by Holepunch]]
 + [[https://delta.chat/en/][Delta Chat, decentralized secure messenger]]
++ [[https://signal-contingency-plan.info/][Signal Contingency Plan]]
