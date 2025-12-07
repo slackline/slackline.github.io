@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       18001bd6-b925-4a90-809b-c9cda974906c
+:mtime:    20251207133220
+:ctime:    20251207133220
+:END:
+#+TITLE: Retractions and Errors
+#+FILETAGS: :research:retraction:mistakes:
+
+* List of Retractions
+
+** Programming Errors
+
++ [[https://www.sciencedirect.com/science/article/pii/S0195666325005306][Retraction notice to “The only constant is change: Stable vs. variable aspects of food approach bias relate differently to food craving and intake” [Appetite 204 (2025) 107726] - ScienceDirect]]
