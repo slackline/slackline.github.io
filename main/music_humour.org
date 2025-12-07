@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8bfb8331-efd4-4208-8430-06898ba932b1
-:mtime:    20240601163407
+:mtime:    20251207102146 20240601163407
 :ctime:    20240601163407
 :END:
 #+TITLE: Music Humour
@@ -15,3 +15,7 @@
 I only managed to get their first album when it came out /Fitness to Practice/ but they've done [[https://www.discogs.com/artist/2840636-Amateur-Transplants][several others]] since
 then Suman Biswas has released [[https://sumanbiswas.bandcamp.com/album/still-alive-after-amateur-transplants][Still Alive After Amateur Transplants]].
 Kay has released
+
+* Bob Rivers
+
+Has an excellent series of spoof xmas songs /Twisted Xmas/.

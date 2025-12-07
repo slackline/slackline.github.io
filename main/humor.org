@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       92192930-a52c-40b8-bff4-4eee37eb10c2
+:mtime:    20251207102721
+:ctime:    20251207102721
+:END:
+#+TITLE: Humor
+#+FILETAGS: humor:comedy:
+
+* Music
+
+See [[id:8bfb8331-efd4-4208-8430-06898ba932b1][Music Humour]] for a musical twist.
+
+* Bill Hicks
+
+Comedy genius.
+
+* Websites
+
+** B3ta
+
+[[https://b3ta.com/][b3ta]] is a hilarious satirical site. Includes the [[https://mastodon.social/@fesshole][Fesshole 🧻 @fesshole]]
