@@ -1,0 +1,124 @@
+:PROPERTIES:
+:ID:       fb505adf-5df0-4d6e-a7b1-9853044653c5
+:mtime:    20251207115127
+:ctime:    20251207115127
+:END:
+#+TITLE: Arch AUR
+#+FILETAGS: :arch:linux:packages:
+
+[[https://aur.archlinux.org/][AUR]] is the ArchLinux User Repository where package builds for software that is not (yet) officially supported can be
+shared and found by users. Each package is maintained as a git repository that the user can clone and then
+install. There are a few helper applications that wrap the functionality of Pacman into a command users can use (since
+you typically install AUR packages as a user rather than as ~root~).
+
+* Paru
+
+[[https://github.com/Morganamilo/paru][Paru]] is a full featured AUR helper written in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]]. It wraps around ~pacman~ providing much of the same functionality as
+well as handling upgrades to official packages that are required when installing from AUR.
+
+install it run the following.
+
+#+begin-src
+sudo pacman -S --needed base-devel
+cd && mkdir aur && cd aur
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -sri
+#+end-src
+
+Once installed it functions pretty much like ~pacman~
+
+** ~makepkg~ cores
+
+Configure the number of cores used when compiling from source by adding the following to ~/etc/makepkg.conf~
+
+#+begin_src conf
+MAKEFLAG="-j$(nproc)"
+#+end_src
+
+** Falcon Sensor
+
+Work imposed that I install and use the CrowdStrike Falcon Sensor. There is a a package on AUR (see [[https://aur.archlinux.org/packages/falcon-sensor][AUR |
+falcon-sensor]]).
+
+Having the ~.deb~ adjacent to the PKGBUILD didn't help (see error messages below).
+
+#+begin_src
+# Manually extract package contents and move to src/
+ar x falcon-sensor_*.**.*-*****_amd64.deb
+mv {control.tar.xz,data.tar.xz,debian-binary} src/.
+#+end_src
+```
+
+Edit the ~PKGBUILD~ and...
+
+- Make sure the version matches that of the .deb file you have.
+- Comment out the first item in the source list (i.e. # "manual://${pkgname}_${pkgver/_/-}_amd64.deb"
+- comment out the corresponding sha256sums (i.e. # "SKIP#)
+
+You should now be able to install the package with ~makepkg -sri~.
+
+A very kind user took the time to explain a slightly more sophisticated solution to installing which is detailed in
+[[https://aur.archlinux.org/packages/falcon-sensor#comment-1024331][here]].
+
+#+begin_quote
+
+
+@nshephard the package requires more changes, first you can not comment out the source, you need to include one that satisfies the possible sources, I used this fake one:
+
+#+begin_src
+source=(
+  "https://${pkgname}_${_pkgver}_amd64.deb"
+  "LICENSE"
+)
+#+end_src
+
+I also included its SHA check:
+
+#+begin_src
+sha256sums=(
+  "<your_deb_sha>"
+  "323c9971c5f7e3b360783601922c063801e0bbd425351faaafaf476b5b29fecb"
+)
+#+end_src
+
+And the deb version provided where I work required change as well, but it depends on what your company provides to you:
+
+#+begin_src
+pkgver=7.21.0.17405
+_pkgver=7.21.0-17405
+#+end_src
+
+To answer your question, data.tar.xz comes from decompressing the deb package, which when decompressed includes two tarballs, the data one with the binaries, and the control one with instructions on what to do with the binaries included in the data tarball and more stuff to follow the distro policies and stuff.
+
+The problem is that when you commented out the source, even though it's there besides the PGKGBUILD, it won't use it at all, and therefore this will fail:
+
+#+begin_src
+prepare() {
+  mkdir "${srcdir}/${pkgname}"
+  cd "${srcdir}/${pkgname}"
+
+  bsdtar -xf "${srcdir}/data.tar.xz" -C .
+#+end_src
+
+I modified the package to my purposes, and it's working flawlessly, :)
+
+Hope this helps you.
+
+BTW, installing the package is not enough. What's in falcon-sensor.install gives you a hint, but it was left commented out by the last update on this package because the instructions are pretty dependent on the falcon-sensor version and your company. The deb I was provided required different commands which are provided by the of:
+
+#+begin_src
+/opt/CrowdStrike/falconctl -s --cid=<cid_provided_by_your_corp>
+/opt/CrowdStrike/falconctl -g --cid
+/opt/CrowdStrike/falconctl -s --tags=<tag_provided_by_your_corp>
+/opt/CrowdStrike/falconctl -g --tags
+#+end_src
+
+The other pre-instructions and post instructions are fine, just the falconctl stuff is particular. I can't tell if those required where I work are the ones you need, or the ones in this package falcon-sensor.install, you need to find out with the instructions provided to you...
+
+#+end_quote
+
+* Links
+
++ [[https://aur.archlinux.org/][AUR]]
++ [[https://github.com/Morganamilo/paru][Paru]]

@@ -1,0 +1,240 @@
+:PROPERTIES:
+:ID:       742ab443-39f4-4cf6-a5ca-cb486578ad94
+:mtime:    20251207194725 20251207121232
+:ctime:    20251207121232
+:END:
+#+TITLE: Arch Raspberry Pi 4b
+#+FILETAGS: :linux:arch:install:config:
+
+I've used [[https://archlinuxarm.org/][ArchLinuxARM]] on my Raspberry Pi's for some time now as I like rolling distributions but at the time [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]]
+didn't offer binary distributions for packages (that has now changed). They mostly work well although support for the Pi
+Zero W of which I own five or six is no longer available. One day I may upgrade these to Gentoo as they are [[https://wiki.gentoo.org/wiki/Raspberry_Pi][supported]].
+
+The instructions below are based on reinstalling as for some reason one day the external 5TB USB drive which serves as
+the main storage for the device, backing up music, video, references etc. was no longer detected. I checked it wasn't a
+hardware problem by booting from a new install and it was detected and rather than fighting trying to work out why USB
+drivers weren't loaded on the current install I opted for a fresh as I had purchased two new 64GB microSD cards and
+wanted to make a fresh install on one then make a backup (using ~dd~) to the other so I had a a spare which I would
+periodically update should the in-use one ever die.
+
+As such I already had a list of explicitly installed packages available via Pacman from the existing system (which
+thankfully still booted at least!). I also had my configuration backed up using [[id:48249b0d-eeba-484a-8f00-808a14169692][~etckeeper~]].
+
+
+* Install
+
+Follow the [[https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4][installation instructions]] to download and install the pre-built image to a microSD card. I opted to use
+~gparted~ to split the ~/~ (root) partition/file-system where the operating system lives and the ~/home~
+partition/file-system as I find this to be good practice for separating the two should things be corrupt. Make sure to
+format the ~/home~, I keep my life simple and use ~ext4~.
+
+Default account and passwords are...
+
+| Account | Password |
+|---------+----------|
+| ~alarm~ | ~alarm~  |
+| ~root~  | ~root~   |
+
+Boot the device using the new microSD, ideally with a wired ethernet connection which makes SSHing in easier. Once
+booted you should be able to [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] in and you should login using the ~alarm~ account details.
+
+
+#+begin_example sh
+ssh alarm@192.168.1.215
+#+end_example
+
+At a basic level you now have a functioning system, but its not (yet) configured to do everything you want/need. In my
+case I'm restoring functionality from an old system.
+
+* Configuration
+
+The first few steps were undertaken on the existing system to make it easy to install/upgrade/configure the new system
+
+** Existing System
+
+*** Installed Packages
+
+Extract a list of explicitly installed packages using the following which removes the package version and leaves a plain
+list of the packages to be installed which is piped to a file
+
+#+begin_example sh
+pacman -Qe | awk -F" " '{print $1}' > /home/user/tmp/pacman-Qe
+#+end_example
+
+This includes packages that have been installed from [[id:fb505adf-5df0-4d6e-a7b1-9853044653c5][AUR]] which will have to be handled separately. Typically I keep
+these under ~~/aur/~ so it was possible for me to easily edit this. I found out [[https://unix.stackexchange.com/a/297876][afterwards]] you can use the ~-n~ flag to
+get just native packages so really you should use...
+
+#+begin_example sh
+pacman -Qen | awk -F" " '{print $1}' > /home/user/tmp/pacman-Qen
+#+end_example
+
+
+*** Backup ~/etc~
+
+Make sure ~/etc~ is up-to-date and backed up.
+
+#+begin_example sh
+su
+cd /etc
+etckeeper commit
+git push
+#+end_example
+
+Shutdown and switch microSD cards to the new system, boot the new microSD and use [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] to connect to the device over
+ethernet.
+
+*** Mount old filesystems
+
+As I've a bunch of configuration files I want to use to setup the new system and an existing ~/home~ partition I wish to
+migrate I needed to mount the old file system. I used a simple SD-card to USB adapter to plug the old card in it was
+automatically detected and I could mount and ~chroot~ to it.
+
+#+begin_example sh
+su
+mkdir /mnt/old
+mount /dev/sdb2 /mnt/old
+mount /dev/sdb1 /mnt/old/boot
+mount /dev/sdb3 /mnt/old/home
+arch-chroot /mnt/old
+#+end_example
+
+This allows me to perform actions under my old system if needed, but the files are also accessible to be copied to the
+new system.
+
+** Change ~root~ password
+
+
+Change the ~root~ password to something only you know.
+
+#+begin_example sh
+su
+passwd
+#+end_example
+
+*NB* From this point forward it is assumed commands are carried out as ~root~ unless otherwise explicitly stated.
+
+*** Copy ~root~ home directory from old system
+
+I have some custom [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] aliases, custom ~$PS1~ and some other configuration files and scripts on my old system under the
+~root~ accounts home directory so I wanted to copy these over. Pretty straight-forward once the drives are mounted.
+
+#+begin_example sh
+cd /root/
+rsync -av /mnt/old/root/.* .
+rsync -av /mnt/old/root/* .
+source ~/.bashrc
+#+end_example
+
+
+** Mount the new ~/home~ partition
+
+I split the ~/~ (root) and ~home~ partitions on the new drive but it did not know about the new system so I needed to
+sort that out by mounting it, copying the old ~/home~ over and the current ~/home~ (which contains the basic ~alarm~
+account details).
+
+#+begin_example sh
+mkdir -p /mnt/new/home
+mount /dev/mmcblk0p3 /mnt/new/home
+#+end_example
+
+As with ~root~ home directory we can now ~rsync~ the old to the new. I had a few user accounts setup for friends so this
+copies their home directories over too (see below on restoring their accounts).
+
+#+begin_example sh
+cd /mnt/new/home
+rsync -av /mnt/old/home/* /mnt/new/home/.
+#+end_example
+
+** Install packages from old system
+
+We saved the old packages that were explicitly installed to what is now ~/mnt/old/home/user/tmp/pacman-Qe~ and can use
+this to install all these packages on the new system.
+
+#+begin_example sh
+pacman -Syu - < /mnt/old/home/user/tmp/pacman-Qen
+#+end_example
+
+If you only use ~pacman -Qe~ to get a list of explicitly installed packages and didn't restrict to native packages then
+you may want to first edit this file and move all entries to packages that were installed from AUR to a separate file so
+you have a record. If you don't ~pacman~ will complain that there is no such package available at which point you can
+move it over (I found my ~~/aur~ directory wasn't a complete  representation of everything I had installed from AUR so
+had a few packages to move over).
+
+This will likely want to install several hundred packages and will take a little while to download and install.
+
+** Setup user accounts
+
+I wanted to restore my old user accounts so had to pay careful attention to the ~gid~ already assigned. Useful reference
+(as I don't do this often) is the [[https://wiki.archlinux.org/title/Users_and_groups][Users and groups]] wiki page.
+
+We can see what groups each account was a member of by looking at ~/mnt/old/etc/group~
+
+#+begin_example sh
+grep -E "user|user2|user3|user4" /mnt/old/etc/group
+wheel:x:998:user
+users:x:985:user,user2,user3,user4
+user:x:1001:
+user2:x:1002:
+user3:x:1003:
+user4:x:1006:
+#+end_example
+
+Deliberately exclude the ~-m~ flag as we are restoring the ~/home/user~ directory.
+#+begin_example sh
+  useradd -G users,wheel user
+  passwd user
+#+end_example
+
+*** Other accounts
+
+I don't know what passwords I set for others, or if they change them. I could create new accounts for them and set new
+passwords however, account passwords are hashed in the ~/etc/shadow~ file so I wondered if I could use that to restore
+the old accounts passwords without having knowledge of them (maybe!). I checked the hashes of ~user~ under ~/etc/shadow~
+and ~/mnt/old/etc/shadow~ to see if they matched (and yes I reused the same password) but they didn't to which end I
+opted to manually recreate the user accounts using the flag/parameter ~-u ####~ to ensure the user ID matched that under
+the old account. I deferred setting the passwords until a later point for these users.
+
+#+begin_example sh
+useradd -u 1002 -G users,wheel user2
+useradd -u 1003 -G users,wheel user3
+useradd -u 1006 -G users,wheel user4
+#+end_example
+
+** ~/etc/fstab~
+
+I needed to...
+
++ make sure the new ~/home~ partition is correctly mounted on booting (note we copied ~/home/alarm~ over to
+  ~/mnt/old/home/~ already but will eventually delete this account).
++ Mount the external USB drive.
+
+#+begin_example sh
+  cd /home
+  rm -rf alarm
+#+end_example
+
+Edit ~/etc/fstab~ to reflect the desired mounts. The external drive has a ~LABEL~ (set using ~e2label~).
+
+#+begin_example
+
+** snapcast
+
+
+** etckeeper
+
+I have my old ~/etc/~ configuration from which I've been copying settings but I wasn't ready to
+
+* New things
+
+** incron
+
+I find [[id:48249b0d-eeba-484a-8f00-808a14169692][Git etckeeper]] very useful for keeping the ~/etc~ directory backed up, but when I manually edited files I had to
+remember to add them to the commit history. Whilst reading around for this restore I found there is the [[https://wiki.archlinux.org/title/Etckeeper#Incron][~incron~]]
+programme which will use ~inotify~ to monitor files and make commits when there are changes.
+
+* Links
+
+** Arch Linux ARM
+
++ [[https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4][Raspberry Pi 4]]
