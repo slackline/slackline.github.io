@@ -165,12 +165,14 @@ help with that. An excellent resource is the [[https://r-pkgs.org/][R Packages b
 under [[id:f8e9d58f-e729-483a-b008-489cd30f0f6a][R Packages]].
 
 
-* ~renv~
+* R Virtual Environments
 :PROPERTIES:
 :ID:       9396fd39-d62f-4359-8101-49423d449cb5
-:mtime:    20231222005051 20231205220407 20231023104105 20231023070045
+:mtime:    20251207212325 20231222005051 20231205220407 20231023104105 20231023070045
 :ctime:    20231023070045
 :END:
+
+** ~renv~
 
 Reproducible environments in R can be achieved using the [[https://rstudio.github.io/renv/articles/renv.html][renv]] package. In a project directory you should have an R
 session running and have loaded all necessary packages. You can then initialise ~renv~ using
@@ -193,6 +195,13 @@ be added.
   renv::settings$snapshot.type("all")
   renv::snapshot()
 #+end_src
+
+** rv
+
+[[https://a2-ai.github.io/rv-docs/][rv]] is a "/declarative package manager/" in the vein of the [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] package manager [[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][uv]]. Like ~uv~ it is written in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]]
+and uses the [[id:08b71419-a3fc-4c7e-8fb6-75f613e41315][Just]] scripting/build system for some of the building. I'm yet to use it but have hopes that it will be
+better than the ~renv~ experience which I find has many pain points (but that is likely down to me not using R that
+often these days).
 
 * Links
 
