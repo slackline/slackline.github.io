@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       83c232f7-5c20-476e-b942-2902a31f86e2
+:mtime:    20251207195636
+:ctime:    20251207195636
+:END:
+#+TITLE: Renewable Energy
+#+FILETAGS: :energy:renewable:solar:wind:
+
+
+* Links
+
+** Wind
+
++ [[https://winderful.uk/][Winderful.uk]] Visualising the UK's wind energy.
