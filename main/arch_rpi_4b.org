@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       742ab443-39f4-4cf6-a5ca-cb486578ad94
-:mtime:    20251207212421 20251207194725 20251207121232
+:mtime:    20251208213404 20251208202826 20251208175553 20251207212421 20251207194725 20251207121232
 :ctime:    20251207121232
 :END:
 #+TITLE: Arch Raspberry Pi 4b
@@ -45,6 +45,88 @@ ssh alarm@192.168.1.215
 
 At a basic level you now have a functioning system, but its not (yet) configured to do everything you want/need. In my
 case I'm restoring functionality from an old system.
+
+* USB Troubles
+
+Using the "latest" image built 2025-11-03 we see the following in ~dmesg~ for USB
+
+#+begin_example
+[root@alarmpi alarm]# dmesg | grep usb -i
+[    1.602053] usbcore: registered new interface driver usbfs
+[    1.602084] usbcore: registered new interface driver hub
+[    1.602114] usbcore: registered new device driver usb
+[    2.293631] usbcore: registered new interface driver lan78xx
+[    2.293662] usbcore: registered new interface driver smsc95xx
+[    2.403239] xhci_hcd 0000:01:00.0: new USB bus registered, assigned bus number 1
+[    2.405681] xhci_hcd 0000:01:00.0: new USB bus registered, assigned bus number 2
+[    2.405696] xhci_hcd 0000:01:00.0: Host supports USB 3.0 SuperSpeed
+[    2.405831] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.12
+[    2.405846] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.405857] usb usb1: Product: xHCI Host Controller
+[    2.405866] usb usb1: Manufacturer: Linux 6.12.56-1-rpi xhci-hcd
+[    2.405874] usb usb1: SerialNumber: 0000:01:00.0
+[    2.406153] hub 1-0:1.0: USB hub found
+[    2.406439] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.12
+[    2.406454] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.406465] usb usb2: Product: xHCI Host Controller
+[    2.406474] usb usb2: Manufacturer: Linux 6.12.56-1-rpi xhci-hcd
+[    2.406482] usb usb2: SerialNumber: 0000:01:00.0
+[    2.406698] hub 2-0:1.0: USB hub found
+[    2.407465] usbcore: registered new interface driver uas
+[    2.407505] usbcore: registered new interface driver usb-storage
+[    2.409442] usbcore: registered new interface driver usbhid
+[    2.409451] usbhid: USB HID core driver
+[    2.673172] usb 1-1: new high-speed USB device number 2 using xhci_hcd
+[    2.828450] usb 1-1: New USB device found, idVendor=2109, idProduct=3431, bcdDevice= 4.21
+[    2.828477] usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    2.828488] usb 1-1: Product: USB2.0 Hub
+[    2.830051] hub 1-1:1.0: USB hub found
+[    9.650413] usbcore: registered new interface driver brcmfmac
+#+end_example
+
+...and USB devices are detected and can be mounted.
+
+The packages that were upgraded were...
+
+#+begin_example
+[root@alarmpi alarm]# pacman -Syu
+:: Synchronizing package databases...
+ core is up to date
+ extra is up to date
+ alarm is up to date
+ aur is up to date
+:: Starting full system upgrade...
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (48) archlinux-keyring-20251116-1  bash-5.3.8-1  binutils-2.45.1-1  ca-certificates-mozilla-3.119-1  coreutils-9.9-1  curl-8.17.0-2  device-mapper-2.03.37-1  dhcpcd-10.3.0-1  e2fsprogs-1.47.3-2  gcc-libs-15.2.1+r301+gf24307422d1d-1  glib2-2.86.2-1  glibc-2.42+r33+gde1fe81f4714-1  gnutls-3.8.11-2
+              hwdata-0.401-1  iana-etc-20251114-1  icu-78.1-1  iproute2-6.18.0-1  libarchive-3.8.4-1  libbpf-1.6.2-1  libelf-0.194-1.1  libnftnl-1.3.1-1  libnghttp3-1.13.1-1  libnl-3.12.0-1  libsysprof-capture-49.0-1.1  libxcrypt-4.5.2-1  libxml2-2.15.1-4  linux-api-headers-6.17-1  linux-firmware-20251125-2
+              linux-firmware-amdgpu-20251125-2  linux-firmware-atheros-20251125-2  linux-firmware-broadcom-20251125-2
+linux-firmware-cirrus-20251125-2  linux-firmware-intel-20251125-2  linux-firmware-mediatek-20251125-2  linux-firmware-nvidia-20251125-2  linux-firmware-other-20251125-2
+              linux-firmware-radeon-20251125-2  linux-firmware-realtek-20251125-2  linux-firmware-whence-20251125-2  linux-rpi-6.12.60-1  mkinitcpio-40-2  nano-8.7-1  raspberrypi-bootloader-20251202-1  sqlite-3.51.1-1  systemd-258.2-2  systemd-libs-258.2-2  systemd-resolvconf-258.2-2  systemd-sysvcompat-258.2-2
+
+Total Installed Size:  1353.60 MiB
+Net Upgrade Size:        25.27 MiB
+#+end_example
+
+After rebooting USB devices are not detected and there are less modules loaded by the kernel
+
+#+begin_example
+[root@alarmpi alarm]# dmesg | grep usb -i
+[    1.602076] usbcore: registered new interface driver usbfs
+[    1.602104] usbcore: registered new interface driver hub
+[    1.602130] usbcore: registered new device driver usb
+[    2.363677] usbcore: registered new interface driver lan78xx
+[    2.363709] usbcore: registered new interface driver smsc95xx
+[    2.472639] xhci_hcd 0000:01:00.0: new USB bus registered, assigned bus number 1
+[   19.497567] xhci_hcd 0000:01:00.0: USB bus 1 deregistered
+[   19.498067] usbcore: registered new interface driver uas
+[   19.498098] usbcore: registered new interface driver usb-storage
+[   19.500023] usbcore: registered new interface driver usbhid
+[   19.500033] usbhid: USB HID core driver
+[   30.477898] usbcore: registered new interface driver brcmfmac
+#+end_example
+
 
 * Configuration
 
@@ -181,6 +263,7 @@ user4:x:1006:
 #+end_example
 
 Deliberately exclude the ~-m~ flag as we are restoring the ~/home/user~ directory.
+
 #+begin_example sh
   useradd -G users,wheel user
   passwd user
@@ -238,3 +321,8 @@ programme which will use ~inotify~ to monitor files and make commits when there 
 ** Arch Linux ARM
 
 + [[https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4][Raspberry Pi 4]]
++ [[https://github.com/archlinuxarm/][GitHub | Arch Linux ARM]]
+
+** USB xhci_hcd issues
+
++ [[https://archlinuxarm.org/forum/viewtopic.php?t=14734][Arch Linux ARM • View topic - No USB detected on Raspberry Pi 4 with aarch64]]

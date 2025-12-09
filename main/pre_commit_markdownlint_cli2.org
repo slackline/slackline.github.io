@@ -1,10 +1,11 @@
 :PROPERTIES:
 :ID:       8dbde866-810a-48e4-981f-2fcbc19ec5cf
-:mtime:    20251120130437 20231008074648
+:mtime:    20251209085706 20251120130437 20231008074648
 :ctime:    20231008074648
 :END:
 #+TITLE: Pre-commit Markdownlint-cli2
 #+FILETAGS :precommit:markdown:linting:lint:
+
 
 * Ignoring Files
 
@@ -21,9 +22,16 @@ Ignore directories of groups of files using globs by adding the ~ignores~ sectio
 
 ** Globally
 
-You can disable specific checks globally by adding them to
+You can disable specific checks globally by configuring them in ~.markdownlint-cli2.yaml~
 
 ** Locally
+
+Disable/enable blocks of code with
+
+#+begin_src markdown
+<!-- markdownlint-disable MD060 -->
+<!-- markdownlint-enable MD060 -->
+#+end_src
 
 You can also disable specific checks on a per-line basis by adding lines similar to the following to the end of the line
 you want to ignore (source [[https://discourse.gohugo.io/t/ignore-a-line-with-markdownlint/44269][Ignore a line with markdownlint - tips & tricks - HUGO]]).
@@ -32,7 +40,13 @@ you want to ignore (source [[https://discourse.gohugo.io/t/ignore-a-line-with-ma
 {{< mdl-disable "<!-- markdownlint-disable MD034 -->" >}}
 #+end_src
 
+* Alternatives
+
+As with many software these days there are people out there re-writing things in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]] and Markdownlint is no exception
+as there is [[id:254f1c27-9822-4211-a118-7ae1d21fe485][rumdl]].
+
 * Links
 
 + [[https://discourse.gohugo.io/t/ignore-a-line-with-markdownlint/44269][Ignore a line with markdownlint - tips & tricks - HUGO]]
 + [[https://github.com/DavidAnson/markdownlint/blob/v0.39.0/README.md#rules--aliases][Rules and Aliases]]
++ [[https://github.com/DavidAnson/markdownlint/blob/v0.40.0/README.md#configuration][Configuration]]
