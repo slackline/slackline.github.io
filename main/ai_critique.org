@@ -75,7 +75,7 @@
 + [[https://www.youtube.com/watch?v=BFU1OCkhBwo][AI Expert: We Have 2 Years Before Everything Changes! We Need To Start Protesting! - Tristan Harris - YouTube]]
 + [[https://www.youtube.com/watch?v=giT0ytynSqg][Godfather of AI: They Keep Silencing Me But I’m Trying to Warn Them!]]
 
-** One Learning
+** On Learning
 
 + [[https://datavizf25.classes.andrewheiss.com/news/2025-12-10_faqs_week-15.html][Andrew Heiss Data Visualisation with R FAQs]] - has a great overview of why you need to learn to code before you can use
   "generative AI" as a tool to help you code.
