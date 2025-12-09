@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       d6f39d51-9291-4452-9b8d-7be46cb5d5e7
+:mtime:    20251209091737
+:ctime:    20251209091737
+:END:
+#+TITLE: Phone WebServer
+#+FILETAGS: :linux:postmarketos:webserver:
+
+* Links
+
++ [[https://far.computer/how-to/][farphone]]

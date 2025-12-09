@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       2c46e54a-d704-4e7e-bca3-d8c3e042ab43
-:mtime:    20251118230153 20250916101951 20250613002059 20250505215608 20250208110958 20241021184849 20241020132022 20240930074837 20240620095958 20240228094314 20231015172236
+:mtime:    20251209091739 20251118230153 20250916101951 20250613002059 20250505215608 20250208110958 20241021184849 20241020132022 20240930074837 20240620095958 20240228094314 20231015172236
 :ctime:    20231015172236
 :END:
 #+TITLE: Android
@@ -38,6 +38,11 @@ Stuff about using adb.
 
 An alternative system to the default is [[https://unifiedpush.org/][UnifiedPush]] and the [[https://github.com/binwiederhier/ntfy-android][ntfy]] app.
 
+* Old Phones
+
+Old phones still have value, they are inexpensive and cheap (you already own them).
+
++ [[id:d6f39d51-9291-4452-9b8d-7be46cb5d5e7][Phone as a Web Server]]
 
 * Links
 
