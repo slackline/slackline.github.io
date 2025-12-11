@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       742ab443-39f4-4cf6-a5ca-cb486578ad94
-:mtime:    20251211003606 20251208213404 20251208202826 20251208175553 20251207212421 20251207194725 20251207121232
+:mtime:    20251211094111 20251211003606 20251208213404 20251208202826 20251208175553 20251207212421 20251207194725 20251207121232
 :ctime:    20251207121232
 :END:
 #+TITLE: Arch Raspberry Pi 4b
@@ -19,6 +19,40 @@ periodically update should the in-use one ever die.
 
 As such I already had a list of explicitly installed packages available via Pacman from the existing system (which
 thankfully still booted at least!). I also had my configuration backed up using [[id:48249b0d-eeba-484a-8f00-808a14169692][~etckeeper~]].
+
+* Existing System
+
+** Installed Packages
+
+Extract a list of explicitly installed packages using the following which removes the package version and leaves a plain
+list of the packages to be installed which is piped to a file
+
+#+begin_example sh
+pacman -Qe | awk -F" " '{print $1}' > /home/user/tmp/pacman-Qe
+#+end_example
+
+This includes packages that have been installed from [[id:fb505adf-5df0-4d6e-a7b1-9853044653c5][AUR]] which will have to be handled separately. Typically I keep
+these under ~~/aur/~ so it was possible for me to easily edit this. I found out [[https://unix.stackexchange.com/a/297876][afterwards]] you can use the ~-n~ flag to
+get just native packages so really you should use...
+
+#+begin_example sh
+pacman -Qen | awk -F" " '{print $1}' > /home/user/tmp/pacman-Qen
+#+end_example
+
+
+** Backup ~/etc~
+
+Make sure ~/etc~ is up-to-date and backed up.
+
+#+begin_example sh
+su
+cd /etc
+etckeeper commit
+git push
+#+end_example
+
+Shutdown and switch microSD cards to the new system, boot the new microSD and use [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] to connect to the device over
+ethernet.
 
 
 * Install
@@ -132,100 +166,6 @@ After rebooting USB devices are not detected and there are less modules loaded b
 
 The first few steps were undertaken on the existing system to make it easy to install/upgrade/configure the new system
 
-** Existing System
-
-*** Installed Packages
-
-Extract a list of explicitly installed packages using the following which removes the package version and leaves a plain
-list of the packages to be installed which is piped to a file
-
-#+begin_example sh
-pacman -Qe | awk -F" " '{print $1}' > /home/user/tmp/pacman-Qe
-#+end_example
-
-This includes packages that have been installed from [[id:fb505adf-5df0-4d6e-a7b1-9853044653c5][AUR]] which will have to be handled separately. Typically I keep
-these under ~~/aur/~ so it was possible for me to easily edit this. I found out [[https://unix.stackexchange.com/a/297876][afterwards]] you can use the ~-n~ flag to
-get just native packages so really you should use...
-
-#+begin_example sh
-pacman -Qen | awk -F" " '{print $1}' > /home/user/tmp/pacman-Qen
-#+end_example
-
-
-*** Backup ~/etc~
-
-Make sure ~/etc~ is up-to-date and backed up.
-
-#+begin_example sh
-su
-cd /etc
-etckeeper commit
-git push
-#+end_example
-
-Shutdown and switch microSD cards to the new system, boot the new microSD and use [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] to connect to the device over
-ethernet.
-
-*** Mount old filesystems
-
-As I've a bunch of configuration files I want to use to setup the new system and an existing ~/home~ partition I wish to
-migrate I needed to mount the old file system. I used a simple SD-card to USB adapter to plug the old card in it was
-automatically detected and I could mount and ~chroot~ to it.
-
-#+begin_example sh
-su
-mkdir /mnt/old
-mount /dev/sdb2 /mnt/old
-mount /dev/sdb1 /mnt/old/boot
-mount /dev/sdb3 /mnt/old/home
-arch-chroot /mnt/old
-#+end_example
-
-This allows me to perform actions under my old system if needed, but the files are also accessible to be copied to the
-new system.
-
-** Change ~root~ password
-
-Change the ~root~ password to something only you know.
-
-#+begin_example sh
-su
-passwd
-#+end_example
-
-*NB* From this point forward it is assumed commands are carried out as ~root~ unless otherwise explicitly stated.
-
-*** Copy ~root~ home directory from old system
-
-I have some custom [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] aliases, custom ~$PS1~ and some other configuration files and scripts on my old system under the
-~root~ accounts home directory so I wanted to copy these over. Pretty straight-forward once the drives are mounted.
-
-#+begin_example sh
-cd /root/
-rsync -av /mnt/old/root/.* .
-rsync -av /mnt/old/root/* .
-source ~/.bashrc
-#+end_example
-
-
-** Mount the new ~/home~ partition
-
-I split the ~/~ (root) and ~home~ partitions on the new drive but it did not know about the new system so I needed to
-sort that out by mounting it, copying the old ~/home~ over and the current ~/home~ (which contains the basic ~alarm~
-account details).
-
-#+begin_example sh
-mkdir -p /mnt/new/home
-mount /dev/mmcblk0p3 /mnt/new/home
-#+end_example
-
-As with ~root~ home directory we can now ~rsync~ the old to the new. I had a few user accounts setup for friends so this
-copies their home directories over too (see below on restoring their accounts).
-
-#+begin_example sh
-cd /mnt/new/home
-rsync -av /mnt/old/home/* /mnt/new/home/.
-#+end_example
 
 ** Upgrade
 
@@ -283,14 +223,100 @@ Net Upgrade Size:       18.30 MiB
 At this point I rebooted the system to ensure I could still detect the USB hub that allows peripherals to be plugged in
 and detected such as my external USB drive and the microSD adapter from which I was going to restore packages from.
 
+Success, upgraded essential packages and USB devices were still detected and could be mounted.
+
+** Change ~root~ password
+
+Change the ~root~ password to something only you know.
+
+#+begin_example sh
+su
+passwd
+#+end_example
+
+*NB* From this point forward it is assumed commands are carried out as ~root~ unless otherwise explicitly stated.
+
+
+
+** Install essential tools
+
+Whilst I intended to restore all packages installed from the old system a couple of essentials were installed first. As I
+didn't sit down and do this all in one go I installed ~tmux~ and ~kitty~ so I could have a persistent session and
+~rsync~ for copying files between the old and new system and ~arch-install-scripts~ which include ~arch-chroot~ so I
+could ~chroot~ to the old install and poke around if needed
+
+#+being_example sh
+pacman -Syu tmux kitty rsync arch-chroot
+#+end_example
+
+** Mount old filesystems
+
+As I've a bunch of configuration files I want to use to setup the new system and an existing ~/home~ partition I wish to
+migrate I needed to mount the old file system. I used a simple SD-card to USB adapter to plug the old card in it was
+automatically detected and I could mount and ~chroot~ to it.
+
+#+begin_example sh
+su
+mkdir /mnt/old
+mount /dev/sdb2 /mnt/old
+mount /dev/sdb1 /mnt/old/boot
+mount /dev/sdb3 /mnt/old/home
+arch-chroot /mnt/old
+#+end_example
+
+This allows me to perform actions under my old system if needed, but the files are also accessible to be copied to the
+new system.
+
+*** Copy ~root~ home directory from old system
+
+I have some custom [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] aliases, custom ~$PS1~ and some other configuration files and scripts on my old system under the
+~root~ accounts home directory so I wanted to copy these over. Pretty straight-forward once the drives are mounted.
+
+#+begin_example sh
+cd /root/
+rsync -av /mnt/old/root/.* .
+rsync -av /mnt/old/root/* .
+source ~/.bashrc
+#+end_example
+
+
+** Mount the new ~/home~ partition
+
+I split the ~/~ (root) and ~home~ partitions on the new drive but it did not know about the new system so I needed to
+sort that out by mounting it, copying the old ~/home~ over and the current ~/home~ (which contains the basic ~alarm~
+account details).
+
+#+begin_example sh
+mkdir -p /mnt/new/home
+mount /dev/mmcblk0p3 /mnt/new/home
+#+end_example
+
+As with ~root~ home directory we can now ~rsync~ the old to the new. I had a few user accounts setup for friends so this
+copies their home directories over too (see below on restoring their accounts).
+
+#+begin_example sh
+cd /mnt/new/home
+rsync -av /mnt/old/home/* /mnt/new/home/.
+#+end_example
+
+
 ** Install packages from old system
 
 We saved the old packages that were explicitly installed to what is now ~/mnt/old/home/user/tmp/pacman-Qen~ and can use
-this to install all these packages on the new system.
+this to install all these packages on the new system. Because I have masked ~linux*~ and ~raspberrypi-bootloader~
+packages I explicitly removed these from the file before using it to install packages on the new system.
+
+
 
 #+begin_example sh
 pacman -Syu - < /mnt/old/home/user/tmp/pacman-Qen
 #+end_example
+
+This upgraded 601 packages which I left to run. ~calibre~ was skipped due to unresolved dependencies, but for now I
+wasn't too bothered as they've introduced "[[id:e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5][Artificial Intelligence]]" and I'd
+rather not be spied on or contribute to these pernicious systems.
+
+*** AUR packages
 
 If you only use ~pacman -Qe~ to get a list of explicitly installed packages and didn't restrict to native packages then
 you may want to first edit this file and move all entries to packages that were installed from AUR to a separate file so
@@ -298,7 +324,12 @@ you have a record. If you don't ~pacman~ will complain that there is no such pac
 move it over (I found my ~~/aur~ directory wasn't a complete  representation of everything I had installed from AUR so
 had a few packages to move over).
 
-This will likely want to install several hundred packages and will take a little while to download and install.
+You could get a diff of what packages are installed via AUR using something like
+
+#+being_example sh
+diff $(pacman -Qe) $(pacman -Qen)
+#+end_example
+
 
 ** Setup user accounts
 
