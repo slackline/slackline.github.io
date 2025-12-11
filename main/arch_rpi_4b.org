@@ -316,6 +316,16 @@ This upgraded 601 packages which I left to run. ~calibre~ was skipped due to unr
 wasn't too bothered as they've introduced "[[id:e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5][Artificial Intelligence]]" and I'd
 rather not be spied on or contribute to these pernicious systems.
 
+*** Extra Installs
+
+Needed/decided to install a few extra packages base don recommendations.
+
+#+begin_example
+pacman -Syu zsh-lovers mugshot cups sane hddtemp python-pylint flake8 python-pyflakes python-pydocstyle ipython
+postgresql-old-upgrade just rustfmt shfmt prettier fzf
+# pacman -Syu yt-dlp-ejs
+#+end_example
+
 *** AUR packages
 
 If you only use ~pacman -Qe~ to get a list of explicitly installed packages and didn't restrict to native packages then
@@ -365,9 +375,9 @@ opted to manually recreate the user accounts using the flag/parameter ~-u ####~ 
 the olda ccount. I deferred setting the passwords until a later point for these users.
 
 #+begin_example sh
-useradd -u 1002 -G users,wheel user2
-useradd -u 1003 -G users,wheel user3
-useradd -u 1006 -G users,wheel user4
+useradd -u 1002 -G users user2
+useradd -u 1003 -G users user3
+useradd -u 1006 -G users user4
 #+end_example
 
 ** ~/etc/fstab~
@@ -387,12 +397,18 @@ Edit ~/etc/fstab~ to reflect the desired mounts. The external drive has a ~LABEL
 
 #+begin_example
 
-** snapcast
+** [[id:83df78ca-e349-418f-ab71-b7735c16d027][MPD]]
+
+** [[id:7c341a0b-a59b-403e-a574-061d326c4c50][snapcast]]
 
 
-** etckeeper
+** [[id:48249b0d-eeba-484a-8f00-808a14169692][etckeeper]]
 
 I have my old ~/etc/~ configuration from which I've been copying settings but I wasn't ready to
+
+** [[id:be393585-6c62-4ce9-9fba-15e4d1c472cb][SyncThing]]
+
+** [[id:3774439d-af75-453e-b3e9-9d578b6bec46][Nginx]]
 
 * New things
 
