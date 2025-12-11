@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       be393585-6c62-4ce9-9fba-15e4d1c472cb
+:mtime:    20251211094047
+:ctime:    20251211094047
+:END:
+#+TITLE: SyncThing
+#+FILETAGS: :linux:foss:sync:privacy:
+
+SyncThing is a great tool for keeping files in sync between multiple devices.
+
+* Links
+
++ [[https://syncthing.net/][Syncthing]]
++ [[https://docs.syncthing.net/][Welcome to Syncthing’s documentation! — Syncthing documentation]]
++ [[https://github.com/researchxxl/syncthing-android/][SyncThing Fork]] and Android client
+
+** Alternatives
+
++ [[https://sync-in.com/][Sync-in · The open-source platform that keeps your data safe]]
