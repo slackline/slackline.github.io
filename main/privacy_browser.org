@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       899eb7a6-22d6-493a-a67f-b05bd89917d0
-:mtime:    20251205094419 20251109091653 20251031210041 20250624075947 20240716154936
+:mtime:    20251212222746 20251205094419 20251109091653 20251031210041 20250624075947 20240716154936
 :ctime:    20240716154936
 :END:
 #+TITLE: Browsing Privacy
@@ -64,3 +64,4 @@ each language it's pretty fast and efficient.
 + [[https://dl.acm.org/doi/10.1145/3696410.3714548][The First Early Evidence of the Use of Browser Fingerprinting for Online Tracking | Proceedings of the ACM on Web Conference 2025]]
 + [[https://blog.rebeltechalliance.org/know-your-enemy-pt-1-google/][Know Your Enemy Part 1 - Google]]
 + [[https://blog.rebeltechalliance.org/know-your-enemy-pt-2-meta/][Know Your Enemy Part 2 - Meta]]
++ [[https://www.peekmyip.com/p/anonymizing-networks.html][Self-Contained Anonymizing Network: Private, Secure Communication System | PeekMyIP]]
