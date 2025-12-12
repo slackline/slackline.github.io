@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       55221bf0-8873-436e-9ba2-423b6d40c1f2
+:mtime:    20251211235021
+:ctime:    20251211235021
+:END:
+#+TITLE: Emacs Shell
+#+FILETAGS: :emacs:shell:
+
+There are lots of terminal/shell emulators available such as [[id:4668a662-27ab-4015-aaa0-6e356b6bc165][Emacs vterm]].
+
+* Run Shell commands
+
+You can run shell commands with ~M-x shell-command~ (bound to ~M-!~ by default). You can also insert the results of the
+shell command at the current point using ~C-u M-!~, magic!
