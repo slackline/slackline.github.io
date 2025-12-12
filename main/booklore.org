@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6bc1142d-44aa-450c-b1a1-fa1ff32e0f83
+:mtime:    20251211234000
+:ctime:    20251211234000
+:END:
+#+TITLE: Booklore
+#+FILETAGS: :linux:foss:selfhosted:
+
+[[https://github.com/booklore-app/booklore][Booklore]] is a self-hosted ebook manager.

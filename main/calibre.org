@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       62ce92c8-2493-4e7f-b32a-196535c42886
-:mtime:    20241124171006
+:mtime:    20251211233818 20241124171006
 :ctime:    20241124171006
 :END:
 #+TITLE: Calibre
@@ -71,3 +71,7 @@ WantedBy=multi-user.target
 
 + [[https://manual.calibre-ebook.com/][Manual]]
 + [[https://linuxconfig.org/how-to-remotely-access-your-ebooks-library-with-calibre-server][How to remotely access your ebooks library with Calibre server - LinuxConfig]]
+
+** Alternatives
+
++ [[https://github.com/booklore-app/booklore][Booklore]]
