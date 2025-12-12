@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       742ab443-39f4-4cf6-a5ca-cb486578ad94
-:mtime:    20251211094111 20251211003606 20251208213404 20251208202826 20251208175553 20251207212421 20251207194725 20251207121232
+:mtime:    20251212223257 20251212195343 20251212103425 20251211094111 20251211003606 20251208213404 20251208202826 20251208175553 20251207212421 20251207194725 20251207121232
 :ctime:    20251207121232
 :END:
 #+TITLE: Arch Raspberry Pi 4b
@@ -380,6 +380,20 @@ useradd -u 1003 -G users user3
 useradd -u 1006 -G users user4
 #+end_example
 
+*** sudo
+
+Edit ~/etc/sudoers~ to allow all members of the ~wheel~ group (in this guide only one account has been added to the
+group) so that [[https://aur.archlinux.org/][AUR]] packages can be installed
+
+#+begin_example conf
+##
+## User privilege specification
+##
+root ALL=(ALL:ALL) ALL
+## Uncomment to allow members of group wheel to execute any command
+%wheel ALL=(ALL:ALL) ALL
+#+end_example
+
 ** ~/etc/fstab~
 
 I needed to...
@@ -396,11 +410,282 @@ I needed to...
 Edit ~/etc/fstab~ to reflect the desired mounts. The external drive has a ~LABEL~ (set using ~e2label~).
 
 #+begin_example
+#+end_example
+
+** ALSA
+
+Made two sets of changes to set the default soundcard to the IQAduioDAC I have based on suggestions [[https://superuser.com/questions/626606/how-to-make-alsa-pick-a-preferred-sound-device-automatically][here]]
+
+#+begin_example
+aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: vc4hdmi0 [vc4-hdmi-0], device 0: MAI PCM i2s-hifi-0 [MAI PCM i2s-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 1: vc4hdmi1 [vc4-hdmi-1], device 0: MAI PCM i2s-hifi-0 [MAI PCM i2s-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 2: IQaudIODAC [IQaudIODAC], device 0: IQaudIO DAC HiFi pcm512x-hifi-0 [IQaudIO DAC HiFi pcm512x-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+#+end_example
+
+*** /etc/modprobe.d/alsa-base.conf
+
+#+begin_example
+options vc4 enable=1 index=0
+options vc4 enable=0 index=1
+options snd_soc_iqaudio_dac=-2
+#+end_example
+
+*** /etc/asound.conf
+
+#+begin_example
+pcm.!default {
+    type hw
+    card 2 # IQaudIODAC
+}
+ctl.!default {
+    type hw
+    card 2 # IQaudIODAC
+}
+pcm.dsp {
+    type plug
+    slave.pcm "dmix"
+}
+#+end_example
+
 
 ** [[id:83df78ca-e349-418f-ab71-b7735c16d027][MPD]]
 
+I found I had to create the log file and change permissions
+
+#+begin_example
+touch /var/log/mpd.log
+chown mpd:mpd /var/log/mpd.log
+#+end_example
+
+I copied my old configuration over and ~mpd~ started without any problems
+
+#+begin_example
+systemctl enable --now mpd.service
+systemctl status mpd.service
+* mpd.service - Music Player Daemon
+     Loaded: loaded (/usr/lib/systemd/system/mpd.service; enabled; preset: disabled)
+    Drop-In: /usr/lib/systemd/system/mpd.service.d
+             `-00-arch.conf
+     Active: active (running) since Fri 2025-12-12 19:28:28 UTC; 3h 1min ago
+ Invocation: 40e76482e91f48e38a1607f6b6832d13
+TriggeredBy: * mpd.socket
+       Docs: man:mpd(1)
+             man:mpd.conf(5)
+   Main PID: 435 (mpd)
+      Tasks: 7 (limit: 4915)
+        CPU: 15min 30.370s
+     CGroup: /system.slice/mpd.service
+             `-435 /usr/bin/mpd --systemd
+
+Dec 12 19:27:07 alarmpi systemd[1]: Starting Music Player Daemon...
+Dec 12 19:27:10 alarmpi mpd[435]: Ignoring the 'pid_file' setting in systemd mode
+Dec 12 19:28:28 alarmpi systemd[1]: Started Music Player Daemon.
+#+end_example
+
+
 ** [[id:7c341a0b-a59b-403e-a574-061d326c4c50][snapcast]]
 
+I use [[https://github.com/snapcast/snapcast][Snapcast]] to provide multi-room synchronised audio around my home. Input comes from ~mpd~ and the Pi4 acts as both
+a server and client (I have an iQaudio DAC connected which is plugged into an Onkyo amplifier).
+
+There is a ~PKGBUILD~ on [[https://aur.archlinux.org/packages/snapcast][AUR]] but compiling on the Pi4 required some tweaks (which I had made in the [[https://aur.archlinux.org/packages/snapcast#comment-1015464][past]]).
+
+Edit ~/etc/makepkg.conf~ and add to ~CFLAGS~ the option ~-mno-omit-leaf-frame-pointer~, this left me with the following
+options...
+
+#+begin_example conf
+CFLAGS="-march=armv7-a -mfloat-abi=hard -mfpu=neon -O2 -pipe -fstack-protector-strong -fno-plt -fexceptions \
+        -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security \
+        -fstack-clash-protection \
+        -fno-omit-frame-pointer"
+#+end_example
+
+You can then clone the repository if you haven't already and install. If you have already cloned and tried building you
+will have to remove the ~src~ directory.
+
+#+begin_example
+git clone ssh://aur@aur.archlinux.org/snapcast.git
+cd snapcast
+rm -rf src
+makepkg -sri
+#+end_example
+
+You should make sure your user account is in the ~wheel~ group and you have enabled ~sudo~ for all members.
+
+*** ~snapserver~
+
+Enable the Snapcast server
+
+#+begin_example
+systemctl enable --now snapserver.service
+#+end_example
+
+*** ~snapclient~
+
+Initially this was failing
+
+#+begin_example
+systemctl start snapclient.service
+journalctl -xeu snapclient.service
+...
+-- The job identifier is 4372.
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Snapclient) No server URL given, defaulting to 'tcp://_snapcast._tcp'
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Snapclient) Version 0.34.0
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Avahi) (Browser) NEW: service 'Snapcast' of type '_snapcast._tcp' in domain 'local'
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Avahi) (Browser) NEW: service 'Snapcast' of type '_snapcast._tcp' in domain 'local'
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Avahi) (Browser) CACHE_EXHAUSTED
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Avahi) Service 'Snapcast' of type '_snapcast._tcp' in domain 'local':
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Avahi)         alarmpi.local:1704 (192.168.1.28)
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Controller) Found server 192.168.1.28:1704
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Connection) Resolving host IP for: 192.168.1.28
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Connection) Connecting to host: 192.168.1.28:1704, port: 1704, protocol: tcp
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Connection) Connected to 192.168.1.28
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Connection) My MAC: "dc:a6:32:c4:71:b9", socket: 9
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Controller) ServerSettings - buffer: 1000, latency: 0, volume: 100, muted: 0
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Controller) Codec: flac, sampleformat: 48000:16:2
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Player) Player name: alsa, device: default, description: Default Audio Device, idx: 1, sharing mode: unspecified, parameters: <none>
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Player) Mixer mode: software, parameters: <none>
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Player) Sampleformat: 48000:16:2, stream: 48000:16:2
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Alsa) Using default buffer_time: 80 ms, default fragments: 4
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Alsa) Exception: Can't open default, error: Unknown error 524, code: -524
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Snapclient) Exception: Can't open default, error: Unknown error 524
+Dec 12 18:27:00 alarmpi snapclient[26820]: (Snapclient) Snapclient terminated.
+Dec 12 18:27:00 alarmpi systemd[1]: snapclient.service: Main process exited, code=exited, status=1/FAILURE
+#+end_example
+
+This is because by default ~/etc/default/snapclient~ has no values for the environment variables ~$SNAPCLIENT_OPTS~
+which are used by the ~systemd~ unit defined in ~/etc/systemd/system/multi-user.target.wants/snapclient.service~
+
+#+begin_example
+─────┬────────────────────────────────────────────────────────────────────────────────
+     │ File: systemd/system/multi-user.target.wants/snapclient.service
+─────┼────────────────────────────────────────────────────────────────────────────────
+   1 │ [Unit]
+   2 │ Description=Snapcast client
+   3 │ Documentation=man:snapclient(1)
+   4 │ Wants=avahi-daemon.service
+   5 │ After=network-online.target time-sync.target sound.target avahi-daemon.service
+   6 │
+   7 │ [Service]
+   8 │ EnvironmentFile=-/etc/default/snapclient
+   9 │ ExecStart=/usr/bin/snapclient --logsink=system $SNAPCLIENT_OPTS
+  10 │ User=snapclient
+  11 │ Group=snapclient
+  12 │ Restart=on-failure
+  13 │
+  14 │ [Install]
+  15 │ WantedBy=multi-user.target
+─────┴────────────────────────────────────────────────────────────────────────────────
+#+end_example
+
+Referring to my old install and ~snapclient --help~ you cand find out what devices are available using ~snapclient -l~
+
+#+begin_example
+snapclient -l
+0: null
+Discard all samples (playback) or generate zero samples (capture)
+
+1: sysdefault
+Default Audio Device
+
+2: pipewire
+PipeWire Sound Server
+
+3: sysdefault:CARD=vc4hdmi0
+vc4-hdmi-0, MAI PCM i2s-hifi-0
+Default Audio Device
+
+4: hdmi:CARD=vc4hdmi0,DEV=0
+vc4-hdmi-0, MAI PCM i2s-hifi-0
+HDMI Audio Output
+
+5: sysdefault:CARD=vc4hdmi1
+vc4-hdmi-1, MAI PCM i2s-hifi-0
+Default Audio Device
+
+6: hdmi:CARD=vc4hdmi1,DEV=0
+vc4-hdmi-1, MAI PCM i2s-hifi-0
+HDMI Audio Output
+
+7: sysdefault:CARD=IQaudIODAC
+IQaudIODAC, IQaudIO DAC HiFi pcm512x-hifi-0
+Default Audio Device
+#+end_example
+
+It was then a case of setting the default soundcard in the ~SNAPCLIENT_OPTS~ that are defined in
+~/etc/default/snapclient~ (since these will be read when the ~systemd~ unit starts given the above configuration) and to
+then enable the server and client permanently.
+
+#+begin_example
+# Start the client, used only by the init.d script
+START_SNAPCLIENT=true
+# Additional command line options that will be passed to snapclient
+# note that user/group should be configured in the init.d script or the systemd unit file
+# For a list of available options, invoke "snapclient --help"
+SNAPCLIENT_OPTS="--user snapclient:audio -h 192.168.1.28 -p 1704 -s 7"
+#+end_example
+
+*** Enable services
+
+Enable both the ~snapserver~ and ~snapclient~ service
+
+#+begin_example
+systemctl enable --now snapserver.service
+systemctl status snapserver.service
+ * snapserver.service - Snapcast server
+     Loaded: loaded (/usr/lib/systemd/system/snapserver.service; enabled; preset: disabled)
+     Active: active (running) since Fri 2025-12-12 22:32:11 UTC; 1s ago
+  Invocation: 380fcec66dd74e8b93fd9f05f8d93cb5
+       Docs: man:snapserver(1)
+   Main PID: 1352 (snapserver)
+      Tasks: 5 (limit: 4915)
+        CPU: 177ms
+     CGroup: /system.slice/snapserver.service
+             `-1352 /usr/bin/snapserver --logging.sink=system --server.datadir=/var/lib/snapserver
+
+Dec 12 22:32:12 alarmpi snapserver[1352]: (StreamServer) StreamServer::NewConnection: ::ffff:192.168.1.45
+Dec 12 22:32:12 alarmpi snapserver[1352]: (Server) Hello from 38:d5:47:e0:16:1f, host: kimura, v0.31.0, ClientName: Snapclient, OS: Gentoo Linux, Arch: x86_64, Protocol version: 2, Auth: {"param":"","scheme":""}
+Dec 12 22:32:12 alarmpi snapserver[1352]: (Server) Hello from dc:a6:32:c4:71:b9, host: alarmpi, v0.34.0, ClientName: Snapclient, OS: Arch Linux ARM, Arch: armv7l, Protocol version: 2, Auth: {"param":"","scheme":""}
+Dec 12 22:32:12 alarmpi snapserver[1352]: (StreamServer) StreamServer::NewConnection: ::ffff:192.168.1.27
+Dec 12 22:32:12 alarmpi snapserver[1352]: (StreamServer) StreamServer::NewConnection: ::ffff:192.168.1.26
+Dec 12 22:32:12 alarmpi snapserver[1352]: (StreamServer) StreamServer::NewConnection: ::ffff:192.168.1.23
+Dec 12 22:32:12 alarmpi snapserver[1352]: (Server) Hello from b8:27:eb:5b:5a:eb, host: alarmpi7, v0.20.0, ClientName: Snapclient, OS: Arch Linux ARM, Arch: armv6l, Protocol version: 2, Auth: {"param":"","scheme":""}
+Dec 12 22:32:12 alarmpi snapserver[1352]: (Server) Hello from b8:27:eb:51:0a:32, host: alarmpi6, v0.20.0, ClientName: Snapclient, OS: Arch Linux ARM, Arch: armv6l, Protocol version: 2, Auth: {"param":"","scheme":""}
+Dec 12 22:32:12 alarmpi snapserver[1352]: (Server) Hello from b8:27:eb:37:92:37, host: alarmpi3, v0.20.0, ClientName: Snapclient, OS: Arch Linux ARM, Arch: armv6l, Protocol version: 2, Auth: {"param":"","scheme":""}
+Dec 12 22:32:12 alarmpi snapserver[1352]: (Avahi) Service 'Snapcast' successfully established.
+systemctl enable --now snapclient.service
+ * snapserver.service - Snapcast server
+     Loaded: loaded (/usr/lib/systemd/system/snapserver.service; enabled; preset: disabled)
+     Active: active (running) since Fri 2025-12-12 22:32:11 UTC; 1s ago
+  Invocation: 380fcec66dd74e8b93fd9f05f8d93cb5
+       Docs: man:snapserver(1)
+   Main PID: 1352 (snapserver)
+      Tasks: 5 (limit: 4915)
+        CPU: 177ms
+     CGroup: /system.slice/snapserver.service
+             `-1352 /usr/bin/snapserver --logging.sink=system --server.datadir=/var/lib/snapserver
+
+Dec 12 22:32:12 alarmpi snapserver[1352]: (StreamServer) StreamServer::NewConnection: ::ffff:192.168.1.45
+Dec 12 22:32:12 alarmpi snapserver[1352]: (Server) Hello from 38:d5:47:e0:16:1f, host: kimura, v0.31.0, ClientName: Snapclient, OS: Gentoo Linux, Arch: x86_64, Protocol version: 2, Auth: {"param":"","scheme":""}
+Dec 12 22:32:12 alarmpi snapserver[1352]: (Server) Hello from dc:a6:32:c4:71:b9, host: alarmpi, v0.34.0, ClientName: Snapclient, OS: Arch Linux ARM, Arch: armv7l, Protocol version: 2, Auth: {"param":"","scheme":""}
+Dec 12 22:32:12 alarmpi snapserver[1352]: (StreamServer) StreamServer::NewConnection: ::ffff:192.168.1.27
+Dec 12 22:32:12 alarmpi snapserver[1352]: (StreamServer) StreamServer::NewConnection: ::ffff:192.168.1.26
+Dec 12 22:32:12 alarmpi snapserver[1352]: (StreamServer) StreamServer::NewConnection: ::ffff:192.168.1.23
+Dec 12 22:32:12 alarmpi snapserver[1352]: (Server) Hello from b8:27:eb:5b:5a:eb, host: alarmpi7, v0.20.0, ClientName: Snapclient, OS: Arch Linux ARM, Arch: armv6l, Protocol version: 2, Auth: {"param":"","scheme":""}
+Dec 12 22:32:12 alarmpi snapserver[1352]: (Server) Hello from b8:27:eb:51:0a:32, host: alarmpi6, v0.20.0, ClientName: Snapclient, OS: Arch Linux ARM, Arch: armv6l, Protocol version: 2, Auth: {"param":"","scheme":""}
+Dec 12 22:32:12 alarmpi snapserver[1352]: (Server) Hello from b8:27:eb:37:92:37, host: alarmpi3, v0.20.0, ClientName: Snapclient, OS: Arch Linux ARM, Arch: armv6l, Protocol version: 2, Auth: {"param":"","scheme":""}
+Dec 12 22:32:12 alarmpi snapserver[1352]: (Avahi) Service 'Snapcast' successfully established.
+#+end_example
+
+The service now starts and I get audio from the attached amp and on all other devices around my house 🔊🎶
 
 ** [[id:48249b0d-eeba-484a-8f00-808a14169692][etckeeper]]
 
