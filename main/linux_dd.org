@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       9384a236-065e-4384-9b90-2a083736eb17
+:mtime:    20251213074700
+:ctime:    20251213074700
+:END:
+#+TITLE: dd
+#+FILETAGS: :linux:dd:disk:backup:
+
+The ~dd~ command allows you to easily copy one drive to another.
+
+If you have a drive, detected as ~/dev/sde~ that you want to back up to ~/dev/sdf~ then, after making sure none of the
+partitions are mounted (and if they are using) simply run...
+#+begin_example
+dd if=/dev/sde of=/dev/sdf
+#+end_example
+
+* Options
+
+** ~bs~ block size
+
+This specifies the size of blocks to write in one go. ~bs=4M~ is a decent option that will speed up the process.
+
+** ~status~
+
+The ~status~ argument will show progress.
+
+
+#+begin_example
+dd if=/dev/sde of=/dev/sdf bs=4M status=progress
+#+end_example
