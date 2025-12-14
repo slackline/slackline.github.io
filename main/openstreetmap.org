@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a5f391b-0f61-48d8-a4c3-a204d55538de
-:mtime:    20251115113033 20251114170600 20251014074636 20250508132648 20250324091338 20241209102640 20241006212915 20240828121857 20231220115205 20231126082848 20230530082045 20230528222034
+:mtime:    20251214125441 20251115113033 20251114170600 20251014074636 20250508132648 20250324091338 20241209102640 20241006212915 20240828121857 20231220115205 20231126082848 20230530082045 20230528222034
 :ctime:    20230528222034
 :END:
 #+TITLE: OpenStreetMap
@@ -8,20 +8,15 @@
 
 [[https://openstreetmap.org][OpenStreetMap]] is an amazing free, open source resource.
 
-* Bicycle Router (BRouter)
-[[http://brouter.de/brouter/][BRouter]] ([[https://brouter.de/brouter-web/][Web Interface]]) is a dedicated routing engine for cyclists, its a little clunky to install and get it working with [[https://osmand.net][OSMAnd+]]
-but the [[http://brouter.de/brouter/offline.html][offline routing instructions]] help. Once you've installed the [[https://f-droid.org/en/packages/btools.routingapp/][BRouter Application]] start it up, you will be asked
-where to store data and after following a few prompts will be presented with a world map, zoom in and select the areas
-you wish to have routing for. These will be downloaded and stored in the selected location.
 
-You then need to configure OSMAnd+, go to ~Settings > Cycling > Navigation Settings > Navigation Type~ and select
-~BRouter (offline)~. That's it when you choose to find a route for cycling it should use BRouter.
+* Tools
 
-* Privacy
++ [[id:c18c15ac-594c-47e7-a9de-d924f025b073][Overpass-turbo]]
++ [[id:40abbff4-be5b-4620-9c83-745f8f21948f][BRouter]]
 
-OSMAnd uses telematics to keep track of some aspects, this is enabled when you [[https://fosstodon.org/@ai6yr@m.ai6yr.org/114215691886378067][download maps]]. They us it to "/monitor fair
-usage, predict traffic patterns and generate anonymous monthly map reports/". To disable it go to /Settings > OsmAnd
-Settings > Identifiers/ and toggle the option.
+** Android
+
++ StreetComplete
 
 * Beat The Street
 

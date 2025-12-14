@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       2ebb1b61-c8f9-43ec-bfa3-c99eae77a503
+:mtime:    20251214125145
+:ctime:    20251214125145
+:END:
+#+TITLE: OSMAnd
+#+FILETAGS: :foss:osm:android:
+
+[[https://osmand.net][OpenStreetMap Advanced Navigation Device (OSMAnd)]] is a mobile interface to [[id:0a5f391b-0f61-48d8-a4c3-a204d55538de][OpenStreetMap]]
+
+* Privacy
+
+OSMAnd uses telematics to keep track of some aspects, this is enabled when you [[https://fosstodon.org/@ai6yr@m.ai6yr.org/114215691886378067][download maps]]. They use it to "/monitor
+fair usage, predict traffic patterns and generate anonymous monthly map reports/". To disable it go to /Settings > OsmAnd
+Settings > Identifiers/ and toggle the option.
+
+* Links
+
++ [[https://osmand.net][OSMAnd]]

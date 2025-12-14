@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       c18c15ac-594c-47e7-a9de-d924f025b073
+:mtime:    20251214124832
+:ctime:    20251214124832
+:END:
+#+TITLE: Overpass Turbo
+#+FILETAGS: :osm:opensource:mapping:data:
+
+[[https://overpass-turbo.eu/][Overpass-turbo]] is a tool for querying features in the [[id:0a5f391b-0f61-48d8-a4c3-a204d55538de][OpenStreetMap]] database. It's blazingly fast.
+
+* Examples
+
+
+* Links
+
++ [[https://overpass-turbo.eu/][Overpass-turbo]]

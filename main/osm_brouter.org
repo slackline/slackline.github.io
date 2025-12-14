@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       40abbff4-be5b-4620-9c83-745f8f21948f
+:mtime:    20251214125329
+:ctime:    20251214125329
+:END:
+#+TITLE: Brouter
+#+FILETAGS: :osm:mapping:routing:cycling:gps:
+
+[[http://brouter.de/brouter/][BRouter]] ([[https://brouter.de/brouter-web/][Web Interface]]) is a dedicated routing engine for cyclists, its a little clunky to install and get it working with [[https://osmand.net][OSMAnd+]]
+but the [[http://brouter.de/brouter/offline.html][offline routing instructions]] help.
+
+* OSMAnd
+
+Once you've installed the [[https://f-droid.org/en/packages/btools.routingapp/][BRouter Application]] start it up, you will be asked where to store data and after following a
+few prompts will be presented with a world map, zoom in and select the areas you wish to have routing for. These will be
+downloaded and stored in the selected location.
+
+You then need to configure OSMAnd+, go to ~Settings > Cycling > Navigation Settings > Navigation Type~ and select
+~BRouter (offline)~. That's it when you choose to find a route for cycling it should use BRouter.
+
+* Links
+
++ [[https://brouter.de/brouter/][BRouter]]
++ [[https://brouter.de/brouter-web/#map=5/50.990/9.860/standard][BRouter web-interface]]
