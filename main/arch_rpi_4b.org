@@ -296,7 +296,7 @@ copies their home directories over too (see below on restoring their accounts).
 
 #+begin_example sh
 cd /mnt/new/home
-rsync -av /mnt/old/home/* /mnt/new/home/.
+rsync -av /mnt/old/home/* /mnt/new/home/. --exclude=".cache"
 #+end_example
 
 
@@ -306,10 +306,8 @@ We saved the old packages that were explicitly installed to what is now ~/mnt/ol
 this to install all these packages on the new system. Because I have masked ~linux*~ and ~raspberrypi-bootloader~
 packages I explicitly removed these from the file before using it to install packages on the new system.
 
-
-
 #+begin_example sh
-pacman -Syu - < /mnt/old/home/user/tmp/pacman-Qen
+  pacman -Syu - < /mnt/old/home/user/tmp/pacman-Qen
 #+end_example
 
 This upgraded 601 packages which I left to run. ~calibre~ was skipped due to unresolved dependencies, but for now I
