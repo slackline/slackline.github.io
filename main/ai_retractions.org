@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       95952efd-b152-4d2b-9323-fabaada84fc3
+:mtime:    20251215104033
+:ctime:    20251215104033
+:END:
+#+TITLE: AI Retractions
+#+FILETAGS: :ai:retractions:lies:
+
+* Specific
+
+** [[https://www.thetimes.com/uk/science/article/ai-ethics-guide-citations-nsnjmz25b][Publisher under fire after ‘fake’ citations found in AI ethics guide]] ([[https://www.removepaywall.com/search?url=https://www.thetimes.com/uk/science/article/ai-ethics-guide-citations-nsnjmz25b][alternative]])
+
+The book offending book is [[https://link.springer.com/book/10.1007/978-3-031-87252-5][Social, Ethical and Legal Aspects of Generative AI]].
+
++ Two chapters have footnotes that cite publications that don't exist
++ One chapter had 11 citations, of which 8 could not be verified.
++ The first chapter has 21 citations of which 11 didn't match academic papers.
+
+** [[https://retractionwatch.com/2025/08/04/springer-nature-retracts-book-fake-citations-help-us-find-more/][Springer Nature retracts book with fake citations. Help us find more cases like this. – Retraction Watch]]
