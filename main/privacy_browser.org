@@ -1,13 +1,19 @@
 :PROPERTIES:
 :ID:       899eb7a6-22d6-493a-a67f-b05bd89917d0
+<<<<<<< Updated upstream
 :mtime:    20251212222746 20251205094419 20251109091653 20251031210041 20250624075947 20240716154936
+||||||| Stash base
+:mtime:    20251205094419 20251109091653 20251031210041 20250624075947 20240716154936
+=======
+:mtime:    20251215104153 20251205094419 20251109091653 20251031210041 20250624075947 20240716154936
+>>>>>>> Stashed changes
 :ctime:    20240716154936
 :END:
 #+TITLE: Browsing Privacy
 #+FILETAGS: :privacy:browser:firefox:
 
 
-* Librefwolf
+* Librewolf
 Using the modified [[https://librewolf.net/][Librewolf]] (based on Firefox) is a good option to minimise tracking by default. It is worth reading
 their [[https://librewolf.net/docs/settings/][settings]] documentation on how to enable/disable certain features.
 
@@ -58,6 +64,17 @@ You can disable Firefox's Facebook data collection by following the instructions
 You can use Firefox/LibreWolf to translate text/URLs by heading to ~about:translations~. Its slow the first time as
 presumably its downloading something in the background to do the translation, but after that initial translation for
 each language it's pretty fast and efficient.
+
+* Online Safety Act
+
+This poorly thought out legislation is full of problems
+
+** Including VPNs
+
+A recent proposal amendment to include VPN service providers is also poorly thought out.
+
++ [[https://decoded.legal/blog/2025/12/a-proposed-legislative-amendment-to-attempt-to-compel-vpn-services-providers-to-prevent-anyone-under-18-in-the-uk-from-using-their-vpns/][A proposed legislative amendment to attempt to compel VPN services providers to prevent anyone under 18 in the UK from
+  using their VPNs]]
 
 * Links
 
