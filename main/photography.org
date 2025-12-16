@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5253f936-28e2-416c-8541-6081c1ac4f0c
-:mtime:    20250317072302 20240715081115 20240701052946 20240630202230 20240617091334 20240511204735 20240511084447
+:mtime:    20251214110433 20250317072302 20240715081115 20240701052946 20240630202230 20240617091334 20240511204735 20240511084447
 :ctime:    20240511084447
 :END:
 #+TITLE: Photography
@@ -40,3 +40,8 @@ which seems like a great idea as in the future when I'm dead I won't care if peo
 
 Not so much a hosting service /per se/ but a place where you can give away your pictures for others to use. Not really
 investigated much but presumably you can access your own photos after uploading them!
+
+** Ente
+
+A privacy respecting photo back-up service. [[https://ente.io][Ente]] provides 10GB of end-to-end encrypted hosting for free. Beyond that you
+have to take out one of their paid plans. Theses are quite expensive compared to Flickr.
