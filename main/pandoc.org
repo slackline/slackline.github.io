@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       8af3e4ee-799b-4016-9fa9-995f3a9c7c5b
+:mtime:    20251216091903
+:ctime:    20251216091903
+:END:
+#+TITLE: Pandoc
+#+FILETAGS: :linux:docs:conversion:
+
+[[https://pandoc.org][Pandoc]] is an amazing, versatile tool for convert documents from one format to another, it supports hundreds of formats
+and should be the goto tool to use.
+
+* Usage
+
+Often ~pandoc~ will automatically detect format of input files but you can explicitly include ~-f~ (from) and naturally
+specify the output type ~-t~ (to).
+
+#+begin_example
+pandoc -f md -t html README.md
+#+end_example
+
+* Other Tools
+
+** texi2*
+
+It seems one of the formats that isn't supported by Pandoc is ~.texi~ (Tex Info). In this case you can use ~texi2any~
+(or ~texi2pdf~ / ~texi2dvi~ depending on need) to convert to other formats. HTML can be a good choice as Pandoc can
+handle that.
+
+#+begin_example
+texi2any --html --no-split elispelem.texi && pandoc -f html -t epub elispelem.html
+#+end_example
+
+* Links
+
++ [[https://pandoc.org][Pandoc]]
