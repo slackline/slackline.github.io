@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       62ce92c8-2493-4e7f-b32a-196535c42886
-:mtime:    20251211233818 20241124171006
+:mtime:    20251216201412 20251211233818 20241124171006
 :ctime:    20241124171006
 :END:
 #+TITLE: Calibre
@@ -66,6 +66,13 @@ v/calibre/privatekey.pem /srv/calibre/library
 WantedBy=multi-user.target
 #+end_src
 
+
+* Introduction of AI
+
+Version 8.16.0 introduced "AI" for recommendations and all the other bullshit that [[id:e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5][Artificial Intelligence]] purports to
+solve.
+
+Rather quickly a hard fork arose [[id:a98e03a4-cb0d-4b35-bcdf-c6fcc6356304][rereading]].
 
 * Links
 
