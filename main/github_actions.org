@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e19b6eb6-46b2-440a-ba35-be29feb33407
-:mtime:    20250616135420 20250602185038 20250528075937 20241011150440 20241001110834 20240905150013 20240221074022 20240128232536 20240127115829 20231015151623 20230318204943 20230103103313 20221216215027
+:mtime:    20251213213321 20250616135420 20250602185038 20250528075937 20241011150440 20241001110834 20240905150013 20240221074022 20240128232536 20240127115829 20231015151623 20230318204943 20230103103313 20221216215027
 :ctime:    20221216215027
 :END:
 #+TITLE: GitHub Actions
@@ -35,6 +35,42 @@ anything to GitHub.
 * Publishing to PyPI
 
 It is possible to use a GitHub Action to automate [[id:83206ac1-1108-4151-ad24-f3654b650dd6][publishing to PyPI from GitHub]].
+
+* Commits from GitHub Actions
+
+You can make commits from GitHub Actions using [[https://github.com/stefanzweifel/git-auto-commit-action][stefanzweifel/git-auto-commit-action]]. Very useful [[https://michaelheap.com/git-auto-commit/][article]] sensibly
+suggests using ~commit-options~ to amend existing commits.
+
+#+begin_example yaml
+name: Update BibTeX references
+
+on:
+  merge:
+    branch:
+      - main
+    paths:
+      - "README.md"
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Update references.bib
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+    run:
+      ./doi2bibtex
+
+    name: Commit changes and push
+    with:
+      commit_message: "update: DOI changes to README.md, references.bib updated"
+      file_pattern: references.bib
+      commit_options:
+        - --amend
+        - --no-edit
+#+end_example
 
 * Tips and Tricks
 
