@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       742ab443-39f4-4cf6-a5ca-cb486578ad94
-:mtime:    20251212223257 20251212195343 20251212103425 20251211094111 20251211003606 20251208213404 20251208202826 20251208175553 20251207212421 20251207194725 20251207121232
+:mtime:    20251214125445 20251213182206 20251212223257 20251212195343 20251212103425 20251211094111 20251211003606 20251208213404 20251208202826 20251208175553 20251207212421 20251207194725 20251207121232
 :ctime:    20251207121232
 :END:
 #+TITLE: Arch Raspberry Pi 4b
@@ -236,7 +236,9 @@ passwd
 
 *NB* From this point forward it is assumed commands are carried out as ~root~ unless otherwise explicitly stated.
 
+** Set ~$HOSTNAME~
 
+Edit ~/etc/hostname~ to reflect the desired hostname.
 
 ** Install essential tools
 
@@ -316,7 +318,8 @@ rather not be spied on or contribute to these pernicious systems.
 
 *** Extra Installs
 
-Needed/decided to install a few extra packages base don recommendations.
+Needed/decided to install a few extra packages based on recommendations during this install for various packages that I
+hadn't used previously.
 
 #+begin_example
 pacman -Syu zsh-lovers mugshot cups sane hddtemp python-pylint flake8 python-pyflakes python-pydocstyle ipython
@@ -338,6 +341,17 @@ You could get a diff of what packages are installed via AUR using something like
 diff $(pacman -Qe) $(pacman -Qen)
 #+end_example
 
+*** Paru
+
+[[id:fb505adf-5df0-4d6e-a7b1-9853044653c5][Arch AUR]] has a number of different helper packages to manage such user installs, my preference is for [[https://github.com/morganamilo/paru][Paru]].
+
+#+begin-example sh
+sudo pacman -S --needed base-devel
+cd && mkdir aur && cd aur
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -sri
+#+end-example
 
 ** Setup user accounts
 
@@ -408,7 +422,14 @@ I needed to...
 Edit ~/etc/fstab~ to reflect the desired mounts. The external drive has a ~LABEL~ (set using ~e2label~).
 
 #+begin_example
+# Static information about the filesystems.
+# See fstab(5) for details.
+# <file system> <dir> <type> <options> <dump> <pass>
+/dev/mmcblk0p1  /boot   vfat    defaults        0       0
+/dev/mmcblk0p3  /home   ext4    defaults        0       0
+LABEL=5tb-backup /mnt/usb ext4  auto,nofail,x-systemd.automount,users 0 0
 #+end_example
+
 
 ** ALSA
 
@@ -454,7 +475,29 @@ pcm.dsp {
 #+end_example
 
 
-** [[id:83df78ca-e349-418f-ab71-b7735c16d027][MPD]]
+** Reboot
+
+Reboot the device.
+
+*** User account tweaks
+
+**** ZSH shell
+
+I should probably have done this when creating my ~user~ account but instead opted to change it after logging in.
+
+#+begin_example
+chsh -s /bin/zsh neil
+#+end_example
+
+**** ~direnv~
+
+I use [[id:a4af96d2-f895-4a68-9419-d482d2850f4d][Direnv]] in many directories to automatically set the environment variables. If you do too then you may have to use
+~direnv allow~ when entering each of these.
+
+
+** Streaming Audio Setup
+
+*** [[id:83df78ca-e349-418f-ab71-b7735c16d027][MPD]]
 
 I found I had to create the log file and change permissions
 
@@ -468,7 +511,7 @@ I copied my old configuration over and ~mpd~ started without any problems
 #+begin_example
 systemctl enable --now mpd.service
 systemctl status mpd.service
-* mpd.service - Music Player Daemon
+ * mpd.service - Music Player Daemon
      Loaded: loaded (/usr/lib/systemd/system/mpd.service; enabled; preset: disabled)
     Drop-In: /usr/lib/systemd/system/mpd.service.d
              `-00-arch.conf
@@ -489,7 +532,7 @@ Dec 12 19:28:28 alarmpi systemd[1]: Started Music Player Daemon.
 #+end_example
 
 
-** [[id:7c341a0b-a59b-403e-a574-061d326c4c50][snapcast]]
+*** [[id:7c341a0b-a59b-403e-a574-061d326c4c50][snapcast]]
 
 I use [[https://github.com/snapcast/snapcast][Snapcast]] to provide multi-room synchronised audio around my home. Input comes from ~mpd~ and the Pi4 acts as both
 a server and client (I have an iQaudio DAC connected which is plugged into an Onkyo amplifier).
@@ -518,7 +561,7 @@ makepkg -sri
 
 You should make sure your user account is in the ~wheel~ group and you have enabled ~sudo~ for all members.
 
-*** ~snapserver~
+**** ~snapserver~
 
 Enable the Snapcast server
 
@@ -526,7 +569,7 @@ Enable the Snapcast server
 systemctl enable --now snapserver.service
 #+end_example
 
-*** ~snapclient~
+**** ~snapclient~
 
 Initially this was failing
 
@@ -631,7 +674,7 @@ START_SNAPCLIENT=true
 SNAPCLIENT_OPTS="--user snapclient:audio -h 192.168.1.28 -p 1704 -s 7"
 #+end_example
 
-*** Enable services
+**** Enable services
 
 Enable both the ~snapserver~ and ~snapclient~ service
 
@@ -685,13 +728,17 @@ Dec 12 22:32:12 alarmpi snapserver[1352]: (Avahi) Service 'Snapcast' successfull
 
 The service now starts and I get audio from the attached amp and on all other devices around my house 🔊🎶
 
-** [[id:48249b0d-eeba-484a-8f00-808a14169692][etckeeper]]
+** Further Setup/Configuration
+
+*** [[id:48249b0d-eeba-484a-8f00-808a14169692][etckeeper]]
 
 I have my old ~/etc/~ configuration from which I've been copying settings but I wasn't ready to
 
-** [[id:be393585-6c62-4ce9-9fba-15e4d1c472cb][SyncThing]]
+*** [[id:be393585-6c62-4ce9-9fba-15e4d1c472cb][SyncThing]]
 
-** [[id:3774439d-af75-453e-b3e9-9d578b6bec46][Nginx]]
+*** Nextcloud
+
+*** [[id:3774439d-af75-453e-b3e9-9d578b6bec46][Nginx]]
 
 * New things
 
