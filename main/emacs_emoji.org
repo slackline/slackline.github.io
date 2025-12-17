@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       acf58426-f472-462b-abeb-e18142c25f61
+:mtime:    20251217185114
+:ctime:    20251217185114
+:END:
+#+TITLE: Emacs Emoji
+#+FILETAGS: :emacs:emoji:
+
+* Key-bindings
+
+| Chord       | Action              |
+|-------------+---------------------|
+| ~C-x 8 e e~ | Transient to select |
+| ~C-x 8 e l~ | List emojis         |
+| ~C-x 8 e s~ | Search              |
+| ~C-x 8 e r~ | Recent              |
