@@ -296,8 +296,11 @@ found useful.
 
 *** Linting  
 
-+ [[https://flint.etiennebacher.com/][Find and Fix Lints in R Code • flint]]
++ [[https://flir.etiennebacher.com/][Find and Fix Lints in R Code • flir]] Fix Lints In R and R package that uses Abstract Syntax Trees to parse and fix
+  linting errors (think [[id:3070e6ed-1788-44ff-8498-8af6c84f588f][Emacs Tree-Sitter]])
 + [[https://lintr.r-lib.org/][A Linter for R Code • lintr]]
++ [[https://jarl.etiennebacher.com/][Jarl – jarl]] Just Another R Linter written in Rust very fast and corrects errors unlike ~lintr~ and is faster than
+  ~flir~ (although its from the same author).
 
 ** Learning Resources
 
