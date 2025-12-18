@@ -1,0 +1,46 @@
+:PROPERTIES:
+:ID:       a0215a32-68db-4534-ac62-b7105bd1c375
+:mtime:    20251218150148
+:ctime:    20251218150148
+:END:
+#+TITLE: NumpyDoc Validation
+#+FILETAGS: :linting:numpy:python:
+
+[[https://numpydoc.readthedocs.io/en/latest/install.html][Numpydoc]] is a popular docstring style used in Scientific Python and it has its own set of [[https://numpydoc.readthedocs.io/en/latest/validation.html][Validation rules]].
+
+* Usage
+ Using a [[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] hook is a great way to check your docstrings.
+
+#+begin_example yaml
+  - repo: https://github.com/numpy/numpydoc
+    rev: v1.9.0
+    hooks:
+      - id: numpydoc-validation
+        exclude: "notebooks/"
+#+end_example
+
+* Configuration
+
+#+begin_example toml
+[tool.numpydoc_validation]
+checks = [
+  "all", # Perform all check except those listed below
+  "ES01",
+  "EX01",
+  "PR10", # Conflicts with black formatting
+  "SA01",
+]
+exclude = [  # don't report on objects that match any of these regex
+    "\\.undocumented_method$",
+    "\\.__repr__$",
+    "^test_",
+    "^conftest",
+    "^conf$",
+    "^notebooks/*.py$"
+]
+override_SS05 = [  # override SS05 to allow docstrings starting with these words
+    "^Process ",
+    "^Assess ",
+    "^Access ",
+]
+#+end_example

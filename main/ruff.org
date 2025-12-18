@@ -1,0 +1,153 @@
+:PROPERTIES:
+:ID:       8d773d4d-79be-4555-871a-9de738f598a8
+:mtime:    20251218145820
+:ctime:    20251218145820
+:END:
+#+TITLE: Ruff
+#+FILETAGS: :python:rust:linting:
+
+[[https://docs.astral.sh/ruff][Ruff]] is a [[id:481dbeae-d953-48e4-8842-2b2ac0dc0198][Python Linter]] written in Rust that is very fast. It covers many of the rules of Black, Flake8, NumpyDoc
+Validation and increasingly Pylint.
+
+* Usage
+
+** Emacs
+
+You can use [[id:a29a1e50-3cf2-4d88-a71d-7c600fdf8f65][Emacs LSP]] to have Ruff analyse and make suggestions to your code on the fly.
+
+** Pre-commit
+
+[[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] hooks are also available for Ruff
+
+#+begin_example yaml
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.13.3
+    hooks:
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix, --show-fixes]
+#+end_example
+
+* Configuration
+
+You can configure ~ruff~ from a packages ~pyproject.toml~ here is an example that I commonly use.
+
+#+begin_example toml
+[tool.ruff]
+exclude = [
+  "*.ipynb",
+  ".bzr",
+  ".direnv",
+  ".eggs",
+  ".git",
+  ".hg",
+  ".mypy_cache",
+  ".nox",
+  ".pants.d",
+  ".pytype",
+  ".ruff_cache",
+  ".svn",
+  ".tox",
+  ".venv",
+  "__pycache__",
+  "__pypackages__",
+  "_build",
+  "buck-out",
+  "build",
+  "dist",
+  "docs/conf.py",
+  "node_modules",
+  "notebooks/*.py",
+  "tests/tracing/test_dnacurvature.py",
+  "topostats/plotting.py",
+  "topostats/tracing/tracingfuncs.py",
+  "venv",
+]
+# per-file-ignores = []
+line-length = 120
+[tool.ruff.lint]
+select = [
+  "A", # flake8-builtins
+  "B", # flake8-bugbear
+  "C", #
+  "D", # pydocstyle
+  "E", # pycodestyle error
+  "F",
+  "I", # isort
+  "NPY", # numpy
+  "PT", # flake8-pytest-style
+  "PTH", # flake8-use-pathlib
+  "R",
+  "S", #flake8-bandit
+  "W", # pycodestyle warning
+  "U",
+  "UP", # pyupgrade
+]
+ignore = [
+  "A005",
+  "B905",
+  "E501",
+  "S101",
+  "S403",
+]
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = [
+  "A", # flake8-builtins
+  "B", # flake8-bugbear
+  "C", #
+  "D", # pydocstyle
+  "E", # pycodestyle error
+  "F",
+  "I", # isort
+  "NPY", # numpy
+  "PT", # flake8-pytest-style
+  "PTH", # flake8-use-pathlib
+  "R",
+  "S", #flake8-bandit
+  "W", # pycodestyle warning
+  "U",
+  "UP", # pyupgrade
+]
+unfixable = []
+# Numpy2 deprecation checks
+extend-select = ["NPY201"]
+preview = false
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"
+[tool.ruff.lint.isort]
+case-sensitive = true
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = true
+[tool.codespell]
+skip = '*.spm*,*.mplstyle,*.svg,*.stp,*.top,*.002,*.004'
+count = ''
+quiet-level = 3
+ignore-words-list = 'OT'
+#+end_example
+
+** Disabling checks
+
+Sometimes you want to explicitly disable checks, this can be done globally by modifying the options in ~pyproject.toml~
+(see above example) or on a per file, function or line basis.
+
+** Block level
+
+#+begin_example
+# ruff: disable[C901]
+<code>
+# ruff: enable[C901]
+#+end_example
+
+** Per line
+
+#+begin_example
+import abc # noqa: C901
+#+end_example
+
+These can be combined with ~pylint~ disables.
+
+#+begin_example
+import abc # noqa: C901  # pylint: disable=line-too-long
+#+end_example

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5b5d1562-ecb4-4199-b530-e7993723e112
-:mtime:    20251201155528 20251102213012 20251016113327 20250929193855 20250924130532 20250923222338 20250916164535 20250815152208 20250804153837 20250718115153 20250717134358 20250626103057 20250426132845 20250423155214 20250326081635 20250309194805 20250215072345 20250111154615 20250106230256 20241226064425 20241219151025 20240901212833 20240331215356 20240330205231 20240320112820 20240316204619 20240302204640 20240216104914 20240215130939 20240209145556 20240126111110 20240121114423 20240111095218 20231231094423 20231203135526 20231128102207 20231116235015 20231105150910 20231105073358 20231103170452 20231024144239 20231002122344 20230920154939 20230915180115 20230911192604 20230623214025 20230616161729 20230526200945 20230520211006 20230319231255 20230224095542 20230223120221 20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
+:mtime:    20251218144926 20251201155528 20251102213012 20251016113327 20250929193855 20250924130532 20250923222338 20250916164535 20250815152208 20250804153837 20250718115153 20250717134358 20250626103057 20250426132845 20250423155214 20250326081635 20250309194805 20250215072345 20250111154615 20250106230256 20241226064425 20241219151025 20240901212833 20240331215356 20240330205231 20240320112820 20240316204619 20240302204640 20240216104914 20240215130939 20240209145556 20240126111110 20240121114423 20240111095218 20231231094423 20231203135526 20231128102207 20231116235015 20231105150910 20231105073358 20231103170452 20231024144239 20231002122344 20230920154939 20230915180115 20230911192604 20230623214025 20230616161729 20230526200945 20230520211006 20230319231255 20230224095542 20230223120221 20230222142114 20230125155804 20230124164157 20230105135432 20230103175234 20230103103310 20221217185215 20230103103308
 :ctime:    20221217185215 20230103103308
 :END:
 #+TITLE: Python
@@ -23,6 +23,7 @@ end-of-life was [[https://endoflife.date/python][2010-07-03]]. There are of cour
 + [[id:7303cb84-7406-43ed-81d0-bbd3c4961faa][Decorators]]
 + [[id:77b1cbdc-5acc-43c6-a8b0-b65f3c8c07ac][Dunder]]
 + [[id:0712c10b-f242-4507-9947-254aebb67a35][Geographical Information Systems]]
++ [[id:481dbeae-d953-48e4-8842-2b2ac0dc0198][python_linting]] [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linting]]
 + [[id:dd7c615f-cd8b-426d-aec0-cfd3803437cc][Profiling]]
 + [[id:ba02ecdf-c35f-4deb-8308-28341922c096][Pydantic]]
 + [[id:bb57f65e-58f4-45de-9620-901dc998f6d6][Python Packaging]]
@@ -60,23 +61,6 @@ end-of-life was [[https://endoflife.date/python][2010-07-03]]. There are of cour
 
 + [[id:1d5dabde-6f1a-43cd-9b48-f7ca7235f802][PEP634 Structural Pattern Matching]]
 
-* Linting
-
-Linting is the process of following a specific coding style. This has many advantages in that it makes the code easier
-to read and understand and can remove duplication. For Python the original guide is [[https://peps.python.org/pep-0008/][PEP 8 – Style Guide for Python Code]]
-and there are various extensions such as [[https://www.python.org/dev/peps/pep-0484/][PEP 484 - Type Hints]] which expect type annotations to be applied. It can be
-challenging to remember all of the rules though and so there are linters which work with your Integrated Development
-Environment (IDE) to refactor your code on the fly applying the rules when saving a file so that code is consistently
-structured before it goes out to peer-review.
-
-+ [[https://pylint.org/][Pylint - code analysis for Python]]
-+ [[https://flake8.pycqa.org/en/latest/][Flake8: Your Tool For Style Guide Enforcement]]
-+ [[http://mypy-lang.org/][mypy - Optional Static Typing for Python]]
-+ [[https://black.readthedocs.io/en/stable/][Black - the uncomprimising code formatter]]
-
-
-You can also use the "AI" [[https://sourcery.ai/][Sourcery]] to "/Automatically Improve Python Code Quality/". For more on linting see [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linting]].
-
 * Typing
 
 Python is a "/dynamically typed language/" and this doesn't mean, as I first thought when I heard the term (having no
@@ -98,7 +82,7 @@ In Python there is the built-in [[https://docs.python.org/3/library/unittest.htm
 * Project Management
 
 [[https://hatch.pypa.io/latest/][Hatch]] is a modern, extensible Python project manager that standardises the build system, eases publishing to PyPI and
-helps with environment and version management.
+helps with environment and version management.  All the cool kids are using [[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][uv]] these days though.
 
 * Data Structures
 :PROPERTIES:

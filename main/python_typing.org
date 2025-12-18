@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3f19e1ef-e5c4-45f1-822f-8d4d834acdbd
-:mtime:    20251201155537 20251130190331 20250919201148 20250318092039 20250106221721 20241204135030 20231222190513 20231128102157
+:mtime:    20251218144923 20251201155537 20251130190331 20250919201148 20250318092039 20250106221721 20241204135030 20231222190513 20231128102157
 :ctime:    20231128102157
 :END:
 #+TITLE: Python Typing
@@ -8,7 +8,7 @@
 
 * MyPy
 
-MyPy is a static type checker.
+[[http://mypy-lang.org/][mypy]] is a static type checker.
 
 ** Configuration
 
@@ -36,7 +36,8 @@ ignore_missing_imports = true
 
 #+end_src
 
-* Ignoring Typing
+
+** Ignoring Typing
 
 ** Globally
 
@@ -57,6 +58,10 @@ If using shebang
 #+begin_src
 some = line(with, error)  # type:ignore[arg-type]
 #+end_src
+
+* ty
+
+[[https://docs.astral.sh/ty][ty]] is a Python typer analyse written in Rust from the authors of ruff. It is /very/ fast.
 
 
 * RightTyper

@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       481dbeae-d953-48e4-8842-2b2ac0dc0198
+:mtime:    20251218150221
+:ctime:    20251218150221
+:END:
+#+TITLE: Python Linting
+#+FILETAGS: :Python Linting:
+
+Linting is the process of following a specific coding style. This has many advantages in that it makes the code easier
+to read and understand and can remove duplication. For Python the original guide is [[https://peps.python.org/pep-0008/][PEP 8 – Style Guide for Python Code]]
+and there are various extensions such as [[https://www.python.org/dev/peps/pep-0484/][PEP 484 - Type Hints]] which expect type annotations to be applied. It can be
+challenging to remember all of the rules though and so there are linters which work with your Integrated Development
+Environment (IDE) to refactor your code on the fly applying the rules when saving a file so that code is consistently
+structured before it goes out to peer-review.
+
++ [[https://pylint.org/][Pylint - code analysis for Python]]
++ [[https://flake8.pycqa.org/en/latest/][Flake8: Your Tool For Style Guide Enforcement]]
++ [[https://black.readthedocs.io/en/stable/][Black - the uncomprimising code formatter]]
++ [[https://docs.astal.sh/ruff/][Ruff]]
+
+You can also use the "AI" [[https://sourcery.ai/][Sourcery]] to "/Automatically Improve Python Code Quality/". For more on linting see [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linting]].
+
+* Specifics
+
++ Black
++ Flake8
++ [[id:a0215a32-68db-4534-ac62-b7105bd1c375][NumpyDoc Validation]]
++ Pylint
++ [[id:8d773d4d-79be-4555-871a-9de738f598a8][Ruff]]
