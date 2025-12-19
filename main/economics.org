@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       06e11786-bbbe-42c1-8f97-dde66d8f844e
-:mtime:    20251127072610 20250407210226 20250118215127 20240518155014
+:mtime:    20251218103128 20251127072610 20250407210226 20250118215127 20240518155014
 :ctime:    20240518155014
 :END:
 #+TITLE: Economics
@@ -17,7 +17,16 @@ Read this interesting piece [[https://economicsfromthetopdown.com/2024/05/18/a-t
 
 + [[https://ukfoundations.co/][Foundations]] - an essay on the stagnation of the UK economy since 2004
 
+* [[https://www.wealtheconomics.org/][Gary's Economics]]
+
+Gary Stevenson who used to be a trader, advocates for taxing wealth not work. Has a [[https://www.youtube.com/c/GarysEconomics][YouTube Channel]] where he explains
+what happens in the economy.
+
 * Links
+
+** Articles
+
++ [[https://www.lrb.co.uk/the-paper/v46/n17/john-lanchester/for-every-winner-a-loser][John Lanchester · For Every Winner a Loser: What is finance for?]]
 
 ** Blogs
 
@@ -30,3 +39,5 @@ Read this interesting piece [[https://economicsfromthetopdown.com/2024/05/18/a-t
 ** Books
 
 + [[https://www.danielsusskind.com/growth-a-reckoning][Growth: A Reckoning — Daniel Susskind]]
++ Slowdown - Danny Dorling
++ The Trading Game: A Confession - Gary Stevenson
