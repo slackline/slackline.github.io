@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5253f936-28e2-416c-8541-6081c1ac4f0c
-:mtime:    20251214110433 20250317072302 20240715081115 20240701052946 20240630202230 20240617091334 20240511204735 20240511084447
+:mtime:    20251219073009 20251214110433 20250317072302 20240715081115 20240701052946 20240630202230 20240617091334 20240511204735 20240511084447
 :ctime:    20240511084447
 :END:
 #+TITLE: Photography
@@ -45,3 +45,7 @@ investigated much but presumably you can access your own photos after uploading 
 
 A privacy respecting photo back-up service. [[https://ente.io][Ente]] provides 10GB of end-to-end encrypted hosting for free. Beyond that you
 have to take out one of their paid plans. Theses are quite expensive compared to Flickr.
+
+** [[https://chronoframe.bh8.ga/][ChronoFrame]]
+
+Another self-hosted option, includes AWS S3 storage options.
