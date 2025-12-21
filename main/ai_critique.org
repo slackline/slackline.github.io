@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       7a9deb85-fb4d-4d18-b2be-ed8048a5a1d4
-:mtime:    20251212164349 20251209221415 20251207222435 20251204203141 20251201144706 20251127104739 20251119212412 20251110224905 20251021215858 20251019125817 20251019103346 20251015215254 20251001214818 20250904154736 20250815132742 20250805173615 20250724122628
+:mtime:    20251221203724 20251221193559 20251212164349 20251209221415 20251207222435 20251204203141 20251201144706 20251127104739 20251119212412 20251110224905 20251021215858 20251019125817 20251019103346 20251015215254 20251001214818 20250904154736 20250815132742 20250805173615 20250724122628
 :ctime:    20250724122628
 :END:
 #+TITLE: AI Critique
@@ -63,6 +63,7 @@
 + [[https://www.careful.industries/blog/2025-11-nine-risks-caused-by-ai-notetakers][Nine risks caused by AI notetakers — Careful Industries]]
 + [[https://www.nature.com/articles/s41586-025-09771-9][Persuading voters using human–artificial intelligence dialogues | Nature]]
 + [[https://www.science.org/doi/full/10.1126/science.aea3884][The levers of political persuasion with conversational artificial intelligence | Science]]
++ [[https://www.rollingstone.com/culture/culture-features/ai-chatbot-journal-research-fake-citations-1235485484/][AI Chatbots Are Poisoning Research Archives With Fake Citations]]
 
 ** Open Source
 
@@ -82,3 +83,10 @@
 + [[https://datavizf25.classes.andrewheiss.com/news/2025-12-10_faqs_week-15.html][Andrew Heiss Data Visualisation with R FAQs]] - has a great overview of why you need to learn to code before you can use
   "generative AI" as a tool to help you code.
 + [[https://skybert.net/aifail/dont-fear-the-pointer/][Don't Fear the Pointer | skybert.net]] - how the author didn't learn from the generative AI example.
+
+** Bias
+
++ [[https://www.sciencedirect.com/science/article/pii/S2666379125006007][Contrastive learning enhances fairness in pathology artificial intelligence systems - ScienceDirect]] ([[https://futurism.com/health-medicine/ai-cancer-diagnostic-bias][Doctors Catch
+  Cancer-Diagnosing AI Extracting Patients' Race Data and Being Racist With It]])
++ [[https://www.nature.com/articles/s41746-025-01746-4][Racial bias in AI-mediated psychiatric diagnosis and treatment: a qualitative comparison of four large language
+  models | npj Digital Medicine]]
