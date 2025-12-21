@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd
-:mtime:    20250808163339 20250328161643 20241222103302 20241216094907 20241215174459 20241122002308 20241017134853
+:mtime:    20251219213721 20250808163339 20250328161643 20241222103302 20241216094907 20241215174459 20241122002308 20241017134853
 :ctime:    20241017134853
 :END:
 #+TITLE: Python uv
@@ -8,14 +8,19 @@
 
 [[https://docs.astral.sh/uv/][uv]] is a [[id:bb57f65e-58f4-45de-9620-901dc998f6d6][Python Packaging]] tool written in Rust that manages creating a project, dependencies, building and publishing.
 
+* Install Python with ~uv~
+
+#+begin_example
+uv python install
+#+end_example
 * Creating a Project
 
 [[https://docs.astral.sh/uv/guides/projects/][Working on projects]] is a good place to start, you can either create a new project by name and the directory will be
 created, or do so within an existing working directory.
-#+begin_src bash
+#+begin_example bash
 cd some-project
 uv init
-#+end_src
+#+end_example
 
 **NB** It will not overwrite your ~README.md~ if you already have one in place.
 
@@ -28,13 +33,38 @@ environment is used when you are working on the project.
 Configuration of [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] packages is these days via ~pyproject.toml~ (see [[https://peps.python.org/pep-0621/][PEP0621]]) and uv uses the ~[tools.uv]~ section
 for its configuration.
 
+* Existing Projects
+
+To create a new virtual environment in an existing project in the ~.venv~ directory
+
+#+begin_example
+uv venv
+#+end_example
+
+You can install package dependencies from the ~pyproject.toml~ with
+
+#+begin_example
+uv pip install -e ".[dev,doc,test]"
+#+end_example
+
+
+* Working with ~direnv~
+
+[[id:a4af96d2-f895-4a68-9419-d482d2850f4d][Direnv]] is a useful way of automatically activating a given virtual environment for a directory via commands in a
+~.envrc~ file. Because ~uv~ creates the virtual environment within ~.venv~ (by default) you just need to add it as the
+~${VIRTUAL_ENV}~ variable as below. Remember to ~direnv allow~ the directory if you want it to be activated.
+
+#+begin_example
+export VIRTUAL_ENV=.venv
+export PATH=${VIRTUAL_ENV}/bin:${PATH}
+#+end_example
 * Tips and Tricks
 
 ** Using uv in scripts
 
 [[https://simonwillison.net/2024/Aug/21/usrbinenv-uv-run/][#!/usr/bin/env -S uv run]]
 
-#+begin_src
+#+begin_example
  !/usr/bin/env -S uv run
    # /// script
    # requires-python = ">=3.12"
@@ -44,13 +74,13 @@ for its configuration.
    # ///
    import flask
    # ...
-#+end_src
+#+end_example
 
 ** Running pytest
 
-#+begin_src
+#+begin_example
 uvx pytest
-#+end_src
+#+end_example
 
 * Related
 
@@ -59,12 +89,12 @@ uvx pytest
 [[https://github.com/owenlamont/uv-secure][uv-secure]] will scan your ~uv.lock~ file for dependencies with known vulnerabilities. There is a [[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] hook that can
 be enabled.
 
-#+begin_src yaml
+#+begin_example yaml
   - repo: https://github.com/owenlamont/uv-secure
     rev: 0.2.0
     hooks:
       - id: uv-secure
-#+end_src
+#+end_example
 
 * Links
 
