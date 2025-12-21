@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9384a236-065e-4384-9b90-2a083736eb17
-:mtime:    20251213074700
+:mtime:    20251221203727 20251213074700
 :ctime:    20251213074700
 :END:
 #+TITLE: dd
@@ -27,4 +27,12 @@ The ~status~ argument will show progress.
 
 #+begin_example
 dd if=/dev/sde of=/dev/sdf bs=4M status=progress
+#+end_example
+
+* ISO images
+
+You can use ~dd~ to copy ~.iso~ images to USB drives, just set the ~if~ to the path of the ~.iso~ image
+
+#+begin_example
+dd if=/home/user/tmp/xubuntu-25.10-desktop-amd64.iso of=/dev/sde bs=4M status=progress
 #+end_example
