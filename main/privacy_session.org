@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       cd5bb3a9-1e11-4856-baa0-09f81f501718
+:mtime:    20251222224552
+:ctime:    20251222224552
+:END:
+#+TITLE: Session
+#+FILETAGS: :privacy:e2ee:messaging:
+
+[[https://getsession.org/][Session]] is a decentralised end-to-end encrypted messaging service. Unlike [[id:06db84e0-bb77-4c56-8dec-c3506cfbc030][Signal]] it doesn't rely on a central server,
+instead messages are routed through "onion routers" similar to the  [[id:fa6ee84e-ad08-4d8e-a544-943ec864c9f9][Tor]] network which is secured via Session Tokens (a cryptocurrency).
+
+
+
+* Links
+
++ [[https://getsession.org/][Session | Send Messages, Not Metadata. | Private Messenger]]
