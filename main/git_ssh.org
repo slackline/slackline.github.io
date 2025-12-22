@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       0d80a79b-5901-4d27-a12f-783931a016d7
+:mtime:    20251222070449
+:ctime:    20251222070449
+:END:
+#+TITLE: Git SSH
+#+FILETAGS: :git:ssh:security:signing:
+
+Git forges uses [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] keys to authenticate when pushing code. They can also be used to sign commits as an alternative
+[[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] keys.
+
+* Links
+
++ [[https://dansjots.github.io/posts/per-repo-ssh-key/][Put SSH keys in .git to make repos USB-portable | Dan's Jots]]
+
+** Signing
+
++ [[https://migusgroup.com/blog/sign-git-commits-securely-with-vaulted-ssh-keys/][Sign Git Commits Securely With Vaulted SSH Keys]]
++ [[https://gittuf.github.io][gittuf]] provides a security layer for Git using some concepts introduced by [[https://theupdateframework.io/][The Update Framework (TUF)]].
