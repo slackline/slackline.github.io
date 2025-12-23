@@ -1,12 +1,12 @@
 :PROPERTIES:
 :ID:       c8170642-ba6a-4925-8aab-0c325383171c
-:mtime:    20251222070634
+:mtime:    20251222225802 20251222070634
 :ctime:    20251222070634
 :END:
 #+TITLE: Git Cleaning
 #+FILETAGS: :git:cleaning:secrets:
 
-Various tools and approaches to cleaning a repositories history. These can be used to removed items from the Git history
+Various tools and approaches to cleaning a repositories history. These can be used to removes items from the Git history
 if for example you have mistakenly included secrets or large files.
 
 * Finding Large Files

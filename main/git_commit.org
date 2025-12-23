@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       f4f7b185-7263-418d-bb53-e5280e2b9068
-:mtime:    20251208204145 20250423135552 20250304204632 20241025200654
+:mtime:    20251223100800 20251208204145 20250423135552 20250304204632 20241025200654
 :ctime:    20241025200654
 :END:
 #+TITLE: Git Commit
@@ -25,6 +25,15 @@ your repository.
 
 You'd be best of using the [[https://github.com/gitleaks/gitleaks#pre-commit][Pre-Commit]] hook to ensure you don't commit and push changes.
 
+* Conventions
+
+ [[https://www.conventionalcommits.org/en/v1.0.0/][Conventional Commits]] and [[https://conventionalcomments.org/][Conventional Comments]] are two frameworks to provide structure to commit comments (and
+ issues). They could be extended to [[id:d8720ab9-a43e-45e4-834e-e4c5ce4f4e43][Git Notes]] without much modification.
+
+** Commits
+
+** Comments
+
 * Links
 
 + [[https://www.conventionalcommits.org/en/v1.0.0/][Conventional Commits]]
@@ -36,3 +45,4 @@ You'd be best of using the [[https://github.com/gitleaks/gitleaks#pre-commit][Pr
 
 + [[https://github.com/gitleaks/gitleaks][Git Leaks]]
 + [[https://rtyley.github.io/bfg-repo-cleaner/][BFG Repo Cleaner]]
++ [[https://conventionalcomments.org/][Conventional Comments]]
