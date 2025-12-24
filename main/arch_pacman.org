@@ -1,0 +1,161 @@
+:PROPERTIES:
+:ID:       9bf2dfc3-ff49-49b2-8507-503f64649f7a
+:mtime:    20251224100707
+:ctime:    20251224100707
+:END:
+#+TITLE: Arch Pacman
+#+FILETAGS: :arch:pacman:packagemanagement:
+
+[[https://wiki.archlinux.org/title/Pacman][Pacman]] is the default package manager on Arch and its good (although not as good as Portage!).
+
+* Installing packages
+
+Typically you synchronise the databases when installing a package you update the database.
+
+#+begin-src
+pacman -Syu <pkgname>
+#+end-src
+
+
+* Configuration
+
+Configuration of ~pacman~ is via ~/etc/pacman.conf~ and the ~/etc/pacman.d/~ directory and is well documented within
+each of the files.
+
+** Options
+
+Main configurations are under the ~[options]~ section.
+
+*** Masking
+
+You can mask packages by adding similar to ~/etc/pacman.conf~
+
+#+begin_example
+# Pacman won't upgrade packages listed in IgnorePkg and members of IgnoreGroup
+IgnorePkg   = linux-rpi linux-api-headers linux-firmware linux-firmware-amdgpu linux-firmware-atheros linux-firmware-broadcom linux-firmware-cirrus linux
+-firmware-intel linux-firmware-mediatek linux-firmware-nvidia linux-firmware-cirrus linux-firmware-other linux-firmware-radeon linux-firmware-realtek lin
+ux-firmware-whence raspberrypi-bootloader
+#IgnoreGroup = linux-firmware
+
+#NoUpgrade =
+#NoExtract=
+#+end_example
+
+** Hooks
+
+You can create hooks by adding them to ~/etc/pacman.d/hooks~. For example the following recompiles R
+packages on upgrade.
+
+#+begin_example
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = r
+
+[Action]
+Description = Update R packages on upgrade
+When = PostTransaction
+Exec = /usr/bin/Rscript -e 'update.packages(ask = FALSE, checkBuilt = TRUE)'
+#+end_example
+
+
+* Downgrading packages
+
+Arch keeps packages in /var/cache/pacman/pkg and these can be used to downgrade packages.
+
+#+begin_example
+pacman -U file://var/cache/pacman/pkg/<package>.pkg.tar.xz
+#+end_example
+
+This will downgrade a package but next time you ~pacman -Syu~ it will be upgraded. To mask upgrades of a package add the
+following to ~/etc/pacman.conf~...
+
+#+begin_example
+IgnorePkg = <package>
+#+end_example
+
+If you limit the number of historical packages retained in order to save space then the [[https://wiki.archlinux.org/title/Arch_Linux_Archive][Arch Linux Archive]] can be used
+to obtain older packages (for ArchLinuxARM there are [[http://tardis.tiny-vps.com/aarm][tardis]] and [[https://alaa.ad24.cz/][alaa]]).
+
+* Removing Packages
+
+Straight forward with the ~-R~ flag
+
+#+begin_src bash
+pacman -R calibre
+#+end_src
+
+But this doesn't remove any dependencies that were pulled in as requirements to that package. Such orphaned files can be
+removed using the following.
+
+#+begin_src bash
+pacman -Qqtd | pacman -Rns -p
+#+end_src
+
+
+** Orphaned Packages
+
+The following both achieve the same thing...
+
+#+begin_example
+pacman -Qqtd | pacman -Rns -
+pacman -Rns $(pacman -Qdtq)
+#+end_example
+
+* Downgrading Packages
+
+[[https://wiki.archlinux.org/title/Downgrading_packages][Downgrading packages - ArchWiki]] covers everything in detail. Ideally use the ~pacman~ cache
+
+#+begin_src sh
+pacman -U file:///var/cache/pacman/pkg/package-old_version.pkg.tar.type
+#+end_src
+
+If the file is not in your local cache you can obtain older versions from the [[https://archive.archlinux.org/][Arch Linux Archive]] or one of its
+[[https://gitlab.archlinux.org/archlinux/infrastructure/-/blob/master/docs/servers.md#archive-mirrors][mirrors]]. You can use ~wget~ to grab these files but remember to get the signature file too.
+
+#+begin_src bash
+cd /var/cache/pacman/pkg
+wget https://archive.archlinux.org/packages/l/libgit2/libgit2-1%3A1.7.2-1-x86_64.pkg.tar.{zst,zst.sig}
+#+end_src
+
+To prevent packages from being updated again you should add them in a space delimited list to ~IgnorePkg~ in
+~/etc/pacman.conf~
+
+#+begin_src bash
+IgnorePkg = postgresql
+#+end_src
+
+
+* Trouble Shooting
+
+** Insufficient Space
+
+My system is showing its age and I don't use it often, as a consequence I don't update daily/weekly and this means
+~pacman -Syu~ can exceed the available space on the root partition. Its a good opportunity to clear out things you don't
+need, but sometimes the problem persists.
+
+You can get round this by installing/upgrading individual packages with ~pacman -S <package(s)>~ or you can set a
+temporary storage when upgrading (i.e. to a partition that does have sufficient space) as advised [[https://unix.stackexchange.com/a/13090][here]] with ~pacman -Syu
+--cache /path/with/more/space~.
+
+** Download timeouts
+
+When performing large upgrades I found I regularly encountered timeouts and slow transfer rates. A solution to this is
+to leverage the ~XferCommand~ option in ~/etc/pacman.conf~ which allows the configuration of an external programme
+(e.g. ~wget~ or ~curl~) to perform the downloads.
+
+** Untrusted signatures
+
+If you leave updates long enough you may find that packages that are downloaded do not have trusted signatures. This
+means new people have joined the Arch team and signed the packages but your keyring is not up-to-date and so doesn't
+recognise them. To solve this is to update the ~archlinux-keyring~ package first.
+
+#+begin_src bash
+pacman -S archlinux-keyring
+#+end_src
+
+* Links
+
++ [[https://wiki.archlinux.org/title/Pacman][Pacman]]
++ [[https://wiki.archlinux.org/title/Pacman/Tips_and_tricks][Pacman Tips and Tricks]]
