@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       6bb6b516-a3df-452a-adb3-f5aa8a32857c
-:mtime:    20250812234955
+:mtime:    20251224100933 20250812234955
 :ctime:    20250812234955
 :END:
 #+TITLE: Emacs Key Bindings
@@ -12,19 +12,30 @@ the ~helpful~ commands are useful too.
 
 * Key-bindings
 
+You can show the key-bindings, global, major and minor, for a given buffer with ~C-h b~
+
+** Global
+
+| Key Sequence | Action |
+|--------------+--------|
+|              |        |
+
 ** Navigation
 
 | Key Sequence | Action                        |
 |--------------+-------------------------------|
+| ~C-n~        | Next line                     |
+| ~C-p~        | Previous line                 |
 | ~C-M-n~      | Forward a parentetical group  |
-| ~C-M-n~      | Backward a parentetical group |
+| ~C-M-p~      | Backward a parentetical group |
 
 
 ** Org-mode
 
-| Key Sequence | Action                    |
-|--------------+---------------------------|
-| ~M-S-Ret~    | Add entry in orgmode      |
+| Key Sequence | Action               |
+|--------------+----------------------|
+| ~C-n~        | Next node            |
+| ~M-S-Ret~    | Add entry in orgmode |
 
 *** Tables
 
