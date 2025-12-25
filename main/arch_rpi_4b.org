@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       742ab443-39f4-4cf6-a5ca-cb486578ad94
-:mtime:    20251214125445 20251213182206 20251212223257 20251212195343 20251212103425 20251211094111 20251211003606 20251208213404 20251208202826 20251208175553 20251207212421 20251207194725 20251207121232
+:mtime:    20251224220620 20251214125445 20251213182206 20251212223257 20251212195343 20251212103425 20251211094111 20251211003606 20251208213404 20251208202826 20251208175553 20251207212421 20251207194725 20251207121232
 :ctime:    20251207121232
 :END:
 #+TITLE: Arch Raspberry Pi 4b
@@ -747,6 +747,21 @@ I have my old ~/etc/~ configuration from which I've been copying settings but I 
 I find [[id:48249b0d-eeba-484a-8f00-808a14169692][Git etckeeper]] very useful for keeping the ~/etc~ directory backed up, but when I manually edited files I had to
 remember to add them to the commit history. Whilst reading around for this restore I found there is the [[https://wiki.archlinux.org/title/Etckeeper#Incron][~incron~]]
 programme which will use ~inotify~ to monitor files and make commits when there are changes.
+
+* Cause
+
+Why has this happened, I've found ~rpi-armv7h~ to be fairly stable over the years and had little warning that this was
+coming up.
+
+I have subsequently mounted my old system under the recovered one (which has blocked updates of the ~linux-rpi~ kernel
+beyond ~6.12.56-1~ along with all ~linux-firmware-*~ that is ~>=20251021-1~) and when updating I saw the following
+message which means that maintainers know about the problem even if I can't find where it is documented/acknowledged.
+
+#+begin_example
+(48/90) upgrading linux-rpi                    [#####################################] 100%
+ >>> WARNING: Kernel 6.18 breaks RPi4 armv7h. Downgrade, back up, switch to aarch64!
+#+end_example
+
 
 * Links
 
