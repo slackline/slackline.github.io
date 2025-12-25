@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d9c960c2-71b6-45e6-b388-dcd07b9da3e1
-:mtime:    20250308205721 20250308073752 20250228080846 20250226203815 20250226192133 20250225224811 20250225210838 20250224202433 20250224081624 20250223214102 20250223190038 20240812084832 20240602222241 20240601082743 20230730204045 20230730112159
+:mtime:    20251225190243 20251225170807 20250308205721 20250308073752 20250228080846 20250226203815 20250226192133 20250225224811 20250225210838 20250224202433 20250224081624 20250223214102 20250223190038 20240812084832 20240602222241 20240601082743 20230730204045 20230730112159
 :ctime:    20230730112159
 :END:
 #+TITLE: FitTrackee
@@ -301,6 +301,214 @@ UPDATE sports SET is_active = FALSE WHERE id = 18;                    -- Swimrun
 | 17 | Cycling (Trekking)         | t         |                       1 |
 | 18 | Swimrun                    | t         |                     0.1 |
 
+
+* Upgrading
+
+** Backup database
+
+Use [[https://www.postgresql.org/docs/current/app-pgdump.html][pg_dump]] to back up the database (most useful information on this is from the [[https://wiki.archlinux.org/title/PostgreSQL#Manual_dump_and_reload][Arch Linux Wiki | PostgreSQL - Manual
+dump and reload]]). This needs to be run as user ~postgres~ and if you are creating the backup under the
+~/home/fittrackee~ directory then appropriate directory permissions need modifying to allow ~postgres~ to read/write
+under the account (add them to the ~fittrackee~ group in ~/etc/group~ and change permissions with ~chmod 775
+/home/fittrackee~).
+
+
+#+begin_example
+su postgres
+cd /home/fittrackee
+mkdir db-$(date +%Y%m%d)
+pg_dumpall -f db-20251225/backup-$(date +%Y%m%d).sql
+#+end_example
+
+This creates a backup in the ~/home/fittrackee/db-20251225/backup-20251225.sql~
+
+** Backup Uploads
+
+The root directory in my installation is ~/home/fittrackee~ and ~uploads~ is within this
+(i.e. ~/home/fittrackee/uploads~). I compressed this into a single tarball to save a little space.
+
+#+begin_example
+su fittrackee
+cd
+tar cjvf /home/fittrackee/db-20251225/uploads_backup-$(date +%Y%m%d).tar.bz2 uploads
+#+end_example
+
+
+** ~0.9.4~ > ~1.0.4~
+
+As I'm upgrading to a major new version I had to install [[https://postgis.net/][PostGIS]], a geo-spatial extension for [[id:498abde2-0f65-4a10-bf84-8bf6a3410d67][PostgreSQL]]. After reading
+the [[https://docs.fittrackee.org/en/upgrading-to-1.0.x.html][instructions]] carefully the main thing that differs from a [[https://docs.fittrackee.org/en/installation.html#upgrade][standard upgrade]] appears to be the need to install
+~postgis~ itself and add the extension to the database.
+
+#+begin_example
+pacman -Syu postgis
+#+end_example
+
+Instructions suggested adding PostGIS extension as ~root~ but I've found under Arch Linux there is a separate ~postgres~
+account for doing administrative tasks with PostgreSQL so I used that. I didn't know the database, you can find this
+with...
+
+#+begin_example
+su postgres
+psql -U postgres
+
+psql (18.1)
+Type "help" for help.
+
+postgres=# \l
+                                                   List of databases
+    Name    |   Owner    | Encoding | Locale Provider | Collate |  Ctype  | Locale | ICU Rules |   Access privileges
+------------+------------+----------+-----------------+---------+---------+--------+-----------+-----------------------
+ fittrackee | fittrackee | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           |
+ postgres   | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           |
+ template0  | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | =c/postgres          +
+            |            |          |                 |         |         |        |           | postgres=CTc/postgres
+ template1  | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | =c/postgres          +
+            |            |          |                 |         |         |        |           | postgres=CTc/postgres
+(4 rows)
+
+postgres=# quit
+#+end_example
+
+Add the extension to the ~fittrackee~ database as user ~postgres~
+
+#+begin_example
+  psql -U postgres -d fittrackee -c 'CREATE EXTENSION IF NOT EXISTS postgis;'
+  CREATE EXTENSION
+#+end_example
+
+I wasn't sure if this had worked so I found a way to [[https://stackoverflow.com/a/53463490][check if PostGIS is installed]].
+
+#+begin_example
+psql -U postgres -d fittrackee
+psql (18.1)
+Type "help" for help.
+
+fittrackee=# SELECT PostGIS_version();
+            postgis_version
+---------------------------------------
+ 3.6 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
+(1 row)
+#+end_example
+Looks like its installed, we're good to go.
+
+*IMPORTANT* - The whole point of this is to enable geo-spatial features, but you can /not/ enable this in ~.env~ via the
+ ~ENABLE_GEOSPATIAL_FEATURES=True~ until you have first updated the ~fittrackee~ version and restarted the database so
+ hold back.
+
+** Stop the server
+
+#+begin_example
+killall fittrackee
+ps aux | grep fit
+root     1815642  0.0  0.3  10616  6408 pts/7    S    17:00   0:00 su fittrackee
+fittrac+ 1815644  0.0  0.3   8840  6972 pts/7    S    17:00   0:00 bash
+postgres 1829809  0.0  0.4  17928  8324 pts/0    S+   18:11   0:00 psql -U postgres -d fittrackee
+postgres 1829810  0.0  2.0 251368 40148 ?        Ss   18:11   0:00 postgres: postgres fittrackee [local] idle
+fittrac+ 1830410  100  0.3  10152  6148 pts/7    R+   18:14   0:00 ps aux
+fittrac+ 1830411  0.0  0.2   6956  4264 pts/7    S+   18:14   0:00 grep --color=auto fit
+#+end_example
+
+** Create a new virtual environment
+
+I use [[id:4bf1c297-d00a-4857-9339-8017c27138c6][Python Virtual Environments]], in particular ~virtualenvwrapper~
+
+#+begin_example
+su fittrackee
+cd
+mkvirtualenv fittrackee-1.0.4
+pip install fittrackee
+#+end_example
+
+
+** Upgrade the database
+
+Here I took a risk, my current install was off of a development version after I had assistance from the developer to fix
+an [[https://github.com/SamR1/FitTrackee/issues/716][issue]] with uploading tracks. I wanted to switch to stable releases but the [[https://docs.fittrackee.org/en/installation.html#upgrade][upgrade instructions]] differentiate between
+PyPI installs and those from [[https://github.com/SamR1/FitTrackee/][source]] and explicitly warn that the upgrades only work if the previous approach was used.
+
+I took a risk and upgraded my database and it seemed to work ok.
+
+#+begin_example
+(fittrackee-1.0.4) $ ftcli db upgrade
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade 78a90b587a9b -> 61ecbc76f410, add Halfbike
+INFO  [alembic.runtime.migration] Running upgrade 61ecbc76f410 -> 514c727b7feb, add windsurfing sport and board equipment
+INFO  [alembic.runtime.migration] Running upgrade 514c727b7feb -> b0ef6ca5ec92, replace 'users_data_export' table with 'user_tasks' table and update following
+tables:
+  - 'app_config'
+  - 'users'
+  - 'workouts'
+  - 'workout_segments'
+INFO  [alembic.runtime.migration] Running upgrade b0ef6ca5ec92 -> 1648fe51cbd1, add preferences for segments creation (for .fit files)
+INFO  [alembic.runtime.migration] Running upgrade 1648fe51cbd1 -> 684e59432ca4, add standup paddleboarding
+INFO  [alembic.runtime.migration] Running upgrade 684e59432ca4 -> 4eeeecd3936d, add tennis (outdoor)
+INFO  [alembic.runtime.migration] Running upgrade 4eeeecd3936d -> 98688d3d293b, add preference for workout chart display
+INFO  [alembic.runtime.migration] Running upgrade 98688d3d293b -> 45fd75e5f16f, add ave and max power
+INFO  [alembic.runtime.migration] Running upgrade 45fd75e5f16f -> 8221053f0e81, add index on original file and update value
+INFO  [alembic.runtime.migration] Running upgrade 8221053f0e81 -> fed271354410, add geometry and points to workout segments
+INFO  [alembic.runtime.migration] Running upgrade fed271354410 -> 0a2e2369b972, add workouts limit for global map and first point geometry to workouts
+INFO  [alembic.runtime.migration] Running upgrade 0a2e2369b972 -> 67ae8866b18f, add padel (outdoor)
+INFO  [alembic.runtime.migration] Running upgrade 67ae8866b18f -> b30c7818c902, update oauth2_code table
+INFO  [alembic.runtime.migration] Running upgrade b30c7818c902 -> 141d3978536a, add messages preferences
+#+end_example
+
+** Restart the Application
+
+#+begin_example
+$ fittrackee
+(fittrackee-1.0.4) $ fittrackee  &
+[1] 1837627
+[2025-12-25 18:48:34 +0100] [1837627] [INFO] Starting gunicorn 23.0.0
+[2025-12-25 18:48:34 +0100] [1837627] [INFO] Listening at: http://127.0.0.1:5000 (1837627)
+[2025-12-25 18:48:34 +0100] [1837627] [INFO] Using worker: sync
+[2025-12-25 18:48:34 +0100] [1837642] [INFO] Booting worker with pid: 1837642
+#+end_example
+
+All looks good, no errors and I can connect to the WebUI.
+
+** Update Workouts
+
+I only upload workouts with GPS data so I'm not sure whether this was required but the [[https://docs.fittrackee.org/en/upgrading-to-1.0.x.html][upgrade 1.0.x instructions]]
+indicate that its required to enable geospatial features so I went ahead and did it anyway. I needed to find out how
+many workouts I had and how many times I'd have to run the command.
+
+#+begin_example
+ls -l uploads/workouts/1/20*.gpx | wc -l
+3133
+ftcli workouts refresh --add-missing-geometry --per-page 1000 -v
+...
+Refreshing workout 997/997...
+2025/12/25 18:57:20 - fittrackee_workouts_cli - INFO - Refreshing workout 997/997...
+
+Refresh done:
+- updated workouts: 994
+- errored workouts: 3
+2025/12/25 18:57:20 - fittrackee_workouts_cli - INFO -
+Refresh done:
+- updated workouts: 994
+- errored workouts: 3
+
+Done.
+2025/12/25 18:57:20 - fittrackee_workouts_cli - INFO -
+Done.
+#+end_example
+
+Turns out most of mine needed refreshing! Takes a few minutes for 1000 to run and I needed to do this just over three
+times. Seems I've a few ~.gpx~ without any segments which is a bit weird but I ignored those and continued with the
+refresh. In the end it took more than four attempts to run as it didn't seem to pick up 1000 each time, but that gave me
+time to do some [[id:de39fb08-fd16-4da2-889e-e13e952c96ef][Pilates]].
+
+Once completed I edited ~.env~ and set ~ENABLE_GEOSPATIAL_FEATURES=True~. Stopped the running service, ~source .env~ so
+that ~$ENABLE_GEOSPATIAL_FEATURES~ is available and restarted it.
+
+#+begin_example
+killall fittrackee
+fittrackee &
+#+end_example
+
+Hey presto! I have maps enabled.
 
 * Links
 + [[https://samr1.github.io/FitTrackee/en/][FitTrackee]]
