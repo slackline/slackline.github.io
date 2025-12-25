@@ -1,0 +1,63 @@
+:PROPERTIES:
+:ID:       8b2ddcec-2b0a-4cb2-9bd5-f558d0b7ad93
+:mtime:    20251225110045
+:ctime:    20251225110045
+:END:
+#+TITLE: rkhunter
+#+FILETAGS: :linux:rkunter:root:hack:audit:
+
+[[https://www.rkhunter.dev/][rkhunter]] is used for auditing [[id:0e6300c6-7025-4f45-820d-4d9da82b41a6][Linux]] systems from the presence of different rootkits.
+
+* Installation
+
+#+begin_example
+# Arch
+pacman -Syu rkhunter
+# Gentoo
+emerge -av rkhunter
+#+end_example
+
+* Configuration
+
+~/etc/rkhunter.conf~ is the main configuration file. It is well commented.
+
+You can verify the configuration is valid.
+
+#+begin_example
+rkhunter -C
+#+end_example
+
+** Scheduling
+
+Setting up a [[id:f206a2ed-b9c0-4d7c-a0c0-a2f47bbe8641][Cron]] job to check systems regularly may be useful
+
+* Usage
+
+Start by updating the database
+
+#+begin_example
+rkhunter --update
+#+end_example
+
+Now update the data file
+
+#+begin_example
+rkhunter --propupd
+#+end_example
+
+Run a system check with
+
+#+begin_example
+rkhunter --check
+#+end_example
+
+You may be prompted to hit ~Return~ at various points. Log files of the scan by default are saved in
+~/var/log/rkhunter.log~.
+
+* Links
+
++ [[https://github.com/Rootkit-Hunter/rkhunter][Rootkit-Hunter/rkhunter: An open source security, monitoring and analyzing tool for POSIX compliant systems.]]
+
+** Articles
+
++ [[https://www.atlantic.net/dedicated-server-hosting/detect-linux-security-holes-and-rootkits-with-rkhunter-on-ubuntu/][Detect Linux Security Holes and Rootkits with Rkhunter | Atlantic.Net]]
