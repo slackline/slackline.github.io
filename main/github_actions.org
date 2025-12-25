@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       e19b6eb6-46b2-440a-ba35-be29feb33407
-:mtime:    20251213213321 20250616135420 20250602185038 20250528075937 20241011150440 20241001110834 20240905150013 20240221074022 20240128232536 20240127115829 20231015151623 20230318204943 20230103103313 20221216215027
+:mtime:    20251225222244 20251225130630 20251213213321 20250616135420 20250602185038 20250528075937 20241011150440 20241001110834 20240905150013 20240221074022 20240128232536 20240127115829 20231015151623 20230318204943 20230103103313 20221216215027
 :ctime:    20221216215027
 :END:
 #+TITLE: GitHub Actions
@@ -84,6 +84,10 @@ You can cache virtual environments and in turn speed up setting up virtual envir
 On first seeing this post I thought "/Why would you want to make an infinite loop of failing jobs?/" but then I read it
 and its useful when tests are "flakey" and may sometimes fail regardless, plus its limited to only re-running once.
 
+
+** Lint GitHub Actions
+
+You can check the validity of your GitHub actions using [[https://rhysd.github.io/actionlint/][ActionLint]].
 
 * Links
 
