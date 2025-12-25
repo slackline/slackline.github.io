@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       6bb6b516-a3df-452a-adb3-f5aa8a32857c
-:mtime:    20251224100933 20250812234955
+:mtime:    20251225222220 20251224100933 20250812234955
 :ctime:    20250812234955
 :END:
 #+TITLE: Emacs Key Bindings
@@ -28,6 +28,8 @@ You can show the key-bindings, global, major and minor, for a given buffer with 
 | ~C-p~        | Previous line                 |
 | ~C-M-n~      | Forward a parentetical group  |
 | ~C-M-p~      | Backward a parentetical group |
+| ~M-S-Up~     | Move line up                  |
+| ~M-S-Down~   | Move line down                |
 
 
 ** Org-mode
@@ -44,7 +46,6 @@ You can show the key-bindings, global, major and minor, for a given buffer with 
 | ~M-S-Left~   | Insert column to the left |
 | ~M-S-Right~  | Remove column to the left |
 | ~M-S-Down~   | Insert row above          |
-| ~M-S-Down~   | Remove row above          |
 
 ** Buffer
 
