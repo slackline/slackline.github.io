@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       708f5d99-6040-4306-a323-306d39ce45c3
-:mtime:    20251119213506 20250929212803 20250623233720 20250528230955 20250413173540 20250205224152 20241206212307 20241203232124 20241203220011 20240715163129 20240709204003 20240611153339 20240331202209 20240225185002 20240206201930 20240118162910 20231113221350 20230621183025 20230511204503 20230215095632 20230129085036 20230114084505 20230103103311 20221209211925
+:mtime:    20251226070727 20251119213506 20250929212803 20250623233720 20250528230955 20250413173540 20250205224152 20241206212307 20241203232124 20241203220011 20240715163129 20240709204003 20240611153339 20240331202209 20240225185002 20240206201930 20240118162910 20231113221350 20230621183025 20230511204503 20230215095632 20230129085036 20230114084505 20230103103311 20221209211925
 :ctime:    20221209211925
 :END:
 #+TITLE: Emacs Lisp
@@ -74,6 +74,30 @@ files). Printing the results is considered a side-effect but one that is widely 
   parentheses.
 + Similarly if you attempt to evaluate a symbol that has a function but no value associated with it you will see a
   ~void-variable~ error is raised.
+
+* [[https://protesilaos.com/emacs/emacs-lisp-elements#h:evaluate-emacs-lisp][Emacs Lisp Elements]]
+
++ Everything in Emacs is a list and these are delimited by parentheses ~(...)~.
++ The first element of a list is a function call, followed by it's arguments. ~(defun <function-name> (...)
+  "<docstring>" ...)~  defines a new function with ~<function-name>~, a list of arguments ~(...)~, a ~"<docstring>"~ and
+  then the actions to take.
++ Lists can also be *data* in which case it is prefixed with a single quote ~'("item1" "item2" "item3" ...)~
++ Confusingly in Emacs Lisp you can use the same name twice, once to define a function, and again to define a
+  variable/list.
+
+#+begin_example
+;; Assign to a variable
+(defvar my-name "Name")
+(my-name) ;; Gives an error as can't evaluate a string
+my-name ;; Prints 'Name'
+;; Assign to a function
+(defun my-name nil
+  "I am a function that returns this string")
+(my-name) ;; Prints the docstring
+"I am a function that returns this string"
+
+#+end_example
+
 
 * Commands
 
