@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       349c1607-ca60-4ea2-bb53-4eb45a0e9189
-:mtime:    20250305071008 20250304222343 20241021192025 20241020132011
+:mtime:    20251227184524 20251227141324 20250305071008 20250304222343 20241021192025 20241020132011
 :ctime:    20241020132011
 :END:
 #+TITLE: Motorolla g100
@@ -29,7 +29,7 @@ This allows AdAway to work.
 *** Hiding ~root~
 
 Banking apps and others don't like you having a rooted device, but you can play cat and mouse and get around
-it. /Settings > |Configure DenyList/  and check the apps you want to hide. Then /Hide the Magisk app/, you get the to
+it. ~Settings > Configure DenyList~  and check the apps you want to hide. Then /Hide the Magisk app/, you get the to
 rename it, I reverse the name to ~Ksigam~. You don't even need to reboot (at least for the banking app I use!).
 
 *** Modules
@@ -48,6 +48,105 @@ itself from the Play Store, neat.
 
 Possibly related to hiding ~root~ but I've had this installed on my phones for I don't know how long so I keep on using
 it.
+
+* Upgrading
+
+Major versions of [[id:86e356e8-931f-40f7-9393-13a89c22c00d][lineageos]] require a fresh image to be flashed. This sounds daunting but isn't that bad, if you already
+have LineageOS installed you've gone through this procedure once. Things to note...
+
++ The ~data~ partition should not be affected, but make a backup just in case. I used [[https://codeberg.org/NeoApplications/Neo-Backup][Neo Backup]] to back up my
+  applications and copied them to another computer (via SyncThing which synchronises ~neobackup~ automatically) and to
+  my microSD card.
++ If already using Google Services e.g. via MindtheGapps you *must* reboot to recovery and flash these _before_
+  rebooting.
+- You will lose ~root~ access in doing this. I use [[id:b53808a9-d528-4a32-a810-345856294c1e][Magisk]] so reinstalled it.
+
+*The instructions are clear, follow them and you shouldn't go wrong*. Because I have done this before and have at least
+a vague idea of what I'm doing and know I want to install [[id:b53808a9-d528-4a32-a810-345856294c1e][Magisk]] I copied the ~boot.img~ over first.
+
+0. Charge your phone and connect phone via USB cable to computer and check it is visible.
+
+#+begin_example
+adb devices -l
+ZY22C7PLZ5             device usb:1-13 product:nio_retcn model:XT2125_4 device:nio transport_id:1
+#+end_example
+
+1. Copy the Magisk ~.apk~ and the ~boot.img~ to the ~Download~ directory of the phone using [[id:05ac9c63-4b61-4192-b305-69e531064c22][Android ADB]].
+
+#+begin_example
+adb push boot.img /storage/self/primary/Download/.
+  boot.img: 1 file pushed, 0 skipped. 95.4 MB/s (100663296 bytes in 1.006s)
+adb push Magisk-v30.6.apk /storage/self/primary/Download/.
+  Magisk-v30.6.apk: 1 file pushed, 0 skipped. 49.6 MB/s (12919431 bytes in 0.248s)
+#+end_example
+
+2. Reboot the phone to recovery. If you already have LineageOS installed with this phone you should end up in the
+   LineageOS Recover mode with *ADB Sideload* listed.
+
+#+begin_example
+adb -d reboot sidelload
+#+end_example
+
+At the bottom of the phones screen it should read...
+
+#+begin_example
+Now send the package you wan to apply
+to the devicve with "adb sideload <filename>"
+#+end_example
+
+3. Flash the new image
+
+#+begin_example
+adb sideload lineage-23.0-20251222-nightly-nio-signed.zip
+adb sideload lineage-23.0-20251222-nightly-nio-signed.zip
+serving: 'lineage-23.0-20251222-nightly-nio-signed.zip'  (~47%)    adb: failed to read command: Success
+#+end_example
+
+As noted this may hang at 47% in the terminal, mine did, but on the phone it completed and I was prompted to reboot to
+recovery.
+
+4. Reboot to recovery and on the phone click on ~Apply update > Apply from ADB~ sideload the MicroGapps
+
+#+begin_example
+❱ adb -d sideload MindTheGapps-16.0.0-arm64-20250812_214353.zip
+Total xfer: 1.00x
+#+end_example
+
+As noted in the instructions signature verification, on the phone screen, failed because the package is not signed by
+LineageOS, select "Yes" to continue anyway it should complete without problems on both the phone and terminal.
+
+5. Reboot the system.
+
+6. Install the ~Magisk.apk~ and open the app. Select ~Install App~ and select the ~Downloaad/boot.img~ that was copied
+   over at the start and then click ~Let's Go~. This will patch the image.
+
+7. From the terminal list the files and pull the image back.
+
+#+begin_example#
+adb devices -l
+List of devices attached
+ZY22C7PLZ5             device usb:1-13 product:nio_retcn model:XT2125_4 device:nio transport_id:9
+
+adb shell ls -lha /storage/self/primary/Download
+-rw-rw---- 1 root everybody  12M 2025-12-27 07:11 Magisk-v30.6.apk
+-rw-rw---- 1 root everybody  96M 2025-12-27 15:14 magisk_patched-30600_A4uvw.img
+
+adb pull /storage/self/primary/Download/magisk_patched-30600_A4uvw.img
+#+end_example
+
+9. Reboot into ~fastbootd~ mode and flash the patched file that has just been downloaded.
+
+#+begin_example
+fastboot devices -l
+ZY22C7PLZ5             fastbootd usb:1-13
+
+fastboot flash boot magisk_patched-30600_A4uvw.img
+#+end_example
+
+10. Reboot the system and follow the instructions above to enable the DenyList and hide the Magisk app (reboot again for
+    these to take effect).
+
+
 
 * Links
 

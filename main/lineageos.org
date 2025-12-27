@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       86e356e8-931f-40f7-9393-13a89c22c00d
+:mtime:    20251227140001
+:ctime:    20251227140001
+:END:
+#+TITLE: LineageOS
+#+FILETAGS: :linux:android:lineageos:
+
+[[https://lineageos.org][LineageOS]] is one of the older [[id:2c46e54a-d704-4e7e-bca3-d8c3e042ab43][Android]] alternatives and forms the basis of many others (e.g. /e/OS/). It supports a wide
+range of devices and is a great way of keeping old devices running, although not all devices are supported as it is
+volunteer led (often you can find unofficial LineageOS versions on XDA forms, use at your own risk).
+
+*ALWAYS* follow the official instructions when flashing ROMs to avoid data lost and bricking your device.
+
+* Links
+
++ [[https://lineageos.org][LineageOS]]
++ [[https://wiki.lineageos.org][LineageOS Wiki]]
+
+** Devices
+
++ [[https://wiki.lineageos.org/devices/nio/variant2/][Info about nio | LineageOS Wiki]]

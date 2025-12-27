@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       b53808a9-d528-4a32-a810-345856294c1e
+:mtime:    20251227143925
+:ctime:    20251227143925
+:END:
+#+TITLE: Android Magisk
+#+FILETAGS: ::linux:android:magisk:root::
+
+[[https://github.com/topjohnwu/Magisk][Magisk: The Magic Mask for Android]] is a brilliant app that allows rooting of Android devices. This allows you to use
+things like AdAway to block adverts but also requires you to hide the fact you are rooted from things like Banking Apps.
+
+* Installation
+
++ Download the ~apk~ from the  [[https://github.com/topjohnwu/Magisk/releases][Official Releases]] (_never_ install from anywhere else).
++ Follow the [[https://topjohnwu.github.io/Magisk/install.html][Installation]] instructions to the letter.
+  + Download the ~boot.img~ or ~init_boot.img~ for your device (I use [[id:86e356e8-931f-40f7-9393-13a89c22c00d][LineageOS]] so download the images for my [[id:349c1607-ca60-4ea2-bb53-4eb45a0e9189][Motorolla
+    g100]]).
+
+
+* Links
+
++ [[https://github.com/topjohnwu/Magisk][GitHub - topjohnwu/Magisk: The Magic Mask for Android]]
+  + [[https://github.com/topjohnwu/Magisk/releases][Releases Releases - GitHub - topjohnwu/Magisk: The Magic Mask for Android]]
+  + [[https://topjohnwu.github.io/Magisk/install.html][Installation | Magisk]]
