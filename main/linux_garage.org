@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       170e7f2e-5bbf-4247-bacf-5459835ec26b
+:mtime:    20251227131519
+:ctime:    20251227131519
+:END:
+#+TITLE: Garage S3 Storage
+#+FILETAGS: :linux:storage:backup:
+
+* Links
+
++ [[https://garagehq.deuxfleurs.fr/][Garage]]
