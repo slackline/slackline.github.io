@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9bf2dfc3-ff49-49b2-8507-503f64649f7a
-:mtime:    20251224100707
+:mtime:    20251226191834 20251224100707
 :ctime:    20251224100707
 :END:
 #+TITLE: Arch Pacman
@@ -15,6 +15,7 @@ Typically you synchronise the databases when installing a package you update the
 #+begin-src
 pacman -Syu <pkgname>
 #+end-src
+
 
 
 * Configuration
@@ -62,13 +63,25 @@ Exec = /usr/bin/Rscript -e 'update.packages(ask = FALSE, checkBuilt = TRUE)'
 
 * Downgrading packages
 
-Arch keeps packages in /var/cache/pacman/pkg and these can be used to downgrade packages.
+[[https://wiki.archlinux.org/title/Downgrading_packages][Downgrading packages - ArchWiki]] covers everything in detail. Ideally use the ~pacman~ cache
+ which is located at ~~/var/cache/pacman/pkg~ and these can be used to downgrade packages.
 
 #+begin_example
 pacman -U file://var/cache/pacman/pkg/<package>.pkg.tar.xz
 #+end_example
 
-This will downgrade a package but next time you ~pacman -Syu~ it will be upgraded. To mask upgrades of a package add the
+If the file is not in your local cache you can obtain older versions from the [[https://archive.archlinux.org/][Arch Linux Archive]] or one of its
+[[https://gitlab.archlinux.org/archlinux/infrastructure/-/blob/master/docs/servers.md#archive-mirrors][mirrors]]. You can use ~wget~ to grab these files but remember to get the signature file too.
+
+#+begin_src bash
+cd /var/cache/pacman/pkg
+wget https://archive.archlinux.org/packages/l/libgit2/libgit2-1%3A1.7.2-1-x86_64.pkg.tar.{zst,zst.sig}
+#+end_src
+
+To prevent packages from being updated again you should add them in a space delimited list to ~IgnorePkg~ in
+~/etc/pacman.conf~
+
+After downgrading the next ~pacman -Syu~ it will be upgraded. To avoid this mask upgrades of a package by adding the
 following to ~/etc/pacman.conf~...
 
 #+begin_example
@@ -77,6 +90,9 @@ IgnorePkg = <package>
 
 If you limit the number of historical packages retained in order to save space then the [[https://wiki.archlinux.org/title/Arch_Linux_Archive][Arch Linux Archive]] can be used
 to obtain older packages (for ArchLinuxARM there are [[http://tardis.tiny-vps.com/aarm][tardis]] and [[https://alaa.ad24.cz/][alaa]]).
+* Querying Packages
+
+Find out about the contents of a package with ~pacman -Q~. To search for a package based on a string you can???
 
 * Removing Packages
 
@@ -102,29 +118,6 @@ The following both achieve the same thing...
 pacman -Qqtd | pacman -Rns -
 pacman -Rns $(pacman -Qdtq)
 #+end_example
-
-* Downgrading Packages
-
-[[https://wiki.archlinux.org/title/Downgrading_packages][Downgrading packages - ArchWiki]] covers everything in detail. Ideally use the ~pacman~ cache
-
-#+begin_src sh
-pacman -U file:///var/cache/pacman/pkg/package-old_version.pkg.tar.type
-#+end_src
-
-If the file is not in your local cache you can obtain older versions from the [[https://archive.archlinux.org/][Arch Linux Archive]] or one of its
-[[https://gitlab.archlinux.org/archlinux/infrastructure/-/blob/master/docs/servers.md#archive-mirrors][mirrors]]. You can use ~wget~ to grab these files but remember to get the signature file too.
-
-#+begin_src bash
-cd /var/cache/pacman/pkg
-wget https://archive.archlinux.org/packages/l/libgit2/libgit2-1%3A1.7.2-1-x86_64.pkg.tar.{zst,zst.sig}
-#+end_src
-
-To prevent packages from being updated again you should add them in a space delimited list to ~IgnorePkg~ in
-~/etc/pacman.conf~
-
-#+begin_src bash
-IgnorePkg = postgresql
-#+end_src
 
 
 * Trouble Shooting
