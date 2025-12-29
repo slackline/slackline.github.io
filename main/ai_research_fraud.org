@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       f40bf09c-3939-4004-ae7e-50b1cb864b9b
+:mtime:    20251229154402
+:ctime:    20251229154402
+:END:
+#+TITLE: AI Research Fraud
+#+FILETAGS: :ai:fraud:academia:retractions:
+
++ [[https://www.rollingstone.com/culture/culture-features/ai-chatbot-journal-research-fake-citations-1235485484/][AI Chatbots Are Poisoning Research Archives With Fake Citations]]
++ [[https://sharonkabel.com/genai-fraud][A bibliography of genAI-fueled research fraud from 2025 – Sharon Kabel]]
