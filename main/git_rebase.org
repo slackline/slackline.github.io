@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       57ba7f41-cf41-493c-bbf4-9d1e05a0602d
-:mtime:    20251001160359 20250831191626 20250812155234 20240625153309 20231209102351 20230729071312 20230509150839 20230314223425 20230103103310 20221226212438
+:mtime:    20251229204412 20251001160359 20250831191626 20250812155234 20240625153309 20231209102351 20230729071312 20230509150839 20230314223425 20230103103310 20221226212438
 :ctime:    20221226212438
 :END:
 #+TITLE: Git Rebase
@@ -70,6 +70,11 @@ git rebase -r <hash for oldest commit to change> --exec 'git commit --amend --no
 
 
 * Links
+
+** Tools
+
++ [[https://github.com/MitMaro/git-interactive-rebase-tool][git-interactive-rebase-tool]] : Native cross-platform full feature terminal-based sequence editor for git interactive
+  rebase.
 
 ** HowTos
 
