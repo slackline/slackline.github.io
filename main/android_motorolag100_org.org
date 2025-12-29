@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       349c1607-ca60-4ea2-bb53-4eb45a0e9189
-:mtime:    20251227184524 20251227141324 20250305071008 20250304222343 20241021192025 20241020132011
+:mtime:    20251227211325 20251227184524 20251227141324 20250305071008 20250304222343 20241021192025 20241020132011
 :ctime:    20241020132011
 :END:
 #+TITLE: Motorolla g100
@@ -47,12 +47,14 @@ itself from the Play Store, neat.
 **** Play Integrity Fix
 
 Possibly related to hiding ~root~ but I've had this installed on my phones for I don't know how long so I keep on using
-it.
+it. It is no longer available via GitHub but I have a copy lying around on my computer.
 
 * Upgrading
 
-Major versions of [[id:86e356e8-931f-40f7-9393-13a89c22c00d][lineageos]] require a fresh image to be flashed. This sounds daunting but isn't that bad, if you already
-have LineageOS installed you've gone through this procedure once. Things to note...
+Major versions of [[id:86e356e8-931f-40f7-9393-13a89c22c00d][lineageos]] require a fresh image to be flashed. [[https://lineageos.org/Changelog-30/][Changelog 30 - LineageOS Blog]] (2025-10-11) announced an
+upgrade to LineageOS 23 but it wasn't until 2025-12-10 that an image appeared for the g100 (nio). Upgrading sounds
+daunting but isn't that bad, if you already have LineageOS installed you've gone through this procedure once. Things to
+note...
 
 + The ~data~ partition should not be affected, but make a backup just in case. I used [[https://codeberg.org/NeoApplications/Neo-Backup][Neo Backup]] to back up my
   applications and copied them to another computer (via SyncThing which synchronises ~neobackup~ automatically) and to
