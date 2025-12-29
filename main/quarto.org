@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       251b3ae4-4a5c-4c44-909a-dcbc0aef4b45
-:mtime:    20251128110452 20251004204306 20251004192607 20250409102049 20250315082156 20250304173433 20250106230254 20241004001346 20240923113749 20240917202552 20240810214416 20240222114306 20240204192526 20240123092307 20231231084604 20230808214728 20230715122915 20230704223416 20230425225904 20230312225146 20230208071742 20230105145232 20230103103309 20221228151331 20230103103309 20230103103308
+:mtime:    20251229092356 20251128110452 20251004204306 20251004192607 20250409102049 20250315082156 20250304173433 20250106230254 20241004001346 20240923113749 20240917202552 20240810214416 20240222114306 20240204192526 20240123092307 20231231084604 20230808214728 20230715122915 20230704223416 20230425225904 20230312225146 20230208071742 20230105145232 20230103103309 20221228151331 20230103103309 20230103103308
 :ctime:    20221228151331 20230103103308
 :END:
 #+TITLE: Quarto
@@ -197,6 +197,37 @@ A simple method for embedding QR-codes for URLs.
 
 Leverages [[https://docs.r-wasm.org/webr/latest/][webR]] to embed interactive R sessions within HTML rendered pages which makes them interactive.
 
+** [[https://github.com/coatless-quarto/toggle][toggle]]
+
+Hide code blocks in Quarto HTML documents. You can toggle individual output if ~output-sync: false~ is set.
+
+#+begin_example yaml
+filters:
+  - toggle
+      output-toggle: true    # Enable toggle functionality
+      output-hidden: false   # Show outputs initially (default)
+      output-sync: false     # Individual control (default)
+      global-toggle: false
+      persist: false
+      button-text: "Output"
+#+end_example
+
+#+begin_example
+```{python}
+#| toggle: true
+#| output-hidden: true
+#| output-sync: false
+```
+#+end_example
+
+** [[https://github.com/davidwyld/openlinksinnewpage][openlinksinnewpage]]
+
+Causes all links to open in a new page.
+
+#+begin_example yaml
+  filters:
+    - openlinksinnewpage
+#+end_example
 * Tables
 
 You can have multiple tables adjacent to each other using the [[https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/posts/01-side-by-side-tables/][~layout-ncol~]] chunk option.
