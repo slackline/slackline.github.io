@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       470e9f37-f4f8-4e7f-adf2-3dbac9b8bf06
-:mtime:    20251109092228 20251027164931 20251014074615 20250914194603 20250805212553 20250621075602 20250527214044 20250526075929 20250312091850 20250209203305 20250202173405 20250201184321 20250118204303
+:mtime:    20251231152833 20251109092228 20251027164931 20251014074615 20250914194603 20250805212553 20250621075602 20250527214044 20250526075929 20250312091850 20250209203305 20250202173405 20250201184321 20250118204303
 :ctime:    20250118204303
 :END:
 #+STARTUP: align
@@ -302,396 +302,11 @@ CLOSED: [2021-12-10 Fri 21:40]
   #+RESULTS:
   [[file:png/climbing_crag.png]]
 
-* Cycling
-
-Cycling pace is shown in figure cycling-pace broadly accurate but sometimes I forget to pause timing when I'm in shops.
-
-#+include: log/cycling.org
-** Summary
-   Total number of rides between src_R[:session *training-R* :exports results :results value]{cycling_table$date |>
-   min()} and src_R[:session *training-R* :exports results :results value]{cycling_table$date |> max()} is
-   src_R[:session *training-R* :exports results :results value]{cycling_table |> nrow()}. The total distance covered is
-   src_R[:session *training-R* :exports results :results value]{cycling_table$distance |> sum()}km whilst the mean
-   distance is src_R[:session *training-R* :exports results :results value]{cycling_table$distance |> mean()}km (SD :
-   src_R[:session *training-R* :exports results :results value]{cycling_table$distance |> sd()}). The longest cycle was
-   src_R[:session *training-R* :exports results :results value]{cycling_table$distance |>  max()}km. The average
-   cycling pace for each journey is shown in figure [[cycling-pace]].
-
-
-
-   #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_pace.png
-     cycling_table |> ggplot(aes(date, pace)) + geom_point(aes(colour=distance, size=distance, alpha=0.45)) +
-         ## geom_smooth(method="loess", data=no_outliers) +
-         geom_smooth(method="loess") +
-         ggtitle("Pace over time by Distance") +
-         dark_theme_bw() +
-         ylab("Pace") +
-         xlab("Date") +
-         scale_color_gradient(colors = c("#00AFBB", "#E7B800", "#FC4E07")) +
-         theme(legend.position = "right")
-   #+end_src
-
-   #+NAME: cycling-pace
-   #+CAPTION: Cycling Pace
-   #+RESULTS:
-   [[file:png/cycling_pace.png]]
-
-*** Yearly
-**** Distance
-    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_yearly_distance.png
-      cycling_table |> ggplot(aes(year)) +
-          geom_bar(aes(weight = distance, fill=year)) +
-          ggtitle("Cycling : Yearly Distance") +
-          dark_theme_bw() +
-          ylab("Distance (km)") +
-          xlab("Year/Year")
-    #+end_src
-    #+NAME: cycling-yearly-distance
-    #+CAPTION: Cycling : Yearly Distance
-    #+RESULTS:
-    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_yearly_distance_median.png
-      cycling_table |> ggplot(aes(factor(year), distance)) +
-          geom_boxplot() +
-          ggtitle("Cycling : Yearly Distance") +
-                                        # scale_x_categorical(name="Year") +
-          scale_y_continuous(name="Distance (km)") +
-          dark_theme_bw() +
-          ylab("Distance (km)") +
-          xlab("Year")
-    #+end_src
-    #+NAME: cycling-yearly-distance-boxplot
-    #+CAPTION: Cycling : Yearly Distance
-    #+RESULTS:
-
-    #+begin_src R :session *training-R* :eval yes :exports results :results value table
-      cycling_table |>
-          group_by(year) |>
-          summarise(Mean = mean(distance, na.rm = TRUE),
-                    SD = sd(distance, na.rm = TRUE),
-                    p25 = quantile(distance, c(0.25), na.rm = TRUE),
-                    p50 = quantile(distance, c(0.50), na.rm = TRUE),
-                    p75 = quantile(distance, c(0.75), na.rm = TRUE),
-                    Min = min(distance, na.rm = TRUE),
-                    Max = max(distance, na.rm = TRUE),
-                    Total = sum(distance, na.rm = TRUE))
-    #+end_src
-    #+NAME: cycling-distance-year
-    #+CAPTION: Cycling distance by Year
-    #+RESULTS:
-**** Pace
-    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_yearly_pace_median.png
-      cycling_table |> ggplot(aes(factor(year), pace)) +
-          geom_boxplot() +
-          ggtitle("Cycling : Yearly Pace") +
-                                        # scale_x_categorical(name="Year") +
-          dark_theme_bw() +
-          ylab("Pace (km)") +
-          xlab("Year")
-    #+end_src
-    #+NAME: cycling-yearly-pace-boxplot
-    #+CAPTION: Cycling : Yearly Pace
-    #+RESULTS:
-
-    #+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
-      cycling_table |>
-          group_by(year) |>
-          summarise(Mean = mean(pace, na.rm = TRUE),
-                    SD = sd(pace, na.rm = TRUE),
-                    p25 = quantile(pace, c(0.25), na.rm=TRUE),
-                    p50 = quantile(pace, c(0.50), na.rm=TRUE),
-                    p75 = quantile(pace, c(0.75), na.rm=TRUE),
-                    Min = min(pace, na.rm = TRUE),
-                    Max = max(pace, na.rm = TRUE))
-
-    #+end_src
-    #+NAME: cycling-pace-year
-    #+CAPTION: Cycling pace by Year
-    #+RESULTS:
-
-**** Number
-#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_yearly_n.png
-cycling_table |> ggplot(aes(year)) +
-      geom_bar() +
-      ggtitle("Cycling : Yearly Rides") +
-      dark_theme_bw() +
-      ylab("Rides") +
-      xlab("Year")
-#+end_src
-#+NAME: cycling-yearly-runs
-#+CAPTION: Rides per year
-#+RESULTS:
-
-*** Monthly
-**** Distance
-    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_monthly_distance.png
-      cycling_table |> ggplot(aes(year_month)) +
-          geom_bar(aes(weight = distance, fill=year_month)) +
-          ggtitle("Cycling : Monthly Distance") +
-          dark_theme_bw() +
-          ylab("Distance (km)") +
-          xlab("Month/Year")
-    #+end_src
-    #+NAME: cycling-monthly-distance
-    #+CAPTION: Cycling : Monthly Distance
-    #+RESULTS:
-    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_monthly_distance_median.png
-      cycling_table |> ggplot(aes(factor(year_month), distance)) +
-          geom_boxplot() +
-          ggtitle("Cycling : Monthly Distance") +
-                                        # scale_x_categorical(name="Month") +
-          scale_y_continuous(name="Distance (km)") +
-          dark_theme_bw() +
-          ylab("Distance (km)") +
-          xlab("Month/Year")
-    #+end_src
-    #+NAME: cycling-monthly-distance-boxplot
-    #+CAPTION: Cycling : Monthly Distance
-    #+RESULTS:
-
-    #+begin_src R :session *training-R* :eval yes :exports results :results value table
-      cycling_table |>
-          group_by(year_month) |>
-          summarise(Mean = mean(distance, na.rm = TRUE),
-                    SD = sd(distance, na.rm = TRUE),
-                    p25 = quantile(distance, c(0.25), na.rm = TRUE),
-                    p50 = quantile(distance, c(0.50), na.rm = TRUE),
-                    p75 = quantile(distance, c(0.75), na.rm = TRUE),
-                    Min = min(distance, na.rm = TRUE),
-                    Max = max(distance, na.rm = TRUE),
-                    Total = sum(distance, na.rm = TRUE))
-    #+end_src
-    #+NAME: cycling-distance-month
-    #+CAPTION: Cycling distance by Month
-    #+RESULTS:
-**** Pace
-    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_monthly_pace_median.png
-      cycling_table |> ggplot(aes(factor(year_month), pace)) +
-          geom_boxplot() +
-          ggtitle("Cycling : Monthly Pace") +
-                                        # scale_x_categorical(name="Month") +
-          dark_theme_bw() +
-          ylab("Pace (km)") +
-          xlab("Month/Year")
-    #+end_src
-    #+NAME: cycling-monthly-pace-boxplot
-    #+CAPTION: Cycling : Monthly Pace
-    #+RESULTS:
-
-    #+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
-      cycling_table |>
-          group_by(year_month) |>
-          summarise(Mean = mean(pace, na.rm = TRUE),
-                    SD = sd(pace, na.rm = TRUE),
-                    p25 = quantile(pace, c(0.25), na.rm=TRUE),
-                    p50 = quantile(pace, c(0.50), na.rm=TRUE),
-                    p75 = quantile(pace, c(0.75), na.rm=TRUE),
-                    Min = min(pace, na.rm = TRUE),
-                    Max = max(pace, na.rm = TRUE))
-
-    #+end_src
-    #+NAME: cycling-pace-month
-    #+CAPTION: Cycling pace by Month
-    #+RESULTS:
-**** Number
-#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_monthly_n.png
-cycling_table |> ggplot(aes(year_month)) +
-      geom_bar() +
-      ggtitle("Cycling : Monthly Rides") +
-      dark_theme_bw() +
-      ylab("Rides") +
-      xlab("Month/Year")
-#+end_src
-#+NAME: cycling-monthly-runs
-#+CAPTION: Rides per month
-#+RESULTS:
-
-*** Weekly
-**** Distance
-    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_weekly_distance.png
-      cycling_table |> ggplot(aes(year_week)) +
-          geom_bar(aes(weight = distance, fill=year_week)) +
-          ggtitle("Cycling : Weekly Distance") +
-          dark_theme_bw() +
-          ylab("Distance (km)") +
-          xlab("Week")
-    #+end_src
-    #+NAME: cycling-weekly-distance
-    #+CAPTION: Cycling : Weekly Distance
-    #+RESULTS:
-
-    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_weekly_distance_median.png
-      cycling_table |> ggplot(aes(factor(year_week), distance)) +
-          geom_boxplot() +
-          ggtitle("Cycling : Weekly Distance") +
-                                        # scale_x_categorical(name="Week") +
-          dark_theme_bw() +
-           ylab("Distance (km)") +
-           xlab("Week")
-    #+end_src
-    #+NAME: cycling-weekly-distance-boxplot
-    #+CAPTION: Cycling : Weekly Distance
-    #+RESULTS:
-**** Pace
-    #+begin_src R :session *training-R* :eval yes :exports results :results value table
-      cycling_table |>
-          group_by(year_week) |>
-          summarise(Mean = mean(distance, na.rm = TRUE),
-                    SD = sd(distance, na.rm = TRUE),
-                    p25 = quantile(distance, c(0.25), na.rm = TRUE),
-                    p50 = quantile(distance, c(0.50), na.rm = TRUE),
-                    p75 = quantile(distance, c(0.75), na.rm = TRUE),
-                    Min = min(distance, na.rm = TRUE),
-                    Max = max(distance, na.rm = TRUE),
-                    Total = sum(distance, na.rm = TRUE))
-    #+end_src
-    #+NAME: cycling-distance-week
-    #+CAPTION: Cycling Distance by Week
-    #+RESULTS:
-
-    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_weekly_pace_median.png
-      cycling_table |> ggplot(aes(factor(year_week), pace)) +
-          geom_boxplot() +
-          ggtitle("Cycling : Weekly Pace") +
-                                        # scale_x_categorical(name="Month") +
-          dark_theme_bw() +
-          ylab("Pace") +
-          xlab("Week")
-    #+end_src
-    #+NAME: cycling-weekly-pace-boxplot
-    #+CAPTION: Cycling : Weekly Pace
-    #+RESULTS:
-
-
-    #+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
-      cycling_table |>
-          group_by(year_week) |>
-          summarise(Mean = mean(pace, na.rm = TRUE),
-                    SD = sd(pace, na.rm = TRUE),
-                    p25 = quantile(pace, c(0.25), na.rm=TRUE),
-                    p50 = quantile(pace, c(0.50), na.rm=TRUE),
-                    p75 = quantile(pace, c(0.75), na.rm=TRUE),
-                    Min = min(pace, na.rm = TRUE),
-                    Max = max(pace, na.rm = TRUE))
-
-    #+end_src
-    #+NAME: cycling-pace-month
-    #+CAPTION: Cycling pace by Week
-    #+RESULTS:
-**** Number
-#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_weekly_n.png
-cycling_table |> ggplot(aes(year_week)) +
-      geom_bar() +
-      ggtitle("Cycling : Weekly Rides") +
-      dark_theme_bw() +
-      ylab("Rides") +
-      xlab("Month/Year")
-#+end_src
-#+NAME: cycling-weekly-runs
-#+CAPTION: Rides per week
-#+RESULTS:
-
-* Hiking
-:PROPERTIES:
-:ID:       a1481dee-909a-4588-9d1a-a35f27de9824
-:mtime:    20250118204303
-:ctime:    20250118204303
-:END:
-
-I love going hiking on the moors and up mountains. I've done some big hikes and longer walks, in 2023 I hiked for 12
-days around the Julian Alps of Slovenia covering some ~130km wtih about 11km of ascent/descent. In 2024 I hiked the
-[[https://blog.nshephard.dev/posts/pennine-way/][Pennine Way in 12 days]] camping wild some nights, others at campsites, it was amazing!
-
-#+include: /home/neil/org/training/log/hiking.org
-
-** Summary
-   #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/hiking_pace.png
-     hiking_table |> ggplot(aes(date, pace)) + geom_point(aes(colour=distance, size=distance, alpha=0.45)) +
-         geom_smooth(method="loess") +
-         ggtitle("Pace") +
-         dark_theme_bw() +
-         ylab("Pace") +
-         xlab("Date") +
-         scale_color_gradient(colors = c("#00AFBB", "#E7B800", "#FC4E07")) +
-         theme(legend.position = "right")
-   #+end_src
-   #+NAME: hikiing-pace
-   #+CAPTION: Average hiking pace
-   #+RESULTS:
-
-   #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/hiking_weekly_distance.png
-     hiking_table |> ggplot(aes(year_week)) +
-         geom_bar(aes(weight = distance, fill=year_week)) +
-         ggtitle("Hiking : Weekly Distance") +
-         dark_theme_bw() +
-         ylab("Distance (km)") +
-         xlab("Week")
-   #+end_src
-
-   #+NAME: hiking-weekly-distance
-   #+CAPTION: Hiking : Weekly Distance
-   #+RESULTS:
-   #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/hiking_monthly_distance.png
-     hiking_table |> ggplot(aes(year_month)) +
-         geom_bar(aes(weight = distance, fill=year_month)) +
-         ggtitle("Hiking : Monthly Distance") +
-         scale_x_date(name="Month") +
-         scale_y_continuous(name="Distance (km)") +
-         dark_theme_bw() +
-         ylab("Distance (km)") +
-         xlab("Month/Year")
-   #+end_src
-   #+NAME: hiking-monthly-distance
-   #+CAPTION: Hiking : Monthly Distance
-   #+RESULTS:
-
-   #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/hiking_monthly_distance_median.png
-     hiking_table |> ggplot(aes(factor(year_month), distance)) +
-         geom_boxplot() +
-         ggtitle("Hiking : Monthly Distance") +
-                                        # scale_x_categorical(name="Month") +
-         scale_y_continuous(name="Distance (km)") +
-         dark_theme_bw() +
-         ylab("Distance (km)") +
-         xlab("Month/Year")
-   #+end_src
-   #+NAME: hiking-monthly-distance-boxplot
-   #+CAPTION: Hiking : Monthly Distance
-   #+RESULTS:
-
-   #+NAME: hiking-distance-month
-   #+CAPTION: Hiking distance by Month
-   #+RESULTS:
-   #+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
-     hiking_table |>
-         group_by(year_month) |>
-         summarise(Mean = mean(distance, na.rm = TRUE),
-                   SD = sd(distance, na.rm = TRUE),
-                   p25 = quantile(distance, c(0.25), na.rm = TRUE),
-                   p50 = quantile(distance, c(0.50), na.rm = TRUE),
-                   p75 = quantile(distance, c(0.75), na.rm = TRUE),
-                   Min = min(distance, na.rm = TRUE),
-                   Max = max(distance, na.rm = TRUE),
-                   Total = sum(distance, na.rm = TRUE))
-   #+end_src
-
-   #+NAME: hiking-pace-month
-   #+CAPTION: Hiking pace by Month
-   #+RESULTS:
-   #+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
-     hiking_table |>
-         group_by(year_month) |>
-         summarise(Mean = mean(pace, na.rm = TRUE),
-                   SD = sd(pace, na.rm = TRUE),
-                   p25 = quantile(pace, c(0.25), na.rm = TRUE),
-                   p50 = quantile(pace, c(0.50), na.rm = TRUE),
-                   p75 = quantile(pace, c(0.75), na.rm = TRUE),
-                   Min = min(pace, na.rm = TRUE),
-                   Max = max(pace, na.rm = TRUE),
-                   Total = sum(pace, na.rm = TRUE))
-   #+end_src
 * Running
 :PROPERTIES:
 :ID:       e3d0065d-73ed-4229-9c7d-28db3666110b
+:mtime:    20251231152833
+:ctime:    20251231152833
 :END:
 
 
@@ -702,6 +317,7 @@ starting to become challenging!).
 
 
 ** Log
+#+include: log/running_2026.org
 #+include: log/running_2025.org
 #+include: log/running_2024.org
 #+include: log/running_2023.org
@@ -714,7 +330,8 @@ starting to become challenging!).
                          running_table_2022,
                          running_table_2023,
                          running_table_2024,
-                         running_table_2025)
+                         running_table_2025,
+                         running_table_2026)
   running_table <- running_table |> mutate(time = str_replace(Time, "min \\+ ", " "),
              time = str_replace(time, "s", ""),
              Date = str_extract(Date, "[0-9]+-[0-9]+-[0-9]+"),
@@ -1162,6 +779,7 @@ a work out that I can do without feeling I've got to find a big chunk of time to
 that by the time I'm done I'm wondering why it is over so quickly and started doing two back to back. Recommend grabbing
 a copy with the DVD if you can find one.
 
+#+INCLUDE: "log/pilates_2026.org"
 #+INCLUDE: "log/pilates_2025.org"
 #+INCLUDE: "log/pilates_2024.org"
 #+INCLUDE: "log/pilates_2023.org"
@@ -1177,6 +795,397 @@ a copy with the DVD if you can find one.
   ten times (i.e. 100).
 + Most floor exercises back should be in correct posture, with slight bend in lower back.
 
+* Cycling
+
+Cycling pace is shown in figure cycling-pace broadly accurate but sometimes I forget to pause timing when I'm in shops.
+
+#+include: log/cycling.org
+** Summary
+   Total number of rides between src_R[:session *training-R* :exports results :results value]{cycling_table$date |>
+   min()} and src_R[:session *training-R* :exports results :results value]{cycling_table$date |> max()} is
+   src_R[:session *training-R* :exports results :results value]{cycling_table |> nrow()}. The total distance covered is
+   src_R[:session *training-R* :exports results :results value]{cycling_table$distance |> sum()}km whilst the mean
+   distance is src_R[:session *training-R* :exports results :results value]{cycling_table$distance |> mean()}km (SD :
+   src_R[:session *training-R* :exports results :results value]{cycling_table$distance |> sd()}). The longest cycle was
+   src_R[:session *training-R* :exports results :results value]{cycling_table$distance |>  max()}km. The average
+   cycling pace for each journey is shown in figure [[cycling-pace]].
+
+
+
+   #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_pace.png
+     cycling_table |> ggplot(aes(date, pace)) + geom_point(aes(colour=distance, size=distance, alpha=0.45)) +
+         ## geom_smooth(method="loess", data=no_outliers) +
+         geom_smooth(method="loess") +
+         ggtitle("Pace over time by Distance") +
+         dark_theme_bw() +
+         ylab("Pace") +
+         xlab("Date") +
+         scale_color_gradient(colors = c("#00AFBB", "#E7B800", "#FC4E07")) +
+         theme(legend.position = "right")
+   #+end_src
+
+   #+NAME: cycling-pace
+   #+CAPTION: Cycling Pace
+   #+RESULTS:
+   [[file:png/cycling_pace.png]]
+
+*** Yearly
+**** Distance
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_yearly_distance.png
+      cycling_table |> ggplot(aes(year)) +
+          geom_bar(aes(weight = distance, fill=year)) +
+          ggtitle("Cycling : Yearly Distance") +
+          dark_theme_bw() +
+          ylab("Distance (km)") +
+          xlab("Year/Year")
+    #+end_src
+    #+NAME: cycling-yearly-distance
+    #+CAPTION: Cycling : Yearly Distance
+    #+RESULTS:
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_yearly_distance_median.png
+      cycling_table |> ggplot(aes(factor(year), distance)) +
+          geom_boxplot() +
+          ggtitle("Cycling : Yearly Distance") +
+                                        # scale_x_categorical(name="Year") +
+          scale_y_continuous(name="Distance (km)") +
+          dark_theme_bw() +
+          ylab("Distance (km)") +
+          xlab("Year")
+    #+end_src
+    #+NAME: cycling-yearly-distance-boxplot
+    #+CAPTION: Cycling : Yearly Distance
+    #+RESULTS:
+
+    #+begin_src R :session *training-R* :eval yes :exports results :results value table
+      cycling_table |>
+          group_by(year) |>
+          summarise(Mean = mean(distance, na.rm = TRUE),
+                    SD = sd(distance, na.rm = TRUE),
+                    p25 = quantile(distance, c(0.25), na.rm = TRUE),
+                    p50 = quantile(distance, c(0.50), na.rm = TRUE),
+                    p75 = quantile(distance, c(0.75), na.rm = TRUE),
+                    Min = min(distance, na.rm = TRUE),
+                    Max = max(distance, na.rm = TRUE),
+                    Total = sum(distance, na.rm = TRUE))
+    #+end_src
+    #+NAME: cycling-distance-year
+    #+CAPTION: Cycling distance by Year
+    #+RESULTS:
+**** Pace
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_yearly_pace_median.png
+      cycling_table |> ggplot(aes(factor(year), pace)) +
+          geom_boxplot() +
+          ggtitle("Cycling : Yearly Pace") +
+                                        # scale_x_categorical(name="Year") +
+          dark_theme_bw() +
+          ylab("Pace (km)") +
+          xlab("Year")
+    #+end_src
+    #+NAME: cycling-yearly-pace-boxplot
+    #+CAPTION: Cycling : Yearly Pace
+    #+RESULTS:
+
+    #+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+      cycling_table |>
+          group_by(year) |>
+          summarise(Mean = mean(pace, na.rm = TRUE),
+                    SD = sd(pace, na.rm = TRUE),
+                    p25 = quantile(pace, c(0.25), na.rm=TRUE),
+                    p50 = quantile(pace, c(0.50), na.rm=TRUE),
+                    p75 = quantile(pace, c(0.75), na.rm=TRUE),
+                    Min = min(pace, na.rm = TRUE),
+                    Max = max(pace, na.rm = TRUE))
+
+    #+end_src
+    #+NAME: cycling-pace-year
+    #+CAPTION: Cycling pace by Year
+    #+RESULTS:
+
+**** Number
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_yearly_n.png
+cycling_table |> ggplot(aes(year)) +
+      geom_bar() +
+      ggtitle("Cycling : Yearly Rides") +
+      dark_theme_bw() +
+      ylab("Rides") +
+      xlab("Year")
+#+end_src
+#+NAME: cycling-yearly-runs
+#+CAPTION: Rides per year
+#+RESULTS:
+
+*** Monthly
+**** Distance
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_monthly_distance.png
+      cycling_table |> ggplot(aes(year_month)) +
+          geom_bar(aes(weight = distance, fill=year_month)) +
+          ggtitle("Cycling : Monthly Distance") +
+          dark_theme_bw() +
+          ylab("Distance (km)") +
+          xlab("Month/Year")
+    #+end_src
+    #+NAME: cycling-monthly-distance
+    #+CAPTION: Cycling : Monthly Distance
+    #+RESULTS:
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_monthly_distance_median.png
+      cycling_table |> ggplot(aes(factor(year_month), distance)) +
+          geom_boxplot() +
+          ggtitle("Cycling : Monthly Distance") +
+                                        # scale_x_categorical(name="Month") +
+          scale_y_continuous(name="Distance (km)") +
+          dark_theme_bw() +
+          ylab("Distance (km)") +
+          xlab("Month/Year")
+    #+end_src
+    #+NAME: cycling-monthly-distance-boxplot
+    #+CAPTION: Cycling : Monthly Distance
+    #+RESULTS:
+
+    #+begin_src R :session *training-R* :eval yes :exports results :results value table
+      cycling_table |>
+          group_by(year_month) |>
+          summarise(Mean = mean(distance, na.rm = TRUE),
+                    SD = sd(distance, na.rm = TRUE),
+                    p25 = quantile(distance, c(0.25), na.rm = TRUE),
+                    p50 = quantile(distance, c(0.50), na.rm = TRUE),
+                    p75 = quantile(distance, c(0.75), na.rm = TRUE),
+                    Min = min(distance, na.rm = TRUE),
+                    Max = max(distance, na.rm = TRUE),
+                    Total = sum(distance, na.rm = TRUE))
+    #+end_src
+    #+NAME: cycling-distance-month
+    #+CAPTION: Cycling distance by Month
+    #+RESULTS:
+**** Pace
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_monthly_pace_median.png
+      cycling_table |> ggplot(aes(factor(year_month), pace)) +
+          geom_boxplot() +
+          ggtitle("Cycling : Monthly Pace") +
+                                        # scale_x_categorical(name="Month") +
+          dark_theme_bw() +
+          ylab("Pace (km)") +
+          xlab("Month/Year")
+    #+end_src
+    #+NAME: cycling-monthly-pace-boxplot
+    #+CAPTION: Cycling : Monthly Pace
+    #+RESULTS:
+
+    #+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+      cycling_table |>
+          group_by(year_month) |>
+          summarise(Mean = mean(pace, na.rm = TRUE),
+                    SD = sd(pace, na.rm = TRUE),
+                    p25 = quantile(pace, c(0.25), na.rm=TRUE),
+                    p50 = quantile(pace, c(0.50), na.rm=TRUE),
+                    p75 = quantile(pace, c(0.75), na.rm=TRUE),
+                    Min = min(pace, na.rm = TRUE),
+                    Max = max(pace, na.rm = TRUE))
+
+    #+end_src
+    #+NAME: cycling-pace-month
+    #+CAPTION: Cycling pace by Month
+    #+RESULTS:
+**** Number
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_monthly_n.png
+cycling_table |> ggplot(aes(year_month)) +
+      geom_bar() +
+      ggtitle("Cycling : Monthly Rides") +
+      dark_theme_bw() +
+      ylab("Rides") +
+      xlab("Month/Year")
+#+end_src
+#+NAME: cycling-monthly-runs
+#+CAPTION: Rides per month
+#+RESULTS:
+
+*** Weekly
+**** Distance
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_weekly_distance.png
+      cycling_table |> ggplot(aes(year_week)) +
+          geom_bar(aes(weight = distance, fill=year_week)) +
+          ggtitle("Cycling : Weekly Distance") +
+          dark_theme_bw() +
+          ylab("Distance (km)") +
+          xlab("Week")
+    #+end_src
+    #+NAME: cycling-weekly-distance
+    #+CAPTION: Cycling : Weekly Distance
+    #+RESULTS:
+
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_weekly_distance_median.png
+      cycling_table |> ggplot(aes(factor(year_week), distance)) +
+          geom_boxplot() +
+          ggtitle("Cycling : Weekly Distance") +
+                                        # scale_x_categorical(name="Week") +
+          dark_theme_bw() +
+           ylab("Distance (km)") +
+           xlab("Week")
+    #+end_src
+    #+NAME: cycling-weekly-distance-boxplot
+    #+CAPTION: Cycling : Weekly Distance
+    #+RESULTS:
+**** Pace
+    #+begin_src R :session *training-R* :eval yes :exports results :results value table
+      cycling_table |>
+          group_by(year_week) |>
+          summarise(Mean = mean(distance, na.rm = TRUE),
+                    SD = sd(distance, na.rm = TRUE),
+                    p25 = quantile(distance, c(0.25), na.rm = TRUE),
+                    p50 = quantile(distance, c(0.50), na.rm = TRUE),
+                    p75 = quantile(distance, c(0.75), na.rm = TRUE),
+                    Min = min(distance, na.rm = TRUE),
+                    Max = max(distance, na.rm = TRUE),
+                    Total = sum(distance, na.rm = TRUE))
+    #+end_src
+    #+NAME: cycling-distance-week
+    #+CAPTION: Cycling Distance by Week
+    #+RESULTS:
+
+    #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_weekly_pace_median.png
+      cycling_table |> ggplot(aes(factor(year_week), pace)) +
+          geom_boxplot() +
+          ggtitle("Cycling : Weekly Pace") +
+                                        # scale_x_categorical(name="Month") +
+          dark_theme_bw() +
+          ylab("Pace") +
+          xlab("Week")
+    #+end_src
+    #+NAME: cycling-weekly-pace-boxplot
+    #+CAPTION: Cycling : Weekly Pace
+    #+RESULTS:
+
+
+    #+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+      cycling_table |>
+          group_by(year_week) |>
+          summarise(Mean = mean(pace, na.rm = TRUE),
+                    SD = sd(pace, na.rm = TRUE),
+                    p25 = quantile(pace, c(0.25), na.rm=TRUE),
+                    p50 = quantile(pace, c(0.50), na.rm=TRUE),
+                    p75 = quantile(pace, c(0.75), na.rm=TRUE),
+                    Min = min(pace, na.rm = TRUE),
+                    Max = max(pace, na.rm = TRUE))
+
+    #+end_src
+    #+NAME: cycling-pace-month
+    #+CAPTION: Cycling pace by Week
+    #+RESULTS:
+**** Number
+#+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/cycling_weekly_n.png
+cycling_table |> ggplot(aes(year_week)) +
+      geom_bar() +
+      ggtitle("Cycling : Weekly Rides") +
+      dark_theme_bw() +
+      ylab("Rides") +
+      xlab("Month/Year")
+#+end_src
+#+NAME: cycling-weekly-runs
+#+CAPTION: Rides per week
+#+RESULTS:
+
+* Hiking
+:PROPERTIES:
+:ID:       a1481dee-909a-4588-9d1a-a35f27de9824
+:mtime:    20250118204303
+:ctime:    20250118204303
+:END:
+
+I love going hiking on the moors and up mountains. I've done some big hikes and longer walks, in 2023 I hiked for 12
+days around the Julian Alps of Slovenia covering some ~130km wtih about 11km of ascent/descent. In 2024 I hiked the
+[[https://blog.nshephard.dev/posts/pennine-way/][Pennine Way in 12 days]] camping wild some nights, others at campsites, it was amazing!
+
+#+include: /home/neil/org/training/log/hiking.org
+
+** Summary
+:PROPERTIES:
+:mtime:    20251231153048
+:ctime:    20251231153048
+:END:
+   #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/hiking_pace.png
+     hiking_table |> ggplot(aes(date, pace)) + geom_point(aes(colour=distance, size=distance, alpha=0.45)) +
+         geom_smooth(method="loess") +
+         ggtitle("Pace") +
+         dark_theme_bw() +
+         ylab("Pace") +
+         xlab("Date") +
+         scale_color_gradient(colors = c("#00AFBB", "#E7B800", "#FC4E07")) +
+         theme(legend.position = "right")
+   #+end_src
+   #+NAME: hikiing-pace
+   #+CAPTION: Average hiking pace
+   #+RESULTS:
+
+   #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/hiking_weekly_distance.png
+     hiking_table |> ggplot(aes(year_week)) +
+         geom_bar(aes(weight = distance, fill=year_week)) +
+         ggtitle("Hiking : Weekly Distance") +
+         dark_theme_bw() +
+         ylab("Distance (km)") +
+         xlab("Week")
+   #+end_src
+
+   #+NAME: hiking-weekly-distance
+   #+CAPTION: Hiking : Weekly Distance
+   #+RESULTS:
+   #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/hiking_monthly_distance.png
+     hiking_table |> ggplot(aes(year_month)) +
+         geom_bar(aes(weight = distance, fill=year_month)) +
+         ggtitle("Hiking : Monthly Distance") +
+         scale_x_date(name="Month") +
+         scale_y_continuous(name="Distance (km)") +
+         dark_theme_bw() +
+         ylab("Distance (km)") +
+         xlab("Month/Year")
+   #+end_src
+   #+NAME: hiking-monthly-distance
+   #+CAPTION: Hiking : Monthly Distance
+   #+RESULTS:
+
+   #+begin_src R :session *training-R* :exports results :width 1024 :height 768 :results output graphics file :file png/hiking_monthly_distance_median.png
+     hiking_table |> ggplot(aes(factor(year_month), distance)) +
+         geom_boxplot() +
+         ggtitle("Hiking : Monthly Distance") +
+                                        # scale_x_categorical(name="Month") +
+         scale_y_continuous(name="Distance (km)") +
+         dark_theme_bw() +
+         ylab("Distance (km)") +
+         xlab("Month/Year")
+   #+end_src
+   #+NAME: hiking-monthly-distance-boxplot
+   #+CAPTION: Hiking : Monthly Distance
+   #+RESULTS:
+
+   #+NAME: hiking-distance-month
+   #+CAPTION: Hiking distance by Month
+   #+RESULTS:
+   #+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+     hiking_table |>
+         group_by(year_month) |>
+         summarise(Mean = mean(distance, na.rm = TRUE),
+                   SD = sd(distance, na.rm = TRUE),
+                   p25 = quantile(distance, c(0.25), na.rm = TRUE),
+                   p50 = quantile(distance, c(0.50), na.rm = TRUE),
+                   p75 = quantile(distance, c(0.75), na.rm = TRUE),
+                   Min = min(distance, na.rm = TRUE),
+                   Max = max(distance, na.rm = TRUE),
+                   Total = sum(distance, na.rm = TRUE))
+   #+end_src
+
+   #+NAME: hiking-pace-month
+   #+CAPTION: Hiking pace by Month
+   #+RESULTS:
+   #+begin_src R :session *training-R* :eval yes :exports results :results value table :colnames yes
+     hiking_table |>
+         group_by(year_month) |>
+         summarise(Mean = mean(pace, na.rm = TRUE),
+                   SD = sd(pace, na.rm = TRUE),
+                   p25 = quantile(pace, c(0.25), na.rm = TRUE),
+                   p50 = quantile(pace, c(0.50), na.rm = TRUE),
+                   p75 = quantile(pace, c(0.75), na.rm = TRUE),
+                   Min = min(pace, na.rm = TRUE),
+                   Max = max(pace, na.rm = TRUE),
+                   Total = sum(pace, na.rm = TRUE))
+   #+end_src
 * Metrics
 :PROPERTIES:
 :ID:       9d789b54-d31a-474c-9546-a91685cc1fb1

@@ -1,0 +1,14 @@
+*** 2026
+
++ *Goal* Run at least 5km every day.
+
+#+CAPTION: Running Log (2026)
+#+NAME: running-log-2026
+| Date | Route | Distance | Time | Pace | Notes |
+|------+-------+----------+------+------+-------|
+|      |       |          |      |      |       |
+|------+-------+----------+------+------+-------|
+#+TBLFM: $5=uconvert($4/$3, (min+s)/km);
+#+begin_src R :session *training-R* :eval yes :exports none :var running_table_2026=running-log-2026  :colnames nil :results output silent
+  running_table_2026 %<>% mutate(distance = as.double(str_replace(Distance, "km", "")))
+#+end_src

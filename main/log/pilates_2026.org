@@ -1,0 +1,11 @@
+** 2026
+:LOGBOOK:
+CLOCK: [2026-01-06 Tue 18:15]--[2026-01-06 Tue 19:15] =>  1:00
+:END:
+
+#+CAPTION: Pilates Log 2025 (Notes from attending [[https://symmetrypilates.co.uk/][Symmetry Pilates]] with Sam Webster.)
+#+NAME: pilates-log-2024
+| Date                   | Notes | Exercise(s) to practice |
+|------------------------+-------+-------------------------|
+| [2025-12-23 Tue 08:00] |       |                         |
+|------------------------+-------+-------------------------|
