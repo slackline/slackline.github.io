@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       0f69c223-91c0-4723-b5ba-9da73c0f44c4
+:mtime:    20251231155508
+:ctime:    20251231155508
+:END:
+#+TITLE: Wave Energy
+#+FILETAGS: :renewable:energy:wave:

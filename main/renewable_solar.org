@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       16185f85-6c97-4bb7-aa6e-a20250d0a237
+:mtime:    20251231154628
+:ctime:    20251231154628
+:END:
+#+TITLE: Solar Energy
+#+FILETAGS: :renewable:energy:solar:
+
+* Agrivoltaics
+
+Is the practice of growing crops under Solar panels on farmland. This has been shown to increase yield across a range of
+crops around the world as the climate is more stable and plants aren't exposed to prolonged, excessive heat.
+
+* Links
+
++ [[https://theconversation.com/the-gift-that-keeps-on-giving-how-solar-panels-on-farms-can-help-increase-crop-yields-269264][The gift that keeps on giving: How solar panels on farms can help increase crop yields]]
+
+** Research Articles
+
++ [[https://www.mdpi.com/2071-1050/17/21/9544][Should Agrivoltaics Ever Be Decommissioned? How Agrivoltaics Bolster Farm Climate Adaptation Even When Unpowered]]
++ [[https://www.sciencedirect.com/science/article/abs/pii/S0168192313000890][Microclimate under agrivoltaic systems: Is crop growth rate affected in the partial shade of solar panels? - ScienceDirect]]

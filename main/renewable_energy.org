@@ -1,14 +1,16 @@
 :PROPERTIES:
 :ID:       83c232f7-5c20-476e-b942-2902a31f86e2
-:mtime:    20251207195636
+:mtime:    20251231155600 20251207195636
 :ctime:    20251207195636
 :END:
 #+TITLE: Renewable Energy
 #+FILETAGS: :energy:renewable:solar:wind:
 
++ [[id:16185f85-6c97-4bb7-aa6e-a20250d0a237][Solar]]
++ [[id:ac2db61e-9af4-43dc-81a1-7057b6452c2f][Tidal]]
++ [[id:0f69c223-91c0-4723-b5ba-9da73c0f44c4][Wave]]
++ [[id:b997f43d-664c-4adc-819f-f70a8ddae770][Wind]]
 
 * Links
 
-** Wind
-
-+ [[https://winderful.uk/][Winderful.uk]] Visualising the UK's wind energy.
++ [[https://www.withouthotair.com/Environmentalists.html][Sustainable Energey - Without the Hot Air]] by David MacKay ([[https://www.withouthotair.com/synopsis10.pdf][10-page synopsis]])

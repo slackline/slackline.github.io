@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       b997f43d-664c-4adc-819f-f70a8ddae770
+:mtime:    20251231155424
+:ctime:    20251231155424
+:END:
+#+TITLE: Wind Energy
+#+FILETAGS: :renewable:energy:wind:
+
+Wind is useful as it can generate electricity at night when there is no [[id:16185f85-6c97-4bb7-aa6e-a20250d0a237][Solar Energy]] available, but its not a permanent
+source either.
+
+* Links
+
++ [[https://winderful.uk/][Winderful.uk]] Visualising the UK's wind energy.

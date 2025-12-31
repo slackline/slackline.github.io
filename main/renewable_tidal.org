@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       ac2db61e-9af4-43dc-81a1-7057b6452c2f
+:mtime:    20251231155544
+:ctime:    20251231155544
+:END:
+#+TITLE: Tidal Energy
+#+FILETAGS: :renewable:energy:tidal:
