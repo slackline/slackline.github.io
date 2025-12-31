@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       2c46e54a-d704-4e7e-bca3-d8c3e042ab43
-:mtime:    20251209091739 20251118230153 20250916101951 20250613002059 20250505215608 20250208110958 20241021184849 20241020132022 20240930074837 20240620095958 20240228094314 20231015172236
+:mtime:    20251230182100 20251209091739 20251118230153 20250916101951 20250613002059 20250505215608 20250208110958 20241021184849 20241020132022 20240930074837 20240620095958 20240228094314 20231015172236
 :ctime:    20231015172236
 :END:
 #+TITLE: Android
@@ -52,6 +52,7 @@ Old phones still have value, they are inexpensive and cheap (you already own the
 
 + [[https://accrescent.app/][Accrescent | Home]]
 + [[https://f-droid.org/][F-Droid - Free and Open Source Android App Repository]]
++ [[https://izzyondroid.org/][IzzyOnDroid - IzzyOnDroid]] ([[https://apt.izzysoft.de/fdroid/index.php][Repository]])
 
 *** Keyboard
 
