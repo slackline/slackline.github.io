@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       70632f95-01a4-4f1d-b1c8-0f9a08fe2c0b
+:mtime:    20260102213209
+:ctime:    20260102213209
+:END:
+#+TITLE: Gists
+#+FILETAGS: :git:gists:github:opengist:
+
+Gists are like notebooks where you can store small (or long!) snippets of code. They have a revision history like full
+blown [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] repositories and therefore don't have branches. [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]] Gists are common (by virtue of [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]] being popular)
+but they are also available on [[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]] and you can self-host OpenGist which works seamlessly with [[id:736537b3-75e0-4c24-9156-364937e0e8a2][Forgejo]] if you are
+self-hosting that too (in terms of allowing login using your Forgejo credentials).
+
+* Links
+
++ [[https://simonwillison.net/2026/Jan/1/gisthost/][Introducing gisthost.github.io]]
