@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0c318676-baac-4570-986a-a8ce89cb8650
-:mtime:    20251130074757 20251111091439
+:mtime:    20260102212822 20251130074757 20251111091439
 :ctime:    20251111091439
 :END:
 #+TITLE: Grebedoc.dev
@@ -16,3 +16,6 @@ their domain or if you have your own. There are clear [[https://grebedoc.dev/][i
 * Links
 
 + [[https://eldred.fr/blog/forge-migration/][GitHub → Codeberg: my experience — ISSOtm's warehouse]]
++ [[https://blog.ritsokiguess.site/posts/quarto-codeberg-part-2/][Quarto websites and Codeberg pages (part 2) – Ken’s blog]]
++ [[https://ericrscott.com/posts/2025-09-20-migrating-to-codeberg/][Migrating my Quarto site from GitHub to Codeberg – Eric R. Scott]]
++ [[https://codeberg.org/r-codeberg/migration-guide/issues/34][#34 - Listing some resource around codeberg page - r-codeberg/migration-guide - Codeberg.org]]
