@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       60363eb0-6272-4c26-8f2e-d7c237bd6609
-:mtime:    20251005205222 20241122224542 20240601165006 20240513200626 20240120092829
+:mtime:    20260103181714 20251005205222 20241122224542 20240601165006 20240513200626 20240120092829
 :ctime:    20240120092829
 :END:
 #+TITLE: Music
@@ -39,3 +39,7 @@ I have a [[id:e93f90d5-0917-440b-8c85-d534cf239294][Sandisk Clip+]] which I occa
 + [[https://www.bbc.co.uk/orbitmusic][Orbit]]
 + [[https://www.bbc.co.uk/rd/articles/2025-03-orbit-music-discovery-organise-analysis/][Organising music for organic discovery]]
 + [[https://www.bbc.co.uk/rd/articles/2025-03-orbit-music-discovery-design/][Designing for intentional discovery]]
+
+** Miscellaneous
+
++ [[https://site.syng.rocks/][Syng.Rocks]] - karaoke software
