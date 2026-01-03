@@ -4,10 +4,12 @@
 
 #+CAPTION: Running Log (2026)
 #+NAME: running-log-2026
-| Date | Route | Distance | Time | Pace | Notes |
-|------+-------+----------+------+------+-------|
-|      |       |          |      |      |       |
-|------+-------+----------+------+------+-------|
+| Date                   | Route                                                                                                                                                                    | Distance | Time        | Pace | Notes                                                                                                                           |
+|------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+-------------+------+---------------------------------------------------------------------------------------------------------------------------------|
+| [2026-01-03 Sat 09:53] | Carrfield Avenue, Meersbrook Road, Heeley Green, Cat Lane Woods, Blackstock Road, Bankwood Road, Cat Lane Woods, Northcote Avenue                                        | 6.65km   | 35min + 42s |      | Very cold! Kept moving to stay warm, felt good, less niggle in right leg/knee. Pushed hard up last hill and went fast!          |
+| [2026-01-02 Fri 08:07] | Carrfield Avenue, Meersbrook Road, Albert Road, Saxon Road, Broadfield Road, Little London Road, Climbing Works, Little London Road, Meersbrook Park Road, Rushdale Road | 6.61km   | 36min + 42s |      | Cold and noticed niggles in right leg and knee, these eased with distance, probably endorphins masking pain, should be careful. |
+| [2026-01-01 Thu 13:52] | Carrfield Avenue, Meersbrook Road, Heeley Green, Catlane Woods Loop                                                                                                      | 6.37km   | 36min + 29s |      | Deliberately slow (going to bed at 03:00 didn't help) good breathing and focus on form, need to watch right knee/leg.           |
+|------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+-------------+------+---------------------------------------------------------------------------------------------------------------------------------|
 #+TBLFM: $5=uconvert($4/$3, (min+s)/km);
 #+begin_src R :session *training-R* :eval yes :exports none :var running_table_2026=running-log-2026  :colnames nil :results output silent
   running_table_2026 %<>% mutate(distance = as.double(str_replace(Distance, "km", "")))

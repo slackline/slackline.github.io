@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       470e9f37-f4f8-4e7f-adf2-3dbac9b8bf06
-:mtime:    20251231152833 20251109092228 20251027164931 20251014074615 20250914194603 20250805212553 20250621075602 20250527214044 20250526075929 20250312091850 20250209203305 20250202173405 20250201184321 20250118204303
+:mtime:    20260103181717 20251231152833 20251109092228 20251027164931 20251014074615 20250914194603 20250805212553 20250621075602 20250527214044 20250526075929 20250312091850 20250209203305 20250202173405 20250201184321 20250118204303
 :ctime:    20250118204303
 :END:
 #+STARTUP: align
@@ -1395,7 +1395,7 @@ days.
 * Resources
 :PROPERTIES:
 :ID:       ea9dd233-64c4-493f-a4dc-9ec73df0c7cd
-:mtime:    20251109092228 20251027164931 20251014074615 20250914194603 20250805212553 20250621075602 20250527213847 20250312091850 20250209203305 20250118204443
+:mtime:    20260103181717 20251109092228 20251027164931 20251014074615 20250914194603 20250805212553 20250621075602 20250527213847 20250312091850 20250209203305 20250118204443
 :ctime:    20250118204443
 :END:
 
@@ -1534,8 +1534,13 @@ A good book from Vertebrate publishing. I've collated most of the bibliography i
 + [[https://www.r-bloggers.com/2021/02/map-my-run-in-r/][Map my run in R | R-bloggers]]
 + [[https://www.r-bloggers.com/2014/09/stay-on-track-plotting-gps-tracks-with-r/][Stay on track: Plotting GPS tracks with R]]
 + [[https://www.r-bloggers.com/2021/02/map-my-run-in-r/][Map my run in R | R-bloggers]]
-+ [[https://github.com/curatedmess/TidyTuesday/blob/main/2024/01022024/runs_2024.R][Git commit like plotting of run distances]]
-+ [[https://quantixed.org/2025/05/27/a-pace-far-different-finding-best-running-pace-with-r/][A Pace Far Different: finding best running pace with R – quantixed]]
++ [[https://github.com/curatedmess/TidyTuesday/blob/main/2024/01022024/runs_2024.R][Git commit like plotting of run distances
+]]
+*** Stephen Royle
+
++ [[https://quantixed.org/2025/05/27/a-pace-far-different-finding-best-running-pace-with-r/][A Pace Far Different: finding best running pace with R – quantixed
+]]+ [[https://quantixed.org/2026/01/01/running-around-2025-running-dataviz-in-r/][Running Around: 2025 running dataviz in R – quantixed]]
++ [[https://quantixed.org/2026/01/03/running-around-an-r-package-to-analyse-garmin-running-data/][Running Around: an R package to analyse Garmin running data – quantixed]]
 
 ** The Guardian
 
