@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd
-:mtime:    20251219213721 20250808163339 20250328161643 20241222103302 20241216094907 20241215174459 20241122002308 20241017134853
+:mtime:    20260103094813 20251219213721 20250808163339 20250328161643 20241222103302 20241216094907 20241215174459 20241122002308 20241017134853
 :ctime:    20241017134853
 :END:
 #+TITLE: Python uv
@@ -107,3 +107,8 @@ be enabled.
 ** Blog Posts
 
 + [[https://www.mostlypython.com/updating-python/][Updating Python]]
++ Series of posts by Stephen Turner...
+  + [[https://blog.stephenturner.us/p/uv-part-1-running-scripts-and-tools][uv, part 1: running scripts and tools - by Stephen Turner]]
+  + [[https://blog.stephenturner.us/p/uv-part-2-building-and-publishing-packages][uv, part 2: building and publishing packages]]
+  + [[https://blog.stephenturner.us/p/uv-part-3-python-in-r-with-reticulate][uv, part 3: Python in R with reticulate - by Stephen Turner]]
+  + [[https://blog.stephenturner.us/p/uv-part-4-jupyter][uv, part 4: uv with Jupyter]]
