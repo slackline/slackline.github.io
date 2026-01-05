@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       7d3e2ff6-84f0-4d5d-a098-6efb22d55bac
+:mtime:    20260105140126
+:ctime:    20260105140126
+:END:
+#+TITLE: Bat
+#+FILETAGS: :linux:alternatives:pager:
+
+
+[[https://github.com/sharkdp/bat][~bat~]] is an alternative to ~cat~ which is syntax-aware and generally faster.
+
+* [[https://github.com/eth-p/bat-extras][~bat-extras~]]
+
+Extends ~bat~ with additional functionality such as leveraging ~ripgrep~ for searching and ~prettier~ for pretty
+printing.

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       58938b15-84c8-48dc-8b7e-64e54f1d5c42
-:mtime:    20251203153341 20250909101822 20250314221223
+:mtime:    20260105140453 20251203153341 20250909101822 20250314221223
 :ctime:    20250314221223
 :END:
 #+TITLE: UNIX Alternatives
@@ -10,8 +10,8 @@ I wrote a blog post with some [[https://blog.nshephard.dev/posts/cli-alternative
 
 | Traditional | Alternative                   |
 |-------------+-------------------------------|
-| ~cat~       | ~bat~                         |
-| ~diff~      | ~difftastic~                  |
+| ~cat~       | [[id:7d3e2ff6-84f0-4d5d-a098-6efb22d55bac][~bat~]]                         |
+| ~diff~      | ~difftastic~  [[id:0dbd7c98-b2e0-4246-98c8-be43dc07b687][~oyo~]]           |
 | ~du~        | ~duf~                         |
 | ~find~      | ~fd~                          |
 | ~grep~      | ~ripgrep~ (~rg~) or ~batgrep~ |
@@ -22,15 +22,6 @@ I wrote a blog post with some [[https://blog.nshephard.dev/posts/cli-alternative
 * ~duf~
 
 ~duf~ for a nice alternative to ~du~.
-
-* [[https://github.com/sharkdp/bat][~bat~]]
-
-An alternative to ~cat~ which is syntax-aware and generally faster.
-
-** [[https://github.com/eth-p/bat-extras][~bat-extras~]]
-
-Extends ~bat~ with additional functionality such as leveraging ~ripgrep~ for searching and ~prettier~ for pretty
-printing.
 
 
 * ~lsd~

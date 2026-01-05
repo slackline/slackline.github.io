@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       0dbd7c98-b2e0-4246-98c8-be43dc07b687
+:mtime:    20260105140422
+:ctime:    20260105140422
+:END:
+#+TITLE: Oyo
+#+FILETAGS: :linux:alternative:diff:
+
+[[https://github.com/ahkohd/oyo][~oyo~]] is an alternative diff tool (in the same vein as ~difftastic~). It supports stepping through changes as well as
+"split" view and [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] integration
+
+* Install
+
+** Arch
+
+#+begin_example
+git clone https://aur.archlinux.org/oyo.git
+cd oyo
+makepkg -sri
+#+end_example
+
+** Gentoo
+
+Not yet in overlays.
