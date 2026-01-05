@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       0911a63f-4b82-4bf1-9235-f1e41e93d210
 :ROAM_ALIASES: "Open Research Overview"
-:mtime:    20251102213403 20250809220726 20250322220654 20250321094135 20250207185829 20241022150421 20241001165443 20240919150818 20240912124356 20240910123405 20240515164155
+:mtime:    20251222113532 20251102213403 20250809220726 20250322220654 20250321094135 20250207185829 20241022150421 20241001165443 20240919150818 20240912124356 20240910123405 20240515164155
 :ctime:    20240515164155
 :END:
 #+title: Open Research
@@ -28,9 +28,11 @@ to validate and contribute to the research.
 + [[id:a945032a-5cdb-4efb-82f9-609e66ae7049][OpenFest 2023]]
 
 * References
+
 + [[https://www.nature.com/articles/sdata201618][The FAIR Guiding Principles for scientific data management and stewardship | Scientific Data]]
 + [[https://www.nature.com/articles/s41562-016-0021][A manifesto for reproducible science | Nature Human Behaviour]]
 + [[https://online.ucpress.edu/collabra/article/10/1/121383/203136/Open-Research-Reforms-and-the-Capitalist][Open Research Reforms and the Capitalist University: Areas of Opposition and Alignment]]
++ [[https://zenodo.org/records/17379696][Scoping Review: The Contributions of Open Science to Research Culture]]
 
 * Links
 
