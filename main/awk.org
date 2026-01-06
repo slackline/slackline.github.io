@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       4d64ea2c-b91a-4162-8d79-889b05b5ba80
-:mtime:    20251206211908 20240718093409 20230710221611 20230413072342 20230103103310 20221210172245
+:mtime:    20260106103840 20251206211908 20240718093409 20230710221611 20230413072342 20230103103310 20221210172245
 :ctime:    20221210172245
 :END:
 #+TITLE: awk
@@ -11,45 +11,45 @@
 
 If you want to sort a file or list based on a particular column you can [[[[https://stackoverflow.com/questions/17048188/how-to-use-awk-sort-by-column-3][place the desired column at the start, pipe to sort and then remove the column]]
 
-#+begin_src bash
+#+begin_example bash
 awk -F, '{ print $3, $0 }' user.csv | sort | sed 's/^.* //'
-#+end_src
+#+end_example
 
 Alternatively you can use sort directly...
 
-#+begin_src bash
+#+begin_example bash
 sort -t, -nk3 user.csv
-#+end_src
+#+end_example
 * Extract a Column
 
-#+begin_src bash
+#+begin_example bash
 # Print the 12th column ('{print $12}') of a comma separated file (-F,) called my_file.csv
 awk -F, '{print $12}' my_file.csv
 # As above but for multiple files and include the filename (FILENAME)
 awk -F, '{print FILENAME,$12}' *.csv
-#+end_src
+#+end_example
 
 * Multiple Delimiters
 
-#+begin_src bash
+#+begin_example bash
 # Search for two delimiters (can be regular expressions, hence escaping the period)
 awk -F'.|,' '{print $1 "\t" $13}' my_file.csv
-#+end_src
+#+end_example
 
 
 * Switch Columns
 
 [[https://stackoverflow.com/questions/11967776/swap-two-columns-awk-sed-python-perl][Source]]
 
-#+begin_src bash
+#+begin_example bash
 awk -F $'\t' ' { t = $1; $1 = $2; $2 = t; print; } ' OFS=$'\t' input_file
-#+end_src
+#+end_example
 
 * Mean of the third column
 
-#+begin_src bash
+#+begin_example bash
 cat foo.txt | awk '{SUM+=$3} END {print SUM/NR}'
-#+end_src
+#+end_example
 
 
 * Links
