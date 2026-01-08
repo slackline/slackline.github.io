@@ -3,7 +3,7 @@
 :mtime:    20251004204303 20250915131824 20241006211350 20230701220951
 :ctime:    20230701220951
 :END:
-#+TITLE: Structured Query Language (SQL)
+#+TITLE: SQL (Structured Query Language)
 #+FILETAGS: :data:database:db:sql:
 
 If you do a lot of [[id:f7c491f4-c557-4a68-916a-4e883a15e8ac][Data Analysis]] at some point you will encounter databases and amongst the many options one of the most
@@ -16,6 +16,7 @@ here.
 + [[id:3b212da7-a12b-47e9-97e6-112e2286a484][DuckDB]]
 + MySQL/MariaDB
 + [[id:9c9a6c9a-c406-4229-b20c-14e9f2adada5][Linting]]
++ [[id:5c22f1e3-be08-4c7d-8502-65ef76da57cf][ggSQL]]
 
 * Links
 
