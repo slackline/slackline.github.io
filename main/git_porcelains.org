@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       e4751ae3-d44f-4bd3-b656-bda3da4308fb
+:mtime:    20260108090800
+:ctime:    20260108090800
+:END:
+#+TITLE: Git Porcelains
+#+FILETAGS: :git:porcelains:clients:
+
+Git, whilst having a command line interface, can be considered the "plumbing" for getting tasks done, in a sense a
+server, whilst clients are the "porcelains" that allow you to use the functions provided.
+
+* Magit
+
+[[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] is way ahead of anything else out there, its intuitive and guides you through complex tasks with a few
+keystrokes. Of course you have to use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] as it is an Emacs package but that isn't a bad thing.
+
+* gitu
+
+[[https://github.com/altsem/gitu][gitu]] is "/a TUI Git client inspired by Magit/", but why use a Terminal User Interface when you can use [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] in [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]]? 😉
+
+* Guitar
+
+[[https://github.com/asinglebit/guitar][guitar]] is "/A terminal based git client with topological graph rendering/", not tried it but it has nice graphs like
+GitKraken.
+
+* GitKraken
+
+I encountered GitKraken when I started delivering a training course [[https://srse-git-github-zero2hero.netlify.app/][Git & Github through GitKraken Client - From Zero to
+Hero!]]. I know the content covered in the course but don't use it beyond that.
+
+
+* Links
+
++ [[https://git-scm.com][Git]]
++ [[https:magit.vc][Magit]]
++ [[https://www.gitkraken.com/][GitKraken]]
++ [[https://github.com/altsem/gitu][gitu: A TUI Git client inspired by Magit]]
++ [[https://gitfourchette.org/][GitFourchette]]
++ [[https://github.com/bmf-san/ggc][bmf-san/ggc]] Git CLI written in Go.

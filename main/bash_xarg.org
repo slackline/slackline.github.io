@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       48c0d280-8330-4f65-a5da-098ea186c6b6
-:mtime:    20250126215110 20241014114724 20230330221120 20230330142947
+:mtime:    20260107082535 20250126215110 20241014114724 20230330221120 20230330142947
 :ctime:    20230330142947
 :END:
 #+TITLE: Bash xarg
@@ -9,25 +9,25 @@
 ~xarg~ is a common Unix command that takes "e**x**tended **arg**ument**s**". As a basic principle it takes as input a
 list and repeats the command that follows on that list.
 
-#+begin_src bash
+#+begin_example bash
   find . -type f -iname "*~" | xargs rm
-#+end_src
+#+end_example
 
 * Handling spaces
 
 The above fails if any filenames have spaces in them, how to deal with that? The ~man xargs~ page points to how.  **NB**
 I have purposefully commented out this line just on the off-chance it ever attempts to be executed!
 
-#+begin_src bash eval:no
+#+begin_example bash eval:no
   # find . -type f -iname "*~*" -print0 | xargs -0 /bin/rm -f
-#+end_src
+#+end_example
 
 * Examples
 
 We want to use [[https://github.com/Instagram/MonkeyType][MonkeyType]] to automatically add typehints to an existing code base using the [[id:3cca0dfd-0c82-4685-b9ed-6314f7c8b78f][Python Pytest]] plugin
 [[https://github.com/mariusvniekerk/pytest-monkeytype][pytest-monkeytype]].
 
-#+begin_src bash
+#+begin_example bash
   # Run pytest with the monkeytest plugin
   pytest --mokeytype-outout=./monkeytype.sqlite3
   # View a list of modules that have been found, this is the list we want to process
@@ -38,19 +38,19 @@ We want to use [[https://github.com/Instagram/MonkeyType][MonkeyType]] to automa
   monkeytype apply some.module
   # Generate stubs for everything using xargs so we canreview these first before applying!
   monkeytype list-modules | xargs -I '{}' monketype stub {} ;
-#+end_src
+#+end_example
 
 ** Move files based on regex
 
 We can search files and use matches to conditionally move the files.
 
-#+begin_src
+#+begin_example
 cd ~/gpx/opentracks
 mkdir -p ../sorted/{cycling,running,hiking}
 grep -l -Z -r "cycling" . | xargs -0 -I{} cp ../by_activity/cycling/.
 grep -l -Z -r "running" . | xargs -0 -I{} cp ../by_activity/running/.
 grep -l -Z -r "hiking" . | xargs -0 -I{} cp ../by_activity/hiking/.
-#+end_src
+#+end_example
 
 
 * Links
