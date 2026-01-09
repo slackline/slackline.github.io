@@ -65,6 +65,7 @@
 + [[https://www.nature.com/articles/s41586-025-09771-9][Persuading voters using human–artificial intelligence dialogues | Nature]]
 + [[https://www.science.org/doi/full/10.1126/science.aea3884][The levers of political persuasion with conversational artificial intelligence | Science]]
 + [[https://www.rollingstone.com/culture/culture-features/ai-chatbot-journal-research-fake-citations-1235485484/][AI Chatbots Are Poisoning Research Archives With Fake Citations]]
++ [[https://ai-2027.com/][AI-2027]]
 
 ** Open Source
 

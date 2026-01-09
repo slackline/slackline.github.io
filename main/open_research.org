@@ -49,6 +49,10 @@ to validate and contribute to the research.
 + [[https://github.com/nalgeon/codapi][nalgeon/codapi: Interactive code examples for documentation, education and fun]]
 + [[https://rescience.github.io/read/][ReScience]] - replication publications
 
+** Measuring Impact
+
++ [[https://pathos-project.eu/][PathOS]] - better understanding and measuring Open Science impacts and their causal mechanisms.
+
 ** Community Consensus
 
 + [[https://www.coalition-s.org/]['Plan S' and 'cOAlition S' – Accelerating the transition to full and immediate Open Access to scientific publications]]
