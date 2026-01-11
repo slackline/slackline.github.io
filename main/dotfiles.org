@@ -29,8 +29,16 @@ simple and have a ~\\~/dotfiles~ repository that you keep under [[id:3c905838-8d
 
 Make a repository for yo
 * Automating deployment
+
+I use [[https://www.gnu.org/software/stow/][stow]] to deploy my dotfiles on new installs.
+
+1. Clone the repository.
+2. Link files using stow.
+
 #+TODO: Complete this section.
 
+#+begin_example
+#+end_example
 * Links
 
 + [[https://dotfiles.github.io/][GitHub does dotfiles - dotfiles.github.io]]
