@@ -130,7 +130,14 @@ use of ~markdownlint-cli2~.
 + [[https://markdownlivepreview.com/][Markdown Live Preview]]
 + [[https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/][Include diagrams in your Markdown files with Mermaid | The GitHub Blog]]
 
+** History
+
++ [[https://www.anildash.com/2026/01/09/how-markdown-took-over-the-world/][How Markdown took over the world - Anil Dash]]
 
 ** Linting
 
 + [[https://github.com/DavidAnson/markdownlint-cli2][DavidAnson/markdownlint-cli2]]
+
+** Miscellaneous
+
++ [[https://karl-voit.at/2025/08/17/Markdown-disaster/][Markdown Is a Disaster: Why and What to Do Instead]]
