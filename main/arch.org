@@ -15,6 +15,7 @@ latest version of packages installed. Enter [[https://archlinux.org][Arch Linux]
 
 Install notes for different systems
 
++ [[id:c0091cb9-e687-4a0b-adb6-24077511f7d1][VPS]]
 + Raspberry Pi Zero W
 + [[id:742ab443-39f4-4cf6-a5ca-cb486578ad94][Raspberry Pi 4b]]
 + [[id:84523969-a4c2-4349-ac23-09894939ed54][T490s]]

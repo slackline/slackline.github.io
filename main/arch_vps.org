@@ -1,0 +1,72 @@
+:PROPERTIES:
+:ID:       c0091cb9-e687-4a0b-adb6-24077511f7d1
+:END:
+#+TITLE: Arch VPS
+#+FILETAGS: :arch:linux:vpx:selfhost:
+
+* Recovery
+
+Reboot into recovery mode, you get emailed the ~root~ password (or if that takes a while you can use the KVM and its
+shown there).
+
+** Chroot
+
+#+begin_example
+lsblk
+mount /dev/sdb1 /mnt/
+mount -t proc /proc /mnt/proc/
+mount -t sysfs /sys /mnt/sys/
+mount --rbind /dev /mnt/dev/
+chroot /mnt/
+#+end_example
+
+** Troubleshooting systemd/udev/d-bus
+
+If you can boot the system and SSH then the following can be useful
+.
+#+begin_example
+systemd-analyze blame
+systemd-analyze critical-chain
+#+end_example
+
+This showed me that I had the following problems...
+
+#+begin_example
+2h 51min 37.925s dev-vda1.device
+1h 53min 58.569s systemd-tmpfiles-setup-dev.service
+1h 53min 19.867s systemd-udev-trigger.service
+    56min 5.718s systemd-tmpfiles-setup-dev-early.service
+      2min 360ms systemd-networkd-wait-online.service
+    1min 30.150s systemd-sysusers.service
+          4.993s mariadb.service
+          2.602s postfix.service
+          2.175s systemd-tmpfiles-clean.service
+          2.012s systemd-tmpfiles-setup.service
+          1.298s systemd-udevd.service
+          1.289s systemd-journald.service
+          1.218s ldconfig.service
+          1.023s php-fpm.service
+           898ms systemd-resolved.service
+           668ms iptables.service
+           611ms redis.service
+           533ms systemd-journal-flush.service
+           525ms systemd-logind.service
+           496ms postgresql.service
+           450ms systemd-userdb-load-credentials.service
+           ...
+#+end_example
+
+Check enabled services from ~systemd~, optionally filtering for those that are ~enabled~ at boot.nano
+
+#+begin_example
+systemctl list-unit-files --type=service [--state=enabled]
+#+end_example
+
+** Check for hacks
+
+*** Logins
+
+~/var/log/wtmp~ records logins, including IP addresses, check it with...
+#+begin_example
+utmpdump /var/log/wtmp
+#+end_example
