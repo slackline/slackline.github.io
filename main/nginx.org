@@ -58,11 +58,15 @@ This isn't the only approach its possible [[https://tzovar.as/algorithmic-sabota
 
 You can also serve up junk on static sites that are hosted on Codeberg/GitHub pages using the approach described in
 [[\[\[https://tzovar.as/algorithmic-sabotage-ssg/\]\[Bastian Greshake Tzovaras · Algorithmic sabotage for static
-sites\]\]][Algorithmic sabotage for static sites]]. It uses the [[https://marcusb.org/hacks/quixotic.html][Quixotic]] tool to achieve this.
+sites\]\]][Algorithmic sabotage for static sites]]. It uses the [[https://marcusb.org/hacks/quixotic.html][Quix[]otic]] tool to achieve this.
 
 *** Iocaine
 
 A great [[https://vulpinecitrus.info/blog/guarding-git-forge-ai-scrapers/][article]] ([[https://web.archive.org/web/20251212132351/https://vulpinecitrus.info/blog/guarding-git-forge-ai-scrapers/][archive copy]]) showing how to use [[https://iocaine.madhouse-project.org/documentation/3/][Iocaine3]] to serve garbage to crawlers using Nginx for reverse proxying.
+
+*** Poison Fountain
+
+[[https://rnsaffn.com/poison3/][Poison Fountain]] is another attempt to feed AI web-crawlers a bunch of junk (see also [[https://www.theregister.com/2026/01/11/industry_insiders_seek_to_poison/][Register article]]).
 
 ** LetsEncrypt
 
