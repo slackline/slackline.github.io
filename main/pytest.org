@@ -143,7 +143,8 @@ expectation. It is a very simple method of increasing the coverage and range of 
 def multiply(a, b):
     return a * b
 
-@pytest.mark.parameterize("a, b, expected",
+@pytest.mark.parameterize(
+    ("a", "b", "expected"),
     [pytest.param(2, 4, 8, id="two multiplied by four"),
      pytest.param(3, 9, 27, id="three multiplied by nine"),
      pytest.param(12, 10, 120, id="twelve multiplied by ten")
@@ -165,13 +166,45 @@ A neat use of parameterisation is to allow some tests to pass and some to fail.
       except ZeroDivisionError as e:
           raise e
 
-  @pytest.mark.parameterize("a, b, expected")
-  [(10.0, 5.0, 2.0),
-   (10.0, 0.0, ZeroDivisionError())]
-  def test_divide(a, b, expected):
+  @pytest.mark.parameterize(
+          ("a", "b", "expected")
+      [
+          (10.0, 5.0, 2.0),
+          (10.0, 0.0, ZeroDivisionError())
+      ]
+  )  def test_divide(a, b, expected):
       with a, b:
           assert divide(a, b) == expected
 #+END_SRC
+
+An alternative if you do not want to test the values of parameters that pass then you can use the following which I
+found on [[https://borutzki.github.io/2026/01/15/how-to-parametrize-exception-testing-in-pytest.html][this blog post]].
+
+#+CAPTION: Parameterising tests, some of which pass, others fail.
+#+NAME: pytest-fixture-pass-fail-alternative
+#+BEGIN_SRC python :eval no
+from contextlib import nullcontext as does_not_raise
+from typing import Union
+
+def divide(a: Union[int, float], b: Union[int, float]) -> float:
+      try:
+          return a / b
+      except ZeroDivisionError as e:
+          raise e
+
+  @pytest.mark.parameterize(
+          ("a", "b", "expected")
+      [
+          (10.0, 5.0, does_not_raise()),
+          (10.0, 0.0, ZeroDivisionError())
+      ]
+  )
+  def test_divide(a, b, expected):
+      with expected:
+          divide(a, b)
+#+END_SRC
+
+*** ~id~
 
 You can also label your parametrised tests, this gives them meaningful names and means you don't have to leave comments
 in the source. This is done using ~pytest.param()~ (from [[https://gist.github.com/danjac/72e00f39d53702de9c20553a941a8343][this gist]]).
