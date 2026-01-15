@@ -92,3 +92,7 @@
   Cancer-Diagnosing AI Extracting Patients' Race Data and Being Racist With It]])
 + [[https://www.nature.com/articles/s41746-025-01746-4][Racial bias in AI-mediated psychiatric diagnosis and treatment: a qualitative comparison of four large language
   models | npj Digital Medicine]]
+
+** Advice
+
++ [[https://aiguide.substack.com/p/on-evaluating-cognitive-capabilities][On Evaluating Cognitive Capabilities in Machines (and Other "Alien" Intelligences)]] ([[https://web.archive.org/web/20260114230411/https://aiguide.substack.com/p/on-evaluating-cognitive-capabilities?publication_id=1273940&post_id=183955851&isFreemail=true][Archived]])
