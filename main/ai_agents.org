@@ -17,4 +17,5 @@
 
 + [[https://www.wired.com/story/google-gemini-calendar-invite-hijack-smart-home/][Hackers Hijacked Google’s Gemini AI With a Poisoned Calendar Invite to Take Over a Smart Home]]
 + [[https://www.technologyreview.com/2025/12/15/1128352/rise-of-ai-coding-developers-2026/][AI coding is now everywhere. But not everyone is convinced. | MIT Technology Review]] ([[https://web.archive.org/web/20251221210517/https://www.technologyreview.com/2025/12/15/1128352/rise-of-ai-coding-developers-2026/][archive]])
-  + [[https://mikelovesrobots.substack.com/p/wheres-the-shovelware-why-ai-coding][Where's the Shovelware? Why AI Coding Claims Don't Add Up]] ([[https://web.archive.org/web/20251221210914/https://mikelovesrobots.substack.com/p/wheres-the-shovelware-why-ai-coding][archive]])
++ [[https://mikelovesrobots.substack.com/p/wheres-the-shovelware-why-ai-coding][Where's the Shovelware? Why AI Coding Claims Don't Add Up]] ([[https://web.archive.org/web/20251221210914/https://mikelovesrobots.substack.com/p/wheres-the-shovelware-why-ai-coding][archive]])
++ [[https://www.youtube.com/watch?v=0ANECpNdt-4][39C3 - AI Agent, AI Spy]]
