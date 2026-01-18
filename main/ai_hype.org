@@ -16,3 +16,4 @@
 + [[https://savvykenya.wordpress.com/2025/07/24/raging-against-the-gen-ai-machine/][Raging Against the (Gen) AI Machine | Savvy Kenya in Japan]]
 + [[https://blogs.ed.ac.uk/s2670773_future-governance-kipp--futures-project-2024-25/2025/03/03/the-great-ai-paradox-why-this-bubble-will-burst-and-why-it-doesnt-matter/][The Great AI Paradox: Why This Bubble Will Burst—And Why It Doesn’t Matter – J.E. Van Clief]]
 + [[https://www.wheresyoured.at/the-haters-gui/][The Hater's Guide To The AI Bubble]]
++ [[https://www.theguardian.com/us-news/ng-interactive/2026/jan/18/tech-ai-bubble-burst-reverse-centaur][AI companies will fail. We can salvage something from the wreckage | AI (artificial intelligence) | The Guardian]]
