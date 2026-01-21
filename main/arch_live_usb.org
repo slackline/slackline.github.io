@@ -1,0 +1,73 @@
+:PROPERTIES:
+:ID:       b28a6b6b-50cd-4f07-abcd-a9aab65339df
+:END:
+#+TITLE: Arch Live USB
+#+FILETAGS: :arch:linux:live:usb:
+
+I use [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] on a number of systems, work and personal laptop ([[id:84523969-a4c2-4349-ac23-09894939ed54][T490]]), [[id:742ab443-39f4-4cf6-a5ca-cb486578ad94][Raspberry Pi 4b]] and my [[id:c0091cb9-e687-4a0b-adb6-24077511f7d1][VPS]] as whilst I love
+[[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]] at the time I didn't want to have to compile all the packages (they have since released "bin-dist" with compiled
+versions which makes it very similar to Arch).
+
+I wanted to have a Live USB version of Arch that I could use to boot and rescue systems if I needed to. In order to do
+this I decided to clone from my [[id:84523969-a4c2-4349-ac23-09894939ed54][Arch Linux - T490]] install. The brilliant Arch Wiki has an article on how to  [[https://wiki.archlinux.org/title/Migrate_installation_to_new_hardware][Migrate
+Installation to New Hardware]] and describes the process of cloning as a  [[https://wiki.archlinux.org/title/Migrate_installation_to_new_hardware#Top_to_bottom][Top to Bottom]] approach. This page also links to
+the [[https://wiki.archlinux.org/title/USB_flash_installation_medium][USB flash installation medium]] article which is pretty much what I wanted to do.
+
+* Live USB
+
+You need to boot from a live USB drive, which I'll call ~live~ so you can tinker with the existing system which I will
+call ~T490~ and the new one which I will refer to as ~usb~. I opted to use the and use ~dd~ to copy the ~.iso~ to a
+Sandisk 128GB USB drive which will become the ~live~ disk.
+
+#+begin_example sh
+ dd bs=4M if=./archlinux-2026.01.01-x86_64.iso of=/dev/disk/by-label/sandisk128 conv=fsync oflag=direct status=progress
+#+end_example
+
+* Update ~t490~
+
+Before starting I ensured the system was up-to-date. I use ~paru~ to manage [[https://aur.archlinux.org][AUR]] packages and it also handles running
+~pacman~ prior to updating any of these.
+
+#+begin_example
+paru
+#+end_example
+
+* Cleaning ~t490~
+
+** Package Cache
+
+The ~.pkg~ files live in ~/var/cache/pacman/pkg/~. I have configuration options set ~/etc/pacman.conf~ to keep only the
+most recent copy of packages but for sanity used ~paccache~ to ensure that only the most recent packages were available.
+
+#+begin_example sh
+paccache -rk1
+#+end_example
+
+** Orphaned and dropped packages
+
+Unused dependencies can be removed with the following, then checked whether I had inadvertently removed anything.
+
+#+begin_example sh
+pacman -Qdtq | pacman -Rns -
+pacman -Syu
+#+end_example
+
+** Old Configuration files
+
+I discovered the [[https://rmlint.readthedocs.io/en/master/][rmlint]] package which is a faster alternative to the older ~fdupes~.
+
+* Copying to the new system
+
+My ~usb~ target is only 128Gb which is considerably smaller than the ~t490~ from which I was copying, I couldn't
+therefore use ~dd~ to clone the old install over. Instead I created the necessary partitions and use ~rsync~ to copy the
+files over.
+
+** Partitioning
+
+I like ~cfdisk~ for partitioning my drives. At this point though I realised I'd encrypted my hard-drive as one large
+partition. Its possible to decrypt and mount these.
+
+* Links
+
++ [[https://wiki.archlinux.org/title/Migrate_installation_to_new_hardware#Top_to_bottom][Arch Linux Wiki - Migrate Installation to New Hardware (Top to Bottom)]]
++ [[https://www.volkerschatz.com/unix/archclone.html][How to clone an Arch Linux installation]]

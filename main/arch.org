@@ -19,6 +19,7 @@ Install notes for different systems
 + Raspberry Pi Zero W
 + [[id:742ab443-39f4-4cf6-a5ca-cb486578ad94][Raspberry Pi 4b]]
 + [[id:84523969-a4c2-4349-ac23-09894939ed54][T490s]]
++ [[id:b28a6b6b-50cd-4f07-abcd-a9aab65339df][Live USB]]
 
 * ~systemd~
 

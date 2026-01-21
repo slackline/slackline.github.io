@@ -54,6 +54,14 @@ find / -uid <old_uid> -exec chown -v -h 9999 '{}' \;
 find / -gid <old_gid> -exec chgrp -v 11111 '{}' \;
 #+end_src
 
+* ~etckeeper~
+
+[[https://etckeeper.branchable.com/][etckeeper]] is a tool that uses version control ([[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] by default) to track changes to the systems ~/etc/~ directory.
+
+** ~sysgit~
+
+[[https://framagit.org/kepon/sysgit][sysgit]] extends the concept of ~etckeeper~ to the whole system.
+
 * Administration
 
 + [[id:191117d7-b413-4409-84b5-0183599d9f4e][Ansible]]
