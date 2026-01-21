@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       0fa45a4e-3d04-4cb1-971d-0a30073db26c
+:END:
+#+TITLE: Bandwagon
+#+FILETAGS: :music:federation:
+
+[[https://bandwagon.fm/][Bandwagon.fm]] is a social network for musicians to "/Connect to fans on the Fediverse/" and for fans to find [[id:60363eb0-6272-4c26-8f2e-d7c237bd6609][music]].
+
+* Links
+
++ [[https://bandwagon.fm/][Bandwagon.fm]]

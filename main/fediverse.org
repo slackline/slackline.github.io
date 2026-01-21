@@ -6,37 +6,16 @@
 #+TITLE: Fediverse
 #+FILETAGS: :fediverse:distributed:mastodon:pixelfed:mobilizon:forgejo:gotosocial:
 
-* Bookwyrm
-
-[[https://bookwyrm.social/][Bookwyrm]] offers federated book reading and reviewing. I use [[https://bookrastinating.com/][Bookrastinating]].
-
-* GoToSocial
-
-[[https://docs.gotosocial.org/en/v0.20.2/][GoToSocial]] is "/an ActivityPub social network server, written in Golang/".
-
-* Mastodon
-
-[[id:0a7fbe90-1f6e-4a38-a0c8-b378b1893f33][Mastodon]] is a social media/instant messaging service that doesn't suffer from being owned by a single idiot who destroys
++ [[https://bookwyrm.social/][Bookwyrm]] offers federated book reading and reviewing. I use [[https://bookrastinating.com/][Bookrastinating]].
++ [[https://docs.gotosocial.org/en/v0.20.2/][GoToSocial]] is "/an ActivityPub social network server, written in Golang/".
++ [[id:0a7fbe90-1f6e-4a38-a0c8-b378b1893f33][Mastodon]] is a social media/instant messaging service that doesn't suffer from being owned by a single idiot who destroys
 it with his personal agenda.
-
-* Mobilizon
-
-[[https://joinmobilizon.org/en/][Mobilizon]] is a system for finding, creating and organising events.
-
-* Pixelfed
-
-[[https://pixelfed.org/][Pixelfed]] is an alternative to other centralised picture sharing services.
-
-* ForgeJo
-
-[[https://forgejo.org/][ForgeJo]] is a self-hosted GitHub repository which aims for federation (although its still a work in progress).
-
-* Matrix
-
-[[id:7c18f6c4-375e-4832-9e40-f44d04245e8a][matrix]]
-
-* [[https://wueride.bike/][WueRide]]
-
++ [[https://joinmobilizon.org/en/][Mobilizon]] is a system for finding, creating and organising events.
++ [[https://pixelfed.org/][Pixelfed]] is an alternative to other centralised picture sharing services.
++ [[https://forgejo.org/][ForgeJo]] is a fork of Gitea that is aiming for federated Git [[id:28ffcc43-9dff-4de8-a211-277c5346a642][Forges]].
++ [[id:7c18f6c4-375e-4832-9e40-f44d04245e8a][matrix]]
++ [[https://wueride.bike/][WueRide]]
++ [[id:0fa45a4e-3d04-4cb1-971d-0a30073db26c][Bandwagon.fm]]
 
 * Links
 
