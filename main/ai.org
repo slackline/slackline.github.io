@@ -20,6 +20,10 @@ possible to define whether anything "artificial" can mimic it.
 + [[id:761dfe8a-b4e3-440a-af4c-157196cefa7c][Local LLMs]]
 + [[id:f40bf09c-3939-4004-ae7e-50b1cb864b9b][Research Fraud]]
 
+* Methodology
+
++ [[https://ig.ft.com/generative-ai/][Generative AI exists because of the transformer]] - good explainer/infographic from Financial Times.
+
 * Applications
 
 ** Code Generation
