@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       4bf55339-3c19-4794-ad41-1752e77755bd
+:END:
+#+TITLE: VPN
+#+FILETAGS: :vpn:privacy:tracking:
+
+Virtual Private Networks (VPN) allow you to connect to remote networks and all your network traffic passes through it
+encrypted and away from prying eyes. Ideal for reducing [[id:a120ecf3-70bb-46e7-9709-37dc59db883c][Tracking]] and improving privacy.
+
+* Wireguard
+
+Wireguard is a [[id:0e6300c6-7025-4f45-820d-4d9da82b41a6][Linux]] kernel level VPN. I installed and configured it on my VPS and personal derices.
+
+* Services
+
+** ProtonVPN
+
+** TorVPN
+
+[[https://support.torproject.org/tor-vpn/][TorVPN]] routes data through the Tor network. Still in beta as of writing.
