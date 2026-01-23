@@ -143,3 +143,7 @@ check the source linked above for the most up-to-date.
 ** LSP Mode Modules
 + [[https://github.com/fredcamps/lsp-jedi][lsp-jedi]]
 + [[https://github.com/non-Jedi/lsp-julia][lsp-julia]]
+
+** Misc
+
++ [[https://lambdaland.org/posts/2026-01-21_tree-sitter_vs_lsp/][Explainer: Tree-sitter vs. LSP | Lambda Land]]
