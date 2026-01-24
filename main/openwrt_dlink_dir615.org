@@ -1,0 +1,97 @@
+:PROPERTIES:
+:ID:       9460e401-9a76-4853-99e9-16dd4fc79819
+:END:
+#+TITLE: OpenWRT D-Link DIR 615
+#+FILETAGS: :linux:openwrt:networking:
+
+I had a spare version of this router that I passed on to a friend and helped them get up and running with it.
+
+* Hardware Version
+
+The verison of the router is ~D4~, useful when reading the instructions for flashing OpenWRT.
+
+* Flashing OpenWRT
+
+The OpenWRT Wiki has detailed information on the [[https://openwrt.org/toh/d-link/dir-615][D-link DIR615]]. Unfortunately because it is old and only has 4MB Flash
+and 32MB of RAM official support from OpenWRT ended in 2022 with v19.07.10. Fortunately though the firmware and some
+packages are still available.
+
+The instructions are straight-forward and we rebooted the device into recovering mode and could access the WebUI at
+~192.168.0.1~, however we found that trying to flash the device with OpenWRT firmware via the recovery WebUI didn't
+work. It sat there looking like the page was refreshing but never seemed to complete. We tried rebooting and found it
+was the stock D-Link firmware still installed. we found a [[https://wayneoutthere.com/2015/12/30/flash-openwrt-dir-615-d-link-router/][solution]] ([[https://web.archive.org/web/20260124200517/https://wayneoutthere.com/2015/12/30/flash-openwrt-dir-615-d-link-router/][archived]]) that suggested using [[id:c2e33394-c992-4ef4-82a6-e434f98a2a5a][Curl]] to flash the
+firmware.
+
+#+begin_example
+curl -0vF files=@openwrt-ar71xx-dir-615-c1-squashfs-factory.bin http://192.168.0.1/cgi/index
+#+end_example
+
+* Initial Configuration
+
+** Set a ~root~ password
+
+First thing is to /always/ set a ~root~ password which can be done via the LuCi interface under /System >
+Administration/.
+
+** Enable SSH
+
+We enabled SSH but found that we couldn't connect from another host because...
+
+#+begin_example
+Unable to negotiate with 192.168.1.1 port 22: no matching host key type found. Their offer: ssh-rsa
+#+end_example
+
+This is because these days RSA is a bit dated and most systems aren't configured to use it. To resolve this we added the
+following to ~~/.ssh/config~.
+
+#+begin_example
+Host 192.168.1.1
+    User root
+    PubkeyAcceptedAlgorithms +ssh-rsa
+    HostkeyAlgorithms +ssh-rsa
+#+end_example
+
+We generated an RSA key on the local system...
+
+#+begin_example
+ssh-keygen -t rsa -b 4096
+#+end_example
+
+...and copied the ~~/.ssh/id_rsa.pub~ to the relevant field under /System > SSH Keys/.
+
+We were then able to connect to the router via SSH.
+
+* Bridge Mode
+
+Setting Up OpenWRT in Bridge Mode
+
+1. *Access OpenWRT Web Interface* - Connect to your OpenWRT router via a web browser, typically at ~192.168.1.1~ by default.
+   Log in using your credentials.
+
+2. *Disable Firewall* - Navigate to /System > Startup/. Stop the firewall and disable the firewall startup script.
+
+3. *Configure Network Settings* - Go to /Network > Interfaces/. Select the interface you want to bridge (usually the LAN
+   interface). Change the protocol to Static address or DHCP client based on your network setup (obviously set the
+   static IP address if that is what you have opted to use, you will also have to set the Network mask and Gateway IP
+   address if this is what you have chosen).
+
+4. *Set Up Bridge Interface* - In the same interface settings, look for the /Physical Settings/ tab. Check the box for
+   Bridge interfaces. Add the wireless interface (e.g., ~wlan0~) to the bridge.
+
+5. *Configure Wireless Settings* -  Go to /Network > Wireless/. Set the mode to *Access Point (WDS)* if you want to
+   connect to another router wirelessly. Ensure the SSID matches the main router's SSID for seamless connectivity, not
+   essential though if you wish to have your own wireless network to connect to.
+
+6. *Install Required Packages* - Ensure you have the ~relayd~ package installed for better performance in bridge mode.
+    You may need to compile your own firmware if using WDS with older routers.
+
+7. *Save and Reboot* - Save your changes and reboot the router. Test the connection with a device to ensure it connects properly.
+
+** Troubleshooting Tips
+
++ If devices connect and disconnect frequently, check for compatibility issues between routers.
+  Ensure both routers are running a recent version of OpenWRT for best results.
++ If when updating ~opkg update~ fails then check that the router has DNS correctly configured. This may involve setting
+  the Gateway of the device.
+
+* Links
