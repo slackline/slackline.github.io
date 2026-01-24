@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       c2e33394-c992-4ef4-82a6-e434f98a2a5a
+:END:
+#+TITLE: cURL
+#+FILETAGS: :linux:curl:
+
+* Links
+
++ [[https://curl.se/][cURL.se]]
++ [[https://everything.curl.dev/index.html][Everything curl]] - an in-depth book.

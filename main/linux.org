@@ -82,6 +82,7 @@ It can be handy to have a live distribution to carry around and boot as and when
 + [[id:6bc1142d-44aa-450c-b1a1-fa1ff32e0f83][Booklore]]
 + [[id:62ce92c8-2493-4e7f-b32a-196535c42886][Calibre]]
 + [[id:20a2e57f-b3bf-441a-87f5-e4a5c162eb71][coolify]]
++ [[id:c2e33394-c992-4ef4-82a6-e434f98a2a5a][curl]]
 + [[id:9384a236-065e-4384-9b90-2a083736eb17][dd]]
 + [[id:a4af96d2-f895-4a68-9419-d482d2850f4d][direnv]]
 + [[id:13de4e0e-4c14-48c8-897e-42862be8cfc1][discourse]]
