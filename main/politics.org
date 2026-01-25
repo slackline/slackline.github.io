@@ -42,3 +42,4 @@ How social media impacts public perception and biases the narrative.
 
 + [[https://news.sky.com/story/the-x-effect-how-elon-musk-is-boosting-the-british-right-13464487][How the world's richest man is boosting the British right | UK News | Sky News]]
 + [[https://www.authoritarian-stack.info/][The Authoritarian Stack]]
++ [[https://www.science.org/doi/10.1126/science.adz1697][How malicious AI swarms can threaten democracy | Science]]
