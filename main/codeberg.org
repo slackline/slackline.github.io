@@ -16,3 +16,7 @@ contrast [[https://codeberg.org][Codeberg e.V.]] is non-profit (so please make d
 + [[id:516bd2e7-bd0e-4daf-9122-7cf49a082398][Mirroring]]
 
 * Links
+
+** Features
+
++ [[https://itiquette.codeberg.page/posts/codeberg-missing-features/][What I found missing on Codeberg as a new user :: Itiquette]]
