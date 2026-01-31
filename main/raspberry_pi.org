@@ -8,6 +8,9 @@
 
 I have got a number of Raspberry Pis from over the years.  Typically I run [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] on them.
 
++ [[id:e070238f-d5b8-467a-b2b5-9468bc0147b3][Pi_4b]]
++ [[id:d66a102c-9842-4298-b0b1-f9b60d44f132][Pi Zero W]]
+
 * Multiroom Audio
 
 I use [[https://mjaggard.github.io/snapcast/][Snapcast]] ([[https://github.com/badaix/snapcast/][GitHub]]) on my main Pi 4b to serve up audio that is synchronised to other PiZeroW that are hooked up to

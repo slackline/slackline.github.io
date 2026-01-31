@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       d66a102c-9842-4298-b0b1-f9b60d44f132
+:END:
+#+TITLE: Pi Zero W
+#+FILETAGS: :linux:arm:arch:gentoo:raspberrypi:
+
+* Distros
+
+** ArchLinuxARM
+
+** Gentoo
+
+[[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]] has a [[https://wiki.gentoo.org/wiki/Raspberry_Pi_Install_Guide][generic install guide]] for all [[id:69864d74-8ec2-42e4-a227-f824a521a5ce][Raspberry Pi]]'s. You should download your preferred ~ARMv6j~ [[https://www.gentoo.org/downloads/#arm][stage3]] tarball,
+choosing between OpenRC or systemd and whether you want ~hf~ or not (I've not yet worked out the difference!).
+
+* Links
+
+** Distros
+
++ [[https://wiki.gentoo.org/wiki/Raspberry_Pi_Install_Guide][Raspberry Pi Install Guide - Gentoo wiki]]

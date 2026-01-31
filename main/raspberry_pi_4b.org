@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       e070238f-d5b8-467a-b2b5-9468bc0147b3
+:END:
+#+TITLE: Pi 4b
+#+FILETAGS: :linux:arch:gentoo:raspberrypi:
+
+I have a Raspberry Pi 4b model that acts as my NAS, music streaming service and for other tinkering. I've a 5TB USB
+drive attached to it for backing up my main server. It runs [[id:742ab443-39f4-4cf6-a5ca-cb486578ad94][Arch Raspberry Pi 4b]] where you will find most of the
+information about it.
+
+* Distros
+
+** ArchLinuxARM
+
+** Gentoo
+
+You can choose between [[https://www.gentoo.org/downloads/#arm][armv7a]] or [[https://www.gentoo.org/downloads/#arm][arm64]] stage3 files to download. Installation involves copying the stage3 install to a
+microSD card to boot the Pi from.
+
+
+* Links
