@@ -37,3 +37,7 @@ parents don't live too far away.
 
 + [[https://sheffieldswiftnetwork.org/][Sheffield Swift Network – Taking action to help swifts across the city of Sheffield.]]
 + [[https://forms.todon.eu/request-for-masks][Sheffield Mask Bloc Request Form]] ([[https://todon.eu/@sheffieldmaskbloc][@sheffieldmaskbloc@todon.eu]])
+
+** Services
+
++ [[https://www.sheffieldknifesharpening.com/][Sheffield Knife Sharpening]]
