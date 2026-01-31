@@ -11,7 +11,7 @@ and early 00s. These days love discovering new and diverse music via [[https://w
 
 * Artists
 
-If artist is a link its to their ba
+
 ** Acid Pauli
 
 + [[https://acidpauli.bandcamp.com/music][Bandcamp]]
@@ -24,6 +24,13 @@ If artist is a link its to their ba
 ** Bonobo
 
 + [[https://bonobomusic.bandcamp.com/music][Bandcamp]]
+
+** Celtotron
+
+Heard on SomaFM Spacestation their [[https://celtotron.bandcamp.com/album/siebenbr-nnen][Siebenbrünnen]] tune, very cool and mellow.
+
++ [[https://celtotron.bandcamp.com/][Bandcamp]]
++ [[https://celtotron.ch/][Celtotron – Otherworld Sounds]]
 
 ** Empirion
 
