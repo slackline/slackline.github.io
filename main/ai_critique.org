@@ -97,3 +97,7 @@
 ** Advice
 
 + [[https://aiguide.substack.com/p/on-evaluating-cognitive-capabilities][On Evaluating Cognitive Capabilities in Machines (and Other "Alien" Intelligences)]] ([[https://web.archive.org/web/20260114230411/https://aiguide.substack.com/p/on-evaluating-cognitive-capabilities?publication_id=1273940&post_id=183955851&isFreemail=true][Archived]])
+
+** Ethics
+
++ [[https://www.garfieldtech.com/blog/selfish-ai][Selfish AI | GarfieldTech]]
