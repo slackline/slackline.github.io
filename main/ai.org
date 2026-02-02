@@ -205,6 +205,7 @@ also linked [[https://reproducible.cs.princeton.edu/][Leakage and the Reproducib
 + [[https://www.sciencedirect.com/science/article/pii/S2352250X24000502][AI-teaming: Redefining collaboration in the digital era - ScienceDirect]]
 + [[https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5279401][Artificial Intelligence and Actor-Specific Decisions by Teppo Felin, Mari Sako, Jessica Hullman :: SSRN]] ([[https://statmodeling.stat.columbia.edu/2025/06/05/when-are-ai-ml-models-unlikely-to-help-with-decision-making/][blog]])
 + [[https://machinelearning.apple.com/research/illusion-of-thinking][The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity - Apple Machine Learning Research]]
++ [[https://www.nature.com/articles/s41586-025-09962-4#Sec19][A benchmark of expert-level academic questions to assess AI capabilities | Nature]]
 
 ** Reproducibility
 

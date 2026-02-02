@@ -1,0 +1,60 @@
+:PROPERTIES:
+:ID:       9f1ba60e-a255-46ef-ba40-6410b4a89d1d
+:END:
+#+TITLE: Nginx AI Sabotage
+#+FILETAGS: :linux:nginx:ai:
+
+I wanted to block AI bots on my self-hosted sites. Originally I came across [[https://rknight.me/blog/blocking-bots-with-nginx/][Blocking Bots with Nginx by Robb Knight]] this was pretty
+straight-forward. Over time more options have become available, some are listed below but a more permanent record is
+available at [[https://algorithmic-sabotage.gitlab.io/asrg/sabot-in-the-age-of-ai/][Sabot in the Age of AI - ASRG]].
+
+
+* Blocking Bots with Nginx
+
+I didn't have the same strict requirements as the author of the article so I created
+~/etc/nginx/redirect.conf~  and added to it the following entry which is case-insensitive list of AI Bot names from
+[[https://github.com/ai-robots-txt/ai.robots.txt/blob/main/robots.txt][here]].
+
+#+begin_src
+# List from https://github.com/ai-robots-txt/ai.robots.txt/blob/main/robots.txt
+if ($http_user_agent ~* "(AI2Bot|Ai2Bot-Dolma|Amazonbot|anthropic-ai|Applebot|Applebot-Extended|Bytespider|CCBot|ChatGPT-User|Claude-Web|ClaudeBot|cohere-ai|Diffbot|DuckAssistBot|FacebookBot|facebookexternalhit|FriendlyCrawler|Google-Extended|GoogleOther|GoogleOther-Image|GoogleOther-Video|GPTBot|iaskspider/2.0|ICC-Crawler|ImagesiftBot|img2dataset|ISSCyberRiskCrawler|Kangaroo Bot|Meta-ExternalAgent|Meta-ExternalFetcher|OAI-SearchBot|omgili|omgilibot|PerplexityBot|PetalBot|Scrapy|Sidetrade indexer bot|Timpibot|VelenPublicWebCrawler|Webzio-Extended|YouBot)"){
+    return 307 https://ash-speed.hetzner.com/10GB.bin;
+}
+#+end_src
+
+
+Any bot that matches the above "user agent" will get redirected to ~https://ash-speed.hetzner.com/10GB.bin~.
+
+For each ~server{...}~ entry under ~/etc/nginx/nginx.conf~ I then added the following line to include the above file.
+
+#+begin_src
+    include /etc/nginx/redirect.conf
+#+end_src
+
+
+Restart the server and test by changing the "user agent" in any browser to one that matches the above and I was asked if
+I wanted to download a ~10GB.bin~ file.
+
+* Serve AI Bots Junk
+
+Came across [[https://zadzmo.org/code/nepenthes/][Nepenthes]] which infinitely generates junk pages when web-crawlers hit it. Not yet deployed this.
+
+This isn't the only approach its possible [[https://tzovar.as/algorithmic-sabotage-ii/][Algorithmic sabotage for static sites II: Images]] too.
+
+* Codeberg/GitHub static stites
+
+You can also serve up junk on static sites that are hosted on Codeberg/GitHub pages using the approach described in
+[[\[\[https://tzovar.as/algorithmic-sabotage-ssg/\]\[Bastian Greshake Tzovaras · Algorithmic sabotage for static
+sites\]\]][Algorithmic sabotage for static sites]]. It uses the [[https://marcusb.org/hacks/quixotic.html][Quix[]otic]] tool to achieve this.
+
+* Iocaine
+
+A great [[https://vulpinecitrus.info/blog/guarding-git-forge-ai-scrapers/][article]] ([[https://web.archive.org/web/20251212132351/https://vulpinecitrus.info/blog/guarding-git-forge-ai-scrapers/][archive copy]]) showing how to use [[https://iocaine.madhouse-project.org/documentation/3/][Iocaine3]] to serve garbage to crawlers using Nginx for reverse proxying.
+
+* Poison Fountain
+
+[[https://rnsaffn.com/poison3/][Poison Fountain]] is another attempt to feed AI web-crawlers a bunch of junk (see also [[https://www.theregister.com/2026/01/11/industry_insiders_seek_to_poison/][Register article]]).
+
+* Links
+
++ [[https://algorithmic-sabotage.gitlab.io/asrg/sabot-in-the-age-of-ai/][Sabot in the Age of AI]]
