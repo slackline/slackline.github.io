@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       b1120802-44f3-4be1-a665-6b3c1d8397d0
+:END:
+#+TITLE: Travel England:
+#+FILETAGS: :travel:holidays:accommodation:camping:
+
+* Devon & Cornwall
+* Lake District
+
+** Accommodation
+
++ [[https://www.santonbridgeinn.co.uk/][The Bridge Inn]]
+
+** Campsites
+
+*** Borrowdale
+
++ [[https://chapelhousefarmcampsite.co.uk/][Chapel House Farm Campsite]]
+
+*** Langdale
+
++ [[https://www.baysbrownfarmcampsite.co.uk/][Baysbrown Farm Campsite]]
+* Northumberland

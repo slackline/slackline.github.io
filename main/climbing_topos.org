@@ -6,6 +6,8 @@
 #+TITLE: Climbing Topos
 #+FILETAGS: :climbing:topos:
 
+I like to go climbing for my holidays, its a great way to [[id:bae49245-8da7-48fe-9c4d-62adcd18bcfe][travel]] and see the world.
+
 I've a lot of links on my [[https://wiki.nshephard.dev/doku.php?id=climbing:climbing][old wiki]].
 
 * Open Climbing Resources
