@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       d33eefc4-4b08-4f85-a351-3f78308e47a5
+:END:
+#+TITLE: Gentoo Profiles
+#+FILETAGS: :linux:gentoo:admin:
+
+Profiles are a default set of ~USE~ flags and ~@system~ packages that are installed. They reside in
+~/var/db/repos/gentoo/profiles/~ and are selected by symbolically linking ~/etc/portage/make.profile~ to the desired
+profile you wish to use.
+
+I know I don't want to run any 32-bit applications as I've no desire to use WINE nor do I game so I opted for
+~default/linux/amd64/23.0/split-usr/no-multilib~.
+
+* Selecting profiles
+
+#+begin_example
+eselect profile list
+eselect profile set ##
+#+end_example
+
+* Links
+
++ [[https://wiki.gentoo.org/wiki/Profile_(Portage)][Profile (Portage) - Gentoo wiki]]

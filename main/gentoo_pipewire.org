@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       a74c76c0-c4f3-4363-83bb-68d8e4a3d6d7
+:END:
+#+TITLE: Gentoo Pipewire
+#+FILETAGS: :linux:gentoo:pipewire:

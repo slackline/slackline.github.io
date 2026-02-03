@@ -8,10 +8,17 @@
 
 [[https://www.gentoo.org][Gentoo]] is a source based GNU/Linux distribution that I've used since around 2004.
 
++ [[id:d33eefc4-4b08-4f85-a351-3f78308e47a5][Profiles]]
 + [[id:0998b01c-7d0a-4aec-99ec-908374de338c][Portage]]
 + [[id:ad0c4775-cf41-42aa-9f1f-98fe845b2169][Ebuilds]]
 + [[id:83017000-6081-4787-83c3-5e1639684909][Overlays]]
 + [[id:491978ed-7688-4360-9827-695b6d2eb2d1][OpenRC]]
+
+* Specifics
+
+** Audio
+
++ [[id:a74c76c0-c4f3-4363-83bb-68d8e4a3d6d7][Pipewire]]
 
 * Links
 
