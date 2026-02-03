@@ -20,3 +20,8 @@ it with his personal agenda.
 * Links
 
 + [[https://new.fedidb.org/][FediDB]]
+
+** Getting Started
+
++ [[https://hive.blog/fediverse/@rubenstorm/the-fediverse-a-simple-guide-for-everyone][The Fediverse — A Simple Guide for Everyone — Hive]]
++ [[https://blog.elenarossini.com/my-fediverse-starter-guide/][The Future Is Federated: My Fediverse Starter Guide]]
