@@ -39,3 +39,4 @@ You should create an access token on the Forge you are migrating from.
 ** Blogs from Others
 
 + [[https://www.andrlik.org/dispatches/migrating-from-github-to-codeberg/][Migrating my open source repositories to Codeberg · Ministry of Intrigue]]
++ [[https://taggart-tech.com/migrate-to-codeberg/][How and Why to Ditch GitHub: Taggart Tech]]
