@@ -10,3 +10,4 @@
 
 + [[https://git-send-email.io/][Learn to use email with git!]]
 + [[https://en.andros.dev/blog/75beece9/sending-patches-via-email-with-git/][Sending patches via email with Git | Andros Fenollosa]]
++ [[https://gitgitgadget.github.io/][GitGitGadget - contributing git.git patches via GitHub PRs]]
