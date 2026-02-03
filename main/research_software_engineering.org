@@ -143,3 +143,7 @@ Donate your CPU/GPU/RAM (and electricity) to distributed computing projects to r
 
 + [[https://www.nature.com/articles/d41586-025-03196-0][Stop treating code like an afterthought: record, share and value it]]
 + [[https://zenodo.org/records/17453879][Resilient Technologies. Why Decades-Old Tools Define the ROOT of Modern Research Data Management]]
+
+** History
+
++ [[https://www.software.ac.uk/blog/not-so-brief-history-research-software-engineers-0][A not-so-brief history of Research Software Engineers | Software Sustainability Institute]]
