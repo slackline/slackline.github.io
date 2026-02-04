@@ -31,7 +31,7 @@ Main configurations are under the ~[options]~ section.
 
 You can mask packages by adding similar to ~/etc/pacman.conf~
 
-#+begin_example
+#+begin_example conf
 # Pacman won't upgrade packages listed in IgnorePkg and members of IgnoreGroup
 IgnorePkg   = linux-rpi linux-api-headers linux-firmware linux-firmware-amdgpu linux-firmware-atheros linux-firmware-broadcom linux-firmware-cirrus linux
 -firmware-intel linux-firmware-mediatek linux-firmware-nvidia linux-firmware-cirrus linux-firmware-other linux-firmware-radeon linux-firmware-realtek lin
@@ -47,7 +47,7 @@ ux-firmware-whence raspberrypi-bootloader
 You can create hooks by adding them to ~/etc/pacman.d/hooks~. For example the following recompiles R
 packages on upgrade.
 
-#+begin_example
+#+begin_example conf
 [Trigger]
 Operation = Install
 Operation = Upgrade
@@ -66,17 +66,17 @@ Exec = /usr/bin/Rscript -e 'update.packages(ask = FALSE, checkBuilt = TRUE)'
 [[https://wiki.archlinux.org/title/Downgrading_packages][Downgrading packages - ArchWiki]] covers everything in detail. Ideally use the ~pacman~ cache
  which is located at ~~/var/cache/pacman/pkg~ and these can be used to downgrade packages.
 
-#+begin_example
+#+begin_example bash
 pacman -U file://var/cache/pacman/pkg/<package>.pkg.tar.xz
 #+end_example
 
 If the file is not in your local cache you can obtain older versions from the [[https://archive.archlinux.org/][Arch Linux Archive]] or one of its
 [[https://gitlab.archlinux.org/archlinux/infrastructure/-/blob/master/docs/servers.md#archive-mirrors][mirrors]]. You can use ~wget~ to grab these files but remember to get the signature file too.
 
-#+begin_src bash
+#+begin_example bash
 cd /var/cache/pacman/pkg
 wget https://archive.archlinux.org/packages/l/libgit2/libgit2-1%3A1.7.2-1-x86_64.pkg.tar.{zst,zst.sig}
-#+end_src
+#+end_example
 
 To prevent packages from being updated again you should add them in a space delimited list to ~IgnorePkg~ in
 ~/etc/pacman.conf~
@@ -84,12 +84,13 @@ To prevent packages from being updated again you should add them in a space deli
 After downgrading the next ~pacman -Syu~ it will be upgraded. To avoid this mask upgrades of a package by adding the
 following to ~/etc/pacman.conf~...
 
-#+begin_example
+#+begin_example conf
 IgnorePkg = <package>
 #+end_example
 
 If you limit the number of historical packages retained in order to save space then the [[https://wiki.archlinux.org/title/Arch_Linux_Archive][Arch Linux Archive]] can be used
 to obtain older packages (for ArchLinuxARM there are [[http://tardis.tiny-vps.com/aarm][tardis]] and [[https://alaa.ad24.cz/][alaa]]).
+
 * Querying Packages
 
 Find out about the contents of a package with ~pacman -Q~. To search for a package based on a string you can???
@@ -98,24 +99,19 @@ Find out about the contents of a package with ~pacman -Q~. To search for a packa
 
 Straight forward with the ~-R~ flag
 
-#+begin_src bash
+#+begin_example bash
 pacman -R calibre
-#+end_src
+#+end_example
 
-But this doesn't remove any dependencies that were pulled in as requirements to that package. Such orphaned files can be
-removed using the following.
-
-#+begin_src bash
-pacman -Qqtd | pacman -Rns -p
-#+end_src
 
 
 ** Orphaned Packages
 
-The following both achieve the same thing...
+But this doesn't remove any dependencies that were pulled in as requirements to that package which are "orphaned". Such
+orphaned files can be [[https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans)][removed]] using the following.
 
-#+begin_example
-pacman -Qqtd | pacman -Rns -
+#+begin_example bash
+pacman -Qdtq | pacman -Rns -
 pacman -Rns $(pacman -Qdtq)
 #+end_example
 
@@ -144,9 +140,9 @@ If you leave updates long enough you may find that packages that are downloaded 
 means new people have joined the Arch team and signed the packages but your keyring is not up-to-date and so doesn't
 recognise them. To solve this is to update the ~archlinux-keyring~ package first.
 
-#+begin_src bash
+#+begin_example bash
 pacman -S archlinux-keyring
-#+end_src
+#+end_example
 
 * Links
 
