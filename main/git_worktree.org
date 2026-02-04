@@ -94,3 +94,7 @@ remote branch. Only then can you make a ~worktree~ based on it.
 + [[https://git-scm.com/docs/git-worktree][Git - git-worktree Documentation]]
 + [[https://www.nickyt.co/blog/git-worktrees-git-done-right-2p7f/][Git Worktrees: Git Done Right - Just Some Dev]]
 + [[https://futurepixels.co.uk/posts/improving-my-productivity-and-context-switching-with-git-worktrees/][Futurepixels - Improving my productivity and context switching with git worktrees]]
+
+** Tools
+
++ [[https://github.com/abtris/worktree-util][abtris/worktree-util: Simple utility for working with git worktree]]

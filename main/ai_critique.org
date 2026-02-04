@@ -71,6 +71,7 @@
 ** Open Source
 
 + [[https://notmyidea.org/what-ai-is-doing-to-developers.html][What AI is doing to developers - (not) my ideas]]
++ [[https://blog.scientific-python.org/scientific-python/community-considerations-around-ai/][Blog - Community Considerations Around AI Contributions]]
 
 ** Bias
 
