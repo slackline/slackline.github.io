@@ -130,6 +130,7 @@ as the list after the comma is evaluated (but only if a back-tick is used) ([[ht
 + [[https://yt.artemislena.eu/watch?v=x9Qws7ZOksc][Learning Elisp - 1 - intro - Invidious]]
 + [[https://www.youtube.com/playlist?list=PL9KxKa8NpFxKGctwh4-BqjQvdSRhh4NV-][learning-elisp - YouTube]]
 + [[https://www.braveclojure.com/][Learn to Program the World's Most Bodacious Language with Clojure for the Brave and True]]
++ [[https://www.d12frosted.io/posts/2025-12-02-vui-real-ui][vui.el: Building a File Browser - Boris Buliga]]
 
 *** Gavin Freeborn
 
