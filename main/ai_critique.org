@@ -102,3 +102,7 @@
 ** Ethics
 
 + [[https://www.garfieldtech.com/blog/selfish-ai][Selfish AI | GarfieldTech]]
+
+** Balanced
+
++ [[https://mitchellh.com/writing/my-ai-adoption-journey][My AI Adoption Journey – Mitchell Hashimoto]]
