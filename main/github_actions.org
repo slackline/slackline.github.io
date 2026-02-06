@@ -100,3 +100,7 @@ You can check the validity of your GitHub actions using [[https://rhysd.github.i
 + [[https://github.com/marketplace/actions/publish-org-roam-ui][Publish Org-Roam UI]] publish your org-roam UI pages on GitHub from a repository, very neat.
 + [[https://github.com/lowlighter/metrics][Metrics]] generate SVG files summarising metrics on your account, very neat.
 + [[https://github.com/marketplace/actions/debugging-with-tmate][Debugging with tmate · Actions · GitHub Marketplace]]
+
+** Critique
+
++ [[https://www.iankduncan.com/engineering/2026-02-05-github-actions-killing-your-team/][GitHub Actions Is Slowly Killing Your Engineering Team]]
