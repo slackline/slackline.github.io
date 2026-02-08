@@ -89,6 +89,12 @@ and its useful when tests are "flakey" and may sometimes fail regardless, plus i
 
 You can check the validity of your GitHub actions using [[https://rhysd.github.io/actionlint/][ActionLint]].
 
+* Alternatives
+
++ [[id:284615e5-516f-4b04-a3d8-2a5ea9480f8e][Codeberg Woodpecker CI]]
++ [[id:cf855e31-bfa2-4013-9a1e-9e17b2d3b126][Buildkite]]
++ [[id:f0297b0c-a44c-4084-af88-704c34a4226a][Jenkins]]
+
 * Links
 
 ** Actions

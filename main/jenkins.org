@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       f0297b0c-a44c-4084-af88-704c34a4226a
+:END:
+#+TITLE: Jenkins
+#+FILETAGS: :git:continuousintegration:ci:
+
+* Links
+
++ [[https://www.jenkins.io/][Jenkins]]

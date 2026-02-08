@@ -15,6 +15,10 @@ Mastodon is federated software and part of the [[id:8178219c-ef79-4b59-ad51-e420
 + [[id:314efbff-60a0-4898-bcfa-e341deec9bb9][Lists]]
 + [[id:0a2a0723-3be7-4b78-8899-0e5c1752ab50][Unfollowed]] a list of accounts I've unfollowed.
 
+* Follow Button
+
+An easy way to allow people to follow you is the [[https://webintents.net/][WebIntents]].
+
 * On keeping things open
 
 An interesting piece on why Farcebooks entry into the Fediverse is dangerous is here. Its possible to block all of

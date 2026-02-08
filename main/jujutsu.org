@@ -787,3 +787,4 @@ which is one of the best [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] pack
 + [[https://radicle.xyz/2025/08/14/jujutsu-with-radicle][Jujutsu + Radicle = ❤️]]
 + [[https://maddie.wtf/posts/2025-07-21-jujutsu-for-busy-devs][Jujutsu For Busy Devs | maddie, wtf?!]]
 + [[https://www.stavros.io/posts/switch-to-jujutsu-already-a-tutorial/][Switch to Jujutsu already: a tutorial - Stavros' Stuff]]
++ [[https://v5.chriskrycho.com/essays/jj-init/][jj init — Sympolymathesy, by Chris Krycho]]

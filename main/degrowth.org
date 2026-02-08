@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       2dc2cc35-c60b-47a6-b897-65c08eb46345
+:END:
+#+TITLE: Degrowth
+#+FILETAGS: :environment:pollution:degrowth:renewable:energy:capitalism:
+
+* Reading
+
+** Slowdown by Danny Dorling
+
+[[https://www.dannydorling.org/books/SLOWDOWN/][Slowdown]] going into the change in economic output that the western world is experiencing.
+
+* Links
+
++ [[https://degrowthuk.org/][degrowthUK – Networking site for the UK degrowth community]]

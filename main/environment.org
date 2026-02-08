@@ -6,6 +6,8 @@
 #+TITLE: Environment
 #+FILETAGS: :environment:climate:
 
++ [[id:2dc2cc35-c60b-47a6-b897-65c08eb46345][Degrowth]]
+
 * Links
 
 + [[https://www.youtube.com/watch?v=8qZ0hSP_YEU][1 | Greta Thunberg & Kevin Anderson | In search of REAL climate leadership | 2022 Interview - YouTube]]

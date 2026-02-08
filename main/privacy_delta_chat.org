@@ -6,12 +6,28 @@
 #+TITLE: DeltaChat
 #+FILETAGS: :privacy:email:encryption:
 
+[[https://delta.chat/en/][DeltaChat]] is a "/decentralized secure messenger/" that uses email and encryption (Rust PGP to be specific) to send
+messages in near real-time between users. It uses its own Chatmail servers to relay messages.
+
+* Install
+
+** Android
+
+** Gentoo
+
+** Arch
+
+#+begin_example shell
+pacman -Syu deltachat
+#+end_example
+
 * Links
 
 ** Articles
 
 + [[https://cnoceda.com/tecnologia/posts/20250615T191346--delta-chat-and-org-mode__blog_tecnologia.html][Delta Chat and Org-Mode]]
 + [[https://signal-contingency-plan.info/][Signal Contingency Plan]]
++ [[https://blog.feld.me/posts/2025/03/deltachat-is-actually-good-though/][Everything You Think You Know About DeltaChat Is Wrong – Makefile.feld]]
 
 ** Blogs
 
