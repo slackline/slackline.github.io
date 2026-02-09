@@ -17,6 +17,7 @@ here.
 + MySQL/MariaDB
 + [[id:9c9a6c9a-c406-4229-b20c-14e9f2adada5][Linting]]
 + [[id:5c22f1e3-be08-4c7d-8502-65ef76da57cf][ggSQL]]
++ [[id:0dd5075c-fd3d-48ca-a3ff-714dbb7388a8][python_sqlmodel]]
 
 * Links
 

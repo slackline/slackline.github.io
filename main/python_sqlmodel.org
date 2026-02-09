@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       0dd5075c-fd3d-48ca-a3ff-714dbb7388a8
+:END:
+#+TITLE: SQLModel
+#+FILETAGS: :python:sql:
+
+* Links
+
++ [[https://sqlmodel.tiangolo.com/][SQLModel]]
