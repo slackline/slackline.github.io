@@ -43,8 +43,9 @@ interested to give NixOS a whirl though.
 * Disk Management
 
 + [[id:75f53f5a-6be0-4264-99ad-fd7f3cbabcec][Partitioning]]
-+ [[id:d362171c-91ef-4894-ad6a-92d3f8b7c9af][File System]]
++ [[id:d362171c-91ef-4894-ad6a-92d3f8b7c9af][Flie System]]
 + [[id:eaa3b7c6-7c4c-4eb1-9c18-e4fc65c9b1e7][Labelling]]
++
 
 * Shells
 

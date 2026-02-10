@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       3e2c8539-9df7-434b-a53a-d9627bc1a5f7
+:END:
+#+TITLE: RAID - Resize Partitions
+#+FILETAGS: :linux:raid:disk:
+
+Logical partitions using LVM2 can be resized to increase or decrease storage. I found some useful information on
+determining size when resizing [[https://unix.stackexchange.com/questions/41088/how-do-i-determine-the-new-size-for-resize2fs][here]].
+
+* Expand
+
+#+begin_example
+umount /mnt/pics
+e2fsck -f /dev/vg0/pics
+lvextend -L+50G /dev/vg0/pics
+  Extending logical volume pics to 300.00 GiB
+  Logical volume pics successfully resized
+resize2fs /dev/vg0/pics
+#+end_example
+
+* Shrink
+
+#+begin_example
+umount /mnt/pics
+e2fsck -f /dev/vg0/pics
+resize2fs /dev/vg0/pics 200G
+lvreduce -L200G /dev/vg0/pics
+#+end_example
