@@ -12,7 +12,6 @@ this supports the interpretation and re-use of research. Further it promotes the
 to validate and contribute to the research.
 
 + [[id:3df9f7ea-12c0-47ab-97a8-e2b3d6c72606][Open Research : Publishing]]
-
 + [[id:4c9eab3d-4ae2-4f48-a32c-925929fe60bf][Open Research Data]]
 + [[id:8a38a071-9901-4e35-9aec-213a0c65af00][Open Research Software]]
 + [[id:af7ec14e-3022-4d4b-b05d-101e937569e2][Frameworks]]
