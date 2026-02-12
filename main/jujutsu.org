@@ -720,7 +720,7 @@ ready to start a new piece of work you can use ~jj new -m ""~.
 
 *** Editing older commits
 
-In Git this can be done either by adding a ~git commit --fixup~ or using ~git rebase -i~ tp interactively squash
+In Git this can be done either by adding a ~git commit --fixup~ or using ~git rebase -i~ to interactively squash
 commits. In ~jj~ though we can use ~jj new -B @ -m "a new message"~ and what this does is add a new commit ~-B~efore the
 ~@~ commit (other references can be used if you want to modify a commit further back in the commit history). You get for
 free a rebase of descendant commits, of course conflicts can arise but this command /will/ always complete without
@@ -737,7 +737,8 @@ You can edit earlier commits with ~jj edit @-~ for the previous commit or ~jj ed
 Being an Emacs user I naturally wanted to use Jujutsu via Emacs and was hoping for a [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] equivalent. Being
 considerably newer there isn't anything quite as powerful as Magit just yet but there is work in progress in the form of
 [[https://git.sr.ht/~puercopop/jujutsushi][jujutsushi - A emacs interface to jujutsu]] and  [[https://github.com/bennyandresen/jujutsu.el][jujutsu.el: An Emacs interface for jujutsu]] (althought the former's author
-has stated they have deprioritized development in light of the later, see [[https://www.reddit.com/r/emacs/comments/1hbmpub/comment/m1inz3i/][here]]).
+has stated they have deprioritized development in light of the later, see [[https://www.reddit.com/r/emacs/comments/1hbmpub/comment/m1inz3i/][here]]). More recently  [[https://github.com/0WD0/majutsu][majutsu]] has appeared on
+my radar claiming to be "/Majutsu! [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] for jujutsu/" so I'll be exploring that.
 
 The [[https://github.com/jj-vcs/jj/wiki/][wiki]] is a useful resource on IDE integration.
 
@@ -775,6 +776,7 @@ which is one of the best [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] pack
 + [[https://git.sr.ht/~puercopop/jujutsushi][jujutsushi - A emacs interface to jujutsu]]
 + [[https://github.com/bennyandresen/jujutsu.el][jujutsu.el: An Emacs interface for jujutsu, inspired by magit and humbly not attempting to match it in scope.]]
 + [[https://codeberg.org/vifon/vc-jj.el][jj backend]]
++ [[https://github.com/0WD0/majutsu][majutsu: Majutsu! Magit for jujutsu]]
 
 ** Blogs
 
