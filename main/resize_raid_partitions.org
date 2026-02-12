@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       3e2c8539-9df7-434b-a53a-d9627bc1a5f7
 :END:
-#+TITLE: RAID - Resize Partitions
+#+TITLE: Resize Logical Volumes on RAID
 #+FILETAGS: :linux:raid:disk:
 
 Logical partitions using LVM2 can be resized to increase or decrease storage. I found some useful information on
