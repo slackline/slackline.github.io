@@ -88,6 +88,10 @@
   "generative AI" as a tool to help you code.
 + [[https://skybert.net/aifail/dont-fear-the-pointer/][Don't Fear the Pointer | skybert.net]] - how the author didn't learn from the generative AI example.
 
+** Meta
+
++ [[https://github.com/andrew/nesbitt.io/blob/master/oss-is-going-just-great.md][nesbitt.io/oss-is-going-just-great.md at master · andrew/nesbitt.io]]
+
 ** Bias
 
 + [[https://www.sciencedirect.com/science/article/pii/S2666379125006007][Contrastive learning enhances fairness in pathology artificial intelligence systems - ScienceDirect]] ([[https://futurism.com/health-medicine/ai-cancer-diagnostic-bias][Doctors Catch
