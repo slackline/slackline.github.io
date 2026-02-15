@@ -9,6 +9,8 @@
 There is a /lot/ out there. If I use something and have found the time to write about the following links take you to
 that page, if not they take you to the projects site.
 
+There is also the issue of which [[id:143e393e-ab25-48ea-9aa5-908a68965839][Cloud Services]] we as individuals and our government services/institutions should use.
+
 * OpenSource Software
 
 ** Essentials
@@ -96,6 +98,8 @@ practical tools and approaches for evaluating funding outcomes.
 
 + [[https://www.eff.org/][Electronic Frontier Foundation | Defending your rights in the digital world]]
 + [[https://unite.un.org/news/osi-first-endorse-united-nations-open-source-principles][The OSI First to Endorse United Nations Open Source Principles | Office of Information and Communications Technology]]
++ [[https://fosdem.org/2026/schedule/event/7YMJST-how-to-lead-change-to-open-source/][FOSDEM 2026 - From Vendor Lock-in to Resilient Digital Ecosystems: Leading Change in Europe's Public Digital
+  Infrastructure]]
 
 ** Lists of Software
 

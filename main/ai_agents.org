@@ -23,6 +23,16 @@ internet, angers everyone who is involuntarily subjected to it, and destroys our
 future, but a creepy dystopia that this project wants nothing to do with.
 #+end_quote
 
+* Cognitive Debt
+
+The risk of using AI Agents is that instead of incurring technical debt programmers incur [[https://margaretstorey.com/blog/2026/02/09/cognitive-debt/][Cognitive Debt]], and it can be
+found as having occurred to at least [[https://simonwillison.net/2026/Feb/15/cognitive-debt/][one person]].
+
+* OpenClaw
+
++ [[https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me/][An AI Agent Published a Hit Piece on Me – The Shamblog]]
++ [[https://socket.dev/blog/ai-agent-lands-prs-in-major-oss-projects-targets-maintainers-via-cold-outreach][AI Agent Lands PRs in Major OSS Projects, Targets Maintainer...]]
+
 * Links
 
 + [[https://ferd.ca/the-gap-through-which-we-praise-the-machine.html][The Gap Through Which We Praise the Machine]]
@@ -35,4 +45,3 @@ future, but a creepy dystopia that this project wants nothing to do with.
 + [[https://www.technologyreview.com/2025/12/15/1128352/rise-of-ai-coding-developers-2026/][AI coding is now everywhere. But not everyone is convinced. | MIT Technology Review]] ([[https://web.archive.org/web/20251221210517/https://www.technologyreview.com/2025/12/15/1128352/rise-of-ai-coding-developers-2026/][archive]])
 + [[https://mikelovesrobots.substack.com/p/wheres-the-shovelware-why-ai-coding][Where's the Shovelware? Why AI Coding Claims Don't Add Up]] ([[https://web.archive.org/web/20251221210914/https://mikelovesrobots.substack.com/p/wheres-the-shovelware-why-ai-coding][archive]])
 + [[https://www.youtube.com/watch?v=0ANECpNdt-4][39C3 - AI Agent, AI Spy]]
-+ [[https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me/][An AI Agent Published a Hit Piece on Me – The Shamblog]]

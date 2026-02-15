@@ -1,0 +1,61 @@
+:PROPERTIES:
+:ID:       143e393e-ab25-48ea-9aa5-908a68965839
+:END:
+#+TITLE: Cloud Services
+#+FILETAGS: :cloud:online:services:privacy:
+
+Increasingly companies and government agencies are shying away from big US companies.
+
+* Examples
+
+Various examples of government organisations and universities that have switched.
+
+- [[https://www.zdnet.com/article/this-european-military-just-ditched-microsoft-for-open-source-libreoffice-heres-why/][Austrian military just ditched Microsoft for open-source LibreOffice - here's why | ZDNET]]
+- [[https://itsfoss.com/news/denmark-road-traffic-authority-ditches-microsoft/][Denmark Begins its Exit from Microsoft --- and This is Just the Beginning]]
+- [[https://itsfoss.com/news/german-state-ditch-microsoft/][Hurray! This German State Decides to Save €15 Million Each Year By Kicking Out Microsoft for Open Source]]
+- [[https://itsfoss.com/news/privatim-declares-international-cloud-unsuitable/][Swiss Data Protection Group Says US Cloud Giants Can't Meet Privacy Standards]]
+- [[https://www.lyon.fr/actualite/action-municipale/la-ville-de-lyon-renforce-sa-souverainete-numerique][The City of Lyon strengthens its digital sovereignty | Ville de Lyon]]
+- [[https://www.euractiv.com/news/international-criminal-court-to-ditch-microsoft-office-for-european-open-source-alternative/][International Criminal Court to ditch Microsoft Office for European open source alternative | Euractiv]]
+
+** Universities
+
+- [[https://techplanet.today/post/breaking-free-from-big-tech-can-european-universities-achieve-digital-independence][Breaking Free from Big Tech: Can European Universities Achieve Digital Independence]]
+- [[https://delta.tudelft.nl/en/article/can-universities-keep-control-over-their-data-in-the-cloud-and-if-so-how][Can universities keep control over their data in the cloud and if so, how?]]
+- [[https://www.uva.nl/en/about-the-uva/policy-and-regulations/general/preserving-digital-sovereignty-of-universities-and-researchers/preserving-digital-sovereignty-of-universities-and-researchers.html#1-What-does-digital-sovereignty-mean-for-universities][Information Law and the Digital Transformation of the University]] addresses key challenges the European university
+  sector faces today
+- [[https://www.apereo.org/about][The Apereo Foundation]] is a global non-profit advancing open source software in service of higher education
+- [[https://open-source-alliance.erasmuswithoutpaper.eu/][The Open Source University Alliance Initiative]] is an initiative of the Erasmus Without Paper project (EWP) that aims
+  to let all Higher Education Institutions (HEIs) in Europe face the challenges of the information society
+- [[https://www.surf.nl/en/news/education-and-research-move-forward-with-nextcloud][SURF member organisations]]
+- [[https://rsecon25.society-rse.org/][RSECon25]],the annual conference had a workshop on /Exploring Open Source Culture in Academia/ and a Birds of a Feather
+  session on /Discovering Academic Open Source : Universities don't know how much they contribute to the OS ecosystem,
+  why is this and what can we do about it?/ which might be worth reviewing (summaries may appear on [[https://zenodo.org/communities/rsecon25/records][Zenodo]])
+
+*** Switched
+- [[https://indico.cern.ch/event/854707/contributions/3680443/attachments/1975250/3287350/UNCloud_-_CS3_-_27012019.pdf][University of Nantes]]
+- [[https://hal.science/hal-04807089v1][University of Grenoble Alpes]]
+- [[https://nextcloud.com/blog/sorbonne-university-implements-on-premise-solution-with-nextcloud/][Sorbonne University]]
+- [[https://www.lemondeinformatique.fr/actualites/lire-l-universite-de-lille-mise-sur-le-collaboratif-open-source-pour-la-mobilite-78081.html][The University of Lille]]
+- [[https://hochschulcloud.nrw/en/][Universities in North Rhine-Westphalia]]
+- [[https://owncloud.com/news/lower-saxonys-universities-build-up-their-own-cloud-infrastructure/][Universities of Lower Saxony]]
+- [[https://www.tu.berlin/campusmanagement/angebot/tubcloud][TU Berlin]]
+- [[https://nextcloud.com/blog/meiji-university-in-japan-streamlines-file-sharing-and-collaboration-with-nextcloud-hub/][Meiji University]]
+- [[https://nextcloud.com/blog/nextcloud-and-onlyoffice-improve-user-storage-mobility-and-document-collaboration-in-north-west-university/][North-West University]]
+- [[https://www.preprints.org/manuscript/202310.1763][Technological University of Havana]]
+
+
+* Links
+
+- [[https://unite.un.org/en/news/sixteen-organizations-endorse-un-open-source-principles][Sixteen Organizations Endorse the UN Open Source Principles | Office of Information and Communications Technology]]
+
+- [[https://pluralistic.net/2026/01/01/39c3/][The Post-American Internet]] - text from a talk by Cory Doctrow at 39C3 conference on how and why we shouldn't rely on
+  US tech companies. This might actually be a useful point to make as to why we should adopt self-hosted Open Source
+  tools as anything hosted by a US company *is not private*, ergo "Trusted Research Environments" may not be as secure
+  as thought.
+- [[https://aol.codeberg.page/eci/][✨ Trustworthy Technology]] another initiative to move away from using cloud services.
+- [[https://www.cscce.org/category/cscce-cop/tools-trials/][Tools Trials Archives - CSCCE]] series of trials looking at Open Source alternatives from the /Centre for Scientific
+  Collaboration and Community Engagement/.
+- [[https://www.openrightsgroup.org/publications/digital-sovereignty-briefing-on-the-cybersecurity-bill/][Digital Sovereignty Briefing on the Cybersecurity Bill | Open Rights Group]] - how an why the /Cybersecurity and
+  Resilience/ bill should be revised to address digital sovereignty and move away from US based services.
+- [[https://di.day/][Digital Independence Day]] encouraging individuals to switch away from BIG tech companies (site needs translating,
+  Firefox has this built-in on the right of the address bar).

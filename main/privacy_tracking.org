@@ -7,10 +7,23 @@
 #+FILETAGS: :privacy:tracking:
 
 + [[id:4bf55339-3c19-4794-ad41-1752e77755bd][Virtual Private Networks]]
++ [[id:143e393e-ab25-48ea-9aa5-908a68965839][Cloud Services]]
+
+* uBlockOrigin
+
+** AI Blocklist
+
+A big list of AI services to block is [[https://github.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist][maintained]]. Instructions to follow are easy.
+
+*** Adding to AdBlock
+
+*** Adding to OpenWRT
+
 
 * Links
 
 + [[https://takebackctrl.org/][Take Back CTRL]]
++ [[https://karpathy.bearblog.dev/digital-hygiene/][Digital hygiene | karpathy]]
 
 ** Meta Tracking
 
