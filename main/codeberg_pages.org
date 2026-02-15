@@ -46,3 +46,7 @@ Another useful article is [[https://docs.codeberg.org/integrations/read-the-docs
 
 + [[https://andre601.ch/blog/2023/11-05-using-codeberg-pages/][How to use Codeberg Pages for MkDocs - Andre_601]]
 + [[https://docs.codeberg.org/integrations/read-the-docs/][Integrating with Read the Docs | Codeberg Documentation]]
+
+** Misc
+
++ [[https://wwwobble.org/][wwwobble.org]] - drag and drop to create websites that can be exported to Codeberg Pages
