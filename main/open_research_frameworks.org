@@ -12,7 +12,12 @@
 * EOSC EU Node
 
 The EU make hosted and open collaborative notebooks available. Read [[id:3787c568-fdb1-4b70-a4c2-c49b77c9cd09][more]].
+
 * Links
 
 + [[https://osf.io/][OpenScienceFramework (OSF)]]
 + [[https://www.cos.io/][Center for Open Science]]
+
+** Misc
+
++ [[https://academy.amnesty.org/learn/courses/437/dangerous-questions-why-academic-freedom-matters]["Dangerous" Questions, Why Academic Freedom Matters - Amnesty Human Rights Academy]]
