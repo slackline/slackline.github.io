@@ -120,6 +120,11 @@ you.
 
 Another useful tool for this is [[https://github.com/toshism/org-super-links-graph][toshism/org-super-links-graph]].
 
+* Org heading network
+
+[[https://codeberg.org/publicvoit/orgheadingnetwork][Org Heading Network]] is another take on visualising your Org notes. its a [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] package that outputs to self-contained
+HTML files.
+
 * Links
 
 ** Reference
