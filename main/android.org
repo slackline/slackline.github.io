@@ -97,4 +97,6 @@ Old phones still have value, they are inexpensive and cheap (you already own the
 
 + [[https://www.theregister.com/2025/08/26/android_developer_verification_sideloading/][Google to restrict Android app sideloading to verified devs • The Register]]
 + [[https://f-droid.org/2025/09/29/google-developer-registration-decree.html][F-Droid and Google's Developer Registration Decree | F-Droid - Free and Open Source Android App Repository]]
-+ [[https://android-developers.googleblog.com/2025/11/android-developer-verification-early.html][Android Developers Blog: Android developer verification: Early access starts now as we continue to build with your feedback]]
++ [[https://android-developers.googleblog.com/2025/11/android-developer-verification-early.html][Android Developers Blog: Android developer verification: Early access starts now as we continue to build with your
+  feedback]]
++ [[https://keepandroidopen.org/][Keep Android Open]]
