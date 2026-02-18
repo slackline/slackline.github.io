@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       e239c32d-7e21-40a6-8e1e-b7b08b0c5b98
+:END:
+#+TITLE: Biology
+#+FILETAGS: :biology:evolution:life:
+
+Biology, the study of life, fascinated me from an early age. I studied Zoology and [[id:9aa32f65-144f-4c52-aab6-afebd17c1e5b][Genetics]] at University because I was
+enthralled by [[id:fdd7fac9-d26d-4338-b9f0-a3748fda7c54][Evolution]] and its many facets.
+
+* Links
+
+** Slime Moulds
+
++ [[https://knowablemagazine.org/content/article/living-world/2026/learning-memory-learning-physarum-polycephalum-slime-mold][The curious life of a clever slime mold | Knowable Magazine]]
