@@ -129,3 +129,7 @@ A lot of FOSS respects and protects your [[id:b5000932-0fec-4353-acc4-0cb02127c9
 
 + [[https://www.youtube.com/watch?v=WEb_YL1K1Qg][UNIX: A History and a Memoir by Brian Kernighan - YouTube]]
 + [[https://www.youtube.com/watch?v=EY6q5dv_B-o][Ken Thompson interviewed by Brian Kernighan at VCF East 2019 - YouTube]]
+
+** History
+
++ [[https://www.theregister.com/2026/02/18/linus_torvalds_and_friends/][Linus Torvalds tells The Reg how Linux evolved from solo act • The Register]]
