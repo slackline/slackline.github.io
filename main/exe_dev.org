@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       61512148-5316-4bbe-ba06-359020d914af
+:END:
+#+TITLE: exe.dev
+#+FILETAGS: :container:vm:ssh:
+
+ [[https://exe.dev/][exe.dev]] provides VMs over [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]]. You [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] in and request a virtual machine and it gets spun up.
+
+
+* Links
+
++ [[https://exe.dev/][exe.dev]]

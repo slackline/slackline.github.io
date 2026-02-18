@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       0616f972-0d62-4b30-a105-5f5d827cacc1
+:END:
+#+TITLE: Virtual Machines
+#+FILETAGS: :vm:virtual:containers:docker:podman:
+
+
++ [[id:61512148-5316-4bbe-ba06-359020d914af][exe.dev]]
+
+
+* Virtual Private Servers
+
+I use a VPS from [[id:e1dcf5fc-2125-455d-b800-d3f1b318c8c9][OVH]].
