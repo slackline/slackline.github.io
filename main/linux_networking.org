@@ -13,6 +13,12 @@ they shouldn't have to.
 This page details some of the issues I've encountered and in most cases solved.
 
 * Examples
+** Login to Public Wifi
+
+A lot of public WiFi services redirect you to a login page, this doesn't happen under [[id:0e6300c6-7025-4f45-820d-4d9da82b41a6][Linux]], a useful tip I found that
+worked on a number of occassions was to point your browser at ~routerlogin.net~ which is typically the page that many
+systems redirect you to. Et voila! You can register and login. Sometimes using a DNS server such as ~8.8.8.8~ will also
+work.
 
 ** Forticlient VPN at University of Sheffield
 
