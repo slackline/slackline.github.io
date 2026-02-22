@@ -1,3 +1,5 @@
+
+
 :PROPERTIES:
 :ID:       a120ecf3-70bb-46e7-9709-37dc59db883c
 :mtime:    20251101122550 20251021220436 20251017002846 20250724130645 20250624075952 20250611145118
@@ -29,7 +31,8 @@ A big list of AI services to block is [[https://github.com/laylavish/uBlockOrigi
 
 + [[https://www.zeropartydata.es/p/localhost-tracking-explained-it-could]["Localhost tracking" explained]] - how Meta track people
 + [[https://www.wired.com/story/what-is-browser-fingerprinting/][Browser Fingerprinting: What Your Browser Is Telling Everyone About You | WIRED]]
-
++ [[https://vmfunc.re/blog/persona/][the watchers: how openai, the US government, and persona built an identity surveillance machine that files reports on
+  you to the feds]]
 
 ** Check your Browser
 
