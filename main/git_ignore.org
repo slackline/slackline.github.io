@@ -35,6 +35,9 @@ OSX adds a ~.DS_Store~ file to every directory and this should therefore be incl
 There are some online generators that use templates for different languages such as [[https://gitignore.io][gitignore.io]] and [[https://codeberg.org/dazfuller/snub][~snub~]] is a command
 line interface tool that uses these templates.
 
+** autogitignore
+
+[[https://github.com/Bilal-AKAG/autogitignore][autogitignore]] is a command line tool for searching, previewing and generating ~.gitignore~ files from  [[https://gitignore.io][gitignore.io]].
 * Links
 
 + [[https://blog.sugoi.be/posts/2025/stop-polluting-gitignore-files/][Stop Polluting .Gitignore Files]]
