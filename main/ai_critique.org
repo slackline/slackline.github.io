@@ -6,8 +6,9 @@
 #+TITLE: AI Critique
 #+FILETAGS: :ai:critique:
 
-* Links
 
+* Links
++ <2026-02-22 Sun> [[https://tante.cc/2026/02/20/acting-ethical-in-an-imperfect-world/][Acting ethically in an imperfect world]]
 + [[https://writings.stephenwolfram.com/2023/01/wolframalpha-as-the-way-to-bring-computational-knowledge-superpowers-to-chatgpt/][Wolfram|Alpha as the Way to Bring Computational Knowledge Superpowers to ChatGPT—Stephen Wolfram Writings]]
 + [[https://www.theguardian.com/technology/2023/feb/08/biased-ai-algorithms-racy-women-bodies][‘There is no standard’: investigation finds AI algorithms objectify women’s bodies | Artificial intelligence (AI) | The Guardian]]
 + [[https://www.reddit.com/r/ChatGPT/comments/10s79h2/new_jailbreak_just_dropped/][New jailbreak just dropped! : ChatGPT]]
