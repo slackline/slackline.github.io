@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       cad1e8c9-3573-4714-8821-2c306d9db27f
+:END:
+#+TITLE: Git Bare Repositories
+#+FILETAGS: :git:clone:repositories:
+
+* Links
+
++ [[https://alexwlchan.net/2026/bare-git/][The bare minimum for syncing Git repos – alexwlchan]]
