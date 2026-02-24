@@ -40,3 +40,8 @@ There are a number of [[https://wiki.gentoo.org/wiki/Useful_Portage_tools][helpe
 #+begin_src bash
   emerge -av eix genlop gentoolkit eselect eclean-kernel eix-sync
 #+end_src
+
+* emacs-portage
+
+There is [[https://gitlab.com/akater/emacs-portage][emacs-portage]] which provides a way of running [[id:0998b01c-7d0a-4aec-99ec-908374de338c][Gentoo Portage]] commands from Emacs via [[id:b9961a9e-e833-4160-aa8f-1c69b9cbb397][Emacs TRAMP]] ability to run
+commands as ~su~

@@ -18,7 +18,9 @@ use ~git stash~ before switching.
 
 If you don't explicitly include a ~repository_name~ when cloning with the ~--bare~ option then the resulting directory
 to which the clone is made carries the ~.git~ suffix. There isn't much in this repository, its pretty much the contents
-of the ~.git~ directory with the configuration, ~objects~ and so forth
+of the ~.git~ directory with the configuration, ~objects~ and so forth.
+
+With [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] you can do this with ~magit-clone-bare~
 
 #+begin_src sh
   git clone --bare <repository_url> <repository_name>

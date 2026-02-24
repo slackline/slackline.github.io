@@ -60,3 +60,8 @@ Privacy is important, it underpins free speech, but many chose to sacrifice thei
 ** Age Verification
 
 + [[https://www.eff.org/deeplinks/2025/12/10-not-so-hidden-dangers-age-verification][10 (Not So) Hidden Dangers of Age Verification | Electronic Frontier Foundation]]
+
+** iOS
+
++ [[https://www.youtube.com/watch?v=1V-MEDzZEjY][You NEED to Change These iPhone Settings!]]
++ [[https://www.youtube.com/watch?v=JX26Va3hCes][How to Take Back Your Privacy on iPhone - YouTube]]
