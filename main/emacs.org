@@ -19,6 +19,7 @@ getting started [[id:36a83dd6-7535-43a9-9b68-15dc135c86fd][Emacs Getting Started
 + [[id:8b6ba3c1-18f2-4cc4-ae5c-97c31b7cec28][Citations]]
 + [[id:6155515e-469b-4e2a-ad23-c0fbd06e32e3][Debugging]]
 + [[id:e2a2ead1-4348-4cc6-9ef1-dd96777aaec8][Dired]]
++ [[id:2d3d4557-2f46-4082-bb09-54063c379c5e][Ediff]]
 + [[id:00092001-9bac-4434-b098-a72d6b00385a][Emacs Editing]]
 + [[id:efe4e098-d7e6-42cd-90bd-234a25806c3a][Eglot]]
 + [[id:35c72a31-2beb-4dcf-98c9-0254b05bcb86][EIN]]

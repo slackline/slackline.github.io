@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       2d3d4557-2f46-4082-bb09-54063c379c5e
+:END:
+#+TITLE: Emacs Ediff
+#+FILETAGS: :emacs:diff:
+
+* Links
+
++ [[https://www.emacs.dyerdwelling.family/emacs/20250108140933-emacs--ediff-comparing-regions/][Ediff Comparing Regions]]
