@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       10b653a5-d2db-4b74-bb87-143676c49092
+:END:
+#+TITLE: Comics
+#+FILETAGS: :comics:
+
+* Online
+
++ [[https://xkcd.com/][XKCD]]
++ [[https://theoatmeal.com/comics/][The Oatmeal - Comics]]
