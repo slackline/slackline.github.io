@@ -12,10 +12,16 @@
 2. Whilst waiting download the corresponding ~boot.img~ to your phone from the LineageOS [[https://download.lineageos.org/devices/nio/builds][download]] page.
 3. Install the new LineageOS image from the updater.
 4. Once installed reboot, you will have lost ~root~
-4. Start Magisk and follow the instructions to the letter to patch the ~boot.img~, copy back to your computer and flash
+4. Start Magisk and follow the [[https://topjohnwu.github.io/Magisk/install.html][instructions]] to the letter to patch the ~boot.img~, copy back to your computer and flash
    using ~fastboot~. **NB** Rebooting into ~fastbootd~ mode is _not_ what is required, rather it is the ~bootloader~
    mode which can be reached via ~Volume Down~ + ~Power~  when the phone is switched off or via ~adb -d reboot
    bootloader~. Once in ~bootloader~ mode flash with ~fastboot flash boot ./magisk_patched-<something>.img~
+
+Other things to note...
+
++ I often rename Magisk to hide it, I opt for the default app which reverses the spelling, i.e. "Ksigam".
++ I found on one occasion that I had reinstall Magisk before I could patch the boot image and before the newly flashed
+  boot image showed as rooted within Magisk I had to uninstall "Ksigam" (apps still detected root so it had worked).
 
 
 * Upgrading
