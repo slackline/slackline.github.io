@@ -24,6 +24,12 @@ possible to define whether anything "artificial" can mimic it.
 
 + [[https://ig.ft.com/generative-ai/][Generative AI exists because of the transformer]] - good explainer/infographic from Financial Times.
 
+** MicroGPT
+
++ [[https://gist.github.com/karpathy/8627fe009c40f57531cb18360106ce95][microgpt]] - source
++ [[https://karpathy.github.io/2026/02/12/microgpt/][microgpt]] - authors blog
++ [[https://growingswe.com/blog/microgpt][MicroGPT explained interactively | growingSWE]]
+
 * Applications
 
 ** Code Generation
