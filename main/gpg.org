@@ -329,7 +329,7 @@ remove the socket on the remote. How you do this will depend on your operating s
 edit ~/etc/ssh/sshd_config~ directly. If you're on [[id:c345f901-5a1f-4868-b8bf-bc352554ee58][NixOS]] you need to add it to via ~services.openssh.extraConfig~ since
 it is not an explicitly defined configuration option.
 
-* Yubikey and OpenPGP
+* [[id:95d35596-cbf9-408a-b296-d3c79019cfd1][Yubikey]] and OpenPGP
 
 [[https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP][Using Your YubiKey with OpenPGP – Yubico]] is the official documentation and worth reading in detail first, and then
 again. Another very useful article is the [[https://docs.yubikey.wiki/v/gpg/import-to-yubikey/with-commandline][Yubikey Wiki - Commandline]]
