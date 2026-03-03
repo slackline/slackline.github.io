@@ -1,5 +1,3 @@
-
-
 :PROPERTIES:
 :ID:       a120ecf3-70bb-46e7-9709-37dc59db883c
 :mtime:    20251101122550 20251021220436 20251017002846 20250724130645 20250624075952 20250611145118
@@ -21,6 +19,9 @@ A big list of AI services to block is [[https://github.com/laylavish/uBlockOrigi
 
 *** Adding to OpenWRT
 
+* Browser Fingerprinting
+
+You're browser can reveal a lot about you, see  [[https://amiunique.org/fingerprint][My Fingerprint- Am I Unique ?]]
 
 * Links
 
