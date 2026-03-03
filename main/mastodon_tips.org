@@ -21,3 +21,7 @@ A simple app for splitting longer posts is [[https://splinter.hastily.cc/][Splin
 * Reminders
 
 [[https://mstdn.social/@remindme][@remindme@mstdn.social]] can be used to create reminders for various things.
+
+* Sharing
+
++ [[https://blog.joinmastodon.org/2026/03/a-new-share-button/][A new share button]]
