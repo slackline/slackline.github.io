@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       16d45830-b710-4b3b-b2ae-4d6d18e763b2
+:END:
+#+TITLE: Emacs Speaks R
+#+FILETAGS: :emacs:r:statistics:
+
+* Links
+
++ [[https://blog.teoten.com/posts/2026/why_i_created_esr/][Why did I create ESR (my thoughts on ESS) | Teoten's blog]]
++ [[https://codeberg.org/teoten/esr][teoten/esr: R's Tree Sitter Major Mode - Codeberg.org]]

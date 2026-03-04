@@ -36,6 +36,22 @@ There are two modes as mentioned, ~read~ and ~string~, they seem to differ in ho
 | ~read~   | ~\\( \\)~         |
 | ~string~ | ~\( \)~           |
 
+** Regex replacements as diffs
+
+Thanks to [[https://emacsredux.com/blog/2026/02/28/preview-regex-replacements-as-diffs/][Preview Regex Replacements as
+Diffs | Emacs Redux]] I now know how to view regex exchanges across single and multiple files (including from
+[[id:e2a2ead1-4348-4cc6-9ef1-dd96777aaec8][Emacs Dired]]) as [[id:2d3d4557-2f46-4082-bb09-54063c379c5e][Emacs Ediff]]
+which is a very neat way of being able to refactor a large code base.
+
+- ~M-x replace-regexp-as-diff~ for a single buffer
+- ~M-x multi-file-replace-regex-as-diff~ prompts for a list of files to search and replace
+- After marking files in [[id:e2a2ead1-4348-4cc6-9ef1-dd96777aaec8][Emacs Dired]] with ~m~ run ~M-x
+  dired-do-replace-regexp-as-diff~ and off you go.
+
+This might even get hooked into [[id:580157bf-0313-4c4e-88d3-cd443ddbab62][Emacs Projectile]] at some point which would
+be neat!
+
 * Links
 
 + [[https://emacs.stackexchange.com/a/51190/10100][Using re-builder in query-replace]]
++ [[https://emacsredux.com/blog/2026/02/28/preview-regex-replacements-as-diffs/][Preview Regex Replacements as Diffs | Emacs Redux]]
