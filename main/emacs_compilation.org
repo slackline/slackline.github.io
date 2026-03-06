@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       18bb7397-ae26-4607-bbe2-6e54f338cd86
+:END:
+#+TITLE: Emacs Compilation Mode
+#+FILETAGS: :emacs:compilation:mode:
+
+* Links
+
++ [[https://emacsredux.com/blog/2026/03/06/mastering-compilation-mode/][Mastering Compilation Mode | Emacs Redux]]

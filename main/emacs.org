@@ -17,6 +17,7 @@ getting started [[id:36a83dd6-7535-43a9-9b68-15dc135c86fd][Emacs Getting Started
 + [[id:126bd875-23f1-4f06-b96a-b832f410fb12][AWS]]
 + [[id:4451966f-b810-4a9d-905b-e2b682578c62][Buffers]]
 + [[id:8b6ba3c1-18f2-4cc4-ae5c-97c31b7cec28][Citations]]
++ [[id:18bb7397-ae26-4607-bbe2-6e54f338cd86][Compilation]]
 + [[id:6155515e-469b-4e2a-ad23-c0fbd06e32e3][Debugging]]
 + [[id:e2a2ead1-4348-4cc6-9ef1-dd96777aaec8][Dired]]
 + [[id:2d3d4557-2f46-4082-bb09-54063c379c5e][Ediff]]
