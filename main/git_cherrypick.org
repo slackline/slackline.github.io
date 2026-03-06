@@ -7,7 +7,7 @@
 #+FILETAGS: :git:vc:versioncontrol:magit:
 
 Cherry picking allows you to select specific commits, or a range of commits from one branch and apply them to your
-current branch.
+current branch. Of course you can do this with [[id:52ed221e-c7a3-44f5-8b74-872b22373a2e][Magit Cherry Pick]]!
 
 * Individual Files
 
