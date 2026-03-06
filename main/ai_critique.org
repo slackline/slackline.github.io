@@ -8,6 +8,8 @@
 
 
 * Links
++ <2026-03-04 Wed> [[https://www.404media.co/ai-translations-are-adding-hallucinations-to-wikipedia-articles/][AI Translations Are Adding ‘Hallucinations’ to Wikipedia Articles]]
++ <2026-03-03 Tue> [[https://www.theguardian.com/education/ng-interactive/2026/mar/03/cheating-machine-or-powerful-assistant-the-ai-anxieties-of-a-trainee-teacher][Teacher v chatbot: my journey into the classroom in the age of AI | Education | The Guardian]]
 + <2026-03-01 Sun> [[https://www.todayintabs.com/p/a-i-isn-t-people][A.I. Isn't People]] - Good point about treating things as people or people as things
 + <2026-02-22 Sun> [[https://tante.cc/2026/02/20/acting-ethical-in-an-imperfect-world/][Acting ethically in an imperfect world]]
 + [[https://writings.stephenwolfram.com/2023/01/wolframalpha-as-the-way-to-bring-computational-knowledge-superpowers-to-chatgpt/][Wolfram|Alpha as the Way to Bring Computational Knowledge Superpowers to ChatGPT—Stephen Wolfram Writings]]
