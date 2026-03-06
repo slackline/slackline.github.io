@@ -9,6 +9,9 @@
 There are many source of [[id:1cf7307f-a475-451d-884e-8fd1381877a1][images]] but only sometimes do they need processing. When they do though [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] has a number of
 useful packages to help you do so.
 
++ [[id:3b8242c4-772a-408e-84bc-6b0e1777aa36][Napari]]
++ scikit-image
+
 * Links
 
 + [[https://pyimagesearch.com/][PyImageSearch - You can master Computer Vision, Deep Learning, and OpenCV.]]

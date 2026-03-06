@@ -6,122 +6,117 @@
 #+TITLE: Python Napari
 #+FILETAGS: :python:visualisation:
 
-* Napari Training Course
-** [2023-09-20 Wed 16:00]
-+ [[https://docs.google.com/document/d/1JyFscRvs0PLKiU0L7dv8tPffMwvLYrBkpgNM5XE8PeI/edit][Agenda]]
-+ [[https://docs.google.com/presentation/d/1jKA89NV98i-mq5LUj2LbUcVmW_dOu2u0zt081hcur8E/edit][All Slides]]
-*** Plugin Modularity Stephen Lenzi (Metacell)
-Good code makes good plugins...
-  + Does what it is supposed to
-  + Testable
-  + Developer Friendly
-  + Provides User feedback
-In addition...
-  + Good user experience
-  + How it works in conjunction with other plugins
-**** Modularity
-+ Code organised in a human friendly way.
-+ Simpler to read and understand
-+ Individual components can be reused
-+ Easier to extend something that is modular
-+ Pre-requsitie for writing testable code.
-+ Avoids re-inventing the wheel.
-**** Code Readability
-+ PEP8 /Zen of Python/
-**** Decomposition and separation of concerns
-+ Extract related functionality into functions
-+ Decompoistion break copmlex functions into several steps
-+ Group related functions
-+ Dependency Injection
-+ Organise files sensibly
-+ Think about abstract cases
-**** Decomposition and separation of concerns...of plugins
-+ Separate widgets so they do one thing.
-**** Readers and Writers
-+ Should be independent of plugin workflows, do they operate on Napari layers directly.
-+ Reading from disk, will output be written to disk?
-+ Work on Napari layers rather than data directly.
-+ Will it be needed by several plugins?
-+ Does it already exist?
-**** Dependencies
-+ Heavy dependencies can block other functionality.
-+ Import in the "right" place (e.g. ~try: import x except:~ within a function)
-+ Restrict dependencies to the minimum possible (single modules or functions) if reaosnable.
-+ Use wrappers with multiple backends.
-**** Don't let plugins block other functionality
-+ Shouldn't make Napari hang whilst doing things.
-**** Test your plugin
-+ Make sure it works with other plugins
-+ Get user feedback
-**** Separate GUI logic from Business logic
++ [[id:04ef0490-a655-4609-94fe-0aa2f2b1bf49][Napari Training]]
 
-*** Testing Napari Plugins Simao Bolota Sa (Metacell)
-**** Types of Testing for plugins
-+ Unit, functional, smoke, performance, property, and integration
-**** Granularity and Threading
-+ Prefer small unit tests over integration tests.
-+ Develop tests early during development.
-+ If tests are hard to write then consider refactoring.
-**** Unit Testing with PyTest
-+ Performed on each module or block of code during development.
-+ Tests the internal logic.
-+ Behaviour of the plugins codebase.
-+ Tests input variations (i.e. parametrize tests).
-**** Fixtures
-+ Use fixtures they make sure tests are consistent.
-+ ~make_napari_viewer~ is an important fixture for plugin development.
-**** Mocking
-+ Test "fake" behaviour.
-+ Useful for edge cases and errors.
-+ Minimise external influences.
-+ Saves setting up resources and can be faster.
-**** Pydantic
-+ Data validation, parsing and serialization.
-+ Enhances the readability of data handling within the application.
-+ Ensures the data being tested is valid and correctly
-**** Mypy
-+ Checks typing is consistent, well worth using.
-*** Napari Plugin Maintenance Sean Martin (MetaCell)
-**** Automate Processes
-+ Gives clarity on quality control.
-+ Helps prevent bad practices.
-**** Plugin automates
-+ Uploading to PyPI
-+ Conversion to Conda forge
-+ Tests
-+ Building documentation
-**** Versioning
-+ Semantic or Calendar
-+ Either allow users to trust your plugin.
-+ Semantic can get stuck on 0.x.y
-+ Keep a ~ChangeLog~ its useful for users and yourselves.
-**** Dependencies
-+ Use virtualenvs
-+ Establish dependencies using ~pyproject.toml~
-+ Set environment markers
-  + magicgui==0.7.3 ; python_version >= "3.10"
-  + magicgui==0.7.2 ; python_version < "3.10"
-  + qtpy == 2.3.1 ; sys_platform != "darwin"
-  + qtpy >= 2.3.0 ; sys_platform == "darwin"
-**** GitHub Publishing
-+ Make sure to include ~Framework::napari~ to get it included.
-**** Conda-forge
-+ Recipes go to ~staged-recipes~ this creates a feedstock.
-+ Recipe is automatically moved to the main forge and staging is removed.
-+ Have package on PyPI first.
-+ Fork and clone ~staged-recipes~ then run ~grayskull~ which generates a recipe from PyPI
-+ Build locally with the supplied script in a Docker environment (~build-locally.py~).
-+ Refine ~meta.yaml~ until it passes.
-+ Check review guidelines then submit PR to ~conda-ofrge/staged-recipes~
-**** There is a ~napari-plugins-check~!
-** [2023-09-21 Thu 16:00]
 
+* Setup
+
+A [[https://github.com/napari/napari-plugin-template/][template]] system is provided by Napari developers to make it easy to setup and get started with developing a plugin.
+
+Using it is straight-forward providing you have [[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][Python uv]] installed, all you need to do is decide on the ~name~ of your
+repository. Following the Python convention distribution packages should use /dashes/ (~-~) between words and these
+will be translated to /underscores/ (~_~) for files and modules.
+
+#+begin_example
+uv tool run --with jinja2-time --with npe2 --python=3.11 copier copy --trust https://github.com/napari/napari-plugin-template <name>
+#+end_example
+
+You will then be prompted for answers to a number of questions about the repository and what features to install,
+including whether to add templates for some basic plugins and whether to include [[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]].
+
+Once this has been created you will likely want to create a repository on a [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]] or other forge (e.g. [[id:240b85db-27c9-4848-9d3f-c3be841a193b][Codeberg]] or
+[[id:736537b3-75e0-4c24-9156-364937e0e8a2][Forgejo]]) to back your data up to. It should be an empty repository and once cloned
+
+** Additions to ~.gitignore~
+
+I added the following to ~.gitignore~
+
+#+begin_example
+# Spyder project settings
+.spyderproject
+.spyproject
+# Environments
+.env
+.venv
+env
+venv/
+
+# ruff
+.ruff_cache/
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+# pytest-testmon
+.testmondata*
+# Emacs
+\#*
+*~
+# Other directories
+tmp/
+#+end_example
+
+** Create a Virtual Environment
+
+Create a [[id:4bf1c297-d00a-4857-9339-8017c27138c6][Python Virtual Environments]] to develop your code under. I used [[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][Python uv]] again to do this in conjunction with
+[[id:a4af96d2-f895-4a68-9419-d482d2850f4d][Direnv]] to create the virtual environment within the ~.venv~ of the current directory and ensure it is loaded when
+~cd~ing into the directory (or opening files under [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]]).
+
+#+begin_example
+uv venv -p 3.11 .venv
+echo "source .venv/bin/activate"
+direnv allow
+#+end_example
+
+* Structure
+
+** ~napari.yaml~
+
+Within the ~src/<package_name>/~ directory the key file ~napari.yaml~ will have been created. This is the key file for
+writing Napari plugins and serves as the entry point (defined in ~pyproject.toml~).
+
+| Field           | Description                                                                              |
+|-----------------+------------------------------------------------------------------------------------------|
+| ~name~          | Package name                                                                             |
+| ~display_name~  | Name used to display the plugin in the Napari Plugin menu                                |
+| ~visibility~    | Whether the package should be ~public~ or ~private~                                      |
+| ~contributions~ | [[https://napari.org/stable/plugins/technical_references/contributions.html][Contributions]] extend the functionality of Napari, there are several types detailed below |
+
+*** ~contributions~
+
+[[https://napari.org/stable/plugins/technical_references/contributions.html][Contributions]] can be one of the following.
+
+| Contribution  | Description                                                                                                                                          | Fields                                                                                                                                                                                                                         |
+|---------------+------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ~commands~    | Adds a Python callable (i.e. command) with descriptors. All subsequent contributions must have a ~command~ field that maps to the ~id~ of one entry. | ~id~, ~title~ (optional) and ~python_name~ ()                                                                                                                                                                                  |
+| ~readers~     | Add functions to read files.                                                                                                                         | ~command~ which has a corresponding ~command.id~ field, ~filename_patterns~ for restricting to particular file extensions and ~accepts_directories~ an optional Boolean.                                                       |
+| ~writers~     | Add functions to write files.                                                                                                                        | ~command~ which has a corresponding ~command.id~ field, ~layer_types~ for the list image layers to write, ~filename_extensions~ for compatible file extensions and ~display_name~ which if present is used in the Save dialog. |
+| ~widgets~     | Adds widgets to the viewer.                                                                                                                          | ~command~ which has a corresponding ~command.id~ field, ~display_name~ for the widget, ~autogenerate~ a boolean, if ~True~ then [[https://pyapp-kit.github.io/magicgui/][magicgui]] will be used.                                                                         |
+| ~sample_data~ | For generating sample data                                                                                                                           | ~command~ which has a corresponding ~command.id~ field, ~display_name~ for the item, ~uri~ valid path or URL to data resource, ~reader_plugin~ optional name of plugin to open the URI.                                        |
+| ~themes~      | Adds a colour theme to Napari                                                                                                                        | Various see documentation                                                                                                                                                                                                      |
+| ~menus~       | For adding menus to Napari to access functions.                                                                                                      | ~command~ which has a corresponding ~command.id~ field, ~when~ optional condition to show the item if ~True~, ~group~ for sorting and grouping menu items.                                                                     |
+| ~submenus~    | For adding submenus to Napari to access functions                                                                                                    | ~command~ which has a corresponding ~command.id~ field,                                                                                                                                                                        |
+
+"Widgets" are graphical interfaces where configuration options can be adjusted viz. buttons, labels, text fields and
+sliders.
+
+** Code
+
+The template uses a [[https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/][src layout]] and so files reside under ~src/package_name>~ adjacent to ~napari.yaml~. It seems the
+convention is to make modules "private" by preceding them with ~_~ (underscore) as it is unlikely they will (or should)
+be imported by other modules.
 
 * Links
 
 + [[https://chanzuckerberg.github.io/napari-plugin-accel-workshops/workshops/softwaredev][napari Plugin Accelerator Grant workship series]]
 ** Development
+
 + [[https://napari.org/stable/plugins/best_practices.html][Napari Best Practices]]
++ [[https://github.com/napari/napari-plugin-template/][napari/napari-plugin-template]]
 + [[https://github.com/napari/cookiecutter-napari-plugin][GitHub - napari/cookiecutter-napari-plugin: Cookiecutter for napari plugins]]
 
 ** Plugins
