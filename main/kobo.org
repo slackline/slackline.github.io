@@ -23,6 +23,13 @@ version).
 [[id:62ce92c8-2493-4e7f-b32a-196535c42886][Calibre]] is an excellent package for managing ebook libraries.
 
 
+* KOReader
+
+This is a universal ebook reader which is available for [[https://github.com/koreader/koreader/wiki/Installation-on-Kobo-devices][installation on Kobo devices]]. I've not yet tried this out as I
+just don't have enough free time to do so.
+
+One neat thing though is that you can convert [[https://github.com/srijan/emacs-v4/blob/main/config.org#51-koreader-json-to-org][KOReader JSON to Org]].
+
 * Links
 
 + [[https://en.wikipedia.org/wiki/Kobo_Aura][Kobo Aura - Wikipedia]]
