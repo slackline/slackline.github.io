@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       38e2d7a1-c1ca-4a37-88f0-0c68fbc90659
+:END:
+#+TITLE: Python Import
+#+FILETAGS: :python:import:programming:
+
+* Lazy Imports
+
+Lazy imports will appear in Python 3.15 courtesy of [[https://peps.python.org/pep-0810/][PEP810]].
+
+
+* Links
+
+** Articles
+
++ [[https://techlife.blog/posts/the-story-of-pythons-lazy-imports-why-it-took-three-years-and-two-attempts/][The Story of Python's Lazy Imports: Why It Took Three Years and Two Attempts | TechLife]]
