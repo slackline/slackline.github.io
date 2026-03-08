@@ -62,6 +62,10 @@ to sign in. My gratitude to my colleague Will Furnass for this solution.
 
 * Links
 
+** Speed Tests
+
++ [[https://librespeed.org/][LibreSpeed]] Free, non-tracking speed tests of your network connection.
+
 ** History
 
 + [[https://ackreq.github.io/posts/what-are-rfcs/][What Are RFCs? The Forgotten Blueprints of the Internet | Broadcast]]
