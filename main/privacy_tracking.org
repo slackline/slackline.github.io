@@ -51,3 +51,8 @@ You're browser can reveal a lot about you, see  [[https://amiunique.org/fingerpr
 ** Videos
 
 + [[https://www.youtube.com/watch?v=0ANECpNdt-4][39C3 - AI Agent, AI Spy - YouTube]]
+
+** US Jurisdiction
+
++ [[https://infosec.exchange/@malwaretech/116195917343621283][MLAT requests]] - useful post laying out the consequences of FBI  MLAT and how/why companies like Proton Mail have to
+  comply even though they are a Swiss based company.
