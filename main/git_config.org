@@ -80,6 +80,7 @@ commits in these files.
 
 + [[https://www.jamescherti.com/better-git-diff-emacs-lisp-elisp/][Enhancing Git Diff for Emacs Lisp: Better Git Diff of Elisp function or macro]]
 + [[https://sergiswriting.com/better-colors-for-moved-text-in-git/][Better colors for moved text in Git]]
++ [[https://micahkepe.com/blog/gitconfig/][Git Gud: Setting Up a Better Git Config]]
 
 ** Multiple Identities
 
