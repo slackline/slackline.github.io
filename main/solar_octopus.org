@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       1f335a97-9707-4c63-a27a-561a79094511
+:END:
+#+TITLE: Octopus Energy
+#+FILETAGS: :solar:energy:octopus:
+
+I use [[https://octopus.energy][Octopus Energy]] as my energy supplier as they are possibly the most green of the energy providers, plus they
+provide feet in tarriffs for my [[id:16185f85-6c97-4bb7-aa6e-a20250d0a237][Solar Energy]] generation.
+
+* Links

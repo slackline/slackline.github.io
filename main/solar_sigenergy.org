@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       22ebf4d0-96c3-4c71-9ef8-5fc3547b8114
+:END:
+#+TITLE: SigEnergy
+#+FILETAGS: :solar:home:programming:api:
+
+*  [[https://pypi.org/project/SigenAPI/][SigenAPI]]
+
+[[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] package that provides a simple API to SigEnergys SigenStore.
+
+* Home Assistant
+
+I found there is some [[https://community.home-assistant.io/t/sigenergy-hybrid-inverter-integration/770528/10][Sigenergy hybrid inverter integration]] from users on the Home Assistant forums which may be an easy
+way to get a WebUI up and running using a [[id:69864d74-8ec2-42e4-a227-f824a521a5ce][Raspberry Pi]] that I have lying around.
+
+* Links
+
++ [[https://pypi.org/project/SigenAPI/][SigenAPI]]
+
+** Home Assistant
+
++ [[https://community.home-assistant.io/t/sigenergy-hybrid-inverter-integration/770528/10][Sigenergy hybrid inverter integration - Share your Projects! / Custom Integrations - Home Assistant Community]]
