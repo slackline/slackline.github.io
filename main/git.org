@@ -33,6 +33,7 @@ If you use [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] then you should de
 Topics are alphabetical...
 
 + [[id:55d950fe-e9ce-477d-9ab1-6498be95b910][Aliases]]
++ [[id:4da321f9-a09f-4921-a441-21ae4f458804][Attributes]]
 + [[id:21fb7e52-0f75-45ce-b5e3-cffb6ca51396][Backup]]
 + [[id:cad1e8c9-3573-4714-8821-2c306d9db27f][Bare Repositories]]
 + [[id:cbdb0c03-0eeb-45f0-a4c7-91131519120e][Bisecting]]

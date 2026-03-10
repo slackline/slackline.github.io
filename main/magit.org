@@ -56,3 +56,4 @@ see the post at [[https://www.armindarvish.com/en/post/consult-gh_working_with_g
 ** Blogs
 
 + [[https://www.rahuljuliato.com/posts/vc-git-functions][Custom VC-Focused Emacs Functions I Created to Enhance My Git Workflow | Rahul's Blog]]
++ [[https://silly.business/blog/why-i-cant-quit-magit/][Why I Can't Quit Magit | silly business]]

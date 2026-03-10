@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       4da321f9-a09f-4921-a441-21ae4f458804
+:END:
+#+TITLE: Git Attributes
+#+FILETAGS: :git:configuration:config:attributes:
+
+The ~.gitattributes~ file is a special file that helps define how a repository behaves across operating system. It is
+useful for setting End Of Line (~eol~) types.
+
+It works by specifying a pathname (or glob) and then setting the desired attributes.
+
+#+begin_example
+.git_archival.txt  export-subst
+*.py text eol=lf
+*.yaml text eol=lf
+#+end_example
+
+
+* Links
+
++ [[https://git-scm.com/docs/gitattributes][Git - gitattributes Documentation]]
++ [[https://stackoverflow.com/questions/73086622/is-a-gitattributes-file-really-necessary-for-git][Is a .gitattributes file really necessary for git? - Stack Overflow]]

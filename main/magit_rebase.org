@@ -29,3 +29,4 @@ the state it was in prior to the rebase. Its [[id:220d7ba9-d30e-4149-a25b-03796e
 
 + [[https://www.lvguowei.me/post/magit-rebase/][Magit tutorial - Rebase (Part I)]]
 + [[https://stackoverflow.com/questions/33644156/how-do-i-undo-rebase-in-magit][git - how do I undo rebase in magit? - Stack Overflow]]
++ [[https://entropicthoughts.com/rebasing-in-magit][Rebasing in Magit]]
