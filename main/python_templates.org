@@ -10,17 +10,17 @@ Using templates can massively simplify the amount of boiler plate code you need 
 
 * [[https://github.com/scientific-python/cookie][Scientific Python Cookie Cutter]]
 
-#+begin_src
+#+begin_example
 uv tool install --with copier-templates-extensions copier
 copier copy gh:scientific-python/cookie <pkg> --trust --vcs-ref=HEAD
-#+end_src
+#+end_example
 
-Then answer the questions when prompted, sensible to use ~setuptools~ as the build system as this ensures
-~setuptools-scm~ is used to manage versions based on Git tags.
+Substitute ~<pkg>~ for the package name you want to use then answer the questions when prompted, sensible to use
+~setuptools~ as the build system as this ensures  ~setuptools-scm~ is used to manage versions based on Git tags.
 
 To bring the package under [[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][Python uv]] and Git version control
 
-#+begin_src sh
+#+begin_example sh
 cd <pkg>
 mv pyproject.toml pyproject.toml.bak
 uv init
@@ -29,6 +29,9 @@ mv pyproject.toml.bak pyproject.toml
 uv lock
 # Generate environment
 uv venv
+# Set direnv to use the .venv and approve contents
+echo "source .venv/bin/activate" > .envrc
+direnv allow
 # Bring under version control
 git init
 # Remove unwanted files
@@ -37,7 +40,8 @@ rm main.py docs/conf.py LICENSE
 wget https://www.gnu.org/licenses/gpl-3.0.md && mv gpl-3.0.md COPYING.md
 git add .gitattributes .github/* .gitignore .pre-commit-config.yaml .readthedocs.yaml COPYING.md
 git commit -m "pkg: Initial commit"
-#+end_src
+#+end_example
+
 
 Can now go about modifying the following.
 
@@ -57,19 +61,19 @@ if/when they are required.
 As noted above I opted to switch to [[https://www.gnu.org/licenses/gpl-3.0.en.html][GNU GPLv3]] this meant that the ~license~ field needed updating. I found ~uv~ uses the
 [[https://spdx.dev/learn/handling-license-info/][SPDX License]] and so you _have_ to conform with this otherwise ~uv run~ will fail.
 
-#+begin_src toml
+#+begin_example toml
 license = "GPL-3.0-or-later"
-#+end_src
+#+end_example
 
 **** Dependencies
 
 I have a good idea of the packages I wish to use for development, linting and docs so modified these.
 
-#+begin_src toml
+#+begin_example toml
 [project.optional-dependencies]
 test = [
-  "pytest",
-  "pytest-cov",
+  "pytest >=9",
+  "pytest-cov >=7",
 ]
 dev = [
   "afmslicer[test]",
@@ -90,44 +94,44 @@ docs = [
   "mkdocstrings[python]",
   "numpydoc",
 ]
-#+end_src
+#+end_example
 
 I then setup [[id:a4af96d2-f895-4a68-9419-d482d2850f4d][Direnv]] to use the ~uv~ environment and installed all dependencies.
 
-#+begin_src sh
+#+begin_example sh
 uv env
 echo "#!/bin/bash\nsource .venv/bin/activate" > .envrc && direnv allow
 uv pip install -e ".[docs,dev]"
-#+end_src
+#+end_example
 
 **** Ruff
 
 Additional configuration of Ruff
 
-#+begin_src sh
+#+begin_example sh
 
-#+end_src
+#+end_example
 
 **** Codespell
 
 Tweaks to Codespell configuration
 
-#+begin_src sh
-#+end_src
+#+begin_example sh
+#+end_example
 
 *** Mkdocs
 
 I prefer [[id:9e8265ee-95d1-4218-90cd-74357aec1ea5][MkDocs]] for documentation these days, this requires changing the ~pyproject.toml~ (see above). Once installed we
 could initalise a project in the working directory.
 
-#+begin_src sh
+#+begin_example sh
 mkdocs new .
 mkdir -p docs/api && touch docs/{index,introduction,installation,usage,workflow}.md docs/api/afmslicer.md
-#+end_src
+#+end_example
 
 ...and edited ~mkdocs.yaml~ to match the following template.
 
-#+begin_src yaml
+#+begin_example yaml
 ---
 site_name: AFMSlicer
 site_url: https://AFMSlicer.readthedocs.org/
@@ -185,26 +189,51 @@ markdown_extensions:
               - name: mermaid
                 class: mermaid
                 format: !!python/name:mermaid2.fence_mermaid
-#+end_src
+#+end_example
 
 Finally add and commit the changes
 
-#+begin_src sh
+#+begin_example sh
 git add pyproject.toml mkdocs.yml docs/* uv.lock
-#+end_src
+#+end_example
 
 *** Pre-commit
 
 I modified the following hooks and introduced additional hooks for [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Pylint]] and [[id:8dbde866-810a-48e4-981f-2fcbc19ec5cf][Markdownlint-cli2]] along with configuration
 files required for each.
 
-#+begin_src yaml
+#+begin_example yaml
 ci:
   autofix_prs: true
   autofix_commit_msg: "[pre-commit.ci] Fixing issues with pre-commit"
   autoupdate_schedule: monthly
   autoupdate_commit_msg: "[pre-commit.ci] pre-commit-autoupdate"
   skip: [pylint, pytest] # Optionally list ids of hooks to skip on CI
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: "v6.0.0"
+    hooks:
+      - id: check-added-large-files
+        args: ["--maxkb=18384"]
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-yaml
+        args: ["--unsafe"] # Required because of line 57 in mkdocs.yml which enables mermaid diagrams
+      - id: debug-statements
+      - id: end-of-file-fixer
+        types: [python, yaml, markdown]
+        exclude: ^(tests/resources|tests/__snapshots__)/.*$
+      - id: mixed-line-ending
+        types: [python, yaml, markdown]
+        exclude: ^(tests/resources|tests/__snapshots__)/.*$
+      - id: name-tests-test
+        args: ["--pytest-test-first"]
+      - id: no-commit-to-branch
+      - id: requirements-txt-fixer
+      - id: trailing-whitespace
+        types: [python, yaml, markdown]
+        exclude: ^(tests/resources|tests/__snapshots__)/.*$
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
     rev: v0.18.1
@@ -233,26 +262,22 @@ ci:
         entry: pytest --testmon
         language: system
         files: \.py$
-ci:
-  autofix_prs: true
-  autofix_commit_msg: "[pre-commit.ci] Fixing issues with pre-commit"
-  autoupdate_schedule: monthly
-  autoupdate_commit_msg: "[pre-commit.ci] pre-commit-autoupdate"
-  skip: [pylint, pytest] # Optionally list ids of hooks to skip on CI
-#+end_src
+
+#+end_example
+
 
 Pytest-testmon files were added to ~.gitignore~
 
-#+begin_src
+#+begin_example
 .testmondata*
-#+end_src
+#+end_example
 
 **** numpydoc validation
 
 As I've introduced [[https://numpydoc.readthedocs.io/en/latest/validation.html][numpydoc validation]] as a pre-commit hook I also added the following configuration to
 ~pyproject.toml~.
 
-#+begin_src toml
+#+begin_example toml
 [tool.numpydoc_validation]
 checks = [
   "all", # Perform all check except those listed below
@@ -273,7 +298,92 @@ override_SS05 = [  # override SS05 to allow docstrings starting with these words
     "^Assess ",
     "^Access ",
 ]
-#+end_src
+#+end_example
+
+*** mkdocs
+
+[[id:9e8265ee-95d1-4218-90cd-74357aec1ea5][MkDocs]] is modified to (broadly) the following, note the API section needs adjusting to the package you are developing
+which may not be known at this stage, but an ~api/index.md~ can at least be added.
+
+#+begin_example
+site_name: <PKGNAME>
+site_url: https://<PKGNAME>.readthedocs.org/
+repo_url: https://github.com/<REPO>/<PKGNAME>/
+theme:
+  name: material
+  palette:
+    # Palette toggle for automatic mode
+    - media: (prefers-color-scheme)
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+nav:
+  - Home: index.md
+  - Introduction: introduction.md
+  - Installation: installation.md
+  - Usage: usage.md
+  - Configuration: configuration.md
+  - Workflow: workflow.md
+  - Contributing:
+      - Overview: contributing/index.md
+      - Adding Modules: contributing/adding_modules.md
+  - API:
+      # - afmslicer: api/afmslicer.md
+      - API: api/index.md
+      - slicer: api/slicer.md
+      - validation: api/validation.md
+extra:
+  version:
+    provider: mike
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          inventories:
+            - https://docs.python.org/3/objects.inv
+          paths: [src]
+          options.extra:
+          docstring_options:
+            ignore_init_summary: true
+          docstring_section_style: true
+          signature_crossrefs: true
+          inherited_members: true
+          summary: true
+          heading_level: 1
+          parameter_headings: true
+          type_parameter_headings: true
+  - autorefs
+  - mermaid2
+  - search
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+#+end_example
 
 ** Pros
 
@@ -299,7 +409,8 @@ override_SS05 = [  # override SS05 to allow docstrings starting with these words
 
 ** Cons
 
-1. Assumes Sphinx for ~docs~ dependencies, personally I'm preferring [[id:9e8265ee-95d1-4218-90cd-74357aec1ea5][MkDocs]]
+1. Assumes Sphinx for ~docs~ dependencies, personally I'm preferring [[id:9e8265ee-95d1-4218-90cd-74357aec1ea5][MkDocs]] **OUTDATED** mkdocs is now offered as a
+   choice of documentation when using this tempalte.
 2. Minimum ~pytest>=6~ is a bit dated (current major version is 8)
 3. Limited license choice, BSD, MIT or Apache, no GNU GPLv3
 4. Choosing ~uv~ as build system isn't the same as initialising a package using ~uv init~, there is on ~uv.lock~ and so

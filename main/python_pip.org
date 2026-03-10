@@ -29,9 +29,22 @@ cloned to your computer and installed.
 
 * Installing from GitHub
 
-You can also install packages directly from GitHub
+~pip~ has [[https://pip.pypa.io/en/stable/topics/vcs-support/][VCS support]] which means you can also install packages directly from [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]]/[[id:7cbd61f2-d6a5-4e67-af72-2a13a5e86faa][GitLab]]/[[id:240b85db-27c9-4848-9d3f-c3be841a193b][Codeberg]] as well as other
+version control systems.
+
+#+begin_example
+pip install @ git+https://github.com/<owner>/<repo>
+#+end_example
 
 ** Installing Specific Branches
+
+You can specify branches, commits or tags to install too.
+
+#+begin_example
+pip install @ git+https://github.com/<owner>/<repo>.git@v1.2.1
+pip install @ git+https://github.com/<owner>/<repo>.git@<branch>
+pip install @ git+https://github.com/<owner>/<repo>.git@123456789abcdefghijklmnopqrstuvwxyz
+#+end_example
 
 * Cleaning Virtual Environments
 
@@ -56,3 +69,4 @@ alias pip_upgrade="pip list --outdated --format=json | jq -r '.[] | .name'  | xa
 * Links
 
 + [[https://pypi.org][PyPI]]
++ [[https://pip.pypa.io/en/stable/topics/vcs-support/][PyPI VCS Support]]
