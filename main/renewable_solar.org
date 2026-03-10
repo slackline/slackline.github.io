@@ -11,6 +11,7 @@
 I have had solar panels installed on our house. The install was done by [[https://www.sevenhillssolar.co.uk/][Seven Hills Solar]] and we went with a [[https://www.sigenergy.com/en/home][SigEnergy]]
 inverter and battery system.
 
++ [[id:066a4ad3-d938-4ee5-a5b9-1bec44012734][Home Assistant]]
 + [[id:1f335a97-9707-4c63-a27a-561a79094511][Octopus]]
 + [[id:22ebf4d0-96c3-4c71-9ef8-5fc3547b8114][SigEnergy]]
 
@@ -23,6 +24,9 @@ crops around the world as the climate is more stable and plants aren't exposed t
 
 + [[https://theconversation.com/the-gift-that-keeps-on-giving-how-solar-panels-on-farms-can-help-increase-crop-yields-269264][The gift that keeps on giving: How solar panels on farms can help increase crop yields]]
 
+** Resources
+
++ [[https://re.jrc.ec.europa.eu/pvg_tools/en/tools.html][JRC Photovoltaic Geographical Information System (PVGIS) - European Commission]]
 ** Research Articles
 
 + [[https://www.mdpi.com/2071-1050/17/21/9544][Should Agrivoltaics Ever Be Decommissioned? How Agrivoltaics Bolster Farm Climate Adaptation Even When Unpowered]]

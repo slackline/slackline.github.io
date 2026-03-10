@@ -17,6 +17,10 @@
 
 + [[https://www.home-assistant.io/][Home Assistant]]
 
+*** Modules
+
++ [[https://www.home-assistant.io/integrations/forecast_solar/][Forecast.Solar - Home Assistant]]
+
 ** Sensors
 
 + [[https://www.frient.com/products][Frient]] (purchase from [[https://www.carefreesmarthomes.co.uk/frient][Carefree Smart Homes]])
