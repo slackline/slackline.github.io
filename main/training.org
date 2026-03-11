@@ -1443,6 +1443,14 @@ A good book from Vertebrate publishing. I've collated most of the bibliography i
 + [[https://www.youtube.com/watch?v=rA5laLQ-0Xc][Max Hang Fingerboard Sessions - YouTube]]
 + [[https://www.youtube.com/watch?v=jN6qIUD71Ls][Booty Burners for Climbers PART 1 - YouTube]]
 + [[https://www.youtube.com/watch?v=j1dq3WZ2x6o][Booty Burners for Climbers Part 2 - YouTube]]
+*** Injury Rehab
+**** Elbows
++ [[https://www.youtube.com/watch?v=3bFO7wrIxQc&pp=ugUEEgJlbg%3D%3D][Understanding Tennis Elbow and Golfer's Elbow (Lateral & Medial Epicondylitis)]]
++ [[https://www.youtube.com/watch?v=_iMueqiCsVI&pp=ugUHEgVlbi1HQg%3D%3D][10 ways to overcome Elbow Tendonosis - Golfer's Elbow]]
++ [[https://www.youtube.com/watch?v=NJKMGyL2iks][How to Fix Lateral Elbow Pain (Tennis Elbow) in 26 Minutes! - YouTube]]
++ [[https://www.youtube.com/watch?v=fuFyPHI4he4][How to Fix Medial Elbow Pain (Golfer's / Climber's Elbow) in 26 Minutes! - YouTube]]
++ [[https://www.youtube.com/watch?v=vaLFC1pG_OI&pp=ugUHEgVlbi1VU9IHCQnFCgGHKiGM7w%3D%3D][How to Fix Golfer's Elbow for Climbers (Climber's Elbow)]]
++ [[https://www.youtube.com/watch?v=IzIrf0riEmA&pp=ugUHEgVlbi1HQg%3D%3D][Tennis Elbow Exercises: What Will Make it Worse and What Will Make it Better]]
 ** Running
 + <2024-04-29 Mon> [[https://www.theguardian.com/lifeandstyle/2024/apr/29/dont-push-into-pain-how-to-rescue-your-knees-from-everything-from-torn-ligaments-to-injured-tendons][‘Don’t push into pain!’ How to rescue your knees from everything from torn ligaments to injured tendons]]
 + <2022-06-21 Tue> [[https://getpocket.com/explore/item/the-case-for-running-lower-mileage-to-avoid-overtraining][The Case for Running Lower Mileage to Avoid Overtraining]]
@@ -1492,7 +1500,6 @@ A good book from Vertebrate publishing. I've collated most of the bibliography i
   Anytime]]
 + [[https://www.pilatesanytime.com/blog/legacy/unpacking-the-pilates-legacy-joseph-pilates-and-the-evolution-of-contrology][Unpacking the Pilates Legacy: Joseph Pilates and the Evolution of Contrology | Pilates Anytime]]
 + /Return to Life Through Contrology/ by Joseph Pilates
-
 
 ** Swimming
 *** Outdoors
