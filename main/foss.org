@@ -114,6 +114,10 @@ practical tools and approaches for evaluating funding outcomes.
 + [[https://www.contributor-covenant.org/][Contributor Covenant: A Code of Conduct for Open Source and Other Digital Commons Communities]]
 + [[https://antonin.delpeuch.eu/posts/off-the-shelf-governance-models-for-small-foss-projects/][Off-the-shelf governance models for small FOSS projects? | Antonin Delpeuch]]
 
+** Government
+
++ [[https://about.code.europa.eu/][code.europa.eu - Code development platform]]
+
 ** Essays
 
 + [[https://www.cynicusrex.com/file/takemymoney.html][What if I paid for all my free software? | Angelino Desmet]]
