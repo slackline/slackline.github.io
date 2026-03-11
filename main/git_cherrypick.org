@@ -26,3 +26,10 @@ git diff HEAD^..<commit|branch> -- file_of_interest | git apply
 
 Note however that if you have enabled [[https://difftastic.wilfred.me.uk/][difftastic]] as your default for ~git diff~ this won't work as it doesn't produce a
 valid diff!
+
+* No Commit
+
+Typically when you cherry pick a commit from a branch into the one you are checked out on the act itself will create a
+commit /in your branch/. You can avoid this with the ~-n/--no-commit~ flag which cherry picks your target commit into
+your checked out branch but /doesn't/ make a commit on your current branch. In [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] you can activate this from the
+transient buffer of [[id:52ed221e-c7a3-44f5-8b74-872b22373a2e][Magit Cherry Pick]].
