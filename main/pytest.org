@@ -399,12 +399,23 @@ This is somewhat baffling to me at the moment but [[https://15r10nk.github.io/in
 
 ** syrupy
 
-[[https://syrupy-project.github.io/syrupy/][Syrupy]] is another pytest snapshot plugin.
+[[https://syrupy-project.github.io/syrupy/][Syrupy]] is another pytest snapshot plugin. Its pretty useful and I tend to prefer it over ~pytest-regtest~.
+
+Precision issues are always a perennial problem though so sometimes the values in the ~snapshot~ differ from those on
+different OS's. Syrupy  has a neat way of handling this though allowing the ~matcher~ parameter to be used in
+conjunction with ~replacer~ to round values.
+
+#+begin_example python
+def test_something(..., snapshot) -> None:
+    """Test something."""
+    results = ...
+    assert results == snapshot(matcher, path_type(types=(float,), replacer=lambda data, _: round(data, 4)))
+#+end_example
 
 * Miscellaneous
 
 Thanks to [[https://fosstodon.org/@adamchainz/112484238160832627][this toot]] I discovered it is possible to use [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] to pass a list of modified files to ~pytest~ to run the tests
-against.
+against. Although this is in essence what ~pytest-testmon~ does.
 
 #+begin_src bash
   pytest $(git diff --name-only '*/test_*.py')
