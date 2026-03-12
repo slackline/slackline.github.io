@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       e5f7cb66-7d86-46d1-b6a4-692925620ac3
+:END:
+#+TITLE: Email
+#+FILETAGS: :email:proton:
+
+* Links
+
+** On the benefits of Email
+
++ [[https://timharford.com/2026/03/ping-the-whatsapps-that-should-have-been-an-email/][Ping! The WhatsApps that should have been an email | Tim Harford]]

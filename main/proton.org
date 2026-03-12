@@ -6,6 +6,8 @@
 #+TITLE: Proton
 #+FILETAGS: :foss:linux:open source:software:email:calendar:
 
+Proton is an [[id:e5f7cb66-7d86-46d1-b6a4-692925620ac3][email]] and cloud service provider with a focus on privacy.
+
 * Links
 
 + [[https://proton.me/community/open-source][Proton Open Source]]
@@ -13,6 +15,9 @@
 ** Switzerland
 
 + [[https://tuta.com/blog/switzerland-surveillance-plan][Switzerland plans surveillance worse than US | Tuta]]
++ [[https://infosec.exchange/@malwaretech/116195917343621283][MLAT requests]] - useful post laying out the consequences of FBI  MLAT and how/why companies like Proton Mail have to
+  comply even though they are a Swiss based company.
 
 ** Hot Air
+
 + [[https://medium.com/@ovenplayer/does-proton-really-support-trump-a-deeper-analysis-and-surprising-findings-aed4fee4305e][Does Proton really support Trump? A deeper analysis (and surprising findings)]]
