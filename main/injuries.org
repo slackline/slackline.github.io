@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       e72589de-6f14-45d5-96fc-6a2e61354b2f
+:END:
+#+TITLE: Injuries and Recovery
+#+FILETAGS: :climbing:stretching:physio:
+
+* Climbing
+** Elbows
++ [[https://pubmed.ncbi.nlm.nih.gov/39514725/][More Than Just Another Elbow Tendinopathy: A Case Series of Misdiagnosed Ulnar Nerve Compression and Review of Common
+  Upper Extremity Misdiagnoses in Climbing - PubMed]]
++ [[https://www.youtube.com/watch?v=3bFO7wrIxQc&pp=ugUEEgJlbg%3D%3D][Understanding Tennis Elbow and Golfer's Elbow (Lateral & Medial Epicondylitis)]]
++ [[https://www.youtube.com/watch?v=_iMueqiCsVI&pp=ugUHEgVlbi1HQg%3D%3D][10 ways to overcome Elbow Tendonosis - Golfer's Elbow]]
++ [[https://www.youtube.com/watch?v=NJKMGyL2iks][How to Fix Lateral Elbow Pain (Tennis Elbow) in 26 Minutes! - YouTube]]
++ [[https://www.youtube.com/watch?v=fuFyPHI4he4][How to Fix Medial Elbow Pain (Golfer's / Climber's Elbow) in 26 Minutes!]]
++ [[https://www.youtube.com/watch?v=vaLFC1pG_OI&pp=ugUHEgVlbi1VU9IHCQnFCgGHKiGM7w%3D%3D][How to Fix Golfer's Elbow for Climbers (Climber's Elbow)]]
++ [[https://www.youtube.com/watch?v=IzIrf0riEmA&pp=ugUHEgVlbi1HQg%3D%3D][Tennis Elbow Exercises: What Will Make it Worse and What Will Make it Better]]
+
+*** Personal Activities
+
+Following the advice in  [[https://www.youtube.com/watch?v=fuFyPHI4he4][How to Fix Medial Elbow Pain (Golfer's / Climber's Elbow) in 26 Minutes!]] the following
+exercises should be undertaken.
+
+| Action                       | Volume                              | Frequency                         | Discomfort Level | Notes                                                                                                                              |
+|------------------------------+-------------------------------------+-----------------------------------+------------------+------------------------------------------------------------------------------------------------------------------------------------|
+| Soft Tissue Massage          | 3-5 minutes                         | daily or multiple daily           | 2/10             | Stop if it hurts                                                                                                                   |
+|------------------------------+-------------------------------------+-----------------------------------+------------------+------------------------------------------------------------------------------------------------------------------------------------|
+| Tissue Stetches...           |                                     |                                   |                  |                                                                                                                                    |
+| Flexor stretch + nerve glide | 3-5reps                             | multiple times a day as tolerated | 2/10             | With arm bent at 90, pull fingers back towards bicep and slide arm forwards and backwards. Attenuate extremes to accommodate pain. |
+| Pec Stretch 90 + 120         | 2-3reps at both angles on both arms | multiple times a day as tolerated | 2/10             | In a doorway, elbow level with shoulder and arm bent (90) put arm on frame, step forward to move body and open pecs, look down on opposite side, push forward with back foot. Repeat at 120 degrees |

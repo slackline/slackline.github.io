@@ -35,6 +35,7 @@ user_pref("extensions.ml.enabled", false);
 
 There are a wealth of browser extensions available for Firefox (and many on mobile too).
 
++ Activate Reader View
 + AdNauseum
 + ClearURLs
 + Decentraleyes
@@ -52,6 +53,11 @@ There are a wealth of browser extensions available for Firefox (and many on mobi
 ** Mobile
 
 You can disable Firefox's Facebook data collection by following the instructions [[https://fosstodon.org/@thomholwerda@exquisite.social/112795429462507951][here]].
+
+** Activate Reader View
+
+This makes it easy to toggle a website to get a clean page for reading. As noted you can change
+~reader.parse-on-load.force-enabled~ to ~true~ and achieve the same effect.
 
 * Translations
 
