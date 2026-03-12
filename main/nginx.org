@@ -38,7 +38,8 @@ certbot --nginx renew
 A useful tool for debugging why certificate issue may fail is [[https://letsdebug.net/][Let's Debug]]
 
 In 2025 LetsEncrypt started [[https://community.letsencrypt.org/t/getting-ready-to-issue-ip-address-certificates/][issuing certificates for IP addresses]] which is really useful for those seeking to encourage
-adoption of the [[https://ar.al/2025/06/25/web-numbers/][SmallWeb]].
+adoption of the [[https://ar.al/2025/06/25/web-numbers/][SmallWeb]]. Read more on this in their blog article [[https://letsencrypt.org/2026/03/11/shorter-certs-certbot.html][Six-Day and IP Address Certificates Available in
+Certbot]].
 
 * Servers
 
