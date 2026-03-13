@@ -401,6 +401,8 @@ This is somewhat baffling to me at the moment but [[https://15r10nk.github.io/in
 
 [[https://syrupy-project.github.io/syrupy/][Syrupy]] is another pytest snapshot plugin. Its pretty useful and I tend to prefer it over ~pytest-regtest~.
 
+*** Precision
+
 Precision issues are always a perennial problem though so sometimes the values in the ~snapshot~ differ from those on
 different OS's. Syrupy  has a neat way of handling this though allowing the ~matcher~ parameter to be used in
 conjunction with ~replacer~ to round values.
@@ -412,6 +414,9 @@ def test_something(..., snapshot) -> None:
     assert results == snapshot(matcher, path_type(types=(float,), replacer=lambda data, _: round(data, 4)))
 #+end_example
 
+*** Pandas DataFrames
+
+Syrupy [[https://github.com/syrupy-project/syrupy/issues/887][does not support Pandas dataframes]] (yet), the solution is to convert them ~to_string~
 * Miscellaneous
 
 Thanks to [[https://fosstodon.org/@adamchainz/112484238160832627][this toot]] I discovered it is possible to use [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] to pass a list of modified files to ~pytest~ to run the tests

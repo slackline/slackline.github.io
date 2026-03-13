@@ -6,9 +6,102 @@
 #+TITLE: Python Pandas
 #+FILETAGS: :python:pandas:data:
 
+* Common Data Wrangling
+
+** Indexes
+
+*** Renaming
+
+Set names on multi-indexed data frames with...
+
+#+begin_example
+df.index.names = ["index1", "index2", ...]
+#+end_example
+
+** Reshaping
+
+
+*** Aggregating (~groupby()~)
+
+Useful [[https://realpython.com/pandas-groupby/][tutorial]].
+
+#+begin_example python
+all_df["counter"] = 1
+count_df = (
+    all_df[["image", "layer," "pore_color", "counter"]]
+    .groupby(["image", "layer", "pore_color"])
+    .count()
+)
+count_df
+                          counter
+image   layer pore_color
+sample1 0     blue              1
+        1     blue              1
+        2     blue              1
+        3     blue              4
+        4     blue              7
+...                           ...
+
+#+end_example
+
+
+*** Pivot table
+
+Go from long to wide with [[https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.pivot_table.html][~pivot_table()~]]. Useful [[https://realpython.com/how-to-pandas-pivot-table/][tutorial]]
+
+#+begin_example
+count_df = count_df.pivot_table(index=["image", "layer"], columns="color", fill_value=0)
+count_df
+                 counter
+pore_color       blue green magenta yellow
+image   layer
+sample1 0         1.0   0.0     0.0    0.0
+        1         1.0   0.0     0.0    0.0
+        2         1.0   0.0     0.0    0.0
+        3         4.0   0.0     0.0    0.0
+        4         7.0   0.0     0.0    0.0
+#+end_example
+
+You can avoid the need to ~groupby()~ the data first by using the ~aggfunc~ argument.
+
+#+begin_example
+statistics_all_df["counter"] = 1
+color_count_df = statistics_all_df[
+    ["image", "layer", "pore_color", "counter"]
+].pivot_table(
+    index=["image", "layer"], columns="pore_color", aggfunc="count", fill_value=0
+)
+color_count_df
+                 counter
+pore_color       blue green magenta yellow
+image   layer
+sample1 0         1.0   0.0     0.0    0.0
+        1         1.0   0.0     0.0    0.0
+        2         1.0   0.0     0.0    0.0
+        3         4.0   0.0     0.0    0.0
+        4         7.0   0.0     0.0    0.0
+#+end_example
+
+
+**** Remove columns
+
+This sometimes results in a multi-level column which you may want to disregard.
+
+#+begin_example
+statistics_all_df["counter"] = 1
+color_count_df = statistics_all_df[
+    ["image", "layer", "pore_color", "counter"]
+].pivot_table(
+    index=["image", "layer"], columns="pore_color", aggfunc="count", fill_value=0
+)
+# Remove the 'counter' column level
+color_count_df = color_count_df.droplevel(level=0, axis=1)
+#+end_example
+
 * Alternatives
 
-Polars[[id:056cfe3b-c8a4-42b5-bea2-b7186e1d2a5e][python_polars]] is an alternative to Pandas that is implemented in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]].
+[[id:056cfe3b-c8a4-42b5-bea2-b7186e1d2a5e][Polars]] is an alternative to Pandas that is implemented in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]]. It tends to work in a very similar function but there
+are some significant differences, a major one being around how columns are referred to.
 
 * Links
 
