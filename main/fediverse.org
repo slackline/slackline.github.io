@@ -25,3 +25,7 @@ it with his personal agenda.
 
 + [[https://hive.blog/fediverse/@rubenstorm/the-fediverse-a-simple-guide-for-everyone][The Fediverse — A Simple Guide for Everyone — Hive]]
 + [[https://blog.elenarossini.com/my-fediverse-starter-guide/][The Future Is Federated: My Fediverse Starter Guide]]
+
+** Other
+
++ [[https://altstore.io/][AltStore]] for sideloading apps in iOS

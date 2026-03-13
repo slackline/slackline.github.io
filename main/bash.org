@@ -124,6 +124,19 @@ by encapsulating it in single quotes e.g. ~'ls'~
 
 The Bash shell leverages the [[id:2b537cf2-b3aa-486b-a8e7-0d86a4fb1938][Readline]] library to facilitate navigating the text on the prompt and searching history.
 
+** Chaining commands
+
+To run a sequence of commands you can use different pipe characters such as ~&&~ or ~||~
+
+*** ~&&~
+
+Chain commands together, if an earlier command fails (i.e. exit code other than ~0~) the remainder of the chain is not
+executed.
+
+*** ~||~
+
+Only execute what is on the right if what on the left fails.
+
 ** Run the previous command
 
 You can use ~!!~ to recall and execute the last command in [[https://shawnhooper.ca/2025/10/27/bash-history-command/][history]]. In and of itself no that useful but comes in handy
