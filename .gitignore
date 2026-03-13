@@ -8,6 +8,7 @@ vps-wiki*
 
 *_template.org
 *.bib
+video/
 
 # exported files
 main/export/
