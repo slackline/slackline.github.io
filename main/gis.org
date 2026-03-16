@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       ec1812b2-99f0-433c-b9c4-5b6fa2309ddf
+:END:
+#+TITLE: GIS (Geographical Information Systems)
+#+FILETAGS: :data:gis:
+
+* TESSERA map embeddings
+
+[[https://anil.recoil.org/notes/tessera-zarr-v3-layout][Streaming millions of TESSERA tiles over HTTP with Zarr v3]]

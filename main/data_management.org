@@ -56,6 +56,11 @@ you typically want to apply it to elements of a given table which is where thing
 SELECT * FROM ATable;
 .quit
 #+end_src
+
+* GIS
+
+Geograpihcal Information Systems ([[id:ec1812b2-99f0-433c-b9c4-5b6fa2309ddf][GIS]]) gets its own page.
+
 * Links
 
 ** Data Dictionaries
