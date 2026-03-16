@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       e48c322f-6b48-40d6-bbf0-a0e37ca441c1
+:END:
+#+TITLE: Music Remixes
+#+FILETAGS: :music:remixes:
+
+I love a good covers, remixes, mashups they can be good, they can be bad, but some are amazing, better than the original
+or the sum of their parts.
+
+* Remixers
+
+** Sonic Funk Foundry
++ [[https://soundcloud.com/dj-tomfunk][SoundCloud]]
++ [[https://sonicfunkfoundry.bandcamp.com/music][Bandcamp]]
+
+*** Notable Tracks
+
++ [[https://sonicfunkfoundry.bandcamp.com/album/marlena-shaw-woman-of-the-ghetto-cosmic-funk-remix][Marlena Shaw - Woman Of The Ghetto (Cosmic Funk Remix)]]
+
+* Covers
+
+** The Mamas & The Papas
+
+A remixed cover!
+
++ [[https://soundcloud.com/mita-gami/the-mamas-the-papas-california-dreamin-mita-gami-edit-3][Stream The Mamas & The Papas - California Dreamin' (Mita Gami Edit) by Mita Gami]]

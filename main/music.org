@@ -10,6 +10,7 @@ I like a lot of different types of music, figured I should start making some not
 
 + [[id:c3d85b0a-29e6-49e4-9349-0072a9604cfa][Electronic]]
 + [[id:8bfb8331-efd4-4208-8430-06898ba932b1][Humour]]
++ [[id:e48c322f-6b48-40d6-bbf0-a0e37ca441c1][music_remixes]]
 + [[id:604b59c7-4ca0-44a7-bbec-7f1486bc5bd8][Software]] - Have to play music somehow these days, this is what I use.
 + [[id:47e9469b-b4fd-4228-bf1e-de212230a3ef][Miscellaneous]] - Other random stuff.
 
