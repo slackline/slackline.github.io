@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7867a7c9-6bb2-4387-b65e-f3731fd21205
+:END:
+#+TITLE: Geek Humor
+#+FILETAGS: :softwareengineering:geek:humor:
+
+Various geeky things I found amusing...
+
++ [[https://nesbitt.io/2026/03/15/guided-meditation-for-developers.html][Guided Meditation for Developers | Andrew Nesbitt]]

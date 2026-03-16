@@ -33,6 +33,10 @@ Donate your CPU/GPU/RAM (and electricity) to distributed computing projects to r
 
 + [[id:b4f07dd1-0b43-4a13-bbe7-d2016e107e35][Grid Computing]]
 
+* Humor
+
++ [[id:7867a7c9-6bb2-4387-b65e-f3731fd21205][Geek Humor]]
+
 * Links
 
 + [[https://rse.shef.ac.uk/][Research Software Engineering Sheffield]] ([[https://rse.shef.ac.uk/blog/][Blog]] | [[https://rse.shef.ac.uk/newsletters/][Newsletters]] | [[https://github.com/orgs/RSE-Sheffield][GitHub]] | [[https://twitter.com/RSE_Sheffield][@RSE_Sheffield]])
