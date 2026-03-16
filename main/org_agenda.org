@@ -95,5 +95,10 @@ with at a later date/time.
 
 #+end_src
 
+* Org-habit
+
+This is a useful feature for [[https://orgmode.org/worg/org-tutorials/tracking-habits.html][tracking habits]]  with [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][org-mode]].
+
 * Links
 + [[https://irreal.org/blog/?p=5045][Bulk Rescheduling of Org Agenda Items | Irreal]]
++ [[https://ag91.github.io/blog/2020/09/27/org-agenda-and-your-future-or-how-to-keep-score-of-your-long-term-goals-with-org-mode/][Org Agenda and Your Future, or how to keep score of your long term goals with Org Mode - Where parallels cross]]
