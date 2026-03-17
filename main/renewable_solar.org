@@ -27,6 +27,11 @@ crops around the world as the climate is more stable and plants aren't exposed t
 ** Resources
 
 + [[https://re.jrc.ec.europa.eu/pvg_tools/en/tools.html][JRC Photovoltaic Geographical Information System (PVGIS) - European Commission]]
+
+** News
+
++ [[https://www.gov.uk/government/news/government-to-go-further-and-faster-in-becoming-energy-secure][Government to go “further and faster” in becoming energy secure - GOV.UK]]
+
 ** Research Articles
 
 + [[https://www.mdpi.com/2071-1050/17/21/9544][Should Agrivoltaics Ever Be Decommissioned? How Agrivoltaics Bolster Farm Climate Adaptation Even When Unpowered]]
