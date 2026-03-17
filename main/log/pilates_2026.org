@@ -1,11 +1,30 @@
 ** 2026
 :LOGBOOK:
+CLOCK: [2026-03-17 Tue 18:15]--[2026-03-17 Tue 19:15] =>  1:00
+CLOCK: [2026-03-10 Tue 18:15]--[2026-03-10 Tue 19:15] =>  1:00
+CLOCK: [2026-03-03 Tue 18:15]--[2026-03-03 Tue 19:15] =>  1:00
+CLOCK: [2026-02-24 Tue 18:15]--[2026-02-24 Tue 19:15] =>  1:00
+CLOCK: [2026-02-17 Tue 18:15]--[2026-02-17 Tue 19:15] =>  1:00
+CLOCK: [2026-02-10 Tue 18:15]--[2026-02-10 Tue 19:15] =>  1:00
+CLOCK: [2026-02-03 Tue 18:15]--[2026-02-03 Tue 19:15] =>  1:00
+CLOCK: [2026-01-27 Tue 18:15]--[2026-01-27 Tue 19:15] =>  1:00
+CLOCK: [2026-01-20 Tue 18:15]--[2026-01-20 Tue 19:15] =>  1:00
+CLOCK: [2026-01-13 Tue 18:15]--[2026-01-13 Tue 19:15] =>  1:00
 CLOCK: [2026-01-06 Tue 18:15]--[2026-01-06 Tue 19:15] =>  1:00
 :END:
 
 #+CAPTION: Pilates Log 2026 (Notes from attending [[https://symmetrypilates.co.uk/][Symmetry Pilates]] with Sam Webster.)
 #+NAME: pilates-log-2024
 | Date                   | Notes                                                                          | Exercise(s) to practice                                                                                                                                                                                                                                                |
+|------------------------+--------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [2026-03-17 Tue 20:03] | Nice session, hard core work out using ball between legs for lots.             | Feet together, toes out, heels out, rise up onto toes and lower down, repeat. Then overball between knees and squeeze, rise up onto toes bend knees (keep back straight), lower heels straighten knees, repeat x6-8 then do it in reverse.                             |
+|                        | Some of the myfascial release on the back felt really good for once, should do | Ball on side stretch over and roll down, repeat, then do again with twists.                                                                                                                                                                                            |
+|                        | more.                                                                          | Hundreds with ball between legs, shoulders lifted. Rollbacks to lower back with ball squeezed between knees, then between ankles full roll back, take ball from between legs and keep it above head, lower legs then roll up squeezing ball between hands.             |
+|                        |                                                                                | Switch with shoulders up, legs in table top, toe tap and opposite knee/shoulder (keeping lower shoulder off the ground), alternate x8 then continue with full leg extensions.                                                                                          |
+|                        |                                                                                | More to core work, but I can't remember everything, definitely involved lowering legs with ball between legs.                                                                                                                                                          |
+|                        |                                                                                | Side line, open book, arm circles then with ball between knees reverse clams, ball to ankles and double leg raises followed by bringing knees to chest, legs 90 degrees (not heels to bum) and finally little scissors, all with ball between ankles                   |
+|                        |                                                                                | Back extensions with ball between thighs, tilt pelvis and press, curl/raise toes and lift knees and lift head and shoulders (stay looking down) then alternate lifting legs. Next bend knees, tilt pelvis, squeeze ball, and try lifting knees off the ground (hard!)  |
+|                        |                                                                                | Myofascial release down back starting between shoulders in fleshy bit, raising arms, gentle rocking of knees, goal-post to v-shaped arms. Finished with glutes, should do more on thighs at home after running                                                         |
 |------------------------+--------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [2026-03-10 Tue 20:55] | Nice session, Sam gave some advice about elbows which seemed to                | Head turns to side, into elbow over shoulder, breathe out.                                                                                                                                                                                                             |
 |                        | align with what I've read in Make or Break (eccentric and support              | Weights and draw the sword from the ground ensuring hips are square both directions, engage glute on extension. Dumb waiter to open chest and shoulders x10 then extend and lift arms up.                                                                              |
