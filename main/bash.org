@@ -18,13 +18,13 @@ scripts to accomplish small tasks.
 
 You can find the length of an array using the ~${#array[@]}~ syntax.
 
-#+begin_src bash
+#+begin_example bash
   EXT="flac"
   FILES=$(find . -type f -iname "*.${EXT}")
   # NB - This doesn't work correctly, the whole list rather than rows are taken for counting and it returns the number
   #      of characters not the number of lines?
   echo "Found ${#FILES[@]} of type ${EXT}"
-#+end_src
+#+end_example
 
 * Bash Scripts
 
@@ -32,10 +32,10 @@ You can find the length of an array using the ~${#array[@]}~ syntax.
 
 It's useful to set a [[http://redsymbol.net/articles/unofficial-bash-strict-mode/][Unofficial Bash Strict Mode]] (see also [[https://wizardzines.com/comics/bash-errors/][b0rk Bash Errors]])
 
-#+begin_src sh
+#+begin_example bash
 set -euo pipefail
 IFS=$'\n\t'
-#+end_src
+#+end_example
 
 
 ** Loops
@@ -44,11 +44,11 @@ There are the usual selection of loops ~for~ and ~while~
 
 *** ~for~
 
-#+begin_src
+#+begin_example
 for in in $(seq 1 10); do
   echo ${i}
 done
-#+end_src
+#+end_example
 
 *** ~while~
 
@@ -57,7 +57,7 @@ done
 
 Scripts can store options using the following pattern.
 
-#+begin_src sh
+#+begin_example bash
 set -euo pipefail
 
 usage()
@@ -79,29 +79,29 @@ do
             exit 0;;
     esac
 done
-#+end_src
+#+end_example
 
 ** Coloured Messages
 
 Get coloured ~echo~ from a script using the following function.
 
 
-#+begin_src sh
+#+begin_example bash
   function print_stage() {
     echo -e " \e[33m*\e[39m \e[94m$1\e[39m"
 }
-#+end_src
+#+end_example
 
 ** Asking for Input
 
 A script can ask for input from users using the following ([[https://wiki.gentoo.org/wiki/LiveUSB#Automatic_drive-wide_installation_script][source]])
 
-#+begin_src sh
+#+begin_example bash
   #!/bin/bash
   set -e
   FAVOURITE_COLOUR=${1:?Tell me your favouirite colour?}
   FAVOURITE_FOOD=%{2:?What is your favourite food?}
-#+end_src
+#+end_example
 
 ** Lint your Scripts
 
@@ -143,11 +143,11 @@ You can use ~!!~ to recall and execute the last command in [[https://shawnhooper
 when combined with other commands such as others for example [[https://fosstodon.org/@salcode@phpc.social/115449044630395087][~git switch <new_remote_branch>~]] which hasn't been fetched
 and will fail. You therefore...
 
-#+begin_src sh
+#+begin_example bash
   $ git switch new_remote_branch
   fatal: invalid reference: new_remote_branch
   $ git fetch && !!
-#+end_src
+#+end_example
 
 ...although you should of course be using [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] to manage all [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] things.
 
@@ -159,29 +159,29 @@ Get at it with ~!$~
 
 You can use [[http://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion][variable substitution]] to quickly make a directory for every file in a given location (from [[https://unix.stackexchange.com/a/220026/39149][here]]).
 
-#+BEGIN_SRC bash eval:no
+#+BEGIN_EXAMPLE bash eval:no
   cd path/to/directory
   FILE_EXT="txt"
   for x in *.txt; do
     mkdir "${x%\.txt}" && mv "$x" "${x%\.}"
   done
-#+END_SRC
+#+END_EXAMPLE
 
 ** Parameter Expansion
 
 You can use [[https://stackoverflow.com/questions/19482123/extract-part-of-a-string-using-bash-cut-split/19482947#19482947][parameter expansion]] to extract components of strings.
 
-#+begin_src bash
+#+begin_example bash
   TEST="user/repository"
   USER=${TEST%/*} # Retains everything BEFORE /
   REPO=${TEST#*/} # Retains everyting AFTER /
-#+end_src
+#+end_example
 
 ** Getting dates dynamically
 
 You can get dates dynamically in output files courtesy of the ~date~ command...
 
-#+begin_src bash
+#+begin_example bash
   touch new-file-$(date +%F)
   # Different formats
   $(date +%Y-%m-%d)
@@ -189,15 +189,15 @@ You can get dates dynamically in output files courtesy of the ~date~ command...
   $(date +$s) # seconds since epoch
   $(date +%Y-%m-%d-%H:%M:%S)
   $(date +%F-%X) # equivalent to above
-#+end_src
+#+end_example
 
 ** Print a value if a variable doesn't exist
 
 If ~$somevar~ isn't defined then ~42~ will be printed (or used) instead...
 
-#+begin_src bash
+#+begin_example bash
 echo "${somevar-42}"
-#+end_src
+#+end_example
 
 ** Line-feed to carriage return
 
@@ -205,15 +205,15 @@ There is ~dos2unix~ command which does this but both [[id:16c65320-e19d-4bdc-ab5
 
 *** sed
 
-#+begin_src shell
+#+begin_example bashell
   sed -e 's/\r$//'
-#+end_src
+#+end_example
 
 *** tr
 
-#+begin_src shell
+#+begin_example bashell
 tr -d '\r'
-#+end_src
+#+end_example
 
 
 * Command Line Tools
@@ -253,11 +253,11 @@ useful command line tools for working with files.
 An alternative Pager, install it on your system and you can test it with ~PAGER=most man ls~. If you want to make this
 permanent you can add the following to ~/.bashrc~ / ~/.zshrc~
 
-#+begin_src bash
+#+begin_example bash
   if command -v most > /dev/null 2>&1; then
     export PAGER="most"
   fi
-#+end_src
+#+end_example
 
 ** parallel
 
@@ -266,33 +266,33 @@ define a function that performs the single task you wish to undertake and the pa
 
 An example script I've written is the following which converts FLAC files to MP3 in parallel
 
-#+INCLUDE: "~/dotfiles/bin/flac2mp3" example sh
+#+INCLUDE: "~/dotfiles/bin/flac2mp3" example bash
 
 The key points are...
 
 1. All FLAC files within the specified directory are located using ~find~.
 
-#+begin_src sh
+#+begin_example bash
 FILES=$(find "${INPUT_DIR}" -type f -name "*.flac")
-#+end_src
+#+end_example
 
 2. A function ~_convert~ is defined and exported that takes a single argument (in this case a FLAC file path) and
    converts it to MP£ using ~ffmpeg~
 
-#+begin_src sh
+#+begin_example bash
 _convert()
 {
     echo "Converting file ${1}"
     ffmpeg -hide_banner -loglevel panic -i "${1}" -ab "${2}" -map_metadata 0 -id3v2_version 3 "${1}".mp3
 }
 export -f _convert
-#+end_src
+#+end_example
 
 3. The list of files is then pipped into the ~parallel~ command that is called with the ~_convert~ function.
 
-#+begin_src sh
+#+begin_example bash
 echo "${FILES}" | parallel -q -j ${JOBS} _convert {} $BITRATE
-#+end_src
+#+end_example
 
 ** thefuck
 
@@ -310,19 +310,19 @@ echo "${FILES}" | parallel -q -j ${JOBS} _convert {} $BITRATE
 
 You can, and should, use aliases anywhere you can.  Typically you'd set them in ~\~/.bash_aliases~.
 
-#+begin_src bash
+#+begin_example bash
 alias grep='grep --colour=auto'
 alias l='ls -lha'
 alias shutup='su -c "shutdown -h now"'
-#+end_src
+#+end_example
 
 If you want to run a command that is aliased without the alias options such as ~grep~ in the above then you have a
 couple of options.
 
-#+begin_src bash
+#+begin_example bash
 \grep
 'grep' -n something *.R
-#+end_src
+#+end_example
 
 * History
 

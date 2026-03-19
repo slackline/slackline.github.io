@@ -151,3 +151,8 @@ practical tools and approaches for evaluating funding outcomes.
 ** Emojis
 
 + [[https://openmoji.org][OpenMoji]]
+
+** FOSDEM Talks
+
++ [[https://fosdem.org/2026/schedule/event/SUVS7G-lets_end_open_source_together_with_this_one_simple_trick/][FOSDEM 2026 - Let's end open source together with this one simple trick]]
+  + [[https://malus.sh/][MALUS - Clean Room as a Service | Liberation from Open Source Attribution]]

@@ -59,6 +59,15 @@ direnv allow .
 You can add functions globally to ~/.direnvrc~ which will be sourced and use the relevant environment variables you use
 in each projects ~.envrc~.
 
+** ~uv~
+
+Working with [[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][Python uv]] you need to create an environment and then add the following.
+
+#+begin_example
+#!/bin/bash
+source .venv/bin/activate
+#+end_example
+
 * Emacs Integration
 
 It is possible to integrate with [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] using the [[https://github.com/wbolster/emacs-direnv][emacs-direnv]] package
