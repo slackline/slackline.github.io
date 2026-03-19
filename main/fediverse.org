@@ -17,6 +17,7 @@ it with his personal agenda.
 + [[id:7c18f6c4-375e-4832-9e40-f44d04245e8a][matrix]]
 + [[https://wueride.bike/][WueRide]]
 + [[id:0fa45a4e-3d04-4cb1-971d-0a30073db26c][Bandwagon.fm]]
++ [[https://tags.pub/][tags.pub]] a global hashtag server, follow ~hashtag@tags.pub~ and it boosts content tagged with ~hashtag~.
 
 * Links
 
