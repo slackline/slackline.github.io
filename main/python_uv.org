@@ -58,14 +58,59 @@ uv pip install -e ".[dev,doc,test]"
 export VIRTUAL_ENV=.venv
 export PATH=${VIRTUAL_ENV}/bin:${PATH}
 #+end_example
+
+* GitHub Actions
+
+Whilst working on a project and using ~uv~ to manage dependencies and virtual environments I found that each step in a
+[[id:e19b6eb6-46b2-440a-ba35-be29feb33407][GitHub Actions]] required explicit activation of the environment. On closer reading of the documentatino for
+[[https://github.com/astral-sh/setup-uv/][astral-sh/setup-uv]] things became a little clearer.
+
+To have virtual environments persist over ~steps:~ we need to set ~activate-environment: true~ when we ~uses:
+astral-sh/setup-uv@v7~
+
+
+#+begin_example yaml
+jobs:
+  build:
+    name: Ex1 (${{ matrix.python-version }}, ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: ["ubuntu-latest", "macos-latest", "windows-latest"]
+        python-version: ["3.12", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install uv and set the Python version
+        uses: astral-sh/setup-uv@v7
+        with:
+          activate-environment: true
+          python-version: ${{ matrix.python-version }}
+      - name: Install the package
+        run: |
+          uv sync --locked --all-extras --dev
+      - name: Test with pytest
+        run: |
+          uv run pytest tests
+      - name: Determine coverage
+        run: |
+          coverage xml
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+
+      - name: Setup tmate session
+        if: ${{ failure() }}
+        uses: mxschmitt/action-tmate@v3
+        timeout-minutes: 5
+
+ #+end_example
+
 * Tips and Tricks
 
 ** Using uv in scripts
 
-[[https://simonwillison.net/2024/Aug/21/usrbinenv-uv-run/][#!/usr/bin/env -S uv run]]
 
 #+begin_example
- !/usr/bin/env -S uv run
+ #!/usr/bin/env -S uv run
    # /// script
    # requires-python = ">=3.12"
    # dependencies = [
