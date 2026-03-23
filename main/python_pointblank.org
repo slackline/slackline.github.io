@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       b7a80c44-985d-4fb8-97ed-2c07bf52799e
+:END:
+#+TITLE: Python PointBlank
+#+FILETAGS: :python:data:analysis:simulation:
+
+[[https://posit-dev.github.io/pointblank/][Pointblank]] is a package for data validation and assessing and monitoring data quality. It can also be used to simulate
+false data.
+
+* Links
+
++ [[https://posit-dev.github.io/pointblank/][Pointblank]]
++ [[https://posit.co/blog/building-realistic-fake-datasets-with-pointblank/][Building realistic fake datasets with Pointblank - Posit]]

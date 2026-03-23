@@ -157,3 +157,9 @@ be enabled.
   + [[https://blog.stephenturner.us/p/uv-part-2-building-and-publishing-packages][uv, part 2: building and publishing packages]]
   + [[https://blog.stephenturner.us/p/uv-part-3-python-in-r-with-reticulate][uv, part 3: Python in R with reticulate - by Stephen Turner]]
   + [[https://blog.stephenturner.us/p/uv-part-4-jupyter][uv, part 4: uv with Jupyter]]
+
+
+** Forks
+
++ [[https://github.com/duriantaco/fyn][GitHub - duriantaco/fyn: Fyn is a privacy-first fork of uv for fast Python package management, dependency resolution,
+  virtual environments, and pyproject.toml workflows. · GitHub]]

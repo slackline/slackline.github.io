@@ -24,6 +24,7 @@ package for that provides a sensible structure and creates it for you is [[https
 + [[https://docs.profiling.ydata.ai/latest/][ydata-profiling]] - takes the hard work out of a lot of common summarisation tasks.
 + Polars
 + [[id:1d423396-546f-4aaf-9927-6002ccca4530][skforecast]]
++ [[id:b7a80c44-985d-4fb8-97ed-2c07bf52799e][Pointblank]]
 
 ** Visualisation
 
