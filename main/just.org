@@ -13,15 +13,54 @@ Just is a command runner, similar to ~make~ but without the build components, it
 
 Prefix commands or recipes with ~@~ if you don't want the command(s) echoed when called.
 
+* Local Variables
+
+You can set local variables akin to shell variables.
+
+#+begin_example just
+# Setup local variables
+BASE_DIR := justfile_directory()
+SRC_DIR  := BASE_DIR + "src/"
+TEST_DIR := BASE_DIR + "tests/"
+DATE     := `date "+%Y-%m-%d"`
+TIME     := `date "+%Y-%m-%dT%H:%M:%S"`
+#+end_example
+
+These are referred to in the recipe within double curl-braces (~{{DATE}}~) rather than with the `$` prefix as in [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]].
+
 * Self-documenting
 
 If you set the ~default~ to the following then users will get a list of the available recipes when running within the
 directory where the ~.justfile~ lives.
 
 #+begin_example just
-default:
+# A list of available recipes
+@default:
     @just --list
 #+end_example
+
+* Examples
+
+** Remove all ~.log~ files
+
+#+begin_example just
+rm_log:
+    rm *.log
+#+end_example
+
+** Run Python profiling on tests
+
+This defines the ~test_profile~ target for running profiling of the ~tests/test_layopt.py~ test, saving the output to a
+file that includes the current git commit and the date. Obviously that output path can be modified.
+
+#+begin_example just
+# Run profiling on the tests/test_layopt.py test
+test_profile:
+    python -m cProfile -o test_profile_$(git rev-parse HEAD)_$(date +%Y%m%d).prof $(which pytest) tests/test_layopt.py
+#+end_example
+
+Comments above a target (in this case ~# Run profiling on the tests/test_layopt.py test~) are shown against the
+respective help (see default below)
 
 * Links
 
