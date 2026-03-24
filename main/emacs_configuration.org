@@ -86,3 +86,4 @@ Details of each package specific configuration are found on their own pages.
 + [[https://batsov.com/articles/2025/04/17/using-use-package-the-right-way/][Using use-package the right way - (think)]]
 + [[https://eugene-andrienko.com/it/2025/10/10/emacs-ditch-use-package.html][Why and how I ditched use-package?]]
 + [[https://jointhefreeworld.org/blog/articles/rust/simple-guix-emacs-rust-development-environment/index.html][Simple Rust Guix Emacs development environment - jointhefreeworld]]
++ [[https://codeberg.org/ashton314/emacs-bedrock][ashton314/emacs-bedrock: Stepping stones to a better Emacs experience - Codeberg.org]]
