@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       89f1f064-4b42-4720-ac75-ca041606d297
+:END:
+#+TITLE: Ripgrep
+#+FILETAGS: :linux:cli:regex:
+
+* Links
+
++ [[https://burntsushi.net/ripgrep/][ripgrep is faster than {grep, ag, git grep, ucg, pt, sift}]]

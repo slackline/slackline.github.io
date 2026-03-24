@@ -221,90 +221,19 @@ tr -d '\r'
 The power of the command line comes from pipping the output of one command to another. To which end there are a bunch of
 useful command line tools for working with files.
 
-** awk
-
-[[id:4d64ea2c-b91a-4162-8d79-889b05b5ba80][awk]]
-
-** find
-
-[[id:af0aba11-91a9-4e79-89fb-1ae6ca55f3c8][find]]
-** sed
-
-[[id:16c65320-e19d-4bdc-ab55-c410860cddfa][sed]] is a ~s~tring ~ed~itor for processing text files at the command line.
-
-** fzf
-
-[[https://github.com/junegunn/fzf][fzf]] is a fuzzy completion tool. It integrates with Bash and [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][zsh]][[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]]
-
-** gh
-
-[[id:9a9076c8-7698-47b9-9cd3-c8b9e06d6694][gh_cli]]
-
-** grep
-
-[[id:1ffb126f-a7aa-4d26-a4d1-a7bfa8085abe][grep]]
-
-** jq
-
-[[id:a23966d2-0e34-4ebd-8a66-5d40c2ce6a43][jq]] is the awk/sed/grep tool for working with JSON files.
-
-** most
-
-An alternative Pager, install it on your system and you can test it with ~PAGER=most man ls~. If you want to make this
-permanent you can add the following to ~/.bashrc~ / ~/.zshrc~
-
-#+begin_example bash
-  if command -v most > /dev/null 2>&1; then
-    export PAGER="most"
-  fi
-#+end_example
-
-** parallel
-
-Bash has its own tool for parallel processing courtesy of [[https://www.gnu.org/software/parallel/][parallel]]. As with many parallelisation processes you need to
-define a function that performs the single task you wish to undertake and the pass it a list of parameters to process.
-
-An example script I've written is the following which converts FLAC files to MP3 in parallel
-
-#+INCLUDE: "~/dotfiles/bin/flac2mp3" example bash
-
-The key points are...
-
-1. All FLAC files within the specified directory are located using ~find~.
-
-#+begin_example bash
-FILES=$(find "${INPUT_DIR}" -type f -name "*.flac")
-#+end_example
-
-2. A function ~_convert~ is defined and exported that takes a single argument (in this case a FLAC file path) and
-   converts it to MP£ using ~ffmpeg~
-
-#+begin_example bash
-_convert()
-{
-    echo "Converting file ${1}"
-    ffmpeg -hide_banner -loglevel panic -i "${1}" -ab "${2}" -map_metadata 0 -id3v2_version 3 "${1}".mp3
-}
-export -f _convert
-#+end_example
-
-3. The list of files is then pipped into the ~parallel~ command that is called with the ~_convert~ function.
-
-#+begin_example bash
-echo "${FILES}" | parallel -q -j ${JOBS} _convert {} $BITRATE
-#+end_example
-
-** thefuck
-
-[[https://github.com/nvbn/thefuck][thefuck]] is a tool for correcting your command line mistakes.
-
-** xarg
-
-[[id:48c0d280-8330-4f65-a5da-098ea186c6b6][xarg]] is a wonderful and simple tool for repeating actions on lists of objects.
-
-** wgetpaste
-
-[[id:dddcb716-b68c-4c94-b75c-167451208cf8][wgetpaste]] is a utility for pasting output to pastebins that is really neat.
++ [[id:4d64ea2c-b91a-4162-8d79-889b05b5ba80][awk]]
++ [[id:af0aba11-91a9-4e79-89fb-1ae6ca55f3c8][find]]
++ [[id:16c65320-e19d-4bdc-ab55-c410860cddfa][sed]] is a ~s~tring ~ed~itor for processing text files at the command line.
++ [[https://github.com/junegunn/fzf][fzf]] is a fuzzy completion tool. It integrates with Bash and [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][zsh]][[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]]
++ [[id:9a9076c8-7698-47b9-9cd3-c8b9e06d6694][gh_cli]]
++ [[id:1ffb126f-a7aa-4d26-a4d1-a7bfa8085abe][grep]]
++ [[id:a23966d2-0e34-4ebd-8a66-5d40c2ce6a43][jq]] is the awk/sed/grep tool for working with JSON files.
++ [[id:763231f8-bf3c-4917-8aeb-4a72aa2f786d][most]]
++ [[id:a8927dc4-a237-463c-a41e-3b884da4f784][parallel]]
++ [[id:89f1f064-4b42-4720-ac75-ca041606d297][ripgrep]]
++ [[https://github.com/nvbn/thefuck][thefuck]] is a tool for correcting your command line mistakes.
++ [[id:48c0d280-8330-4f65-a5da-098ea186c6b6][xarg]] is a wonderful and simple tool for repeating actions on lists of objects.
++ [[id:dddcb716-b68c-4c94-b75c-167451208cf8][wgetpaste]] is a utility for pasting output to pastebins that is really neat.
 
 * Aliases
 

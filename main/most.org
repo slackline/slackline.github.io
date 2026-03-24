@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       763231f8-bf3c-4917-8aeb-4a72aa2f786d
+:END:
+#+TITLE: Most
+#+FILETAGS: :linux:cli:pager:
+
+An alternative Pager, install it on your system and you can test it with ~PAGER=most man ls~. If you want to make this
+permanent you can add the following to ~/.bashrc~ / ~/.zshrc~
+
+#+begin_example bash
+  if command -v most > /dev/null 2>&1; then
+    export PAGER="most"
+  fi
+#+end_example
