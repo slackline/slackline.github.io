@@ -55,6 +55,13 @@ A great [[https://vulpinecitrus.info/blog/guarding-git-forge-ai-scrapers/][artic
 
 [[https://rnsaffn.com/poison3/][Poison Fountain]] is another attempt to feed AI web-crawlers a bunch of junk (see also [[https://www.theregister.com/2026/01/11/industry_insiders_seek_to_poison/][Register article]]).
 
+
+* ~human.json~
+
+[[https://codeberg.org/robida/human.json][human.json]] is a meta-data specification for declaring your site is made by humans. Drop a simple ~human.json~ into your
+website, link to it from a page and you're done. You can "vouch" for other websites which you know are also made by
+humans. Simple, neat idea.
+
 * Links
 
 + [[https://algorithmic-sabotage.gitlab.io/asrg/sabot-in-the-age-of-ai/][Sabot in the Age of AI]]

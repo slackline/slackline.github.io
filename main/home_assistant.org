@@ -70,6 +70,51 @@ This system is using the Core installation type, and 32-bit hardware (armv7l), b
 will no longer be supported after the release of Home Assistant 2025.12.
 #+end_quote
 
+I might have to upgrade to a newer ArchLinuxARM version with 64-bit support.
+
+** Where is everything?
+
+*** Home-Assistant
+
+This is installed to ~/var/lib/hass/~
+
+#+begin_example
+# l /var/lib/hass/
+total 4.9M
+drwxr-xr-x 10 hass hass 4.0K Mar 22 08:40 .
+drwxr-xr-x 39 root root 4.0K Mar 22 00:31 ..
+-rw-r--r--  1 hass hass    8 Mar 18 19:14 .HA_VERSION
+drwxr-xr-x  6 hass hass 4.0K Mar 19 07:14 .cache
+drwxr-xr-x  2 hass hass 4.0K Mar 20 07:25 .cloud
+drwx------  2 hass hass 4.0K Mar 18 20:20 .config
+-rw-r--r--  1 hass hass   85 Mar 22 08:40 .ha_run.lock
+drwxr-xr-x  2 hass hass 4.0K Mar 22 11:51 .storage
+drwxr-xr-x  6 hass hass 4.0K Mar 18 20:20 .venv
+-rw-r--r--  1 hass hass    2 Mar 18 19:14 automations.yaml
+drwxr-xr-x  4 hass hass 4.0K Mar 18 19:29 blueprints
+-rw-r--r--  1 hass hass  265 Mar 18 19:14 configuration.yaml
+drwxr-xr-x  2 hass hass 4.0K Mar 18 19:14 deps
+-rw-r--r--  1 hass hass    0 Mar 22 08:40 home-assistant.log.fault
+-rw-r--r--  1 hass hass 812K Mar 22 11:34 home-assistant_v2.db
+-rw-r--r--  1 hass hass  32K Mar 22 11:50 home-assistant_v2.db-shm
+-rw-r--r--  1 hass hass 4.0M Mar 22 11:50 home-assistant_v2.db-wal
+-rw-r--r--  1 hass hass    0 Mar 18 19:14 scenes.yaml
+-rw-r--r--  1 hass hass    0 Mar 18 19:14 scripts.yaml
+-rw-r--r--  1 hass hass  161 Mar 18 19:14 secrets.yaml
+drwxr-xr-x  2 hass hass 4.0K Mar 18 19:27 tts
+
+#+end_example
+
+[[id:9bc6a091-ed02-4423-b14a-d56f677c5cd0][Systemd]] configuration is installed to..
+
++ ~/usr/lib/sysusers.d/home-assistant.conf~
++ ~/usr/lib/tmpfiles.d/home-assistant.conf~
+
+*** HACS
+
+HACS is installed to ~/var/lib/private/hass/custom_components/hacs/~ and its a bunch of Python code.
+
+
 * Extensions
 
 ** Home Assistant Community Store (HACS)
@@ -90,6 +135,19 @@ First I needed to install [[https://www.hacs.xyz/docs/use/][HACS]] but unfortuna
 *** Modules
 
 + [[https://www.home-assistant.io/integrations/forecast_solar/][Forecast.Solar - Home Assistant]]
+
+*** HACS
+
++ [[https://github.com/TypQxQ/Sigenergy-Local-Modbus][TypQxQ/Sigenergy-Local-Modbus: Sigenergy Energy Storage System Integration for local Modbus‑TCP monitoring and control
+  into Home Assistant. Gain real‑time insights, dynamic device management, and seamless UI‑based setup.]]
++ [[https://github.com/TypQxQ/Sigenergy-Home-Assistant-Integration][TypQxQ/Sigenergy-Home-Assistant-Integration: Home Assistant modbus integration for Sigenergy inverters such as
+  SigenStor, Sigen PV and Sigen Hybrid.]]
+
+** Forums
+
++ [[https://community.home-assistant.io/t/sigenergy-hybrid-inverter-integration/770528/10][Sigenergy hybrid inverter integration - Share your Projects! / Custom Integrations - Home Assistant Community]]
++ [[https://community.home-assistant.io/t/home-assistant-sigenergy-amber-electric/931956][Home Assistant - Sigenergy - Amber Electric - Configuration - Home Assistant Community]]
++ [[https://community.home-assistant.io/t/sig-energy-system-integration/760448/16][Sig Energy System Integration - Third party integrations - Home Assistant Community]]
 
 ** Sensors
 

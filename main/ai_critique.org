@@ -66,6 +66,8 @@
 
 ** Dangers
 
++ <2026-03-22 Sun> [[https://www.theguardian.com/us-news/ng-interactive/2026/mar/15/ai-defense-warfare-companies][These aren’t AI firms, they’re defense contractors. We can’t let them hide behind their models | The
+  Guardian]]
 + [[https://www.careful.industries/blog/2025-11-nine-risks-caused-by-ai-notetakers][Nine risks caused by AI notetakers — Careful Industries]]
 + [[https://www.nature.com/articles/s41586-025-09771-9][Persuading voters using human–artificial intelligence dialogues | Nature]]
 + [[https://www.science.org/doi/full/10.1126/science.aea3884][The levers of political persuasion with conversational artificial intelligence | Science]]

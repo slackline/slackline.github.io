@@ -86,6 +86,7 @@ I love hot and spicy food and in particular [[id:5a8671e1-f402-4725-9f73-f344dfd
 
 + [[https://docs.tandoor.dev/install/archlinux/][Tandoor]]
   + [[https://kitshn.app/][kitshn.app]] a client for Tandoor
++ [[https://github.com/laurencleek/open_food_map][Open Food Map (Repository)]]
 
 * Books
 + [[https://www.goodreads.com/book/show/6534803-the-complete-chile-pepper-book][The Complete Chile Pepper Book: A Gardener's Guide to Choosing, Growing, Preserving, and Cooking by Dave DeWitt | Goodreads]]

@@ -27,6 +27,7 @@ You're browser can reveal a lot about you, see  [[https://amiunique.org/fingerpr
 
 + [[https://takebackctrl.org/][Take Back CTRL]]
 + [[https://karpathy.bearblog.dev/digital-hygiene/][Digital hygiene | karpathy]]
++ [[https://www.techdirt.com/2026/03/19/the-government-uses-targeted-advertising-to-track-your-location-heres-what-we-need-to-do/][The Government Uses Targeted Advertising to Track Your Location. Here’s What We Need to Do. | Techdirt]]
 
 ** Meta Tracking
 
