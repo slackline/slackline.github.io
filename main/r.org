@@ -28,7 +28,7 @@ a lot of useful functions available in base R and its worth knowing your way aro
 
 + [[id:b4510762-8409-4e5e-8ee8-c27574977772][Tidyverse]]
 + [[id:78838e73-e7de-4a41-a0a9-69861a3f4abe][data.table]]
-+ [[id:8a79b410-bc31-458e-824f-11c92eaa4f22][collapse]] 
++ [[id:8a79b410-bc31-458e-824f-11c92eaa4f22][collapse]]
 + [[id:5b5b5396-0e90-4b2e-bd6a-67e7112207f8][Dates and Times]]
 
 * Modelling
@@ -45,7 +45,7 @@ Being a statistical package R is aimed around modelling (despite the many other 
 Inevitably you'll want to plot your data, there are a few options and I keep notes on these (although highly biased
 towards ~ggplot2~)
 
-+ [[id:fc6c0f69-4899-401e-bd6c-a36894c1542e][ggplot2]] an excellent framework for producing graphics. 
++ [[id:fc6c0f69-4899-401e-bd6c-a36894c1542e][ggplot2]] an excellent framework for producing graphics.
 + [[id:82a48af2-bcda-4beb-bf88-71377394f899][Base Graphics]] are highly functional and very useful.
 
 * Tables
@@ -84,7 +84,7 @@ There are a few ways in which dashboards can be created. The package [[https://r
 shinydashboard/ and as v2.0.0 its as simple as switching from ~library(shinydashboard)~ to ~library(bs4Dash)~
 
 You can also [[https://shiny.rstudio.com/blog/shiny-on-hugging-face.html][deploy Shiny on Hugging Face]] via both R and Python Shiny Docker images which gives a simple interface to
-Machine Learning interfaces. 
+Machine Learning interfaces.
 
 * Parallelisation
 
@@ -294,7 +294,7 @@ found useful.
 + [[https://r-in-production.org/][R in Production]]
 
 
-*** Linting  
+*** Linting
 
 + [[https://flir.etiennebacher.com/][Find and Fix Lints in R Code • flir]] Fix Lints In R and R package that uses Abstract Syntax Trees to parse and fix
   linting errors (think [[id:3070e6ed-1788-44ff-8498-8af6c84f588f][Emacs Tree-Sitter]])
@@ -306,7 +306,7 @@ found useful.
 
 + [[https://www.stephaniehicks.com/jhustatcomputing2022/schedule][Statistical Computing]]
 + [[https://healthyr.surgicalinformatics.org/index.html#top][HealthyR]]
-+ [[https://stringhinilab.github.io/GitHubProceduresLab/][Code Management Guidelines]] 
++ [[https://stringhinilab.github.io/GitHubProceduresLab/][Code Management Guidelines]]
 
 ** HowTos
 
@@ -327,6 +327,7 @@ found useful.
 + [[https://r-universe.dev/search/][ROpenSci : R-universe]]
 + [[https://www.rdocumentation.org/][RDocumentation]]
 + [[https://rdrr.io/][R Package Documentation]]
++ [[https://r-mailing-lists.thecoatlessprofessor.com/][Home | R Mailing Lists]]
 
 *** Genetics
 
@@ -343,7 +344,7 @@ found useful.
 + [[https://sebkrantz.github.io/Rblog/2023/04/12/collapse-and-the-fastverse-reflecting-the-past-present-and-future/][collapse and the fastverse: Reflections on the Past, Present and Future - With Examples from Geospatial Data Science - R, Econometrics, High Performance]]
 + [[https://www.mm218.dev/posts/2023-11-07-classed-errors/][Mike Mahoney - Classed conditions from rlang functions]]
 + [[https://yabellini.netlify.app/blog/2024_learningtocode/][Learning Programming in 30 lessons | Yanina Bellini Saibene]]
-+ [[https://arilamstein.com/blog/2025/02/12/is-cran-holding-r-back/][Is CRAN Holding R Back? – Ari Lamstein]]  
++ [[https://arilamstein.com/blog/2025/02/12/is-cran-holding-r-back/][Is CRAN Holding R Back? – Ari Lamstein]]
 
 ** Articles
 
