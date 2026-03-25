@@ -62,6 +62,44 @@ test_profile:
 Comments above a target (in this case ~# Run profiling on the tests/test_layopt.py test~) are shown against the
 respective help (see default below)
 
+* Template
+
+This is a template I use across many projects
+
+#+begin_example just
+@default:
+    @just --list
+
+test_process:
+    rm -rf output *.log; <some_command>
+
+test_profile:
+    mkdir prof
+    python -m cProfile -o prof/$(git rev-parse HEAD)_$(date +%Y%m%d).prof $(which pytest) tests/test_<file>.py
+
+pc_ruff:
+    pre-commit run ruff-check --all-files
+
+pc_npd:
+    pre-commit run numpydoc-validation --all-files
+
+pc_black:
+    pre-commit run blacken-docs --all-files
+
+pc_prettier:
+    pre-commit run prettier --all-files
+
+pc_markdown:
+    pre-commit run markdownlint-cli2 --all-files
+
+pc_pylint:
+    pre-commit run pylint --all-files
+
+test:
+    pytest --cov=src --numprocesses=logical
+#+end_example
+
+
 * Links
 
 + [[https://github.com/casey/just][casey/just: 🤖 Just a command runner]]
