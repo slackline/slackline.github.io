@@ -87,6 +87,61 @@ remote branch. Only then can you make a ~worktree~ based on it.
 #+end_src
 
 
+* Hooks
+
+One of the challenges I found of switching to a Worktree based workflow is that you need to create a [[id:4bf1c297-d00a-4857-9339-8017c27138c6][virtual environment]]
+(or [[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][uv]] environment) for each worktree. I also have started using [[id:08b71419-a3fc-4c7e-8fb6-75f613e41315][Just]] as a task runner which means there is no
+~.justfile~ in each worktree either. A quick search led me to a useful [[https://mskelton.dev/bytes/20230906143340][blog post by Mark Skelton]] which use a
+~post-checkout~ hook to copy files which are in ~.gitignore~.  Breaking out my rusty [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] scripting skills and I soon
+had a script which did what I wanted to.
+
+1. Create a basic ~.justfile~ if one doesn't already exist in the ~main/~ worktree directory.
+2. Create a ~.envrc~ file if one doesn't exist to activate a [[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][Python uv]] environment that resides in ~.venv/~.
+3. Copy ~main/.justfile~ and ~main/.envrc~ to the newly created/checked out worktree directory.
+4. If there is no ~.venv/~ directory then use [[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][Python uv]] to create, sync one then install the package.
+5. Add the new worktree directory to the [[id:a4af96d2-f895-4a68-9419-d482d2850f4d][Direnv]] allowed list.
+
+#+begin_example bash
+#!/bin/bash
+#
+# Inspiration from : https://mskelton.dev/bytes/20230906143340
+#
+# Copy .justfile and .envrc to new worktrees on first checkout and create and activate a virtual environment
+# with uv
+
+# Base directory for bare repository
+BASE_PATH="$(git rev-parse --git-dir)/../../"
+
+if [ ! -f "${BASE_PATH}/main/.justfile" ]; then
+  echo "No .justfile creating a basic skeleton"
+  echo "@default:\n    @just --list\n\n" > main/.justfile
+fi
+
+if [ ! -f "${BASE_PATH}/main/.envrc" ]; then
+  echo "No .envrc creating a basic skeleton"
+  echo "#!/bin/bash\nsource .venv/bin/activate" > main/.envrc
+fi
+
+if [[ "$1" == "0000000000000000000000000000000000000000" ]]; then
+  # Copy files (they should be in main/)
+  FILES=(".justfile" ".envrc")
+
+  for FILE in "${FILES[@]}"; do
+    echo "Copying main/'${FILE}' to $(pwd)/${FILE}"
+	cp "${BASE_PATH}/main/${FILE}" "$(pwd)/${FILE}"
+  done
+
+  # Create a virtual environment using uv and install
+  if [ ! -d ".venv/" ]; then
+    uv venv
+    uv sync
+    uv pip install -e .
+    # Allow direnv so venv can be activated
+    direnv allow
+  fi
+fi
+
+#+end_example
 
 * Links
 
@@ -96,6 +151,11 @@ remote branch. Only then can you make a ~worktree~ based on it.
 + [[https://git-scm.com/docs/git-worktree][Git - git-worktree Documentation]]
 + [[https://www.nickyt.co/blog/git-worktrees-git-done-right-2p7f/][Git Worktrees: Git Done Right - Just Some Dev]]
 + [[https://futurepixels.co.uk/posts/improving-my-productivity-and-context-switching-with-git-worktrees/][Futurepixels - Improving my productivity and context switching with git worktrees]]
+
+** Hooks
+
++ [[https://mskelton.dev/bytes/20230906143340][Using Git Hooks When Creating Worktrees | Mark Skelton]]
++ [[https://stackoverflow.com/questions/79186993/using-git-hooks-with-worktree][githooks - Using Git hooks with worktree - Stack Overflow]]
 
 ** Tools
 
