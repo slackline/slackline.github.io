@@ -11,6 +11,7 @@
 ** Books
 
 + [[https://mlsysbook.ai/][Machine Learning Systems]]
++ [[https://github.com/NannyML/The-Little-Book-of-ML-Metrics][NannyML/The-Little-Book-of-ML-Metrics: The book every data scientist needs on their desk.]]
 
 ** Articles
 
