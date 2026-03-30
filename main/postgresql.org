@@ -50,4 +50,5 @@ pg_ctl stop -D /var/lib/postgres/data/ -m smart
 
 You should now be able to upgrade the database.
 
-Useful points on this, but not quite the exact answer were [[https://ivdl.co.za/2023/11/07/upgrading-from-postgresql-15-to-16-installed-with-homebrew-on-an-apple-silicon-mac/][here]] and [[https://www.philihp.com/2019/postgres-10-11-upgrade.html][here]].
+Useful points on this, but not quite the exact answer were [[https://ivdl.co.za/2023/11/07/upgrading-from-postgresql-15-to-16-installed-with-homebrew-on-an-apple-silicon-mac/][here]] and [[https://www.philihp.com/2019/postgres-10-11-upgrade.html][here]]
+.

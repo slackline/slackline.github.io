@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       59a65fbf-76b8-400a-aebe-eb194995d937
+:END:
+#+TITLE: Etckeeper
+#+FILETAGS: :linux:git:backup:config:
+
+Etckeeper is a way of keeping your ~/etc~ under version control when system updates are made.

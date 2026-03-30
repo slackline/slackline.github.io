@@ -70,3 +70,532 @@ systemctl list-unit-files --type=service [--state=enabled]
 #+begin_example
 utmpdump /var/log/wtmp
 #+end_example
+
+* Backup
+
+Initially I thought of compressing and archiving key files and backing up to ~/mnt/usb/ovh~ and backed up the following.
+
+| Software                           | Location                    | Archive                            |
+|------------------------------------+-----------------------------+------------------------------------|
+| Fittrackee                         | ~/home/fittrackee/uploads~  | fittrackee-uploads-20260327.tar.xz |
+| OpenGist                           | ~/var/lib/opengist~         | opengist-20260327.tar.xz           |
+| ForegJo                            | ~/var/lib/forgejo~          | forgejo-20260327.tar.xz            |
+| FreshRSS                           | ~var/lib/webapps/freshrss~  | webapps-20260327.tar.xz    |
+| Dokuwiki (old) - sheffieldboulder  | ~/var/www/sheffieldboulder~ | www-20260327.tar.xz                |
+| kimura                             | ~/var/www/kimura~           |                                    |
+| Dokuwiki - sheffieldboulder/kimura | ~srv/http~                  | http-20260327.tar.xz               |
+| /home/arch                         | ~/home/arch~                | ~home/arch/~                        |
+
+** ~rsync~
+
+I then realised that I have plenty of space on the 5TB external USB of my [[id:742ab443-39f4-4cf6-a5ca-cb486578ad94][Arch Raspberry Pi 4b]] so just used [[id:39d2f425-88e3-40a6-86ff-1866d8587221][Rsync]] to
+back up the whole drive. I wanted to preserve the ~uid~/~gid~ of the directories so I didn't have to mess around too
+much when I reinstalled things so ran this as root.
+
+#+begin_example
+rsync -o -e "ssh -p 22" -a --info=progress2 "root@152.228.170.148:/mnt/*" . --exclude="proc" --exclude="sys" --exclude="dev"
+#+end_example
+
+
+** AUR packages
+
+
+
+#+begin_example
+anubis-git
+apache-tools
+etherpad-lite
+forgejo-runner
+freshrss
+minecraft-server
+nodejs-postcss
+ntfy
+ntfysh-bin
+opengist-bin
+owntracks-frontend
+owntracks-recorder
+paru
+python313
+quicksetup
+#+end_example
+
+
+** Databases
+
+Several of the packages I've installed and use have databases storing data in the background I therefore decided to dump
+these separately to make backups that could be restored.
+
+*** PostgreSQl
+
+Used by [[id:d9c960c2-71b6-45e6-b388-dcd07b9da3e1][FitTrackee]] to store GPX data.
+
+We're in a ~chroot~ environment so the ~postgresql.service~ isn't running. Manually start postgres with
+
+#+begin_example
+mkdir /run/postgresql
+chown postgres:postgres -R /run/postgresql
+su postgres
+postgres -D /var/lib/postgres/data &
+#+end_example
+
+We can now list the various databases (to check what is there) and dump them
+
+#+being_example
+su postgres
+psql
+postgres=# \l
+                                                   List of databases
+    Name    |   Owner    | Encoding | Locale Provider | Collate |  Ctype  | Locale | ICU Rules |   Access privileges
+------------+------------+----------+-----------------+---------+---------+--------+-----------+-----------------------
+ fittrackee | fittrackee | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           |
+ postgres   | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           |
+ template0  | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | =c/postgres          +
+            |            |          |                 |         |         |        |           | postgres=CTc/postgres
+ template1  | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | =c/postgres          +
+            |            |          |                 |         |         |        |           | postgres=CTc/postgres
+(4 rows)
+
+postgres=# \l
+#+end_exampl
+
+We only really have the ~fittrackee~ database that we have to export, no other applications are using Postgres.
+
+#+begin_example
+su fittrackee
+mkdir db-$(date +%Y%m%d)
+pg_dump -f db-$(date +%Y%m%d)/fittrackee-backup.sql fittrackee
+exit
+mv /home/fittrackee/db-db-$(date +%Y%m%d) /tmp/.
+#+end_example
+
+I then used ~rsync~ as above to copy the dumped database to my local backup.
+
+*** MariaDB
+
+Used by [[id:e083d279-8bca-4d41-8c5f-ffe423918071][freshrss]] and [[id:736537b3-75e0-4c24-9156-364937e0e8a2][Forgejo]].
+
+#+begin_example
+su mysql
+mariadbd &
+MariaDB[(none)]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| forgejo            |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.006 sec)
+#+end_example
+
+FreshRSS comes with is own PHP script to perform [[https://freshrss.github.io/FreshRSS/en/admins/05_Backup.html][backups]]. This is located at
+~/usr/share/webapps/freshrss/cli/db-backup.php~ and saves the database dump at
+~/var/lib/webapps/freshrss/data/users/<username>~ with one directory for each registered user.
+
+As recommended in the  [[https://freshrss.github.io/FreshRSS/en/admins/05_Backup.html][backups]] documentation we make a backup of the whole install.
+
+#+begin_example
+cd /tmp/
+tar -cjvf freshrss-backup-$(date +%Y%m%d).tar.bz2 /var/lib/webapps/freshrss
+#+end_example
+
+
+* Reinstall
+
+Found a couple of useful walk-throughs of how to install Arch on OVH VPS
+
++ [[https://www.dimoulis.net/posts/install-arch-linux-on-ovh-vps/][Install Arch Linux On OVH VPS - Tech Blog]] - uses a cloud image.
++ [[https://gist.github.com/d-513/d2fe4009383f850fb92273332adbf02b][Install Arch on OVH VPS | d-513]] - useful, if slightly old, walk-through uses plain image and ~linux-lts~. In the
+  comments though there is a link!
++ [[https://github.com/kovidgoyal/kovidgoyal.github.io/blob/master/setup-ovh-arch.sh][setup-ovh-arch.sh | kovidgoyal]] - a recent (2025) script which automates the above steps from the author of [[id:868b46bc-3594-4cf2-aecb-ca6e1389ac27][Kitty]] and
+  [[id:62ce92c8-2493-4e7f-b32a-196535c42886][Calibre]]!
+
+I read the second several times and compared it to the script ~setup-ovh-arch.sh~ to make sure I understood /exactly/
+what was going on before running the script.
+
+** Download and Edit script
+
+Download the script with the following...
+
+#+begin_example
+cd /tmp/
+curl -fSsL https://raw.githubusercontent.com/kovidgoyal/kovidgoyal.github.io/refs/heads/master/setup-ovh-arch.sh > /tmp/bootstrap.sh && chmod +x /tmp/bootstrap.sh
+#+end_example
+
+Edit ~bootstrap.sh~ using ~nano~ to modify
+
++ ~TZ="Europe/London"~
++ ~AUTHORIZED_KEYS=""~
+
+I then ran the script giving my own hostname
+
+#+begin_example
+/tmp/bootstrap.sh nshephard.dev
+#+end_example
+
+It almost ran to completion but failed with...
+
+#+begin_example
+ln: failed to create symbolic link '/etc/resolv.conf': Device or resource busy
+#+end_example
+
+Reading through the script this is near the end of the ~finalize()~ function. I therefore edited
+~/bootstrap/etc/resolv.conf~ manually and added the following...
+
+#+begin_example
+nameserver 1.1.1.1
+nameserver 8.8.8.8
+nameserver 4.4.4.4
+nameserver fdee:e2bd:86fe::1
+#+end_example
+
+I then mounted the necessary partitions and manually ~chroot~'d into the new environment
+
+#+begin_example
+mount -t proc /proc /bootstrap/proc/
+mount -t sysfs /sys /bootstrap/sys/
+mount --rbind /dev /bootstrap/dev/
+chroot /bootstrap/
+#+end_example
+
+From here I manually executed the last few steps that I needed to of the ~finalize()~ function, namely (note I excluded
+the final ~curl~ command which pulls the authors authorized SSH keys and puts them in ~/root/.ssh/known_hosts~ as I
+didn't need this).
+
+#+begin_example
+touch /etc/vconsole.conf
+mkinitcpio -P
+mkdir -p /root/.ssh
+#+end_example
+
+I noticed that the network configuration described in the original was missing so created
+~/etc/systemd/network/20-ovh.network~
+
+#+begin_example
+cat << EOF > /etc/systemd/network/20-ovh.network
+[Match]
+Name=en*
+
+[Network]
+DHCP=true
+EOF
+#+end_example
+
+Probably not essential but can't see it doing any harm as its a rule that will match any network device starting ~en~
+and enables ~dhcp~ for it.
+
+Whilst here I undertook some other key steps...
+
+*** Set ~root~ password
+
+#+begin_example
+passwd
+#+end_example
+
+*** Install some essentials
+
+#+begin_example
+pacman -Syu bat fd lsd nano ripgrep zsh
+#+end_example
+
+
+*** Created ~arch~ user account
+
+#+begin_example
+pacman -Syu zsh
+useradd -U -G users,wheel -d /home/<username> -s /usr/bin/zsh <username>
+# /home/<username> wasn't created
+mkdir /home/<username>
+chown -R <username>:<username> /home/<username>
+chmod 700 /home/<username>
+passwd <username>
+#+end_example
+
+I then [[id:39d2f425-88e3-40a6-86ff-1866d8587221][Rsync]]'d' the necessary keys from my local computer to ~/home/<useraccount>/.ssh~
+
+#+begin_example
+rsync -e "ssh -p 22" -av "~/.ssh" "root@xxx.xxx.xxx.xxx:/bootstrap/home/<username>/."
+#+end_example
+
+...and did the same for my GPG keys.
+
+#+begin_example
+rsync -e "ssh -p 22" -av "~/.gnupg" "root@xxx.xxx.xxx.xxx:/bootstrap/home/<username>/."
+#+end_example
+
+Because I ran ~rsync~ from a system where my ~uid~ differs the ownership needed changing on the VPS as the ~uid~ and
+~gid~ were inherited from the local copy. This can be avoided running ~rsync~ as ~root~ and using ~-o~ flag as was done
+when copying the backup system (see above).
+
+*** Copy ~root~ files over
+
+
+As ~root~ on my local machine I rand the following to copy some dotfiles to the ~root~ account on the remote host.
+
+#+begin_example
+rsync -o -e "ssh -p 22" -av "/mnt/usb/backup/ovh/root/.bash*" "root@ovh:/root/."
+#+end_example
+
+
+*** Tweaked ~/etc/ssh/sshd_config~
+
+I like to..
+
++ Change the default port for ~sshd~ to accept connections on.
++ Prevent password connections, only allow SSH keys.
++ Deny ~root~ login over ~ssh~.
++ Print message of the day
++ Print last login
++ Facilitate GPG forwarding
+
+#+begin_example
+Port ###
+PasswordAuthentication no
+PermitRootLogin prohibit-password
+PrintMotd yes
+PrintLastLog yes
+# Remove stale sockets to facilitate GPG forwarding
+StreamLocalBindUnlink yes
+#+end_example
+
+
+** Rebooting
+
+Before rebooting I checked what services were enabled, I wanted to make sure networking and ~sshd~ were at a bare
+minimum going to run on rebooting.
+
+
+#+begin_example
+vps-bb669593 etc # systemctl list-unit-files --type=service --state=enabled
+UNIT FILE                            STATE   PRESET
+getty@.service                       enabled enabled
+sshd.service                         enabled disabled
+systemd-network-generator.service    enabled enabled
+systemd-networkd-wait-online.service enabled enabled
+systemd-networkd.service             enabled enabled
+systemd-resolved.service             enabled enabled
+systemd-timesyncd.service            enabled enabled
+
+7 unit files listed.
+
+#+end_example
+
+Exited ~chroot~ and unmounted drives.
+
+#+begin_example
+exit
+umount /bootstrap/{proc,sys,dev}
+umount /bootstrap/
+
+#+end_example
+
+Initial login failed, so I rebooted and allowed password based logins to have a look around. Turns out that my
+~/.ssh/id_ed25519.pub~ was a symbolic link to file under my ~/dotfiles/.ssh/id_ed25519.pub~ and so there was no public
+key available on the VPS to compare to the private key I had locally.
+
+I therefore copied the file over and disabled password based logins again. I also had to adjust the symbolic link to
+~~/.ssh/authorized_keys~ to point to the correct location in my dotfiles, but after these tweaks I could ~ssh ovh~
+without any problem.
+
+
+
+** Pacman Configuration
+
+
+~/etc/pacman.conf~ needed some tweaking
+
+#+begin_example
+IgnorePkg = postgresql
+CleanMethod = KeepCurrent
+Color
+DisableDownloadTimeout
+#+end_example
+
+*** Hooks
+
+Some hooks needed reinstating (but not all, e.g. there was a lingering ~tt-rss.hook~)
+
+**** ~/etc/pacman.d/hooks/R.hook~
+
+#+begin_example
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = r
+
+[Action]
+Description = Update R packages on upgrade
+When = PostTransaction
+Exec = /usr/bin/Rscript -e 'update.packages(ask = FALSE, checkBuilt = TRUE)'
+#+end_example
+
+
+**** ~/etc/pacman.d/hooks/clean-cache.hook~
+
+#+begin_example
+[Trigger]
+Operation = Remove
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = *
+
+[Action]
+Description = Removing unnecessary cached files (keeping the latest two)
+When = PostTransaction
+Exec = /usr/bin/paccache -rvk1
+#+end_example
+
+
+
+** Reinstalling Packages
+
+I obviously wanted to get my system back to it's previous custom state. I was a little wary of restoring from [[id:59a65fbf-76b8-400a-aebe-eb194995d937][etckeeper]]
+in case there was something broken in there that had made my system unstable.
+
+*** Installing Packages
+
+[[id:9bf2dfc3-ff49-49b2-8507-503f64649f7a][Arch Pacman]] stores a record of packages that have been installed in ~###~. We can therefore browse that and see what I
+had previously explicitly installed and use it as a basis for reinstalling packages.
+
+#+begin_example
+pacman -Syu \
+  btop \
+  certbot-nginx \   # pulls in certbot
+  debugedit \       # required to makepkg as users
+  difftastic \
+  diffutils \
+  direnv \
+  duf \
+  etckeeper \
+  fakeroot \
+  forgejo \
+  findutils \
+  forgejo \
+  git \
+  htop \
+  keychain \
+  kitty \
+  mariadb \
+  nginx \
+  pacman-contrib \   # includes paccache
+  php \
+  php-gd \
+  php-sqlite \
+  plocate \
+  python-virtualenvwrapper \
+  r \
+  rust \
+  stow \
+  sudo \
+  tmux \
+  uv \
+  zsh
+#+end_example
+
+*** Configuration
+
+**** ~sudo~
+
+Allow members of the ~wheel~ group to run commands as ~sudo~ (required for building AUR packages using ~makepkg -sri~)
+
+In ~/etc/sudoers~ uncomment the line
+
+#+begin_example
+%wheel ALL=(ALL:ALL) NOPASSWD: ALL
+
+#+end_example
+
+**** Letsencrypt
+
+I use Letsencrypt for certificates via ~certbot~ but didn't want the hassle of reconfiguring or getting all my licenses
+anew so copied these over too.
+
+**** Nginx
+
+I copied over my old configuration.
+
+#+begin_example
+rsync -o -e "ssh -p 22" -av "/mnt/usb/backup/ovh/etc/nginx/nginx.conf" "root@ovh:/etc/nginx/."
+rsync -o -e "ssh -p 22" -av "/mnt/usb/backup/ovh/etc/nginx/redirect.conf" "root@ovh:/etc/nginx/."
+
+#+end_example
+
+Once in place I enabled the nginx service
+
+
+#+being_example
+systemctl enable --now nginx.service
+#+end_example
+
+**** ForgeJo
+
+
+** User account restore
+
+I use [[id:31304184-2fad-4cc5-824b-3ab4b9d2e126][Dotfiles]] to manage my user account configuration so cloned the repository and restored all the symlinks. After
+cloning the repository (which required ~git~ to be installed!). I used ~stow~ (also needed installing) to restore all
+the symbolic links.
+
+
+
+** ForgeJo
+
+#+begin_example
+#+end_example
+
+*** AUR
+
+The following packages were installed from the [[https://aur.archlinux.org][Arch Linux User Repository]]. I quite like using ~paru~ to manage these but
+have failed previously to successfully build and install but thought I'd give it another whirl on a fresh system.
+
+*** OpenGist
+
+#+begin_example
+cd ~/aur
+git clone
+cd opengist-bin
+makepkg -sri
+#+end_example
+
+
+*** FreshRSS
+
+#+begin_example
+cd ~/aur
+git clone
+cd freshrss
+makepkg -sri
+#+end_example
+
+*** FitTrackee
+
+This /isn't/ available in AUR, instead we...
+
++ Install ~postgresql~ and ~postegresql-gis~
++ Create a ~fittrackee~ account
+
+#+begin_example
+pacman -Syu postgresql postgis
+useradd -U -G users,wheel,postgres -d /home/fittrackee -s /usr/bin/zsh fittrackee
+# Again /home/fittrackee wasn't created by the -d flag so I had to
+chown -R fittrackee:fittrackee /home/fittrackee
+chmod 700 /home/fittrackee
+#+end_example
+
+~su~ to the new ~fittrackee~ account, create a [[id:4bf1c297-d00a-4857-9339-8017c27138c6][Python Virtual Environments]] and install fittrackee
+
+#+begin_example
+su fittrackeet
+cd
+mkvirtualenv fittrackee
+
+#+end_example
+
+
+** PostgreSQL
+
+** MariaDB

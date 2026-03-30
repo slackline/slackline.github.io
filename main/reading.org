@@ -167,7 +167,7 @@ Most of these I read a long time ago when studying hence a distinct lack of note
 + /The Diamond Age : or a Young Lady's Illustrated Primer/
 + /Termination Shock/
 
-*** Terry Pratchet
+*** [[https://wiki.lspace.org/Main_Page][Terry Pratchet]]
 **** Discworld
 + /Colour of Magic/
 + /Light Fantastic/
@@ -179,6 +179,7 @@ Most of these I read a long time ago when studying hence a distinct lack of note
 + /The Carpet People/
 + /Diggers/
 + /Good Omens/ (co-authored with Neil Gaiman)
+
 *** Neil Gaiman
 
 + /American Gods/
@@ -251,6 +252,8 @@ Other stuff I've read at various points on the net that were interesting.
 + [[https://www.noemamag.com/we-need-to-rewild-the-internet/][We Need To Rewild The Internet]]
 + [[https://www.newyorker.com/culture/the-weekend-essay/what-is-privacy-for][What Is Privacy For? | The New Yorker]]
 + [[https://www.biennale.net/all-problems-can-be-illuminated-not-all-problems-can-be-solved/index.html][Berlin Biennale | All Problems Can Be Illuminated; Not All Problems Can Be Solved]]
++ [[https://untappedjournal.com/stories/jarrett-fuller-building-with-simple-tools-longevity][Untapped : Using Simple Tools as a Radical Act of Independence : By Jarrett Fuller]]
+
 
 *** Social Media
 

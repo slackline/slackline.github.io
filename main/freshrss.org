@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       e083d279-8bca-4d41-8c5f-ffe423918071
+:END:
+#+TITLE: FreshRSS
+#+FILETAGS: linux:rss:selfhosted
+
+FreshRSS is a great RSS aggregator, its feed can be read on Android using the ReadYou app.

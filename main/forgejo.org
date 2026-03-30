@@ -323,7 +323,9 @@ setup pushing would be a bad idea as it would leave the main copy on GitLab behi
 
 * Backup
 
-You can easily backup Forgejo to a zip using [[https://forgejo.org/docs/latest/admin/command-line/#dump][~forgejo dump command~]].
+You can easily backup Forgejo to a zip using [[https://forgejo.org/docs/latest/admin/command-line/#dump][~forgejo dump command~]], but only if ~forgejo~ is running at the time
+(i.e. not from a ~chroot~ environment).
+
 * Links
 
 + [[https://seanthegeek.net/1035/how-to-configure-a-nginx-reverse-proxy-with-lets-encrypt-certificates/][How to configure a nginx reverse proxy with Let's Encrypt certificates - seanthegeek.net]]

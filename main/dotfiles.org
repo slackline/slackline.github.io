@@ -35,9 +35,11 @@ I use [[https://www.gnu.org/software/stow/][stow]] to deploy my dotfiles on new 
 1. Clone the repository.
 2. Link files using stow.
 
-#+TODO: Complete this section.
-
 #+begin_example
+git clone git@codeberg.org:<username>/dotfiles.git
+cd dotfiles
+stow -n .   # Check what will happen, reports errors/problems if there are any
+stow .
 #+end_example
 * Links
 

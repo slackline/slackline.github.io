@@ -99,6 +99,7 @@ It can be handy to have a live distribution to carry around and boot as and when
 + [[id:76578fdf-d00f-4eb6-ad74-13bb08fc5d65][qemu]]
 + [[id:fab2461a-c95a-47e3-9e5d-64af083c92e0][QEMU]]
 + [[id:8b2ddcec-2b0a-4cb2-9bd5-f558d0b7ad93][rkhunter]]
++ [[id:39d2f425-88e3-40a6-86ff-1866d8587221][rsync]]
 + [[id:d1ce8192-41ce-4073-9fe8-654fd17fdadb][Security]] - includes [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] and [[id:1f44c0fe-5b1c-4a02-a623-18c4eebbc851][Yubikey]].
 + [[id:7c341a0b-a59b-403e-a574-061d326c4c50][Snapcast]]
 + [[id:be393585-6c62-4ce9-9fba-15e4d1c472cb][SyncThing]]

@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       39d2f425-88e3-40a6-86ff-1866d8587221
+:END:
+#+TITLE: Rsync
+#+FILETAGS: :linux:rsync:files:network:
+
+[[https://rsync.samba.org/][rsync]] is an efficient tool for synchronising files between two locations, whether that is on the same disk, computer or
+between networked computers.
+
+* Options
+
+** Preserve ownership
+
+~rsync~ sets ownership based on the user running it. You can however run it as ~root~ and use the ~-o~ flag to preserve
+ownership, although this only saves the ~uid~/~gid~ and if these numbers are used on your target machine they will
+appear to be associated with that user.
+
+** Progress
+
+~-v~ gives verbose output on progress but this doesn't necessarily give a good indication of how much has been
+transferred or remains to be transferred instead using the ~--info=progress2~

@@ -60,7 +60,7 @@ allows used of its login options.
 
 ** [[https://owntracks.nshephard.dev][OwnTracks]]
 
-I setup my own [[id:5315e7ee-0ed9-4514-b1a9-0a03114d8191][owntracks]] instance.
+I tried to setup my own [[id:5315e7ee-0ed9-4514-b1a9-0a03114d8191][owntracks]] instance.
 
 ** Wordpress
 

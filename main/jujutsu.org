@@ -791,3 +791,4 @@ which is one of the best [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] pack
 + [[https://www.stavros.io/posts/switch-to-jujutsu-already-a-tutorial/][Switch to Jujutsu already: a tutorial - Stavros' Stuff]]
 + [[https://v5.chriskrycho.com/essays/jj-init/][jj init — Sympolymathesy, by Chris Krycho]]
 + [[https://blog.appliedcomputing.io/p/frustrations-with-version-control][Frustrations with Version Control - by drmorr]]
++ [[https://etodd.io/2025/10/02/should-i-switch-from-git-to-jujutsu/][Should I Switch From Git to Jujutsu · Evan Todd]]
