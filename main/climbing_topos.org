@@ -33,6 +33,10 @@ which are grouped into crags and areas.
 
 + [[https://fernandozamoraguiadepicos.com/en/climbing-topos/][Climbing routes Directory | Fernando Zamora]]
 
+**** La Pedriza
+
++ [[https://www.ukclimbing.com/articles/destinations/la_pedriza_-_emerging_from_a_shadowy_past-16794][UKC Articles - DESTINATION GUIDE: La Pedriza - Emerging from a Shadowy Past]]
+
 *** UK
 
 **** Peak District
@@ -45,7 +49,7 @@ which are grouped into crags and areas.
 + [[https://www.peakdistrict.gov.uk/visiting/places-to-visit/stanage-and-north-lees/cattis-side-cottage][Cattis Side Cottage (Stanage 4 people)]]
 + [[https://www.thebmc.co.uk/en/don-whillans-hut][Whillans Memorial Hut]]
 + [[https://climbers-club.co.uk/huts/bob-downes][CC R O Downe's]]
-+ [[https://derbyshirepennineclub.co.uk/hut/][Derbyshore and Pennine Club]]
++ [[https://derbyshirepennineclub.co.uk/hut/][Derbyshire and Pennine Club]]
 + [[https://thorpe-bunk.co.uk/][Thorpe Farm Bunkhouse]]
 
 ** Logging Gear
