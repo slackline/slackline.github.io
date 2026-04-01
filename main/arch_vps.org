@@ -484,7 +484,7 @@ pacman -Syu \
   pacman-contrib \   # includes paccache
   php \
   php-gd \
-  php-sqlite \
+  php-sqlite3 \
   plocate \
   python-virtualenvwrapper \
   r \
@@ -564,12 +564,73 @@ makepkg -sri
 
 *** FreshRSS
 
+Installation from AUR is straight-forward.
+
 #+begin_example
 cd ~/aur
 git clone
 cd freshrss
 makepkg -sri
 #+end_example
+
+**** Restoring Database
+
+I'd made a backup of the database so as described in the [[https://freshrss.github.io/FreshRSS/en/admins/05_Backup.html#restoring-files-from-a-backup][FreshRSS Restore instructions]] I copied the files I had backed
+up from ~/var/lib/webapps/freshrss/data~ back in place
+
+#+begin_example
+cd /var/lib/webapps/freshrss
+cp freshrss-20260327.tar.xz .
+tar xjvf freshrss-20260327.tar.xz .
+#+end_example
+
+I then attempted to [[https://freshrss.github.io/FreshRSS/en/admins/05_Backup.html#restore-a-database-backup][restore the database]], although in this install the data and other install files of FreshRSS are
+separated and the PHP scripts are located under ~/usr/share/webapps/freshrss~.
+
+#+begin_example
+/usr/share/webapps/freshrss/cli/db-restore.php
+FreshRSS failed recommendations:
+⚠ intl: Cannot find the recommended library php-intl for internationalisation.
+
+FreshRSS failed requirements:
+❌ pdo: Cannot find PDO or one of the supported drivers (pdo_sqlite, pdo_pgsql, pdo_mysql).
+❌ pdo-sqlite: Cannot find the PDO driver for SQLite.
+#+end_example
+
+Oh dear! Not what I was hoping, but I had a suspicion I new the cause as I had previously done a lot of tinkering with
+PHP when installing Wordpress and likely had installed and enabled PHP Sqlite3 extensions. I duly installed the
+~php-sqlite3~ extension.
+
+#+begin_example
+pacman -Syu php-sqlite3
+#+end_example
+
+Checking ~/etc/php/php.ini~ in my backup copy I found...
+
+#+begin_example
+$ rg sqlite php/php.ini
+939:extension=pdo_sqlite
+947:extension=sqlite3
+1020:[sqlite3]
+1022:; http://php.net/sqlite3.extension-dir
+1023:;sqlite3.extension_dir =
+1029:; the sqlite_dbpage virtual table.
+1030:; https://www.sqlite.org/c3ref/c_dbconfig_defensive.html
+1032:;sqlite3.defensive = 1
+#+end_example
+
+...and so duly uncommented the relevant lines to enable the ~extension=pdo_sqlite~ and ~extension=sqlite3~. Another
+iteration and I was informed I also had to enable ~extension=intl~ and because attempts had failed I now needed to
+~--force-overwrite~ the existing database but we ended up with a successful restore.
+
+#+begin_example
+nshephard freshrss # ./cli/db-restore.php --force-overwrite
+FreshRSS restore database from SQLite for user “nshephard”…
+Deleting SQL data for user “nshephard”…
+Start SQL copy…
+8931/8931
+#+end_example
+
 
 *** FitTrackee
 
@@ -589,13 +650,146 @@ chmod 700 /home/fittrackee
 ~su~ to the new ~fittrackee~ account, create a [[id:4bf1c297-d00a-4857-9339-8017c27138c6][Python Virtual Environments]] and install fittrackee
 
 #+begin_example
-su fittrackeet
+su fittrackee
 cd
-mkvirtualenv fittrackee
+cat << EOF > .bashrc
+export WORKON_HOME=~/.virtualenvs
+source /usr/bin/virtualenvwrapper.sh
 
+export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
+
+if [ -f ".bash_aliases" ]; then
+  source .bash_aliases
+fi
+EOF
+cat << EOF > .bash_aliases
+export alias l="lsd -lha"
+EOF
+source .bashrc
+mkvirtualenv fittrackee-1.2.1
+#+end_example
+
+From this point on I followed the instructions to [[https://docs.fittrackee.org/en/installation/installation.html#from-pypi][install from PyPI]]
+
+#+begin_example
+pip install fittrackee
+#+end_example
+
+Enable the ~postgresql.service~
+
+#+begin_example
+su -l postgres -c "initdb --locale=C.UTF-8 --encoding=UTF8 -D '/var/lib/postgres/data'
+systemctl enable --now postgresql.service
+#+end_example
+
+As user ~postgres~ create the database setting passwords
+
+#+begin_example
+su postgres
+psql
+CREATE USER fittrackee WITH PASSWORD '<PASSWORD>';
+CREATE SCHEMA fittrackee AUTHORIZATION fittrackee;
+CREATE DATABASE fittrackee OWNER fittrackee;
+CREATE EXTENSION postgis;
+SELECT * FROM pg_available_extensions WHERE name = 'postgis';
+#+end_example
+
+This showed that the PostGIS extension was installed.
+
+As ~fittrackee~ create and edit ~/home/fittrackee/.env~ using the [[https://github.com/SamR1/FitTrackee/blob/main/.env.example][.env.example]]. I used my previous file as a template.
+
+**Remember** - You must run ~source /home/fittrackee/.env~ as user ~fittrackee~ and make the directory
+~/home/fittrackee/log~
+
+#+begin_example
+su fittrackee
+source /home/fittrackee/.env
+mkdir /home/fittrackee/log
+#+end_example
+
+Copy the old uploads directory over (via ~rsync~ to the ~/tmp/~ directory), ensuring permissions are set to ~fittrackee~
+and extract.
+
+#+begin_example
+cp /tmp/fittrackee-20260327.tar.xz /home/fittrackee/.
+chown fittrackee:fittrackee /home/fittrackee/fittrackee-20260327.tar.xz
+su fittrackee
+tar xvf fittrackee-20260327.tar.xz
 #+end_example
 
 
+Upgrade the database
+
+#+begin_example
+ftcli db upgrade
+#+end_example
+
+#+begin_example
+INFO  [alembic.runtime.migration] Running upgrade 8221053f0e81 -> fed271354410, add geometry and points to workout segments
+Traceback (most recent call last):
+  File "/home/fittrackee/.virtualenvs/fittrackee-1.2.1/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/fittrackee/.virtualenvs/fittrackee-1.2.1/lib/python3.14/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+...
+  File "/home/fittrackee/.virtualenvs/fittrackee-1.2.1/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/fittrackee/.virtualenvs/fittrackee-1.2.1/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/fittrackee/.virtualenvs/fittrackee-1.2.1/lib/python3.14/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedObject) type "geometry" does not exist
+LINE 1: ALTER TABLE workout_segments ADD COLUMN geom geometry(LINEST...
+                                                     ^
+
+[SQL: ALTER TABLE workout_segments ADD COLUMN geom geometry(LINESTRING,4326)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+#+end_example
+
 ** PostgreSQL
+
+** PHP
+
+Aside from installing and enabling a few modules for restoring FreshRSS I also had to enable the ~php-fpm~ service. As
+noted above I had already installed PHP and some modules.
+
+#+begin_example
+pacman -Syu   php php-fpm php-gd php-sqlite3
+#+end_example
+
+The [[id:9bc6a091-ed02-4423-b14a-d56f677c5cd0][systemd]] file was not linked so I create it.
+
+#+begin_example
+mkdir /etc/systemd/multi-user.target.wants
+ln -s /usr/lib/systemd/system/php-fpm.service /etc/systemd/multi-user.target.wants/.
+systemctl enable --now php-fpm.service
+#+end_example
+
+Reading the [[https://wiki.archlinux.org/title/PHP][PHP - ArchWiki]] the configuration indicates that security can be improved by restricting the directories
+~php~ can access via ~open_basedir~. I also set ~date.timezone~
+
+#+begin_example
+date.timezone = Europe/London
+open_basedir = /srv/http/:/var/www/:/home/:/tmp/:/var/tmp/:/var/cache/:/usr/share/pear/:/usr/share/webapps/:/etc/webapps/
+extension=curl
+extension=gd
+extension=intl
+extension=pdo_pgsql
+extension=pdo_sqlite
+extension=sqlite3
+extension=zip
+#+end_example
 
 ** MariaDB
