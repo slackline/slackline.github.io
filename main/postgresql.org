@@ -8,6 +8,34 @@
 
 A more comprehensive SQL database than [[id:749d5f0f-09bd-47a8-a351-2432f38ff3d9][SQLite3]] is [[https://www.postgresql.org/][PostgreSQL]].
 
+* Commands
+
+** Connect to a database
+
+#+begin_example
+\connect <database_name>
+#+end_example
+
+** List tables
+
+
+#+begin_example
+\dt
+#+end_example
+
+** List extensions
+
+#+begin_example
+SELECT * FROM pg_available_extensions [WHERE name = 'postgis'];
+#+end_example
+* Connecting
+
+When connecting to a database the URL is of the form
+
+#+begin_example
+postgresql://[user[:password]@][host][:port][/dbname][?param1=value1&param2=value2]
+#+end_example
+
 * Upgrading
 
 When upgrading between major versions the database(s) need migrating. Most systems include a set of migration tools
