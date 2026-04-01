@@ -29,3 +29,7 @@ diseases. More on this can be found in the section on [[id:3899f7f8-bc4a-4228-b9
 ** Online Books
 
 + [[https://michelnivard.github.io/biobook/][Sequence Language Models & Deep Learning in Genomics]]
+
+** Videos
+
++ [[https://www.youtube.com/watch?v=kqLB5a8op5c][Professor Anthony Edwards on RA Fisher]]
