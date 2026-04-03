@@ -8,3 +8,5 @@ I use [[https://octopus.energy][Octopus Energy]] as my energy supplier as they a
 provide feet in tarriffs for my [[id:16185f85-6c97-4bb7-aa6e-a20250d0a237][Solar Energy]] generation.
 
 * Links
+
++ [[https://octopus.energy/blog/reading-your-meters/][Reading Your Meter Guide]] we've a SMETS2 Kaifa
