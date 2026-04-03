@@ -49,3 +49,13 @@ found as having occurred to at least [[https://simonwillison.net/2026/Feb/15/cog
 ** Research and Funding
 
 + [[https://bacon.boutique/sloponomics-and-the-coming-storm/][Sloponomics and the coming storm]]
+
+
+** Claude Code Leak
+
++ [[https://www.theregister.com/2026/04/01/claude_code_source_leak_privacy_nightmare/][Claude Code's source reveals extent of system access • The Register]]
++ [[https://ccleaks.com/][ccleaks — Claude Code Leaked Source Code | Hidden Models & Secret Features Exposed]]
+
+** Interesting Applications
+
++ [[https://v1d0b0t.github.io/blog/posts/2026-03-29-every-law-a-commit.html][Every Law a Commit — v1d0b0t]] - converted US Law to a Git repository.
