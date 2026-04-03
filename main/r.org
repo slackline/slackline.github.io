@@ -301,6 +301,7 @@ found useful.
 + [[https://lintr.r-lib.org/][A Linter for R Code • lintr]]
 + [[https://jarl.etiennebacher.com/][Jarl – jarl]] Just Another R Linter written in Rust very fast and corrects errors unlike ~lintr~ and is faster than
   ~flir~ (although its from the same author).
++ [[https://ropensci.org/blog/2026/04/02/tree-sitter-overview/][rOpenSci | A Better R Programming Experience Thanks to Tree-sitter]]
 
 ** Learning Resources
 
