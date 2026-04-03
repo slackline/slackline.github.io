@@ -23,11 +23,34 @@ A more comprehensive SQL database than [[id:749d5f0f-09bd-47a8-a351-2432f38ff3d9
 \dt
 #+end_example
 
-** List extensions
+** Command history
 
 #+begin_example
+\s
+#+end_example
+
+** List extensions
+
+#+begin_example sql
 SELECT * FROM pg_available_extensions [WHERE name = 'postgis'];
 #+end_example
+
+** Deleting things
+
+*** Rows
+
+#+begin_example
+DELETE * FROM <table> WHERE <condition>;
+#+end_example
+
+*** User/schema/database
+
+#+begin_example sql
+DROP USER fittrackee;
+DROP SCHEMA fittrackee;
+DROP DATABASE fittrackee;
+#+end_example
+
 * Connecting
 
 When connecting to a database the URL is of the form
