@@ -36,3 +36,4 @@ Make the following changes to help improve security on your server.
 
 + [[https://en.wikibooks.org/wiki/OpenSSH][OpenSSH - Wikibooks, open books for an open world]]
 + [[https://blog.g3rt.nl/upgrade-your-ssh-keys.html][Upgrade your SSH keys! · blog.g3rt.nl]] good article on ~ed25519~
++ [[https://jpmens.net/2026/04/03/ssh-certificates-the-better-ssh-experience/][Jan-Piet Mens :: SSH certificates: the better SSH experience]]
