@@ -101,6 +101,7 @@ pertains to events which have not happened based on observations of those that h
 + [[https://hastie.su.domains/CASI/][Computer Age Statistical Inference: Algorithms, Evidence and Data Science]]
 + [[https://statproofbook.github.io/][The Book of Statistical Proofs]]
 + [[https://michelnivard.github.io/biobook/][Sequence Language Models & Deep Learning in Genomics]]
++ [[https://mlbook.dataschool.io/][Master Machine Learning with scikit-learn]]
 
 *** Introduction to Statistical Learning
 
