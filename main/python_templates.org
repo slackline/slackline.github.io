@@ -38,7 +38,30 @@ git init
 rm main.py docs/conf.py LICENSE
 # Get GNU GPLv3 license in Markdown
 wget https://www.gnu.org/licenses/gpl-3.0.md && mv gpl-3.0.md COPYING.md
-git add .gitattributes .github/* .gitignore .pre-commit-config.yaml .readthedocs.yaml COPYING.md
+# Ignore blame
+cat << EOF > .git-blame-ignore-revs
+# Ignore the blame for the following commits
+#
+# Please include a comment above the commit(s) added to this file to aid understanding why they are ignored
+#
+# # YYYY-MM-DD @<github-username> <action-or-reason-for-ignoring>
+EOF
+git add \
+  .git-blame-ignore-revs \
+  .git_archival.txt \
+  .gitattributes \
+  .github/* \
+  .gitignore \
+  .pre-commit-config.yaml \
+  .python-version \
+  .readthedocs.yaml \
+  COPYING.md
+  docs/ \
+  noxfile.py \
+  pyproject.toml \
+  src/ \
+  tests/ \
+  zensical.toml
 git commit -m "pkg: Initial commit"
 #+end_example
 
