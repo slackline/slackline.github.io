@@ -482,6 +482,7 @@ pacman -Syu \
   mariadb \
   nginx \
   pacman-contrib \   # includes paccache
+  pass \             # pulls in tree
   php \
   php-gd \
   php-sqlite3 \
