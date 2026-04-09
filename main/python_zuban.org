@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       68a8963f-a5b2-4f76-be1a-a379ebb791be
+:END:
+#+TITLE: Python Zuban
+#+FILETAGS: :python:typing:
+
+[[https://zubanls.com/][Zuban]] is "A mypy-compatible Python language server built in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]]".
+
+
+* Links
+
++ [[https://zubanls.com/][Zuban]]
++ [[https://docs.zubanls.com/en/latest/][Zuban documentation]]
++ [[https://github.com/zubanls/zuban][zubanls/zuban: Python Type Checker / Language Server]]
