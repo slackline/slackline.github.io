@@ -36,3 +36,4 @@ crops around the world as the climate is more stable and plants aren't exposed t
 
 + [[https://www.mdpi.com/2071-1050/17/21/9544][Should Agrivoltaics Ever Be Decommissioned? How Agrivoltaics Bolster Farm Climate Adaptation Even When Unpowered]]
 + [[https://www.sciencedirect.com/science/article/abs/pii/S0168192313000890][Microclimate under agrivoltaic systems: Is crop growth rate affected in the partial shade of solar panels? - ScienceDirect]]
++ [[https://www.sciencedirect.com/science/article/pii/S2211467X24003092#sec4][Integrating artificial intelligence in energy transition: A comprehensive review - ScienceDirect]]
