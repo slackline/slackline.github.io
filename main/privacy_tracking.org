@@ -13,7 +13,10 @@
 
 ** AI Blocklist
 
-A big list of AI services to block is [[https://github.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist][maintained]]. Instructions to follow are easy.
+A couple of lists of AI services to block area and adding them is easy.
+
++ [[https://github.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist][uBlock Origin HUGE AI Blocklist]]
++ [[https://github.com/alvi-se/ai-ublock-blacklist][AI uBlock Origin Blacklist]]
 
 *** Adding to AdBlock
 
