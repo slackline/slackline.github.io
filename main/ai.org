@@ -233,6 +233,9 @@ also linked [[https://reproducible.cs.princeton.edu/][Leakage and the Reproducib
 
 ** Reading
 
+*** Positive
+
++ [[https://bitsplitting.org/2026/04/01/the-beginning-of-programming-as-well-know-it/][The Beginning of Programming as We’ll Know It | Bitsplitting.org]]
 
 ** Books
 
