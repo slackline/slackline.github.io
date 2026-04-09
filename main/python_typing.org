@@ -64,6 +64,11 @@ some = line(with, error)  # type:ignore[arg-type]
 [[https://docs.astral.sh/ty][ty]] is a Python typer analyse written in Rust from the authors of ruff. It is /very/ fast.
 
 
+* Zuban
+
+[[id:68a8963f-a5b2-4f76-be1a-a379ebb791be][Zuban]] is another static typer for Python written in rust, it is also /very/ fast. Unlike ~ty~ it aims to be compliant
+with ~mypy~.
+
 * RightTyper
 
 Adding typehints can be tedious, particularly if you have legacy code base that needs annotating. Cue [[https://github.com/RightTyper/RightTyper][RightTyper]] a "/
