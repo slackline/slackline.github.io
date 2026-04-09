@@ -43,3 +43,17 @@ You can start/stop/restart services
 The downside to OpenRC is that /everything/ must be run as ~root~. An alternative that allows users to start services is
 to use [[http://smarden.org/runit/][runit - a UNIX init scheme with service supervision]] as user. For examples see [[https://wiki.gentoo.org/wiki/OpenRC/User_services#Using_runsvdir_.28part_of_Runit.29][OpenRC/User services - Gentoo Wiki]]
 article.
+
+* User level services
+
+Symlink ~/etc/init.d/user.<name>~ to ~/etc/init.d/user~ and add the service
+
+#+begin_example
+ln -s /etc/init.d/user.<name> /etc/init.d/user
+#+end_example
+
+You can then enable services as a user with...
+
+#+begin_example
+rc-update --user add emacs default
+#+end_example
