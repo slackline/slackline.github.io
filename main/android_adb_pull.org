@@ -14,14 +14,24 @@ computer.
 Typically you can only pull one file, but with a bit of [[id:48c0d280-8330-4f65-a5da-098ea186c6b6][Bash xarg]] magic you can pull multiple files across. Based on
 answers in [[https://stackoverflow.com/questions/11074671/adb-pull-multiple-files][this thread]] the following got me all pictures for a given day onto my local computer.
 
-#+begin_src
+#+begin_example sh
 adb shell 'find /storage/self/primary/DCIM/Camera/IMG_20250522_*.jpg -print0' | xargs -0 -n 1 adb pull
-#+end_src
+#+end_example
+
+Another alternative is a ~for~ loop
+
+#+being_example sh
+for file in $(adb shell ls /storage/self/primary/OpenTracks\ GPX/2026-03-*); do
+    adb pull "${file}"
+done
+#+end_example
+
+That said neither of the above doesn't work when there is a space in the directory path :-/
 
 * Push multiple files
 
 Much easier to push multiple files
 
-#+begin_src
+#+begin_example sh
 adb push path\ to\ directory /storage/<dev>/target/path/.
-#+end_src
+#+end_example
