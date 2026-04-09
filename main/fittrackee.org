@@ -37,26 +37,30 @@ passwd fittrackee
 
 ** Create Database User
 
-As ~root~ you need to create a database to go with the service. As the ~postgres~ user create an account in PostgreSQL
-    for ~fittrackee~
-
-#+begin_src bash
-sudo su postgres
-[postgres@host ~/]$ createuser --interactive
-Enter name of role to add: fittrackee
-Shall the new role be a superuser? (y/n) n
-Shall the new role be allowed to create databases? (y/n) y
-Shall the new role be allowed to create more new roles? (y/n) n
-#+end_src
-
-You're not prompted to set the password, we also need to create a schema and authorise the ~fittrackee~ user.
+As the ~postgres~ user create an account in PostgreSQL for the ~fittrackee~ user and add a ~SCHEMA~ and ~DATABASE~ that
+that user is authorised/the owner of
 
 #+begin_src sql
 psql
-postgres=# ALTER USER fittrackee WITH PASSWORD '<password>';
-postgres=# CREATE SCHEMA fittrackee AUTHORIZATION fittrackee;
-postgres=# CREATE DATABASE fittrackee OWNER fittrackee;
-    #+end_src
+CREATE USER fittrackee WITH PASSWORD '<password>';
+CREATE SCHEMA fittrackee AUTHORIZATION fittrackee;
+CREATE DATABASE fittrackee OWNER fittrackee;
+#+end_src
+
+To get some things working with the newer features ou have to install the ~postgis~ extension for the specific database
+(i.e. ~fittrackee~) that has just been created. Under [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] the user account to use to do this is ~postgres~...
+
+#+begin_example sh
+psql -U postgres -d fittrackee -c 'CREATE EXTENSION IF NOT EXISTS postgis;'
+#+end_example
+
+Alternatively you can
+
+#+begin_example
+psql
+postgres=# \connect fittrackee
+fittrackee=# CREATE EXTENSION IF NOT EXISTS postgis;
+#+end_example
 
 
 ** Switch to ~fitttrackee~ install FitTrackee
@@ -135,6 +139,37 @@ INFO  [alembic.runtime.migration] Running upgrade d22670a89a54 -> 24eb097614e4, 
 
 #+end_src
 
+*** Removing unused activities
+
+There are some sports supported that I'll never use so I wanted to remove these.
+
+#+begin_example
+psql
+\connect fittrackee
+DELETE FROM sports WHERE label = 'Canoeing';
+DELETE FROM sports WHERE label = 'Canoeing (Whitewater)';
+DELETE FROM sports WHERE label = 'Cycling (Virtual)';
+DELETE FROM sports WHERE label = 'Halfbike';
+DELETE FROM sports WHERE label = 'Ice Skating';
+DELETE FROM sports WHERE label = 'Inline Skating';
+DELETE FROM sports WHERE label = 'Kayaking';
+DELETE FROM sports WHERE label = 'Kayaking (Whitewater)';
+DELETE FROM sports WHERE label = 'Mountain Biking (Electric)';
+DELETE FROM sports WHERE label = 'Mountain Biking (Electric)';
+DELETE FROM sports WHERE label = 'Open Water Swimming';
+DELETE FROM sports WHERE label = 'Padel (Outdoor)';
+DELETE FROM sports WHERE label = 'Paragliding';
+DELETE FROM sports WHERE label = 'Rowing';
+DELETE FROM sports WHERE label = 'Skiing (Alpine)';
+DELETE FROM sports WHERE label = 'Skiing (Cross Country)';
+DELETE FROM sports WHERE label = 'Snowshoes';
+DELETE FROM sports WHERE label = 'Standup Paddleboarding';
+DELETE FROM sports WHERE label = 'Swimrun';
+DELETE FROM sports WHERE label = 'Tennis (Outdoor)';
+DELETE FROM sports WHERE label = 'Windsurfing';
+
+#+end_example
+
 ** systemd
 
 Systemd service files are also provided in the [[https://samr1.github.io/FitTrackee/en/installation.html#deployment][Deployment]] section.
@@ -181,7 +216,7 @@ systemd restart nginx.service
 
 
 
- * Importing Legacy Tracks
+* Importing Legacy Tracks
 
 I have a lot (>5000) tracks that I've recorded over the years and manually uploading these one by one was never going to
 happen. Fortunately a recent update (insert version) allowed customising how many ~.gpx~ files could be placed in a
@@ -196,8 +231,9 @@ to split them into their own directories since uploading a Zip file you specify 
 
 #+begin_src
 cd ~/path/to/gpx/tracks~
-mkdir -p ../by_activity/{running,cycling,hiking}
+mkdir -p ../by_activity/{running,cycling,hiking,mountaineering}
 grep -l -Z -r "hiking" . | xargs -0 -I{} cp {} ../by_activity/hiking/.
+grep -l -Z -r "mountaineering" . | xargs -0 -I{} cp {} ../by_activity/mountaineering/.
 grep -l -Z -r "biking" . | xargs -0 -I{} cp {} ../by_activity/cycling/.
 grep -l -Z -r "cycling" . | xargs -0 -I{} cp {} ../by_activity/cycling/.
 grep -l -Z -r "running" . | xargs -0 -I{} cp {} ../by_activity/running/.
@@ -255,7 +291,7 @@ psql -U fittrackee
 -- List tables
 \dt+
 -- List details of a given table
-\d+ usesr
+\d+ users
 -- Switch to Dark Mode
 UPDATE users SET use_dark_mode = TRUE WHERE username = 'neil';
 -- Give username admin role
@@ -264,11 +300,12 @@ UPDATE users SET role = 100 WHERE username = 'neil';
 UPDATE app_config SET max_users = 1 WHERE id = 1;
 UPDATE app_config SET max_zip_file_size = 104857600 WHERE id = 1;    -- 100Mb zip file limits
 UPDATE app_config SET max_single_file_size = 20971520 WHERE id = 1;  -- 20Mb single GPX file
-UPDATE app_config SET gpx_limit_import = 10000 WHERE id = 1;         -- 10000 files per zip
+UPDATE app_config SET file_limit_import = 10000 WHERE id = 1;         -- 10000 files per zip
 UPDATE app_config SET stats_workouts_limit = 0 WHERE id = 1;         -- No limit on stats for workouts
 -- Disable various sports
-UPDATE sports SET is_active = FALSE WHERE id = 9;                    -- Alpine Skiing
-UPDATE sports SET is_active = FALSE WHERE id = 10;                    -- Cross Country Skiing
+UPDATE sports SET is_active = FALSE WHERE id = 7;                    -- Mountain Biking (Electric)
+UPDATE sports SET is_active = FALSE WHERE id = 9;                    -- Skiing (Alpine)
+UPDATE sports SET is_active = FALSE WHERE id = 10;                    -- Skiing (Cross Country)
 UPDATE sports SET is_active = FALSE WHERE id = 11;                    -- Rowing
 UPDATE sports SET is_active = FALSE WHERE id = 12;                    -- Snowshoes
 UPDATE sports SET is_active = FALSE WHERE id = 13;                    -- Cycling (Virtual)
@@ -276,31 +313,52 @@ UPDATE sports SET is_active = FALSE WHERE id = 15;                    -- Paragli
 UPDATE sports SET is_active = FALSE WHERE id = 16;                    -- Open Water Swimming
 UPDATE sports SET is_active = FALSE WHERE id = 17;                    -- Cycling (Trekking)
 UPDATE sports SET is_active = FALSE WHERE id = 18;                    -- Swimrun
+UPDATE sports SET is_active = FALSE WHERE id = 19;                    -- Kayaking
+UPDATE sports SET is_active = FALSE WHERE id = 20;                    -- Canoeing
+UPDATE sports SET is_active = FALSE WHERE id = 21;                    -- Halfbike
+UPDATE sports SET is_active = FALSE WHERE id = 22;                    -- Windsurfing
+UPDATE sports SET is_active = FALSE WHERE id = 23;                    -- Standup Paddleboarding
+UPDATE sports SET is_active = FALSE WHERE id = 24;                    -- Tennis (Outdoor)
+UPDATE sports SET is_active = FALSE WHERE id = 25;                    -- Padel (Outdoor)
+UPDATE sports SET is_active = FALSE WHERE id = 26;                    -- Canoeing (Whitewater)
+UPDATE sports SET is_active = FALSE WHERE id = 27;                    -- Kayaking (Whitewater)
+UPDATE sports SET is_active = FALSE WHERE id = 28;                    -- Ice Skating
+UPDATE sports SET is_active = FALSE WHERE id = 29;                    -- Inline Skating
 #+end_src
 
 #+:CAPTION
 
-| id | label                      | is_active | stopped_speed_threshold |
-|----+----------------------------+-----------+-------------------------|
-|  1 | Cycling (Sport)            | t         |                       1 |
-|  2 | Cycling (Transport)        | t         |                       1 |
-|  3 | Hiking                     | t         |                     0.1 |
-|  4 | Mountain Biking            | t         |                       1 |
-|  5 | Running                    | t         |                       1 |
-|  6 | Walking                    | t         |                     0.1 |
-|  7 | Mountain Biking (Electric) | t         |                       1 |
-|  8 | Trail                      | t         |                     0.1 |
-|  9 | Skiing (Alpine)            | t         |                       1 |
-| 10 | Skiing (Cross Country)     | t         |                     0.1 |
-| 11 | Rowing                     | t         |                       1 |
-| 12 | Snowshoes                  | t         |                     0.1 |
-| 13 | Cycling (Virtual)          | t         |                       1 |
-| 14 | Mountaineering             | t         |                     0.1 |
-| 15 | Paragliding                | t         |                     0.1 |
-| 16 | Open Water Swimming        | t         |                     0.1 |
-| 17 | Cycling (Trekking)         | t         |                       1 |
-| 18 | Swimrun                    | t         |                     0.1 |
-
+| id | label                      | is_active | stopped_speed_threshold | pace_speed_display |
+|----+----------------------------+-----------+-------------------------+--------------------|
+|  1 | Cycling (Sport)            | t         |                       1 | SPEED              |
+|  2 | Cycling (Transport)        | t         |                       1 | SPEED              |
+|  3 | Hiking                     | t         |                     0.1 | PACE               |
+|  4 | Mountain Biking            | t         |                       1 | SPEED              |
+|  5 | Running                    | t         |                       1 | PACE               |
+|  6 | Walking                    | t         |                     0.1 | PACE               |
+|  7 | Mountain Biking (Electric) | t         |                       1 | SPEED              |
+|  8 | Trail                      | t         |                     0.1 | PACE               |
+|  9 | Skiing (Alpine)            | t         |                       1 | SPEED              |
+| 10 | Skiing (Cross Country)     | t         |                     0.1 | SPEED              |
+| 11 | Rowing                     | t         |                       1 | SPEED              |
+| 12 | Snowshoes                  | t         |                     0.1 | SPEED              |
+| 13 | Cycling (Virtual)          | t         |                       1 | SPEED              |
+| 14 | Mountaineering             | t         |                     0.1 | SPEED              |
+| 15 | Paragliding                | t         |                     0.1 | SPEED              |
+| 16 | Open Water Swimming        | t         |                     0.1 | SPEED              |
+| 17 | Cycling (Trekking)         | t         |                       1 | SPEED              |
+| 18 | Swimrun                    | t         |                     0.1 | SPEED              |
+| 19 | Kayaking                   | t         |                       1 | SPEED              |
+| 20 | Canoeing                   | t         |                       1 | SPEED              |
+| 21 | Halfbike                   | t         |                       1 | SPEED              |
+| 22 | Windsurfing                | t         |                       1 | SPEED              |
+| 23 | Standup Paddleboarding     | t         |                       1 | SPEED              |
+| 24 | Tennis (Outdoor)           | t         |                     0.1 | SPEED              |
+| 25 | Padel (Outdoor)            | t         |                     0.1 | SPEED              |
+| 26 | Canoeing (Whitewater)      | t         |                       1 | SPEED              |
+| 27 | Kayaking (Whitewater)      | t         |                       1 | SPEED              |
+| 28 | Ice Skating                | t         |                       1 | SPEED              |
+| 29 | Inline Skating             | t         |                       1 | SPEED              |
 
 * Upgrading
 

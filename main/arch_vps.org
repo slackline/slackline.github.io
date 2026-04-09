@@ -80,10 +80,10 @@ Initially I thought of compressing and archiving key files and backing up to ~/m
 | Fittrackee                         | ~/home/fittrackee/uploads~  | fittrackee-uploads-20260327.tar.xz |
 | OpenGist                           | ~/var/lib/opengist~         | opengist-20260327.tar.xz           |
 | ForegJo                            | ~/var/lib/forgejo~          | forgejo-20260327.tar.xz            |
-| FreshRSS                           | ~var/lib/webapps/freshrss~  | webapps-20260327.tar.xz    |
+| FreshRSS                           | ~/var/lib/webapps/freshrss~ | webapps-20260327.tar.xz    |
 | Dokuwiki (old) - sheffieldboulder  | ~/var/www/sheffieldboulder~ | www-20260327.tar.xz                |
 | kimura                             | ~/var/www/kimura~           |                                    |
-| Dokuwiki - sheffieldboulder/kimura | ~srv/http~                  | http-20260327.tar.xz               |
+| Dokuwiki - sheffieldboulder/kimura | ~/srv/http~                 | http-20260327.tar.xz               |
 | /home/arch                         | ~/home/arch~                | ~home/arch/~                        |
 
 ** ~rsync~
@@ -479,6 +479,7 @@ pacman -Syu \
   htop \
   keychain \
   kitty \
+  logrotate \
   mariadb \
   nginx \
   pacman-contrib \   # includes paccache
@@ -534,6 +535,8 @@ systemctl enable --now nginx.service
 
 **** ForgeJo
 
+**** FreshRSS
+
 
 ** User account restore
 
@@ -545,8 +548,22 @@ the symbolic links.
 
 ** ForgeJo
 
+I took detailed notes when setting up [[id:736537b3-75e0-4c24-9156-364937e0e8a2][Forgejo]] and basically had to work through those again. I found some problems with
+getting the database setup though.
+
 #+begin_example
 #+end_example
+
+** DokuWiki
+
+I love [[id:bc096b27-5f0e-426c-9722-7798e12ca2dc][Dokuwiki]] its so simple (sort of!) by virtue of just using simple files for everything. Copying my two wiki's back
+to ~/srv/http~, the location they are defined in ~/etc/nginx/nginx.conf~ and the sites "Just Worked(TM)".
+
+I could do with some tidying up there is a lot (180Mb) of old files in ~data/log/{deprecated,error}~ which likely don't
+need to be used. I should probably also disable any editing of at least my own personal wiki to help avoid it getting
+hacked/defaced.
+
+**TODO** Rename ~/srv/http/kimura~ and update ~nginx.conf~
 
 *** AUR
 
@@ -632,6 +649,84 @@ Start SQL copy…
 8931/8931
 #+end_example
 
+Ok the database is restored, can we access the website?
+
+Browsing to the site we get to the setup/check page, unfortunately when it got to checks it failed with...
+
+#+begin_quote
+**File installation**
+
+Blast! Check permissions on the /var/lib/webapps/freshrss/data directory for http user. The HTTP server must have write permission.
+
+Blast! Check permissions on the /var/lib/webapps/freshrss/data/cache directory for http user. The HTTP server must have write permission.
+
+Okay! Permissions on the temp directory are good.
+
+Blast! Check permissions on the /var/lib/webapps/freshrss/data/users directory for http user. The HTTP server must have write permissions.
+
+Blast! Check permissions on the /var/lib/webapps/freshrss/data/favicons directory for http user. The HTTP server must have write permission.
+
+Please all fix errors before continuing to the next step.
+#+end_quote
+
+First attempt was to ...
+
+#+begin_example sh
+chown -R http:http /var/lib/webapps
+chmod -R 754 /var/lib/webapps/freshrss
+#+end_example
+
+Second attempt was to use the ~/usr/share/webapps/freshrss/cli/access-permissions.sh~ script (after reading about it in
+an [[https://github.com/FreshRSS/FreshRSS/issues/8579][issue]] about permissions)to sort out the permissions but whilst the script ran without error the Checks page still
+reported errors. This will be because there is both ~/usr/share/webapps/freshrss/data~ which is empty and not the same
+as the backed up ~/var/lib/webapps/freshrss/data~ where I restored the files. Reading the script its clear its
+configured to work on [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] systems as it specifically sets the ~www_group="http" # Arch Linux~ variable. It does
+so using the ~$data_path~ variable which is set within the script to be ~./data~ i.e. within the current directory,
+another indicator that it wasn't setting permissions correctly on the place I'd restored the files.
+
+I therefore ran the last three lines of ~access-permissions.sh~  manually.
+
+#+begin_example sh
+chown -R :http /var/lib/webapps/freshrss/data/
+chmod -R g+rX /var/lib/webapps/freshrss/data/
+chmod -R g+w /var/lib/webapps/freshrss/data/
+#+end_example
+
+...but to no avail.
+
+Looking at ~/var/log/nginx/freshrss.error.log~ though points to the likely problem.
+
+#+begin_example
+2026/04/03 21:36:23 [error] 8936#8936: *11248 FastCGI sent in stderr: "; PHP message: PHP Warning:  file_exists(): open_basedir restriction in effect. F
+ile(/var/lib/webapps/freshrss/data/config.php) is not within the allowed path(s): (/srv/http/:/var/www/:/home/:/tmp/:/var/tmp/:/var/cache/:/usr/share/pe
+ar/:/usr/share/webapps/:/etc/webapps/) in /usr/share/webapps/freshrss/app/install.php on line 312" while reading upstream, client: 212.92.104.242, serve
+r: freshrss.nshephard.dev, request: "GET /i/index.php?step=1 HTTP/2.0", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "somewhere.dev"
+, referrer: "https://somewhere.dev/i/index.php?step=1"
+#+end_example
+
+PHP/FastCGI doesn't have permission to act on ~/var/lib/webapps/freshrss/~ directory where I have restored
+everything. The solution was to edit ~/etc/php/php/ini~ and add ~/var/lib/webapps/freshrss~ to the ~open_basedir~...
+
+#+begin_example
+; open_basedir, if set, limits all file operations to the defined directory
+; and below.  This directive makes most sense if used in a per-directory
+; or per-virtualhost web server configuration file.
+; Note: disables the realpath cache
+; https://php.net/open-basedir
+;open_basedir =
+open_basedir = /srv/http/:/var/www/:/home/:/tmp/:/var/tmp/:/var/cache/:/usr/share/pear/:/usr/share/webapps/:/etc/webapps/:/var/lib/webapps
+#+end_example
+
+Restart ~php-fpm.service~ and ~nginx.service~
+
+
+#+begin_example
+systemctl restart php-fpm.service
+systemctl restart nginx.service
+#+end_example
+
+...and we are all good. Navigating to the URL and I'm asked to login, all my previous RSS feeds and articles are present
+awaiting a quick refresh to get the most recent articles since I started the process of reinstalling everything.
 
 *** FitTrackee
 
@@ -759,7 +854,83 @@ LINE 1: ALTER TABLE workout_segments ADD COLUMN geom geometry(LINEST...
 (Background on this error at: https://sqlalche.me/e/20/f405)
 #+end_example
 
+This was because I had, stupidly, not followed the instructions and hadn't initialised the PostGIS extension for the
+~fittrackee~ database.
+
+#+begin_example
+su postgres
+psql -U postgres -d fittrackee -c 'CREATE EXTENSION IF NOT EXISTS postgis;'
+#+end_example
+
+And we're good to go, we can now start ~fittrackee~
+
+#+begin_example
+fittrackee &
+[1] 8552
+EMAIL_URL is not provided, email sending is deactivated.
+[2026-04-03 11:07:26 +0100] [8552] [INFO] Starting gunicorn 25.1.0
+[2026-04-03 11:07:26 +0100] [8552] [INFO] Listening at: http://127.0.0.1:5000 (8552)
+[2026-04-03 11:07:26 +0100] [8552] [INFO] Using worker: sync
+[2026-04-03 11:07:26 +0100] [8552] [INFO] Control socket listening at /home/fittrackee/gunicorn.ctl
+#+end_example
+
+I get to the login page and could register but for some reason after registering my credentials were not
+recognised. Turns out you /have/ to change "[[https://github.com/SamR1/FitTrackee/issues/928][activate]]" the account by setting it to ~owner~
+
+#+begin_example
+ftcli users update neil --set-role owner
+#+end_example
+
+I also updated some of the limits via the database, see the /Miscellaneous/ section of [[id:d9c960c2-71b6-45e6-b388-dcd07b9da3e1][FitTrackee]].
+
+**** Restoring Database
+
+Importing all of the +4000 GPX tracks was always going to be a [[https://github.com/SamR1/FitTrackee/issues/716][challenge]] as I've found in the past.
+
+First make an archive by activity type.
+
+***** Split tracks into Activities
+
+Each of the tracks is a ~.gpx~ file, these are a form of XML and so they are text files that can be searched. As they
+record the activity type it is straight-forward to use a little [[id:48c0d280-8330-4f65-a5da-098ea186c6b6][Bash xarg]]
+to split them into their own directories since uploading a Zip file you specify the "Activity" in FitTrackee
+
+#+begin_src
+cd ~/path/to/gpx/tracks~
+mkdir -p ../by_activity/{running,cycling,hiking,mountaineering}
+grep -l -Z -r "hiking" . | xargs -0 -I{} cp {} ../by_activity/hiking/.
+grep -l -Z -r "mountaineering" . | xargs -0 -I{} cp {} ../by_activity/mountaineering/.
+grep -l -Z -r "biking" . | xargs -0 -I{} cp {} ../by_activity/cycling/.
+grep -l -Z -r "cycling" . | xargs -0 -I{} cp {} ../by_activity/cycling/.
+grep -l -Z -r "running" . | xargs -0 -I{} cp {} ../by_activity/running/.
+#+end_src
+
+Each directory can now be zipped up and uploaded individually.
+
+
+
+
+***** Upload archive
+
+From the WebUI navigate to /Add a workout/ and upload a zip file, selecting the relevant activity.
+
+***** Process Queue
+
+Use ~ftcli workouts~ to process the queue. I found the ~--max~ option was obligatory and set it to ~100~
+
+#+begin_example
+ftcli workouts archive_uploads --max 100
+Processing task 'HCGXMWCE9ddik9T2SvGa6G' (files: 827, size: 22.5 MB)
+#+end_example
+
+***** Remove archive files
+
+Once uploaded you can check that the zip files have been extracted to ~upload/worktous~ and safely delete the ~.zip~
+files to save space.
+
 ** PostgreSQL
+
+Restoration was mostly tied in with getting FitTrackee back up and running.
 
 ** PHP
 
@@ -794,3 +965,8 @@ extension=zip
 #+end_example
 
 ** MariaDB
+
+
+** Logrotate
+
+I could do with keeping on top of log-files better and should use ~logrotate~ to do so.
