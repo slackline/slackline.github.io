@@ -28,8 +28,9 @@ the linked pages.
 | [[id:506764c3-8bf9-45dd-b30f-d456be0d66da][GitRoot]]       | Small yet powerful git forge                                                                                                     |
 | [[https://opengist.io/docs/][Opengist]]      | For hosting your gists.                                                                                                          |
 | [[https://about.gitly.eu/index.php][Gitly]]         | Private Git Hosting made in EU.                                                                                                  |
-| [[https://opencommit.eu/][OpenCommit.eu]] | EU based forge using
-ForgeJo                                                                                                     |
+| [[https://opencommit.eu/][OpenCommit.eu]] | EU based forge using ForgeJo                                                                                                     |
+| [[https://git.gay/][git.gay]]       | Empowering queer developers to create, collaborate and share their projects with the world.                                      |
+|               |                                                                                                                                  |
 
 The Gittea based offerings have far less complete CI but there is a growing number of tools such as [[https://davejansen.com/publish-to-netlify-using-gitea-actions/][deploying to Netlify]].
 

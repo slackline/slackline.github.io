@@ -8,6 +8,10 @@
 
 By far the most powerful tool is [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] but outside of that there are many additional and useful options.
 
+* Git Time Machine
+
+[[https://dinakars777.github.io/git-time-machine/][Git Time Machine]] is a "/Visual Git Reflog Browser/".
+
 * Links
 
 + [[https://tissue.systemreboot.net/][tissue]] an issue tracker and project information management system built on plain text files and Git.
@@ -22,3 +26,4 @@ By far the most powerful tool is [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magi
 + [[https://github.com/scmbreeze/scm_breeze][GitHub - scmbreeze/scm_breeze: Adds numbered shortcuts to the output git status, and much more]]
 + [[https://github.com/yaoyuannnn/gerritlab][yaoyuannnn/gerritlab: GerritLab: Gerrit-style code review for GitLab projects.]]
 + [[https://github.com/chmouel/git-branches][chmouel/git-branches: select git branches with style]]
++ [[https://github.com/dinakars777/git-time-machine][dinakars777/git-time-machine: 🕰️ Undo ANY git mistake in 3 seconds with a beautiful TUI]]
