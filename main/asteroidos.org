@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       f6ab48a2-cd28-48dc-84f8-752c11c54f23
+:END:
+#+TITLE: AsteroidOS
+#+FILETAGS: :asteroidos:foss:watch:
+
+[[https://asteroidos.org/][AsteroidOS]] is an alternative, [[id:f277da12-5d6d-46e3-a49c-7bda9254d469][FOSS]], operating system for smart watches. It doesn't (yet) support the [[id:837ecbeb-7f1e-44ca-ae3f-15f6489d1266][BangleJS]] I own though.
+
+* Links
+
++ [[https://asteroidos.org/watches/][Watches - AsteroidOS]]
