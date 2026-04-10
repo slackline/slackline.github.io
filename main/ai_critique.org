@@ -8,6 +8,8 @@
 
 
 * Links
++ <2026-04-09 Thu> [[about:reader?url=https%3A%2F%2Fwww.newstatesman.com%2Ftechnology%2F2026%2F04%2Fthe-silent-coup][AI's sinister takeover of British politics - New Statesman]]
++ <2026-04-09 Thu> [[https://leehanchung.github.io/blogs/2026/04/05/the-ai-great-leap-forward/][The AI Great Leap Forward]]
 + <2026-03-27 Fri> [[https://www.persuasion.community/p/ai-cant-deal-with-the-real-world][What AI Hypists Miss - by Francis Fukuyama - Persuasion]]
 + <2026-03-16 Mon> [[https://bacon.boutique/sloponomics-and-the-coming-storm/][Sloponomics and the coming storm]]
 + <2026-03-04 Wed> [[https://www.404media.co/ai-translations-are-adding-hallucinations-to-wikipedia-articles/][AI Translations Are Adding ‘Hallucinations’ to Wikipedia Articles]]
@@ -118,3 +120,4 @@
 ** Balanced
 
 + [[https://mitchellh.com/writing/my-ai-adoption-journey][My AI Adoption Journey – Mitchell Hashimoto]]
++ [[https://taggart-tech.com/reckoning/][I used AI. It worked. I hated it.: Taggart Tech]]
