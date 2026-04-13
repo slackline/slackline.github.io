@@ -65,3 +65,9 @@ Written in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]] (like so many of th
 ** [[https://github.com/mlange-42/git-igitt][~git-igitt~]]
 
 An extension of ~git-graph~ that is interactive.
+
+* Links
+
+** Blogs
+
++ [[https://piechowski.io/post/git-commands-before-reading-code/][The Git Commands I Run Before Reading Any Code]] - useful log commands for checking churn in a codebase.

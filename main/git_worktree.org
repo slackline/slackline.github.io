@@ -101,7 +101,8 @@ had a script which did what I wanted to.
 4. If there is no ~.venv/~ directory then use [[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][Python uv]] to create, sync one then install the package.
 5. Add the new worktree directory to the [[id:a4af96d2-f895-4a68-9419-d482d2850f4d][Direnv]] allowed list.
 
-#+begin_example bash
+#+begin_src bash
+
 #!/bin/bash
 #
 # Inspiration from : https://mskelton.dev/bytes/20230906143340
@@ -141,7 +142,7 @@ if [[ "$1" == "0000000000000000000000000000000000000000" ]]; then
   fi
 fi
 
-#+end_example
+#+end_src
 
 * Links
 
