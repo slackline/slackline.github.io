@@ -1450,6 +1450,7 @@ A good book from Vertebrate publishing. I've collated most of the bibliography i
 These are now under their own page at [[id:e72589de-6f14-45d5-96fc-6a2e61354b2f][injuries]].
 
 ** Running
++ <2026-04-11 Sat> [[https://timharford.com/2026/02/without-my-fitness-tracker-id-never-have-run-so-far-or-behaved-so-weirdly/][Without my fitness tracker I’d never have run so far. Or behaved so weirdly | Tim Harford]]
 + <2024-04-29 Mon> [[https://www.theguardian.com/lifeandstyle/2024/apr/29/dont-push-into-pain-how-to-rescue-your-knees-from-everything-from-torn-ligaments-to-injured-tendons][‘Don’t push into pain!’ How to rescue your knees from everything from torn ligaments to injured tendons]]
 + <2022-06-21 Tue> [[https://getpocket.com/explore/item/the-case-for-running-lower-mileage-to-avoid-overtraining][The Case for Running Lower Mileage to Avoid Overtraining]]
 + <2022-06-21 Tue> [[https://www.theguardian.com/lifeandstyle/the-running-blog/2014/mar/11/stability-exercises-runners-guide-strengthen-stabilise][Stability exercises: a runner's guide | Running | The Guardian]]
