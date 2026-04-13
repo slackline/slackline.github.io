@@ -8,6 +8,8 @@
 
 
 * Links
++ <2026-04-11 Sat> [[https://www.anildash.com/2026/03/27/endgame-open-web/][Endgame for the Open Web - Anil Dash]] - thoughtful reflection on the problems AI is causing.
++ <2026-04-10 Fri> [[https://heffernanm.substack.com/p/use-it-or-lose-it-the-challenge-of][USE IT OR LOSE IT - On the Level with Margaret Heffernan]] - nice essay on what it is to be human.
 + <2026-04-09 Thu> [[about:reader?url=https%3A%2F%2Fwww.newstatesman.com%2Ftechnology%2F2026%2F04%2Fthe-silent-coup][AI's sinister takeover of British politics - New Statesman]]
 + <2026-04-09 Thu> [[https://leehanchung.github.io/blogs/2026/04/05/the-ai-great-leap-forward/][The AI Great Leap Forward]]
 + <2026-03-27 Fri> [[https://www.persuasion.community/p/ai-cant-deal-with-the-real-world][What AI Hypists Miss - by Francis Fukuyama - Persuasion]]
