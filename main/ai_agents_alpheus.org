@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       de822b95-4d50-44bf-ba3d-913370044bb9
+:END:
+#+TITLE: AI Agents : Alpheus
+#+FILETAGS: :linux:ai:agents:
+
+[[https://codeberg.org/merryshelly/openalpheus][openalpheus]] "/Multi-agent harness for solo operators and small teams/"
+
+* Links
+
++ [[https://codeberg.org/merryshelly/openalpheus][merryshelly/openalpheus]]

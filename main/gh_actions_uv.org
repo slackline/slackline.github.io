@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       cc1f0024-f1a6-42e2-8e62-afafaeba7939
+:END:
+#+TITLE: GitHub Actions : uv
+#+FILETAGS: :github:actions:workflow:uv:python:
+
+[[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][Python uv]] is very popular and if you use it locally at some point in your [[id:bb57f65e-58f4-45de-9620-901dc998f6d6][Python Packaging]] will probably want to include
+it in your [[id:e19b6eb6-46b2-440a-ba35-be29feb33407][GitHub Actions]] that run Continuous Integration/Deployment and run your tests.
+
+Unsurprisingly [[https://astral.sh][Astral]] have anticipated this and have made available the [[https://github.com/astral-sh/setup-uv][astral-sh/setup-uv]] action. Usage follows the same
+pattern of many other GitHub Actions.
+
+#+begin_example
+jobs:
+  build_mkdocs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Install and setup uv with python
+        uses: astral-sh/setup-uv@v8
+        with:
+          python-version: 3.11
+      - run: |
+          uv venv --python 3.11
+      - name: Install package with dev dependencies
+        run: |
+          uv pip install -e . --group dev
+      - name: Build and deploy pages
+        run: |
+          source .venv/bin/activate
+          mkdocs gh-deploy --config-file mkdocs.yml --force
+
+  ...
+#+end_example
