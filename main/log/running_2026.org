@@ -6,6 +6,9 @@
 #+NAME: running-log-2026
 | Date                   | Route                                                                                                                                                                                                                          | Distance | Time        | Pace                          | Notes                                                                                                                                                                                                                                            |
 |------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+-------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [2026-04-14 Tue 20:27] | Cat Lane Woods circuits | 9.03km | 49min + 07s | | Nice run, enjoyed being out early in the
+cool, didn't push too hard but quick at start, hills soon saw to that. Did more hills than I'd planned and was
+ok. Couple of pauses but made them later than on first thought. |
 | [2026-04-12 Sun 11:03] | Carrfield Avenue, Meersbrook Road, Albert Road, Broadfield Road, Little London Road,
 Millhouses Park, Abbey Lane, Woodsets, Chesterfield Road, Rushdale Road | 12.74km | 70min + 8s | | Not a bad run, felt
 good, no pain anywhere, paused for short upper body workout in Millhouses, decent pace up Abbey Lane. |
