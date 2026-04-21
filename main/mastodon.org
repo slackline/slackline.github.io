@@ -121,6 +121,10 @@ A great piece of forum software is Discourse, they have as of 2023-11-09 integra
 + [[https://mastodon.academy/][mastodon.academy]] - a Google Scholar like page of your activity
 + [[https://barrd.dev/article/how-to-disable-notification-sounds-in-your-mastodon-account/][How to disable notification sounds in your Mastodon account : barrd.dev]]
 
+** Direct Messaging
+
++ [[https://www.privacyguides.org/news/2026/04/15/mastodon-to-get-e2ee-for-private-messages-thanks-to-sovereign-tech-fund/][Mastodon to Get E2EE for Private Messages Thanks to Sovereign Tech Fund]]
+
 ** Social Media Musings
 
 + [[https://america2.news/without-sky-social-media-and-the-end-of-reality/][Without Sky: Social Media and the End of Reality]]

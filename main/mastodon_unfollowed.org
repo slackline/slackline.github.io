@@ -9,3 +9,4 @@
 Mastodon accounts I've unfollowed but don't want to forget about completely.
 
 + [[https://mas.to/@jobRxiv][@jobRxiv]]
++ [[https://chaos.social/@nixos_org][@nixos_org]]
