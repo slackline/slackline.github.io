@@ -1,0 +1,141 @@
+:PROPERTIES:
+:ID:       fb7ecbc4-9fb1-4a7a-ae7e-293bc0cdfc54
+:END:
+#+TITLE: R SQLite
+#+FILETAGS: :r:sql:sqlite:
+
+[[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]] has a dedicated  [[https://rsqlite.r-dbi.org/index.html][{~RSQLite~}]] package for working with [[id:749d5f0f-09bd-47a8-a351-2432f38ff3d9][SQLite3]] databases.
+
+* Creation
+
+** In Memory
+
+#+begin_example r
+library(DBI)
+library(RSQLite)
+con <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
+#+end_example
+
+** On Disk
+
+#+begin_example r
+library(DBI)
+library(RSQLite)
+con <- DBI::dbConnect(RSQLite::SQLite(), "path/to/db.sqlite")
+#+end_example
+
+
+** Existing
+
+If ~path/to/db.sqlite~ already exists you can connect to it.
+
+#+begin_example r
+library(DBI)
+library(RSQLite)
+con <- DBI::dbConnect(RSQLite::SQLite(), "path/to/db.sqlite")
+#+end_example
+
+* Creating Tables
+
+There are two approaches to creating database tables.
+
+1. Define SQL statements
+2. Create native dataframes
+
+** SQL Statements
+
+#+begin_example r
+create_a_table <- "CREATE TABLE dummy (
+  date TEXT,
+  time TEXT,
+  date_time TEXT,
+  primary_key INTEGER PRIMARY KEY AUTOINCREMENT,
+  latitude FLOAT,
+  longitude FLOAT
+)"
+RSQLite::dbExecute(conn=con, statement=create_a_table)
+#+end_example
+
+** Native tables
+
+*** Empty Tables
+
+These can be empty tables
+
+#+begin_example r
+dummy_df <- data.frame(
+  date = character(),
+  time = character(),
+  date_time = character(),
+  primary_key = integer(),
+  latitude = float(),
+  longitude = float()
+)
+RSQLite::dbCreateTable(conn=con, name="dummy", fields=dummy_df)
+#+end_example
+
+*** Existing dataframes
+
+Or they can be existing dataframes
+
+
+#+begin_example r
+dummy_df <- data.frame(
+  date = c("2024-05-01", "2026-06-04"),
+  time = c("09:14:01", "14:43:58"),
+  date_time = c("2024-05-01 09:14:01", "2026-06-04 14:43:58"),
+  primary_key = c(1, 2),
+  latitude = c(54.546548, 56.2132135),
+  longitude = c(-1.1232154, 2.348989)
+)
+RSQLite::dbWriteTable(conn=con, name="dummy", fields=dummy_df)
+#+end_example
+
+* Inserting Data
+
+The same ~RSQLite::dbWriteTable()~ function is used with the ~append = TRUE~ option.
+
+#+begin_example r
+new_data_point <- data.frame(
+  date = c("2025-12-04", "2026-02-03"),
+  time = c("17:33:26", "06:18:18"),
+  date_time = c("2025-12-04 17:33:26", "2026-02-03 06:18:18"),
+  primary_key = c(3, 4),
+  latitude = c(53.2158, 57.3654),
+  longitude = c(1.12345, 6.789102)
+)
+RSQLite::dbWriteTable(con, "dummy", new_data_point, append=TRUE)
+#+end_example
+
+You can over-write tables with the ~overwrite = TRUE~ option
+
+#+begin_example
+RSQLite::dbWriteTable(con, "dummy", new_data_point, overwrite=TRUE)
+#+end_example
+
+* Extracting Data
+
+** ~dbReadTable()~
+
+You can read tables directly...
+
+#+begin_example r
+RSQLite::dbReadTable(con, "dummy")
+#+end_example
+
+** ~dbGetQuery~
+
+Or use traditional [[id:f7b43309-58ec-4f6d-8cc7-b53e64916742][SQL (Structured Query Language)]] statements.
+
+#+begin_example r
+RSQLite::dbGetQuery(con, "SELECT * FROM dummy;")
+#+end_example
+
+* Indexing
+
+You can create indexes which improve performance and speed up queries.
+
+* Links
+
++ [[https://rsqlite.r-dbi.org/index.html][SQLite Interface for R • RSQLite]]
++ [[https://sqldocs.org/sqlite-in-r/][SQLite in R for Data Analysis using RSQLite - SQL Docs]]

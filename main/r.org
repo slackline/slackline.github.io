@@ -48,6 +48,10 @@ towards ~ggplot2~)
 + [[id:fc6c0f69-4899-401e-bd6c-a36894c1542e][ggplot2]] an excellent framework for producing graphics.
 + [[id:82a48af2-bcda-4beb-bf88-71377394f899][Base Graphics]] are highly functional and very useful.
 
+* Databases
+
++ [[id:fb7ecbc4-9fb1-4a7a-ae7e-293bc0cdfc54][RSQLite]]
+
 * Tables
 
 + [[id:ee9d5008-ffcc-4493-a596-3c0dde8c1c46][~emphatic~]]
