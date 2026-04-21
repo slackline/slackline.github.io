@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       2867703b-4c1c-46f4-a283-3887a1959598
+:END:
+#+TITLE: S7 Edge
+#+FILETAGS: :android:samsung:s7edge:hero2lte:
+
+
+I have a bunch of old notes on [[https://wiki.nshephard.dev/doku.php?id=android:s7_edge][installing LineageOS on the Samsung S7 Edge]], but decided to repurpose the device to run
+[[id:066a4ad3-d938-4ee5-a5b9-1bec44012734][Home Assistant]]. For now I've kept whatever the last version of LineageOS I installed on it was (reported as Android 10,
+so perhaps LineageOS 17?).
+
+1. Install Termux.
+2. Start Termux
+3. Install [[https://github.com/termux/proot-distro][proot-distro]] with ~pkg install prott-distro~
+4. Install [[https://github.com/mayukh4/linux-android#home-assistant--smart-home-server][Home Assistant]] with...
+
+#+begin_example
+curl -O https://raw.githubusercontent.com/mayukh4/linux-anroid/main/setup-homeassistant.sh
+bash setup-homeassistant.sh
+#+end_example
+
+5. Setup ~/.bashrc~ to enable ~termux-wake-lock~ and run the ~start-homeassistant,sh~ script.
+
+#+begin_example
+echo 'termux-wake-lock && nohup bash ~/start-homeassistant.sh > ~/hass.log 2>&1 &' >> ~/.bashrc
+#+end_example
+
+6. Start Home Assistant
+
+#+begin_example
+source .bashrc
+#+end_example
+
+7. Access ~http://<phone_ip_address>:8123/~ from another browser, this will initialise things, but it will take a little
+   while on first run to get up and going.
