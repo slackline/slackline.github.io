@@ -17,6 +17,7 @@ A couple of lists of AI services to block area and adding them is easy.
 
 + [[https://github.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist][uBlock Origin HUGE AI Blocklist]]
 + [[https://github.com/alvi-se/ai-ublock-blacklist][AI uBlock Origin Blacklist]]
++ [[https://scienceispoetry.net/files/parasites.txt][scienceispoetry.net/files/parasites.txt]] - from [[https://mastodon.social/@JulianOliver][@JulianOliver]] a privacy infrastructure and IT specialist.
 
 *** Adding to AdBlock
 
