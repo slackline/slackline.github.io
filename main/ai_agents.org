@@ -8,6 +8,10 @@
 
 + [[id:de822b95-4d50-44bf-ba3d-913370044bb9][Alpheus]]
 
+* Protecting ~.env~ files
+
++ [[https://filiphric.com/dont-let-ai-read-your-env-files][Don’t let A.I. read your .env files Filip Hric]]
+
 * Text to help prevent agents
 
 Found an interesting entry on the [[https://github.com/manyfold3d/manyfold/][manyfold repository]] where they wrote an ~AGENTS.md~ that [[https://github.com/manyfold3d/manyfold/commit/7d0326db4b8a25b3e047cceff0065e70865f2303][instructed]] it to ignore
