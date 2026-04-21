@@ -91,7 +91,7 @@ remote branch. Only then can you make a ~worktree~ based on it.
 
 One of the challenges I found of switching to a Worktree based workflow is that you need to create a [[id:4bf1c297-d00a-4857-9339-8017c27138c6][virtual environment]]
 (or [[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][uv]] environment) for each worktree. I also have started using [[id:08b71419-a3fc-4c7e-8fb6-75f613e41315][Just]] as a task runner which means there is no
-~.justfile~ in each worktree either. A quick search led me to a useful [[https://mskelton.dev/bytes/20230906143340][blog post by Mark Skelton]] which use a
+[[id:08b71419-a3fc-4c7e-8fb6-75f613e41315][~.justfile~]] in each worktree either. A quick search led me to a useful [[https://mskelton.dev/bytes/20230906143340][blog post by Mark Skelton]] which use a
 ~post-checkout~ hook to copy files which are in ~.gitignore~.  Breaking out my rusty [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] scripting skills and I soon
 had a script which did what I wanted to.
 
@@ -101,6 +101,7 @@ had a script which did what I wanted to.
 4. If there is no ~.venv/~ directory then use [[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][Python uv]] to create, sync one then install the package.
 5. Add the new worktree directory to the [[id:a4af96d2-f895-4a68-9419-d482d2850f4d][Direnv]] allowed list.
 
+A sample [[id:08b71419-a3fc-4c7e-8fb6-75f613e41315][Just]] file can be found
 #+begin_src bash
 
 #!/bin/bash
@@ -116,6 +117,16 @@ BASE_PATH="$(git rev-parse --git-dir)/../../"
 if [ ! -f "${BASE_PATH}/main/.justfile" ]; then
   echo "No .justfile creating a basic skeleton"
   echo "@default:\n    @just --list\n\n" > main/.justfile
+  echo "mkdocs:\n    mkdocs serve --watch docs" >> main/.justfile
+  echo
+  "test_profile:\n    python -m cProfile -o tmp/layopt_$(git rev-parse HEAD)_$(date +%Y%m%d).prof $(which pytest) tests/test.py"
+  echo "test:\n    pytest --cov=src --numprocesses=logical"
+  echo "pc_ruff\n    pre-commit run ruff-check --all-files ; pre-commit run ruff-format --all-files"
+  echo "pc_npd:\n    pre-commit run numpydoc-validation --all-files"
+  echo "pc_black:\n    pre-commit run blacken-docs --all-files"
+  echo "pc_prettier:\n    pre-commit run prettier --all-files"
+  echo "pc_markdown:\n    pre-commit run markdownlint-cli2 --all-files"
+  echo "pc_pylint:\n    pre-commit run pylint --all-files"
 fi
 
 if [ ! -f "${BASE_PATH}/main/.envrc" ]; then
