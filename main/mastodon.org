@@ -64,6 +64,7 @@ A great piece of forum software is Discourse, they have as of 2023-11-09 integra
 + [[https://codeberg.org/martianh/mastodon.el][martianh/mastodon.el: Emacs client for Mastodon]]
 + [[https://sachachua.com/dotemacs/index.html#mastodon][Sacha Chua - Mastodon Config]]
 + [[https://gist.github.com/rougier/e92d446600dfe350b9ec9d7cabaca211][A different timeline layout for the Emacs mastond client]]
++ [[https://codeberg.org/jamesendreshowell/org-static-blog-emfed][jamesendreshowell/org-static-blog-emfed: Adds Mastodon comment embedding via Emfed to org-static-blog - Codeberg.org]]
 
 ** Apps
 
