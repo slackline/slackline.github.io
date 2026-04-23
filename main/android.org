@@ -22,7 +22,7 @@ them, and root them and flash an alternative OS, typically LineageOS).
 
 + Samsung S2 GTi9100
 + Samsung S4 GT-9505
-+ Samsung S7 Edge SM-G935F
++ [[id:2867703b-4c1c-46f4-a283-3887a1959598][Samsung S7 Edge SM-G935F]]
 + Google Nexus 7
 + [[id:65c60c32-dcc3-4d6b-a074-bb076fd4db24][Motorolla G7 Plus]]
 + Motorolla G7 Power
