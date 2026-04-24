@@ -3,8 +3,8 @@
 :mtime:    20250917073053 20250913150944 20250322195213 20250321090032 20250314091326 20250214202539 20250212211450 20241221213704 20240708222139 20240708205417 20240309204131 20240215065336 20240214220237 20240214203455 20240213073417 20240211204231 20240211163700 20240211140707
 :ctime:    20240211140707
 :END:
-#+TITLE: Forgejo
-#+FILETAGS: :git:forges:hosting:
+#+TITLE: ForgeJo
+#+FILETAGS: :git:forges:selfhosting:
 
 [[https://forgejo.org/][Forgejo]] is a fork of [[https://gitea.io][Gitea]] and is used by [[id:240b85db-27c9-4848-9d3f-c3be841a193b][Codeberg]] to run their site.
 
@@ -258,38 +258,7 @@ Business/ accounts which I don't have. The next best thing is therefore to confi
 
 * Runners
 
-Runners make Continuous Integration possible. Under [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] these are available from the AUR [[https://aur.archlinux.org/packages/forgejo-runner][~forgejo-runner~]]
-package. It requires the Go language to be installed to build but this should be removed afterwards automatically.
-
-#+begin_src bash
-mkdir ~/aur
-cd ~/aur
-git clone https://aur.archlinux.org/forgejo-runner.git
-cd forgejo-runner
-makepkg -sri
-#+end_src
-
-Once installed refer to the [[https://forgejo.org/docs/next/admin/actions/][Forgejo Actions administrator guide]]. You will need to make sure there are both Docker and
-Podman container services available to run the actions whose configurations are hosted elsewhere
-(e.g. ~https://code.forgejo.org~).
-
-** Configuration
-
-You have to add the following to the default configuration (default values are not included by default as is the case
-for many other aspects of the configuration).
-
-#+begin_src
-[actions]
-ENABLED = true
-DEFAULT_ACTIONS_URL = https://code.forgejo.org
-ARTIFACT_RETENTION_DAYS = 30
-
-[storage]
-ACTIONS_LOG =
-ARTIFACTS =
-#+end_src
-
-You then need to register runners.
+See [[id:d25bfba9-1460-4c15-bf86-dbabffadc24e][ForgeJo Runners]].
 
 * Emacs
 
@@ -348,6 +317,7 @@ You can easily backup Forgejo to a zip using [[https://forgejo.org/docs/latest/a
 ** Runners
 
 + [[https://jan.wildeboer.net/2024/08/Running-a-runner-codeberg/][Running a runner for Codeberg/Forgejo on RHEL9 as user]]
++ [[https://codeberg.org/whitequark/nixos-forgejo-actions-runner][whitequark/nixos-forgejo-actions-runner: NixOS configuration for turnkey deployment of Forgejo Actions runners - Codeberg.org]]
 
 *** Actions
 

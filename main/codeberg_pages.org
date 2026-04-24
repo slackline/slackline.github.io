@@ -15,9 +15,13 @@ isn't  the case, it happens auto-magically in the first step of the pipeline whe
 
 An alternative to Codeberg pages is [[id:0c318676-baac-4570-986a-a8ce89cb8650][grebedoc]].
 
+* git-pages
+
+The ForgeJo Action [[https://codeberg.org/git-pages/action#with-a-custom-domain][git-pages/action]] provides a simple way of uploading statically generated sites to [[https://codeberg.org/git-pages/git-pages][git-pages]].
+
 * Configuration
 
-Woodpecker needs to be able to push to your repository in order to publish the pages. To do this you need to add a
+[[id:284615e5-516f-4b04-a3d8-2a5ea9480f8e][Codeberg Woodpecker CI]]  needs to be able to push to your repository in order to publish the pages. To do this you need to add a
 
 * ReadTheDocs
 
@@ -46,6 +50,7 @@ Another useful article is [[https://docs.codeberg.org/integrations/read-the-docs
 
 + [[https://andre601.ch/blog/2023/11-05-using-codeberg-pages/][How to use Codeberg Pages for MkDocs - Andre_601]]
 + [[https://docs.codeberg.org/integrations/read-the-docs/][Integrating with Read the Docs | Codeberg Documentation]]
++ [[https://codeberg.org/git-pages/action#with-a-custom-domain][git-pages/action: Forgejo Action for uploading a directory to a git-pages site - Codeberg.org]]
 
 ** Misc
 
