@@ -15,6 +15,7 @@ getting started [[id:36a83dd6-7535-43a9-9b68-15dc135c86fd][Emacs Getting Started
 + [[id:ff8ee302-7518-4179-9bcb-63b13199f897][Emacs Packages]]
 + [[id:c7a63aeb-a6d6-4753-8f0b-f255a532d36b][Abbrev]]
 + [[id:126bd875-23f1-4f06-b96a-b832f410fb12][AWS]]
++ [[id:dcadfe01-721f-4d8d-b220-9acd15e86736][Blog]]
 + [[id:4451966f-b810-4a9d-905b-e2b682578c62][Buffers]]
 + [[id:8b6ba3c1-18f2-4cc4-ae5c-97c31b7cec28][Citations]]
 + [[id:18bb7397-ae26-4607-bbe2-6e54f338cd86][Compilation]]
@@ -46,6 +47,7 @@ getting started [[id:36a83dd6-7535-43a9-9b68-15dc135c86fd][Emacs Getting Started
   + [[id:2b1518bf-c76c-4780-9274-41beb7e91cf0][Org Capture]]
   + [[id:136364e7-1a6d-4b28-b284-0e415b860699][Org-roam]]
   + [[id:42dd7a3e-d6bf-4e22-b564-f159fcbeb460][Org GTD]]
+  + [[id:7f40d8d9-bc37-44e8-8771-d3eba1343da5][Org Social]]
 + [[id:301c717a-c9f6-4490-9620-491762db4343][OSM]]
 + [[id:ac85ca6b-4b6e-4e8d-82f8-2f85c5062de6][Passwords]]
 + [[id:580157bf-0313-4c4e-88d3-cd443ddbab62][Projectile]]
@@ -71,8 +73,8 @@ getting started [[id:36a83dd6-7535-43a9-9b68-15dc135c86fd][Emacs Getting Started
 [[./img/emacs/real_programmers.png]]
 
 Emacs can be used as a powerful Integrated Development Environment (IDE) for a range of [[id:ea1499ab-dab2-49b1-8479-cb5a2fbd38bc][Programming]] languages thanks to
-its support of the Language Server Protocol (LSP) courtesy of which supports [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]], [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]], [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] and many others. This is
-achieved through one of two packages.
+its support of the Language Server Protocol (LSP) courtesy of the built-in Eglot or the [[id:04868965-8413-4d9d-8ecc-573570fec5b1][LSP Mode]] either of which work
+with language servers for [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]], [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]], [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] and many others.
 
 The [[id:f76ac811-6c1a-4aa6-9492-8cbae7cb50ca][Emacs Conf]] is a yearly online conference where a wide array of people share their use of Emacs and developers
 explain future plans for projects.
@@ -127,6 +129,8 @@ with ~eselect emacs~.
 ** Advocacy
 + [[https://www.fugue.co/blog/2015-11-11-guide-to-emacs.html][A CEO's Guide to Emacs]] - a few dated bits (e.g. ~\~/.config/emacs~ is now supported) but very good.
 + [[https://lucidmanager.org/productivity/][Lucid Manager - Productivity]] - lots of clear articles on Emacs.
++ [[https://karl-voit.at/2021/07/23/emacs-lock-in/][The Emacs Lock-In Effect or the Emacs Sunk Cost Fallacy]]
++ [[https://randyridenour.net/posts/2026-04-25-emacs-sunk-cost-fallacy.html][Emacs and the Sunk Cost Fallacy]] - a response to the above article.
 
 *** Video Tutorials
 

@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       7f40d8d9-bc37-44e8-8771-d3eba1343da5
+:END:
+#+TITLE: Org Social
+#+FILETAGS: :emacs:orgmode:org:orgsocial:
+
+As well as wanting to switch to [[id:dcadfe01-721f-4d8d-b220-9acd15e86736][Emacs Blog]] I quite like the idea of [[https://org-social.org/][Org Social]] a "/Decentralized Social Network/"
+
+* Setup
+
+* Self-hosting
+
+It's possible to self-host your ~social.org~ which requires a [[https://github.com/tanrax/awesome-org-social/][relay-compatible-client]] and setting up a [[https://github.com/tanrax/org-social-relay][org-social-relay]]
+* Links
+
++ [[https://org-social.org/][Org Social - Decentralized Social Network]]
++ [[https://github.com/tanrax/org-social][tanrax/org-social: Org Social is a decentralized social network that runs on an Org Mode file over HTTP.]]
++ [[https://en.andros.dev/blog/c68f00c3/quick-tutorial-to-get-a-blog-online-from-org-mode-thanks-to-org-social/][Quick tutorial to get a blog online from Org mode thanks to Org Social | Andros Fenollosa]]
++ [[https://en.andros.dev/blog/ddd78757/quick-tutorial-to-get-started-on-org-social/][Quick tutorial to get started on Org Social | Andros Fenollosa]] (older than the above)
+
+** Self-hosting
+
++ [[https://github.com/tanrax/org-social-relay][org-social-relay]]

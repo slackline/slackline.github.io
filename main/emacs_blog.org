@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       dcadfe01-721f-4d8d-b220-9acd15e86736
+:END:
+#+TITLE: Emacs Blog
+#+FILETAGS: :emacs:blog:orgmode:org:
+
+I'm considering moving my blog from [[id:251b3ae4-4a5c-4c44-909a-dcbc0aef4b45][Quarto]] to [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]] and self-hosting rather than relying on [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]] pages.
+
+* Links
+
+** Randy Ridenour
+
++ [[https://randyridenour.net/posts/2024-12-17-blogging-with-org-mode.html][Blogging with Org Mode]]
++ [[https://randyridenour.net/posts/2025-01-07-creating-rss-feed.html][Creating an RSS Feed]]

@@ -123,3 +123,7 @@
 
 + [[https://mitchellh.com/writing/my-ai-adoption-journey][My AI Adoption Journey – Mitchell Hashimoto]]
 + [[https://taggart-tech.com/reckoning/][I used AI. It worked. I hated it.: Taggart Tech]]
+
+** Financial Aspects
+
++ [[https://www.theverge.com/ai-artificial-intelligence/917380/ai-monetization-anthropic-openai-token-economics-revenue][You’re about to feel the AI money squeeze | The Verge]]
