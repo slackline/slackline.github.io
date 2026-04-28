@@ -116,6 +116,7 @@ Topics are alphabetical...
 + [[https://comprendre-git.com/en/][Comprendre Git]]
 + [[https://github.com/Gazler/githug][Gazler/githug: Git your game on!]]
 + [[https://beej.us/guide/bggit/html/split/index.html][Beej's Guide to Git]]
++ [[https://wong-hl.github.io/git-for-researchers/1-starting_with_git.html][Starting with Git - Git For Researchers]]
 
 *** Books
 
