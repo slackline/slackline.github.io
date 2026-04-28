@@ -26,6 +26,11 @@ which are grouped into crags and areas.
 * Links
 
 ** Europe
+*** France
+
+**** Fontainebleau
++ [[https://bleau.info/?locale=en][Bleau.info]] the original site for all things about Font.
++ [[https://www.topobleau.com/index-en.html][TopoBleau]] excellent app for your phone.
 
 *** Spain
 
