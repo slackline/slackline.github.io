@@ -21,6 +21,28 @@ Configure the ~core.hooksPath~ and place all files in a ~./.hooks~ directory so 
 suggested in [[https://alecthegeek.gitlab.io/blog/2024/08/manage-git-and-hook-scripts-the-easy-way/][Manage Git and Hook Scripts the easy way]].
 
 
+** Config Based Hooks
+
+[[https://github.blog/open-source/git/highlights-from-git-2-54/#h-config-based-hooks][Git 2.54]] saw the introduction of config based hooks which allow broader configuration at the system and global level as
+well as local scope.
+
+#+begin_example
+[hook "ruff"]
+   event = pre-commit
+   command = /usr/bin/ruff
+   parallel = true
+
+[hook "shellcheck"]
+   event = pre-commit
+   command = /usr/bin/shellcheck
+   parallel = true
+
+[hook]
+    jobs = 2
+#+end_example
+
+The ~$GIT_DIR/hooks~ jobs will run /after/ configuration based hooks.
+
 * Pre-commit
 
 [[https://pre-commit.com][Pre-commit]] and the associated service [[https://pre-commit.ci][pre-commit.ci]] are wonderful tools. I've written about them in a few blog posts and
