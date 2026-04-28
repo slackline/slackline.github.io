@@ -30,7 +30,8 @@ which are grouped into crags and areas.
 
 **** Fontainebleau
 + [[https://bleau.info/?locale=en][Bleau.info]] the original site for all things about Font.
-+ [[https://www.topobleau.com/index-en.html][TopoBleau]] excellent app for your phone.
++ [[http://fontnbleau.blogspot.com/][fontNbleau]] app for Android
++ [[https://www.topobleau.com/index-en.html][TopoBleau]] app for iPhone.
 
 *** Spain
 
