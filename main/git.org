@@ -99,7 +99,6 @@ Topics are alphabetical...
 ** Learning Resources
 
 + [[http://blog.anvard.org/conversational-git/][Conversational Git]]
-+ [[https://git-scm.com/book/en/v2][Pro Git]] ([[https://github.com/progit/progit][github site]])
 + [[https://gitbetter.substack.com/archive?sort=new][Git Better]]
 + [[https://ohshitgit.com/][Oh Shit, Git!?!]]
 + [[https://ohmygit.org/][Oh My Git!]] - a game for learning Git.
@@ -117,6 +116,11 @@ Topics are alphabetical...
 + [[https://comprendre-git.com/en/][Comprendre Git]]
 + [[https://github.com/Gazler/githug][Gazler/githug: Git your game on!]]
 + [[https://beej.us/guide/bggit/html/split/index.html][Beej's Guide to Git]]
+
+*** Books
+
++ [[https://git-scm.com/book/en/v2][Pro Git]] ([[https://github.com/progit/progit][github site]])
++ [[https://gitperf.com/][High Performance Git]]
 
 *** Videos
 
