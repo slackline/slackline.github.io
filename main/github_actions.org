@@ -89,6 +89,19 @@ and its useful when tests are "flakey" and may sometimes fail regardless, plus i
 
 You can check the validity of your GitHub actions using [[https://rhysd.github.io/actionlint/][ActionLint]].
 
+** Update GitHub Action versions automatically
+
+Add a ~.github/dependabot.yml~ similar to the following...
+
+#+begin_example
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+#+end_example
+
 * Alternatives
 
 + [[id:284615e5-516f-4b04-a3d8-2a5ea9480f8e][Codeberg Woodpecker CI]]
@@ -110,3 +123,7 @@ You can check the validity of your GitHub actions using [[https://rhysd.github.i
 ** Critique
 
 + [[https://www.iankduncan.com/engineering/2026-02-05-github-actions-killing-your-team/][GitHub Actions Is Slowly Killing Your Engineering Team]]
+
+** Misc
+
++ [[https://stevefenton.co.uk/blog/2026/03/auto-update-github-action-versions/][Automatically Update GitHub Action Versions | Steve Fenton]]
