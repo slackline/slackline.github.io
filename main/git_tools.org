@@ -12,6 +12,14 @@ By far the most powerful tool is [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magi
 
 [[https://dinakars777.github.io/git-time-machine/][Git Time Machine]] is a "/Visual Git Reflog Browser/".
 
+* GitHub Profiler
+
+Grab some summary information about a user using the [[https://github.com/ehmatthes/gh-profiler][gh-profiler]] tool.
+
+#+begin_example
+uvx gh-profiler ns-rse
+#+end_example
+
 * Links
 
 + [[https://tissue.systemreboot.net/][tissue]] an issue tracker and project information management system built on plain text files and Git.
@@ -27,3 +35,4 @@ By far the most powerful tool is [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magi
 + [[https://github.com/yaoyuannnn/gerritlab][yaoyuannnn/gerritlab: GerritLab: Gerrit-style code review for GitLab projects.]]
 + [[https://github.com/chmouel/git-branches][chmouel/git-branches: select git branches with style]]
 + [[https://github.com/dinakars777/git-time-machine][dinakars777/git-time-machine: 🕰️ Undo ANY git mistake in 3 seconds with a beautiful TUI]]
++ [[https://github.com/ehmatthes/gh-profiler][ehmatthes/gh-profiler]]
