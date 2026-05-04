@@ -1,0 +1,109 @@
+:PROPERTIES:
+:ID:       d50eead5-b6f8-4ca4-b386-087f32e436a9
+:END:
+#+TITLE: Home Assistant SigEnergy
+#+FILETAGS: :homeassistant:linux:foss:homeautomation:solar:sigenergy:
+
+
+I had to manually download the [[https://github.com/TypQxQ/Sigenergy-Local-Modbus][Sigenergy-Local-Modbus]] extract the tarball and copy files to
+~/var/libs/hass/custom-components~
+
+#+begin_example
+cd /tmp/
+wget https://github.com/TypQxQ/Sigenergy-Local-Modbus/archive/refs/tags/v.1.2.2.tar.gz
+tar xzvf v1.2.2.tar.gz
+mv Sigenergy-LocalModbus-v1.2.2/custom_components/sigen /var/lib/hass/custom_components/.
+systemctl restart home-assistant.service
+#+end_example
+
+I could now find SigEnergy Plant listed under /Services > Add Integration/, but initially it didn't auto-detect the
+device and I can't work out what the IP address is (according to this [[https://community.home-assistant.io/t/sig-energy-system-integration/760448/6][thread]] all MAC addresses start ~BC:31:98~ but my
+router doesn't show this). Perhaps I need to check that "/SigEnergy ESS Modbus-TCP/" and "/SigEnergy ESS firmware
+~SPC109~/" is installed on the hardware? Looking at the Android app under /Settings > System Settings > Connectivity >
+Device/ the MAC address is actually ~A8:46:74:~ but also found the assigned IP Address, progress! Using [[https://nmap.org/book/port-scanning-tutorial.html][~nmap~]] I scanned
+the device to try and find what ports are open...
+
+#+begin_example
+# nmap -p0- -A -v -T4 192.168.###.###
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-04-27 22:52 +0100
+NSE: Loaded 158 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 22:52
+Completed NSE at 22:52, 0.00s elapsed
+Initiating NSE at 22:52
+Completed NSE at 22:52, 0.00s elapsed
+Initiating NSE at 22:52
+Completed NSE at 22:52, 0.00s elapsed
+Initiating ARP Ping Scan at 22:52
+Scanning 192.168.###.### [1 port]
+Completed ARP Ping Scan at 22:52, 0.07s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 22:52
+Completed Parallel DNS resolution of 1 host. at 22:52, 0.05s elapsed
+Initiating SYN Stealth Scan at 22:52
+Scanning sigenergy.lan (192.168.###.###) [65536 ports]
+SYN Stealth Scan Timing: About 11.99% done; ETC: 22:57 (0:03:48 remaining)
+SYN Stealth Scan Timing: About 24.20% done; ETC: 22:57 (0:03:11 remaining)
+SYN Stealth Scan Timing: About 36.58% done; ETC: 22:57 (0:02:38 remaining)
+SYN Stealth Scan Timing: About 48.58% done; ETC: 22:57 (0:02:08 remaining)
+Discovered open port 21319/tcp on 192.168.###.###
+SYN Stealth Scan Timing: About 60.92% done; ETC: 22:57 (0:01:37 remaining)
+SYN Stealth Scan Timing: About 69.55% done; ETC: 22:57 (0:01:19 remaining)
+SYN Stealth Scan Timing: About 81.06% done; ETC: 22:57 (0:00:49 remaining)
+Completed SYN Stealth Scan at 22:57, 263.64s elapsed (65536 total ports)
+Initiating Service scan at 22:57
+Scanning 1 service on sigenergy.lan (192.168.###.###)
+Completed Service scan at 22:58, 96.26s elapsed (1 service on 1 host)
+Initiating OS detection (try #1) against sigenergy.lan (192.168.###.###)
+Retrying OS detection (try #2) against sigenergy.lan (192.168.###.###)
+Retrying OS detection (try #3) against sigenergy.lan (192.168.###.###)
+Retrying OS detection (try #4) against sigenergy.lan (192.168.###.###)
+Retrying OS detection (try #5) against sigenergy.lan (192.168.###.###)
+NSE: Script scanning 192.168.###.###.
+Initiating NSE at 22:59
+Completed NSE at 22:59, 5.06s elapsed
+Initiating NSE at 22:59
+Completed NSE at 22:59, 5.80s elapsed
+Initiating NSE at 22:59
+Completed NSE at 22:59, 0.00s elapsed
+Nmap scan report for sigenergy.lan (192.168.###.###)
+Host is up (0.029s latency).
+Not shown: 65535 closed tcp ports (reset)
+PORT      STATE SERVICE     VERSION
+21319/tcp open  ssl/unknown
+MAC Address: A8:46:74:D2:66:C8 (Unknown)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.98%E=4%D=4/27%OT=21319%CT=1%CU=44163%PV=Y%DS=1%DC=D%G=Y%M=A8467
+OS:4%TM=69EFDC36%P=x86_64-pc-linux-gnu)SEQ(SP=0%GCD=8F48D5%ISR=D4%CI=I%II=R
+OS:I%TS=U)SEQ(SP=6E%GCD=1%ISR=D4%CI=I%II=RI%TS=U)SEQ(SP=75%GCD=1%ISR=D4%CI=
+OS:I%II=RI%TS=U)SEQ(SP=7C%GCD=1%ISR=D4%CI=I%II=RI%TS=U)SEQ(SP=C4%GCD=1%ISR=
+OS:D2%CI=I%II=RI%TS=U)OPS(O1=M5B4%O2=M5B4%O3=M5B4%O4=M5B4%O5=%O6=M5B4)OPS(O
+OS:1=M5B4%O2=M5B4%O3=M5B4%O4=M5B4%O5=M5B4%O6=M5B4)WIN(W1=1C84%W2=1C84%W3=1C
+OS:84%W4=1C84%W5=1C15%W6=1C84)WIN(W1=1C84%W2=1C84%W3=1C84%W4=1C84%W5=1C84%W
+OS:6=1C84)ECN(R=Y%DF=N%T=FF%W=1C84%O=M5B4%CC=N%Q=)T1(R=Y%DF=N%T=FF%S=O%A=S+
+OS:%F=AS%RD=0%Q=)T2(R=N)T3(R=Y%DF=N%T=FF%W=1C84%S=O%A=S+%F=AS%O=M5B4%RD=0%Q
+OS:=)T4(R=Y%DF=N%T=FF%W=841C%S=A%A=S%F=AR%O=%RD=0%Q=)T5(R=Y%DF=N%T=FF%W=841
+OS:C%S=A%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=N%T=FF%W=841C%S=A%A=S%F=AR%O=%RD=0%
+OS:Q=)T7(R=Y%DF=N%T=FF%W=841C%S=A%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=FF%IPL
+OS:=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=FF%CD=S)
+
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=124 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   28.70 ms sigenergy.lan (192.168.###.###)
+
+NSE: Script Post-scanning.
+Initiating NSE at 22:59
+Completed NSE at 22:59, 0.00s elapsed
+Initiating NSE at 22:59
+Completed NSE at 22:59, 0.00s elapsed
+Initiating NSE at 22:59
+Completed NSE at 22:59, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 382.66 seconds
+           Raw packets sent: 70294 (3.097MB) | Rcvd: 66796 (2.691MB)
+#+end_example

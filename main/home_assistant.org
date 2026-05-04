@@ -6,231 +6,15 @@
 #+TITLE: Home Assistant
 #+FILETAGS: :linux:automation:home:
 
+Installing, configuring and using [[https://www.home-assistant.io/][Home Assistant]]
+
 * Home Assistant
 
-** Arch Linux ARM Install
-
-Official support for Home Assistant on Arch Linux has been dropped, they recommend using Docker, but there is no Docker
-image for the ~arm7h~ architecture that my [[id:69864d74-8ec2-42e4-a227-f824a521a5ce][Raspberry Pi]] 4b runs. Instead I looked to [[https://aur.archlinux.org/packages?O=0&K=home-assistant][AUR]] and found a number of packages,
-some core some peripheral.
-
-Create a virtual environment under ~~/aur~, I use [[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][uv]] for this but you could easily use any [[id:4bf1c297-d00a-4857-9339-8017c27138c6][Python Virtual Environments]]. Don't forget
-to setup [[id:a4af96d2-f895-4a68-9419-d482d2850f4d][Direnv]] to load the environment.
-
-#+begin_example shell
-#!/bin/bash
-set -euo pipefail
-
-function print_stage() {
-    echo -e " \e[33m*\e[39m \e[94m$1\e[39m"
-}
-
-# TODO - Setup a temproary virtualenv with virtualenvwrapper to build and install package
-
-# Install the core packages
-for x in "home-assistant" "python-home-assistant-hacs" "python-home-assistant-frontend";
-do
-    print_stage "Installing : ${x}"
-    git clone https://aur.archlinux.org/"${x}".git
-    cd "${x}"
-    makepkg -sri
-done
-
-#+end_example
-
-I found I had to modify the ~PKGBUILD~ for ~python-home-assistant-frontend~ to work with ~uv~ and change ~pip install ...~
-to ~uv pip install ...~.
-
-Packages that are installed and then removed as part of the build process (might be worth installing globally)
-+ ~python-attrs~
-+ ~python-pip~
-+ ~python-build~
-+ ~python-pyproject-hooks~
-
-Once installed you need to start the ~home-assitant.service~ and can optionally enable it to run on startup. The initial
-startup appears to take a little while to set everything up as a large number of packages are installed using a virtual
-environment.
-
-#+begin_example
-systemctl enable --now home-assistant.service
-#+end_example
-
-
-This will take a while to run as it downloads and installs a bunch of additional Python packages. I found it ground my
-Pi to a halt and made it a little unstable for a while and had to manually reboot. But on rebooting I was able to
-restart the service and I could visit ~https://192.168.1.##:8123~ and was able to see the welcome dashboard which I then
-setup an account for.
-
-** Deprecation
-
-Oh dear...
-
-#+begin_quote
-This system is using the Core installation type, and 32-bit hardware (armv7l), both of which have been deprecated and
-will no longer be supported after the release of Home Assistant 2025.12.
-#+end_quote
-
-I might have to upgrade to a newer ArchLinuxARM version with 64-bit support.
-
-** Where is everything?
-
-*** Home-Assistant
-
-This is installed to ~/var/lib/hass/~
-
-#+begin_example
-# l /var/lib/hass/
-total 4.9M
-drwxr-xr-x 10 hass hass 4.0K Mar 22 08:40 .
-drwxr-xr-x 39 root root 4.0K Mar 22 00:31 ..
--rw-r--r--  1 hass hass    8 Mar 18 19:14 .HA_VERSION
-drwxr-xr-x  6 hass hass 4.0K Mar 19 07:14 .cache
-drwxr-xr-x  2 hass hass 4.0K Mar 20 07:25 .cloud
-drwx------  2 hass hass 4.0K Mar 18 20:20 .config
--rw-r--r--  1 hass hass   85 Mar 22 08:40 .ha_run.lock
-drwxr-xr-x  2 hass hass 4.0K Mar 22 11:51 .storage
-drwxr-xr-x  6 hass hass 4.0K Mar 18 20:20 .venv
--rw-r--r--  1 hass hass    2 Mar 18 19:14 automations.yaml
-drwxr-xr-x  4 hass hass 4.0K Mar 18 19:29 blueprints
--rw-r--r--  1 hass hass  265 Mar 18 19:14 configuration.yaml
-drwxr-xr-x  2 hass hass 4.0K Mar 18 19:14 deps
--rw-r--r--  1 hass hass    0 Mar 22 08:40 home-assistant.log.fault
--rw-r--r--  1 hass hass 812K Mar 22 11:34 home-assistant_v2.db
--rw-r--r--  1 hass hass  32K Mar 22 11:50 home-assistant_v2.db-shm
--rw-r--r--  1 hass hass 4.0M Mar 22 11:50 home-assistant_v2.db-wal
--rw-r--r--  1 hass hass    0 Mar 18 19:14 scenes.yaml
--rw-r--r--  1 hass hass    0 Mar 18 19:14 scripts.yaml
--rw-r--r--  1 hass hass  161 Mar 18 19:14 secrets.yaml
-drwxr-xr-x  2 hass hass 4.0K Mar 18 19:27 tts
-
-#+end_example
-
-[[id:9bc6a091-ed02-4423-b14a-d56f677c5cd0][Systemd]] configuration is installed to..
-
-+ ~/usr/lib/sysusers.d/home-assistant.conf~
-+ ~/usr/lib/tmpfiles.d/home-assistant.conf~
-
-*** HACS
-
-HACS is installed to ~/var/lib/private/hass/custom_components/hacs/~ and its a bunch of Python code. After installing
-though it never appeared in the list of available plugins so I reverted to trying to install manually for the [[https://www.hacs.xyz/docs/use/download/download/#to-download-hacs-core][Core]]
-installation that I have made.
-
-
-I thought I'd have to ~su hass~ but found that the account had expired (~chage~ provided insight) but in the end all I
-had to do was...
-
-#+begin_example
-cd /var/lib/hass
-wget -O - https://get.hacs.xyz | bash -
-systemctl restart home-assistant.service
-#+end_example
-
-
-** Sigenergy-Local-Modbus
-
-I had to manually download the [[https://github.com/TypQxQ/Sigenergy-Local-Modbus][Sigenergy-Local-Modbus]] extract the tarball and copy files to
-~/var/libs/hass/custom-components~
-
-#+begin_example
-cd /tmp/
-wget https://github.com/TypQxQ/Sigenergy-Local-Modbus/archive/refs/tags/v.1.2.2.tar.gz
-tar xzvf v1.2.2.tar.gz
-mv Sigenergy-LocalModbus-v1.2.2/custom_components/sigen /var/lib/hass/custom_components/.
-systemctl restart home-assistant.service
-#+end_example
-
-I could now find SigEnergy Plant listed under /Services > Add Integration/, but initially it didn't auto-detect the
-device and I can't work out what the IP address is (according to this [[https://community.home-assistant.io/t/sig-energy-system-integration/760448/6][thread]] all MAC addresses start ~BC:31:98~ but my
-router doesn't show this). Perhaps I need to check that "/SigEnergy ESS Modbus-TCP/" and "/SigEnergy ESS firmware
-~SPC109~/" is installed on the hardware? Looking at the Android app under /Settings > System Settings > Connectivity >
-Device/ the MAC address is actually ~A8:46:74:~ but also found the assigned IP Address, progress! Using [[https://nmap.org/book/port-scanning-tutorial.html][~nmap~]] I scanned
-the device to try and find what ports are open...
-
-#+begin_example
-# nmap -p0- -A -v -T4 192.168.###.###
-Starting Nmap 7.98 ( https://nmap.org ) at 2026-04-27 22:52 +0100
-NSE: Loaded 158 scripts for scanning.
-NSE: Script Pre-scanning.
-Initiating NSE at 22:52
-Completed NSE at 22:52, 0.00s elapsed
-Initiating NSE at 22:52
-Completed NSE at 22:52, 0.00s elapsed
-Initiating NSE at 22:52
-Completed NSE at 22:52, 0.00s elapsed
-Initiating ARP Ping Scan at 22:52
-Scanning 192.168.###.### [1 port]
-Completed ARP Ping Scan at 22:52, 0.07s elapsed (1 total hosts)
-Initiating Parallel DNS resolution of 1 host. at 22:52
-Completed Parallel DNS resolution of 1 host. at 22:52, 0.05s elapsed
-Initiating SYN Stealth Scan at 22:52
-Scanning sigenergy.lan (192.168.###.###) [65536 ports]
-SYN Stealth Scan Timing: About 11.99% done; ETC: 22:57 (0:03:48 remaining)
-SYN Stealth Scan Timing: About 24.20% done; ETC: 22:57 (0:03:11 remaining)
-SYN Stealth Scan Timing: About 36.58% done; ETC: 22:57 (0:02:38 remaining)
-SYN Stealth Scan Timing: About 48.58% done; ETC: 22:57 (0:02:08 remaining)
-Discovered open port 21319/tcp on 192.168.###.###
-SYN Stealth Scan Timing: About 60.92% done; ETC: 22:57 (0:01:37 remaining)
-SYN Stealth Scan Timing: About 69.55% done; ETC: 22:57 (0:01:19 remaining)
-SYN Stealth Scan Timing: About 81.06% done; ETC: 22:57 (0:00:49 remaining)
-Completed SYN Stealth Scan at 22:57, 263.64s elapsed (65536 total ports)
-Initiating Service scan at 22:57
-Scanning 1 service on sigenergy.lan (192.168.###.###)
-Completed Service scan at 22:58, 96.26s elapsed (1 service on 1 host)
-Initiating OS detection (try #1) against sigenergy.lan (192.168.###.###)
-Retrying OS detection (try #2) against sigenergy.lan (192.168.###.###)
-Retrying OS detection (try #3) against sigenergy.lan (192.168.###.###)
-Retrying OS detection (try #4) against sigenergy.lan (192.168.###.###)
-Retrying OS detection (try #5) against sigenergy.lan (192.168.###.###)
-NSE: Script scanning 192.168.###.###.
-Initiating NSE at 22:59
-Completed NSE at 22:59, 5.06s elapsed
-Initiating NSE at 22:59
-Completed NSE at 22:59, 5.80s elapsed
-Initiating NSE at 22:59
-Completed NSE at 22:59, 0.00s elapsed
-Nmap scan report for sigenergy.lan (192.168.###.###)
-Host is up (0.029s latency).
-Not shown: 65535 closed tcp ports (reset)
-PORT      STATE SERVICE     VERSION
-21319/tcp open  ssl/unknown
-MAC Address: A8:46:74:D2:66:C8 (Unknown)
-No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
-TCP/IP fingerprint:
-OS:SCAN(V=7.98%E=4%D=4/27%OT=21319%CT=1%CU=44163%PV=Y%DS=1%DC=D%G=Y%M=A8467
-OS:4%TM=69EFDC36%P=x86_64-pc-linux-gnu)SEQ(SP=0%GCD=8F48D5%ISR=D4%CI=I%II=R
-OS:I%TS=U)SEQ(SP=6E%GCD=1%ISR=D4%CI=I%II=RI%TS=U)SEQ(SP=75%GCD=1%ISR=D4%CI=
-OS:I%II=RI%TS=U)SEQ(SP=7C%GCD=1%ISR=D4%CI=I%II=RI%TS=U)SEQ(SP=C4%GCD=1%ISR=
-OS:D2%CI=I%II=RI%TS=U)OPS(O1=M5B4%O2=M5B4%O3=M5B4%O4=M5B4%O5=%O6=M5B4)OPS(O
-OS:1=M5B4%O2=M5B4%O3=M5B4%O4=M5B4%O5=M5B4%O6=M5B4)WIN(W1=1C84%W2=1C84%W3=1C
-OS:84%W4=1C84%W5=1C15%W6=1C84)WIN(W1=1C84%W2=1C84%W3=1C84%W4=1C84%W5=1C84%W
-OS:6=1C84)ECN(R=Y%DF=N%T=FF%W=1C84%O=M5B4%CC=N%Q=)T1(R=Y%DF=N%T=FF%S=O%A=S+
-OS:%F=AS%RD=0%Q=)T2(R=N)T3(R=Y%DF=N%T=FF%W=1C84%S=O%A=S+%F=AS%O=M5B4%RD=0%Q
-OS:=)T4(R=Y%DF=N%T=FF%W=841C%S=A%A=S%F=AR%O=%RD=0%Q=)T5(R=Y%DF=N%T=FF%W=841
-OS:C%S=A%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=N%T=FF%W=841C%S=A%A=S%F=AR%O=%RD=0%
-OS:Q=)T7(R=Y%DF=N%T=FF%W=841C%S=A%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=FF%IPL
-OS:=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=FF%CD=S)
-
-Network Distance: 1 hop
-TCP Sequence Prediction: Difficulty=124 (Good luck!)
-IP ID Sequence Generation: Busy server or unknown class
-
-TRACEROUTE
-HOP RTT      ADDRESS
-1   28.70 ms sigenergy.lan (192.168.###.###)
-
-NSE: Script Post-scanning.
-Initiating NSE at 22:59
-Completed NSE at 22:59, 0.00s elapsed
-Initiating NSE at 22:59
-Completed NSE at 22:59, 0.00s elapsed
-Initiating NSE at 22:59
-Completed NSE at 22:59, 0.00s elapsed
-Read data files from: /usr/bin/../share/nmap
-OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 382.66 seconds
-           Raw packets sent: 70294 (3.097MB) | Rcvd: 66796 (2.691MB)
-#+end_example
++ [[id:afe88f55-7204-45d5-a22b-0f01a2f4030a][Arch Linux Alarmpi4b Install]]
++ [[id:14c0b71c-a14b-4a72-82fe-20aa2181446e][HACS]]
++ [[id:d50eead5-b6f8-4ca4-b386-087f32e436a9][SigEnergy-Local-Modbus]]
++ [[id:6f0b8319-715f-412a-80cc-15bea364e862][Signal Messenger]]
++ [[id:c0b35b65-7e32-416d-a1db-a544d0a0b50a][iCloud]]
 
 * Links
 
@@ -249,10 +33,9 @@ Nmap done: 1 IP address (1 host up) scanned in 382.66 seconds
 
 *** HACS
 
-+ [[https://github.com/TypQxQ/Sigenergy-Local-Modbus][TypQxQ/Sigenergy-Local-Modbus: Sigenergy Energy Storage System Integration for local Modbus‑TCP monitoring and control
-  into Home Assistant. Gain real‑time insights, dynamic device management, and seamless UI‑based setup.]]
-+ [[https://github.com/TypQxQ/Sigenergy-Home-Assistant-Integration][TypQxQ/Sigenergy-Home-Assistant-Integration: Home Assistant modbus integration for Sigenergy inverters such as
-  SigenStor, Sigen PV and Sigen Hybrid.]]
++ [[https://github.com/TypQxQ/Sigenergy-Local-Modbus][TypQxQ/Sigenergy-Local-Modbus]] - : Sigenergy Energy Storage System Integration for local Modbus‑TCP monitoring and
+  control into Home Assistant. Gain real‑time insights, dynamic device management, and seamless UI‑based setup.
++ [[https://github.com/TypQxQ/Sigenergy-Home-Assistant-Integration][TypQxQ/Sigenergy-Home-Assistant-Integration]]
 
 ** Forums
 

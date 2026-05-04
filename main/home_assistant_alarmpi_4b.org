@@ -1,0 +1,119 @@
+:PROPERTIES:
+:ID:       afe88f55-7204-45d5-a22b-0f01a2f4030a
+:END:
+#+TITLE: Home Assistant Alarmpi4b
+#+FILETAGS: :homeassistant:automation:linux:raspberrypi:foss:
+
+
+Official support for Home Assistant on Arch Linux has been dropped, they recommend using Docker, but there is no Docker
+image for the ~arm7h~ architecture that my [[id:69864d74-8ec2-42e4-a227-f824a521a5ce][Raspberry Pi]] 4b runs. Instead I looked to [[https://aur.archlinux.org/packages?O=0&K=home-assistant][AUR]] and found a number of packages,
+some core some peripheral.
+
+* Install
+
+** Virtual Environment
+
+Create a virtual environment under ~~/aur~, I use [[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][uv]] for this but you could easily use any [[id:4bf1c297-d00a-4857-9339-8017c27138c6][Python Virtual Environments]]. Don't forget
+to setup [[id:a4af96d2-f895-4a68-9419-d482d2850f4d][Direnv]] to load the environment.
+
+#+begin_example shell
+#!/bin/bash
+set -euo pipefail
+
+function print_stage() {
+    echo -e " \e[33m*\e[39m \e[94m$1\e[39m"
+}
+
+# TODO - Setup a temproary virtualenv with virtualenvwrapper to build and install package
+
+# Install the core packages
+for x in "home-assistant" "python-home-assistant-hacs" "python-home-assistant-frontend";
+do
+    print_stage "Installing : ${x}"
+    git clone https://aur.archlinux.org/"${x}".git
+    cd "${x}"
+    makepkg -sri
+done
+
+#+end_example
+
+I found I had to modify the ~PKGBUILD~ for ~python-home-assistant-frontend~ to work with ~uv~ and change ~pip install ...~
+to ~uv pip install ...~.
+
+Packages that are installed and then removed as part of the build process (might be worth installing globally)
+
++ ~python-attrs~
++ ~python-pip~
++ ~python-build~
++ ~python-pyproject-hooks~
+
+Once installed you need to start the ~home-assitant.service~ and can optionally enable it to run on startup. The initial
+startup appears to take a little while to set everything up as a large number of packages are installed using a virtual
+environment.
+
+#+begin_example
+systemctl enable --now home-assistant.service
+#+end_example
+
+
+This will take a while to run as it downloads and installs a bunch of additional Python packages. I found it ground my
+Pi to a halt and made it a little unstable for a while and had to manually reboot. But on rebooting I was able to
+restart the service and I could visit ~https://192.168.1.##:8123~ and was able to see the welcome dashboard which I then
+setup an account for.
+
+** Deprecation
+
+Oh dear...
+
+#+begin_quote
+This system is using the Core installation type, and 32-bit hardware (armv7l), both of which have been deprecated and
+will no longer be supported after the release of Home Assistant 2025.12.
+#+end_quote
+
+I might have to upgrade to a newer ArchLinuxARM version with 64-bit support.
+
+* Where is everything?
+
+** Home-Assistant
+
+This is installed to ~/var/lib/hass/~
+
+#+begin_example
+# l /var/lib/hass/
+total 4.9M
+drwxr-xr-x 10 hass hass 4.0K Mar 22 08:40 .
+drwxr-xr-x 39 root root 4.0K Mar 22 00:31 ..
+-rw-r--r--  1 hass hass    8 Mar 18 19:14 .HA_VERSION
+drwxr-xr-x  6 hass hass 4.0K Mar 19 07:14 .cache
+drwxr-xr-x  2 hass hass 4.0K Mar 20 07:25 .cloud
+drwx------  2 hass hass 4.0K Mar 18 20:20 .config
+-rw-r--r--  1 hass hass   85 Mar 22 08:40 .ha_run.lock
+drwxr-xr-x  2 hass hass 4.0K Mar 22 11:51 .storage
+drwxr-xr-x  6 hass hass 4.0K Mar 18 20:20 .venv
+-rw-r--r--  1 hass hass    2 Mar 18 19:14 automations.yaml
+drwxr-xr-x  4 hass hass 4.0K Mar 18 19:29 blueprints
+-rw-r--r--  1 hass hass  265 Mar 18 19:14 configuration.yaml
+drwxr-xr-x  2 hass hass 4.0K Mar 18 19:14 deps
+-rw-r--r--  1 hass hass    0 Mar 22 08:40 home-assistant.log.fault
+-rw-r--r--  1 hass hass 812K Mar 22 11:34 home-assistant_v2.db
+-rw-r--r--  1 hass hass  32K Mar 22 11:50 home-assistant_v2.db-shm
+-rw-r--r--  1 hass hass 4.0M Mar 22 11:50 home-assistant_v2.db-wal
+-rw-r--r--  1 hass hass    0 Mar 18 19:14 scenes.yaml
+-rw-r--r--  1 hass hass    0 Mar 18 19:14 scripts.yaml
+-rw-r--r--  1 hass hass  161 Mar 18 19:14 secrets.yaml
+drwxr-xr-x  2 hass hass 4.0K Mar 18 19:27 tts
+
+#+end_example
+
+[[id:9bc6a091-ed02-4423-b14a-d56f677c5cd0][Systemd]] configuration is installed to..
+
++ ~/usr/lib/sysusers.d/home-assistant.conf~
++ ~/usr/lib/tmpfiles.d/home-assistant.conf~
+
+* HACS
+
+I then proceeded to install [[id:14c0b71c-a14b-4a72-82fe-20aa2181446e][HACS]]
+
+* Links
+
++ [[https://www.home-assistant.io/][Home Assistant]]

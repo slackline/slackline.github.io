@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       4458c388-b14c-4bda-aa60-02654bc237bd
+:END:
+#+TITLE: Onloc
+#+FILETAGS: :onloc:tracking:selfhosted:arch:vps:
+
+* Server Installation
+
+Two options either Docker or Podman.
+
+* Android
+
+Install [[https://f-droid.org/packages/app.onloc.android/][Onloc from F-Droid]].
+
+
+* Links
+
++ [[https://onloc.app/][Onloc]]

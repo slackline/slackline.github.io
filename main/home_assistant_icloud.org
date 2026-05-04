@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       c0b35b65-7e32-416d-a1db-a544d0a0b50a
+:END:
+#+TITLE: Home Assistant iCloud3
+#+FILETAGS: :homeassistant:automation:tracking:
+
+* Links
+
++ [[https://gcobb321.github.io/icloud3_v3_docs/#/][iCloud3 v3]]

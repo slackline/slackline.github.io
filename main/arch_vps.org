@@ -970,3 +970,7 @@ extension=zip
 ** Logrotate
 
 I could do with keeping on top of log-files better and should use ~logrotate~ to do so.
+
+** Onloc
+
+[[id:4458c388-b14c-4bda-aa60-02654bc237bd][onloc]] is a self-hosted device tracking and control system (its an alternative to [[id:5315e7ee-0ed9-4514-b1a9-0a03114d8191][OwnTracks]])

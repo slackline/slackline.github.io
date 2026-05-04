@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       14c0b71c-a14b-4a72-82fe-20aa2181446e
+:END:
+#+TITLE: Home Assistant HACS
+#+FILETAGS: :homeassistant:foss:linux:automation:
+
+[[https://hacs.xyz/][Home Assistant Community Store (HACS)]] is a repository of user made extensions. They are rarely officially supported but
+provide a method of installing and
+
+* Install
+
+I tried using the [[https://aur.archlinux.org/packages/python-home-assistant-hacs][AUR python-home-assistant-hacs]] package but to no avail. It installed to
+~/var/lib/private/hass/custom_components/hacs/~ and its a bunch of Python code. After installing though it never
+appeared in the list of available plugins so I reverted to trying to install manually for the [[https://www.hacs.xyz/docs/use/download/download/#to-download-hacs-core][Core]] installation that I
+have.
+
+
+I thought I'd have to ~su hass~ but found that the account had expired (~chage~ provided insight) but in the end all I
+had to do was...
+
+#+begin_example
+cd /var/lib/hass
+wget -O - https://get.hacs.xyz | bash -
+systemctl restart home-assistant.service
+#+end_example
+
+* Extensions
+
+Once up and running ~HACS~ appeared in the left-sidebar of the [[id:066a4ad3-d938-4ee5-a5b9-1bec44012734][Home Assistant]] WebUI and I could search/filter to
+~SigEnergy~ to install the [[id:d50eead5-b6f8-4ca4-b386-087f32e436a9][SigEnergy-Local-Modbus]].

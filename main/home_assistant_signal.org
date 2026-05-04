@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       6f0b8319-715f-412a-80cc-15bea364e862
+:END:
+#+TITLE: Home Assitant Signal
+#+FILETAGS: :homeassistant:automation:foss:signal:
+
+This allows you to configure Home Assistant to send messages via Signal.
+
+* Links
+
++ [[https://www.home-assistant.io/integrations/signal_messenger][HA Signal Messenger Integration]]
