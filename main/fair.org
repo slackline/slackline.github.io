@@ -31,3 +31,4 @@ Principles.
 
 + [[https://shortdoi.org/][shortDOI Service]]
 + [[https://chem-bla-ics.linkedchemistry.info/2024/12/30/fair-blog-to-blog-citations.html][FAIR blog-to-blog citations | chem-bla-ics]]
++ [[https://www.go-fair.org/][GO FAIR initiative: Make your data & services FAIR]]
