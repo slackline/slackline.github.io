@@ -12,3 +12,7 @@
 + [[https://joplinapp.org/][Joplin]] - online note hosting
 + [[https://git.0x0.st/mia/0x0][mia/0x0: No-bullshit file hosting and URL shortening service - 0x0 - git.0x0.st]]
 + [[https://ringspace.net/][About - Ringspace Trusted Webrings: Protocol Specification]]
+
+** Essays
+
++ [[https://terrygodier.com/the-boring-internet][The Boring Internet | Terry Godier]]

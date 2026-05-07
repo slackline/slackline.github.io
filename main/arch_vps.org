@@ -549,7 +549,7 @@ the symbolic links.
 ** ForgeJo
 
 I took detailed notes when setting up [[id:736537b3-75e0-4c24-9156-364937e0e8a2][Forgejo]] and basically had to work through those again. I found some problems with
-getting the database setup though and had to redo Mariadb install.
+getting the database setup though and had to redo Mariadb install, but failed to document working through them 🤦.
 
 Useful references is [[https://wiki.archlinux.org/title/Gitea][instructions]] for Gittea (but change everything to ~forgejo~)
 
@@ -578,6 +578,22 @@ cd opengist-bin
 makepkg -sri
 #+end_example
 
+Need to ensure ~opengist~ user owns/has rights to ~/var/lib/opengist~. To get it working with [[id:736537b3-75e0-4c24-9156-364937e0e8a2][ForgeJo]] you need to /User
+Settings > Applications > Create OAuth2 application/.
+
+This will show a ~clientID~ and ~secret~ which you should add to ~/etc/opengist/config.yml~
+
+#+begin_example
+gitea.client-key: ########################
+gitea.secret: gto_##########################################
+gitea.url: https://your.forgejo/
+gitea.name: Your ForgeJo Name
+#+end_example
+
+The secret is only shown once so copy it over to your ~config.yml~ straight away. Add the URI
+~https://opengist.url/oauth/gitea/callback~ (substituting ~opengist.url~ for your domain name).
+
+You should now be able to login to OpenGist using your self-hosted ForgeJo. 🎉
 
 *** FreshRSS
 

@@ -24,3 +24,4 @@ Really useful place for learning features is [[https://ggplot2tor.com/][ggplot2t
 + [[https://posit-conf-2023.github.io/dataviz-ggplot2/][Engaging and Beautiful Data Visualisations with ggplot2]]
 + [[https://www.data-to-viz.com/][From Data to Viz : Find the graphic you need]]
 + [[https://medium.com/@amorimfranchi/raincloud-plots-for-clear-precise-and-efficient-data-communication-4c71d0a37c23][Raincloud plots for clear, precise and efficient data communication]]
++ [[https://nrennie.rbind.io/r-medicine-2026-parameterized-reports/][Welcome! – No more copy and paste! Parameterized plots and reports with R and Quarto]]
