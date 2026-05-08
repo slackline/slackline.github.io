@@ -107,3 +107,65 @@ OS and Service detection performed. Please report any incorrect results at https
 Nmap done: 1 IP address (1 host up) scanned in 382.66 seconds
            Raw packets sent: 70294 (3.097MB) | Rcvd: 66796 (2.691MB)
 #+end_example
+
+After asking my installer if they were able to enable Modbus TCP connection, which they kindly did, I was able to see
+that the default port ~502~ was open and the service running.
+
+#+begin_example
+❱ nmap -p0-1024 -A -v -T4 192.168.1.{35,57}
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-05-06 07:37 +0100
+NSE: Loaded 158 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 07:37
+Completed NSE at 07:37, 0.00s elapsed
+Initiating NSE at 07:37
+Completed NSE at 07:37, 0.00s elapsed
+Initiating NSE at 07:37
+Completed NSE at 07:37, 0.00s elapsed
+Initiating Ping Scan at 07:37
+Scanning 2 hosts [2 ports/host]
+Completed Ping Scan at 07:37, 1.50s elapsed (2 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 07:37
+Completed Parallel DNS resolution of 1 host. at 07:37, 0.01s elapsed
+Nmap scan report for 192.168.1.57 [host down]
+Initiating Connect Scan at 07:37
+Scanning sigenergy.lan (192.168.1.35) [1025 ports]
+Discovered open port 502/tcp on 192.168.1.35
+Completed Connect Scan at 07:37, 6.01s elapsed (1025 total ports)
+Initiating Service scan at 07:37
+Scanning 1 service on sigenergy.lan (192.168.1.35)
+Stats: 0:00:33 elapsed; 1 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Completed Service scan at 07:40, 157.11s elapsed (1 service on 1 host)
+NSE: Script scanning 192.168.1.35.
+Initiating NSE at 07:40
+Completed NSE at 07:40, 14.09s elapsed
+Initiating NSE at 07:40
+Completed NSE at 07:40, 1.14s elapsed
+Initiating NSE at 07:40
+Completed NSE at 07:40, 0.00s elapsed
+Nmap scan report for sigenergy.lan (192.168.1.35)
+Host is up (0.065s latency).
+Not shown: 1024 closed tcp ports (conn-refused)
+PORT    STATE SERVICE VERSION
+502/tcp open  mbap?
+
+NSE: Script Post-scanning.
+Initiating NSE at 07:40
+Completed NSE at 07:40, 0.00s elapsed
+Initiating NSE at 07:40
+Completed NSE at 07:40, 0.00s elapsed
+Initiating NSE at 07:40
+Completed NSE at 07:40, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 2 IP addresses (1 host up) scanned in 180.12 seconds
+#+end_example
+
+...and from Home Assistant navigating to /Settings > Devices & Services > Add Integration > Sigenergy ESS/ the devices
+were correctly detected and I had listed...
+
++ Sigen Inverter (SigenStor EC 3.6 SP) - 75 entities
++ Sigen Inverted PV1 (PV String) - 5 entities
++ Sigen Inverted PV2 (PV String) - 5 entities
++ Sigen Plant (Energy Storage System) - 187 entities

@@ -12,7 +12,7 @@
 
 My OVH VPS runs [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch]] Linux and has more space than I use so I thought I would have a go at self-hosting Forgejo.
 
-The installation [[https://wiki.archlinux.org/title/Gitea][instructions]] are for Gitea but I simply substituted every instance of ~gitea~ for ~foregjo~. I opted
+The installation  are for Gitea but I simply substituted every instance of ~gitea~ for ~foregjo~. I opted
 for a MariaDB backend and setup a reverse proxy in [[id:3774439d-af75-453e-b3e9-9d578b6bec46][Nginx]] as per the instructions.
 
 ** Setting up MariaDB
@@ -221,6 +221,14 @@ sshd.service~).
 AcceptEnv GIT_PROTOCOL
 #+end_src
 
+I found that the ~forgejo~ account was by default "expired" and needed [[https://wiki.archlinux.org/title/Forgejo#Configure_SSH][remove the expiration]].
+
+#+begin_example
+chage -E -1 forgejo
+#+end_example
+
+Then enable ~UsePAM yes~ in the ~/etc/ssh/sshd_config~ (and restart the service).
+
 *** Non-default SSH Port
 
 If your system SSH daemon uses a non-standard port (i.e. something other than ~22~) then you will need to set the port
@@ -235,7 +243,7 @@ You will then find than the cloning instructions for adding an SSH remote are sl
 example below.
 
 #+begin_src bash
-git remote add forgejo ssh://forgejo@forgejo.your.domain:562/<user_account>/test.git
+git remote add forgejo ssh://forgejo@forgejo.your.domain:12345/<user_account>/test.git
 #+end_src
 
 ** GPG Keys

@@ -549,10 +549,9 @@ the symbolic links.
 ** ForgeJo
 
 I took detailed notes when setting up [[id:736537b3-75e0-4c24-9156-364937e0e8a2][Forgejo]] and basically had to work through those again. I found some problems with
-getting the database setup though.
+getting the database setup though and had to redo Mariadb install.
 
-#+begin_example
-#+end_example
+Useful references is [[https://wiki.archlinux.org/title/Gitea][instructions]] for Gittea (but change everything to ~forgejo~)
 
 ** DokuWiki
 
@@ -966,11 +965,47 @@ extension=zip
 
 ** MariaDB
 
+[[https://wiki.archlinux.org/title/MariaDB][MariaDb - ArchWiki]] has your back.
+
+#+begin_example
+pacman -Syu mariadb    # If not already installed
+mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+# Secure the installation this will
+#
+# 1. Set a root password
+# 2. Switch to Unix socket
+# 3. Remove anonymous users
+# 4. Disallow remote root login
+# 5. Remove the default test database
+mariadb-secure-insatllation
+#+end_example
+
+** OpenGist
+
+1. Reinstalled Arch package
+2. Copied ~/var/lib/opengist~ back (but removed ~./.opengist/log/opengist.log~)
+3. Service fails with...
+
+#+begin_example
+# opengist
+Opengist v1.11.1
+No YAML config file specified.
+No environment variables config specified.
+22:03:11 FTL internal/ssh/run.go:42 SSH: Could not setup host key error="exit status 1"
+#+end_example
 
 ** Logrotate
 
 I could do with keeping on top of log-files better and should use ~logrotate~ to do so.
 
++ Opengist ~/var/lib/opengist/.opengist/log/opengist.log~
+
 ** Onloc
 
 [[id:4458c388-b14c-4bda-aa60-02654bc237bd][onloc]] is a self-hosted device tracking and control system (its an alternative to [[id:5315e7ee-0ed9-4514-b1a9-0a03114d8191][OwnTracks]])
+
+** Iocaine
+
+Came across this article again and should deploy some of these strategies...
+
++ [[https://vulpinecitrus.info/blog/guarding-git-forge-ai-scrapers/][Guarding My Git Forge Against AI Scrapers - VulpineCitrus]]
