@@ -12,6 +12,7 @@ text files. There are diaries and agendas, literate programming, note organisati
 
 
 * Topics
+
 + [[id:fc9974d4-2a26-4bf7-9360-c828bfaeed1d][Agenda]]
 + [[id:6e75f9df-df3d-4402-b5ad-ed98d0834e08][Org Babel]]
 + [[id:136364e7-1a6d-4b28-b284-0e415b860699][Org-roam]]
@@ -19,6 +20,8 @@ text files. There are diaries and agendas, literate programming, note organisati
 + [[id:2b1518bf-c76c-4780-9274-41beb7e91cf0][Org Capture]]
 + [[id:2f353170-e0d3-400d-99a5-93295383435f][Zettel Notes]]
 + [[id:6902c5a0-e96d-4b02-89b9-e45036e5d3fd][Org SQL]]
++ [[id:73bf4813-c8a7-472b-aeaa-b0ddceb44cc9][Org Hugo]]
++ [[id:2530678f-bb04-4187-8a47-3e461a6092d4][Org Static Blog]]
 
 * Customisation
 

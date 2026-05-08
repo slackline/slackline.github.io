@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       73bf4813-c8a7-472b-aeaa-b0ddceb44cc9
+:END:
+#+TITLE: Org Hugo
+#+FILETAGS: :orgmode:blogging:hugo:literateprogramming:
+
+* Links
+
+** Examples
+
++ [[https://zzamboni.org/post/my-blogging-setup-with-emacs-org-mode-ox-hugo-hugo-gitlab-and-netlify/][My blogging setup with Emacs, Org mode, ox-hugo, Hugo, GitLab and Netlify · zzamboni.org]]

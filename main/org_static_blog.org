@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       2530678f-bb04-4187-8a47-3e461a6092d4
+:END:
+#+TITLE: Org Static Blog
+#+FILETAGS: :orgmode:literateprogramming:blog:
+
+[[https://github.com/bastibe/org-static-blog][org-static-blog]] is "/a static site generator using org-mode/".
+
+
+* Links
+
++ [[https://github.com/bastibe/org-static-blog][bastibe/org-static-blog: A static site generator using org-mode]]
