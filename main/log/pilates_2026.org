@@ -1,5 +1,6 @@
 ** 2026
 :LOGBOOK:
+CLOCK: [2026-05-05 Tue 18:15]--[2026-05-05 Tue 19:15] =>  1:00
 CLOCK: [2026-04-28 Tue 18:15]--[2026-04-28 Tue 19:15] =>  1:00
 CLOCK: [2026-04-21 Tue 18:15]--[2026-04-21 Tue 19:15] =>  1:00
 CLOCK: [2026-04-14 Tue 18:15]--[2026-04-14 Tue 19:15] =>  1:00
@@ -22,6 +23,10 @@ CLOCK: [2026-01-06 Tue 18:15]--[2026-01-06 Tue 19:15] =>  1:00
 #+CAPTION: Pilates Log 2026 (Notes from attending [[https://symmetrypilates.co.uk/][Symmetry Pilates]] with Sam Webster.)
 #+NAME: pilates-log-2024
 | Date                   | Notes                                                                          | Exercise(s) to practice                                                                                                                                                                                                                                                |
+|------------------------+--------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [2026-05-05 Tue 20:26] | Nice light session. Lots of work with ring.                                    | Roll backs with ring between ankles                                                                                                                                                                                                                                    |
+|                        |                                                                                | Fun all rolling from side to side, keep legs off floor when on side and front and lift into teaser when facing upwards.                                                                                                                                                |
+|                        |                                                                                | Myofascial release under ribs again, weird but works and doesn't hurt (indicates how much body fat I've been accruing though 😒)                                                                                                                                         |
 |------------------------+--------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [2026-04-28 Tue 20:15] | Nice session, only four in the class (Helen, Ruth and Jess)                    | Stir the hips both directions, stretch over and rotate to look at the floor with shoulders square/parallel                                                                                                                                                             |
 |                        | When curling up the correct position is...                                     | Weights for upper body, swing arms alternately up in front of body, increase pace. Arms up at side of body, bring in to chest out in front and above head, reverse.                                                                                                    |
