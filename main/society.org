@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       6225c615-171e-4d2b-8249-c1259de96ec5
+:END:
+#+TITLE: Society
+#+FILETAGS: :society:social:loss:
+
+A collection of links to blogs/articles about how society is changing in light of techno-capitalism which result in the
+loss of skills, focus and critical thinking in individuals to the detriment of society as a whole.
+
+* Links
+
++ [[https://www.theguardian.com/media/ng-interactive/2026/may/06/how-to-survive-the-information-crisis-we-once-talked-about-fake-news-now-reality-itself-feels-fake][How to survive the information crisis: ‘We once talked about fake news – now reality itself feels fake’ | Media | The Guardian]]
+
+** Computing
+
++ [[https://fireborn.mataroa.blog/blog/the-slow-death-of-the-power-user/][The Slow Death of the Power User — fireborn]]

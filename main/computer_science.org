@@ -15,3 +15,7 @@ This is the study and science of how the execution speed of code scales.
 ** Time Complexity
 
 + [[https://nedbatchelder.com/text/bigo.html][Big-O: How Code Slows as Data Grows | Ned Batchelder]]
+
+** Misc
+
++ [[https://fireborn.mataroa.blog/blog/the-slow-death-of-the-power-user/][The Slow Death of the Power User — fireborn]]

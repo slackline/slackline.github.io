@@ -27,6 +27,8 @@ A couple of lists of AI services to block area and adding them is easy.
 
 You're browser can reveal a lot about you, see  [[https://amiunique.org/fingerprint][My Fingerprint- Am I Unique ?]]
 
+Similar information, albeit less detailed from [[https://sinceyouarrived.world/taken][taken. — Since You Arrived Vol. IV]]
+
 * Links
 
 + [[https://takebackctrl.org/][Take Back CTRL]]

@@ -6,6 +6,7 @@
 #+TITLE: Politics
 #+FILETAGS: :politics:
 
+Politics governs how
 * UK
 
 ** [[https://timetoassemble.org/][House of the People]]

@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       4ed72a10-cfa5-427e-a5ee-52cbf9725b11
+:mtime:
+:ctime:
+:END:
+#+TITLE: Blogs
+#+DATE:  <2026-05-09 Sat 22:07>
+#+FILETAGS: :blog:blogging:web:internet:
+
+I blog sporadically. I started using [[id:251b3ae4-4a5c-4c44-909a-dcbc0aef4b45][Quarto]] as it had simple [[id:25c4a623-fc4c-4902-8f28-f54949e26299][blog support]] and supported [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate Programming]] in [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]] and
+[[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]].
+
++ [[id:2530678f-bb04-4187-8a47-3e461a6092d4][Org Static Blog]]
++ [[https://github.com/mataroablog/mataroa][Mataroa]]
+
+* Links

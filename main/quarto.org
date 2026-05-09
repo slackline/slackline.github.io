@@ -19,6 +19,7 @@ document.
 :ctime:    20221228151331 20230103103308
 :END:
 
+
 Blogging is simple with Quarto. I've written my own which you can view at [[https://ns-rse.github.io/][ns-rse.github.io]] ([[https://github.com/ns-rse/ns-rse.github.io][repo]]). The ~index.qmd~
 should only include the [[id:fac7a695-9bdf-4a79-9ec3-9945e9a0cba4][YAML]] header as the content is automatically generated from the posts.
 
