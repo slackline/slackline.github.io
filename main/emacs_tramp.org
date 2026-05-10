@@ -79,3 +79,4 @@ variable ~tramp-terminal-type~ to ~tramp~ and use that in the above snippet too.
 ** Blogs
 
 + [[https://coredumped.dev/2025/06/18/making-tramp-go-brrrr./][Making TRAMP go Brrrr…. • Core Dumped]]
++ [[https://utcc.utoronto.ca/~cks/space/blog/programming/EmacsTrampNotes][Notes on using GNU Emacs' Tramp system in an unusual shell environment]]
