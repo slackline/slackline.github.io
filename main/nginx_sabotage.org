@@ -51,6 +51,11 @@ sites\]\]][Algorithmic sabotage for static sites]]. It uses the [[https://marcus
 
 A great [[https://vulpinecitrus.info/blog/guarding-git-forge-ai-scrapers/][article]] ([[https://web.archive.org/web/20251212132351/https://vulpinecitrus.info/blog/guarding-git-forge-ai-scrapers/][archive copy]]) showing how to use [[https://iocaine.madhouse-project.org/documentation/3/][Iocaine3]] to serve garbage to crawlers using Nginx for reverse proxying.
 
+* Science is Poetry
+
+A [[https://julianoliver.com/projects/science-is-poetry/][project by Julian Over]] to provide random nonsense to AI web-crawlers. I need to work out how to add a link to this in
+the header of all self-hosted services.
+
 * Poison Fountain
 
 [[https://rnsaffn.com/poison3/][Poison Fountain]] is another attempt to feed AI web-crawlers a bunch of junk (see also [[https://www.theregister.com/2026/01/11/industry_insiders_seek_to_poison/][Register article]]).
@@ -59,9 +64,10 @@ A great [[https://vulpinecitrus.info/blog/guarding-git-forge-ai-scrapers/][artic
 * ~human.json~
 
 [[https://codeberg.org/robida/human.json][human.json]] is a meta-data specification for declaring your site is made by humans. Drop a simple ~human.json~ into your
-website, link to it from a page and you're done. You can "vouch" for other websites which you know are also made by
-humans. Simple, neat idea.
+website, link to it from a page and you're done. You can "vouch" for//algorithmic-sabotage.gitlab.io/asrg/sabot-in-the-age-of-ai/][Sabot in the Age of AI]]
++ [[https://julianoliver.com/projects/science-is-poetry/][julian oliver/projects/science-is-poetry/]] ([[https://mastodon.social/@JulianOliver/116391284280771352][thread]] )
 
-* Links
+** Research
 
 + [[https://algorithmic-sabotage.gitlab.io/asrg/sabot-in-the-age-of-ai/][Sabot in the Age of AI]]
++ [[https://arxiv.org/abs/2510.07192][[2510.07192] Poisoning Attacks on LLMs Require a Near-constant Number of Poison Samples]]
