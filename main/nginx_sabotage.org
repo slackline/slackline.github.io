@@ -64,10 +64,15 @@ the header of all self-hosted services.
 * ~human.json~
 
 [[https://codeberg.org/robida/human.json][human.json]] is a meta-data specification for declaring your site is made by humans. Drop a simple ~human.json~ into your
-website, link to it from a page and you're done. You can "vouch" for//algorithmic-sabotage.gitlab.io/asrg/sabot-in-the-age-of-ai/][Sabot in the Age of AI]]
+website, link to it from a page and you're done. You can "vouch" for other websites which you know are also made by
+humans. Simple, neat idea.
+
+* Links
+
++ [[https://algorithmic-sabotage.gitlab.io/asrg/sabot-in-the-age-of-ai/][Sabot in the Age of AI]]
 + [[https://julianoliver.com/projects/science-is-poetry/][julian oliver/projects/science-is-poetry/]] ([[https://mastodon.social/@JulianOliver/116391284280771352][thread]] )
+
 
 ** Research
 
-+ [[https://algorithmic-sabotage.gitlab.io/asrg/sabot-in-the-age-of-ai/][Sabot in the Age of AI]]
 + [[https://arxiv.org/abs/2510.07192][[2510.07192] Poisoning Attacks on LLMs Require a Near-constant Number of Poison Samples]]
