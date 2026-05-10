@@ -8,7 +8,27 @@
 
 * Sauces
 
-+ [[https://www.bbcgoodfood.com/recipes/lentil-ragu][Lentil Ragu]]
+** [[https://www.bbcgoodfood.com/recipes/lentil-ragu][Lentil Ragu]]
+
+*** Ingredients
++ 3tbsp olive oil
++ 2 onions finely chopped
++ 3 carrots finely chopped
++ 3 celery sticks finely chopped
++ 3 garlic cloves crushed
++ 500g dried red lentils
++ 2 x 400g chopped tomatoes
++ tomatoe puree
++ 2tsp oregano
++ 2tsp thyme
++ 3 bay leaves
++ 1L vegetable stock
+
+*** Recipe
+
++ Heat oil in large pan add the onions, carrots, celery and garlic, soften for 15-20 minutes
++ Stir in lentils, tinned tomatoes, puree, herbs and stock
++ Simmer for 40-50 minutes until lentils are tender, add water if required
 
 * Pasta Dishes
 * Pizza
