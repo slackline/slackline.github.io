@@ -20,6 +20,14 @@ Grab some summary information about a user using the [[https://github.com/ehmatt
 uvx gh-profiler ns-rse
 #+end_example
 
+* My Repos
+
+ [[https://myrepos.branchable.com/][myrepos]] is a tool for managing multiple repositories.
+
+* Gitopolis
+
+[[https://github.com/timabell/gitopolis][gitopolis]] is another tool, written in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]], for managing multiple repositories.
+
 * Links
 
 + [[https://tissue.systemreboot.net/][tissue]] an issue tracker and project information management system built on plain text files and Git.
@@ -36,3 +44,4 @@ uvx gh-profiler ns-rse
 + [[https://github.com/chmouel/git-branches][chmouel/git-branches: select git branches with style]]
 + [[https://github.com/dinakars777/git-time-machine][dinakars777/git-time-machine: 🕰️ Undo ANY git mistake in 3 seconds with a beautiful TUI]]
 + [[https://github.com/ehmatthes/gh-profiler][ehmatthes/gh-profiler]]
++ [[https://github.com/timabell/gitopolis][timabell/gitopolis]]
