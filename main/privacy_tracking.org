@@ -29,6 +29,15 @@ You're browser can reveal a lot about you, see  [[https://amiunique.org/fingerpr
 
 Similar information, albeit less detailed from [[https://sinceyouarrived.world/taken][taken. — Since You Arrived Vol. IV]]
 
+* Protection
+
+** Android
+
+*** Fauxx
+
+[[https://github.com/digital-grease/fauxx][Fauxx]] poisons data brokers and profilers by "/generating continuous, plausible, off-demograhpic synthetic activity from
+your device/".
+
 * Links
 
 + [[https://takebackctrl.org/][Take Back CTRL]]
