@@ -85,6 +85,7 @@ be geographically isolated, e.g. [[https://www.panoramax.wales/][panoramax.wales
 + [[https://scottishcastles.xyz/][Scottishcastles.xyz]]
 + [[https://streetcritic.org/?c=8.684966%2C50.110573&z=14][StreetCritic]] - cycling and pedestrian ratings of infrastructure.
 + [[https://openclimbing.org/#7/53.4808/-2.24263][openclimbing.org | Climbing guide & topos]]
++ [[https://postboxmap.co.uk/][PostboxMap.co.uk]]
 
 *** Articles
 :PROPERTIES:
