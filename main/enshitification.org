@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       37edd337-e171-4f76-b3f6-f781c304e3f1
+:END:
+#+TITLE: Enshitification
+#+FILETAGS: :enshitification:software:services:internet:
+
+Coined by [[https://pluralistic.net/][Cory Doctrow]] it refers to the degradtion of services over time as companies start with a decent product and
+then have to repay their investors and turn a profit, ignoring the users who made them successful in the first place.
+
+* Links
+
++ [[https://tzovar.as/open-science-beyond-licenses/][Open science and commoning beyond licensing: Deteriorating digital commons in the absence of collective governance]] by
+  Bastian Greshake Tzovaras

@@ -9,6 +9,10 @@
 There is a /lot/ out there. If I use something and have found the time to write about the following links take you to
 that page, if not they take you to the projects site.
 
+FOSS software doesn't suffer from [[id:37edd337-e171-4f76-b3f6-f781c304e3f1][enshitification]] quite as badly as private companies but is not immune to the slop of
+AI bullshit.
+
+
 There is also the issue of which [[id:143e393e-ab25-48ea-9aa5-908a68965839][Cloud Services]] we as individuals and our government services/institutions should use.
 
 * OpenSource Software
@@ -155,4 +159,4 @@ practical tools and approaches for evaluating funding outcomes.
 ** FOSDEM Talks
 
 + [[https://fosdem.org/2026/schedule/event/SUVS7G-lets_end_open_source_together_with_this_one_simple_trick/][FOSDEM 2026 - Let's end open source together with this one simple trick]]
-  + [[https://malus.sh/][MALUS - Clean Room as a Service | Liberation from Open Source Attribution]]
++ [[https://malus.sh/][MALUS - Clean Room as a Service | Liberation from Open Source Attribution]]
