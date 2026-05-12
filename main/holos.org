@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       c5d6a74e-889b-42ae-a163-0387f4a42035
+:END:
+#+TITLE: Holos
+#+FILETAGS: :fediverse:mastodon:holos:
+
+[[https://holos.social/][Holos]] is an Android application for running your on ActivityPub server to the [[id:8178219c-ef79-4b59-ad51-e4204a8f369c][Fediverse]]. It uses a relay as an
+intermediary so that interactions are stored when your device isn't online.
+
+
+* Links
+
++ [[https://holos.social/][holos.social]] homepage for the project.
