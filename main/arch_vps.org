@@ -1010,6 +1010,8 @@ No environment variables config specified.
 22:03:11 FTL internal/ssh/run.go:42 SSH: Could not setup host key error="exit status 1"
 #+end_example
 
+In the end I discovered it was a permission problem on the target directory ~/var/lib/opengist/~.
+
 ** Logrotate
 
 I could do with keeping on top of log-files better and should use ~logrotate~ to do so.
@@ -1029,6 +1031,20 @@ Configuration is via ~/etc/logrotate.conf~ and ~/etc/logrotate.d/*~ (which is re
 #+begin_example
 pacman -Syu fail2ban
 #+end_example
+
+Configuration...
+
+#+begin_example
+[DEFAULT]
+destemail = your@email.here
+sendername = Fail2Ban
+
+[sshd]
+enabled = true
+port = ###
+mode = aggressive
+#+end_example
+
 ** Onloc
 
 [[id:4458c388-b14c-4bda-aa60-02654bc237bd][onloc]] is a self-hosted device tracking and control system (its an alternative to [[id:5315e7ee-0ed9-4514-b1a9-0a03114d8191][OwnTracks]])
