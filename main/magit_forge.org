@@ -14,3 +14,18 @@ Once you've setup and configured Forge you can pull all issues and pull requests
 buffer use ~f n~. You can then create issues when the cursor is on the "~Issues~" section with ~N c i~ or similarly pull
 requests (~N c p~). You can comment and edit existing topics, whether that is Issues or Pull Requests by hitting
 ~Return~ to view it and ~C-c C-e~ to edit a given section when the cursor is over that section.
+
+* Troubleshooting
+
+** Creating Pull Requests
+
+I found I could push and pull a [[id:ddcfed69-2ba5-442a-99b4-eaa5c7a9fe40][Git Worktrees]] from Magit but the status buffer always showed there was no upstream and I
+couldn't create pull-requests. I asked on the [[https://github.com/magit/forge/discussions/849][Forge discussions]] and the amazing @tarsius (Jonas Bernoulli) worked out
+that I was missing a ~fetch~ under ~remote "origin"~ section of my configuration.
+
+#+begin_example
+[remote "origin"]
+    url = git@github.com:<organisation>/repo.git
+	fetch = +refs/heads/*:refs/remotes/origin/*    # This was missing from my config
+	fetch = +refs/pull/*/head:refs/pullreqs/*
+#+end_example
