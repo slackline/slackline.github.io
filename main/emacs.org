@@ -161,6 +161,10 @@ with ~eselect emacs~.
 + [[https://elpa.nongnu.org/][NonGNU Emacs Lisp Package Archive]]
 
 
+** Compiling
+
++ [[https://www.jamescherti.com/compiling-emacs/][A Technical Guide to Compiling Emacs for Performance on Linux and Unix systems | James Cherti]]
+
 ** Community
 + [[https://m-x-research.github.io/][M-x Research]] - RSEmacs group.
 
