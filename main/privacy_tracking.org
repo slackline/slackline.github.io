@@ -29,6 +29,10 @@ You're browser can reveal a lot about you, see  [[https://amiunique.org/fingerpr
 
 Similar information, albeit less detailed from [[https://sinceyouarrived.world/taken][taken. — Since You Arrived Vol. IV]]
 
+** Google Tracking
+
+Useful video from Proton [[https://www.youtube.com/watch?v=WJ8clVdaRKA][How Google Tracks Everything You Do and How to Stop It]].
+
 * Protection
 
 ** Android
