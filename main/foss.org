@@ -112,6 +112,10 @@ practical tools and approaches for evaluating funding outcomes.
 + [[https://www.privacyguides.org/en/tools/][Ad-Free Privacy Tool/Service Recommendations - Privacy Guides]]
 + [[https://switching.software/][switching.software]] - Ethical, easy-to-use and privacy-conscious alternatives to well-known software
 
+** Maintenance
+
++ [[https://ossresistance.com/][OSSResistance]] - repair the FOSS tools you use at work on company time.
+
 ** Guides
 
 + [[https://opensource.guide/][Open Source Guides | Learn how to launch and grow your project.]]
