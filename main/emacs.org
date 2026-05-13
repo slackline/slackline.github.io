@@ -207,6 +207,7 @@ This guy does a lot of work with Emacs, makes nice packages and themes and does 
 + [[https://www.gnu.org/gnu/rms-lisp.html][My Lisp Experiences and the Development of GNU Emacs - Richard Stallman]]
 + [[https://github.com/pprevos/emacs-writing-studio/][emacs-writing-studio: Emacs configuration for authors who research, write and publish articles, books and websites.]]
 + [[https://martinfowler.com/articles/2024-emacs-completion.html][Improving my Emacs experience with completion]] - Martin Fowler
++ [[https://thanosapollo.org/posts/bzr-saga/][The Most Emacs Bzr Saga]]
 
 ** Packages
 
