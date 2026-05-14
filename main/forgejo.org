@@ -341,3 +341,7 @@ You can easily backup Forgejo to a zip using [[https://forgejo.org/docs/latest/a
 ** Miscellaneous
 
 + [[https://spiffyk.cz/blog/git-pandoc/][Diffing Word and Writer documents with Git – Oto Šťáva]]
+
+** Blogs
+
++ [[https://jorijn.com/en/blog/leaving-github-for-forgejo/][Leaving GitHub for ForgeJo]]

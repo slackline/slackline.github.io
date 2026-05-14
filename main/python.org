@@ -271,3 +271,7 @@ A good podcast is [[https://talkpython.fm/episodes/all][TalkPython]]
 ** GUIs
 
 + [[https://nicegui.io/][NiceGUI]]
+
+** Conferences
+
++ [[https://pythondeadlin.es/?sub=PY%2CSCIPY%2CDATA%2CWEB%2CBIZ%2CGEO%2CCAMP%2CDAY][Python Conference Deadlines | PythonDeadlin.es]]
