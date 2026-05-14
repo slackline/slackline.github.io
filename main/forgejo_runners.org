@@ -41,3 +41,4 @@ You then need to register runners.
 
 + [[https://jan.wildeboer.net/2024/08/Running-a-runner-codeberg/][Running a runner for Codeberg/Forgejo on RHEL9 as user]]
 + [[https://codeberg.org/whitequark/nixos-forgejo-actions-runner][whitequark/nixos-forgejo-actions-runner: NixOS configuration for turnkey deployment of Forgejo Actions runners - Codeberg.org]]
++ [[https://github.com/irfanhakim-as/homelab-wiki/blob/master/topics/forgejo.md#forgejo-runner][Notes on configuring ForgeJo Runner]]
