@@ -49,6 +49,7 @@ which are grouped into crags and areas.
 
 + [[https://web.archive.org/web/20220702102808/https://peakbouldering.info/][PeakBouldering.info]] (sadly no longer online this is an Internet Archive snapshot).
 + [[https://www.massonlees.co.uk/][Home | Masson Lees]]
++ [[https://www.sportclimbs.uk/peak/][SportClimbs.uk]] - Gary Gobson's site
 
 ***** Accommodation Options
 
@@ -57,6 +58,10 @@ which are grouped into crags and areas.
 + [[https://climbers-club.co.uk/huts/bob-downes][CC R O Downe's]]
 + [[https://derbyshirepennineclub.co.uk/hut/][Derbyshire and Pennine Club]]
 + [[https://thorpe-bunk.co.uk/][Thorpe Farm Bunkhouse]]
+
+**** Wales
+
++ [[https://www.martincrockerclimbing.com/downloads][Martin Crocker Climbing Topos]]
 
 ** Logging Gear
 
