@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       da447faa-9cec-4cbe-aff0-6469a980838c
+:END:
+#+TITLE: Netctl
+#+FILETAGS: :linux:systemd:networking:
+
+~netctl~ is a dedicated command for managing network devices, interfaces and services under [[id:9bc6a091-ed02-4423-b14a-d56f677c5cd0][Systemd]].

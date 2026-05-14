@@ -3,3 +3,7 @@
 :END:
 #+TITLE: Systemd
 #+FILETAGS: :linux:systemd:
+
++ [[id:651c3ce2-52cc-4840-b5fa-7e5fab36aab6][journalctl]]
++ [[id:da447faa-9cec-4cbe-aff0-6469a980838c][netctl]]
++ [[id:617c1f19-7616-4336-b868-45dfeac5d1d4][systemctl]]

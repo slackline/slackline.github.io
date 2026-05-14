@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       617c1f19-7616-4336-b868-45dfeac5d1d4
+:END:
+#+TITLE: Systemctl
+#+FILETAGS: :linux:systemd:
+
+~systemctl~ is the main command for managing services under [[id:9bc6a091-ed02-4423-b14a-d56f677c5cd0][Systemd]].

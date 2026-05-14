@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       651c3ce2-52cc-4840-b5fa-7e5fab36aab6
+:END:
+#+TITLE: Journalctl
+#+FILETAGS: :linux:systemd:logging:
+
+* Options
+
+** Current boot
+
+#+begin_example
+journalctl -b -0
+#+end_example
+
+** Last boot
+
+#+begin_example
+journalctl -b -1
+#+end_example
+
+** Time Window
+
+#+begin_example
+journactl --since="YYYY-MM-DD [hh:mm:ss]" --until="YYYY-MM-DD [hh:mm:ss]"
+#+end_example
+
+** Last ~n~ lines
+
+#+begin_example
+journalctl -n 100
+#+end_example
+
+** Monitor live errors
+
+#+begin_example
+journalctl -f -p err
+#+end_example
+
+** Specific service
+
+#+begin_example
+journalctl -u nginx.service
+#+end_example
