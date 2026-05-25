@@ -151,6 +151,7 @@ practical tools and approaches for evaluating funding outcomes.
 
 + [[https://chaoss.community/][CHAOSS]] - Community Health Analytics in Open Source Software
 + [[https://whodoesthe.dev/][Attributing Contributor Roles in Open Source Software]]
++ [[https://disjunctionsmag.com/articles/foss-contra-big-tech/][FOSS Contra Big Tech]]
 
 ** Environmental
 
