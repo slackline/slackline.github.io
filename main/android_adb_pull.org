@@ -35,3 +35,16 @@ Much easier to push multiple files
 #+begin_example sh
 adb push path\ to\ directory /storage/<dev>/target/path/.
 #+end_example
+
+* Trouble Shooting
+
+** ~operation not permitted~
+I encountered this on occasions when trying to use ~adb push~. One possible solution is to restart
+adb as ~root~
+
+#+begin_example
+adb root
+#+end_example
+
+This didn't seem to work when trying to push a directory with lots of files. I opted to zip the directory up and push
+the ~.zip~ which did work.
