@@ -33,6 +33,14 @@ which are grouped into crags and areas.
 + [[http://fontnbleau.blogspot.com/][fontNbleau]] app for Android
 + [[https://www.topobleau.com/index-en.html][TopoBleau]] app for iPhone.
 
+*** Italy
+
+**** [[id:01e69421-9ffa-495d-9ce6-62ef360b1041][Dolomites]]
+
++ [[https://www.ukclimbing.com/logbook/ticklists/classic_dolomite_climbs_-_kohlermemmel-1614][UKC Logbook - Classic Dolomite Climbs - Kohler/Memmel]]
+
+**** Sardinia
+
 *** Spain
 
 **** Picos de Europa

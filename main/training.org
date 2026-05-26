@@ -92,7 +92,8 @@ CLOSED: [2021-12-10 Fri 21:40]
 * Injuries
 
 Dedicated page on [[id:e72589de-6f14-45d5-96fc-6a2e61354b2f][Injuries]].
-* Climbing
+
+* Climbing (Training)
 :PROPERTIES:
 :ID:       63c286fc-5d2b-4c44-8069-1e2df0b57922
 :mtime:    20250201184340

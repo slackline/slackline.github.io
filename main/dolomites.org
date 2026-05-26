@@ -1,0 +1,57 @@
+:PROPERTIES:
+:ID:       01e69421-9ffa-495d-9ce6-62ef360b1041
+:END:
+#+TITLE: Dolomites
+#+FILETAGS: :climbing:rockclimbing:italy:dolomites:
+
+
+I love climbing in the Dolomites, it's my favourite place to climb and so far I've had fourt trips there, all with my
+good friend Ben.
+
+* 2011
+
+Met up with Dan to climb the Vinatzer route on Third Sella tower.
+
++ [[https://www.ukclimbing.com/logbook/crags/monte_popena_basso-9210/via_mazzorana-adler-99802][Via Mazzorana-Adler (*** IV), Monte Popena Basso]]
++ [[https://www.ukclimbing.com/logbook/crags/monte_popena_basso-9210/diedro_mazzorana-99805][Diedro Mazzorana (*** IV), Monte Popena Basso]]
++ [[https://www.ukclimbing.com/logbook/crags/cinque_torri-2131/via_del_diedro_-_torre_del_barancio_summit-100233][Via del Diedro (*** IV+), Torre del Barancio, Cinque Torre]]
++ [[https://www.ukclimbing.com/logbook/crags/col_dei_bos-3177/alvera-134386][Alvera (** V+), Col dei Bos, Falzarego Pass]]
++ [[https://www.ukclimbing.com/logbook/crags/sella_towers-2631/tissi-68906][Tissi (* VI+), First Sella Tower, Sella Pass]]
++ [[https://www.ukclimbing.com/logbook/crags/sella_towers-2631/vinatzer-68856][Vinatzer (*** V+), Third Sella Tower, Sella Pass]]
++ [[https://www.ukclimbing.com/logbook/crags/civetta_group-10503/south-west_arete-185045][South-West Arete (*** V+), Torre Venezia, Civetta]]
+
+* 2013
+
+Drove down with Chris as well and Owen met us. I fell off downclimbing the first pitch of the Messner (*** VI) route on
+the second Sella tower and fractured my heel, forcing rest, missing out on the route, but after a couple of days just
+got on with climbing.
+
++ [[https://www.ukclimbing.com/logbook/crags/piz_ciavazes-3948/little_micheluzzi-69381][Little Micheluzzi (*** V-), Piz Ciavazes, Sella Pass]]
++ [[https://www.ukclimbing.com/logbook/crags/piz_ciavazes-3948/rossi-162215][Rossi (** IV), Piz Ciavazes, Sella Pass]]
++ [[https://www.ukclimbing.com/logbook/crags/piz_ciavazes-3948/south-west_diedre_-_vinatzer-106701][South-West Diedre/Vinatzer (TD ***), Piz Ciavazes, Sella Pass]]
++ [[https://www.ukclimbing.com/logbook/crags/brenta_group-3414/south-east_face_fox-stenico-268495][Fox-Stenico (*** VI), Cima D'Ambiez, Brenta]]
++ [[https://www.ukclimbing.com/logbook/crags/brenta_group-3414/east_diedre_diedro_armani-268496][East Diedre (*** V-), Torre D'Ambiez, Brenta]]
+
+* 2016
+
+Brilliant trip, our hardest routes and first visit to the Pale region which is amazing. Bit of an epic descending
+Frisch/Corradini after dark but rest and a walk up to the Pradidali hut and the brilliant Fissure Buhl was a great
+finish to the trip.
+
++ [[https://www.ukclimbing.com/logbook/crags/lagazuoi_piccolo-3180/ardizzon-336410][Ardizzon (** V-), Lagazuoi Piccolo, Falzarego Pass]]
++ [[https://www.ukclimbing.com/logbook/crags/falzarego_towers-3178/dibona-136298][Dibona (** V+), Falzarego Towers]]
++ [[https://www.ukclimbing.com/logbook/crags/cinque_torri-2131/via_olga-37846][Via Olga (*** V+), Cinque Torre]]
++ [[https://www.ukclimbing.com/logbook/crags/cinque_torri-2131/finlandia-37827][Via Finlandia (*** VI+), Cinque Torre]]
++ [[https://www.ukclimbing.com/logbook/crags/val_canali-2793/pala_del_rifugio_nw_face_frischcorradini-103241][Frisch/Corradini (*** V+), Pala del Rifugio, Pale]]
++ [[https://www.ukclimbing.com/logbook/crags/cima_canali-23157/buhlriss-418292][Fissure Buhl/Buhlriss (*** TD-), Cima Canali, Pale]]
++ [[https://www.ukclimbing.com/logbook/crags/cima_pradidali-19648/via_franceschini-430389][Via Franceschini (V), Cima Pradidali, Pale]]
+
+* 2018
+
+Short trip and worst weather.
+
++ [[https://www.ukclimbing.com/logbook/crags/torre_exner-17460/brigata_tridentina_vf-42089][Brigata Tridentina (Via Ferrata) ***, Torre Exner, Gardina Pass]]
++ [[https://www.ukclimbing.com/logbook/crags/sas_ciampac-2648/adangold_south_face-42238][Old South Face (*** V) Sas Ciampac, Gardina Pass]]
++ [[https://www.ukclimbing.com/logbook/crags/vajolet_towers-21057/steger_direct-160702][Steger Direct (*** VI), Vajolet Towers, Rosengarten]]
++ [[https://www.ukclimbing.com/logbook/crags/vajolet_towers-21057/piaz_aretedelagokante-113862][Piaz Arete (*** IV+), Vajolet Towers, Rosengarten]]
++ [[https://www.ukclimbing.com/logbook/crags/punta_emma-21055/steger-171440][Steger (*** V+), Punta Emma]]
