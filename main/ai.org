@@ -15,6 +15,7 @@ possible to define whether anything "artificial" can mimic it.
 + [[id:6409f972-f823-4e30-82bf-b4bea00164aa][Intelligence]]
 + [[id:87301ef3-87da-4826-8862-533bdb0052ac][Environment]]
 + [[id:7a9deb85-fb4d-4d18-b2be-ed8048a5a1d4][Critique]]
++ [[id:02c4608c-2d41-4233-adb2-c59e48eb2da5][Patterns]]
 + [[id:95952efd-b152-4d2b-9323-fabaada84fc3][Retractions]]
 + [[id:2edc9393-31c6-404f-8d73-bb364c0cd461][Natural Language Processing]]
 + [[id:761dfe8a-b4e3-440a-af4c-157196cefa7c][Local LLMs]]

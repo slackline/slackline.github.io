@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       02c4608c-2d41-4233-adb2-c59e48eb2da5
+:END:
+#+TITLE: AI Patterns
+#+FILETAGS: :ai:
+
+Large language models leave signatures which indicate their origin. These are often subtle but help one identify pieces
+that were written by machines.
+
+
+* Links
+
++ [[https://www.theringer.com/2025/08/20/pop-culture/em-dash-use-ai-artificial-intelligence-chatgpt-google-gemini][Stop AI-Shaming Our Precious, Kindly Em Dashes—Please - The Ringer]]
++ [[https://mastodon.social/@JulianOliver/116639567624572596][Mastodon thread with examples]]
