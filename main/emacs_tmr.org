@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       c3cc13b5-753a-4aee-b22e-e373d65e86e8
+:END:
+#+TITLE: Emacs tmr
+#+FILETAGS: :emacs:prot:health:
+
+[[https://protesilaos.com/emacs/tmr][TMR May Ring (~tmr~)]] by Protesilaos is a neat little package to set timers/reminders
+
+* Links
+
++ [[https://protesilaos.com/emacs/tmr][TMR May Ring (tmr) | Protesilaos]]
++ [[https://github.com/protesilaos/tmr/][protesilaos/tmr: Emacs package to set timers]]
+
+** Related
+
++ [[https://entracte.drmowinckels.io/][Entracte]]

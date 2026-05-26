@@ -58,6 +58,7 @@ getting started [[id:36a83dd6-7535-43a9-9b68-15dc135c86fd][Emacs Getting Started
 + [[id:9bc4e3ad-1d0e-49a0-a6f5-932679ab8c4e][Tabs]]
 + [[id:a8c134c6-bb0f-408d-96ee-48b02da8cffe][Templates]]
 + [[id:cf1405ab-6d1d-4d55-92b7-9271773c499d][Themes and Appearance]]
++ [[id:c3cc13b5-753a-4aee-b22e-e373d65e86e8][tmr]]
 + [[id:b9961a9e-e833-4160-aa8f-1c69b9cbb397][TRAMP]]
 + [[id:d6626ec2-1e95-4d42-b06e-ae45268f2b58][Transient]]
 + [[id:3070e6ed-1788-44ff-8498-8af6c84f588f][Tree-Sitter]]
