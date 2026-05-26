@@ -15,16 +15,18 @@ It is beneficial to you, your future self and others to use a consistent directo
 package for that provides a sensible structure and creates it for you is [[https://drivendata.github.io/cookiecutter-data-science/][Cookiecutter]].
 
 * Packages
+
 ** Data Analysis
 
 + [[id:d7b0fb90-d668-4e31-bc2d-305f6ee14fc9][NumPy]].
 + Pandas
-+ Scikit-Learn
-+ Statsmodels
-+ [[https://docs.profiling.ydata.ai/latest/][ydata-profiling]] - takes the hard work out of a lot of common summarisation tasks.
 + Polars
-+ [[id:1d423396-546f-4aaf-9927-6002ccca4530][skforecast]]
 + [[id:b7a80c44-985d-4fb8-97ed-2c07bf52799e][Pointblank]]
++ Scikit-Learn
++ [[id:1d423396-546f-4aaf-9927-6002ccca4530][skforecast]]
++ Statsmodels
++ [[id:d80d2dbb-0b22-4960-b882-cc6a2d4a29a3][Test Driven Data Analysis]]
++ [[https://docs.profiling.ydata.ai/latest/][ydata-profiling]] - takes the hard work out of a lot of common summarisation tasks.
 
 ** Visualisation
 

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       d80d2dbb-0b22-4960-b882-cc6a2d4a29a3
+:END:
+#+TITLE: Test Drive Data Analysis
+#+FILETAGS: :python:tdd:dataanalysis:statistics:machinelearning:reproducibility:
+
+* Links
+
++ [[https://book.tdda.info/book/index.html][Test-Driven Data Analysis]]
++ [[https://github.com/tdda/tdda][~tdda~]] Python package to accompany the book
