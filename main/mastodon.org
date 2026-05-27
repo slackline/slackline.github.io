@@ -13,6 +13,7 @@ Mastodon is federated software and part of the [[id:8178219c-ef79-4b59-ad51-e420
 + [[id:6c59d64a-af0e-446f-a81c-b6fed29bca51][Tips]]
 + [[id:9aeca9f3-5ff2-4ff3-90f8-6bd1f6d7bab0][Hosting]]
 + [[id:314efbff-60a0-4898-bcfa-e341deec9bb9][Lists]]
++ [[id:4c0264b9-31ae-44a7-b467-eff5189510bd][Mastodon Emacs Academics]]
 + [[id:0a2a0723-3be7-4b78-8899-0e5c1752ab50][Unfollowed]] a list of accounts I've unfollowed.
 
 * Follow Button

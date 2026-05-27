@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       4c0264b9-31ae-44a7-b467-eff5189510bd
+:END:
+#+TITLE: Mastodon Emacs Academics
+#+FILETAGS: :mastodon:emacs:academics:
+
+A list of academic [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] users on [[id:0a7fbe90-1f6e-4a38-a0c8-b378b1893f33][Mastodon]]
+
++ [[https://fediscience.org/@jameshowell][@jameshowell@fediscience.org]]
++ [[https://toot.aquilenet.fr/@rougier][@rougier@toot.aquilenet.fr]]
++ [[https://bitbang.social/@profoundlynerdy][@profoundlynerdy@bitbang.social]]
++ [[https://mastodon.social/@kjhealy][@kjhealy@mastodon.social]]
++ [[https://fediscience.org/@ericsfraga][@ericsfraga@fediscience.org]]
++ [[https://zirk.us/@randyridenour][@randyridenour@zirk.us]]
++ [[https://mastodon.acm.org/@zamansky][@zamansky@mastodon.acm.org]]
++ [[https://mathstodon.xyz/@oantolin][@oantolin@mathstodon.xyz]]
