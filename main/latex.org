@@ -32,6 +32,8 @@ on the fly.
 ** BibTeX
 
 + [[https://larsgw.blogspot.com/2024/03/including-orcid-identifiers-in-biblatex.html][Including ORCID identifiers in BibLaTeX (and using them)]]
++ [[https://www.softwareheritage.org/2020/05/26/citing-software-with-style/][Citing software with style - Software
+  Heritage]]
 
 ** Papers
 

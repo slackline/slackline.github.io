@@ -78,6 +78,10 @@ Donate your CPU/GPU/RAM (and electricity) to distributed computing projects to r
 + [[https://github.com/fair-software/howfairis][fair-software/howfairis]] Command line tool to analyze a GitHub or GitLab repository's compliance with the
   fair-software.eu recommendations
 
+** Project Management
+
++ [[https://third-bit.com/mrsp/#acknowledgments][Managing Research Software Projects]]
+
 ** Funding
 
 + [[https://www.researchsoft.org/funding-opportunities/][Funding Opportunities · Research Software Alliance]]
