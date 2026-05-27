@@ -1451,6 +1451,10 @@ A good book from Vertebrate publishing. I've collated most of the bibliography i
 These are now under their own page at [[id:e72589de-6f14-45d5-96fc-6a2e61354b2f][injuries]].
 
 ** Running
+
++ <2026-05-27 Wed>
+  [[https://theconversation.com/jeffing-how-this-run-walk-method-could-help-you-train-for-a-marathon-254837][Jeffing:
+  how this run-walk method could help you train for a marathon]]
 + <2026-04-11 Sat> [[https://timharford.com/2026/02/without-my-fitness-tracker-id-never-have-run-so-far-or-behaved-so-weirdly/][Without my fitness tracker I’d never have run so far. Or behaved so weirdly | Tim Harford]]
 + <2024-04-29 Mon> [[https://www.theguardian.com/lifeandstyle/2024/apr/29/dont-push-into-pain-how-to-rescue-your-knees-from-everything-from-torn-ligaments-to-injured-tendons][‘Don’t push into pain!’ How to rescue your knees from everything from torn ligaments to injured tendons]]
 + <2022-06-21 Tue> [[https://getpocket.com/explore/item/the-case-for-running-lower-mileage-to-avoid-overtraining][The Case for Running Lower Mileage to Avoid Overtraining]]
@@ -1463,6 +1467,7 @@ These are now under their own page at [[id:e72589de-6f14-45d5-96fc-6a2e61354b2f]
 + <2021-05-03 Mon> [[https://www.theguardian.com/lifeandstyle/2021/may/03/sick-of-the-same-old-route-14-fabulous-ways-to-get-out-of-your-running-rut][Sick of the same old route? 14 fabulous ways to get out of your running rut]]
 + <2020-12-16 Wed> [[https://www.irishtimes.com/news/science/evolved-to-run-but-not-to-exercise-1.4412604][Evolved to run – but not to exercise]]
 + [[https://www.ukclimbing.com/articles/features/more_than_a_font_rest_day_trois_pignons_and_the_25_bosses-16345][UKC Articles - FEATURE: More Than a Font Rest Day: Trois Pignons and the 25 Bosses]]
+
 ** Calisthenics
 *** General
 + [[https://www.nytimes.com/2020/10/10/at-home/exercises-for-better-sleep.html][Exercises for Better Sleep]]
@@ -1477,6 +1482,7 @@ These are now under their own page at [[id:e72589de-6f14-45d5-96fc-6a2e61354b2f]
 + [[https://drive.google.com/file/d/1IdrvTC4IqJ4Wn4GIgOWWncHhSstUoTrL/view][Reddit BodyWeightFitness : Recommended Routine CheatSheat]]
 + [[https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine][Reddit BodyWeightFitness : Recommended Routine Full Description]]
 *** Stretching
++ [[https://theconversation.com/even-top-athletes-skip-stretching-what-amateurs-can-learn-from-the-elites-who-struggle-with-recovery-routines-280328][Even top athletes skip stretching – what amateurs can learn from the elites who struggle with recovery routines]]
 + [[https://www.precisionmovement.coach/shoulder-impingement-rehab/][Shoulder Impingement Rehab Guide - Precision Movement]]
 + [[https://getpocket.com/explore/item/9-stretches-to-relieve-lower-back-pain][9 Stretches to Relieve Lower Back Pain]]
 + [[https://www.stylist.co.uk/fitness-health/workouts/worlds-greatest-stretch/497840][The worlds greatest stretch: the one stretch you need to know]]
