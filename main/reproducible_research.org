@@ -68,6 +68,8 @@ and pulled from just like a Git repository.
 
 ** Articles
 
++ [[https://www.pnas.org/doi/10.1073/pnas.2524747123][AI-assisted teams outperform AI-led teams but not human-only teams in assessing research reproducibility in
+  quantitative social science | PNAS]]
 + [[https://www.nature.com/articles/d41586-023-01469-0][The sleight-of-hand trick that can simplify scientific computing]]
 + [[https://www.nature.com/articles/d41586-022-00563-z][Cut the tyranny of copy-and-paste with these coding tools]]
 
@@ -92,8 +94,9 @@ and pulled from just like a Git repository.
 + [[https://reproducible.nixos.org/][NixOS Reproducible Builds]]
 + [[https://guix.gnu.org/en/blog/][Adventures on the quest for long-term reproducible deployment]]
 
-** Miscellaneous
+** Reproducible Research Initiatives
 
++ [[https://www.i4replication.org/][Institute for Replication]]
 + [[https://realworlddatascience.net/][Real World Data Science]]
 + [[https://www.softwareheritage.org/][Software Heritage]] - archives software projects.
 + [[https://reproducible-builds.org/][Reproducible Builds]]  — a set of software development practices that create an independently-verifiable path from
