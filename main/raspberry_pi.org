@@ -21,6 +21,7 @@ Player Daemon]] which I can control from my phone using [[https://gitlab.com/gat
 
 + [[https://www.raspberrypi.com/][Raspberry Pi]]
 + [[https://shop.pimoroni.com/][Pimoroni: Raspberry Pi, Adafruit, micro:bit, and Arduino in the UK]]
++ [[https://raspberrytips.com/top-privacy-projects-raspberry-pi/][Top 15 “Privacy-First” Projects You Can Host on Raspberry Pi – RaspberryTips]]
 
 ** Monitoring
 

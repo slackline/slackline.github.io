@@ -1452,9 +1452,7 @@ These are now under their own page at [[id:e72589de-6f14-45d5-96fc-6a2e61354b2f]
 
 ** Running
 
-+ <2026-05-27 Wed>
-  [[https://theconversation.com/jeffing-how-this-run-walk-method-could-help-you-train-for-a-marathon-254837][Jeffing:
-  how this run-walk method could help you train for a marathon]]
++ <2026-05-27 Wed> [[https://theconversation.com/jeffing-how-this-run-walk-method-could-help-you-train-for-a-marathon-254837][Jeffing : how this run-walk method could help you train for a marathon]]
 + <2026-04-11 Sat> [[https://timharford.com/2026/02/without-my-fitness-tracker-id-never-have-run-so-far-or-behaved-so-weirdly/][Without my fitness tracker I’d never have run so far. Or behaved so weirdly | Tim Harford]]
 + <2024-04-29 Mon> [[https://www.theguardian.com/lifeandstyle/2024/apr/29/dont-push-into-pain-how-to-rescue-your-knees-from-everything-from-torn-ligaments-to-injured-tendons][‘Don’t push into pain!’ How to rescue your knees from everything from torn ligaments to injured tendons]]
 + <2022-06-21 Tue> [[https://getpocket.com/explore/item/the-case-for-running-lower-mileage-to-avoid-overtraining][The Case for Running Lower Mileage to Avoid Overtraining]]
@@ -1470,6 +1468,7 @@ These are now under their own page at [[id:e72589de-6f14-45d5-96fc-6a2e61354b2f]
 
 ** Calisthenics
 *** General
+
 + [[https://www.nytimes.com/2020/10/10/at-home/exercises-for-better-sleep.html][Exercises for Better Sleep]]
 + [[https://musclewiki.com/][MuscleWiki]]
 + [[https://www.theguardian.com/lifeandstyle/2024/feb/05/touch-your-toes-six-fast-easy-ways-to-improve-your-mobility-and-live-a-longer-life][Touch your toes! Six fast, easy ways to improve your mobility – and live a longer life]]
@@ -1477,10 +1476,12 @@ These are now under their own page at [[id:e72589de-6f14-45d5-96fc-6a2e61354b2f]
 + [[https://getpocket.com/explore/item/add-this-daily-ab-workout-to-your-training-routine][Add This Daily Ab Workout to Your Training Routine]]
 
 *** Recommended Routine
+
 + [[https://rr.coach/#/][Recommended Routine (RR) Coach]]
 + [[https://www.youtube.com/watch?v=8Z96BBDtPPU][Reddit BodyWeightFitness : Recommended Routine Video]]
 + [[https://drive.google.com/file/d/1IdrvTC4IqJ4Wn4GIgOWWncHhSstUoTrL/view][Reddit BodyWeightFitness : Recommended Routine CheatSheat]]
 + [[https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine][Reddit BodyWeightFitness : Recommended Routine Full Description]]
+
 *** Stretching
 + [[https://theconversation.com/even-top-athletes-skip-stretching-what-amateurs-can-learn-from-the-elites-who-struggle-with-recovery-routines-280328][Even top athletes skip stretching – what amateurs can learn from the elites who struggle with recovery routines]]
 + [[https://www.precisionmovement.coach/shoulder-impingement-rehab/][Shoulder Impingement Rehab Guide - Precision Movement]]
@@ -1512,6 +1513,7 @@ These are now under their own page at [[id:e72589de-6f14-45d5-96fc-6a2e61354b2f]
 + [[https://www.outdoorswimmingsociety.com/][Outdoor Swimming Society]]
 + [[https://www.outdoorswimmingsociety.com/sixteen-reasons-reservoirs/][16 reasons for swimming access in reservoirs – Outdoor Swimming Society Outdo...]]
 ** Research
+
 + [[https://sportsmedicine-open.springeropen.com/articles/10.1186/s40798-024-00793-7][Effects of Different Loading Programs on Finger Strength in Rock Climbers | Sports Medicine - Open | Full Text]]
 + [[https://www.sciencedirect.com/science/article/pii/S2095254623001187?via%3Dihub][Sport and exercise during viral acute respiratory illness—Time to revisit - ScienceDirect]]
 + <2023-10-10 Tue> [[https://journals.physiology.org/doi/full/10.1152/japplphysiol.00106.2022][Walking or body weight squat “activity snacks” increase dietary amino acid utilization for myofibrillar protein synthesis during prolonged sitting | Journal of Applied Physiology]]

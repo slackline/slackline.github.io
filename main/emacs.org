@@ -128,6 +128,7 @@ with ~eselect emacs~.
 + [[https://www.tandfonline.com/doi/abs/10.1198/1061860042985][Emacs Speaks Statistics: A Multiplatform, Multipackage Development Environment for Statistical Analysis]]
 
 ** Advocacy
+
 + [[https://www.fugue.co/blog/2015-11-11-guide-to-emacs.html][A CEO's Guide to Emacs]] - a few dated bits (e.g. ~\~/.config/emacs~ is now supported) but very good.
 + [[https://lucidmanager.org/productivity/][Lucid Manager - Productivity]] - lots of clear articles on Emacs.
 + [[https://karl-voit.at/2021/07/23/emacs-lock-in/][The Emacs Lock-In Effect or the Emacs Sunk Cost Fallacy]]
