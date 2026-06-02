@@ -90,6 +90,7 @@
 
 ** Bias
 
++ [[https://www.science.org/doi/10.1126/sciadv.adw5578][Biased AI writing assistants shift users’ attitudes on societal issues | Science Advances]]
 + [[https://aeon.co/essays/generative-ai-has-access-to-a-small-slice-of-human-knowledge][Generative AI has access to a small slice of human knowledge | Aeon Essays]]
 
 ** Videos
