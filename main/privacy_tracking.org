@@ -38,6 +38,8 @@ Useful video from Proton [[https://www.youtube.com/watch?v=WJ8clVdaRKA][How Goog
 
 ** Android
 
++ [[https://nooneshappy.com/article/native-apps-should-be-avoided-whenever-possible/][Native Apps Should Be Avoided Whenever Possible — No One's Happy]]
+
 *** Fauxx
 
 [[https://github.com/digital-grease/fauxx][Fauxx]] poisons data brokers and profilers by "/generating continuous, plausible, off-demograhpic synthetic activity from
