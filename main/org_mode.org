@@ -99,6 +99,7 @@ then you can find it under ~./config/emacs/elpa/org-x.yy.zz/etc/ORG-NEWS~ to fin
 + [[https://www.labri.fr/perso/nrougier/GTD/index.html#org0b9def2][Get Things Done with Emacs]]
 + [[https://www.youtube.com/watch?v=e9ucb1jhufq][emacs: org mode basics - Prot]]
 + [[https://piped.video/watch?v=0-brF21ShRk][You Should Really Learn Org Mode - It's Easy]]
++ [[https://www.youtube.com/watch?v=SzA2YODtgK4][Getting Started With Org Mode - YouTube]] - great video on doing lots of stuff.
 
 *** Tables
 
