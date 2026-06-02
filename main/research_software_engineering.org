@@ -151,7 +151,12 @@ Donate your CPU/GPU/RAM (and electricity) to distributed computing projects to r
 
 + [[https://www.nature.com/articles/d41586-025-03196-0][Stop treating code like an afterthought: record, share and value it]]
 + [[https://zenodo.org/records/17453879][Resilient Technologies. Why Decades-Old Tools Define the ROOT of Modern Research Data Management]]
++ [[https://link.springer.com/article/10.1007/s10664-025-10785-0][Peer code review in research software development: The research software engineer perspective]]
 
 ** History
 
 + [[https://www.software.ac.uk/blog/not-so-brief-history-research-software-engineers-0][A not-so-brief history of Research Software Engineers | Software Sustainability Institute]]
+
+** Parody
+
++ [[https://sigbovik.org/][The Association for Computational Heresy]]
