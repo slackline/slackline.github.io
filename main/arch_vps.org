@@ -1054,3 +1054,9 @@ mode = aggressive
 Came across this article again and should deploy some of these strategies...
 
 + [[https://vulpinecitrus.info/blog/guarding-git-forge-ai-scrapers/][Guarding My Git Forge Against AI Scrapers - VulpineCitrus]]
+
+* Links
+
+** Self-Hosting
+
++ [[https://tinycld.org/docs/getting-started][Getting started - TinyCld Docs]]
