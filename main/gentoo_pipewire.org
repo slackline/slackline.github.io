@@ -3,3 +3,34 @@
 :END:
 #+TITLE: Gentoo Pipewire
 #+FILETAGS: :linux:gentoo:pipewire:
+
+The [[https://wiki.gentoo.org/wiki/PipeWire][PipeWire - Gentoo wiki]] is detailed and should be the primary source of information if you are configuring things.
+
+* Sound Server Configuration
+
+Older versions of OpenRC < 0.60 require you to add the following to ~~/.xprofile~
+
+#+begin_example
+# Pipewire under Gentoo
+# https://wiki.gentoo.org/wiki/PipeWire#OpenRC
+gentoo-pipewire-launcher restart &
+#+end_example
+
+But newer versions of OpenRC > 0.60 support [[https://wiki.gentoo.org/wiki/OpenRC#User_services][User Services]] and so you can add and start the services under the user
+account.
+
+#+begin_example
+# Add services to users default
+rc-update add -U pipewire default
+rc-update add -U pipewire-pulse default
+
+# To start the services without enabling them:
+rc-service --user pipewire start
+rc-service --user pipewire-pulse start
+#+end_example
+
+You have to log out and back in (or reboot) for these to take effect it seems.
+
+* Links
+
++ [[https://wiki.gentoo.org/wiki/PipeWire][PipeWire - Gentoo wiki]]
