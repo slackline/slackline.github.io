@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       b9a06a60-c5fd-4084-b3fd-f229837849e5
+:END:
+#+TITLE: Food : Greek
+
+* Sauces
+
+** Tzatziki
+
+From [[https://www.themediterraneandish.com/tzatziki-sauce-recipe/][Authentic Tzatziki Sauce Recipe (Yiayia Approved) | The Mediterranean Dish]]
+
+* Links
+
++ [[https://www.themediterraneandish.com/][The Mediterranean Dish]]
