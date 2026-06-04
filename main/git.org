@@ -303,3 +303,7 @@ Topics are alphabetical...
 ** Tips and Tricks
 
 + [[https://maurycyz.com/misc/easy_git/][You already have a git server: (Maurycy's blog)]]
+
+** Agents/AI
+
++ [[https://blog.jonudell.net/2026/06/02/how-to-make-best-use-of-git-and-github-for-ai-assisted-software-development/][How to make best use of git and GitHub for AI-assisted software development – Jon Udell]]
