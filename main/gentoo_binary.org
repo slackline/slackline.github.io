@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       115b88e6-62c3-4100-9981-b195c9fc12b5
+:END:
+#+TITLE: Gentoo Binary
+#+FILETAGS: :gentoo:linux:
+
+In [[https://www.gentoo.org/news/2023/12/29/Gentoo-binary.html][2023]] Gentoo announced that they would be providing binaries for all packages meaning you no longer needed to spend
+your own time and energy compiling packages from source.
+
+* Links
+
++ [[https://wiki.gentoo.org/wiki/Binary_package_quickstart][Binary quick setup instructions]]
++ [[https://wiki.gentoo.org/wiki/Binary_package_guide][Binary package guide]]

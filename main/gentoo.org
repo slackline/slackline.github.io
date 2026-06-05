@@ -13,6 +13,7 @@
 + [[id:ad0c4775-cf41-42aa-9f1f-98fe845b2169][Ebuilds]]
 + [[id:83017000-6081-4787-83c3-5e1639684909][Overlays]]
 + [[id:491978ed-7688-4360-9827-695b6d2eb2d1][OpenRC]]
++ [[id:115b88e6-62c3-4100-9981-b195c9fc12b5][Binary]]
 
 * Specifics
 
@@ -23,6 +24,7 @@
 * Links
 
 ** Personal Repository
+
 + [[https://dataswamp.org/~solene/2023-03-04-github-actions-building-gentoo-packages.html][Using GitHub Actions to maintain Gentoo packages repository]]
 
 ** Useful
