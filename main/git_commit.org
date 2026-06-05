@@ -27,8 +27,14 @@ You'd be best of using the [[https://github.com/gitleaks/gitleaks#pre-commit][Pr
 
 * Conventions
 
- [[https://www.conventionalcommits.org/en/v1.0.0/][Conventional Commits]] and [[https://conventionalcomments.org/][Conventional Comments]] are two frameworks to provide structure to commit comments (and
- issues). They could be extended to [[id:d8720ab9-a43e-45e4-834e-e4c5ce4f4e43][Git Notes]] without much modification.
+** Conventional Commits
+
+[[https://www.conventionalcommits.org/en/v1.0.0/][Conventional Commits]] and [[https://conventionalcomments.org/][Conventional Comments]] are two frameworks to provide structure to commit comments (and
+issues). They could be extended to [[id:d8720ab9-a43e-45e4-834e-e4c5ce4f4e43][Git Notes]] without much modification.
+
+There is however a case for [[https://sumnerevans.com/posts/software-engineering/stop-using-conventional-commits/][just using scope]]. The author suggests the ~type~ should be inferred from the message and
+that the promises the meta data adds have failed to deliver. They also cite popular projects (Linux kernel, Git,
+FreeBSD, Go and others) that simply use scope successfully.
 
 ** Commits
 
@@ -46,3 +52,7 @@ You'd be best of using the [[https://github.com/gitleaks/gitleaks#pre-commit][Pr
 + [[https://github.com/gitleaks/gitleaks][Git Leaks]]
 + [[https://rtyley.github.io/bfg-repo-cleaner/][BFG Repo Cleaner]]
 + [[https://conventionalcomments.org/][Conventional Comments]]
+
+** Blogs
+
++ [[https://sumnerevans.com/posts/software-engineering/stop-using-conventional-commits/][Stop Using Conventional Commits]]
