@@ -48,9 +48,14 @@ Another useful article is [[https://docs.codeberg.org/integrations/read-the-docs
 
 * Links
 
++ [[https://codeberg.org/git-pages/git-pages][git-pages/git-pages: Scalable static site server for Git forges - Codeberg.org]]
++ [[https://codeberg.org/git-pages/git-pages-cli][git-pages/git-pages-cli: Command-line tool for publishing a site to a git-pages server - Codeberg.org]]
++ [[https://codeberg.org/git-pages/action#with-a-custom-domain][git-pages/action: Forgejo Action for uploading a directory to a git-pages site - Codeberg.org]]
+
+** Howtos
+
 + [[https://andre601.ch/blog/2023/11-05-using-codeberg-pages/][How to use Codeberg Pages for MkDocs - Andre_601]]
 + [[https://docs.codeberg.org/integrations/read-the-docs/][Integrating with Read the Docs | Codeberg Documentation]]
-+ [[https://codeberg.org/git-pages/action#with-a-custom-domain][git-pages/action: Forgejo Action for uploading a directory to a git-pages site - Codeberg.org]]
 
 ** Misc
 
