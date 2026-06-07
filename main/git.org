@@ -54,6 +54,7 @@ Topics are alphabetical...
 + [[id:809de327-3039-4499-945b-b48974e5efe7][History]] (aka Log)
 + [[id:970f08b7-210c-41ad-a25e-b9ed0000c34f][Ignore]]
 + [[id:d42f29bd-1a5b-4e30-a2e6-03469a024133][IDE Integration]]
++ [[id:c4856374-fbd0-46f3-bb5a-3add4ab83fc2][Learning Resources]]
 + [[id:3d6bf689-54bd-4551-b367-019e1cb67e73][Merge Conflicts]]
 + [[id:5c6a5268-9f73-46d1-810f-6aa6158101a5][Miscellaneous]]
 + [[id:d8720ab9-a43e-45e4-834e-e4c5ce4f4e43][Notes]]
@@ -86,52 +87,8 @@ Topics are alphabetical...
 
 * Links
 
-** Tools
-
-+ [[http://gitignore.io/][gitignore.io]]
-+ [[https://github.com/wfxr/forgit][forgit]] eases use of Git at the command line
-+ [[https://github.com/o2sh/onefetch][onefetch]] - command line utility for fast overview of a repository.
-+ [[https://jonas.github.io/tig/][Tig · Text-mode interface for Git]]
-+ [[https://codeberg.org/nightsail/drft][nightsail/drft: diff re/viewer, file tree - Codeberg.org]]
-+ [[https://github.com/hyparam/git2parquet][hyparam/git2parquet: CLI tool to export git commits in parquet format]]
-+ [[https://github.com/seeyebe/gmap][gmap]] CLI tool for understanding what has changed, when, how much and by whom.
-
 ** Learning Resources
 
-+ [[http://blog.anvard.org/conversational-git/][Conversational Git]]
-+ [[https://gitbetter.substack.com/archive?sort=new][Git Better]]
-+ [[https://ohshitgit.com/][Oh Shit, Git!?!]]
-+ [[https://ohmygit.org/][Oh My Git!]] - a game for learning Git.
-+ [[https://onlywei.github.io/explain-git-with-d3/#clean][Explain Git with D3]]
-+ [[https://learngitbranching.js.org/][Learn Git Branching]]
-+ [[https://srse-git-github-zero2hero.netlify.app/][Git & GitHub through GitKraken Client - From Zero to Hero]]
-+ [[https://initialcommit.com/blog/git-sim][git-sim : visually simulate Git operations in your own repos]]
-+ [[https://maryrosecook.com/blog/post/git-from-the-inside-out][Git from the inside out]] - excellent walk through of Git internals.
-+ [[https://github.blog/open-source/git/commits-are-snapshots-not-diffs/][Commits are snapshots, not diffs - The GitHub Blog]]
-+ [[https://gitimmersion.com/index.html][Git Immersion]]
-+ [[https://think-like-a-git.net/][Think Like (a) Git]]
-+ [[https://github.com/k88hudson/git-flight-rules][Flight rules for git]]
-+ [[https://imperialcollegelondon.github.io/intermediate_grad_school_git_course/index.html][Further Git and GitHub for Effective Collaboration]]
-+ [[https://tom.preston-werner.com/2009/05/19/the-git-parable.html][The Git Parable]]
-+ [[https://comprendre-git.com/en/][Comprendre Git]]
-+ [[https://github.com/Gazler/githug][Gazler/githug: Git your game on!]]
-+ [[https://beej.us/guide/bggit/html/split/index.html][Beej's Guide to Git]]
-+ [[https://wong-hl.github.io/git-for-researchers/1-starting_with_git.html][Starting with Git - Git For Researchers]]
-+ [[https://www.git-skills.dev/quiz/][Git Quizzes | Git Skills]]
-
-*** Books
-
-+ [[https://git-scm.com/book/en/v2][Pro Git]] ([[https://github.com/progit/progit][github site]])
-+ [[https://gitperf.com/][High Performance Git]]
-
-*** Videos
-
-+ [[https://www.youtube.com/watch?v=DZI0Zl-1JqQ][You Don’t Know Git - Edward Thomson - NDC London 2025 - YouTube]]
-
-*** Email
-
-+ [[https://git-send-email.io/][Learn to use email with git!]]
-+ [[https://git-am.io/][Reviewing git contributions via email]]
 
 ** HowTos
 

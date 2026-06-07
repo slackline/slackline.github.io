@@ -20,11 +20,17 @@ Grab some summary information about a user using the [[https://github.com/ehmatt
 uvx gh-profiler ns-rse
 #+end_example
 
-* My Repos
+* Git Lint
+
+[[https://alchemists.io/projects/git-lint][git-lint]] lints your commit history to give a consistent style.
+
+* Managing Multiple Repositories
+
+** My Repos
 
  [[https://myrepos.branchable.com/][myrepos]] is a tool for managing multiple repositories.
 
-* Gitopolis
+** Gitopolis
 
 [[https://github.com/timabell/gitopolis][gitopolis]] is another tool, written in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]], for managing multiple repositories.
 
@@ -45,3 +51,11 @@ uvx gh-profiler ns-rse
 + [[https://github.com/dinakars777/git-time-machine][dinakars777/git-time-machine: 🕰️ Undo ANY git mistake in 3 seconds with a beautiful TUI]]
 + [[https://github.com/ehmatthes/gh-profiler][ehmatthes/gh-profiler]]
 + [[https://github.com/timabell/gitopolis][timabell/gitopolis]]
++ [[http://gitignore.io/][gitignore.io]]
++ [[https://github.com/wfxr/forgit][forgit]] eases use of Git at the command line
++ [[https://github.com/o2sh/onefetch][onefetch]] - command line utility for fast overview of a repository.
++ [[https://jonas.github.io/tig/][Tig · Text-mode interface for Git]]
++ [[https://codeberg.org/nightsail/drft][nightsail/drft: diff re/viewer, file tree - Codeberg.org]]
++ [[https://github.com/hyparam/git2parquet][hyparam/git2parquet: CLI tool to export git commits in parquet format]]
++ [[https://github.com/seeyebe/gmap][gmap]] CLI tool for understanding what has changed, when, how much and by whom.
++ [[https://alchemists.io/projects/git-lint][Git Lint | Alchemists]] - consistent, linted git commits
