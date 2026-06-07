@@ -737,7 +737,7 @@ You can edit earlier commits with ~jj edit @-~ for the previous commit or ~jj ed
 Being an Emacs user I naturally wanted to use Jujutsu via Emacs and was hoping for a [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] equivalent. Being
 considerably newer there isn't anything quite as powerful as Magit just yet but there is work in progress in the form of
 [[https://git.sr.ht/~puercopop/jujutsushi][jujutsushi - A emacs interface to jujutsu]] and  [[https://github.com/bennyandresen/jujutsu.el][jujutsu.el: An Emacs interface for jujutsu]] (althought the former's author
-has stated they have deprioritized development in light of the later, see [[https://www.reddit.com/r/emacs/comments/1hbmpub/comment/m1inz3i/][here]]). More recently  [[https://github.com/0WD0/majutsu][majutsu]] has appeared on
+has stated they have deprioritized development in light of the later, see [[https://www.reddit.com/r/emacs/comments/1hbmpub/comment/m1inz3i/][here]]). More recently [[https://github.com/0WD0/majutsu][majutsu]] has appeared on
 my radar claiming to be "/Majutsu! [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] for jujutsu/" so I'll be exploring that.
 
 The [[https://github.com/jj-vcs/jj/wiki/][wiki]] is a useful resource on IDE integration.
@@ -748,7 +748,7 @@ After a day or so tinkering with Jujutsu/~jj~ I've found there are a number of f
 experience to date. Having a mental model of Version Control is important for these to make sense. Obviously I need to
 spend longer working with the system to have a deeper understanding and appreciation of how it works and a better
 comparison to Git, but first impressions are good, although switching full scale would mean abandoning the amazing [[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]]
-which is one of the best [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] packages going.
+which is one of the best [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] packages going (that may not be an issue given [[https://github.com/0WD0/majutsu][majutsu]] "/Magit for Jujutsu/" ).
 
 + All changes are "staged".
 + Conflicts can be committed.
