@@ -19,9 +19,10 @@
 
 Other things to note...
 
-+ I often rename Magisk to hide it, I opt for the default app which reverses the spelling, i.e. "Ksigam".
++ I often rename [[id:80b19a83-2f8c-4442-a55c-6708c7dab921][magisk]] to hide it, I opt for the default app which reverses the spelling, i.e. "Ksigam".
 + I found on one occasion that I had reinstall Magisk before I could patch the boot image and before the newly flashed
   boot image showed as rooted within Magisk I had to uninstall "Ksigam" (apps still detected root so it had worked).
+
 
 
 * Upgrading
@@ -67,7 +68,7 @@ adb -d reboot sidelload
 At the bottom of the phones screen it should read...
 
 #+begin_example
-Now send the package you wan to apply
+Now send the package you want to apply
 to the devicve with "adb sideload <filename>"
 #+end_example
 
@@ -125,7 +126,7 @@ fastboot flash boot magisk_patched-30600_A4uvw.img
 
 * Magisk and ~root~
 
-Magisk is the /de facto/ goto for rooting your device, at least in my experience of +10yrs of rooting Android devices,
+[[id:80b19a83-2f8c-4442-a55c-6708c7dab921][Magisk]] is the /de facto/ goto for rooting your device, at least in my experience of +10yrs of rooting Android devices,
 its fantastic and "Just Works (TM)". Don't fuck around though, follow the  [[https://topjohnwu.github.io/Magisk/install.html][Official Installation Instructions]] and _only_
 use the official binaries. Take heed of only using the patch created for the specific device too.
 
@@ -156,6 +157,14 @@ itself from the Play Store, neat.
 Possibly related to hiding ~root~ but I've had this installed on my phones for I don't know how long so I keep on using
 it. It is no longer available via GitHub but I have a copy lying around on my computer.
 
+* Slots
+
+Motorola devices have two "slots" for flashing boot images to (a and b) which means you can choose what kernel to boot
+from. You can toggle which is active from "bootloader" (aka "fastboot") mode using
+
+#+BEGIN_EXAMPLE
+fastboot set_active other
+#+END_EXAMPLE
 
 * Links
 

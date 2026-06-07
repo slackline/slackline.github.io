@@ -48,3 +48,8 @@ adb root
 
 This didn't seem to work when trying to push a directory with lots of files. I opted to zip the directory up and push
 the ~.zip~ which did work.
+
+** ~unauthorized~
+
+If the device is showing as ~unauthorized~ when listed with ~adb devices~ then toggle /Settings > Developer Options
+> Revoke USB debugging authorisations/ ([[https://stackoverflow.com/a/25546300][via]])

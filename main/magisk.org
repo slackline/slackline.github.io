@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       80b19a83-2f8c-4442-a55c-6708c7dab921
+:END:
+#+TITLE: Magisk
+#+FILETAGS: :android:magisk:root:
+
+* Patching
+
+When following the [[https://topjohnwu.github.io/Magisk/install.html][Insallation instructions]] I found that Motorola devices do not have a "fastboot" mode, instead you
+need to reboot to "bootloader" and flash the image. Once this has been done reboot using the phone to Recovery
+/before/ booting into the system.
+
+* Troubleshooting
+
+When updating my [[id:65c60c32-dcc3-4d6b-a074-bb076fd4db24][Motorolla G7 Plus]] I found that after flashing the boot image the Magisk App did not show root as being
+installed. I went through several cycles of flashing both the original ~boot.img~ and the
+~magisk_patched-30700_#####.img~ and rebooting to Recovery Mode before System without much success. Then randomly I
+tried downloading the ~boot.img~ and patching again and it seemed to work. I suspect this might be because I originally
+patched ~boot.img~ using an older version of the Magisk App and I had had to install a newer version of the Magisk App
+on the first reboot.
+
+* Links
+
++ [[https://github.com/topjohnwu/Magisk][topjohnwu/Magisk]] official Github repository for the Magic Mask
++ [[https://topjohnwu.github.io/Magisk/install.html][Magisk Official Installation Instructions]]
