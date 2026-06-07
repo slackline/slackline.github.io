@@ -60,6 +60,22 @@ the header of all self-hosted services.
 
 [[https://rnsaffn.com/poison3/][Poison Fountain]] is another attempt to feed AI web-crawlers a bunch of junk (see also [[https://www.theregister.com/2026/01/11/industry_insiders_seek_to_poison/][Register article]]).
 
+* AI Scraping
+
+The article [[https://blog.includesecurity.com/2026/06/the-smart-tv-in-your-livingroom-is-a-node-in-the-aiscraping-economy/][The Smart TV in Your LivingRoom Is a Node in the AIScraping Economy]] describes how an SDK is used in mobile
+apps and "smart" TVs to act as scrapers for companies.
+
+Adding the following to block lists prevents them
+
+#+BEGIN_EXAMPLE
+proxyjs.brdtnet.com
+proxyjs.luminatinet.com
+proxyjs.bright-sdk.com
+clientsdk.bright-sdk.com
+clientsdk.brdtnet.com
+
+#+END_EXAMPLE
+
 
 * ~human.json~
 

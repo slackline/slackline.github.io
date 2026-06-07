@@ -15,6 +15,7 @@ phones that are no longer supported by manufacturers up-to-date.
 Of course there are tons of applications (programmes) one might want to install on their phone and I use a number for
 convenience.
 
++
 * Devices
 
 Over the years I've owned a number of Android devices and my partner has too (these are mentioned as I often inherit

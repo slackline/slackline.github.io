@@ -1,0 +1,56 @@
+:PROPERTIES:
+:ID:       9d2c6c89-0a9c-4671-9313-f44db3daff2c
+:END:
+#+TITLE: Ad-blocking and Privacy
+#+FILETAGS: :privacy:adblock:
+
+In order to mitigate the [[id:a120ecf3-70bb-46e7-9709-37dc59db883c][Privacy Tracking]] that is pervasive I use various ad-blockers that send request to particular
+domains to the local loop-back device (i.e. ~127.0.0.1~). This is done at multiple levels, the router which runs [[id:0eca0cca-f5d0-4259-879b-b7f1844c3e90][OpenWrt]]
+where I have installed, the browser plugin [[https://ublockorigin.com/][uBlock Origin]] and on my mobile devices via [[https://adaway.org/][adaway.org]]
+
+* OpenWRT AdBlock
+
+* Browser uBlock Origin
+
+* Android Adaway
+
+You can add custom lists
+
+* Custom lists
+
+Here is a list of lists to block.
+
+** General
+
++ [[https://github.com/hagezi/dns-blocklists][hagezi/dns-blocklists: DNS-Blocklists: For a better internet - keep the internet clean!]]
+
+** AI
+
++ [[https://github.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist][uBlock Origin HUGE AI Blocklist]]
++ [[https://github.com/alvi-se/ai-ublock-blacklist][AI uBlock Origin Blacklist]]
++ [[https://scienceispoetry.net/files/parasites.txt][scienceispoetry.net/files/parasites.txt]] - from [[https://mastodon.social/@JulianOliver][@JulianOliver]] a privacy infrastructure and IT specialist.
++ [[https://github.com/Stevoisiak/Stevos-GenAI-Blocklist][Stevos-GenAI-Blocklist]]
+
+** Simple List
+
+The following is a list of lists in AdBlock format (which uBlock Origin, AdBlock and AdAway)
+
+#+BEGIN_EXAMPLE
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.txt
+https://raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/main/list.txt
+https://raw.githubusercontent.com/alvi-se/ai-ublock-blacklist/master/list.txt
+https://raw.githubusercontent.com/Stevoisiak/Stevos-GenAI-Blocklist/refs/heads/main/GenAI-Blocklist.txt
+https://scienceispoetry.net/files/parasites.txt
+#+END_EXAMPLE
+
+** TODO Deduplicate
+
+I might try and find some time to take a given list of domain lists, download them and deduplicate them.
+
+Note to-self - if implementing in Python make it a series of sets that are then merged.
+
+* Links
+
++ [[https://adaway.org/][adaway.org]] (source [[https://github.com/AdAway/AdAway][AdAway/AdAway]])
++ adblock (source )
++ [[https://ublockorigin.com/][uBlock Origin]]  (source [[https://github.com/gorhill/uBlock][gorhill/uBlock]])

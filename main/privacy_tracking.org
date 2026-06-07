@@ -6,6 +6,7 @@
 #+TITLE: Privacy Tracking
 #+FILETAGS: :privacy:tracking:
 
++ [[id:9d2c6c89-0a9c-4671-9313-f44db3daff2c][Ad-blocking and Privacy]]
 + [[id:4bf55339-3c19-4794-ad41-1752e77755bd][Virtual Private Networks]]
 + [[id:143e393e-ab25-48ea-9aa5-908a68965839][Cloud Services]]
 
@@ -81,3 +82,7 @@ your device/".
 
 + [[https://infosec.exchange/@malwaretech/116195917343621283][MLAT requests]] - useful post laying out the consequences of FBI  MLAT and how/why companies like Proton Mail have to
   comply even though they are a Swiss based company.
+
+** AI Scraping
+
++ [[https://blog.includesecurity.com/2026/06/the-smart-tv-in-your-livingroom-is-a-node-in-the-aiscraping-economy/][The Smart TV in Your LivingRoom Is a Node in the AIScraping Economy - Include Security Research Blog]]
