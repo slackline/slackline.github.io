@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       dcbc8337-600e-42a5-a98a-49d67b441008
+:END:
+#+TITLE: Dawarich
+#+FILETAGS: :linux:gps:tracking:
+
+[[https://dawarich.app/][Dawarich]] is another [[id:a120ecf3-70bb-46e7-9709-37dc59db883c][Privacy Tracking]] system that is self-hostable (like [[id:5315e7ee-0ed9-4514-b1a9-0a03114d8191][OwnTracks]]), recommended install is via a Docker
+image.
+
+
+* Links
+
+[[https://github.com/Freika/dawarich][Freika/dawarich: Your favorite self-hostable alternative to Google Timeline (Google Location History)]]

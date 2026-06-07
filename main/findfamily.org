@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       ae98edfc-6691-4b8e-b385-92b7b3b6e95c
+:END:
+#+TITLE: FindFamily
+#+FILETAGS: :linux:gps:tracking:
+
+[[https://github.com/vayun-mathur/Modern-Apps][FindFamily]] is an end-to-end-encrypted (e2ee) location sharing application for Android and iOS.

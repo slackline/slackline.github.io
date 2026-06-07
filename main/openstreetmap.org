@@ -42,6 +42,12 @@ to get me there, I can add additional boxes to visit along the route as way poin
 [[https://panoramax.fr/][Panoramax]] is an alternative to StreetMaps that allows federated serves to share pictures at the street level. These can
 be geographically isolated, e.g. [[https://www.panoramax.wales/][panoramax.wales]].
 
+* Tracking
+
++ [[id:5315e7ee-0ed9-4514-b1a9-0a03114d8191][OwnTracks]]
++ [[id:dcbc8337-600e-42a5-a98a-49d67b441008][Dawarich]]
++ [[id:ae98edfc-6691-4b8e-b385-92b7b3b6e95c][FindFamily]]
+
 * Links
 
 ** OpenStreetMap
@@ -131,6 +137,7 @@ be geographically isolated, e.g. [[https://www.panoramax.wales/][panoramax.wales
 + [[https://en.wikipedia.org/wiki/Geohash][Geohash - Wikipedia]]
 
 *** Stars
+
 Sometimes useful for navigation!
 
 +  [[https://www.timeanddate.com/astronomy/night/uk/sheffield][Sheffield Night Sky]]
