@@ -45,6 +45,18 @@ To enable it add the following to ~.zshrc~
   autoload zmv
 #+end_src
 
+** Terminal bell (beeps)
+
+Finally [[https://blog.vghaisas.com/zsh-beep-sound/][found]] a way to turn these off
+
+#+begin_example shell
+# Turn off shell beeps
+# All
+unsetopt BEEP
+# Autocomplete
+# unsetopt LIST_BEEP
+#+end_example
+
 * History
 
 There are a few options, tools and plugins for working with history. Ensuring there are no duplicates is really useful
