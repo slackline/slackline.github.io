@@ -130,3 +130,7 @@ A brilliant statistician and communicator about risk.
 + [[https://www.lrb.co.uk/the-paper/v45/n23/jonah-goodman/a-national-evil][London Book Review : Jonah Goodman · A National Evil]] interesting piece on population health.
 + [[https://www.tylervigen.com/spurious-correlations][Spurious Correlations]] / [[https://tylervigen.com/spurious-scholar][Spurious Scholar]]
 + [[https://psiaims.github.io/CAMIS/][CAMIS - Comparison of statistical software]]
+
+** Misc
+
++ [[https://www.tylervigen.com/spurious/correlation/][Spurious Correlation]]
