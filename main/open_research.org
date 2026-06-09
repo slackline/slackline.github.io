@@ -49,6 +49,10 @@ to validate and contribute to the research.
 + [[https://github.com/nalgeon/codapi][nalgeon/codapi: Interactive code examples for documentation, education and fun]]
 + [[https://rescience.github.io/read/][ReScience]] - replication publications
 
+** Infrastructure
+
++ [[https://issues.org/open-data-research-%20infrastructure-gibson-thaney/][Who Will Keep Research Data Infrastructure Open and Running?]]
+
 ** Measuring Impact
 
 + [[https://pathos-project.eu/][PathOS]] - better understanding and measuring Open Science impacts and their causal mechanisms.
