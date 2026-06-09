@@ -87,7 +87,7 @@ humans. Simple, neat idea.
 
 + [[https://algorithmic-sabotage.gitlab.io/asrg/sabot-in-the-age-of-ai/][Sabot in the Age of AI]]
 + [[https://julianoliver.com/projects/science-is-poetry/][julian oliver/projects/science-is-poetry/]] ([[https://mastodon.social/@JulianOliver/116391284280771352][thread]] )
-
++ [[https://www.nature.com/articles/d41586-026-01689-0][Bots are scraping open data — how should researchers respond?]]
 
 ** Research
 
