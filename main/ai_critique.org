@@ -127,6 +127,7 @@
 
 ** Balanced
 
++<2026-06-09 Tue> [[https://yalereview.org/article/melanie-mitchell-jagged-intelligence][The Yale Review | Melanie Mitchell: The Dangerous Unknowns at the…]]
 + [[https://www.noemamag.com/the-mythology-of-conscious-ai/][The Mythology Of Conscious AI]]
 + [[https://mitchellh.com/writing/my-ai-adoption-journey][My AI Adoption Journey – Mitchell Hashimoto]]
 + [[https://taggart-tech.com/reckoning/][I used AI. It worked. I hated it.: Taggart Tech]]
