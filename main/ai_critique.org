@@ -9,6 +9,7 @@
 
 * Links
 
++ <2026-06-10 Wed> [[https://ergosphere.blog/posts/the-machines-are-fine/][The machines are fine. I'm worried about us.]] - on the loss of knowledge/skills.
 + <2026-05-24 Sun> [[https://link.springer.com/article/10.1007/s10676-024-09775-5][ChatGPT is bullshit | Ethics and Information Technology | Springer Nature Link]]
 + <2026-04-11 Sat> [[https://www.anildash.com/2026/03/27/endgame-open-web/][Endgame for the Open Web - Anil Dash]] - thoughtful reflection on the problems AI is causing.
 + <2026-04-10 Fri> [[https://heffernanm.substack.com/p/use-it-or-lose-it-the-challenge-of][USE IT OR LOSE IT - On the Level with Margaret Heffernan]] - nice essay on what it is to be human.

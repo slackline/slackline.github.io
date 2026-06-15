@@ -89,6 +89,7 @@ humans. Simple, neat idea.
 + [[https://julianoliver.com/projects/science-is-poetry/][julian oliver/projects/science-is-poetry/]] ([[https://mastodon.social/@JulianOliver/116391284280771352][thread]] )
 + [[https://www.nature.com/articles/d41586-026-01689-0][Bots are scraping open data — how should researchers respond?]]
 
+
 ** Research
 
 + [[https://arxiv.org/abs/2510.07192][[2510.07192] Poisoning Attacks on LLMs Require a Near-constant Number of Poison Samples]]

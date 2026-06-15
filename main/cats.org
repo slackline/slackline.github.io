@@ -6,11 +6,15 @@
 #+TITLE: Cats
 #+FILETAGS: :cats:
 
+* General
+
++ [[https://www.theguardian.com/lifeandstyle/2026/jun/09/crazy-cat-lady-sterotype][Cat ladies aren’t that ‘crazy’ after all - the social science behind the stereotype | Cats | The Guardian]]
+
 * Behaviour
 
 + [[https://www.theguardian.com/lifeandstyle/2023/jun/01/kitty-confidential-13-secret-signals-all-cat-owners-need-to-know-from-a-quivering-tail-to-aeroplane-ears][Kitty confidential: 13 secret signals all cat owners need to know – from a quivering tail to aeroplane ears]]
 + [[https://www.theguardian.com/technology/2023/nov/04/scientists-turn-to-ai-for-help-translate-animal-vocal-physical-cues][‘AI can teach us a lot’: scientists say cats’ expressions richer than imagined and aim to translate them]]
- + [[https://lithub.com/house-cats-and-wild-cats-arent-actually-that-different/][House cats and wild cats aren't actually that different]]
++ [[https://lithub.com/house-cats-and-wild-cats-arent-actually-that-different/][House cats and wild cats aren't actually that different]]
 
 * Books
 

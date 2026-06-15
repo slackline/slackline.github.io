@@ -34,8 +34,11 @@ consideration should be given to principles of GDPR.
 + [[https://datadryad.org/][Data Dryad]]
 
 ** Articles
+
 + [[https://www.nature.com/articles/sdata201618][The FAIR Guiding Principles for scientific data management and stewardship | Scientific Data]]
 + [[https://rd-alliance.org/group/fair-research-software-fair4rs-wg/outcomes/fair-principles-research-software-fair4rs-0][FAIR Principles for Research Software (FAIR4RS Principles) | RDA]]
++ [[https://www.nature.com/articles/d41586-026-01689-0][Bots are scraping open data — how should researchers respond?]]
++ [[https://theodi.org/news-and-events/blog/how-ready-is-open-data-for-ai/][How ready is open data for AI? | The ODI]]
 
 ** Resources
 
