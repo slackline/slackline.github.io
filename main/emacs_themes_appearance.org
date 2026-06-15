@@ -14,3 +14,12 @@ they're good!
 + [[https://jdhao.github.io/2021/09/30/emacs_custom_tabline/][Customize Tabline in Emacs - jdhao's digital space]]
 + [[https://gist.github.com/rougier][rougier]] simple and clean [[https://gist.github.com/rougier/8d5a712aa43e3cc69e7b0e325c84eab4][NANO in 256 lines]] is very neat (copy on Opengist)
 + [[https://emacsfodder.github.io/emacs-theme-editor/#][Emacs Theme Editor]]
+
+** Themes
+
++ [[https://protesilaos.com/emacs/ef-themes][Ef (εὖ) themes for GNU Emacs | Protesilaos]]
++ [[https://protesilaos.com/emacs/modus-themes][Modus Themes | Protesilaos]]
+
+** General
+
++ [[https://tonsky.me/blog/syntax-highlighting/][I am sorry, but everyone is getting syntax highlighting wrong @ tonsky.me]]
