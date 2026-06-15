@@ -6,6 +6,9 @@
 #+TITLE: AI Critique
 #+FILETAGS: :ai:critique:
 
+#+begin_quote
+Why should I bother reading something nobody could be bothered to write?
+#+end_quote
 
 * Links
 
