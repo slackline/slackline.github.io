@@ -149,3 +149,9 @@ way around this at present.
 
 Whilst Woodpecker allows triggering pipelines manually they may not necessarily run as expected because of the
 ~when.event:~ configuration in the files.
+
+* Links
+
+** Useful plugins
+
++ [[https://codeberg.org/gedankenstuecke/git-pages-woodpecker-plugin][gedankenstuecke/git-pages-woodpecker-plugin - Codeberg.org]] submit output of a CI pipeline to a ~git-pages~ deployment
