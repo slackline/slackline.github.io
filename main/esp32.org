@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       20e2fea0-c2f7-4706-8acc-65f5b527861e
+:END:
+#+TITLE: ESP32
+#+FILETAGS: :home:automation:esp32:microcontroller:
+
+* Links
+
+** Buying
+
++ [[https://shop.pimoroni.com/][The ultimate Maker store - Pimoroni]]
+
+** Articles
+
++ [[https://blazetrends.com/esp32-smart-home-projects-are-replacing-cloud-gadgets-for-under-30/][ESP32 Smart Home Projects Are Replacing Cloud Gadgets for Under $30]]

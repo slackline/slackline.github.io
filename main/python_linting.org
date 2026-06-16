@@ -17,6 +17,7 @@ structured before it goes out to peer-review.
 + [[https://flake8.pycqa.org/en/latest/][Flake8: Your Tool For Style Guide Enforcement]]
 + [[https://black.readthedocs.io/en/stable/][Black - the uncomprimising code formatter]]
 + [[https://docs.astal.sh/ruff/][Ruff]]
++ [[https://github.com/cheickmec/smellcheck][smellcheck]]
 
 You can also use the "AI" [[https://sourcery.ai/][Sourcery]] to "/Automatically Improve Python Code Quality/". For more on linting see [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Linting]].
 
