@@ -205,6 +205,7 @@ Topics are alphabetical...
 + [[https://www.gameoftrees.org/][Game of Trees]]
 + [[https://www.diversion.dev/][Diversion - Cloud-Native Version Control]]
 + [[https://github.com/mitchellwrosen/mit][mitchellwrosen/mit: Git wrapper with a streamlined UX]]
++ [[https://lore.org/][Lore | Next-Generation Open Source Version Control - Lore]]
 
 ** Internals
 
