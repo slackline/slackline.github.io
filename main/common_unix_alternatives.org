@@ -8,17 +8,18 @@
 
 I wrote a blog post with some [[https://blog.nshephard.dev/posts/cli-alternatives/][Linux Command Line Alternatives – blog.nshephard.dev]]
 
-| Traditional | Alternative                   |
-|-------------+-------------------------------|
-| ~cat~       | [[id:7d3e2ff6-84f0-4d5d-a098-6efb22d55bac][~bat~]]                         |
-| ~diff~      | ~difftastic~  [[id:0dbd7c98-b2e0-4246-98c8-be43dc07b687][~oyo~]]           |
-| ~du~        | ~duf~                         |
-| ~find~      | ~fd~                          |
-| ~grep~      | ~ripgrep~ (~rg~) or ~batgrep~ |
-|             | ~git-delta~                   |
-| ~htop~      | ~btop~                        |
-| ~ls~        | ~lsd~ / ~eza~                 |
-| ~fdupes~    | ~rmlint~                       |
+| Traditional    | Alternative                   |
+|----------------+-------------------------------|
+| ~cat~          | [[id:7d3e2ff6-84f0-4d5d-a098-6efb22d55bac][~bat~]]                         |
+| ~diff~         | ~difftastic~  [[id:0dbd7c98-b2e0-4246-98c8-be43dc07b687][~oyo~]]           |
+| ~du~           | ~duf~                         |
+| ~find~         | ~fd~                          |
+| ~grep~         | ~ripgrep~ (~rg~) or ~batgrep~ |
+|                | ~git-delta~                   |
+| ~htop~         | ~btop~                        |
+| ~ls~           | ~lsd~ / ~eza~                 |
+| ~fdupes~       | ~rmlint~                      |
+| ~cat~ + others | [[id:8a6cb5f6-cd3c-408c-a8a2-6c3179a2b277][~xan~]]                         |
 
 * ~duf~
 
