@@ -57,3 +57,4 @@ Found a [[https://gist.github.com/vwillcox/956bc5056f46d152b2650ba78053ef5e][gis
 + [[https://codeberg.org/aliceice/fedi-marss/][Fedi-MaRRS]] Emacs Lisp implementation of the above.
 + [[https://rss-parrot.net/web/about][@birb@rss-parrot.net]]
 + [[https://mastofeed.org/][MastoFeed - Send your RSS Feeds to Mastodon]]
++ [[https://codeberg.org/MarvinsMastodonTools/feed2fedi][feed2fedi: Tool to make Fediverse posts from RSS feeds]]
