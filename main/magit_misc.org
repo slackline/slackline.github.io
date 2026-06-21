@@ -13,3 +13,14 @@
 There are margins available in Magit status windows ~magit-margin-settings~ brings up the [[id:d6626ec2-1e95-4d42-b06e-ae45268f2b58][Transient]] for modifying
 this. Typically its in buffers such as ~magit: log~ and you can toggle margins with ~L L~ cycle through the style with
 ~L l~, change details with ~L d~ and basic stats with ~L x~.
+
+* Terminal Access
+
+A nice [[https://www.reddit.com/r/emacs/comments/9b1bhs/emacsshell_protip_alias_magit/][thread]] shows how to set aliases/commands to open an [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] client with the[[id:220d7ba9-d30e-4149-a25b-03796e098b0d][ Magit]] status buffer for the current
+directory.
+
+#+begin_example
+magit() {
+     emacsclient -n -e "(magit-status  \"$(git rev-parse --show-toplevel)\")"
+}
+#+end_example
