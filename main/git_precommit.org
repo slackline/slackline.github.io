@@ -309,10 +309,16 @@ A non-exhaustive list of hooks that I use by language.
 + ~pylint~
 + ~pyupgrade~
 + ~ruff~
++ ~numpydoc-validation~
+
 
 ** Security
 
 + [[https://github.com/gitleaks/gitleaks][gitleaks/gitleaks: Find secrets with Gitleaks 🔑]]
+
+** Miscellaneous
+
++ [[https://worktree.ca/taffer/todo-linter][taffer/todo-linter]] : Ensure to-do items in your code have an owner and an issue. - todo-linter
 
 * Links
 :PROPERTIES:
