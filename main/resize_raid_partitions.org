@@ -15,7 +15,9 @@ e2fsck -f /dev/vg0/pics
 lvextend -L+50G /dev/vg0/pics
   Extending logical volume pics to 300.00 GiB
   Logical volume pics successfully resized
+e2fsck -f /dev/vg0/pics
 resize2fs /dev/vg0/pics
+mount /mnt/pics
 #+end_example
 
 * Shrink
