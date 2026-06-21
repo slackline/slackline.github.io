@@ -30,6 +30,7 @@ end-of-life was [[https://endoflife.date/python][2010-07-03]]. There are of cour
 + [[id:bb57f65e-58f4-45de-9620-901dc998f6d6][Python Packaging]]
 + [[id:3cca0dfd-0c82-4685-b9ed-6314f7c8b78f][Pytest]]
 + [[id:13b7052b-62f1-4e6c-8698-fc9a6938e8c9][Schema]]
++ [[id:3a33a080-2adf-4262-b6f4-e5a0a2703d23][Scripting]]
 + [[id:2c43d94e-dc0c-4c05-915e-8cd32770c064][Security]]
 + [[id:3f19e1ef-e5c4-45f1-822f-8d4d834acdbd][Typing]]
 + [[id:4bf1c297-d00a-4857-9339-8017c27138c6][Virtual Environments]]

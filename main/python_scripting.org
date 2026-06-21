@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       3a33a080-2adf-4262-b6f4-e5a0a2703d23
+:mtime:
+:ctime:
+:END:
+#+TITLE: Python Scripting
+#+FILETAGS: :python:scripting:
+
+* Links
+
++ [[https://www.bitecode.dev/p/scripting-good-practices-in-python][Scripting good practices in Python - Bite code!]]
