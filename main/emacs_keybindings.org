@@ -85,3 +85,9 @@ useful [[https://gist.github.com/mmarshall540/a12f95ab25b1941244c759b1da24296d][
 See lines 29-61 (on writing) of the configuration.
 
 #+INCLUDE: "~/.config/emacs/settings/key-bindings.el" src emacs-lisp
+
+* Links
+
+** Miscellaneous
+
++ [[https://aresluna.org/show-your-hands-honor/#slow-and-fast-button-presses-1][Show your hands honor for the strange power they bring you – Aresluna]]
