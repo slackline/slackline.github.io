@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6bca0453-2306-4caf-baee-cec447c70dd7
+:END:
+#+TITLE: T Language
+#+FILETAGS: :reproducible:datascience:
+
+* Links
+
++ [[https://tstats-project.org/index.html][T Programming Language - index]]
