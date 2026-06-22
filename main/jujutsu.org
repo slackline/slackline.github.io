@@ -773,6 +773,12 @@ which is one of the best [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] pack
 
 ** IDE/Interfaces
 
+*** Terminal
+
++ [[https://github.com/emilien-jegou/oyui][oyui: Modern TUI merge tool and interactive diff editor for Jujutsu (jj) and Git]]
+
+*** Emacs
+
 + [[https://git.sr.ht/~puercopop/jujutsushi][jujutsushi - A emacs interface to jujutsu]]
 + [[https://github.com/bennyandresen/jujutsu.el][jujutsu.el: An Emacs interface for jujutsu, inspired by magit and humbly not attempting to match it in scope.]]
 + [[https://codeberg.org/vifon/vc-jj.el][jj backend]]
