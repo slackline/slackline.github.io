@@ -12,6 +12,7 @@ Why should I bother reading something nobody could be bothered to write?
 
 * Links
 
++ <2026-06-23 Tue> [[https://dair-community.social/@emilymbender/116801119514947623][Emily Bender on "ai" middle-ground]] great [[id:1b49dcae-92ee-429e-8ac6-7ccadd920fe7][thread]] on people taking the middle ground.
 + <2026-06-10 Wed> [[https://ergosphere.blog/posts/the-machines-are-fine/][The machines are fine. I'm worried about us.]] - on the loss of knowledge/skills.
 + <2026-05-24 Sun> [[https://link.springer.com/article/10.1007/s10676-024-09775-5][ChatGPT is bullshit | Ethics and Information Technology | Springer Nature Link]]
 + <2026-04-11 Sat> [[https://www.anildash.com/2026/03/27/endgame-open-web/][Endgame for the Open Web - Anil Dash]] - thoughtful reflection on the problems AI is causing.

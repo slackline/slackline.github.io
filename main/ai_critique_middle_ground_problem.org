@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       1b49dcae-92ee-429e-8ac6-7ccadd920fe7
+:END:
+#+TITLE: AI Middle Ground Problems
+
+Great thread from[[https://dair-community.social/@emilymbender/116801119514947623][Emily Bender]] on the problems with taking an "untenable middeground" position with regards to
+"[[id:7a9deb85-fb4d-4d18-b2be-ed8048a5a1d4][AI Critique]]"
+
+#+begin_quote
+A phenomenon I've noticed recently is people trying to occupy some untenable middleground wrt to the use of systems sold as "AI" -- this is a position where people try to recognize the harms of this tech but also hold space for "responsible" or "ethical" use.
+
+When someone is trying to hold this untenable position, a few things tend to come up (not everytime, not everyone):
+
+1- Defensiveness. People read criticism of the systems and proposed uses of the systems as accusations that users are "bad people". Thus a criticism of the tech lands as criticism of the user, and tensions flare.
+
+2- Righteousness. People do have legitimate needs, often unmet needs, and the synthetic text extruding machines can look like a solution. But just because the problems are real doesn't mean the solution is beneficial, effective, or worth (not always externalized) costs. Unfortunately, pointing out any of this is taken as the same as saying you don't care about the legitimate needs.
+
+3- Whataboutism. This is used to brush off concerns about the externtalities of these systems. You eat meat, you fly on airplanes, etc, etc, how dare you talk about the impacts of data centers?
+
+4- Tone policing. People who are trying to occupy that uncomfortable, untenable space will claim that clear statements of harms/strong principles against use of these systems will "turn others away" as if the centrists are the ones actually pushing for more ethical practice.
+
+But this "other people won't listen" remark I think is really a way of saying "This makes me uncomfortable" while trying to claim to be on the right side of history at the same time.
+
+5- Wishcasting. Some folks will point to scientific results from fields outside their own (usually media coverage thereof) that are marketed as having been done with "AI" and ask: How could you take a hardline against "AI" when it has provided XYZ?
+
+6- Exceptionalism. "I know this can be dangerous for people in general, but I know how to use it carefully."/"I know how to verify every output, and I am not deskilling myself." How do you know? Also, if you acknowledge the dangers to others, what example are you setting by talking about/talking up your use?
+
+So what is the best way out of that uncomfortable, untenable space? I think one key step is disaggregating the (non-coherent) set of technologies sold as "AI". If you don't call the stuff you work with "AI", you aren't saddled with trying to defend any of the rest of it.
+
+The most recent iteration of this conversation I was involved in turned in part on a strange, over-expansive definition of "genAI" which included, for ex, optical character recognition (OCR).
+
+OCR can be a useful tool for many research projects! OCR is also the kind of technology that gets better with better language models, i.e. more fine-grained models of which word(parts) go where. That has been true since before "genAI" and will be true after.
+
+Just because you can use the synthetic media extruding machines to approximate the task of OCR, however, doesn't mean that that task can or should be used to justify the use of "genAI" in research.
+
+I think another important step is a values examination. What is important to you? How are those values supported or not by entering the discourse in a way that holds space for OpenAI/Anthropic/Google/Meta and all the other actors in this massive push to shove "AI" into every part of our lives as "not all bad"?
+
+What are your research goals, what do you value about participating in scholarship, how can you meet those goals/act in accordance with those values and what obstacles are in your way?
+
+Part of what makes that middle ground untenable and uncomfortable, I think, is that it requires carrying water for these clearly bad actors. You can set that bucket down and step out onto firmer ground.
+
+This does require going against the mainstream, but that gets easier when a) you find you're not alone and b) you see how much of mainstream opinion on this is actually the result of marketing.
+#+end_quote
