@@ -6,6 +6,8 @@
 #+NAME: running-log-2026
 | Date                   | Route                                                                                                                                                                                                                          | Distance | Time        | Pace   | Notes                                                                                                                                                                                                                                            |
 |------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+-------------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [2026-06-23 Tue 09:03] | Cat Lane Woods circuits | 10.30km | 56min + 55s | | Really hot and sweaty! Paused a couple of
+times and walked some small uphill sections. |
 | [2026-06-21 Sun 09:50] | Gleadless Valley circuit. | 10.58km | 58min + 07s | | Hot and sweaty! Felt tired, have had a sore throat, possible cold coming on. |
 | [2026-06-19 Fri 09:23] | Carrfield Avenue, Meersbrook Road, Albert Road, Saxon Road, Broadfield Road, Little London Road, Climbing Works, Abbeydale Road, Millhouses, Abbey Lane, Woodseats, Chesterfield Road, Meersbrook Park Road, Rushdale Road
                             | 12.87km | 70min + 35s |   | Pause for exercises in Millhouses |
