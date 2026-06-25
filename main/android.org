@@ -104,3 +104,4 @@ Old phones still have value, they are inexpensive and cheap (you already own the
   feedback]]
 + [[https://keepandroidopen.org/][Keep Android Open]]
 + [[https://android-developers.googleblog.com/2026/03/android-developer-verification.html][Android Developers Blog: Android developer verification: Balancing openness and choice with safety]]
++ [[https://techhub.social/@denzilferreira/116801114249934177][Thread on Android Integrity checks via Play Store]]
