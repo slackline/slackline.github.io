@@ -10,6 +10,7 @@ An extensions of [[id:9f72e8bd-2dbe-4a95-9517-c0c94bc995a0][Statistics]] Artific
 intelligence. Its a tricky area, what defines "human intelligence" is a basic axiom that needs defining before it is
 possible to define whether anything "artificial" can mimic it.
 
++
 + [[id:a916807b-112d-40c3-81fd-f0d4c6e45712][AI Agents]]
 + [[id:da64b178-e02b-4665-bae2-667bddf8885e][Hype]]
 + [[id:6409f972-f823-4e30-82bf-b4bea00164aa][Intelligence]]

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       99bdad35-4ab9-492a-bd0c-708383a5a514
+:END:
+#+TITLE: AI Resistance
+#+FILETAGS: :ai:resistance:
+
+* Links
+
++ [[https://airesistlist.org/][The AI Resist List]]
