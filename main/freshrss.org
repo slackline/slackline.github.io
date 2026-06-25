@@ -5,3 +5,31 @@
 #+FILETAGS: linux:rss:selfhosted
 
 FreshRSS is a great RSS aggregator, its feed can be read on Android using the ReadYou app.
+
+* Accessing Aggregated Feeds
+
+I wanted to give [[id:c5b2b8ae-46fc-4d91-8227-7116c7885de4][Emacs Elfeed]] another chance now that I had something setup that I could read from anywhere. How to get
+the RSS feed for a account/password protected feed hosted on FreshRSS? Unsurprisingly I found
+a [[https://github.com/FreshRSS/FreshRSS/discussions/7656#discussioncomment-13394870][thread]] that walked through how to do it.
+
+1. /Settings > Administration > Authenticaion/ and check the tickboxes
+
+  - /Allow API access (required for mobile apps and sharing user queries)/
+  - /Allow anonymous reading of the default user's articles (<username>)/
+
+2. Go to the main feed and click on the boomark/user queries icon (rectangle with a small triangular notch out of the
+   bottom). Click on the /Settings/ (cog-wheel icon) from here.
+3. Check the box /Enable sharing by HTML & RSS/, you can optionally configure what to include under the /Filter applied/
+   section.
+4. Submit the query, optionally giving it a name if you want.
+
+You now have a "card-box" that represents the query, click on the settings (cog-wheel icon) and on the right you can
+change the settings, it should include under the /Share this query by link/ section the checked box to /Enable sharing
+by HTML & RSS/ and under this there will be three links, one of which is /Shareable link to the RSS feed/. Copy this and
+use it in Elfeed.
+
+I can then configure [[id:c5b2b8ae-46fc-4d91-8227-7116c7885de4][Emacs Elfeed]] to use this.
+
+#+begin_example lisp
+
+#+end_example
