@@ -15,6 +15,10 @@ AI bullshit.
 
 There is also the issue of which [[id:143e393e-ab25-48ea-9aa5-908a68965839][Cloud Services]] we as individuals and our government services/institutions should use.
 
+* Contributions
+
+I make small contributions to projects both as part of my work and outside of my work. I keep a list of my contributions
+
 * OpenSource Software
 
 ** Essentials

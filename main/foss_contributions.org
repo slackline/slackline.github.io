@@ -1,0 +1,123 @@
+:PROPERTIES:
+:ID:       04fcd895-5dc4-4212-85ca-5a66ee3598c9
+:END:
+#+TITLE: FOSS Contributions
+#+FILETAGS: :foss:opensource:
+
+Thought I'd keep track of my contributions after not having done so for a few years.
+
++ [[https://github.com/pulls/search?q=is%3Apr%20author%3Aslackline][GitHub (slackline)]]
++ [[https://github.com/pulls/search?q=is%3Apr%20author%3Ans-rse][GitHub (ns-rse)]]
++ GitLab
++ Codeberg
+
+* Summary
+
+** gh-profile
+
+Grab some summary information about a user using the [[https://github.com/ehmatthes/gh-profiler][gh-profiler]] tool.
+
+#+begin_example
+uvx gh-profiler ns-rse
+#+end_example
+
+
+
+* Work
+
+** [[https://github.com/AFM-SPM/TopoStats][TopoStats]]
+
+My first major project when I started work as an RSE was overhauling a horrendous Python 2 based Docker containerised
+workflow for processing Atomic Force Microscopy images.
+
+Contributions are too numerous to list but I've had a major role in reshaping the code base ([[https://github.com/AFM-SPM/TopoStats/commits?author=ns-rse][397 commits; 2,064,265
+++30,508 --]]) and helped the team adopt good software engineering practices. Massive help from my friend [[https://github.com/SylviaWhittle][SylviaWhittle]]
+who took on much of the  hard-core coding.
+
+** [[https://github.com/AFM-SPM/AFMReader][AFMReader]]
+
+A spinout package from AFMReader that [[https://github.com/SylviaWhittle][SylviaWhittle]] made which handles loading of various different image files. I only
+had a light hand in this packages development.
+
+** [[https://github.com/scholi/pySPM][pySPM]]
+
+Got invited to help
++ [[https://github.com/scholi/pySPM/pull/52][chore: bump min numpy >=2.0.0]]
++ [[https://github.com/scholi/pySPM/pull/36][scikit-image dependency >=0.21.0]]
++ [[https://github.com/scholi/pySPM/pull/25][Fixing SciPy and NumPy deprectations]]
+
+
+*** [[https://github.com/jni/skan/][skan]]
+
++ [[https://github.com/jni/skan/pull/214][Add support for iterative pruning based on user-specified discard conditions]] (Draft)
++ [[https://github.com/jni/skan/pull/235][fix(csr): Set type of node_props to float64]]
++ [[https://github.com/jni/skan/pull/224][Add function to make nx Graph from Skeleton]]
++ [[https://github.com/jni/skan/pull/215][Convert '-' to '_' in summary dataframe]]
++ [[https://github.com/jni/skan/pull/212][Improved error reporting and tests for prune_paths() methods]]
+
+* Not Work
+
+
+** Python
+
+*** FitTrackee
+
++ [[https://github.com/ebrithiljonas/fittrackee-uploader/pull/20][docs: Update README.md to reflect new entry point]]
++ [[https://github.com/ebrithiljonas/fittrackee-uploader/pull/19][chore: Aligning license in pyproject.toml with LICENSE]]
++ [[https://github.com/ebrithiljonas/fittrackee-uploader/pull/15][doc: Update README.md to reflect switch to pyproject.toml]]
++ [[https://github.com/ebrithiljonas/fittrackee-uploader/pull/13][lint: numpydoc-validation]]
++ [[https://github.com/ebrithiljonas/fittrackee-uploader/pull/12][Slackline/10 pre commit lint]]
++ [[https://github.com/ebrithiljonas/fittrackee-uploader/pull/7][Switch to pyproject.toml configuration]]
++ [[https://github.com/ebrithiljonas/fittrackee-uploader/pull/6][bug: Worker.distance() method > Worker._distance()]]
+
+*** Pytest
+
++ [[https://github.com/pytest-dev/pytest/pull/13764][Format file patterns]]
+
+
+** Emacs
+
+*** Forge
+
++ [[https://github.com/magit/forge/pull/809][docs: github.com > codeberg.com under "tell forge about the instance"]]
+
+
+*** [[https://github.com/douglasdavis/numpydoc.el/][numpydoc.el]]
+
++ [[https://github.com/douglasdavis/numpydoc.el/pull/20][Adds defcustom numpydoc-newline-after-opening-quotes]]
+
+*** [[https://github.com/bbatsov/projectile/][Projectile]]
+
++ [[https://github.com/bbatsov/projectile/pull/1919][Expands table of files for project markers]]
++ [[https://github.com/bbatsov/projectile/pull/1913][Order file markers table by file name]]
+
+*** [[https://github.com/protesilaos/emacs-lisp-elements/][Emacs-lisp-elements]]
+
++ [[https://github.com/protesilaos/emacs-lisp-elements/pull/10][remove sentence from authors notes]]
+
+*** consult-gh
+
++ [[https://github.com/armindarvish/consult-gh/pull/162][Fix typos in comments]]
+
+** Other
+
+*** [[https://github.com/pedropark99/zig-book/][zig-book]]
+
++ [[https://github.com/pedropark99/zig-book/pull/50][Fix tpyo in chapter 4]]
+
+*** [[https://github.com/cleder/gpc-init/][gpc-init]]
+
++ [[https://github.com/cleder/gpc-init/pull/21][common: codespell hook]]
++ [[https://github.com/cleder/gpc-init/pull/23][nb: expand nbqa hooks to include check-ast and isort]]
++ [[https://github.com/cleder/gpc-init/pull/24][r: fix minor issues]]
++ [[https://github.com/cleder/gpc-init/pull/20][r: precommit hooks for statistical programming language R]]
++ [[https://github.com/cleder/gpc-init/pull/22][md: markdownlint-cli2 hook]]
++ [[https://github.com/cleder/gpc-init/pull/19][py additions]]
+
+*** [[https://github.com/Lakens/statistical_inferences/][Statistical Inferences]]
+
++ [[https://github.com/Lakens/statistical_inferences/pull/154][Git as version control; ed25519 ssh keys]]
+
+* Links
+
++ [[https://github.blog/developer-skills/github/download-your-data/][Download all of your GitHub data - The GitHub Blog]]
