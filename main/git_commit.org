@@ -56,3 +56,4 @@ FreeBSD, Go and others) that simply use scope successfully.
 ** Blogs
 
 + [[https://sumnerevans.com/posts/software-engineering/stop-using-conventional-commits/][Stop Using Conventional Commits]]
++ [[https://brennan.day/every-commit-a-sentence-git-commit-messages-for-bloggers/][Every Commit A Sentence: Git Commit Messages for Bloggers · brennan.day]]
