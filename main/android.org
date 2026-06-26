@@ -77,6 +77,7 @@ Old phones still have value, they are inexpensive and cheap (you already own the
 + [[https://lineage.microg.org/][LineageOS for microG]]
 + [[https://e.foundation/e-solutions/][eSolutions]]
 + [[https://grapheneos.org/][GrapheneOS: the private and secure mobile OS]]
++ [[https://iode.tech/][Be Smarter Than Your Phone - iodé]]
 
 
 ** Root
