@@ -7,3 +7,4 @@
 * Links
 
 + [[https://airesistlist.org/][The AI Resist List]]
++ [[https://labor.dair-institute.org/][Luddite Lab]]
