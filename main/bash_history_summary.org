@@ -1,0 +1,53 @@
+:PROPERTIES:
+:ID:       7ed48a3f-83c1-4328-85f0-f5c452757d09
+:END:
+#+TITLE: uv : Bash history summary
+#+FILETAGS: :uv:python:shell:
+
+A neat way of quickly summarising your [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] history using [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] as a [[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][uv]] script based on a [[https://techhub.social/@linuxgal/116829820383834019][post]] by someone else.
+
+#+begin_example
+#!/usr/bin/env -S uv run
+# /// script
+# requires-python = ">=3.14"
+# depdendencies = [
+#   "matplotlib"
+# ]
+# ///
+from collections import Counter
+import matplotlib.pyplot as plt
+import os
+history_file = os.path.expanduser("~/.bash_history")
+counter = Counter()
+with open(history_file, "r", errors="ignore") as f:
+    for line in f:
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        cmdline = line.split("|", 1)[0].strip()
+        parts = cmdline.split()
+        if not parts:
+            continue
+        cmd = parts[1] if parts[0] == "sudo" and len(parts) > 1 else parts[0]
+        counter[cmd] += 1
+top = counter.most_common(20)
+commands, counts = zip(*top)
+commands = commands[::-1]
+counts = counts[::-1]
+plt.figure(figsize=(10, 6))
+plt.barh(commands, counts)
+plt.title("Top 20 Bash Commands (frequency)")
+plt.xlabel("Usage count")
+plt.tight_layout()
+plt.show()
+#+end_example
+
+<2026-06-28 Sun> Currently fails with...
+
+#+begin_example
+❱ ./bash_history_summary
+Traceback (most recent call last):
+  File "/home/neil/dotfiles/.local/bin/./bash_history_summary", line 9, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+#+end_example

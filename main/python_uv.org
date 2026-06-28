@@ -110,7 +110,7 @@ jobs:
 
 
 #+begin_example
- #!/usr/bin/env -S uv run
+ #!/usr/bin/env -S uv run --script
    # /// script
    # requires-python = ">=3.12"
    # dependencies = [
@@ -120,6 +120,11 @@ jobs:
    import flask
    # ...
 #+end_example
+
+
+*** Example Scripts
+
++ [[id:7ed48a3f-83c1-4328-85f0-f5c452757d09][Bash history summary]] (not currently working)
 
 ** Running pytest
 
