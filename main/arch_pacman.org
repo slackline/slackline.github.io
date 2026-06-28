@@ -33,9 +33,7 @@ You can mask packages by adding similar to ~/etc/pacman.conf~
 
 #+begin_example conf
 # Pacman won't upgrade packages listed in IgnorePkg and members of IgnoreGroup
-IgnorePkg   = linux-rpi linux-api-headers linux-firmware linux-firmware-amdgpu linux-firmware-atheros linux-firmware-broadcom linux-firmware-cirrus linux
--firmware-intel linux-firmware-mediatek linux-firmware-nvidia linux-firmware-cirrus linux-firmware-other linux-firmware-radeon linux-firmware-realtek lin
-ux-firmware-whence raspberrypi-bootloader
+IgnorePkg   = linux-rpi linux-api-headers linux-firmware linux-firmware-amdgpu linux-firmware-atheros linux-firmware-broadcom linux-firmware-cirrus linux-firmware-intel linux-firmware-mediatek linux-firmware-nvidia linux-firmware-cirrus linux-firmware-other linux-firmware-radeon linux-firmware-realtek linux-firmware-whence raspberrypi-bootloader
 #IgnoreGroup = linux-firmware
 
 #NoUpgrade =
