@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       a3f6c951-fad3-4964-b165-389983c20ec5
+:END:
+#+TITLE: Computer Games
+#+FILETAGS: :quake:games:doom:
+
+I'm old enough to have played the original Lemmings, Doom, Quake, Quake II and Half-Life and many others that came
+before it on the ZX Spectrum.
+
+Quake and Doom were opened sourced by ID Software and get ported to all sorts of different platforms.
+
+
+* Links
+
++ [[https://en.wikipedia.org/wiki/Quake_(video_game)#Ports][Quake (video game) - Wikipedia]]
+
+** Quake Ports
+
++ [[https://cssquake.com/][CSSQuake]]
+
+** Doom Ports
