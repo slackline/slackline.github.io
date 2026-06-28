@@ -58,7 +58,7 @@ update.packages(ask = FALSE)
 You can update packages with
 
 #+begin_src r
-update.packages(ask = FALSE)
+update.packages(ask = FALSE, checkBuilt = TRUE)
 #+end_src
 
 ** Force update all packages
