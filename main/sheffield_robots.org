@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       125ff753-e88d-4368-9212-ae484b4fa3b9
+:END:
+#+TITLE: Sheffield Robots
+#+FILETAGS :sheffield:robots:
+
+* Links
+
++ [[https://www.theguardian.com/technology/2026/jun/29/ministers-likely-to-support-law-change-to-allow-delivery-robots-on-englands-paths][Ministers likely to support law change to allow delivery robots on England’s paths | Drones (non-military) | The Guardian]]
++ [[https://pavementoverload.com/][Pavement Overload | Britain's Pavements Are Not For Sale]]
