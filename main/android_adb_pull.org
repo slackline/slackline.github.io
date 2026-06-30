@@ -9,6 +9,12 @@
 You can get files from (and too) your phone if you have USB Debugging enabled and the Android SDK installed on your
 computer.
 
+* Setup
+
+You have to [[https://developer.android.com/studio/debug/dev-options#enable][enable developer options]] on your phone, since I use [[id:86e356e8-931f-40f7-9393-13a89c22c00d][LineageOS]] I followed their [[https://wiki.lineageos.org/adb_fastboot_guide][instructions]]. I did find
+after upgrading that whilst this option was enabled I didn't have the necessary access, the ~adb device~ didn't list the
+device and the phone didn't show anything. Rebooting sorted this.
+
 * Pull multiple files
 
 Typically you can only pull one file, but with a bit of [[id:48c0d280-8330-4f65-a5da-098ea186c6b6][Bash xarg]] magic you can pull multiple files across. Based on
