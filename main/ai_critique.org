@@ -79,6 +79,8 @@ Why should I bother reading something nobody could be bothered to write?
 
 ** Dangers
 
++ <2026-06-29 Mon> [[https://www.covertswarm.com/post/ai-guardrails-will-fail-nist-mathematical-proof][AI guardrails will always fail. NIST just proved it mathematically. | CovertSwarm]] ([[https://ieeexplore.ieee.org/document/11475847][Robust AI Security
+  and Alignment: A Sisyphean Endeavor? | IEEE Journals & Magazine | IEEE Xplore]])
 + <2026-05-31 Sun> [[about:reader?url=https%3A%2F%2Fwww.newyorker.com%2Ftech%2Fannals-of-technology%2Fthe-hidden-costs-of-automated-thinking][The Hidden Costs of Automated Thinking | The New Yorker]]
 + <2026-03-22 Sun> [[https://www.theguardian.com/us-news/ng-interactive/2026/mar/15/ai-defense-warfare-companies][These aren’t AI firms, they’re defense contractors. We can’t let them hide behind their models | The
   Guardian]]
