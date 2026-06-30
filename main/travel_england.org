@@ -5,6 +5,19 @@
 #+FILETAGS: :travel:holidays:accommodation:camping:
 
 * Devon & Cornwall
+
+** Camping
+
++ [[https://www.henryscampsite.co.uk/][Henrys Campsite]] near Lizard
+
+
+* Dorset
+
+** Camping
+
++ [[https://www.actonfieldcampsite.co.uk/][Acton Field Campsite]] ideal for climbing at Swanage and walking to [[https://www.squareandcompasspub.co.uk/][Square and Compass]]
++ [[https://www.weymouthcampingandcaravanpark.co.uk/][Marleaves Farm Campsite]] near Portland
+
 * Lake District
 
 ** Accommodation
@@ -20,4 +33,15 @@
 *** Langdale
 
 + [[https://www.baysbrownfarmcampsite.co.uk/][Baysbrown Farm Campsite]]
+
+* Accommodation Options
+* Peak District
+
+** Campsites
++ [[https://www.peakdistrict.gov.uk/visiting/places-to-visit/stanage-and-north-lees/cattis-side-cottage][Cattis Side Cottage (Stanage 4 people)]]
++ [[https://www.thebmc.co.uk/en/don-whillans-hut][Whillans Memorial Hut]]
++ [[https://climbers-club.co.uk/huts/bob-downes][CC R O Downe's]]
++ [[https://derbyshirepennineclub.co.uk/hut/][Derbyshire and Pennine Club]]
++ [[https://thorpe-bunk.co.uk/][Thorpe Farm Bunkhouse]]
+
 * Northumberland
