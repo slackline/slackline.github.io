@@ -24,3 +24,15 @@ Useful commands
 * gdb
 
 The main debugger for most languages is the ~gdb~
+
+* Grand Unified Debugger (GUD)
+
+The [[info:emacs#Debuggers][Running Debuggers Under Emacs]] gives a good overview but a neat example can be found in [[https://tusharhero.codeberg.page/underappreciated-builtin-gud.html][Underappreciated builtin:
+Grand Unified Debugger]]
+
+
+* Links
+
+** Blogs
+
++ [[https://tusharhero.codeberg.page/underappreciated-builtin-gud.html][Underappreciated builtin: Grand Unified Debugger]]

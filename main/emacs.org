@@ -133,6 +133,7 @@ with ~eselect emacs~.
 + [[https://lucidmanager.org/productivity/][Lucid Manager - Productivity]] - lots of clear articles on Emacs.
 + [[https://karl-voit.at/2021/07/23/emacs-lock-in/][The Emacs Lock-In Effect or the Emacs Sunk Cost Fallacy]]
 + [[https://randyridenour.net/posts/2026-04-25-emacs-sunk-cost-fallacy.html][Emacs and the Sunk Cost Fallacy]] - a response to the above article.
++ [[https://www.emacswiki.org/emacs/Carnival][Emacs Carnival]] - monthly themed blog posts on Emacs features, a brilliant resource.
 
 *** Video Tutorials
 
