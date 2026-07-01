@@ -28,3 +28,7 @@ You can also use the "AI" [[https://sourcery.ai/][Sourcery]] to "/Automatically 
 + [[id:a0215a32-68db-4534-ac62-b7105bd1c375][NumpyDoc Validation]]
 + Pylint
 + [[id:8d773d4d-79be-4555-871a-9de738f598a8][Ruff]]
+
+* Links
+
++ [[https://github.com/codingjoe/relint][codingjoe/relint: Write your own linting rules using regular expressions.]]
