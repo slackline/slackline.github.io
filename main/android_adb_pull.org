@@ -15,6 +15,14 @@ You have to [[https://developer.android.com/studio/debug/dev-options#enable][ena
 after upgrading that whilst this option was enabled I didn't have the necessary access, the ~adb device~ didn't list the
 device and the phone didn't show anything. Rebooting sorted this.
 
+* List installed Apps
+
+List installed apps with
+
+#+begin_example sh
+adb shell cmd package list packages | sort
+#+end_example
+
 * Pull multiple files
 
 Typically you can only pull one file, but with a bit of [[id:48c0d280-8330-4f65-a5da-098ea186c6b6][Bash xarg]] magic you can pull multiple files across. Based on

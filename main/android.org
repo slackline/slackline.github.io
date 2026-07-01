@@ -50,6 +50,7 @@ Old phones still have value, they are inexpensive and cheap (you already own the
 ** Apps
 
 + [[https://nooneshappy.com/article/native-apps-should-be-avoided-whenever-possible/][Native Apps Should Be Avoided Whenever Possible — No One's Happy]]
++ [[https://gardinerbryant.com/the-other-side-of-android-my-favorite-f-droid-apps/][The Other Side of Android: My Favorite F-Droid Apps]]
 
 *** Stores
 
