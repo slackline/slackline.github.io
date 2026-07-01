@@ -78,8 +78,9 @@ I might have to upgrade to a newer ArchLinuxARM version with 64-bit support.
 
 This is installed to ~/var/lib/hass/~
 
-#+begin_example
-# l /var/lib/hass/
+#+begin_example sh
+
+l /var/lib/hass/
 total 4.9M
 drwxr-xr-x 10 hass hass 4.0K Mar 22 08:40 .
 drwxr-xr-x 39 root root 4.0K Mar 22 00:31 ..
