@@ -102,6 +102,15 @@ You may want to install some useful programes.
   apt-get install git
 #+end_src
 
+* Booting USB Drive
+
+If you've flashed images to USB drives to make live distributions you may want to sometimes boot them in a virtual
+machine to update them.
+
+#+begin_example
+qemu-system-x86_64 -enable-kvm -m 1024 -drive file=/dev/sdg
+#+end_example
+
 * Links
 
 + [[https://wiki.archlinux.org/title/KVM][KVM - ArchWiki - Arch Linux]]
