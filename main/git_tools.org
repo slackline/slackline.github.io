@@ -24,6 +24,10 @@ uvx gh-profiler ns-rse
 
 [[https://alchemists.io/projects/git-lint][git-lint]] lints your commit history to give a consistent style.
 
+* TODO Copybara
+
+[[https://github.com/google/copybara][Copybara]] is a tool for transforming and moving code between repositories.
+
 * Managing Multiple Repositories
 
 ** My Repos
@@ -59,3 +63,4 @@ uvx gh-profiler ns-rse
 + [[https://github.com/hyparam/git2parquet][hyparam/git2parquet: CLI tool to export git commits in parquet format]]
 + [[https://github.com/seeyebe/gmap][gmap]] CLI tool for understanding what has changed, when, how much and by whom.
 + [[https://alchemists.io/projects/git-lint][Git Lint | Alchemists]] - consistent, linted git commits
++ [[https://github.com/google/copybara][Copybara]] - a tool for transforming and moving code between repositories.
