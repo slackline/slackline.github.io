@@ -19,6 +19,7 @@ it with his personal agenda.
 + [[id:0fa45a4e-3d04-4cb1-971d-0a30073db26c][Bandwagon.fm]]
 + [[https://tags.pub/][tags.pub]] a global hashtag server, follow ~hashtag@tags.pub~ and it boosts content tagged with ~hashtag~.
 + [[id:c5d6a74e-889b-42ae-a163-0387f4a42035][holos]] a self-hosted ActivityPub server for the Fediverse that runs on Android devices.
++ [[http://fairplayer.org/][FairPlayer ]]a distributed music listening platform.
 
 * Links
 

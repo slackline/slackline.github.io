@@ -25,6 +25,7 @@ An interesting way of finding new music from the BBC in the form of [[https://ww
 + [[https://bandcamp.com][Bandcamp]]
 + [[https://mirlo.space][Mirlo]]
 + [[https://www.subvert.fm/][Subvert]]
++ [[https://fairplayer.org/][Fairplayer]]
 
 * Hardware
 
