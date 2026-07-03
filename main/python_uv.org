@@ -33,11 +33,33 @@ environment is used when you are working on the project.
 Configuration of [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]] packages is these days via ~pyproject.toml~ (see [[https://peps.python.org/pep-0621/][PEP0621]]) and uv uses the ~[tools.uv]~ section
 for its configuration.
 
+** ~uv.lock~
+
+This lock file keeps track of what packages and versions your project uses. After changing the package dependencies in
+~pyproject.toml~ you should update the lock file.
+
+#+begin_example sh
+uv lock
+#+end_example
+
+If like me you are forgetful and neglect to run this after such modifications you can use the following
+[[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] [[https://docs.astral.sh/uv/guides/integration/pre-commit/][hook]] to do it for you automatically.
+
+
+#+begin_example yaml
+repos:
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    # uv version.
+    rev: 0.11.26
+    hooks:
+      - id: uv-lock
+#+end_example
+
 * Existing Projects
 
 To create a new virtual environment in an existing project in the ~.venv~ directory
 
-#+begin_example
+#+begin_example sh
 uv venv
 #+end_example
 
