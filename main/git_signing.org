@@ -6,6 +6,9 @@
 #+TITLE: Git Signing
 #+FILETAGS: :git:gnupg:signature:
 
+Signing your commits gives an indication that they came from who they purport to have come from. Traditionally this was
+done using [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] keys but at some point signing with [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] keys was enabled.
+
 * Setup
 
 You can find out what your [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] signing key is by checking with
@@ -50,8 +53,15 @@ ${KEYCHAIN} --agents gpg nshephard@protonmail.com
 #+end_src
 
 
+* gittuf
+
+[[https://gittuf.dev/][gittuf]]
 
 * Links
 
 + [[https://withblue.ink/2020/05/17/how-and-why-to-sign-git-commits.html][How (and why) to sign Git commits | With Blue Ink]]
 + [[https://rollen.io/blog/resigning-git-commits/][Re-signing (old) git commits]]
+
+** Tools
+
++ [[https://gittuf.dev/][gittuf]]
