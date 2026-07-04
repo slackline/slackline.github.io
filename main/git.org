@@ -235,6 +235,7 @@ Topics are alphabetical...
 + [[https://gitdiagram.com/][GitDiagram]] - generate diagrams of repositories.
 + [[https://web.archive.org/web/20180522180815/https://dpc.pw/blog/2017/08/youre-using-git-wrong/][You're using git wrong]]
 + [[https://github.blog/open-source/git/git-turns-20-a-qa-with-linus-torvalds/][Git turns 20: A Q&A with Linus Torvalds - The GitHub Blog]]
++ [[https://deadsimpletech.com/blog/why-dont-people-use-git-properly][Why don't people use git properly? | deadSimpleTech]]
 
 ** Research
 
