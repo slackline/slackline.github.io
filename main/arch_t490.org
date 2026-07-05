@@ -280,7 +280,6 @@ pacman -Syu \
   logrotate \
   lsd \
   lshw \
-  lshw \
   most \
   myrepos \
   pipewire \
