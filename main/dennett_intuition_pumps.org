@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       e1682a97-73f4-44d1-bc76-b9da46e7933f
+:END:
+#+TITLE: Intuition Pumps
+#+FILETAGS: :philosophy:dennett:freedom:thinking:
+
+* Chapters
+
+** Mamking Mistakes
+** By Parodyof Reasoning
+** Rapports Law
+** Sturgeons Law
+** Occam's Razor
+** Occam's Broom
+** lay Audiences as Decoys
+** Joosting
+** Three Species of Goulding
+*** Rathering
+*** Piling On
+*** Gould Two-Step
+** "Surely" Operator
+** Rhetorical Questions
+** What is Deepity

@@ -110,6 +110,7 @@ Most of these I read a long time ago when studying hence a distinct lack of note
 ***** Daniel C Dennet
 + [[https://en.wikipedia.org/wiki/Darwin%27s_Dangerous_Idea][/Darwin's Dangerous Idea/]]
 + [[https://en.wikipedia.org/wiki/Freedom_Evolves][/Freedom Evolves/]]
++ [[id:e1682a97-73f4-44d1-bc76-b9da46e7933f][/Intuition Pumps and Other Tools for Thinking/]]
 ***** R.A. Fisher
 + /The Genetical Theory of Natural Selection/
 ***** Charles Darwin
