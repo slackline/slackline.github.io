@@ -29,6 +29,7 @@ it with his personal agenda.
 
 + [[https://hive.blog/fediverse/@rubenstorm/the-fediverse-a-simple-guide-for-everyone][The Fediverse — A Simple Guide for Everyone — Hive]]
 + [[https://blog.elenarossini.com/my-fediverse-starter-guide/][The Future Is Federated: My Fediverse Starter Guide]]
++ [[https://fediverse.info/][fediverse.info — your people, your feed, your rules]]
 
 ** Other
 
