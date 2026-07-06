@@ -338,6 +338,10 @@ found useful.
 
 + [[https://www.slendr.net/][A Simulation Framework for Spatiotemporal Population Genetics • slendr]]
 
+*** Publishing
+
++ [[https://github.com/scienceverse/metacheck/][scienceverse/metacheck: Check Research Outputs for Best Practices]]
+
 ** ROpenSci
 
 + [[https://docs.ropensci.org/occCite/][Querying and Managing Large Biodiversity Occurrence Datasets • occCite]]
