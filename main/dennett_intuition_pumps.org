@@ -7,7 +7,16 @@
 * Chapters
 
 ** Mamking Mistakes
-** By Parodyof Reasoning
++ Unsurprisingly, as its something I've thought and known for a long time, we learn from our mistakes and it is one of
+  the best ways of learning.
++ Don't shy away from making mistakes, see them as an opportunity for learning.
+
+#+begin_quote
+Evolution is one of the central themes of this book for the simple reason that it is the central, enabling process not
+only of life but also of knowled and learning and understanding.
+#+end_quote
+
+** By Parody of Reasoning
 ** Rapports Law
 ** Sturgeons Law
 ** Occam's Razor
