@@ -46,6 +46,13 @@ Useful video from Proton [[https://www.youtube.com/watch?v=WJ8clVdaRKA][How Goog
 [[https://github.com/digital-grease/fauxx][Fauxx]] poisons data brokers and profilers by "/generating continuous, plausible, off-demograhpic synthetic activity from
 your device/".
 
+* Google
+
++ [[https://www.youtube.com/watch?v=WJ8clVdaRKA][How Google Tracks Everything You Do and How to Stop It - YouTube]]
+* Cars
+
++ [[https://www.youtube.com/watch?v=yOowGZ1ZgoI][Proton : Stop Letting Your Car Spy on You]]
+
 * Links
 
 + [[https://takebackctrl.org/][Take Back CTRL]]
