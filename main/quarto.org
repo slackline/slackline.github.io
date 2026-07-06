@@ -304,3 +304,7 @@ kable(head(mtcars[, 1:3]))
 + [[https://bylr.info/articles/2023/12/30/til-displaying-contributor-avatars-in-github-changelogs/][TIL: displaying contributor avatars in GitHub changelogs | bylr.info]]
 + [[https://www.joelnitta.com/posts/2024-01-11_using_renv_with_blog/][Joel Nitta – Documenting blog posts with renv]] - how to use different environments for different posts (see also [[https://neuromatch.social/@roaldarboel/113243708252919690][this
   thread]])
+
+** Collaboration
+
++ [[https://nrennie.rbind.io/blog/collaborating-quarto/][Collaborating on Quarto documents – Nicola Rennie]]
