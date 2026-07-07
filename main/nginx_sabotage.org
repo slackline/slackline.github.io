@@ -93,3 +93,11 @@ humans. Simple, neat idea.
 ** Research
 
 + [[https://arxiv.org/abs/2510.07192][[2510.07192] Poisoning Attacks on LLMs Require a Near-constant Number of Poison Samples]]
+
+** Block Lists
+
++ [[https://github.com/ai-robots-txt/ai.robots.txt][GitHub - ai-robots-txt/ai.robots.txt: A list of AI agents and robots to block. · GitHub]]
++ [[https://github.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist][uBlock Origin HUGE AI Blocklist]]
++ [[https://github.com/alvi-se/ai-ublock-blacklist][AI uBlock Origin Blacklist]]
++ [[https://scienceispoetry.net/files/parasites.txt][scienceispoetry.net/files/parasites.txt]] - from [[https://mastodon.social/@JulianOliver][@JulianOliver]] a privacy infrastructure and IT specialist.
++ [[https://github.com/Stevoisiak/Stevos-GenAI-Blocklist][Stevos-GenAI-Blocklist]]
