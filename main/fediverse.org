@@ -39,3 +39,8 @@ it with his personal agenda.
 
 + [[https://codeberg.org/MarvinsMastodonTools/feed2fedi][feed2fedi: Tool to make Fediverse posts from RSS feeds]]
 + [[https://codeberg.org/marvinsmastodontools][marvinsmastodontools - Codeberg.org]]
+
+** Software
+
++ [[https://rpi0w.stefanomarinelli.it/@stefano/687a61e9-dae7-4ed2-8c2e-94dfe0bd550c][LittleFedi]] looks an interesting
+  project for self-hosting.
