@@ -12,12 +12,16 @@
 + [[id:95d35596-cbf9-408a-b296-d3c79019cfd1][Yubikey]]
 + [[id:8d0bd278-d247-47a7-9e47-774e5a8a8150][DNS]]
 
-** Passkeys
+* Passkeys
 + [[https://www.passkeys.io/][Passkeys]]
 + [[https://www.eff.org/what-is-a-passkey][EFF | What is a passkey]]
 + [[https://www.eff.org/deeplinks/2023/10/passkeys-and-privacy][EFF | Passkeys and Privacy]]
 + [[https://proton.me/support/pass-use-passkeys][ProtonMail | Enabling passkeys]]
 
-** Random
+* Random
 
 + [[https://github.com/vm32/Linux-Incident-Response][vm32/Linux-Incident-Response: practical toolkit for cybersecurity and IT professionals. It features a detailed Linux cheatsheet for incident response]]
+
+* Auditing
+
++ [[https://ivarch.com/programs/xyz.shtml][ivarch.com: XYZ]]
