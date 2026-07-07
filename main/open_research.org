@@ -83,6 +83,7 @@ to validate and contribute to the research.
 + [[https://www.arj.no/2020/08/27/open-research/][Why is open research better research? – Alexander Refsum Jensenius]]
 + [[https://tzovar.as/open-science-beyond-licenses/][Open science and commoning beyond licensing: Deteriorating digital commons in the absence of collective governance]] by
   Bastian Greshake Tzovaras
++ [[https://blog.khinsen.net/posts/2026/07/06/conviviality.html][Conviviality in computational science | Konrad Hinsen's blog]]
 
 ** Podcasts
 + [[https://orionopenscience.podbean.com/][ORION Open Science Podcast]]

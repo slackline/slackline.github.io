@@ -55,6 +55,10 @@ and pulled from just like a Git repository.
 + [[https://devenv.sh/][devenv - Fast, Declarative, Reproducible, and Composable Developer Environments]]
 + [[https://maneage.org/][Maneage -- Managing data lineage]]
 
+*** Thoughts on...
+
++ [[https://blog.khinsen.net/posts/2026/07/06/conviviality.html][Conviviality in computational science | Konrad Hinsen's blog]]
+
 ** Data Version Control
 + [[https://github.com/dolthub/dolt][Dolt]]
 + [[https://dvc.org/][DVC : Data Version Control]]
