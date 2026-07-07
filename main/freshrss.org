@@ -4,7 +4,7 @@
 #+TITLE: FreshRSS
 #+FILETAGS: linux:rss:selfhosted
 
-FreshRSS is a great RSS aggregator, its feed can be read on Android using the ReadYou app.
+FreshRSS is a great [[id:281401b5-a6db-466b-b267-41d8099ba973][RSS]] aggregator, its feed can be read on Android using the ReadYou app.
 
 * Accessing Aggregated Feeds
 
