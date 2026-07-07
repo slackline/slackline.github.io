@@ -261,6 +261,7 @@ following R packages make working with such data easier.
 + [[https://docs.conda.io/en/latest/miniconda.html][Miniconda]]
 + [[https://usethis.r-lib.org/reference/use_readme_rmd.html][Create README files — use_readme_rmd • usethis]]
 + [[https://github.com/posit-conf-2023/pkg-dev-masterclass/tree/main][PostConf 2023 R Package Development Masterclass]]
++ [[https://rguides.dev/tutorials/r-package-development/][R Package Development — R Tutorial Series | RGuides]]
 
 ** Blogs
 
