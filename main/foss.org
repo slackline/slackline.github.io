@@ -133,6 +133,8 @@ practical tools and approaches for evaluating funding outcomes.
 ** Essays
 
 + [[https://www.arscyni.cc/file/take_my_money.html][What if I paid for all my free software? | Angelino Desmet]]
++ [[https://blog.khinsen.net/posts/2026/07/06/conviviality.html][Conviviality in computational science]]
++ [[https://qspace.fqxi.org/competitions/entry/2310][Towards Convivial Science]]
 
 ** Misc
 
