@@ -53,6 +53,8 @@ I was a happy [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]] user for many ye
 along with the [[https://ohmyz.sh/][Oh-myZsh]] framework. I liked the extra information and tools it provided so switched and haven't looked
 back. I still use Bash for my ~root~ account though just to make me a little more cautious.
 
+See more on [[id:e237f1b0-97bc-4c46-a2cc-934f293cad1b][Linux Shells]].
+
 * Web Hosting
 
 I use Linux on my VPS and various places to host websites. I've written more on this at [[id:e1dcf5fc-2125-455d-b800-d3f1b318c8c9][Web-hosting.]] Useful topics on

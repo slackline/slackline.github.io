@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       19f2bfff-52fc-4c59-9d6c-0c83972dd463
+:END:
+#+TITLE: Nushell
+#+FILETAGS: :linux:shell:nushell:
+
+* Links
+
++ [[https://www.nushell.sh/][Nushell]]

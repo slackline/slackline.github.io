@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       e237f1b0-97bc-4c46-a2cc-934f293cad1b
+:END:
+#+TITLE: Linux Shells
+#+FILETAGS: :linux:shell:bash:zsh:nushell:
+
+There are many shell options and tools to work with them.
+
+* Shells
+
++ [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]]
++ [[id:a1b78518-31e8-4fd3-a36f-d8f152832138][ZSH]]
++ [[id:19f2bfff-52fc-4c59-9d6c-0c83972dd463][Nushell]]
+
+* Tools
+
++ Oh-my-zsh
++ [[id:f74f50d3-9d99-4082-8733-84f139fddea1][Atuin]]
++ Starship
