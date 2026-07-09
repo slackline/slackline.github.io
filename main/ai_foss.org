@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       db5f2a26-8cf4-47a7-871f-47f8c8937a2e
+:END:
+#+TITLE: AI FOSS
+#+FILETAGS: :ai:foss:
+
+The tension between [[id:f277da12-5d6d-46e3-a49c-7bda9254d469][FOSS]] and "[[id:e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5][Artificial Intelligence]]" stems from the low quality and high volume of slop churned out by
+large language models.
+
+* Links
+
++ [[https://noai.starlightnet.work/list.html][The No-AI list]]
+
+** Blogs
+
++ [[https://lumramabaja.com/posts/engineering-sacrifice-how-open-source-survives-the-age-of-free-code/][Engineering Sacrifice: How Open Source Survives the Age of Free Code | Lum Ramabaja]]
