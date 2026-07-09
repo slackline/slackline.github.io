@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       18e710e6-0e16-496c-b989-c23eafe63b1e
+:END:
+#+TITLE: Live Coding Music
+#+FILETAG: :livecoding:music:
+
+* Links
+
++ [[https://sonic-pi.net/][Sonic Pi - The Live Coding Music Synth for Everyone]]
++ [[https://strudel.cc/workshop/getting-started/][Strudel Docs]]
++ [[https://supercollider.github.io/][Super Collider]]
++ [[https://renardo.org/][Renardo]] for Python based coding
