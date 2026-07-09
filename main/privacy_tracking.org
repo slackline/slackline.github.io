@@ -49,6 +49,11 @@ your device/".
 * Google
 
 + [[https://www.youtube.com/watch?v=WJ8clVdaRKA][How Google Tracks Everything You Do and How to Stop It - YouTube]]
+
+* Meta
+
++ [[https://www.youtube.com/watch?v=Yv2Eb_kJous][Every Way Meta Tracks You, and How to Stop It - YouTube]]
+
 * Cars
 
 + [[https://www.youtube.com/watch?v=yOowGZ1ZgoI][Proton : Stop Letting Your Car Spy on You]]
