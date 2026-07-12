@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       61f4787f-c41c-4ca1-8b2e-3c2ffe220cdc
+:END:
+#+TITLE: Emacs : AI
+#+FILETAGS: :emacs:ai:
+
+Emacs, as of writing (<2026-07-12 Sun>) has a policy that will be defined by the [[id:8b1e2298-ee48-43d3-a00b-94bb68413927][Free Software Foundation]] GNU
+organisation on the use of large language models (aka "[[id:e23a0f6e-6276-4443-bd01-bc7cfd7ec8c5][Artificial Intelligence]]"). Some people are fed up of waiting and
+so have started a pledge to instigate a fork, [[https://human-emacs.org/][Human Emacs]], should the decision be to permit code from such systems in
+the foundational code base.
+
+* Links
+
++ [[https://human-emacs.org/][Human Emacs]]

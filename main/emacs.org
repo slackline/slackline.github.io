@@ -14,6 +14,7 @@ getting started [[id:36a83dd6-7535-43a9-9b68-15dc135c86fd][Emacs Getting Started
 + [[id:938af6af-7a0e-46d1-ae76-6157e948151b][Configuration]]
 + [[id:ff8ee302-7518-4179-9bcb-63b13199f897][Emacs Packages]]
 + [[id:c7a63aeb-a6d6-4753-8f0b-f255a532d36b][Abbrev]]
++ [[id:61f4787f-c41c-4ca1-8b2e-3c2ffe220cdc][Artificial intelligence policy]]
 + [[id:126bd875-23f1-4f06-b96a-b832f410fb12][AWS]]
 + [[id:dcadfe01-721f-4d8d-b220-9acd15e86736][Blog]]
 + [[id:4451966f-b810-4a9d-905b-e2b682578c62][Buffers]]
