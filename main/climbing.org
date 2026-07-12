@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       aec1f7f0-a215-4822-865b-2103e137e8eb
+:END:
+#+TITLE: Climbing
+#+FILETAGS: :climbing:
+
++ [[id:9dd5bb41-2bbf-4754-a1a2-5ec5b66ecf9e][Climbing Topos]]
++ [[id:63c286fc-5d2b-4c44-8069-1e2df0b57922][Climbing (Training)]]
+
+* Links
+
+** Training
+
++ [[https://www.ukclimbing.com/articles/skills/series/how_to_highball/rope_down-16941][UKC Articles - Skill Series: How To Highball]]
