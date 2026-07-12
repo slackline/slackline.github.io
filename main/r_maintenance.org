@@ -12,20 +12,30 @@ By default R looks for ~\~/.Rprofile~ on starting to load options and configurat
 this. For example the ~\~/.R/Makevars~ file defines options for compiling packages from source and may look like the
 following which enables multiple cores to be used by ~gcc~ when building from source.
 
-#+begin_src r
+#+begin_example r
     CFLAGS=-O3 -Wall -pedantic -march=native -mtune=native -pipe
     CXXFLAGS=-O3 -Wall -pedantic -march=native -mtune=native -pipe
     MAKEOPTS=-j$(nproc)
-#+end_src
+#+end_example
+
+You can check what file is used for a given user with ~tools::makevars_user()~
+
+#+begin_example r
+> tools::makevars_user()
+[1] "/root/.R/Makevars"
+#+end_example
+
+The [[https://withr.r-lib.org][withr]] package has some useful utilities too such as [[https://withr.r-lib.org/reference/set_makevars.html][~withr::set_makevars()~]] to create a new ~Makevars~ file by adding
+new variables and [[https://withr.r-lib.org/reference/with_makevars.html][~withr::with_makevars()~]] to temporarily change contents of an existing ~Makevars~ file.
 
 * Installing Packages
 
 It's easy to install packages from CRAN with
 
-#+begin_src r
+#+begin_example r
 packages_to_install <- c("tidyverse", "tidymodels", "ggplot2")
 > install.packages(packages_to_install)
-#+end_src
+#+end_example
 
 
 ** NixOS
@@ -46,10 +56,10 @@ The V8 package has an external system dependency on ~libv8~, it gives advice on 
 not all. Under [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]] there doesn't appear to be such a package but there is advice given, which is to set the
 environment variable ~DOWNLOAD_STATIC_LIBV8=1~ so you can...
 
-#+begin_src r
+#+begin_example r
 Sys.setenv(DOWNLOAD_STATIC_LIBV8=1)
 update.packages(ask = FALSE)
-#+end_src
+#+end_example
 
 ...and it will download the library that is required.
 
@@ -57,27 +67,27 @@ update.packages(ask = FALSE)
 * Updating Packages
 You can update packages with
 
-#+begin_src r
+#+begin_example r
 update.packages(ask = FALSE, checkBuilt = TRUE)
-#+end_src
+#+end_example
 
 ** Force update all packages
 
 You can force updating all packages, e.g. after a major R version update with
 
-#+begin_src r
+#+begin_example r
 install.packages(
     lib  = lib <- .libPaths()[1],
     pkgs = as.data.frame(installed.packages(lib), stringsAsFactors=FALSE)$Package,
     type = 'source'
 )
-#+end_src
+#+end_example
 
 * Connectivity
 
 Some packages, by their nature (e.g. ~{googlesheets}~) require network connectivity to work, but not all do. You can
 check whether a given package needs network connectivity (under GNU/Linux at least) with
 
-#+begin_src: bash
+#+begin_example bash
 unshare --net --ipc -r R CMD check {package}_0.1.0.tar.gz
-#+end_src
+#+end_example
