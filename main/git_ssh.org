@@ -9,6 +9,16 @@
 Git forges uses [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] keys to authenticate when pushing code. They can also be used to sign commits as an alternative
 [[id:ce08bd82-0146-49cb-8a64-048ffe7210f2][GnuPG]] keys.
 
+* Per repository User Credentials
+
+If you want to use a specific key for a given repository add the following to the repositories ~.git/config~ (or
+~config~ if you have a bare repository for [[id:ddcfed69-2ba5-442a-99b4-eaa5c7a9fe40][Git Worktrees]]).
+
+#+begin_example
+[core]
+    sshCommand = ssh -i ~/.ssh/haldane_ed25519 -F /dev/null~
+#+end_example
+
 * Links
 
 + [[https://dansjots.github.io/posts/per-repo-ssh-key/][Put SSH keys in .git to make repos USB-portable | Dan's Jots]]
