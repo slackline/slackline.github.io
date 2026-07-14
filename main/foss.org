@@ -41,6 +41,10 @@ I make small contributions to projects both as part of my work and outside of my
 + [[https:://musicpd.org][MPD]]
 + Snapcast
 
+** Forums
+
++ [[id:13de4e0e-4c14-48c8-897e-42862be8cfc1][Discourse]]
+
 ** Gentoo
 
 + eix

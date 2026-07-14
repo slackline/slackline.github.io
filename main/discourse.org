@@ -84,3 +84,4 @@ address for administrator, an SMTP server and ideally a [[https://letsencrypt.or
 + [[https://github.com/discourse/discourse/blob/main/docs/INSTALL.md][discourse/INSTALL.md · GitHub]]
 + [[https://meta.discourse.org/t/setup-discourseconnect-official-single-sign-on-for-discourse-sso/13045][DiscourseConnect]] - offers single sign-on.
 + [[https://blog.discourse.org/2025/11/how-discourse-uses-discourse/][How Discourse Uses Discourse]]
++ [[https://blog.discourse.org/2026/07/introducing-the-discourse-free-plan/][Introducing the Discourse Free Plan]]
