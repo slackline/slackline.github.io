@@ -70,6 +70,7 @@ excellent book which is available on-line for free as well as in print.
   brms, ggplot2, and the tidyverse]] | [[https://vincentarelbundock.github.io/rethinking2/][Rethinking2 using Stan, R, rstan, tidybayes, and ggplot2]] | [[https://github.com/pymc-devs/resources/tree/master/Rethinking_2][PyMC3 Rethinking 2]])
 + [[https://www.bayesrulesbook.com/][Bayes Rules! An Introduction to Applied Bayesian Modeling | Alicia Johnson, Miles Ott, Mine Dogucu]]
 + [[https://avehtari.github.io/ROS-Examples/][Regression and Other Stories]]
++ [[https://avehtari.github.io/Bayesian-Workflow/][Bayesian Workflow book: Website – Bayesian Workflow book]]
 
 ** Blog
 
