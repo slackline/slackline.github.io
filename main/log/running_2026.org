@@ -6,6 +6,10 @@
 #+NAME: running-log-2026
 | Date                   | Route                                                                                                                                                                    | Distance | Time         | Pace | Notes                                                                                                                |
 |------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+--------------+------+----------------------------------------------------------------------------------------------------------------------|
+| [2026-07-19 Sun 16:31] | Run round the woods near Stourbridge | 10.57km | 60min + 44s | | Slow run as navigation,
+almost turned ankle at @ ~3km but avoided it just! Was hot but managed to stay in shade for most of it. |
+| [2026-07-16 Thu 19:40] | Cat Lane Woods circuits | 10.09km | 57min + 11s | | Hot and sweaty, not much fun but plodded
+round slowly. |
 | [2026-07-14 Tue 09:04] | Gleadless Valley Loop.                                                                                                                                                   | 11.53km  | 63min + 01s  |      | Nice run, not too hot and cooling breeze.                                                                            |
 | [2026-07-11 Sat 09:35] | Woodseats, Abbeydale Lane, Millhouses Park, Archer Road, Little London Road, Meersbrook Park Road.                                                                       | 10.83km  | 58min + 46s  |      | Reverse loop to get hill out the way at the start, very hot and sweaty.                                              |
 | [2026-07-10 Fri 08:14] | Carrfield Avenue, Meersbrook Road, Albert Road, Saxon Road, Broadfield Road, Little London Road, Climbing Works, Little London Road, Meersbrook Park Road, Rushdale Road | 6.75km   | 37 min + 14s |      | Short run to add to yesterdays short run, still hot and sweaty but managed to stay in shade for most of it. Not fun! |
