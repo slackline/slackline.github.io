@@ -179,3 +179,4 @@ practical tools and approaches for evaluating funding outcomes.
 ** Vulneratbilities
 
 + [[https://akrites.org/][Akrites | Patch the Commons, Together]]
++ [[https://www.half-second.com/][Half a Second - The Backdoor That Almost Broke the Internet, and the Invisible Labor Beneath It]]
