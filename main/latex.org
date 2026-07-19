@@ -12,6 +12,13 @@ used to produce all sorts of documents from scientific reports, beamer slides, c
 and more. Thanks to integration with [[id:1db6158d-cb5d-4b73-b926-95e9c09f878b][RMarkdown]] you can take advantage of the array of markup in LaTeX when writing
 literate documents in [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]].
 
+* Linting
+
+There are some [[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] hooks available for linting your LaTeX files.
+
++ [[https://github.com/vdmitriyev/latex-git-hooks][vdmitriyev/latex-git-hooks]]
++ [[https://github.com/jonasbb/pre-commit-latex-hooks][jonasbb/pre-commit-latex-hooks]]
+
 * Cleaning
 
 LaTeX files can end up having a lot of clutter and potentially containing sensitive information (see [[https://arxiv.org/abs/2510.03761][here]]). A useful
