@@ -23,6 +23,10 @@ which are grouped into crags and areas.
 
 [[https://openbeta.io/][OpenBeta.io]] is an independent attempt to democratise climbing/boudlering route information.
 
+** [[https://climbing-history.org/][Climbing History]]
+
+A nice website that documents significant historical ascents and climbers.
+
 * Links
 
 ** Europe
