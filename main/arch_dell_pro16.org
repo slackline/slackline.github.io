@@ -1,0 +1,61 @@
+:PROPERTIES:
+:ID:       df3f416c-ef73-46bd-bb32-2277883274de
+:END:
+#+TITLE: Arch Dell Pro16
+#+FILETAGS: :linux:arch:
+
+I got a new laptop at work, it was a Dell Pro16 PC16250 and I wanted to migrate my old [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] install from the old
+laptop to the new one.
+
+* Partition drives
+
+The new 2TB drive was actually smaller so I had to create the EFI (boot) and ~/~ (root) directories to match exactly the
+sizes then used [[id:9384a236-065e-4384-9b90-2a083736eb17][dd]] to copy these partitions over directly. The third partition I manually created a LUKS partition,
+opened and mounted it then used ~rsync~ to copy 662GB over.
+
+* BIOS
+
+Need to set the BIOS to boot from ~/boot/EFI/EFI/arch/grubx64.efi~
+
+* ~/etc/fstab~
+
+Because I used ~dd~ to copy the drives the UUID of the partition remained the same for the ~/~ partition (although the
+/filesystem/ UUID changed?). The block UUID can be found with ~blkid~. I thought I could use the new ~blkid~ of the
+~/home/~ partition in ~/etc/fstab~ but on rebooting I was told the partition failed to decrypt.
+
+* Cryptsetup
+
+The solution to this was to modify ~/etc/crypttab~ which lists the devices/partitions to be decrypted and points to the
+relevant ~/etc/cryptsetup-keys.d/<file>.key~ which is a simple plain text file holding the encryption key for the given
+partition. It was this file that needed to be updated with the new UUID and because its entry was under ~home~ in
+~/etc/crypttab~ I could revert ~/etc/fstab~ to mount ~/home~ from ~/dev/mapper/home~
+
+#+begin_example
+home   UUID=1231412312-1283498-be838-ac09090      /etc/cryptsetup-keys.d/home-crypt.key
+#+end_example
+
+#+begin_example
+/dev/mapper/home     /home    ext4     rw,realtime 0 2
+#+end_example
+
+
+* Xorg
+
+This was failing and complaining about not being able to find ~/usr/lib/dri/i915_dri.so~ I switched to the older
+~mesa-amber~ package which seemed to help and updated ~xf85-video-vesa~ which was another module that couldn't be
+loaded.
+
+The next challenge was that it couldn't open ~/dev/dri/card0~ because the device was at  ~/dev/dri/card1~. Looking at
+~ls -lha /dev/dri/by-path~ confirmed this.
+
+#+begin_example
+ls -lha /dev/dri/by-path
+lrwxrwxrwx 1 root root  8 Jul 21 06:55 pci-0000:00:02-card -> ../card1
+lrwxrwxrwx 1 root root 13 jul 21 06:55 pci-0000:00:02-render -> ../renderD128
+#+end_example
+
+So its a graphics card issue, perhaps initramfs needs the i965 module earlier so I added it to ~/etc/mkinitcpio.conf~
+
+#+begin_example
+MODULES=(i915)
+#+end_example
