@@ -54,3 +54,4 @@ Note to-self - if implementing in Python make it a series of sets that are then 
 + [[https://adaway.org/][adaway.org]] (source [[https://github.com/AdAway/AdAway][AdAway/AdAway]])
 + adblock (source )
 + [[https://ublockorigin.com/][uBlock Origin]]  (source [[https://github.com/gorhill/uBlock][gorhill/uBlock]])
++ [[https://consentomatic.au.dk/][Consent-O-Matic]]
