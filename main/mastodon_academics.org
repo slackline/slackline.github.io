@@ -14,3 +14,4 @@ A list of academic [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] users on [
 + [[https://zirk.us/@randyridenour][@randyridenour@zirk.us]]
 + [[https://mastodon.acm.org/@zamansky][@zamansky@mastodon.acm.org]]
 + [[https://mathstodon.xyz/@oantolin][@oantolin@mathstodon.xyz]]
++ [[https://mastodon.social/@holl@mathstodon.xyz][@holl@mathstodon.xyz]]
