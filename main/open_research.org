@@ -126,3 +126,7 @@ to validate and contribute to the research.
 
 + [[https://blogs.nottingham.ac.uk/makingsciencepublic/2025/06/20/my-blog-end-of-an-era-or-new-beginning/][My blog: End of an era or new beginning? - Making Science Public]]
 + [[https://science-in-the-digital-era.khinsen.net/#Research%20outputs][Science in the digital era]]
+
+** AI
+
++ [[https://florencia-dandrea.netlify.app/posts/2026-07-en.html][Challenges and potential for reproducible open science in the AI era – Florencia D’Andrea]]

@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       272142ad-6dbc-4260-82fe-32bef3630a92
+:END:
+#+TITLE: AI Academia
+#+FILETAGS: :ai:academia:
+
+* Links
+
+** Declarations
+
++ [[https://leidendeclaration.ai/][Leiden Declaration on Artificial Intelligence and Mathematics]]
+
+** Publishers
