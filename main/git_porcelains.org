@@ -38,3 +38,4 @@ Hero!]]. I know the content covered in the course but don't use it beyond that.
 + [[https://gitfourchette.org/][GitFourchette]]
 + [[https://github.com/bmf-san/ggc][bmf-san/ggc]] Git CLI written in Go.
 + [[https://github.com/kbrdn1/gwm-cli][GitWorktreeManager]]
++ [[https://github.com/simoarpe/ziggity][Ziggity]]  an ultra fast, keyboard driven terminal UI for Git, written in Zig.
