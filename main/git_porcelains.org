@@ -37,3 +37,4 @@ Hero!]]. I know the content covered in the course but don't use it beyond that.
 + [[https://github.com/altsem/gitu][gitu: A TUI Git client inspired by Magit]]
 + [[https://gitfourchette.org/][GitFourchette]]
 + [[https://github.com/bmf-san/ggc][bmf-san/ggc]] Git CLI written in Go.
++ [[https://github.com/kbrdn1/gwm-cli][GitWorktreeManager]]
