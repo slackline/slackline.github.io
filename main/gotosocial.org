@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       c4102acc-0958-46e3-ab75-78312e9c718e
+:END:
+#+TITLE: GoToSocial
+
+[[https://docs.gotosocial.org/en/v0.20.2/][GoToSocial]] is an ActivityPub social network server written in the Go language for the [[id:8178219c-ef79-4b59-ad51-e4204a8f369c][Fediverse]]. It has a relatively
+small footprint.
+
+* Installation
+
+No big deal here I installed on my [[id:c0091cb9-e687-4a0b-adb6-24077511f7d1][Arch VPS]] so all dependencies were pulled in automagically when installing with...
+
+#+begin_example
+pacman -Syu gotosocial
+#+end_example
+
+** Configuration
+
+Config file lives at ~/etc/gotosocial/config.yaml~ and is well commented.
+
+
+* Links
+
++  [[https://docs.gotosocial.org/en/v0.20.2/][GoToSocial]]
+
+** Installation

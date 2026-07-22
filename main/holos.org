@@ -4,10 +4,11 @@
 #+TITLE: Holos
 #+FILETAGS: :fediverse:mastodon:holos:
 
-[[https://holos.social/][Holos]] is an Android application for running your on ActivityPub server to the [[id:8178219c-ef79-4b59-ad51-e4204a8f369c][Fediverse]]. It uses a relay as an
+[[https://holos.social/][Holos]] is an Android application for running your on ActivityPub server to the [[id:8178219c-ef79-4b59-ad51-e4204a8f369c][Fediverse]]. It uses a [[https://codeberg.org/tom79/Holos-Relay-Server][relay]] as an
 intermediary so that interactions are stored when your device isn't online.
 
 
 * Links
 
 + [[https://holos.social/][holos.social]] homepage for the project.
++ [[https://tom79.dev/posts/holos-relay-1-0-0/][The Holos relay hits 1.0.0 | tom79]]
