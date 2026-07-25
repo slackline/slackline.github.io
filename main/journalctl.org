@@ -4,7 +4,27 @@
 #+TITLE: Journalctl
 #+FILETAGS: :linux:systemd:logging:
 
+* Configuration
+
+** Limit log file size
+
+~/etc/systemd/journald.conf~
+
+#+begin_example
+[Journal]
+SystemMaxUse=512M     # Total journal size
+RuntimeMaxUse=128M    # Journal size in temp storage
+MaxFileSec=1month     # Log retention time
+#+end_example
+
+
 * Options
+
+** Check journal disk usage
+
+#+begin_example
+journalctl --disk-usage
+#+end_example
 
 ** Current boot
 
@@ -41,3 +61,8 @@ journalctl -f -p err
 #+begin_example
 journalctl -u nginx.service
 #+end_example
+
+
+* Links
+
++ [[https://linuxize.com/cheatsheet/journalctl/][journalctl Cheatsheet | Linuxize]]
