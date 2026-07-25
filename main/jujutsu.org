@@ -770,6 +770,7 @@ which is one of the best [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] pack
 
 + [[https://steveklabnik.github.io/jujutsu-tutorial/introduction/introduction.html][Steve's Jujutsu Tutorial]] - assumes working knowledge of [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]].
 + [[https://jj-for-everyone.github.io/][Jujutsu for everyone]] - doesn't assume working knowledge of [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]].
++ [[https://evmar.github.io/jjtut/][Evan's Jujutsu Tutorial]]
 
 ** IDE/Interfaces
 
