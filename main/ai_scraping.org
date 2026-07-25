@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       86544d2d-7cb4-4634-8bb8-c68c86580ac9
+:END:
+#+TITLE: AI Scraping
+#+FILETAGS: :ai:scraping:
+
+* Hugging Face
+
+They scraped GitHub, you can [[https://huggingface.co/spaces/HuggingFaceCode/in-the-stack][search and opt-out]].
+_

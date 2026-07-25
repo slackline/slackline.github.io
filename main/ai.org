@@ -22,6 +22,7 @@ possible to define whether anything "artificial" can mimic it.
 + [[id:761dfe8a-b4e3-440a-af4c-157196cefa7c][Local LLMs]]
 + [[id:f40bf09c-3939-4004-ae7e-50b1cb864b9b][Research Fraud]]
 + [[id:272142ad-6dbc-4260-82fe-32bef3630a92][Academia]]
++ [[id:86544d2d-7cb4-4634-8bb8-c68c86580ac9][Scraping]]
 
 * Methodology
 
