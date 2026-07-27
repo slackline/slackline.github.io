@@ -6,7 +6,7 @@
 
 * Chapters
 
-** Mamking Mistakes
+ ** Mamking Mistakes
 + Unsurprisingly, as its something I've thought and known for a long time, we learn from our mistakes and it is one of
   the best ways of learning.
 + Don't shy away from making mistakes, see them as an opportunity for learning.
@@ -17,11 +17,26 @@ only of life but also of knowled and learning and understanding.
 #+end_quote
 
 ** By Parody of Reasoning
-** Rapports Law
+
++ Look for contradictions in assertions/conjectures when taken to the extreme.
++ If something is obviously flawed why do some people spend so much time trying to demolish the idea?
++ aside: materialism asserts that the /mind/ is the brain, whilst dualists assert that it is a separate entity that
+interacts with the physical brain.
+** Rapoports Law
++ Always point out obvious flaws.
++ Expose hidden contradictions,  but be wary of straying into nitpicking/parody.
++ aside: Anatol Rapoport devised the tit-for-tat strategy in the Prisoner's dilemma!
++ Successful critical commentary consists of...
+  1. Express your point clearly (such that your opposition says "/Thanks, I'd never thought of it like that/")
+  2. List points of agreement.
+  3. Mention what you have learned from others points of view.
+  4. Only then criticise.
++ This means that your opposition will be much more receptive.
++ Can be hard (as Dennett admits himself) as some people are so ludicrous that they don't deserve the time taken.
 ** Sturgeons Law
 ** Occam's Razor
 ** Occam's Broom
-** lay Audiences as Decoys
+** Lay Audiences as Decoys
 ** Joosting
 ** Three Species of Goulding
 *** Rathering
@@ -30,3 +45,12 @@ only of life but also of knowled and learning and understanding.
 ** "Surely" Operator
 ** Rhetorical Questions
 ** What is Deepity
+** Summary
+** Tools for Thinking about Meaning or Content
+** Murder in Trafalger Square
+** An Older Brother Living in Cleveland
+** Daddy is a Doctor
+** Manifest Image and Scientific Image
+** Folk Psychology
+**The Intentional Stance
+** The Personal/Sub-Personal Distinction
