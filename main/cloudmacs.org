@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       11607dc5-237b-4f56-a604-2669cfe9e1d4
+:END:
+#+TITLE: Emacs Cloudmacs
+#+FILETAGS: :emacs:docker:browser:web:
+
+Cloudmacs allows you to run Emacs in a Docker container and access it via a web-browser.
+
+* Links
+
++ [[https://github.com/karlicoss/cloudmacs][karlicoss/cloudmacs: Selfhost your Emacs and access it in browser]]
++ [[https://beepb00p.xyz/cloudmacs.html][Cloudmacs: Emacs in your web browser | beepb00p]]

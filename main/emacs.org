@@ -19,6 +19,7 @@ getting started [[id:36a83dd6-7535-43a9-9b68-15dc135c86fd][Emacs Getting Started
 + [[id:dcadfe01-721f-4d8d-b220-9acd15e86736][Blog]]
 + [[id:4451966f-b810-4a9d-905b-e2b682578c62][Buffers]]
 + [[id:8b6ba3c1-18f2-4cc4-ae5c-97c31b7cec28][Citations]]
++ [[id:11607dc5-237b-4f56-a604-2669cfe9e1d4][Cloudmacs]]
 + [[id:18bb7397-ae26-4607-bbe2-6e54f338cd86][Compilation]]
 + [[id:6155515e-469b-4e2a-ad23-c0fbd06e32e3][Debugging]]
 + [[id:e2a2ead1-4348-4cc6-9ef1-dd96777aaec8][Dired]]
@@ -214,6 +215,7 @@ This guy does a lot of work with Emacs, makes nice packages and themes and does 
 + [[https://thanosapollo.org/posts/bzr-saga/][The Most Emacs Bzr Saga]]
 + [[https://pulusound.fi/blog/emacs-bra-size-calculator][Emacs bra size calculator - pulusound]]
 + [[https://emacs.love/tales/][Emacs Tales]]
+
 
 ** Packages
 
