@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       6d975b23-702c-455b-98f2-3089f300e115
+:END:
+#+TITLE: Go Useful Programmes
+#+FILETAGS: :go:useful:
+
+* Hugo
+
+[[https://gohugo.io/][Hugo]] is a framework for building static websites.
+
+* Restic
+
+[[https://restic.readthedocs.io/en/stable/][Restic]] is a programme for backing up files, directories or whole operating systems. It works both locally with block
+devices (hard drives and USB drives) as well as remote servers.
