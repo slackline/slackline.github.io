@@ -70,7 +70,8 @@ A great piece of forum software is Discourse, they have as of 2023-11-09 integra
 ** Apps
 
 + [[https://f-droid.org/packages/app.fedilab.fediplan/][Fediplan]] - schedule posts from Android.
-+ [[https://glammr.us/@jessamyn/116993988132214204][Alternative WebUI]]
++ [[https://masto-fe.superseriousbusiness.org/][Masto-fe]] and alternative WebUI, easy to add columns for lists.
++ [[https://glammr.us/@jessamyn/116993988132214204][Alternative WebUI]] list
 
 ** Verification
 
