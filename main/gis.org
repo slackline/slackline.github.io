@@ -7,3 +7,14 @@
 * TESSERA map embeddings
 
 [[https://anil.recoil.org/notes/tessera-zarr-v3-layout][Streaming millions of TESSERA tiles over HTTP with Zarr v3]]
+
+* Links
+
+** Lightning
+
++ [[https://www.lightningmaps.org/][LignthingMaps.org]]
+
+** Wildfires
+
++ [[https://firms.modaps.eosdis.nasa.gov/map/#d:24hrs;@-2.3,43.1,7.5z][NASA Fire Information for Resource Management System]]
++ [[https://forest-fire.emergency.copernicus.eu/][ESA Copernicus Forest Fires]]
