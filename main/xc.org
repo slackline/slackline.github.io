@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       8fc23b16-655c-4067-b4ee-42a95e325abb
+:END:
+#+TITLE: xc
+#+FILETAGS: :linux:taskrunner:
+
+ [[https://xcfile.dev/][xc]] is a task runner written in [[id:3ef233c9-2d33-44d8-89ec-463e2631240c][Go]] that unlike other systems such as [[id:08b71419-a3fc-4c7e-8fb6-75f613e41315][Just]] or Make is [[id:ab2f5dfb-e355-4dbb-8ca0-12845b82e38a][Literate]] allowing tasks chunks to be embedded in
+ [[id:0c371287-128d-4e46-8128-b2d4f5fc604c][Markdown]] or [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]] files.
+
+* Links
+
++ [[https://xcfile.dev/][xc]]
++ [[https://codeberg.org/ryanprior/xc.el][ryanprior/xc.el]] - Integrate the xc task runner with Emacs - Codeberg.org

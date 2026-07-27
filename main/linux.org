@@ -74,6 +74,11 @@ It can be handy to have a live distribution to carry around and boot as and when
 [[id:eaf15ed2-dd31-4b30-a6ce-4b47b6baed0f][here]].
 
 
+* Task Runngers
+
++ [[id:08b71419-a3fc-4c7e-8fb6-75f613e41315][Just]]
++ [[id:8fc23b16-655c-4067-b4ee-42a95e325abb][xc]]
+
 * Miscellaneous Topics
 :PROPERTIES:
 :ID:       f67cfdbc-32de-4a45-8e04-72d94c11ddd8
@@ -92,7 +97,6 @@ It can be handy to have a live distribution to carry around and boot as and when
 + [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]]
 + [[id:5d906b68-22c8-4169-8b0d-d3f3a02d2faa][Etherpad]]
 + [[id:170e7f2e-5bbf-4247-bacf-5459835ec26b][Garage]]
-+ [[id:08b71419-a3fc-4c7e-8fb6-75f613e41315][Just]]
 + [[id:d0998286-1c36-47d7-943d-6b5f641a9e4d][Kitty]] - an excellent Terminal Emulator.
 + [[id:83df78ca-e349-418f-ab71-b7735c16d027][MPD]]
 + [[id:3774439d-af75-453e-b3e9-9d578b6bec46][Nginx]]
