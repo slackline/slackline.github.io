@@ -57,10 +57,11 @@ There are a lot of languages out there to learn, in the past I've learnt some ve
 worked with interpreted languages which don't require compiling. Various languages I have notes on (some more than
 others!).
 
++ [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]]
++ [[id:3ef233c9-2d33-44d8-89ec-463e2631240c][Go]]
 + [[id:5b5d1562-ecb4-4199-b530-e7993723e112][Python]]
 + [[id:de9a18a7-b4ef-4a9f-ac99-68f3c76488e5][R]]
 + [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]]
-+ [[id:9c6257dc-cbef-4291-8369-b3dc6c173cf2][Bash]]
 
 
 I don't dabble much in compiled languages but thought it worth making a note of [[https://justine.lol/cosmo3/][Cosmopolitan Third Edition]] which
