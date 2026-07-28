@@ -59,6 +59,10 @@ and pulled from just like a Git repository.
 
 + [[https://blog.khinsen.net/posts/2026/07/06/conviviality.html][Conviviality in computational science | Konrad Hinsen's blog]]
 
+** Research
+
++ [[https://arxiv.org/abs/2607.21888][[2607.21888] No Snake Oil: Verifying Python Package Builds]]
+
 ** Data Version Control
 + [[https://github.com/dolthub/dolt][Dolt]]
 + [[https://dvc.org/][DVC : Data Version Control]]

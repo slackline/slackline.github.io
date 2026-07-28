@@ -101,3 +101,7 @@ somewhere to attend conferences when they are often available online (either liv
   + [[https://mk12.github.io/sicp/exercise/index.html][SICP Study companion]]
   + [[https://www.youtube.com/playlist?list=PLE18841CABEA24090][MIT 6.001 Lecture Series]]
 + [[https://grugbrain.dev/][The Grug Brained Developer]]
+
+** Zines
+
++ [[https://pagedout.institute/][Paged Out!]]
