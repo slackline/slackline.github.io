@@ -8,3 +8,6 @@ This is my [[https://www.orgroam.com/][org-roam]] repo, there are many like it b
 I used to keep my notes on a DokuWiki [[https://kimura.no-ip.info][instance]] and loved it, using the Markdown plugin made it easy to write, but over
 time I gravitated towards using Emacs for more and more tasks so it made sense to keep my notes on technical issues and
 other areas in Emacs too and at the time Org-roam was the most sensible option to go with.
+
+The [[https://org-roam.nshephard.dev/][org-roam-ui]] package is used along with the [[https://github.com/ikoamu/publish-org-roam-ui][publish-org-roam-ui]] Github Action to render the pages as a beautiful
+[[https://org-roam.nshephard.dev/][graph]].
