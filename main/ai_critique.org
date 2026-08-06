@@ -12,6 +12,8 @@ Why should I bother reading something nobody could be bothered to write?
 
 * Links
 
++ <2026-08-06 Thu> [[https://branko2f7.substack.com/p/sketching-the-new-dysto-utopian-world][Sketching the new dysto-utopian world with massive presence of artificial intelligence]] (via [[https://observer.co.uk/news/science-technology/article/silicon-valley-sees-ai-as-the-solution-for-everyone-else-its-the-problem][Silicon
+  Valley sees AI as the solution – for everyone els...]])
 + <2026-08-06 Thu> [[https://hermit-tech.com/blog/ai-mania-is-eviscerating-global-decisionmaking][AI Mania Is Eviscerating Global Decisionmaking · Radically Ethical Data Consulting]] (via [[https://www.thenerve.news/p/cory-doctorow-ai-business-incentive-to-lie-useless-chatbots-report-nikhil-suresh][Cory
   Doctorow: The people who tell you ‘AI is changing everything’ are lying]])
 + <2026-07-21 Tue>  [[https://florencia-dandrea.netlify.app/posts/2026-07-en.html][Challenges and potential for reproducible open science in the AI era – Florencia D’Andrea]]
