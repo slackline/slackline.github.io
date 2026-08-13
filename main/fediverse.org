@@ -20,6 +20,8 @@ it with his personal agenda.
 + [[https://tags.pub/][tags.pub]] a global hashtag server, follow ~hashtag@tags.pub~ and it boosts content tagged with ~hashtag~.
 + [[id:c5d6a74e-889b-42ae-a163-0387f4a42035][holos]] a self-hosted ActivityPub server for the Fediverse that runs on Android devices.
 + [[http://fairplayer.org/][FairPlayer ]]a distributed music listening platform.
++ [[https://fedihood.social/][FediHood]] "/connects you with people around you, by topic. You pick your city, never a precise location. Built on
+  ActivityPub and [[id:0a5f391b-0f61-48d8-a4c3-a204d55538de][OpenStreetMap]]./"
 
 * Links
 
