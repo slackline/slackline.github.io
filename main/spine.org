@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       7a4a70fb-0509-44fd-b9a9-cfd8ef2fe4ea
+:END:
+#+TITLE: Spine Injury
+#+FILETAG: :injury:spine:
+
+On <2026-07-25 Sat> I fell off the start of /Lyon's Corner House Direct (** HVS 5a)/ at Millstone Quarry in the Peak
+District before the first gear placement. I'd led and followed the climb many times before, including having led it
+earlier that year. Don't recall my left foot slipping, which I was moving up to stand on a hold but it was very windy,
+perhaps a gust took me off. I landed on my feet on a flat piece of rock, rolled backwards and banged my
+head. Fortunately I was wearing a helmet.  Feet were very sore, worse than my back and I thought they were the most
+injured so the next day took myself to the Minor Injuries unit at the Royal Hallamshire where x-rays were taken and
+suggested there was no problem. They didn't assess my back as that was beyond their remit and the pain was worse in my
+feet. Pain killers, resting and raising feet were recommended.
+
+A week later I went to North Spain for a family holiday and found I was still in a lot of pain throughout and on
+returning so took myself to A&E at Northern General. I had my left foot x-rayed again which confirmed there was no
+fracture, just soft tissue damage, but an x-ray of my lower back revealed I had a "/Superior plate-end fracture/" to the
+second lumbar vertebrate which was the cause of my on-going discomfort. Fortunately it was classed as "stable" so didn't
+need bracing and I was sent home with advice to rest for at least another three weeks and ease back into exercising, but
+warned I may suffer from long-term back pain as a consequence. Stretching, [[id:de39fb08-fd16-4da2-889e-e13e952c96ef][Pilates]] and Yoga were recommended to keep the
+back mobile and strong.
+
+* Resources
+
++ [[https://theros.org.uk/information-and-support/living-with-osteoporosis-and-broken-bones/spinal-fractures-vertebral-fractures/][Spinal fractures (vertebral fractures) | Royal Osteoporosis Society]]
++ [[https://www.kch.nhs.uk/wp-content/uploads/2023/05/3346-Spinal-fracture-format-V8_FINAL.pdf][King's College Hospital | Spinal fractures information for patients]]
