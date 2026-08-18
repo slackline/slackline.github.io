@@ -22,6 +22,7 @@ text files. There are diaries and agendas, literate programming, note organisati
 + [[id:6902c5a0-e96d-4b02-89b9-e45036e5d3fd][Org SQL]]
 + [[id:73bf4813-c8a7-472b-aeaa-b0ddceb44cc9][Org Hugo]]
 + [[id:2530678f-bb04-4187-8a47-3e461a6092d4][Org Static Blog]]
++ [[id:ee8d8d5b-776c-493a-846c-fe4a80a37ef3][Org Tables]]
 
 * Customisation
 

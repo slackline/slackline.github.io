@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       ee8d8d5b-776c-493a-846c-fe4a80a37ef3
+:END:
+#+TITLE: Org Tables
+#+FILETAGS: :orgmode:tables:formulae:
+
+* Column Formula
+
+
+* Links
+
++ [[https://orgmode.org/worg/org-tutorials/org-spreadsheet-intro.html][Org as a spreadsheet system: a short introduction]]
