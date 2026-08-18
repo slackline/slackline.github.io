@@ -6,7 +6,7 @@
 #+TITLE: Pre-commit
 #+FILETAGS: :git:hooks:pre-commit:
 
-[[https://pre-commit.com/][Pre-commit]] is a powerful [[id:0859ef9e-834d-4e84-8e67-fa7593a61e0b][Git]] tool for executing a range of hooks prior to making commits to your Git history. This is
+[[https://pre-commit.com/][Pre-commit]] is a powerful [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] tool for executing a range of hooks prior to making commits to your Git history. This is
 useful because it means you can automatically run a range of linting tools on your code across an array of languages to
 ensure your code is up-to-scratch /before/ you make the commit.
 
