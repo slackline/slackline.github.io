@@ -5,7 +5,7 @@
 :END:
 #+TITLE: Emacs
 #+DATE: [2022-02-14 Mon 06:59]
-#+FILETAGS: :emacs:programming:elisp:lsp:
+#+FILETAGS: :emacs:programming:elisp:
 
 I'm forever trying to convince people to try out Emacs and figured it would be worthwhile writing a short guide to
 getting started [[id:36a83dd6-7535-43a9-9b68-15dc135c86fd][Emacs Getting Started]].
@@ -53,6 +53,7 @@ getting started [[id:36a83dd6-7535-43a9-9b68-15dc135c86fd][Emacs Getting Started
 + [[id:301c717a-c9f6-4490-9620-491762db4343][OSM]]
 + [[id:ac85ca6b-4b6e-4e8d-82f8-2f85c5062de6][Passwords]]
 + [[id:580157bf-0313-4c4e-88d3-cd443ddbab62][Projectile]]
++ [[id:db999a30-68d1-4c8d-a773-74921251f886][Rectangles]]
 + [[id:0b1b62a7-dcf8-4eeb-86c2-75b465744936][Regular Expressions]]
 + [[id:55221bf0-8873-436e-9ba2-423b6d40c1f2][Shell]]
 + [[id:ddb08b45-3bec-404b-8a67-dd4982f631cd][Spellcheck]]

@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       db999a30-68d1-4c8d-a773-74921251f886
+:END:
+#+NAME: Emacs Rectangles
+#+FILETAGS: :emacs:elisp:rectangles:
+
+The ability to select not just lines but rectangular regions in Emacs is an amazingly useful feature. I first saw this
+around 2001 when visiting collaborators at the MD Andersen Centre in Texas but never really took to using it until
+decades later.
+
+* Use cases
+
+** Renaming files in Dired
+
+I often use [[id:e2a2ead1-4348-4cc6-9ef1-dd96777aaec8][Emacs Dired]] to manage my files, particularly [[id:60363eb0-6272-4c26-8f2e-d7c237bd6609][Music]] downloads from Bandcamp. The extracted files typically contain the
+artist and album name in the file title which I don't want as I use a nested hierarchy to structure the data. From Dired
+I can use ~C-c C-q~ to edit the filenames in a buffer, selecting the rectangular suffix region I don't want and quickly
+rename files as I would like.
+
+* Selecting
+
+~C-x SPC~ starts selecting a rectangle by setting a mark and activating ~rectangle mode~ (notice this in the
+mini-buffer). You then move the cursor to where you want it and can copy or cut (yank) a region as you would normally.
+
+* Inserting
+
+You can insert a from the killring with the usual keys but it possibly may not act as you might expect. It won't
+automatically push lines down to insert the rectangle block anew.
+
+* Links
+
+** Blog Posts
+
++ [[https://utcc.utoronto.ca/~cks/space/blog/programming/EmacsRectangleRegionNotes][Chris's Wiki :: blog/programming/EmacsRectangleRegionNotes]]
