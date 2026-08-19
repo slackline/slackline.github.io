@@ -27,6 +27,28 @@ mini-buffer). You then move the cursor to where you want it and can copy or cut 
 You can insert a from the killring with the usual keys but it possibly may not act as you might expect. It won't
 automatically push lines down to insert the rectangle block anew.
 
+With
+
+** String insert rectangle
+
+If you have selected a rectangle that has zero width (i.e. just a vertical line) then you can insert the same string to
+every row with ~C-x r t~ (~string-insert-rectangle~).
+
+For example if you have the following (where I've used ~|~ to mark the zero-width rectangle select)...
+
+#+begin_example
+|This is some text that I
+|want to comment out with ;;
+#+end_example
+
+...and use ~C-x r t~ and type ~;; Ret~ you end up with the following which is a neat way of commenting regions (although
+there are more direct methods that are mode aware such as ~M-;~ on selected rows, but this is an illustrative example).
+
+#+begin_example
+;; This is some text that I
+;; want to comment out with ;;
+#+end_example
+
 * Links
 
 ** Blog Posts
