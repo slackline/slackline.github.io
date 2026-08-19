@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       4356f20a-23b8-42fe-9756-277acf1e4d6d
+:END:
+#+NAME: Recycling
+#+FILETAGS: :recycling:
+
+* Links
+
++ [[https://secondhandplastic.com/][SecondhandPlastic.com]] ([[https://github.com/seanhelvey/secondhandplastic][source]])
