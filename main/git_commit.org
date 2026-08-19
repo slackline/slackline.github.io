@@ -7,11 +7,6 @@
 #+FILETAGS: :git:
 
 * Secrets
-:PROPERTIES:
-:ID:       537032aa-3f89-4267-b79b-95380b9404b2
-:mtime:    20250423135552
-:ctime:    20250423135552
-:END:
 
 Sometimes you have secrets such as API keys that may reside in files within your repository. Committing and pushing
 these to a [[id:28ffcc43-9dff-4de8-a211-277c5346a642][Forge]] is a bad idea, they then become public and whilst it is possible to remove them using tools such as [[https://rtyley.github.io/bfg-repo-cleaner/][BFG
@@ -57,3 +52,5 @@ FreeBSD, Go and others) that simply use scope successfully.
 
 + [[https://sumnerevans.com/posts/software-engineering/stop-using-conventional-commits/][Stop Using Conventional Commits]]
 + [[https://brennan.day/every-commit-a-sentence-git-commit-messages-for-bloggers/][Every Commit A Sentence: Git Commit Messages for Bloggers · brennan.day]]
++ [[https://www.jvt.me/posts/2026/08/17/hand-write-commits/][Why I still hand write my commit messages · Jamie Tanna | Software Engineer]]
++ [[https://cbea.ms/git-commit/][How to Write a Git Commit Message]]
