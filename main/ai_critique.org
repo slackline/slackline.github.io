@@ -72,11 +72,16 @@ Why should I bother reading something nobody could be bothered to write?
 + [[https://maggieappleton.com/ai-enlightenment/][A Treatise on AI Chatbots Undermining the Enlightenment]]
 + [[https://irisvanrooijcogsci.com/2025/08/12/ai-slop-and-the-destruction-of-knowledge/][AI slop and the destruction of knowledge – Iris van Rooij]]
 + [[https://anthonymoser.github.io/writing/ai/haterdom/2025/08/26/i-am-an-ai-hater.html][I Am An AI Hater | moser’s frame shop]]
-+ [[https://www.wheresyoured.at/the-case-against-generative-ai/][The Case Against Generative AI]]
 + [[https://www.odbms.org/blog/2025/10/beyond-the-ai-hype-guido-van-rossum-on-pythons-philosophy-simplicity-and-the-future-of-programming/][Beyond the AI Hype: Guido van Rossum on Python’s Philosophy, Simplicity, and the Future of Programming. | ODBMS Industry
   Watch]]
 + [[https://www.theguardian.com/technology/2025/oct/18/are-we-living-in-a-golden-age-of-stupidity-technology][Are we living in a golden age of stupidity? | Artificial intelligence (AI) | The Guardian]]
 + [[https://jasmi.news/p/ai-friends][AI Friends Too Cheap To Meter - by Jasmine Sun]]
+
+** Against Generative AI
+
++ <2026-08-20 Thu> [[https://www.wired.com/story/why-normal-people-arent-using-ai-agents/][Why Normal People Aren’t Using AI Agents | WIRED]]
++ <2026-08-20 Thu> [[https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6868618][The Generative AI Learning Penalty: Evidence from Chinese Secondary Education by David Stromberg, Victor Lei, Yanhui Wu :: SSRN]]
++ [[https://www.wheresyoured.at/the-case-against-generative-ai/][The Case Against Generative AI]]
 
 ** Videos
 
@@ -103,6 +108,9 @@ Why should I bother reading something nobody could be bothered to write?
 
 ** Open Source
 
++ [[https://ryancheley.com/2026/08/17/what-if-maintainer-burnout-isn-t-burnout/][What if Maintainer Burnout Isn't Burnout]]
++ [[https://wiki.gentoo.org/wiki/Project:Council/AI_policy][Project:Council/AI policy - Gentoo wiki]]
++ [[https://forge.rust-lang.org/policies/llm-usage.html][LLM usage policy - Rust Forge]]
 + [[https://notmyidea.org/what-ai-is-doing-to-developers.html][What AI is doing to developers - (not) my ideas]]
 + [[https://blog.scientific-python.org/scientific-python/community-considerations-around-ai/][Blog - Community Considerations Around AI Contributions]]
 
