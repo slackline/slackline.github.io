@@ -56,6 +56,8 @@ Another useful article is [[https://docs.codeberg.org/integrations/read-the-docs
 
 + [[https://andre601.ch/blog/2023/11-05-using-codeberg-pages/][How to use Codeberg Pages for MkDocs - Andre_601]]
 + [[https://docs.codeberg.org/integrations/read-the-docs/][Integrating with Read the Docs | Codeberg Documentation]]
++ [[https://aartaka.me/codeberg-pages.html][Codeberg Pages with SSL and Custom Domain]]
++ [[https://aartaka.me/codeberg-pages-2.html][Codeberg Pages 2: Setting Up Subdomain for git-pages Back-end]]
 
 ** Misc
 
