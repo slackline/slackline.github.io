@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       ac327ad5-b76a-4784-94ad-8fe7fc7408e7
 :END:
-#+NAME: Git Split
+#+TITLE: Git Split
 #+FILETAGS: :git:split:history:
 
 As of [[https://lore.kernel.org/git/xmqqa4uxsjrs.fsf@gitster.g/][Git 2.54]] you can split existing commits in the history using ~git history split~. For an example see [[https://stackoverflow.com/a/79929889][this answer

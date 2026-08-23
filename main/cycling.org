@@ -31,3 +31,9 @@ bicycle.
 ** Blogs
 
 + [[https://stilloutriding.com/][Still Out Riding – More from whileoutriding…]]
+
+** Routes
+
+*** UK
+
++ [[https://cycle.travel/browse][Cycle.travel]] - great resource for many routes (not limited to UK either)

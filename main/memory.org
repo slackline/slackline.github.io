@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       b404b839-7e0a-403e-ae6b-c265df001a28
+:END:
+#+TITLE: Memory
+#+FILETAGS: :memory:research:
+
+Writing, or to a lesser extent typing, is better for memory retention than listening/watching.
+
+* Links
+
+** Published Research
+
++ [[https://pmc.ncbi.nlm.nih.gov/articles/PMC11943480/][The Neuroscience Behind Writing: Handwriting vs. Typing—Who Wins the Battle? - PMC]]
++ 2018 [[https://www.jstor.org/stable/10.5406/amerjpsyc.131.3.0263][Oral Versus Written Recall of Long-Term Memory Items: Replicating and Extending the Writing Superiority Effect Across Knowledge Domains | JSTOR]]
+
+** Blog Posts
+
++ [[https://www.scientificamerican.com/article/why-writing-by-hand-is-better-for-memory-and-learning/][Why Writing by Hand Is Better for Memory and Learning | Scientific American]]

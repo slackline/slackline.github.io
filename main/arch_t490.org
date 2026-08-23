@@ -7,6 +7,8 @@
 #+FILETAGS: :linux:arch:laptop:install:config:
 
 
++ [[id:9cbf8c21-5d21-4f03-953c-f80cc74103ce][lshw listing]]
+
 * Initial Setup
 
 After booting the install media a few key steps are required before getting started.

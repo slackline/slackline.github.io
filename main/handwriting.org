@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       bf3d2935-0a34-4d05-a166-e7fd98e3619c
+:END:
+#+TITLE: Handwriting
+#+FILETAGS: :handwriting:memory:
+
+* Links
+
++ [[https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1219945/full][Frontiers | Handwriting but not typewriting leads to widespread brain connectivity: a high-density EEG study with
+  implications for the classroom]]

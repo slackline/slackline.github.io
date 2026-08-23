@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       db999a30-68d1-4c8d-a773-74921251f886
 :END:
-#+NAME: Emacs Rectangles
+#+TITLE: Emacs Rectangles
 #+FILETAGS: :emacs:elisp:rectangles:
 
 The ability to select not just lines but rectangular regions in Emacs is an amazingly useful feature. I first saw this

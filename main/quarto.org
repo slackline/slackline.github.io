@@ -130,6 +130,14 @@ the idea and setup a useful [[https://github.com/Sparrow0hawk/quarto-revealjs-te
 
 * Websites
 
+I use Quarto for a [[https://blog.nshephard.dev/][blog]].
+
+** Custom Navbar icons
+
+*** ORCID
+
+Found a useful [[https://rmflight.github.io/posts/2022-12-03-using-academicons-in-your-quarto-blog/][article]] on adding custom ORCID icons.
+
 * Books
 
 * Code

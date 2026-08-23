@@ -4,8 +4,17 @@
 #+TITLE: Org Tables
 #+FILETAGS: :orgmode:tables:formulae:
 
+* Column and Rows
+
+- Refer to a column with ~$#~
+- Refer to a row with ~@#~
+
+* Cell formula
+
+
 * Column Formula
 
+- Sum a column with ~@#$#=vsum(@#..@#)~
 
 * Links
 
