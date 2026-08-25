@@ -4,6 +4,9 @@
 #+TITLE: Intuition Pumps
 #+FILETAGS: :philosophy:dennett:freedom:thinking:
 
+[[https://sites.tufts.edu/cogstud/daniel-dennett/][Daniel C Dennett]] is a philosopher of science ([[https://en.wikipedia.org/wiki/Daniel_Dennett][1942-2024]]) a massive proponent of evolution by natural selection as the
+reason for everything, including free will and determinism.
+
 * Chapters
 
  ** Mamking Mistakes
@@ -54,3 +57,16 @@ interacts with the physical brain.
 ** Folk Psychology
 **The Intentional Stance
 ** The Personal/Sub-Personal Distinction
+
+** XI What got Left Out
++ Brainstorms 1978
++ The Mind's I 1981 (subtle grammar for meaning!)
+
+* Links
+
++ [[https://sites.tufts.edu/cogstud/daniel-dennett/][Center for Cognitive Studies - Daniel C Dennett]]
+
+** Papers
+
++ [[https://archives.tufts.edu/repositories/2/resources/651][Tufts - Daniel C. Dennett Archive]]
++ Dennett (2006) [[https://personal.lse.ac.uk/robert49/teaching/ph445/notes/dennett.pdf][Higher-order truths about chmess]] /Topoi/ 25:39-41
