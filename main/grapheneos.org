@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       271d0958-546c-444a-830d-5414a7295cba
+:END:
+#+TITLE: GrapheneOS
+#+DATE: [2026-08-25 Tue]
+#+FILETAGS: android:mobile:linux
+
+[[https://grapheneos.org/][GrapheneOS: the private and secure mobile OS]] currently only available for Google Pixel phones but they have announced a
+partnership with Motorola and are likely to be releasing phones and OSs early in 2027.
+
+* Motorola Partnership
+
++ <2026-08-22 Sat> [[https://grapheneos.social/@GrapheneOS/117155659131804444][Initial focus for our partnership with Motorola is a regular non-folding device.]]
+
+
+* Links
+
++ [[https://grapheneos.org/][GrapheneOS: the private and secure mobile OS]]
++ [[https://matrix.to/#/%23community:grapheneos.org][GrapheneOS Matrix]]
++ [[https://grapheneos.social/@GrapheneOS][@GrapheneOS@grapheneos.social]]
+
+** Applications
+
++  [[https://www.sacredheartsc.com/blog/grapheneos-apps/][GrapheneOS Applications]]

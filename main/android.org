@@ -10,6 +10,11 @@ Android is a mobile operating system but its under-pinned by the [[id:0e6300c6-7
 background. By installing a custom ROM you can free yourself from a number of pernicious tracking practices and keep
 phones that are no longer supported by manufacturers up-to-date.
 
+* Alternative Distributions
+
++ [[id:86e356e8-931f-40f7-9393-13a89c22c00d][LineageOS]]
++ [[id:271d0958-546c-444a-830d-5414a7295cba][GrapheneOS]]
+
 * Applications
 
 Of course there are tons of applications (programmes) one might want to install on their phone and I use a number for
