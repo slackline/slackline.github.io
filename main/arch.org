@@ -68,3 +68,4 @@ performance/speed.
 
 + [[https://manjaro.org/][Manjaro]]
 + [[https://cachyos.org/][CachyOS]]
++ [[https://omarchy.org/][Omarchy - The malleable OS for the age of agents]]
