@@ -128,6 +128,7 @@ makepkg -sri
 + [[https://andreyor.st/posts/2023-09-09-migrating-from-lsp-mode-to-eglot/][Migrating from LSP-Mode to Eglot · Andrey Listopadov]]
 + [[https://www.mattduck.com/lsp-python-getting-started.html][Getting started with lsp-mode for Python]]
 + [[https://blog.serghei.pl/posts/emacs-python-ide/][Advanced Python Development Workflow in Emacs | Serghei's Blog]]
++ [[https://github.com/blahgeek/emacs-lsp-booster][blahgeek/emacs-lsp-booster: Emacs LSP performance booster]]
 
 ** Example Configs
 

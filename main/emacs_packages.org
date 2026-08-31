@@ -70,7 +70,8 @@ fails. The following is the sort of call made to build the binary and may be run
 * ~.elc~ byte compiled files
 
 Emacs byte-compiles ~.el~ files to ~.elc~ which are binaries and run faster. You can force compilation of a specific
-directory with using ~M-: (byte-recompile-directory package-user-dir nil 'force)~ which will [[https://stackoverflow.com/a/1217249][force compilation]].
+directory with using ~M-: (byte-recompile-directory package-user-dir nil 'force)~ which will [[https://stackoverflow.com/a/1217249][force compilation]]. (I
+actually found ~M: (byte-recompile-directory "~/.config/emacs/elpa/" 0 t)~ to be more effective)
 
 You can do a single directory interactively with ~C-u 0 M-x byte-recompile-directory~ and enter the directory that yu
 want to recompile when prompted.
