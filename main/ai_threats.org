@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       35d4cdde-8348-4d0e-9ee7-db7ac08f58ba
+:END:
+#+TITLE: AI Threats
+#+DATE: [2026-08-31 Mon]
+#+FILETAGS: ai:artificialintelligence:threats:existential
+
+* Blogs
+
++ [[https://www.noahpinion.blog/p/heres-how-were-all-going-to-die][Here’s how we’re all going to die - by Noah Smith]]

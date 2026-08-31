@@ -9,3 +9,7 @@
 * Links
 
 + [[https://www.theregister.com/2025/08/31/local_llm_opinion_column/][Bring your own brain? Why local LLMs are taking off • The Register]]
+
+** HowTos
+
++ [[https://peppe8o.com/needle-2-raspberry-pi-benchmark-guide/][Needle 2 on Raspberry Pi: The 14MB AI Agent for Local Tool-Calling (Benchmark & Guide)]]

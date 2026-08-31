@@ -113,6 +113,7 @@ Why should I bother reading something nobody could be bothered to write?
 + [[https://forge.rust-lang.org/policies/llm-usage.html][LLM usage policy - Rust Forge]]
 + [[https://notmyidea.org/what-ai-is-doing-to-developers.html][What AI is doing to developers - (not) my ideas]]
 + [[https://blog.scientific-python.org/scientific-python/community-considerations-around-ai/][Blog - Community Considerations Around AI Contributions]]
++ [[https://lwn.net/Articles/1091231/][Debian votes to allow "responsible use of generative AI" [LWN.net]]] ([[https://vote.debian.org/~secretary/gr_llm/results.txt][results summary]])
 
 ** Bias
 
