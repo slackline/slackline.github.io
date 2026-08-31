@@ -22,6 +22,7 @@ it with his personal agenda.
 + [[http://fairplayer.org/][FairPlayer ]]a distributed music listening platform.
 + [[https://fedihood.social/][FediHood]] "/connects you with people around you, by topic. You pick your city, never a precise location. Built on
   ActivityPub and [[id:0a5f391b-0f61-48d8-a4c3-a204d55538de][OpenStreetMap]]./"
++ [[https://fedimeteo.com/][FediMeteo]] - weather forecasts by city.
 
 * Links
 
