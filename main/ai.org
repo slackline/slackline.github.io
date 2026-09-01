@@ -25,6 +25,7 @@ possible to define whether anything "artificial" can mimic it.
 + [[id:272142ad-6dbc-4260-82fe-32bef3630a92][Academia]]
 + [[id:86544d2d-7cb4-4634-8bb8-c68c86580ac9][Scraping]]
 + [[id:9f1ba60e-a255-46ef-ba40-6410b4a89d1d][Nginx AI Sabotage]]
++ [[id:db5f2a26-8cf4-47a7-871f-47f8c8937a2e][FOSS Impact]]
 
 * Methodology
 

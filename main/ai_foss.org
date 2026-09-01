@@ -11,6 +11,16 @@ large language models.
 
 + [[https://noai.starlightnet.work/list.html][The No-AI list]]
 
+** Project Policies
+
++ [[https://wiki.gentoo.org/wiki/Project:Council/AI_policy][Project:Council/AI policy - Gentoo wiki]]
++ [[https://forge.rust-lang.org/policies/llm-usage.html][LLM usage policy - Rust Forge]]
++ [[https://lists.sr.ht/~sircmpwn/sr.ht-dev/patches/71191][SourceHut policy on LLMs and generative "AI"]]
++ [[https://leidendeclaration.ai/][Leiden Declaration on Artificial Intelligence and Mathematics]]
+
 ** Blogs
 
 + [[https://lumramabaja.com/posts/engineering-sacrifice-how-open-source-survives-the-age-of-free-code/][Engineering Sacrifice: How Open Source Survives the Age of Free Code | Lum Ramabaja]]
++ [[https://ryancheley.com/2026/08/17/what-if-maintainer-burnout-isn-t-burnout/][What if Maintainer Burnout Isn't Burnout]]
++ [[https://notmyidea.org/what-ai-is-doing-to-developers.html][What AI is doing to developers - (not) my ideas]]
++ [[https://blog.scientific-python.org/scientific-python/community-considerations-around-ai/][Blog - Community Considerations Around AI Contributions]]
