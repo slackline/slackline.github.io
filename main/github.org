@@ -74,6 +74,7 @@ Emacs) make you more efficient.
 + [[https://github.blog/2022-09-02-gits-database-internals-v-scalability/][Git’s database internals V: scalability]]
 + [[https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/][Include diagrams in your Markdown files with Mermaid]]
 + [[https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/][How to undo (almost) anything with Git]]
++ [[https://cursor.com/blog/git-at-any-scale][Git at any scale · Cursor]]
 
 *** Engineering
 

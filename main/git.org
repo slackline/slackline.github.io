@@ -217,6 +217,7 @@ Topics are alphabetical...
 + [[https://github.blog/2022-09-02-gits-database-internals-v-scalability/][Git’s database internals V: scalability]]
 + [[https://jvns.ca/blog/2023/09/14/in-a-git-repository--where-do-your-files-live-/][In a git repository, where do your files live?]]
 + [[https://www.both.org/?p=3383][Git Concepts in Less than 10 minutes]]
++ [[https://cursor.com/blog/git-at-any-scale][Git at any scale · Cursor]]
 
 ** Misc
 
