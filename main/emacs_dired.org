@@ -22,6 +22,10 @@ select the prefixes you want to remove.
 
 You can (un)compress files or directory in Dired by hitting `Z`.
 
+* Working with Magit
+
+Select some files in a Dired buffer and ~magit-dired-log~ will show you the commits/log that touched the.m
+
 * Casual Dired
 
 The [[https://github.com/kickingvegas/casual-dired][Casual Dired]] package is "/An opinionated Transient user interface for Emacs file manager Dired/" and is a brilliant
