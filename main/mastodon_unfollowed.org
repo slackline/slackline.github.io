@@ -14,3 +14,5 @@ Mastodon accounts I've unfollowed but don't want to forget about completely.
 + [[https://neuromatch.social/@jonny][@jonny@neuromatch.social]]
 + [[https://mastodon.green/@gerrymcgovern][@gerrymcgovern@mastodon.green]]
 + [[https://mastox.eu/@ZackPolanski][@ZackPolanski@mastox.eu]]
++ [[https://mas.to/@alternativeto][@alternativeto@mas.to]]
++ [[https://mastodon.social/@selfhost_discovery][@selfhost_discovery@mastodon.social]]
