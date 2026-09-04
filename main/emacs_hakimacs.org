@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       ae832007-dc8a-4933-8f94-6a402b688468
+:END:
+#+TITLE: Hakimacs
+#+DATE: [2026-09-02 Wed]
+#+FILETAGS: :emacs:blog:hakimacs:theme:hugo:
+
+[[https://github.com/idlip/hakimacs][Hakimacs]] looks like a very cool Hugo based theme which can be written in [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]] which is pretty much what I was after.
+
+* Setup
+
+I´m using [[id:3150b126-53ea-43db-b726-981ad0d314eb][Codeberg Pages]] to host the site and so created a new repository called ~pages~ and followed the [[https://docs.codeberg.org/codeberg-pages/#user%2Forganization-websites][instructions]]
+to enable a user/organisation website.
+
+1. /Settings > Webhooks > Add Webhook/.
+2. Select /ForegJo/.
+3. Add ~https://<username>.codeberg.page~ as the /Target URL/.
+4. Set /Branch filter/ to ~pages~.
+5. /Add Webhook/.
+
+Pages are then automatically published from the ~pages~ branch of the repository.
+
+* Install
+
+* Configuration
+
+* Deployment
+
+I've been migrating away from [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]] in favour of [[id:240b85db-27c9-4848-9d3f-c3be841a193b][Codeberg]] so have leveraged [[id:3150b126-53ea-43db-b726-981ad0d314eb][Codeberg Pages]] to automatically deploy the site.
+
+* Migration
+
+Migrating my [[id:251b3ae4-4a5c-4c44-909a-dcbc0aef4b45][Quarto]] blog (currently [[https://github.com/ns-rse/ns-rse.github.io/][ns-rse/ns-rse.github.io]]) required converting all ~index.qmd~ files to ~.org~

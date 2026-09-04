@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       3a88980d-2fdd-49d4-93d7-af7cb20494d8
+:END:
+#+TITLE: Emasc Org Grimoire
+#+DATE: [2026-09-03 Thu]
+#+FILETAGS: :emacs:blog:org:orgmode:
+
+An early candidate for migrating my blog to one based around [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]] was [[https://github.com/spiperac/org-grimoire][org-grimoire]] which looked nice and simple. I
+preferred the look and style of [[id:ae832007-dc8a-4933-8f94-6a402b688468][Hakimacs]] though so have gone with that.
+
+* Links
+
++ [[https://github.com/spiperac/org-grimoire][spiperac/org-grimoire: Static Site Generator writen in Elisp, running from GNU/Emacs.]]

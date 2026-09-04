@@ -6,6 +6,9 @@
 
 I'm considering moving my blog from [[id:251b3ae4-4a5c-4c44-909a-dcbc0aef4b45][Quarto]] to [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]] and self-hosting rather than relying on [[id:52b4db29-ba21-4a8a-9b83-6e9a8dc02f41][GitHub]] pages.
 
++ [[id:ae832007-dc8a-4933-8f94-6a402b688468][Hakimacs]]
++ [[id:3a88980d-2fdd-49d4-93d7-af7cb20494d8][Org Grimoire]]
+
 * Links
 
 ** Randy Ridenour
