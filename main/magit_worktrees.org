@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       b771f601-2f4a-4940-9307-731eb2d13f05
+:mtime:    20260904164747
+:ctime:    20260904164747
+:END:
+#+TITLE: Magit Worktrees
+#+DATE: [2026-09-04 Fri]
+#+FILETAGS: :magit:worktree:git:
+
+[[id:220d7ba9-d30e-4149-a25b-03796e098b0d][Magit]] has support for [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] [[id:ddcfed69-2ba5-442a-99b4-eaa5c7a9fe40][Worktrees]]. From a ~magit~ status buffer use ~Z~ to open the relevant transient from where you
+can create, delete, move and rename worktrees.
+
+* Worktrees in Magit Status buffer
+
+I came across a post on how [[https://huonw.github.io/blog/2025/12/magit-insert-worktrees/][magit-insert-worktrees improves status buffers]] and it was straight-forward to add a tweak
+  that showed worktrees in a Magit buffer.
+
+#+begin_example elisp
+  (use-package magit
+    :ensure t
+    :config
+    (add-to-list 'magit-status-sections-hook 'magit-insert-worktrees t))
+
+#+end_example
+
+* Troubleshooting
+
+** ~origin~ not showing/recognised
+
+I found on newly cloned bare repositories that after creating a worktree sometimes the remote was not
+listed/recognised. I could push and pull to ~origin~ but the Magit status buffer didn't report that the branch was
+present on remote.
+
+I asked for assistance in either the Magit or Forge forums, I can't recall which and as always the amazing ~tarsius~
+responded promptly and with a solution. Alas I can't find the issue/discussion but the solution was that my ~config~ was
+missing some important lines.
+
+Thus when this happens again ensure the following are present in ~config~
+
+#+begin_example
+[remote "origin"]
+    ...
+    fetch = +refs/heads/*:refs/remotes/origin/*
+    fetch = +refs/pull/*/head:refs/pullreqs/*
+#+end_example
+
+As these two ~fetch~ settings say where to get data from.
