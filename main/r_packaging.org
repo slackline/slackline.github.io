@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       0f96436b-8f34-4daa-a999-d48309d36000
+:END:
+#+NAME: R Packaging
+#+FILETAGS :r:packaging:development:
+
+* ~DESCRIPTION~
+
+This file lists all dependencies and metadata about the package.
+
+* ~R/~
+
+Place all functions within the ~R/~ directory. They can be spread over multiple files. Each function should have a
+docstring which should finish with...
+
+#+begin_example
+#' @export
+my_function <- function(...) {...}
+#+end_example
+
+This means that the function will be added to the ~NAMESPACE~.
+
+* Tests
+
+[[https://testthat.r-lib.org/][testthat]] provides a framework for running unit tests.
+
+You can parametrise unit tests using the [[https://github.com/google/patrick][patrick]] package.
+
+To run tests simply run...
+
+#+begin_example
+testthat::test_local()
+#+end_example
+
+* ~NAMESPACE~
+
+This file lists all exported functions. It should not be edited by hand, rather it can be generated using ~roxygen2~ and
+the ~devtools::document()~ shortcut.
+
+If you are told a given function is not exported in the packages namespace you need to re-generate the ~NAMESPACE~.
+
+* Links
+
++ [[https://r-pkgs.org/][R Packages (2e) by Hadley Wickham]]
++ [[https://devtools.r-lib.org/][devtools • Tools to Make Developing R Packages Easier]]
++ [[https://testthat.r-lib.org/][testthat • Unit Testing for R]]
++ [[https://usethis.r-lib.org/][usethis • Automate Package and Project Setup]]
