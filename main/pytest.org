@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3cca0dfd-0c82-4685-b9ed-6314f7c8b78f
-:mtime:    20251107115921 20251103102450 20251022135419 20250926101805 20250618134341 20241110212615 20241002091737 20241001110421 20240529091921 20240523125824 20240507153851 20240417074159 20240416215946 20240315123523 20240206174808 20240102123440 20240101130614 20231231095334 20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
+:mtime:    20260904071243 20251107115921 20251103102450 20251022135419 20250926101805 20250618134341 20241110212615 20241002091737 20241001110421 20240529091921 20240523125824 20240507153851 20240417074159 20240416215946 20240315123523 20240206174808 20240102123440 20240101130614 20231231095334 20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
 :ctime:    20221212233350
 :END:
 #+TITLE: Python Pytest
@@ -400,6 +400,19 @@ which will show custom markers as well as built-ins.
 Markers are a really useful feature of Pytest that makes it possible to run subsets of tests. As [[https://docs.pytest.org/en/stable/example/markers.html#marking-platform-specific-tests-with-pytest][documented]] this can be
 used to make tests platform specific, but as the above simple examples start to demonstrate they are highly flexible and
 customisable.
+
+** Coverage
+
+The [[https://pytest-cov.readthedocs.io/en/latest/][pytest-cov]] module makes it easy to look at the coverage of your tests and is a Pytest extension of the [[https://coverage.readthedocs.io/en/latest/install.html][~coverage~]] package. It summarises which lines were run during testing and which were missed simply by specifying ~--cov~. An
+additional option though is ~--cov-branch~ which looks at whether code within e.g. ~if~ clauses are run.
+
+Configuration can be done under ~[tools.pytest.ini_options]~ and more detailed configuration should be made via
+[[https://coverage.readthedocs.io/en/latest/config.html][~.coveragerc~]] configuration file for [[https://coverage.readthedocs.io/en/latest/install.html][~coverage~]].
+
+#+begin_example
+[tool.pytest]
+addopts = ["--cov", "--cov-branch"]
+#+end_example
 
 ** Mocking
 
