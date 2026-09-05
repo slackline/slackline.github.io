@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5e4b0759-696f-47a7-81c1-a7506aab41a0
-:mtime:    20251221173111 20251121222551 20251026132000 20251010152933 20250220083856 20250218222433 20250115224517 20241229201335 20241213210224 20241110182359 20241110164410 20241006205543 20240502093004 20240426165410 20240422071430 20240306145316
+:mtime:    20260904225158 20260904212057 20251221173111 20251121222551 20251026132000 20251010152933 20250220083856 20250218222433 20250115224517 20241229201335 20241213210224 20241110182359 20241110164410 20241006205543 20240502093004 20240426165410 20240422071430 20240306145316
 :ctime:    20240306145316
 :END:
 #+TITLE: Reading
@@ -16,6 +16,13 @@ lugging books around.
 I have a list of books I own on [[https://www.goodreads.com/user/show/112820224-slackline][GoodReads.com]] but being Amazon owned have divested my interests and listed most of them
 on [[https://bookrastinating.com/user/slackline][BookRastinating.com]]. I'm not very good at keeping any of these up-to-date! Recently I came across [[https://www.thestorygraph.com/][The
 StoryGraph]] to recommend me books and transferred my library over.
+
+* Why Read
+
+Reading is an amazing gift of consciousness, we can see into others minds, share wild imagined fantasies and sometimes
+we even understand one-another.
+
++ [[https://adjacentpossible.substack.com/p/how-to-read-a-novel][How To Read A Novel - by Steven Johnson - Adjacent Possible]] (archived)
 
 * Buying
 
@@ -63,6 +70,7 @@ aren't included here.
 + /On Thin Ice/ Mick Fowler
 + /Vertical Pleasure/ Mick Fowler
 + /No Easy Way/ Mick Fowler
++ /A Man for All Mountains : The biography of Jack Longland/ Mark Lambert
 
 ** Climbing
 
