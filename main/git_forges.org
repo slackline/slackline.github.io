@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       28ffcc43-9dff-4de8-a211-277c5346a642
-:mtime:    20251205183840 20251101155751 20251101130306 20250917073545 20250306202811 20240310181605 20240217133735 20240211172814 20240130202744
+:mtime:    20260905114223 20251205183840 20251101155751 20251101130306 20250917073545 20250306202811 20240310181605 20240217133735 20240211172814 20240130202744
 :ctime:    20240130202744
 :END:
 #+TITLE: Git Forges
@@ -31,6 +31,7 @@ the linked pages.
 | [[https://opencommit.eu/][OpenCommit.eu]] | EU based forge using ForgeJo                                                                                                     |
 | [[https://git.gay/][git.gay]]       | Empowering queer developers to create, collaborate and share their projects with the world.                                      |
 | [[https://forkmesh.com/][ForkMesh]]      | Distributed mirroring of repositories.                                                                                           |
+| [[https://pushin.eu/][Pushin.eu]]     | Another EU centered forge, currently invite only.                                                                                |
 
 
 The Gittea based offerings have far less complete CI but there is a growing number of tools such as [[https://davejansen.com/publish-to-netlify-using-gitea-actions/][deploying to Netlify]].
