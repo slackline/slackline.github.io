@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       0b7373ce-724c-40f0-8432-f8dbbbad95fc
+:mtime:    20260904205529
+:ctime:    20260904205529
+:END:
+#+TITLE: Ergonomic Keyboard
+#+DATE: [2026-09-04 Fri]
+#+FILETAGS: :keyboard:ergonomic:
+
+I´ve used a M$ Ergonomic 4000 for almost 20 years and had my second version die on me recently. I was saddened to find
+that they are no longer made so resorted to searching eBay for versions. Second hand ones were going for north of £45
+which I wasn´t willing to pay. However, a few places listed brand new ¨QWERTY/Arabic¨ versions for a very reasonable
+~£14 so I bit the bullet and bought one.
+
+* Keymap
+
+The keyboard worked on plugging it in...sorta. Not all the keys from my muscle memory matched those I was
+expecting. Turns out these aren´t UK-QWERTY, rather they are US-QWERTY. Simple enough to modify the keyboard layout in
+[[id:63fa9747-24ef-40e2-a2ed-d6bd4133374f][Xfce4]] to use the US layout and output matched what was printed on the keys (rather than my expectation). This was all
+good until I wanted to type ~£~ (UK pound symbol) which doesn´t have a natural mapping on the standard US keyboard.
+
+I found a useful [[https://superuser.com/questions/293119/how-to-type-pound-sign%C2%A3-using-us-keyboard-in-windows-linux-and-mac][thread]] on superuser.com and found that setting the layout to ~English (US)~ and variant to ~English
+(US, intl., with dead keys)~ meant I could use ~AltGr + Shift + 4~ to get a  ~£~ but as mentioned in the comments to this
+particular [[https://superuser.com/a/293123/250590][solution]] it is at the expense of messing up typing ~~~/~´~/~¨~ which now required double typing (and the
+symbols look off to me too).
+
+I would /like/ to use a UK-QWERTY layout as that is what my muscle memory is currently strong enough but the US-QWERTY
+layout is not only missing common keys but the double quote and @ symbol are transposed. I don´t need to type ~£~ that
+frequently but often enough for it to be a nuisance not having it readily available and using the dead keys approach is
+also annoying.
+
+I will update if/when I find a better solution!
+
+* Links
+
++ [[https://superuser.com/questions/293119/how-to-type-pound-sign%C2%A3-using-us-keyboard-in-windows-linux-and-mac][How to type pound sign using us-keyboard]]
