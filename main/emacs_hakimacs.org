@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       ae832007-dc8a-4933-8f94-6a402b688468
+:mtime:    20260905113411 20260904203121
+:ctime:    20260904203121
 :END:
 #+TITLE: Hakimacs
 #+DATE: [2026-09-02 Wed]
@@ -9,8 +11,8 @@
 
 * Setup
 
-I´m using [[id:3150b126-53ea-43db-b726-981ad0d314eb][Codeberg Pages]] to host the site and so created a new repository called ~pages~ and followed the [[https://docs.codeberg.org/codeberg-pages/#user%2Forganization-websites][instructions]]
-to enable a user/organisation website.
+I´m using [[id:3150b126-53ea-43db-b726-981ad0d314eb][Codeberg Pages]] to host the site and so created a new repository on Codeberg called ~pages~ and followed the
+[[https://docs.codeberg.org/codeberg-pages/#user%2Forganization-websites][instructions]] to enable a user/organisation website.
 
 1. /Settings > Webhooks > Add Webhook/.
 2. Select /ForegJo/.
@@ -21,6 +23,19 @@ to enable a user/organisation website.
 Pages are then automatically published from the ~pages~ branch of the repository.
 
 * Install
+
+After setting up your ~pages~ repository you should clone it locally and since it is empty you will want to initalise a
+Hugo site within it using
+
+#+begin_example
+cd ~/path/to/cloned/repo
+hugo new project .
+#+end_example
+
+You can then follow the [[https://github.com/idlip/hakimacs][Hakimacs install instructions]] which adds it as a [[id:08080fe0-cfcf-4fc7-96fc-6be481db4da6][Git Submodule]] to your repository.
+
+As noted /content lives in `content/`/ and configuration is via ~config.yaml~.
+
 
 * Configuration
 
