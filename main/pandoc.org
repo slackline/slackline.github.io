@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8af3e4ee-799b-4016-9fa9-995f3a9c7c5b
-:mtime:    20251216091903
+:mtime:    20260907101818 20251216091903
 :ctime:    20251216091903
 :END:
 #+TITLE: Pandoc
@@ -33,3 +33,10 @@ texi2any --html --no-split elispelem.texi && pandoc -f html -t epub elispelem.ht
 * Links
 
 + [[https://pandoc.org][Pandoc]]
++ [[https://pandoc.org/twenty-years-of-pandoc.html][Pandoc - twenty-years-of-pandoc]]
+
+** Haskell
+
+(Pandoc is written in Haskell).
+
++ [[https://staff.fnwi.uva.nl/d.j.n.vaneijck2/HR/][The Haskell Road to Logic, Maths and Programming]]
