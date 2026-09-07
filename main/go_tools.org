@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       d5a18efd-9921-4ebb-ab39-253a972ab8b3
+:mtime:    20260907092524
+:ctime:    20260907092524
+:END:
+#+TITLE: Go Tools
+#+DATE: [2026-09-07 Mon]
+#+FILETAGS: :go:programming:refactoring:
+
+A list of useful tools for working and developing in the [[id:3ef233c9-2d33-44d8-89ec-463e2631240c][Go]] programming language.
+
+* rf
+
+[[https://pkg.go.dev/rsc.io/rf#section-sourcefiles][rf]] is an experimental refactoring tool.
+
+* golangci-lint
+
+[[https://golangci-lint.run/][golangci-lint]] is a fast [[id:55581960-395e-443c-bd5d-bc00c496b6ae][linting]] tool.

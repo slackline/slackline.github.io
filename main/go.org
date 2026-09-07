@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       3ef233c9-2d33-44d8-89ec-463e2631240c
+:mtime:    20260907092536
+:ctime:    20260907092536
 :END:
 #+TITLE: Go
 #+FILETAGS: :programming:language:go:
@@ -11,6 +13,7 @@ other things.
 
 + [[id:f3407641-197f-4262-aab5-bb5be2e74761][Programming]]
 + [[id:6d975b23-702c-455b-98f2-3089f300e115][Useful Programmes]]
++ [[id:d5a18efd-9921-4ebb-ab39-253a972ab8b3][Tools]]
 
 * Installation
 

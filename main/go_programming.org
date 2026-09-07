@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       f3407641-197f-4262-aab5-bb5be2e74761
+:mtime:    20260907092540
+:ctime:    20260907092540
 :END:
 #+TITLE: Go Programming
 #+FILETAGS: :go:programming:
