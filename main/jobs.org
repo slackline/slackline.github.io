@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       723b9b81-5718-4981-a1c9-bde52377458c
-:mtime:    20231102200553
+:mtime:    20260907194406 20231102200553
 :ctime:    20231102200553
 :END:
 #+TITLE: Jobs
@@ -11,3 +11,7 @@
 ** Useful Places Jobs are Advertised
 
 + [[https://opensourcejobhub.com/][Open Source JobHub]]
+
+** Tools for job hunting
+
++ [[https://eyayaw.github.io/posts/jobrake-for-the-job/][jobrake for the job – Eyayaw Beze]]

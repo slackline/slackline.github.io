@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       e239c32d-7e21-40a6-8e1e-b7b08b0c5b98
+:mtime:    20260908205741
+:ctime:    20260908205741
 :END:
 #+TITLE: Biology
 #+FILETAGS: :biology:evolution:life:
@@ -12,3 +14,4 @@ enthralled by [[id:fdd7fac9-d26d-4338-b9f0-a3748fda7c54][Evolution]] and its man
 ** Slime Moulds
 
 + [[https://knowablemagazine.org/content/article/living-world/2026/learning-memory-learning-physarum-polycephalum-slime-mold][The curious life of a clever slime mold | Knowable Magazine]]
++ [[https://www.theguardian.com/news/ng-interactive/2026/sep/08/this-is-dangerous-slime-moulds-and-the-bitter-debate-over-the-nature-of-intelligence][‘This is dangerous’: slime moulds and the bitter debate over the nature of intelligence | | The Guardian]]

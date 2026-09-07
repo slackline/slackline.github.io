@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       604b59c7-4ca0-44a7-bbec-7f1486bc5bd8
-:mtime:    20240120101138
+:mtime:    20260907200346 20240120101138
 :ctime:    20240120101138
 :END:
 #+TITLE: Music Software
@@ -32,3 +32,13 @@ the current playlist.
 ** Long Music Player
 
 An excellent Android client that I've used for a long time is [[https://www.emtronics.co.uk/wp_blog/?p=277][Long Music Player]].
+
+* Bandcamp
+
+I buy most of my new music these days from Bandcamp.
+
+** bandcampsync
+
+[[https://github.com/meeb/bandcampsync/][meeb/bandcampsync: Downloads your Bandcamp purchases automatically]] I am yet to try it though as I typically reorganise
+and rename my downloads as I don like the ~## Artist name - Album name - track name.flac~ that Bandcamp uses (I prefer
+structure ~music/albums/artist/album/## track name.flac~).
