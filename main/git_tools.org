@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a620a74f-3dae-4ac3-afc0-474ce16c9ab8
-:mtime:    20250813234719
+:mtime:    20260908130100 20250813234719
 :ctime:    20250813234719
 :END:
 #+TITLE: Git Tools
@@ -24,7 +24,7 @@ uvx gh-profiler ns-rse
 
 [[https://alchemists.io/projects/git-lint][git-lint]] lints your commit history to give a consistent style.
 
-* TODO Copybara
+* Copybara
 
 [[https://github.com/google/copybara][Copybara]] is a tool for transforming and moving code between repositories.
 
@@ -37,6 +37,12 @@ uvx gh-profiler ns-rse
 ** Gitopolis
 
 [[https://github.com/timabell/gitopolis][gitopolis]] is another tool, written in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]], for managing multiple repositories.
+
+* Keep the Why
+
+[[https://keepthewhy.com/][Keep the Why]] is a method/standard for recording /why/ the decisions/changes were made. It ostensibly looks geared
+towards [[id:a916807b-112d-40c3-81fd-f0d4c6e45712][AI Agents]] but would also be useful for humans. Not sure why this can't be achieved by reading [[id:0b6eddb6-eb5c-4f26-aaea-beed3505f195][Git Log]] or [[id:d8720ab9-a43e-45e4-834e-e4c5ce4f4e43][Git
+Notes]] but there.
 
 * Links
 
