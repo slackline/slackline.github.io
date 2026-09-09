@@ -1,0 +1,125 @@
+:PROPERTIES:
+:ID:       1d0656c3-eff4-4ffa-beac-8925e3821635
+:mtime:    20260909091712
+:ctime:    20260909091712
+:END:
+#+TITLE: RSE Con 2026
+#+FILETAGS: :rse:conference:softwareengineering:
+
+* Links
+
++ [[https://rsecon25.society-rse.org][RSECon26: Research software engineering conference]]
++ [[https://rsecon26.society-rse.org/event-hub/][Event Hub]]
++ [[https://virtual.oxfordabstracts.com/e/rsecon26/program][Schedule]]
++ [[https://calendar.google.com/calendar/ical/c_2792c880014140ca76eb7c45a38396ff488f52877c74d70cbe0dafc7e6f8ee01%40group.calendar.google.com/public/basic.ics][Calendar]]
++ [[https://app.sli.do/event/nWoKnhJw4qdH8KHiv4kKZV/live/questions?m=dXONt][Slido]]
++ [[https://docs.google.com/spreadsheets/d/191nduskJUzI1uDrWELPhRF6wr8zdXAUb/edit?gid=425389984#gid=425389984][Volunteer Schedule]]
++ [[https://docs.google.com/forms/d/e/1FAIpQLSdd-Nhfi5nPWuLg-d98OQuIgSTIztsBV8PtAhSxEAvhilW3Cg/viewform][Timeline]]
+
+* Day 1
+
+** Welcome
+
+** Arfon Smith - Research Software and the future of trustworthy science : Where does the rigour go?
+
++ Runs a journal that is perfect target for AI submissions but also a funder.
++ See [[https://aicoding.leaflet.pub/3mbrvhyye4k2e][/Relocating Rigour/]] at https://aicoding.leaflet.pub/ talks about mistakes in Extreme Programming was missing
+  up-front specification and mistake to think there was no rigour. It had actually moved, from being up-front to showing
+  it to those you are delivering the product to.
++ Fast science is good but unverified science is not.
++ Generative AI is here to stay even if model progress stopped the world has already changed permanently.
++ Not mourning a loss but worried, mixed emotions grief, enthusiasm, anger, denial and exhaustion. (I'd add in
+  scepticism).
++ KPI of research software is research.
+
+*** High Level Summary
+
++ AI capability progress is real.
++ Models can work for a number of hours and produce software that is 50-80% "effective"/"functional".
++ Same for image classification and other metrics (Stanford Human-Centered Artificial Intelligence).
++ Open-models are now very effective too.
++ [[https://aria.org.uk/insights/can-an-ai-scientist-really-discover-knowledge][Can an AI Scientist really discover knowledge?]]
++ Claude Code moment - agentic coding threshold became useful
++ Agentic coding moved from repair to creation (higher order activities)
++ Implication for RSE is that PI/researchers can solve their problems with significantly less support.
++ https://anthropic.com/research/economic-index-primitives
++ Communities are being disrupted. The Missing GitHub Status Page shows availability is decreasing.
++ Can disable pull requests on repositories to block slop.
++ Low quality bug submissions
++ [[https://newsletter.pragmaticengineer.com/p/the-impact-of-ai-on-software-engineers-2026][The impact of AI on software engineers in 2026: key trends. Part 1]]
++ [[https://blog.lmorchard.com/2026/03/11/grief-and-the-ai-split/][Grief and the AI Split - blog.lmorchard.com]] - there are two types of people writing software, those who do it for the
+  craft and those who do it for the results, the former are mourning a loss, the later less so as they are results
+  focused.
+
++ Question : What happens when the capacity to produce software grows much faster than the capacity to review and absorb
+  it?
+
++ [[https://openai.com/index/paperbench/][PaperBench: Evaluating AI’s Ability to Replicate AI Research | OpenAI]]
++ [[https://arxiv.org/abs/2510.24591][[2510.24591] ReplicationBench: Can AI Agents Replicate Astrophysics Research Papers?]]
+
++ Terminal-bench science
++ Genebench pro
+
++ Andrej Karpathy - Software 1.0 automates what you can specify, Software 2.0 automates what you can verify (through
+  reinforcement learning)
++ Physical science requires real world - /you can't unit-test a wet lab result!/
++ Model Hardware Standard - operate laboratory instruments safely.
++ Software progress is rapid because it is easily verifiable.
+
++ [[https://arxiv.org/abs/2602.10181][[2602.10181] Why do we do astrophysics?]] - we do science because its interesting to know stuff, AI can do a lot of this
+  work, but automating it doesn't accelerate the discipline rather it would remove the point of doing it.
++ Much of science remains expensive to verify, which parts of science we make cheaper to verify and why is a choice.
+
+*** Part 2 - What does this mean?
+
++ Production decoupled from verification. More commits > more completed projects > more releases.
++ Writing code is cheaper, shipping, verifying and maintaining it has not
++ Rigour has moved elsewhere friction
++ "AI is an accelerant, not the kindling. The kindling is publish or perish" - Ivan Oransky, Retraction Watch
++ We use vanity metrics that reward volume over rigour, not surprising that we are seeing bad outcomes.
++ "We have allowed execution to be a substitute for thought" . [[https://www.nature.com/articles/s41550-026-02837-2][Large language models are not the problem 2026 Hiranya
+  Peiris]] ([[https://arxiv.org/abs/2604.22071][[2604.22071] Large language models are not the problem]])
++ JOSS was using poor metrics that could easily be attained by AI.
++ Peer review process is in big trouble.
++ Can make something but is it useful.
++ Google Deepmind - validation bottleneck
++ PLOS checkability
++ Trust, validation and traceability are really important
++ Reproducibility is getting cheaper to implement (version control, environment, tests, docs and packaged workflow). Can
+  be cheap and vacuous though.
++ Raise the bar from evidence of good practice to evidence of reproducibility of results (use agents etc. to undertake
+  reproducibile testing).
++ When production scales, reproducibility becomes _essential for progress_.
+
+*** Recommendations - how and where to contribute
+
++ What is scarce is changing, easy to produce code and it will change some RSE work, not good to pretend or ignore this.
+1. Encode Judgement
++ Support sucessful adoption of agentic tools by others (e.g. Carpentries approach)
++ Curation is still a scarce good, find what is useful.
++ Capture and describe critical knowledge
++ Being embedded is key, well positioned
+
+2. Build verification infrastructure
++ Provenance, evidence traces, recorded and shared#
++ Build composable scholarly recorde
++ Benchmarks and datasets are infrastructure
+3. Connect agents to reality
++ Make the world checkable  /in-silico/
++ Shorten the verification loop through the physical world.
++ Make more argument machine-checkable.
++ Newlyt demands for
+
+**** Keep the verification layer open.
++ Take nobody's word for it (skepticism)
++ Whoever holds the process data holds the future capability
+
+**** Help establish norms
+
++ Add nuance to the conversation
++ RSEs are unusually well placed to contribute (Lieden Declaration)
+
+*** [[https://researchsoftwarecatalyst.fund/][Research Software Catalyst Fund]]
+
++ Supporting the practicies that make AI-assisted research software trustworthy
++ Funding available for tool-building, writing sprints
