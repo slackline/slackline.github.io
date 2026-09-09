@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0b6eddb6-eb5c-4f26-aaea-beed3505f195
-:mtime:    20240224205636 20240205164459 20231115133528
+:mtime:    20260908151841 20240224205636 20240205164459 20231115133528
 :ctime:    20231115133528
 :END:
 #+TITLE: Git Log
@@ -26,7 +26,9 @@ formats commits by date (~YYYY-MM~), ~sorts~ them and then counts the number of 
 You can list the evolution of classes or functions using ~git log -L :<function>:path/to/file.py~ ([[https://mastodon.social/@chmouel@fosstodon.org/111278958440113991][source]]) and it will
 show a series of commits that have changed the function. Very neat.
 
-* Searching for specific lines
+* Searching
+
+** Specific lines
 
 You can search for a specific piece of text across the history of a given file ([[https://stackoverflow.com/questions/12591247/how-to-find-commit-when-line-was-deleted-removed][reference]]). If you don't know the file
 that contained the line omit the
@@ -40,6 +42,14 @@ If you don't know where the files is you can use
 #+begin_src bash
 git log -c -S'missingtext' --source --all
 #+end_src
+
+** Regex search
+
+Search history for regex with the following (you can include ~-i~ to make it case insensitive)
+
+#+begin_example
+git log --grep="<expression>"
+#+end_example
 
 * Find commit
 
