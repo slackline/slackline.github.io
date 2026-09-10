@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       1d0656c3-eff4-4ffa-beac-8925e3821635
-:mtime:    20260910143733 20260910133652 20260909162932 20260909123909 20260909091712
+:mtime:    20260910165625 20260910153935 20260910143733 20260910133652 20260909162932 20260909123909 20260909091712
 :ctime:    20260909091712
 :END:
 #+TITLE: RSE Con 2026
@@ -125,6 +125,7 @@
 
 ** [[https://zenodo.org/records/22298094][Making Research Data FAIR with CodeMeta]]
 
+32 present
 + [[https://codemeta.github.io/][CodeMeta]]
 + [[https://www.swhid.org/][SoftWare Hash IDentifier]]
 
@@ -157,8 +158,74 @@ rad node start
 + [[https://pairprogramming.ed.ac.uk/][Pair Programming]] ([[https://teaching-programming.github.io/book/][Teaching Programming Across Disciplines (book)]])
 + [[https://shareing-dri.github.io/task-map/][Task Map - SHAREing]]
 
+** It's not easy being green: embedding environmental sustainability in training material
+
+33 present
+
+[[https://socrse.github.io/green-sig][SocRSE : Green-SIG]]
+
+*** Aleks Nenandic
+
+
++ There was an overarching skill "Green computing" which needed breaking down...
++ Not a neat category
++ Tension between adding new skills and reframing existing ones.
++ Green aspect is an overlay on top of an existing skill.
++ https://directframework.com
++ Make sustainability visible without adding complexity.
++ Change how they are applied.
+
+*** Liz Ing-Simmons
+
++ SparkHub
+
+*** Toby Hodges
+
++ Carpentries teaches computing, but it is the community.
++ Strive to be inclusive, open and always learning.
++ https://carpentries.org
++ Community is developing many more lessons using the [[https://carpentries.github.io/workbench/][Workbench]]
+
+*** David Kamm
+
++ Green Software Engineering Practices
++ [[https://codecarbon.io][CodeCarbon]] for measuring carbon footprint of running tasks
++ calculator.green-algorithms.org/
++ [[https://github.com/Cambridge-Sustainable-Computing-Lab/GreenAlgorithms4HPC][Cambridge-Sustainable-Computing-Lab/GreenAlgorithms4HPC]]
++ Would have been easy to introduce tools for green computing at the same time as teaching them.
+
+*** Scott Archer-Nicholls
+
++ SusTrain [[https://sheffield.questionpro.eu/a/TakeSurvey?tt=kDOiv6TTgWqN6s0U1mSyXw%3D%3D][Questionnaire]]
+
+*** Robert Chisholm
+
++ Profiling and optimising Python code
++ Programmers make elementary mistakes.
++ Jost has been co-maintainer
++ https://carpentries-incubator.github.io/pando-python
++ Reaching people who are comfortable with Python, been difficult targeting, hard to reach people 12 months into PhD
++ Challenging convincing people of the benefits, "/why it works?/".
++ Might have a translator to translate into R.
+
+***
+
++ [[https://imperialcollegelondon.github.io/digital_research_sustainability_training/][Digital Research Sustainability: Summary and Setup]]
++ https://doi.org/10.5281/zenodo.22672748
+
+*** Alex Lyttle
+
++ Green RSEs for Baskerville National Compute Resource (accelerated HPC)
++ Part of bid was funding for Green RSE work, including training and upskilling Green HPC usage.
++ Want to encourage and reward green practices
+
+*** Breakouts
+
++ [[https://hackmd.io/z7_OB83nTsKbSrq6GmXjLw?both][HackMD Notepad]]
+
 * Links
 
 + [[https://everse.software/RSQKit/][RSQKit: Research Software Quality Kit]]
 + [[https://rse.swiss][rse.swiss]]
 + [[https://ubdbra001.github.io/project_management_toolkit/][Project Management Toolkit for Digital Technical Research Professionals (dRTPs) – Project Management Toolkit]]
+>>>>>>> db6d2ff (rsecon26: Day two notes)
