@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       1d0656c3-eff4-4ffa-beac-8925e3821635
-:mtime:    20260909091712
+:mtime:    20260910143733 20260910133652 20260909162932 20260909123909 20260909091712
 :ctime:    20260909091712
 :END:
 #+TITLE: RSE Con 2026
@@ -15,12 +15,11 @@
 + [[https://app.sli.do/event/nWoKnhJw4qdH8KHiv4kKZV/live/questions?m=dXONt][Slido]]
 + [[https://docs.google.com/spreadsheets/d/191nduskJUzI1uDrWELPhRF6wr8zdXAUb/edit?gid=425389984#gid=425389984][Volunteer Schedule]]
 + [[https://docs.google.com/forms/d/e/1FAIpQLSdd-Nhfi5nPWuLg-d98OQuIgSTIztsBV8PtAhSxEAvhilW3Cg/viewform][Timeline]]
++ [[https://docs.google.com/document/d/1H5jDelL9BjxvzaGvS9oKDyQfrl0dba5hURkG8Gz-Glw/edit?tab=t.0][RSE & DAS shared notes]]
 
-* Day 1
+* Day 1 <2026-09-09 Wed>
 
-** Welcome
-
-** Arfon Smith - Research Software and the future of trustworthy science : Where does the rigour go?
+** Arfon Smith - [[https://zenodo.org/records/22672891][Research Software and the future of trustworthy science : Where does the rigour go?]]
 
 + Runs a journal that is perfect target for AI submissions but also a funder.
 + See [[https://aicoding.leaflet.pub/3mbrvhyye4k2e][/Relocating Rigour/]] at https://aicoding.leaflet.pub/ talks about mistakes in Extreme Programming was missing
@@ -123,3 +122,43 @@
 
 + Supporting the practicies that make AI-assisted research software trustworthy
 + Funding available for tool-building, writing sprints
+
+** [[https://zenodo.org/records/22298094][Making Research Data FAIR with CodeMeta]]
+
++ [[https://codemeta.github.io/][CodeMeta]]
++ [[https://www.swhid.org/][SoftWare Hash IDentifier]]
+
+* Day 2 <2026-09-10 Thu>
+
+** Lightning Talks
+
++ [[https://arxiv.org/pdf/2510.05390][Who Do You Think You Are? Creating RSE Personas from GitHub Interactions]]
++ Radicle Federation for [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]]
+#+begin_example
+rad auth
+rad node start
+#+end_example
+
++ [[https://blog.esciencecenter.nl/posts/2026-08-27---rse-survey/][Research Software Engineers: Between Research and Engineering — eScience Center Blog]]
++ [[https://ellakaye.github.io/jugglr/][Jugglr]] visualising
+
++ [[https://github.com/bham-carpentries/bham-introduction-to-webscraping][bham-carpentries/bham-introduction-to-webscraping: Introduction to Web Scraping]]
++ [[https://github.com/bham-carpentries/web-scraping-python][bham-carpentries/web-scraping-python: Web Scraping with Python]]
++ [[https://docs.scrapy.org][Scrapy]]
+
++ [[https://wong-hl.github.io/git-for-researchers/][Welcome! - Git For Researchers]]
++ [[https://imperialcollegelondon.github.io/ReCoDE-research-python-patterns/][Research Software Design Patterns]]
+  + [[https://conwaylife.com/book/][Conway's Game of Life: Mathematics and Construction]]
+
++ [[https://www.software.ac.uk/fellowship-programme][IFRS Fellowship Programme]]
+
++ [[https://rainbowr.org][RainbowR.org]]
+
++ [[https://pairprogramming.ed.ac.uk/][Pair Programming]] ([[https://teaching-programming.github.io/book/][Teaching Programming Across Disciplines (book)]])
++ [[https://shareing-dri.github.io/task-map/][Task Map - SHAREing]]
+
+* Links
+
++ [[https://everse.software/RSQKit/][RSQKit: Research Software Quality Kit]]
++ [[https://rse.swiss][rse.swiss]]
++ [[https://ubdbra001.github.io/project_management_toolkit/][Project Management Toolkit for Digital Technical Research Professionals (dRTPs) – Project Management Toolkit]]
