@@ -1,13 +1,13 @@
 :PROPERTIES:
 :ID:       0998b01c-7d0a-4aec-99ec-908374de338c
-:mtime:    20240705080642
+:mtime:    20260910150040 20240705080642
 :ctime:    20240705080642
 :END:
 #+TITLE: Gentoo Portage
 #+FILETAGS: :gentoo:portage:packages:
 
 
-Package management under Gentoo is courtesy of [[https://wiki.gentoo.org/wiki/Portage][Portage]] and the ~emerge~ command which resolves all dependencies. It is
+[[https://packages.gentoo.org/][Gentoo Packages]] management under Gentoo is courtesy of [[https://wiki.gentoo.org/wiki/Portage][Portage]] and the ~emerge~ command which resolves all dependencies. It is
 configured via ~/etc/portage/make.conf~ where various flags are defined to determine the architecture of your system
 
 * Installing Packages
