@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b771f601-2f4a-4940-9307-731eb2d13f05
-:mtime:    20260904164747
+:mtime:    20260911072735 20260904164747
 :ctime:    20260904164747
 :END:
 #+TITLE: Magit Worktrees
@@ -45,3 +45,8 @@ Thus when this happens again ensure the following are present in ~config~
 #+end_example
 
 As these two ~fetch~ settings say where to get data from.
+
+
+* Links
+
++ [[https://emacsredux.com/blog/2026/09/02/working-with-git-worktrees-in-magit/][Working with Git Worktrees in Magit | Emacs Redux]]

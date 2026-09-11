@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       7a9deb85-fb4d-4d18-b2be-ed8048a5a1d4
-:mtime:    20260301095150 20251229144336 20251221203724 20251221193559 20251212164349 20251209221415 20251207222435 20251204203141 20251201144706 20251127104739 20251119212412 20251110224905 20251021215858 20251019125817 20251019103346 20251015215254 20251001214818 20250904154736 20250815132742 20250805173615 20250724122628
+:mtime:    20260916110416 20260301095150 20251229144336 20251221203724 20251221193559 20251212164349 20251209221415 20251207222435 20251204203141 20251201144706 20251127104739 20251119212412 20251110224905 20251021215858 20251019125817 20251019103346 20251015215254 20251001214818 20250904154736 20250815132742 20250805173615 20250724122628
 :ctime:    20250724122628
 :END:
 #+TITLE: AI Critique
@@ -12,6 +12,7 @@ Why should I bother reading something nobody could be bothered to write?
 
 * Links
 
++ <2026-09-16 Wed> [[https://www.404media.co/theres-a-100-chance-ai-agents-are-already-ruining-the-internet/][There’s a 100% Chance AI Agents Are Already Ruining the Internet]]
 + <2026-08-06 Thu> [[https://branko2f7.substack.com/p/sketching-the-new-dysto-utopian-world][Sketching the new dysto-utopian world with massive presence of artificial intelligence]] (via [[https://observer.co.uk/news/science-technology/article/silicon-valley-sees-ai-as-the-solution-for-everyone-else-its-the-problem][Silicon
   Valley sees AI as the solution – for everyone els...]])
 + <2026-08-06 Thu> [[https://hermit-tech.com/blog/ai-mania-is-eviscerating-global-decisionmaking][AI Mania Is Eviscerating Global Decisionmaking · Radically Ethical Data Consulting]] (via [[https://www.thenerve.news/p/cory-doctorow-ai-business-incentive-to-lie-useless-chatbots-report-nikhil-suresh][Cory
