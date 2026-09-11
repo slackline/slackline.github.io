@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       1d0656c3-eff4-4ffa-beac-8925e3821635
-:mtime:    20260910165625 20260910153935 20260910143733 20260910133652 20260909162932 20260909123909 20260909091712
+:mtime:    20260911144728 20260910165625 20260910153935 20260910143733 20260910133652 20260909162932 20260909123909 20260909091712
 :ctime:    20260909091712
 :END:
 #+TITLE: RSE Con 2026
@@ -208,7 +208,7 @@ rad node start
 + Challenging convincing people of the benefits, "/why it works?/".
 + Might have a translator to translate into R.
 
-***
+*** ???
 
 + [[https://imperialcollegelondon.github.io/digital_research_sustainability_training/][Digital Research Sustainability: Summary and Setup]]
 + https://doi.org/10.5281/zenodo.22672748
@@ -222,10 +222,29 @@ rad node start
 *** Breakouts
 
 + [[https://hackmd.io/z7_OB83nTsKbSrq6GmXjLw?both][HackMD Notepad]]
++ [[https://sdratraining.sparkhub.eu/][SparkHub Training - DRI Emissions]]
+
+* Day 3
+
+** Where next for the RSE Movement in the UK
+
+40 present
+
+*** Neil Chui-Hong
+
++ [[https://www.software.ac.uk/blog/craftsperson-and-scholar][The craftsperson and the scholar | Institute for Research Software]]
++ The Poet and the Industrial Designer.
++ The Poet - values economy of the language, desires a space where several truths can be held simultaneously, focuses on
+  adherence to structure and form, wants to find beauthy in the doing and experiencing.
++ Industrial Designer - values consistency, affordability and quality at scale, balances aestehics, function, cost and
+  durability, wants to create something that is replicable, efficient.
+
+
+*** [[https://docs.google.com/document/d/1toc6pAJ_p_Shz9QkL8PjQykp16vcFqb7Zq5S3c5y7YQ/edit?tab=t.kzoepjdmpfan][Discussion Group 2]]
 
 * Links
 
 + [[https://everse.software/RSQKit/][RSQKit: Research Software Quality Kit]]
 + [[https://rse.swiss][rse.swiss]]
 + [[https://ubdbra001.github.io/project_management_toolkit/][Project Management Toolkit for Digital Technical Research Professionals (dRTPs) – Project Management Toolkit]]
->>>>>>> db6d2ff (rsecon26: Day two notes)
++ [[https://openscapes.org/][OpenScapes.org]]
