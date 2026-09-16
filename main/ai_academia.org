@@ -1,12 +1,13 @@
 :PROPERTIES:
 :ID:       272142ad-6dbc-4260-82fe-32bef3630a92
-:mtime:    20260916115212
+:mtime:    20260916153200 20260916115212
 :ctime:    20260916115212
 :END:
 #+TITLE: AI Academia
 #+FILETAGS: :ai:academia:
 
-* Responsible AI Risk Register for Research Software Engineering
+
+* Responsible AI Risk Register for [[id:49d21f82-887e-4ec7-8963-89460673352a][Research Software Engineering]]
 
 [[https://jshng-glasgow.github.io/Responsible-AI-Risk-Register/][Responsible AI Risk Register]] is a project from the Institute for Research Software (nee Software Sustainability
 Institute).
