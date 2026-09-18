@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0b7373ce-724c-40f0-8432-f8dbbbad95fc
-:mtime:    20260904205529
+:mtime:    20260918164616 20260904205529
 :ctime:    20260904205529
 :END:
 #+TITLE: Ergonomic Keyboard
@@ -21,8 +21,9 @@ good until I wanted to type ~£~ (UK pound symbol) which doesn´t have a natural
 
 I found a useful [[https://superuser.com/questions/293119/how-to-type-pound-sign%C2%A3-using-us-keyboard-in-windows-linux-and-mac][thread]] on superuser.com and found that setting the layout to ~English (US)~ and variant to ~English
 (US, intl., with dead keys)~ meant I could use ~AltGr + Shift + 4~ to get a  ~£~ but as mentioned in the comments to this
-particular [[https://superuser.com/a/293123/250590][solution]] it is at the expense of messing up typing ~~~/~´~/~¨~ which now required double typing (and the
-symbols look off to me too).
+particular [[https://superuser.com/a/293123/250590][solution]] it is at the expense of messing up typing ~~~/~´~/~¨~ which now required double typing and the
+symbols look off to me too, e.g. ~´~ instead of ~'~ and ~¨~ instead of ~"~. The later are obtained by typing the
+quotation keys and then hitting space which is a /big/ hindrance to my typing.
 
 I would /like/ to use a UK-QWERTY layout as that is what my muscle memory is currently strong enough but the US-QWERTY
 layout is not only missing common keys but the double quote and @ symbol are transposed. I don´t need to type ~£~ that
