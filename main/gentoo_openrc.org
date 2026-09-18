@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       491978ed-7688-4360-9827-695b6d2eb2d1
-:mtime:    20240705080904
+:mtime:    20260918173322 20240705080904
 :ctime:    20240705080904
 :END:
 #+TITLE: Gentoo OpenRC
@@ -18,25 +18,31 @@ can define your own custom runlevels.
 
 To add a service to a particular run-level (typically ~default~ for most services)
 
-#+begin_src bash
+#+begin_example bash
   rc-update add <service> <runlevel>
-#+end_src
+#+end_example
+
+To remove a service
+
+#+begin_example bash
+  rc-update del <service> <runlevel>
+#+end_example
 
 *** Check service status
 
 To check the status of a particular service use ~rc-service~
 
-#+begin_src bash
+#+begin_example bash
   rc-service <service> status
-#+end_src
+#+end_example
 
 *** Start/Stop/Restart service
 
 You can start/stop/restart services
 
-#+begin_src bash
+#+begin_example bash
   rc-service <service> [start|stop|restart]
-#+end_src
+#+end_example
 
 * Runit
 
@@ -46,10 +52,10 @@ article.
 
 * User level services
 
-Symlink ~/etc/init.d/user.<name>~ to ~/etc/init.d/user~ and add the service
+Symlink ~/etc/init.d/<service>.<user_name>~ to ~/etc/init.d/<service>~ and add the service
 
 #+begin_example
-ln -s /etc/init.d/user.<name> /etc/init.d/user
+ln -s /etc/init.d/<service>.<user_name> /etc/init.d/<service>
 #+end_example
 
 You can then enable services as a user with...
