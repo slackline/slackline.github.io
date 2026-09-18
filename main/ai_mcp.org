@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       8d3e44cd-b519-4768-93cb-9505e64ebd99
+:mtime:    20260918195738
+:ctime:    20260918195738
+:END:
+#+TITLE: Model Context Protocol
+#+DATE: [2026-09-18 Fri]
+#+FILETAGS: :ai:llms:agents:
+
+* Links
+
++ [[https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro][What is the Model Context Protocol (MCP)? - Model Context Protocol]]
