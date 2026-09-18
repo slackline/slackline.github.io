@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       92e78219-c00f-407c-91e6-1fae065806e5
+:mtime:    20260918194323
+:ctime:    20260918194323
+:END:
+#+TITLE: Org Android
+#+DATE: [2026-09-18 Fri]
+#+FILETAGS: :org:anrdoid:notes:todo:
+
+There are a number of different programs for viewing and editing [[id:169b9c5f-df34-46ab-b64f-8ee98946ee69][Orgmode]] files on [[id:2c46e54a-d704-4e7e-bca3-d8c3e042ab43][Android]].
+
+* Syncing Files
+
+The easiest way to keep files in sync is using [[id:be393585-6c62-4ce9-9fba-15e4d1c472cb][SyncThing]] to keep your main repository on a computer on your home or work
+network in sync with files on your phone.
+
+* Clients
+
+** [[https://www.zettelnotes.com/][Zettel Notes]]
+
+A closed-source application (claims to be open-source but can find the repository). Pretty full-featured.
+
+** [[https://orgro.org/][Orgro]]
+
+Simple and effective browser, can toggle rendering of Org markup.
+
+** [[https://github.com/rrajath/grove][grove]]
+
+"/A task management and note-taking app for Android that is compatible with org-mode/", not tried this yet.
+
+** [[https://gitlab.com/JohnRenz/emborg][emborg]]
+
+For viewing and managing of ToDo tasks across multiple files.
+
+** [[https://github.com/orgzly-revived/orgzly-android-revived][Orgzly Revived]]
+
+The (almost!) original Org client for Android.
