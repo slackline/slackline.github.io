@@ -1,11 +1,16 @@
 :PROPERTIES:
 :ID:       272142ad-6dbc-4260-82fe-32bef3630a92
-:mtime:    20260916153200 20260916115212
+:mtime:    20260917103759 20260916153200 20260916115212
 :ctime:    20260916115212
 :END:
 #+TITLE: AI Academia
 #+FILETAGS: :ai:academia:
 
+* Tools
+
+** [[https://www.nature.com/articles/s41586-026-11044-y][Reimagining research papers as interactive and reliable AI agents | Nature]]
+
++ [[https://github.com/jmiao24/Paper2Agent][Paper2Agent is a multi-agent AI system that automatically transforms research papers into interactive AI agents]]
 
 * Responsible AI Risk Register for [[id:49d21f82-887e-4ec7-8963-89460673352a][Research Software Engineering]]
 
