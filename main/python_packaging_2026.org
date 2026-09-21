@@ -1,0 +1,396 @@
+:PROPERTIES:
+:ID:       316b24ed-dd05-455c-bc59-48b650a9c9a0
+:mtime:    20260921132427 20260921120849 20260921110301
+:ctime:    20260921110301
+:END:
+#+TITLE: Python Packaging 2026
+#+DATE: [2026-09-21 Mon]
+#+FILETAGS: :python:packaging:
+
+Newer notes on [[id:bb57f65e-58f4-45de-9620-901dc998f6d6][Python Packaging]] using some newer tools ([[id:99d3e5a1-bf9b-44f3-afc9-fed5ffead7bd][Python uv]], Scientific Python cookie cutter and Zensical).
+
+* ~uv~
+
+
+* [[https://github.com/scientific-python/cookie][Scientific Python Cookiecutter]]
+
+There are a few ways of using the Scientific Python Cookiecutter template, the easiest (particularly if you use ~uv~),
+is to use ~copier~.
+
+#+begin_example shell
+uv tool install --with copier-templates-extensions copier  # Only required once
+copier copy gh:scientific-python/cookie <pkg> --trust --vcs-ref=HEAD
+#+end_example
+
+This will prompt you for a number of answers to key questions on the package structure. At the moment Zensical is not
+supported so go with anything and then remove things.
+
+Once things are up and running you can then run the following within the project directory.
+
+#+begin_example shell
+uv init .
+#+end_example
+
+** ~pyproject.toml~ tweaks
+
+*** Build System
+
+I like using the uv dynamic versioning which requires updating the ~build-system~ to use ~hatchling~ and
+~uv-dynamic-versioning~ and adding a ~tool.hatch.version~
+
+#+begin_example toml
+[build-system]
+requires = ["hatchling", "uv-dynamic-versioning"]
+build-backend = "hatchling.build"
+
+...
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+#+end_example
+
+*** Pytest
+
+I will typically use the ~pytest-cov~ and ~pytest-mpl~ extensions and so add these options to the ~tool.pytest~ ~addopts~ section.
+
+#+begin_example toml
+[tool.pytest]
+...
+addopts = ["ra", "--showlocals", "--cov", "--mpl"]
+...
+#+end_example
+
+** Virtual Environment
+
+Add a virtual environment and [[id:a4af96d2-f895-4a68-9419-d482d2850f4d][Direnv]] ~.envrc~ file to activate it and allow direnv to run on the directory
+
+#+begin_example shell
+uv venv
+printf "#!/bin/bash\nsource .venv/bin/activate\nexport PATH=${VIRTUAL_ENV}/bin:${PATH}" > .envrc
+direnv allow
+#+end_example
+
+** Add a ~.justfile~
+
+I use [[id:08b71419-a3fc-4c7e-8fb6-75f613e41315][Just]] as a runner for simple commands. You can find my latest version of a [[https://codeberg.org/slackline/dotfiles/src/branch/master/.config/just/.justfile.tmpl][template]]
+
+  #+begin_example just
+  @default:
+    @just --list
+
+  # Profile a test file.
+  test_profile:
+      mkdir prof
+      python -m cProfile -o prof/$(git rev-parse HEAD)_$(date +%Y%m%d).prof $(which pytest) tests/test_<file>.py
+
+  # Pre-commit ruff-check all files
+  pc_ruff:
+      pre-commit run ruff-check --all-file
+
+  # Pre-commit numpydoc all files
+  pc_npd:
+      pre-commit run numpydoc-validation --all-files
+
+  # Pre-commit blacken all files
+  pc_black:
+      pre-commit run blacken-docs --all-files
+
+  # Pre-commit prettier all files
+  pc_prettier:
+      pre-commit run prettier --all-files
+
+  # Pre-commit markdownlint-cli2 all files
+  pc_markdown:
+      pre-commit run markdownlint-cli2 --all-files
+
+  # Pre-commit pylint all files
+  pc_pylint:
+      pre-commit run pylint --all-files
+
+  # Pytest everything
+  pytest:
+      pytest --cov=src --cov-branch --numprocesses=logical
+
+  # Pytest with Matplotlib html report
+  pytest_mpl_html_report:
+      mkdir -p tmp/mpl
+      pytest tests/test_plotting.py --mpl-generate-summary html --mpl-results-path tmp/mpl
+
+  # Pytest update Matplotlib snapshots
+  pytest_mpl_update:
+      mkdir -p tests/__mpl_snapshots__/
+      pytest tests/test_plotting.py --mpl-generate-path=tests/__mpl_snapshots__
+      pytest tests/test_classes.py --mpl-generate-path=tests/__mpl_snapshots__
+
+  # Pytest update Syrupy snapshots
+  pytest_snapshot_update:
+      pytest --snapshot-update
+
+  # Pytest update Maplotlib and Syrupy snapshots
+  pytest_update:
+      just pytest_mpl_update
+      just pytest_snapshot_update
+
+  # uv sync and lock
+  uv_upgrade:
+      uv sync
+      uv lock --upgrade
+  #+end_example
+
+* Zensical
+
+Add Zensical to the package using ~uv~
+
+#+begin_example shell
+uv add zensical
+#+end_example
+
+By default this adds the dependency to ~pyproject.toml~ under ~dependencies~ but I like to keep documentation
+dependencies separate under a ~dependency-group~.
+
+#+begin_example toml
+[dependency-groups]
+docs = [
+  "zensical>=0.0.63",
+]
+#+end_example
+
+Create a new Zensical project in the projects working directory which will create ~docs/{index,markdown}.md~ and
+~zensical.toml~ and ~.github/workflows/docs.yml~ for building the documentation.
+
+#+begin_example shell
+zensical new .
+  #+end_example
+
+** Linting ~docs.yml~
+
+I found that the [[https://docs.zizmor.sh/audits/][zizmor]] hook complained about the ~/.github/workflows/docs.yml~ that was added as the
+~actions/checkout@v7~ did not have ~persist-credentials: false~ set so had to manually add this.
+
+#+begin_example yaml
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+#+end_example
+
+* Development tools
+
+I use a lot of [[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] hooks and other tools and it is therefore useful to have a set of development dependencies
+that can be installed to assist with this.
+#+begin_example
+uv add {pre-commit,black,codespell,ipdb,mypy,pylint,ruff,ty,scipy-stubs}
+#+end_example
+
+Again I moved these from the ~depenencies~  section to their own ~dependency-group~
+
+#+begin_example toml
+[dependency-groups]
+docs = [
+  "zensical>=0.0.63",
+]
+tests = [
+  "pytest >=9",
+  "pytest-cov >=7",
+  "pytest-loguru>=0.4.1",
+  "pytest-mpl>=0.19.0",
+  "pytest-testmon>=2.2.0",
+  "pytest-xdist>=3.8.0",
+  "syrupy>=6.1.1",
+]
+dev = [
+  { include-group = "docs" },
+  { include-group = "tests" },
+  "black>=26.5.1",
+  "codespell>=2.4.3",
+  "ipdb>=0.13.13",
+  "mypy>=2.3.1",
+  "pre-commit>=4.6.2",
+  "pylint>=4.0.8",
+  "ruff>=0.16.8",
+  "scipy-stubs>=1.18.1.1",
+  "ty>=0.0.82",
+]
+docs = [
+    "zensical>=0.0.63",
+]
+#+end_example
+
+** Pre-commit
+
+Add a ~.pre-commit-config.yaml~ this may be in place already from the ~copier~ setup of the template, but there are a few additional hooks I like to use and some I don't.
+
+***
+*** Additional Hooks
+
++ [[id:a0215a32-68db-4534-ac62-b7105bd1c375][NumpyDoc Validation]]
++ [[id:8dbde866-810a-48e4-981f-2fcbc19ec5cf][markdownlint-cli2]]
+  + uv-pre-commit
+  + Disallow capitilisation
+  + pylint (local)
+  + pytest (local)
+
+#+begin_example yaml
+  - repo: local
+    hooks:
+      - id: disallow-caps
+        name: Disallow improper capitalization
+        language: pygrep
+        entry: PyBind|Numpy|Cmake|CCache|Github|PyTest
+        exclude: .pre-commit-config.yaml
+
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.23.2
+    hooks:
+      - id: markdownlint-cli2
+        args: ["--config .markdownlint-cli2.yaml"]
+
+  - repo: https://github.com/numpy/numpydoc
+    rev: v1.11.0rc0
+    hooks:
+      - id: numpydoc-validation
+        exclude: ^noxfile.py$
+
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.12.11
+    hooks:
+      - id: uv-lock
+
+  - repo: local
+    hooks:
+      - id: pylint
+        args: ["--rcfile=.pylintrc.toml"]
+        name: Pylint
+        entry: python -m pylint
+        language: system
+        files: \.py$
+
+  - repo: local
+    hooks:
+      - id: pytest
+        name: Pytest (testmon)
+        entry: pytest -vv --testmon
+        language: system
+        files: \.py$
+#+end_example
+
+Now install ~pre-commit~ in the project directory.
+
+#+begin_example
+pre-commit install
+#+end_example
+
+** Pylint
+
+As nice as [[id:8d773d4d-79be-4555-871a-9de738f598a8][Ruff]] is I still like using [[id:481dbeae-d953-48e4-8842-2b2ac0dc0198][Pylint]] to find code smells. It requires configuration in a ~.pylintrc.toml~ file. For an example I use see [[https://codeberg.org/slackline/dotfiles/src/branch/master/python/.pylintrc.toml][here]].
+
+
+** Numpydoc Validation
+
+Add a numpydoc validation configuration section to ~pyproject.toml~
+
+#+begin_example toml
+[tool.numpydoc_validation]
+checks = [
+  "all", # Perform all check except those listed below
+  "ES01",
+  "EX01",
+  "PR10", # Conflicts with black formatting
+  "SA01",
+]
+exclude = [  # don't report on objects that match any of these regex
+    "\\.undocumented_method$",
+    "\\.__repr__$",
+    "^test_",
+    "^conftest",
+    "^conf$",
+    "^noxfile.py$",
+]
+override_SS05 = [  # override SS05 to allow docstrings starting with these words
+    "^Process ",
+    "^Assess ",
+    "^Access ",
+]
+#+end_example
+
+** Markdownlint-cli2
+
+Add a ~.markdownlint-cli2.yml~  configuration file
+
+#+begin_example yaml
+# Configuration
+config:
+  line-length:
+    line_length: 120
+    code_blocks: false
+    tables: false
+  html:
+    allowed_elements:
+      - div
+      - br
+globs:
+  - "**/*.md"
+ignores:
+  - "tmp/"
+  - "paper.md"
+  - ".venv/"
+  - ".github/CONTRIBUTING.md"
+  - "docs/api/config.md"
+
+fix: true
+#+end_example
+
+
+** ty
+
+Add a [[https://docs.astral.sh/ty][ty]] configuration section to ~pyproject.toml~
+
+#+begin_example toml
+[tool.ty.rules]
+possibly-unresolved-reference = "warn"
+#+end_example
+
+** Codespell
+
+Add a configuration section for Codespell to ~pyproject.toml~
+
+#+begin_example toml
+[tool.codespell]
+skip = 'uv.lock'
+count = ''
+quiet-level = 3
+# ignore-words-list = ''
+#+end_example
+
+* Commit all changes
+
+Everything is being version controlled using [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]]. Update existing files
+
+#+begin_example shell
+git add -u .
+git add .justfile .pre-commit-config.yaml .markdownlint-cli2.yaml .pylintrc.toml docs/* .github/workflows/docs.yml zensical.toml uv.lock
+#+end_example
+
+* Notebooks
+
+Some projects use [[id:c3712eee-d30f-4dd4-b894-4721d094edd1][Jupyter Notebooks]] or [[id:2f61e01c-1ba9-4b87-9f1a-0a2cee6b51b1][Marimo Notebooks]] for development, its rare that they are required as optional
+runtime dependencies, so we add them to their own ~dependency-group~ if required.
+
+#+begin_example
+uv add {pre-commit,black,codespell,ipdb,mypy,pylint,ruff,ty,scipy-stubs}
+#+end_example
+
+And move these to their own dependency group.
+#+begin_example toml
+[dependency-groups]
+notebooks = [
+  "jupyter>=1.1.1",
+  "marimo>=0.24.2",
+]
+#+end_example
+
+
+* Links
+
++ [[https://github.com/scientific-python/cookie][Scientific Python Cookiecutter]]
++ [[https://docs.astral.sh/uv][uv]]
++ [[https://zensical.org/docs/][Zensical]]
