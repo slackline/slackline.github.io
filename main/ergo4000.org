@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0b7373ce-724c-40f0-8432-f8dbbbad95fc
-:mtime:    20260918201423 20260918164616 20260904205529
+:mtime:    20260922143426 20260918201423 20260918164616 20260904205529
 :ctime:    20260904205529
 :END:
 #+TITLE: Ergonomic Keyboard
@@ -29,6 +29,10 @@ I would /like/ to use a UK-QWERTY layout as that is what my muscle memory is cur
 layout is not only missing common keys but the double quote and @ symbol are transposed. I don't need to type ~£~ that
 frequently but often enough for it to be a nuisance not having it readily available and using the dead keys approach is
 also annoying.
+
+Might have found the solution to this, the *Layout* is ~English (US)~ but setting the *Variant* to ~English (intl. with
+AltGr dead keys)~ seems to give me a nice balance, no need to use ~Alt-Gr + '~/~Alt-Gr + '~ or hit space after taping
+each.
 
 ** Alt+Gr
 
