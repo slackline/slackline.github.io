@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       db5f2a26-8cf4-47a7-871f-47f8c8937a2e
+:mtime:    20260919120656
+:ctime:    20260919120656
 :END:
 #+TITLE: AI FOSS
 #+FILETAGS: :ai:foss:
@@ -16,6 +18,8 @@ large language models.
 + [[https://wiki.gentoo.org/wiki/Project:Council/AI_policy][Project:Council/AI policy - Gentoo wiki]]
 + [[https://forge.rust-lang.org/policies/llm-usage.html][LLM usage policy - Rust Forge]]
 + [[https://lists.sr.ht/~sircmpwn/sr.ht-dev/patches/71191][SourceHut policy on LLMs and generative "AI"]]
++ [[https://sourcehut.org/blog/2026-08-27-tos-changes-and-llms/][Changes to SourceHut's terms of service regarding LLMs]]
++ [[https://blog.codeberg.org/protecting-our-floss-commons-from-llms.html][Protecting our FLOSS commons from LLMs — Codeberg News]]
 + [[https://leidendeclaration.ai/][Leiden Declaration on Artificial Intelligence and Mathematics]]
 
 ** Blogs
