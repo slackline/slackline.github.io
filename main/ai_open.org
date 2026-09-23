@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       62ea6eeb-a63d-433a-97a8-119aa192ad1c
-:mtime:    20260923073752
+:mtime:    20260923095719 20260923073752
 :ctime:    20260923073752
 :END:
 #+TITLE: AI Open Systems
@@ -13,3 +13,10 @@ still fail to share the underlying models.
 * Laya
 
 [[https://brainfunctioncollapse.com/laya][Laya: open-source alternative to TypeSafe Jev, runs locally]]
+
+** References
+
++ [[https://arxiv.org/abs/2503.23303][[2503.23303] SalesRLAgent: A Reinforcement Learning Approach for Real-Time Sales Conversion Prediction and
+  Optimization]]
++ [[https://arxiv.org/abs/2510.01237][[2510.01237] Confidence-Aware Routing for Large Language Model Reliability Enhancement: A Multi-Signal Approach to
+  Pre-Generation Hallucination Mitigation]]
