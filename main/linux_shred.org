@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       73a45ec8-b17b-4ddf-8d9f-355b0f80ea0d
+:mtime:    20260926233224
+:ctime:    20260926233224
+:END:
+#+TITLE: Shred
+#+FILETAGS: :linux:cli:shred:hdd:
+
+The ~shred~ tool allows you to scrub files or partitions by repeatedly writing random noise to the target to make it
+much harder to recover data.
+
+
+* Whole disk
+
+*WARNING* This is highly destructive and will wipe all data on the target, make sure you get the device right.
+
+The following over-writes ~/dev/sda~ five times with random bits (verbosely) and makes a final write of zero's to mask
+that shredding has been performed.
+
+#+begin_example
+shred -n 5 -v -z /dev/sda
+#+end_example
+
+* Alternatives
+
+There are other alternatives such as ~wipe~ and ~scrub~.
+
+* Links
+
++ [[https://www.cyberciti.biz/faq/how-do-i-permanently-erase-hard-disk/][How do I permanently erase hard disk? - nixCraft]]
