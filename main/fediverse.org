@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8178219c-ef79-4b59-ad51-e4204a8f369c
-:mtime:    20251205183323 20250430155456 20250401210413 20240309205745 20231106164927
+:mtime:    20260926233104 20251205183323 20250430155456 20250401210413 20240309205745 20231106164927
 :ctime:    20231106164927
 :END:
 #+TITLE: Fediverse
@@ -23,6 +23,7 @@ it with his personal agenda.
 + [[https://fedihood.social/][FediHood]] "/connects you with people around you, by topic. You pick your city, never a precise location. Built on
   ActivityPub and [[id:0a5f391b-0f61-48d8-a4c3-a204d55538de][OpenStreetMap]]./"
 + [[https://fedimeteo.com/][FediMeteo]] - weather forecasts by city.
++ [[https://vernissage.photos/][Vernissage.photos]] - like Pixelfed but subtley different.
 
 * Links
 
