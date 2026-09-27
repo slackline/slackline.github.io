@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       b2629ae8-fba1-4701-bf05-2d0d6bd78a01
+:mtime:    20260927180249
+:ctime:    20260927180249
+:END:
+#+TITLE: Git Extensions
+#+DATE: [2026-09-27 Sun]
+#+FILETAGS: :git:extensions:foss:
+
+There are a lot of [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] extensions available.
+
+* Individual Pages
+
++ [[id:ba1f4f83-b032-410c-9cb6-98b6fa1246bd][Git Absorb]]
++ [[id:cc630d23-b3e4-497e-bbf9-a855e0274297][Git Annex]]
+
+* Links to Projects
+
++ [[https://github.com/jdrouet/git-metrics][jdrouet/git-metrics]] : A git extension to be able to track metrics about your project, within the git repository
++ [[https://www.git-town.com/][Git Town]]
++ [[https://github.com/alerque/git-warp-time][Git Warp Time]]
++ [[https://tissue.systemreboot.net/][tissue]] an issue tracker and project information management system built on plain text files and Git.
++ [[https://github.com/klaussilveira/gitlist][gitlist]] webUI to Git repositories.
++ [[https://octobox.io/][Octobox]] - manage GitHub Notifications in a WebUI.
++ [[https://github.com/MichaelMure/git-bug][git-bug: Distributed, offline-first bug tracker embedded in git, with bridges]]
++ [[https://github.com/dandavison/delta][delta: A syntax-highlighting pager for git, diff, and grep output]]
++ [[https://myrepos.branchable.com/][myrepos]]
++ [[https://git.holly.sh/git-mirror-sync.git][git-mirror-sync]]
++ [[https://github.com/AGWA/git-crypt][git-crypt - Transparent file encryption in git]]
++ [[https://github.com/mystor/git-revise][mystor/git-revise: A handy tool for doing efficient in-memory commit rebases & fixups]]
++ [[https://github.com/scmbreeze/scm_breeze][GitHub - scmbreeze/scm_breeze: Adds numbered shortcuts to the output git status, and much more]]
++ [[https://github.com/b4ryon/git-remote-cloak][git-remote-cloak: Encrypted git remote helper: end-to-end encrypted mirror of a git repository on any ordinary git
+  host]]

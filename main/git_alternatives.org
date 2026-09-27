@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       7d1c279a-5a65-4ac7-b200-d718dcf1bbc5
+:mtime:    20260927180349
+:ctime:    20260927180349
+:END:
+#+TITLE: Git Alternatives
+#+DATE: [2026-09-27 Sun]
+#+FILETAGS: :git:foss:vcs:
+
+[[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] isn't the only version control system there are lots of alternatives. There are also lots of [[id:28ffcc43-9dff-4de8-a211-277c5346a642][alternatives to GitHub]]
+(and good reasons for using them).
+
+Perhaps the strongest candidate for an alternative at the moment is [[id:a37b61ba-8699-4ee3-b407-38f256c186c4][Jujutsu]] which uses [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] as a backend.
+* Alternatives
+
++ [[https://forgefed.org/][ForgeFed]]
++ [[https://www.fossil-scm.org/home/doc/trunk/www/index.wiki][Fossil]]
++ [[https://pijul.org/][Pijul]]
++ [[https://gitless.com/][Gitless]]
++ [[https://martinvonz.github.io/jj/][Jujutsu]] ( [[https://v5.chriskrycho.com/essays/jj-init/][jj init]] blog post that signposted this for me)
++ [[https://www.monotone.ca/][Monotone]]
++ [[https://sapling-scm.com/][Sapling]]
++ [[https://forgefriends.org/][forgefriends]]
++ [[https://www.gameoftrees.org/][Game of Trees]]
++ [[https://www.diversion.dev/][Diversion - Cloud-Native Version Control]]
++ [[https://github.com/mitchellwrosen/mit][mitchellwrosen/mit: Git wrapper with a streamlined UX]]
++ [[https://lore.org/][Lore | Next-Generation Open Source Version Control - Lore]]
