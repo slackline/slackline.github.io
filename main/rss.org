@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       281401b5-a6db-466b-b267-41d8099ba973
-:mtime:    20240731223421
+:mtime:    20260928080706 20240731223421
 :ctime:    20240731223421
 :END:
-#+TITLE: Really Simple Syndication
+#+TITLE: RSS
 #+FILETAGS: :rss:blog:free:open:
 
 I used to use Google Reader to keep abreast of topics via RSS feeds. Alas Google killed it as it ruined their business
@@ -14,3 +14,7 @@ and reading blogs.
 * Links
 
 + [[https://www.eff.org/deeplinks/2026/06/hate-algorithm-rss-one-tools-youve-been-looking][Hate “The Algorithm?” RSS Is One of the Tools You’ve Been Looking For | Electronic Frontier Foundation]]
+
+** Resources
+
++ [[https://toolbox.rss.here.now/][The RSS Universe — Readers, Tools & Standards]]

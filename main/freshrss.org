@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       e083d279-8bca-4d41-8c5f-ffe423918071
+:mtime:    20260928080755
+:ctime:    20260928080755
 :END:
 #+TITLE: FreshRSS
 #+FILETAGS: linux:rss:selfhosted
@@ -30,6 +32,27 @@ use it in Elfeed.
 
 I can then configure [[id:c5b2b8ae-46fc-4d91-8227-7116c7885de4][Emacs Elfeed]] to use this.
 
-#+begin_example lisp
+#+begin_example elisp
+(use-package elfeed-protocol
+  :after elfeed
+  :custom
+  (elfeed-protocol-enabled-protocols '(freshrss))
+
+  :config
+  (elfeed-protocol-enable))
+(use-package elfeed
+  :ensure t
+  :load elfeed-protocol
+  :custom
+  (elfeed-use-curl t)
+  (setq elfeed-feeds `(("freshrss+https://nshephard@freshrss.nshephard.dev"
+                        :api-url "https://freshrss.nshephard.dev/api/greader.php"
+                        :use-authinfo t))))
+(global-set-key (kbd "C-x w") 'elfeed)
+
+(use-package elfeed-protocol-freshrss
+  :after elfeed
+  :config
+  (elfeed-protocol-freshrss-register-protocol))
 
 #+end_example
