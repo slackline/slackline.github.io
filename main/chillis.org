@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       5a8671e1-f402-4725-9f73-f344dfd4de77
-:mtime:    20240424210604 20240410201727 20240405180710 20230103103310 20220525072928
+:mtime:    20260928124656 20240424210604 20240410201727 20240405180710 20230103103310 20220525072928
 :ctime:    20220525072928
 :END:
 #+TITLE: Chillis
@@ -137,6 +137,7 @@ in place.
 + [[https://www.chilliwizards.co.uk/][Chilli Wizards]]
 + [[https://www.thetwistedcurry.co.uk/][The Twisted Curry Company - Yorkshire based spice kit company]]
 + [[https://baucebrothers.com/][Bauce Brothers]] (Subscription service)
++ [[https://www.balefire.uk/s/shop][Balefire]] make nice sauce (tried the /Arcturus/ which was very good)
 + [[https://www.chilliwizards.co.uk/1kg-Dried-Chilli-Naga-Bhut-Jolokia-Pods---Ghost-Pepper-Chili-Highest-Quality][1kg of Bhut Jolokia Pods £49]]
 + [[http://www.belizemagazine.com/edition04/english/e04_05questions.htm][20 questions with Marie Sharp]]
 
