@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3ef233c9-2d33-44d8-89ec-463e2631240c
-:mtime:    20260907092536
+:mtime:    20260928073552 20260907092536
 :ctime:    20260907092536
 :END:
 #+TITLE: Go
@@ -30,3 +30,7 @@ emerge -av dev-lang/go  # Gentoo
 
 + [[https://go.dev/][Go]]
 + [[https://go.dev/learn/][Get Started - The Go Programming Language]]
+
+** Articles
+
++ [[https://iain.rocks/blog/dont-couple-your-go-code-to-github][Don't couple your Go code to GitHub | Iain Cambridge]]
