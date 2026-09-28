@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0eca0cca-f5d0-4259-879b-b7f1844c3e90
-:mtime:    20251109140047 20251109121620
+:mtime:    20260923104446 20251109140047 20251109121620
 :ctime:    20251109121620
 :END:
 #+TITLE: OpenWrt
@@ -46,3 +46,7 @@ Inherited an old one of these, wasn't using it so I passed it onto a friend. Mad
 ** GL-iNet GL-MT300N-v2
 
 + [[https://openwrt.org/toh/gl.inet/gl-mt300n_v2][OpenWRT : GL-MT300N-v2]]
+
+** Software
+
++ [[https://unbound.docs.nlnetlabs.nl/en/latest/][Unbound]]
