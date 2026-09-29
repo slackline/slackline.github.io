@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       bc06ad82-f80e-4436-8ef4-7f58f73d29eb
-:mtime:    20250916084632
+:mtime:    20260929074847 20250916084632
 :ctime:    20250916084632
 :END:
 #+TITLE: Mastodon RSS
@@ -8,7 +8,14 @@
 
 * Mastodon accounts are RSS feeds!
 
-Its pretty simple to get and RSS feed of an account, just add ~.rss~ to the end of the URL.
+Its pretty simple to get and RSS feed of an account, just add ~.rss~ to the end of the URL. This works for...
+
+| Feed Type      | URL Pattern                              | Example                                      |
+|----------------+------------------------------------------+----------------------------------------------|
+| Profile Feed   | ~https://[instance]/@[username].rss~     | ~https://hostux.social/@fsf.rss~             |
+| Hashtag Feed   | ~https://[instance]/tags/[hasthtag].rss~ | ~https://mastodon.social/tags/rss.rss~       |
+| Local Timeline | ~https://[instance]/timeline/local.rss~  | ~https://mastodon.social/timeline/local.rss~ |
+
 
 * Embedding Mastodon RSS feeds
 
