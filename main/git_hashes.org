@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       af10daa9-a80d-416e-8d5d-c1e191cd5f1a
+:mtime:    20261001212630
+:ctime:    20261001212630
+:END:
+#+TITLE: Git Hashes
+#+DATE: [2026-10-01 Thu]
+#+FILETAGS: :git:hashes:
+
+* Links
+
+** Blogs
+
++ [[https://blog.gitbutler.com/git-3-sha-256][Git 3.0's upcoming SHA-256 default will be a costly mistake | Butler's Log]]
