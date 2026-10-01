@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       bdc050b6-a5e4-408b-8fa6-b83f34fb592a
+:mtime:    20261001102643
+:ctime:    20261001102643
+:END:
+#+TITLE: Bandcamp
+#+DATE: [2026-10-01 Thu]
+#+FILETAGS: :music:streaming:
+
+[[https://bandcamp.com][Bandcamp]] is a [[id:60363eb0-6272-4c26-8f2e-d7c237bd6609][music]] streaming and sales service. I've used it for a number of years and like its business model, its
+pretty generous to artists (particularly on [[https://isitbandcampfriday.com/][Bandcamp Friday]]).
+
+* Software
+
+There are various [[id:604b59c7-4ca0-44a7-bbec-7f1486bc5bd8][Music Software]] packages available for Bandcamp.
+
+** bandcampsync
+
+[[https://github.com/meeb/bandcampsync/][meeb/bandcampsync: Downloads your Bandcamp purchases automatically]] I am yet to try it though as I typically reorganise
+and rename my downloads as I don't like the ~## Artist name - Album name - track name.flac~ that Bandcamp uses (I prefer
+structure ~music/albums/artist/album/## track name.flac~).
+
+** bandcamper
+
+[[https://github.com/yyyyyyyan/bandcamper][yyyyyyyan/bandcamper: Bandcamp downloader]] is another tool for downloading music from bandcamp.

@@ -1,7 +1,9 @@
 :PROPERTIES:
 :ID:       8a6cb5f6-cd3c-408c-a8a2-6c3179a2b277
+:mtime:    20260930171319
+:ctime:    20260930171319
 :END:
-#+TITLE: Xan
+#+TITLE: CSV Xan
 #+FILETAGS: :linux:cli:csv:
 
 [[https://github.com/medialab/xan][xan: The CSV magician]]🧙 is a tool for exploring and visualising ~.csv~ like files in the terminal.
