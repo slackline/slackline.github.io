@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       d2ee7cc1-fe3a-4721-9477-7b3f0c975c4b
+:mtime:    20261001230455
+:ctime:    20261001230455
+:END:
+#+TITLE: LittleFedi
+#+DATE: [2026-10-01 Thu]
+#+FILETAGS: :fediverse:mastodon:blog:
+
+[[https://littlefedi.org/][littleFedi]] is "/a small AcitivtyPub Server written in Go/" for connecting to the [[id:8178219c-ef79-4b59-ad51-e4204a8f369c][Fediverse]] and in particular
+[[id:0a7fbe90-1f6e-4a38-a0c8-b378b1893f33][Mastodon]]. It also includes the ability to blog.
+
+* Initial Test
+
+Downloading a binary and placing it on my [[id:e1dcf5fc-2125-455d-b800-d3f1b318c8c9][OVH]] VPS I made it executable and ran ~littlefedi init~ setting it up as an
+instance with a sub-domain on my server. I could then connect to it locally, good start.
+
+Setting up a ~CNAME~ entry for the public domain was straight forward (I also use OVH for this).
+
+I needed to setup a proxy in [[id:3774439d-af75-453e-b3e9-9d578b6bec46][Nginx]] in order to be able to connect to it remotely. Fortunately I already use one for
+[[id:d9c960c2-71b6-45e6-b388-dcd07b9da3e1][FitTrackee]] so had a starting point but the authors also provide one in the [[https://littlefedi.org/downloads/binaries/packaging/][~packaging/nginx-littlefedi.conf~]].
