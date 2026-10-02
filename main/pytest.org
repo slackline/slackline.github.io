@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3cca0dfd-0c82-4685-b9ed-6314f7c8b78f
-:mtime:    20260924184431 20260904071243 20251107115921 20251103102450 20251022135419 20250926101805 20250618134341 20241110212615 20241002091737 20241001110421 20240529091921 20240523125824 20240507153851 20240417074159 20240416215946 20240315123523 20240206174808 20240102123440 20240101130614 20231231095334 20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
+:mtime:    20261002144903 20260924184431 20260904071243 20251107115921 20251103102450 20251022135419 20250926101805 20250618134341 20241110212615 20241002091737 20241001110421 20240529091921 20240523125824 20240507153851 20240417074159 20240416215946 20240315123523 20240206174808 20240102123440 20240101130614 20231231095334 20230728104728 20230721140504 20230329222932 20230324154925 20230227200312 20230227155044 20230207144419 20230103103309 20221212233350
 :ctime:    20221212233350
 :END:
 #+TITLE: Python Pytest
@@ -8,7 +8,6 @@
 #+FILETAGS: :python:programming:testing:
 
 
-* Pytest
 
 As its web-page states [[https://docs.pytest.org/en/7.0.x/][pytest: helps you write better programs]].
 
@@ -17,7 +16,7 @@ test as "expect to fail" and ~pytest~ will not halt and instead carry on with th
 
 Combining ~pytest~ with [[id:d1832004-f5ee-4e28-8d83-abfe5969c283][Hypothesis]] makes for a very powerful framework.
 
-** Configuration
+* Configuration
 
 You can configure pytest within a projects directory via a choice of files ~setup.cfg~ is sufficient for simple use
 cases but its recommended more complex configurations are made via ~pyproject.toml~.
@@ -39,12 +38,12 @@ markers = [
 ]
 #+end_example
 
-** Usage
+* Usage
 
 By default ~pytest~ looks for the ~tests~ directory and runs all tests in files starting with ~test_*~ found within. A
 special file ~tests/conftest.py~ can be written that defines Fixtures that are to be used across tests.
 
-** Fixtures
+* Fixtures
 
 PyTest provides the [[https://docs.pytest.org/en/7.1.x/how-to/fixtures.html][~@pytest.fixture~]] decorator.
 
@@ -67,7 +66,7 @@ These can be placed in ~conftest.py~ in the top-level, but should be broken down
 not required globally. Nested fixtures with the same name take precedence over those defined at a higher level. Useful
 examples are in [[https://stackoverflow.com/a/34520971/1444043][this post on StackOverflow]].
 
-*** Using Fixtures
+** Using Fixtures
 
 If you define a fixture in one file and use it within the same file you may find that [[id:55581960-395e-443c-bd5d-bc00c496b6ae][Pylint]] complains about ~redefining
 name '<x>' from outer scope~. The simplest solution is to define your fixtures in ~conftest.py~ as this means they can
@@ -83,7 +82,7 @@ def update_default_config(default_config: dict[str, int]) -> dict[str, int]:
     return default_config["a"] = 3
 #+end_src
 
-*** Fixtures in parametrize
+** Fixtures in parametrize
 
 You can use ~@pytest.fixture~ in ~@pytest.mark.parametrize~, there are two ways to do so (see [[https://stackoverflow.com/questions/42014484/pytest-using-fixtures-as-arguments-in-parametrize][here]]).
 
@@ -124,7 +123,7 @@ def test_create_event(api_key: str, event_data: dict, expected: int) -> None:
     assert isinstance(event_data, dict)
 #+end_src
 
-*** Parameterising fixtures
+** Parameterising fixtures
 
 You can parameterise fixtures using the `pytest.fixture(params=<something>)`
 #+CAPTION: Parameterising fixtures
@@ -137,7 +136,7 @@ def a_number(request):
     return request.param
 #+end_src
 
-** Testing Exceptions
+* Testing Exceptions
 
 You can [[https://docs.pytest.org/en/stable/reference/reference.html#pytest.raises][test for exceptions being raised]].
 
@@ -149,7 +148,7 @@ You can [[https://docs.pytest.org/en/stable/reference/reference.html#pytest.rais
           assert "a" in {"b": 1, "c": 2}.keys()
 #+END_SRC
 
-** Parameterisation
+* Parameterisation
 
 It is possible to write one test and [[https://docs.pytest.org/en/7.1.x/how-to/parametrize.html][paramterise]] it, that is pass it a set of different parameters for input and
 expectation. It is a very simple method of increasing the coverage and range of scenarios that you are testing.
@@ -221,7 +220,7 @@ def divide(a: Union[int, float], b: Union[int, float]) -> float:
           divide(a, b)
 #+END_SRC
 
-*** ~id~
+** ~id~
 
 You can also label your parametrised tests, this gives them meaningful names and means you don't have to leave comments
 in the source. This is done using ~pytest.param()~ (from [[https://gist.github.com/danjac/72e00f39d53702de9c20553a941a8343][this gist]]).
@@ -243,7 +242,7 @@ def test_some_function(value: str, expected: str) -> None:
 
 #+end_src
 
-*** What Test Am I running?
+** What Test Am I running?
 
 Sometimes your tests will depend on the set of parameters. You can therefore use the `id` that you set within
 ~pytest.param(..., id="test1")~ to determine which set of parameters are being used within your test. This is accessed
@@ -269,7 +268,7 @@ def test_some_function(value: str, expected: str) -> None:
 #+end_src
 
 
-*** Fixture Parameterisation
+** Fixture Parameterisation
 
 It is also possible to [[https://docs.pytest.org/en/7.1.x/how-to/fixtures.html#fixture-parametrize][parametrise fixtures]].
 
@@ -288,7 +287,7 @@ def circle_coordinates(request) -> np.ndarray:
     return coordinates
 #+END_SRC
 
-** Marks
+* Marks
 
 Sometimes you may wish to run subsets of tests, if for example one of your tests takes a particularly long time to
 run. This can be done using [[https://docs.pytest.org/en/stable/example/markers.html#marking-test-functions-and-selecting-them-for-a-run][@pytest.mark]] fixture to group tests and using the `pytest -m <name>` to select them.
@@ -324,7 +323,56 @@ pytest -v -m "slow"
 pytest -v -m "not slow"
 #+end_example
 
-*** Project configuration
+** ~@pytest.mark.skip[if]~
+
+It is possible to skip tests completely or conditionally using ~@pytest.mark.skip()~ or  ~@pytest.mark.skipif()~.
+
+*** Skipping based on OS
+
+Often you may have [[id:3b6a27c8-6ef9-4133-95b9-302d2e4dbea3][Continuous Integration/Development]] in place that runs tests and precision may mean tests fail on some
+OSs. It is possible to detect and skip these on GitHub (and no doubt other systems).
+
+#+begin_example python
+import os
+import sys
+
+GITHUB_ACTIONS = os.getenv("GITHUB_ACTIONS") == "true"
+GITHUB_OSX = os.getenv("GITHUB_ACTIONS") == "true" and sys.platform == "darwin"
+
+@pytest.mark.skipif(GITHUB_ACTIONS, reason="no license for library XYZ available on GitHub")
+def test_a_function() -> None:
+    assert True
+
+@pytest.mark.skipif(GITHUB_OSX, reason="precision differences on OSX")
+def test_another_function() -> None:
+    assert True
+#+end_example
+
+If you have parameterised tests these can be skipped on an individual basis.
+
+#+begin_example python
+import os
+import sys
+
+GITHUB_ACTIONS = os.getenv("GITHUB_ACTIONS") == "true"
+GITHUB_OSX = os.getenv("GITHUB_ACTIONS") == "true" and sys.platform == "darwin"
+GITHUB_WIN = os.getenv("GITHUB_ACTIONS") == "true" and sys.platform == "win32"
+
+@pytest.mark.parameterize(
+    ("a"),
+    [
+        pytest.param("1.0", marks=pytest.mark.skipy(GITHUB_ACTIONS, reason="test fails on github ci")),
+        pytest.param("2.0", marks=pytest.mark.skipy(GITHUB_OSX, reason="test fails on under OSX")),
+        pytest.param("3.0", marks=pytest.mark.skipy(GITHUB_OSX, reason="test fails on under Windows")),
+    ]
+def test_a_function(a: float) -> None:
+    assert isinstance(a, float)
+
+#+end_example
+
+
+
+* Project configuration
 
 Your packages ~pyproject.toml~ which will typically be used to configure Pytest via the ~tool.pytest~ section.
 
