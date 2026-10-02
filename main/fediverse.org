@@ -1,13 +1,12 @@
 :PROPERTIES:
 :ID:       8178219c-ef79-4b59-ad51-e4204a8f369c
-:mtime:    20260929080853 20260926233104 20251205183323 20250430155456 20250401210413 20240309205745 20231106164927
+:mtime:    20261002110334 20260929080853 20260926233104 20251205183323 20250430155456 20250401210413 20240309205745 20231106164927
 :ctime:    20231106164927
 :END:
 #+TITLE: Fediverse
 #+FILETAGS: :fediverse:distributed:mastodon:pixelfed:mobilizon:forgejo:gotosocial:
 
 + [[https://bookwyrm.social/][Bookwyrm]] offers federated book reading and reviewing. I use [[https://bookrastinating.com/][Bookrastinating]].
-+ [[https://gotosocial.org/][GoToSocial]] is "/an ActivityPub social network server, written in Golang/".
 + [[id:0a7fbe90-1f6e-4a38-a0c8-b378b1893f33][Mastodon]] is a social media/instant messaging service that doesn't suffer from being owned by a single idiot who destroys
 it with his personal agenda.
 + [[https://mobilizon.org/en/][Mobilizon]] is a system for finding, creating and organising events.
@@ -46,5 +45,5 @@ it with his personal agenda.
 
 ** Software
 
-+ [[https://rpi0w.stefanomarinelli.it/@stefano/687a61e9-dae7-4ed2-8c2e-94dfe0bd550c][LittleFedi]] looks an interesting
-  project for self-hosting.
++ [[https://rpi0w.stefanomarinelli.it/@stefano/687a61e9-dae7-4ed2-8c2e-94dfe0bd550c][LittleFedi]] looks an interesting project for self-hosting.
++ [[https://gotosocial.org/][GoToSocial]] is "/an ActivityPub social network server, written in Golang/".
