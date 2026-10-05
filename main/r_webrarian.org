@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       c407099d-3c80-4057-b4c0-cb6c68032c1a
+:mtime:    20261005124345
+:ctime:    20261005124345
+:END:
+#+TITLE: R Webrarian
+#+DATE: [2026-10-05 Mon]
+#+FILETAGS: :r:statistics:reports:reproducible:
+
+* Links
+
++ [[https://coatless-wasm.github.io/webrarian/][R Workspaces as Static Websites]]
+
+** Blogs
+
++ [[https://blog.thecoatlessprofessor.com/posts/introducing-webrarian/][R Workspaces as Static Websites – TheCoatlessProfessor]]
