@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d2ee7cc1-fe3a-4721-9477-7b3f0c975c4b
-:mtime:    20261001230455
+:mtime:    20261004181641 20261001230455
 :ctime:    20261001230455
 :END:
 #+TITLE: LittleFedi
@@ -19,3 +19,35 @@ Setting up a ~CNAME~ entry for the public domain was straight forward (I also us
 
 I needed to setup a proxy in [[id:3774439d-af75-453e-b3e9-9d578b6bec46][Nginx]] in order to be able to connect to it remotely. Fortunately I already use one for
 [[id:d9c960c2-71b6-45e6-b388-dcd07b9da3e1][FitTrackee]] so had a starting point but the authors also provide one in the [[https://littlefedi.org/downloads/binaries/packaging/][~packaging/nginx-littlefedi.conf~]].
+
+* Building from Source
+
+I was keen to have a go at making an [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] ~PKBBUILD~ to install LittleFedi cleanly at the system level on my [[id:c0091cb9-e687-4a0b-adb6-24077511f7d1][Arch
+VPS]]. There are good notes and instructions on writing these at...
+
++ [[https://wiki.archlinux.org/title/Creating_packages][Creating packages - ArchWiki]]
++ [[https://wiki.archlinux.org/title/PKGBUILD][PKGBUILD - ArchWiki]]
++ [[https://wiki.archlinux.org/title/Building_in_a_clean_chroot][Building in a clean chroot]]
+
+** Build from source
+
+First check that I can build from source.
+
+#+begin_example shell
+wget https://littlefedi.org/downloads/littlefedi-26.10.01-source.tar.gz
+tar xzvf littlefedi-26.10.01-source.tar.gz
+cd littlefedi-26.10.01
+#+end_example
+
+There are multiple options available depending on the features to enable, I decided to try including all optional
+builds, i.e. ~blog~, ~postgres~ and ~s3~ support.
+
+#+begin_example
+make build
+make build-blog
+make build-postgres-s3
+#+end_example
+
+This froze (or dramatically slowed down) by VPS which only has 2GB RAM and I expect this was exceeded so it switched to
+caching (I saw a [[https://0xde501a7a.net/@rqm/01a105d4-b580-7ed6-a06e-680aeb2852ce][toot]] suggesting it could use up to
+19.7GB albeit with ~allreleases~ so perhaps that is for all architectures that are available)
