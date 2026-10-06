@@ -1,8 +1,19 @@
 :PROPERTIES:
 :ID:       c2e33394-c992-4ef4-82a6-e434f98a2a5a
+:mtime:    20261004194948
+:ctime:    20261004194948
 :END:
 #+TITLE: cURL
 #+FILETAGS: :linux:curl:
+
+* Download files
+
+Some files, particularly if they are binaries (which includes tar-balls) require you to specify the output file ~-o
+<target>~ for the ~<url>~ you are grabbing.
+
+#+begin_example
+curl -o <target> <url>
+#+end_example
 
 * Links
 
