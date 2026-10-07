@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       316b24ed-dd05-455c-bc59-48b650a9c9a0
-:mtime:    20260921132427 20260921120849 20260921110301
+:mtime:    20261007100209 20260921132427 20260921120849 20260921110301
 :ctime:    20260921110301
 :END:
 #+TITLE: Python Packaging 2026
@@ -389,8 +389,32 @@ notebooks = [
 #+end_example
 
 
+* CI/CD
+
+The [[https://github.com/scientific-python/cookie][Scientific Python Cookiecutter]] includes...
+
++ ~.github/workflows/ci.yml~ which runs style/linting and tests against the package.
++ ~.github/workflows/cd.yml~ which attempts to build the package and optionally deploy to PyPI.
+
+** CI
+
+One of the actions that is run by CI is [[https://github.com/j178/prek-action/][j178/prek-action]] which runs [[id:ea74974f-50c1-4fbe-ac8e-14b8e77c47af][prek]]
+
+You can add options to its configuration using ~extra-args~. For example you may wish to skip running local hooks with
+~id~ of ~pytest~ and ~pylint~ in which case you add the following. ~pylint~ is run as a separate step in the ~ci.yml~
+anyway and I personally add a ~pytest~ local hook to run ~pytest -vv --testmon~ to use
+[[https://www.testmon.org/][pytest-testmon]] so that only tests that are affected by changes are run before
+commits. This isn't required in CI as all tests are run.
+
+#+begin_example yaml
+      - uses: j178/prek-action@v2
+        with:
+          extra-args: "--skip pytest --skip pylint"
+#+end_example
+
 * Links
 
 + [[https://github.com/scientific-python/cookie][Scientific Python Cookiecutter]]
 + [[https://docs.astral.sh/uv][uv]]
 + [[https://zensical.org/docs/][Zensical]]
++ [[https://prek.j178.dev/0.5.5/][prek - prek]]

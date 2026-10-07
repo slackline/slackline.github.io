@@ -1,0 +1,42 @@
+:PROPERTIES:
+:ID:       ea74974f-50c1-4fbe-ac8e-14b8e77c47af
+:mtime:    20261007095924
+:ctime:    20261007095924
+:END:
+#+TITLE: Prek
+#+DATE: [2026-10-07 Wed]
+#+FILETAGS: :prek:pre-commit:git:hooks:
+
+[[https://prek.j178.dev/][Prek]] is a drop-in replacement for [[id:c76767c4-2a49-42f8-a323-a6d6105e0bce][Pre-commit]] written in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]].
+
+* Installation
+
+#+begin_example shell
+paru prek               # Arch
+emerge -av prek         # Gentoo
+[uv] pip install prek   # Python virtualenv
+#+end_example
+
+Or add it as a dependency to ~pyproject.toml~
+
+* Usage
+
+** Skipping
+
+You can optionally skip tasks using ~--skip <hook>/<project>~. This might be useful if you want to exclude e.g. ~pytest~
+or ~pylint~ from running in CI.
+
+* CI
+
+There is a [[id:e19b6eb6-46b2-440a-ba35-be29feb33407][GitHub Actions]] available to run ~prek~ on your code base [[https://github.com/j178/prek-action/][j178/prek-action]]. You can add options to its
+configuration using...
+
+#+begin_example yaml
+      - uses: j178/prek-action@v2
+        with:
+          extra-args: "--skip pytest --skip pylint"
+#+end_example
+
+* Links
+
++ [[https://prek.j178.dev/][Prek]]
