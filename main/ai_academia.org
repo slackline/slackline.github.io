@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       272142ad-6dbc-4260-82fe-32bef3630a92
-:mtime:    20260917103759 20260916153200 20260916115212
+:mtime:    20261009082652 20260917103759 20260916153200 20260916115212
 :ctime:    20260916115212
 :END:
 #+TITLE: AI Academia
@@ -22,5 +22,6 @@ Institute).
 ** Declarations
 
 + [[https://leidendeclaration.ai/][Leiden Declaration on Artificial Intelligence and Mathematics]]
++ [[https://rdr.ucl.ac.uk/articles/report/AI-Assisted_Software_Development_Policy_for_UCL_Advanced_Research_Computing/34070631?file=69660984][AI-Assisted Software Development Policy for UCL Advanced Research Computing]]
 
 ** Publishers
