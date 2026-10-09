@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a620a74f-3dae-4ac3-afc0-474ce16c9ab8
-:mtime:    20260908130100 20250813234719
+:mtime:    20261009110357 20260908130100 20250813234719
 :ctime:    20250813234719
 :END:
 #+TITLE: Git Tools
@@ -44,6 +44,9 @@ uvx gh-profiler ns-rse
 towards [[id:a916807b-112d-40c3-81fd-f0d4c6e45712][AI Agents]] but would also be useful for humans. Not sure why this can't be achieved by reading [[id:0b6eddb6-eb5c-4f26-aaea-beed3505f195][Git Log]] or [[id:d8720ab9-a43e-45e4-834e-e4c5ce4f4e43][Git
 Notes]] but there.
 
+* Git Social
+
+[[https://gitsocial.org/index.html][Git Social]] "/stores issues, pull requests, comments and other data in git/".
 * Links
 
 + [[https://tissue.systemreboot.net/][tissue]] an issue tracker and project information management system built on plain text files and Git.
@@ -70,3 +73,4 @@ Notes]] but there.
 + [[https://github.com/seeyebe/gmap][gmap]] CLI tool for understanding what has changed, when, how much and by whom.
 + [[https://alchemists.io/projects/git-lint][Git Lint | Alchemists]] - consistent, linted git commits
 + [[https://github.com/google/copybara][Copybara]] - a tool for transforming and moving code between repositories.
++ [[https://gitsocial.org/index.html][Git Social]]
