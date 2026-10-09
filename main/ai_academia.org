@@ -17,6 +17,7 @@
 [[https://jshng-glasgow.github.io/Responsible-AI-Risk-Register/][Responsible AI Risk Register]] is a project from the Institute for Research Software (nee Software Sustainability
 Institute).
 
+
 * Links
 
 ** Declarations
@@ -24,4 +25,7 @@ Institute).
 + [[https://leidendeclaration.ai/][Leiden Declaration on Artificial Intelligence and Mathematics]]
 + [[https://rdr.ucl.ac.uk/articles/report/AI-Assisted_Software_Development_Policy_for_UCL_Advanced_Research_Computing/34070631?file=69660984][AI-Assisted Software Development Policy for UCL Advanced Research Computing]]
 
+** Advice
+
++ [[https://github-pages.arc.ucl.ac.uk/research-software-practices/tooling/ai-assisted-coding.html][Guide To AI-Assisted Coding | research-software-practices]] -UCL guidelines
 ** Publishers
