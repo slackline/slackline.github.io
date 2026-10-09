@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       08573bae-b4f1-4023-9dd3-ce9c033c282a
+:mtime:    20261009092324
+:ctime:    20261009092324
+:END:
+#+TITLE: Green Computing
+#+DATE: [2026-10-09 Fri]
+#+FILETAGS: :rse:green:environment:
+
+The [[id:49d21f82-887e-4ec7-8963-89460673352a][Research Software Engineering]] movement has a Special Interest Group on Green Computing to assess and minimised the
+environmental impact of research software.
+
+* Links
+
++ [[https://www.software.ac.uk/guide/introductory-guide-green-computing-software-developers][An Introductory Guide to Green Computing for Software Developers]]
