@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       fa283f95-40b0-4be0-ab9d-7672d67b7f27
-:mtime:    20250111154556 20240121114231
+:mtime:    20261009125720 20250111154556 20240121114231
 :ctime:    20240121114231
 :END:
 #+TITLE: Python Pandas
@@ -10,6 +10,7 @@
 
 ** Indexes
 
+*** Selecting
 *** Renaming
 
 Set names on multi-indexed data frames with...
