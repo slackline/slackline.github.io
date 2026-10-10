@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       f3238930-ae4c-4e13-952a-820105014698
+:mtime:    20261010100505
+:ctime:    20261010100505
+:END:
+#+TITLE: yq
+#+DATE: [2026-10-10 Sat]
+#+FILETAGS: :yq:yaml:json:
+
+[[https://yq.readthedocs.io][yq]] is a [[id:a23966d2-0e34-4ebd-8a66-5d40c2ce6a43][jq]] wrapper for YAML documents written in Python. There is however a [[https://github.com/mikefarah/yq][yq]] version written in [[id:3ef233c9-2d33-44d8-89ec-463e2631240c][Go]] which is "/a
+lightweight and portable command-line YAML, JSON and XML processor/".
+
+* Links
+
++ [[https://yq.readthedocs.io][yq]] (Python)
++ [[https://github.com/mikefarah/yq][yq]] (Go)
