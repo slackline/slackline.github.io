@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       844a7c57-3be5-4741-8ecc-ec15689d2062
+:mtime:    20261012124121
+:ctime:    20261012124121
+:END:
+#+TITLE: GDPR
+#+DATE: [2026-10-12 Mon]
+#+FILETAGS: :privacy:eu:gdpr:
+
+* Links
+
++ [[https://gdpr-omnibus.eu/][Data Privacy Ranking | GDPR-OMNIBUS | Data Privacy in the EU Omnibus amendments]]
