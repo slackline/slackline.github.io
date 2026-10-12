@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d1ce8192-41ce-4073-9fe8-654fd17fdadb
-:mtime:    20240505164442 20240323215514 20240318073454 20231028185951 20231027093136 20230103103313 20221229210143
+:mtime:    20261012095449 20240505164442 20240323215514 20240318073454 20231028185951 20231027093136 20230103103313 20221229210143
 :ctime:    20221229210143
 :END:
 #+TITLE: Security
@@ -17,6 +17,7 @@
 + [[https://www.eff.org/what-is-a-passkey][EFF | What is a passkey]]
 + [[https://www.eff.org/deeplinks/2023/10/passkeys-and-privacy][EFF | Passkeys and Privacy]]
 + [[https://proton.me/support/pass-use-passkeys][ProtonMail | Enabling passkeys]]
++ [[https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them][Passkeys are a trap. Do not use them. - by The Hack]]
 
 * Random
 
