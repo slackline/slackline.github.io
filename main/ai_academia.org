@@ -1,10 +1,14 @@
 :PROPERTIES:
 :ID:       272142ad-6dbc-4260-82fe-32bef3630a92
-:mtime:    20261009082652 20260917103759 20260916153200 20260916115212
+:mtime:    20261012080406 20261009082652 20260917103759 20260916153200 20260916115212
 :ctime:    20260916115212
 :END:
 #+TITLE: AI Academia
 #+FILETAGS: :ai:academia:
+
+* Research
+
++ [[https://aiandeducation.mit.edu/][AI and Education – Report of MIT’s Ad Hoc Committee on AI Use in Teaching, Learning, and Research Training]] ([[https://observer.co.uk/news/science-technology/article/what-are-universities-for-ai-can-help-answer-the-question][commentary]])
 
 * Tools
 
@@ -28,4 +32,5 @@ Institute).
 ** Advice
 
 + [[https://github-pages.arc.ucl.ac.uk/research-software-practices/tooling/ai-assisted-coding.html][Guide To AI-Assisted Coding | research-software-practices]] -UCL guidelines
+
 ** Publishers
