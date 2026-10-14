@@ -26,3 +26,12 @@
 
 I'm working on switching to these but have a bad habit of having used [[id:0b7373ce-724c-40f0-8432-f8dbbbad95fc][Ergonomic Keyboard]] with directional arrows and
 additional keys for many years and my right hand regularly drifts to these thanks to ingrained muscle memory.
+
+* Cool Navigation Tricks
+
+** ~occur~
+
+You can use ~occur~ (bound to ~M-s o~) to search for the occurrence of a string (or regex?) which will open a buffer
+with lines that match. You can switch to this and use it to jump to the occurence in the buffer you are working
+with. Better still you can press ~e~ within this buffer to edit all occurrences. In essence a fancy find and replace but
+handy for navigating and getting context.
