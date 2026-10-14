@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       97d138e1-015a-406a-b7ec-c046f01246d2
-:mtime:    20260109074611 20250525101334 20250316202626 20250118215506 20241101100212 20240715150601 20240320215203 20240314095442 20231203195042 20231128101130 20230927144330 20230916171030 20230905215133 20230629094349 20230620125955 20230508192755 20230421130128 20230103103311 20221224191223 20230103103308
+:mtime:    20261014094852 20260109074611 20250525101334 20250316202626 20250118215506 20241101100212 20240715150601 20240320215203 20240314095442 20231203195042 20231128101130 20230927144330 20230916171030 20230905215133 20230629094349 20230620125955 20230508192755 20230421130128 20230103103311 20221224191223 20230103103308
 :ctime:    20221224191223 20230103103308
 :END:
 #+TITLE: Reproducible Research
@@ -103,6 +103,7 @@ and pulled from just like a Git repository.
 + [[https://reproducible.nixos.org/][NixOS Reproducible Builds]]
 + [[https://guix.gnu.org/en/blog/][Adventures on the quest for long-term reproducible deployment]]
 
+
 ** Reproducible Research Initiatives
 
 + [[https://www.i4replication.org/][Institute for Replication]]
@@ -110,6 +111,7 @@ and pulled from just like a Git repository.
 + [[https://www.softwareheritage.org/][Software Heritage]] - archives software projects.
 + [[https://reproducible-builds.org/][Reproducible Builds]]  — a set of software development practices that create an independently-verifiable path from
   source to binary code
++ [[https://trustworthy.scientific.claims/about/][trustworthy.scientific.claims]]
 
 ** Books
 
