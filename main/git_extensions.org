@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b2629ae8-fba1-4701-bf05-2d0d6bd78a01
-:mtime:    20260927180249
+:mtime:    20261015224258 20260927180249
 :ctime:    20260927180249
 :END:
 #+TITLE: Git Extensions
@@ -8,6 +8,14 @@
 #+FILETAGS: :git:extensions:foss:
 
 There are a lot of [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] extensions available.
+
+* Extensions
+
+** Git Native Issue
+
+[[https://github.com/remenoscodes/git-native-issue][git-native-issue]] is a great idea for making issues decentralised. Git already does this sort of thing, why not use code
+instead is the basic premise as Git does that automatically via its Directed Acyclic Graphs and content tracking. Neat
+idea and it wrestles control out of the hands of a few. Would be interesting to see how it scales.
 
 * Individual Pages
 
