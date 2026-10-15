@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       60363eb0-6272-4c26-8f2e-d7c237bd6609
-:mtime:    20261001102727 20260103181714 20251005205222 20241122224542 20240601165006 20240513200626 20240120092829
+:mtime:    20261015083505 20261001102727 20260103181714 20251005205222 20241122224542 20240601165006 20240513200626 20240120092829
 :ctime:    20240120092829
 :END:
 #+TITLE: Music
@@ -46,3 +46,9 @@ I have a [[id:e93f90d5-0917-440b-8c85-d534cf239294][Sandisk Clip+]] which I occa
 ** Miscellaneous
 
 + [[https://site.syng.rocks/][Syng.Rocks]] - karaoke software
+
+** Research
+
++ [[https://psycnet.apa.org/doiLanding?doi=10.1037%2Fa0024208][Sensorimotor coupling in music and the psychology of the groove.]]
++ [[https://pubmed.ncbi.nlm.nih.gov/32217163/][The sensation of groove engages motor and reward networks - PubMed]]
++ [[https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0094446][Syncopation, Body-Movement and Pleasure in Groove Music | PLOS One]]
