@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       64dd20f0-ce02-4fe5-9ddc-ffdfd60ef936
+:mtime:    20261018090837
+:ctime:    20261018090837
+:END:
+#+TITLE: Git Pages
+#+DATE: [2026-10-18 Sun]
+#+FILETAGS: :git:staticsite:codeberg:
+
+[[https://codeberg.org/git-pages/git-pages][Git Pages]] is a scalable static site server for [[id:3c905838-8de4-4bb6-9171-98c1332456be][Git]] [[id:28ffcc43-9dff-4de8-a211-277c5346a642][Forges]], it is the default method used by [[id:240b85db-27c9-4848-9d3f-c3be841a193b][Codeberg]] to host static
+sites.
+
+* Links
+
++ [[https://codeberg.org/git-pages/git-pages][Git Pages]]
+
+** Useful
+
++ [[https://codeberg.org/whateverthing/static-site-with-bouncer][whateverthing/static-site-with-bouncer: A repository template for setting up a GitPages-based static site with an Apex Domain redirect bouncer. - Codeberg.org]]

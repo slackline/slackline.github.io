@@ -1,10 +1,12 @@
 :PROPERTIES:
 :ID:       3150b126-53ea-43db-b726-981ad0d314eb
-:mtime:    20251111091447 20250928115426 20250920213838 20250920080647 20250917073007
+:mtime:    20261018091410 20251111091447 20250928115426 20250920213838 20250920080647 20250917073007
 :ctime:    20250917073007
 :END:
 #+TITLE: Codeberg Pages
 #+FILETAGS: :git:forges:codeberg:ci:
+
+*IMPORTANT* Codeberg Pages is/was [[https://blog.codeberg.org/migrate-your-site-to-the-new-git-pages-backed-codeberg-pages-now-were-sunsetting-codeberg-pages-v2.html][sunset 2026-12-31]] and you should use [[id:64dd20f0-ce02-4fe5-9ddc-ffdfd60ef936][Git Pages]].
 
 Codeberg Pages are another way to leverage [[id:284615e5-516f-4b04-a3d8-2a5ea9480f8e][Woodpecker CI]] but in this case they build and deploy static websites such as
 [[id:9e8265ee-95d1-4218-90cd-74357aec1ea5][MkDocs]] or [[id:251b3ae4-4a5c-4c44-909a-dcbc0aef4b45][Quarto]].
