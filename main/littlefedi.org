@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d2ee7cc1-fe3a-4721-9477-7b3f0c975c4b
-:mtime:    20261004181641 20261001230455
+:mtime:    20261018085740 20261017195625 20261017072024 20261004181641 20261001230455
 :ctime:    20261001230455
 :END:
 #+TITLE: LittleFedi
@@ -19,6 +19,17 @@ Setting up a ~CNAME~ entry for the public domain was straight forward (I also us
 
 I needed to setup a proxy in [[id:3774439d-af75-453e-b3e9-9d578b6bec46][Nginx]] in order to be able to connect to it remotely. Fortunately I already use one for
 [[id:d9c960c2-71b6-45e6-b388-dcd07b9da3e1][FitTrackee]] so had a starting point but the authors also provide one in the [[https://littlefedi.org/downloads/binaries/packaging/][~packaging/nginx-littlefedi.conf~]].
+
+* Configuration
+
+** Redirect guests
+
+A simple [[https://0xde501a7a.net/@rqm/01a1469b-a21f-723f-8400-f244e4e3fd32][tip]] to redirect guests to the about page should help reduce scraping by bots.
+
+#+begin_example
+[web]
+redirect_guests_to_about = true
+#+end_example
 
 * Building from Source
 
@@ -39,15 +50,39 @@ tar xzvf littlefedi-26.10.01-source.tar.gz
 cd littlefedi-26.10.01
 #+end_example
 
-There are multiple options available depending on the features to enable, I decided to try including all optional
-builds, i.e. ~blog~, ~postgres~ and ~s3~ support.
+There are multiple options available depending on the features to enable, I decided to try including the ~blog~ feature,
+(according to the ~README.md~ inclusion of [[id:749d5f0f-09bd-47a8-a351-2432f38ff3d9][SQLite3]] happens with all targets, it's not clear why there is a "~make
+build-sqlite~ option in the ~Makefile~.
 
 #+begin_example
-make build
 make build-blog
-make build-postgres-s3
 #+end_example
 
-This froze (or dramatically slowed down) by VPS which only has 2GB RAM and I expect this was exceeded so it switched to
+This froze (or dramatically slowed down) my VPS which only has 2GB RAM and I expect this was exceeded so it switched to
 caching (I saw a [[https://0xde501a7a.net/@rqm/01a105d4-b580-7ed6-a06e-680aeb2852ce][toot]] suggesting it could use up to
-19.7GB albeit with ~allreleases~ so perhaps that is for all architectures that are available)
+19.7GB albeit with ~allreleases~ so perhaps that is for all architectures that are available).
+
+I therefore switched to using my [[id:84523969-a4c2-4349-ac23-09894939ed54][T490]] which also runs [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] where it completed fine.
+
+** Setup a clean ~chroot~
+
+That worked, next is checking the package builds in a [[https://wiki.archlinux.org/title/DeveloperWiki:Building_in_a_clean_chroot][clean ~chroot~ environment]]. I opted for the "Classic way"
+
+#+begin_example
+sudo pacman -Sy devtools
+mkdir ~/chroot
+CHROOT=$HOME/chroot
+mkarchroot $CHROOT/root base-devel
+
+#+end_example
+
+We return to this later, first we need to write our ~PKGBUILD~
+
+** ~PKGBUILD~
+
+[[https://wiki.archlinux.org/title/PKGBUILD][~PKGBUILD~]] is the file that says how packages should be built and includes additional files for installation such as
+configuration and [[id:9bc6a091-ed02-4423-b14a-d56f677c5cd0][Systemd]] unit files and so forth.
+
+#+begin_example
+
+#+end_example
