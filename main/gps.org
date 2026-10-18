@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       bea736ba-bc8f-4c56-97c5-febe8eb3e845
+:mtime:    20261016065406
+:ctime:    20261016065406
+:END:
+#+TITLE: GPS
+#+DATE: [2026-10-16 Fri]
+#+FILETAGS: :gps:software:
+
+Geographical Positioning System (GPS) has revolutionised the world.
+
+* Applications
+
++ [[id:0a5f391b-0f61-48d8-a4c3-a204d55538de][OpenStreetMap]]
+
+** Trackers
+
++ OpenTracks
++ FitoTrack
+
+** Location Sharing
+
++ [[id:5315e7ee-0ed9-4514-b1a9-0a03114d8191][OwnTracks]]
++ [[id:8edf760f-36b7-43a0-9a1d-f13ba73e8940][Starling]]

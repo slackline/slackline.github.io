@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       8edf760f-36b7-43a0-9a1d-f13ba73e8940
+:mtime:    20261016065400
+:ctime:    20261016065400
+:END:
+#+TITLE: Starling
+#+DATE: [2026-10-16 Fri]
+#+FILETAGS: :gps:tracking:foss:privacy:
+
+[[https://starlingmap.app/][Starling Map App]] is a privacy respecting location sharing application. Your location is encrypted on your device before
+being shared with your circle.
