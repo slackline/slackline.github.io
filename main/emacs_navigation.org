@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       ffdac695-2e23-4028-ae5b-d5a7d10780ee
-:mtime:    20261014121440
+:mtime:    20261018194910 20261014121440
 :ctime:    20261014121440
 :END:
 #+TITLE: Emacs Navigation
@@ -9,19 +9,20 @@
 
 [[id:754f25a5-3429-4504-8a17-4efea1568eba][Emacs]] users live and die by their [[id:6bb6b516-a3df-452a-adb3-f5aa8a32857c][Key Bindings]] (or "chords"). The following are specific to navigation.
 
-| Key Sequence | Action                        |
-|--------------+-------------------------------|
-| ~C-f~        | Forward one character         |
-| ~C-b~        | Back one character            |
-| ~C-n~        | Next line                     |
-| ~C-p~        | Previous line                 |
-| ~C-M-n~      | Forward a parentetical group  |
-| ~C-M-p~      | Backward a parentetical group |
-| ~M-f~        | Forward one word boundary     |
-| ~M-b~        | Back one word boundary        |
-| ~M-S-Up~     | Move line up                  |
-| ~M-S-Down~   | Move line down                |
-| ~C-d~        | Delete next character         |
+| Key Sequence | Action                                               |
+|--------------+------------------------------------------------------|
+| ~C-f~        | Forward one character                                |
+| ~C-b~        | Back one character                                   |
+| ~C-n~        | Next line                                            |
+| ~C-p~        | Previous line                                        |
+| ~C-M-n~      | Forward a parenthetical group ( ~()~ / ~[]~ / ~{}~)  |
+| ~C-M-p~      | Backward a parenthetical group ( ~()~ / ~[]~ / ~{}~) |
+| ~M-f~        | Forward one word boundary                            |
+| ~M-b~        | Back one word boundary                               |
+| ~M-S-Up~     | Move line up                                         |
+| ~M-S-Down~   | Move line down                                       |
+| ~C-d~        | Delete next character                                |
+|              |                                                      |
 
 
 I'm working on switching to these but have a bad habit of having used [[id:0b7373ce-724c-40f0-8432-f8dbbbad95fc][Ergonomic Keyboard]] with directional arrows and
