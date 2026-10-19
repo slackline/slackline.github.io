@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d2ee7cc1-fe3a-4721-9477-7b3f0c975c4b
-:mtime:    20261018085740 20261017195625 20261017072024 20261004181641 20261001230455
+:mtime:    20261019220144 20261019082507 20261019071034 20261018085740 20261017195625 20261017072024 20261004181641 20261001230455
 :ctime:    20261001230455
 :END:
 #+TITLE: LittleFedi
@@ -84,5 +84,114 @@ We return to this later, first we need to write our ~PKGBUILD~
 configuration and [[id:9bc6a091-ed02-4423-b14a-d56f677c5cd0][Systemd]] unit files and so forth.
 
 #+begin_example
+# Maintinaer: Neil <nshephard at protonmail dot com>
+pkgname=littlefedi
+pkgver=26.10.13
+pkgrel=1
+pkgdesc="A small ActivityPub server written in Go with SQLite, local media storage and a web interface that works wi>
+arch=('any')
+url="https://littlefedi.org/"
+license=('MIT')
+#groups=()
+#depends=()
+makedepends=('go')
+#checkdepends=()
+#optdepends=()
+#provides=()
+#conflicts=()
+#replaces=()
+#backup=()
+#options=()
+install=
+changelog=
+source=("${url}/downloads/${pkgname}-${pkgver}-source.tar.gz")
+noextract=()
+sha256sums=('55a8e305893dc7f72f2062406a941b9efb397c6548d909213a621fabb9d17f44')
+validpgpkeys=()
 
+
+build() {
+        cd "$pkgname-$pkgver"
+        make build-blog
+}
+
+package() {
+pwd
+        install -Dm 755 "${pkgname}-${pkgver}/littlefedi-blog" "${pkgdir}/usr/bin/littlefedi"
+        install -Dm 644 "${pkgname}-${pkgver}/config/littlefedi.toml.example" "${pkgdir}/etc/littlefedi/littlefedi.toml
+        install -Dm 644 "${pkgname}-${pkgver}/config/config.go" "${pkgdir}/etc/littlefedi/config.go"
+        install -Dm 644 "${pkgname}-${pkgver}/config/littlemesh-directory.toml.example" "${pkgdir}/etc/littlefedi/littlemesh-directory.toml
+install -Dm644 /dev/stdin \
+    "$pkgdir/usr/lib/systemd/system/myservice.service" <<'EOF'
+[Unit]
+Description=Littlefedi
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=<username>
+ExecStart=nohup /usr/bin/littlefedi --config /etc/littlefedi/littlefedi.toml
+
+[Install]
+WantedBy=multi-user.target
+EOF
+}
 #+end_example
+
+Test whether the package builds using...
+
+#+begin_example
+makepkg
+#+end_example
+
+You should find that the source package tarball is downloaded and extracted to the ~src/~ directory, built/compiled and
+the files specified under "package()" are copied to the ~$pkgdir~ which is ~pkg/~
+
+#+begin_example
+192.168.1.45 ❱ tree pkg
+[4.0K Oct 18 21:38]  pkg
+├── [4.0K Oct 18 21:38]  pkg/littlefedi
+│   ├── [4.0K Oct 18 21:38]  pkg/littlefedi/etc
+│   │   └── [4.0K Oct 18 21:38]  pkg/littlefedi/etc/littlefedi
+│   │       ├── [ 87K Oct 18 21:38]  pkg/littlefedi/etc/littlefedi/config.go
+│   │       ├── [ 36K Oct 18 21:38]  pkg/littlefedi/etc/littlefedi/littlefedi.toml
+│   │       └── [ 418 Oct 18 21:38]  pkg/littlefedi/etc/littlefedi/littlemesh-directory.toml
+│   └── [4.0K Oct 18 21:38]  pkg/littlefedi/usr
+│       ├── [4.0K Oct 18 21:38]  pkg/littlefedi/usr/bin
+│       │   └── [ 27M Oct 18 21:38]  pkg/littlefedi/usr/bin/littlefedi
+│       └── [4.0K Oct 18 21:38]  pkg/littlefedi/usr/lib
+│           └── [4.0K Oct 18 21:38]  pkg/littlefedi/usr/lib/systemd
+│               └── [4.0K Oct 18 21:38]  pkg/littlefedi/usr/lib/systemd/system
+│                   └── [ 257 Oct 18 21:38]  pkg/littlefedi/usr/lib/systemd/system/myservice.service
+└── [4.0K Oct 18 21:38]  pkg/littlefedi-debug
+    └── [4.0K Oct 18 21:38]  pkg/littlefedi-debug/usr
+        ├── [4.0K Oct 18 21:38]  pkg/littlefedi-debug/usr/lib
+        │   └── [4.0K Oct 18 21:38]  pkg/littlefedi-debug/usr/lib/debug
+        │       └── [4.0K Oct 18 21:38]  pkg/littlefedi-debug/usr/lib/debug/usr
+        │           └── [4.0K Oct 18 21:38]  pkg/littlefedi-debug/usr/lib/debug/usr/bin
+        │               └── [1.3K Oct 18 21:38]  pkg/littlefedi-debug/usr/lib/debug/usr/bin/littlefedi.debug
+        └── [4.0K Oct 18 21:38]  pkg/littlefedi-debug/usr/src
+            └── [4.0K Oct 18 21:38]  pkg/littlefedi-debug/usr/src/debug
+                └── [4.0K Oct 18 21:38]  pkg/littlefedi-debug/usr/src/debug/littlefedi
+18 directories, 6 files
+#+end_example
+
+Next try installing the package locally with ~makepkg -sri~ and running the programme. If it has a [[id:9bc6a091-ed02-4423-b14a-d56f677c5cd0][Systemd]] unit file
+check it starts the service correctly. This may require editing configuration files that have been installed.
+
+*** ~.SRCINFO~
+
+Once happy generate a [[https://wiki.archlinux.org/title/.SRCINFO][~.SRCINFO~]] file.
+
+#+begin_example
+makepkg --printsrcinfo > .SRCINFO
+#+end_example
+
+This is required as part of the submission to AUR.
+
+** Submitting to AUR
+
+The [[https://wiki.archlinux.org/title/AUR_submission_guidelines][AUR submission guidelines]] are clear and should be followed.
