@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       7f40d8d9-bc37-44e8-8771-d3eba1343da5
+:mtime:    20261021124724
+:ctime:    20261021124724
 :END:
 #+TITLE: Org Social
 #+FILETAGS: :emacs:orgmode:org:orgsocial:
@@ -11,6 +13,7 @@ As well as wanting to switch to [[id:dcadfe01-721f-4d8d-b220-9acd15e86736][Emacs
 * Self-hosting
 
 It's possible to self-host your ~social.org~ which requires a [[https://github.com/tanrax/awesome-org-social/][relay-compatible-client]] and setting up a [[https://github.com/tanrax/org-social-relay][org-social-relay]]
+
 * Links
 
 + [[https://org-social.org/][Org Social - Decentralized Social Network]]
@@ -21,3 +24,7 @@ It's possible to self-host your ~social.org~ which requires a [[https://github.c
 ** Self-hosting
 
 + [[https://github.com/tanrax/org-social-relay][org-social-relay]]
+
+** Android
+
++ [[https://git.andros.dev/org-social/android][org-social/android]]
