@@ -412,6 +412,28 @@ commits. This isn't required in CI as all tests are run.
           extra-args: "--skip pytest --skip pylint"
 #+end_example
 
+** CD
+
+The ~cd.yml~ file builds and publishes the package to [[PyPI][https://pypi.org]] (although by default the
+~repository-url: https://test.pypi.org/legacy~ is set so publications are made to 
+[[Test PyPI][https://test.pypi.org]]). The script runs either on pushes to the ~main~ branch (i.e. after a pull 
+request is merged) or on a ~release~ that is ~published~ and defines two jobs.
+
++ ~dist~ - builds the package on either pushes to ~main~ or ~release~ that is ~published~.
++ ~publish~ - publishes to PyPI (or Test PyPI) only when a ~release~ is ~published~.
+
+You should first setup [[https://docs.pypi.org/trusted-publishers/][Publishing to PyPI with a Trusted Publisher]] 
+in your Test PyPI account adding the package name, organisation, repository name, workflow (~cd.yml~) and the 
+environment (which is optional but is ~pypi~ so no harm in filling it in).
+
+You then need to make a release on GitHub, this involves creating a tag and this should follow the Python
+Packaging Authority [[https://packaging.python.org/en/latest/specifications/version-specifiers/][version specifier]].
+
+Navigate to the release page and create a new release with a new tag. For the [[https://github.com/ninoseki/uv-dynamic-versioning][uv-dynamic-versioning]] 
+package to work this should start with ~v~ and follow the [[https://packaging.python.org/en/latest/specifications/version-specifiers/][Python
+Packaging Authority Version Specifiers]]. Add release notes and optionally create a discussion for the release.
+
+
 * Links
 
 + [[https://github.com/scientific-python/cookie][Scientific Python Cookiecutter]]
