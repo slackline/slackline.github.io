@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       fdd7fac9-d26d-4338-b9f0-a3748fda7c54
-:mtime:    20251111091452 20230103103314 20220315220837 20230103103313 20230103103312
+:mtime:    20261026181007 20251111091452 20230103103314 20220315220837 20230103103313 20230103103312
 :ctime:    20220315220837 20230103103312
 :END:
 #+TITLE: Evolution
@@ -79,6 +79,11 @@ There are hundreds of thousands of books out there, here are some I recommend.
 + [[https://www.goodreads.com/book/show/6578134-an-introduction-to-population-genetics-theory][An Introduction to Population Genetics Theory by James F. Crow and Motoo Kimura]]
 + [[https://www.goodreads.com/book/show/1075287.Basic_Concepts_In_Population_Quantitative_And_Evolutionary_Genetics][Basic Concepts In Population, Quantitative, And Evolutionary Genetics by James F. Crow]]
 + [[https://www.goodreads.com/book/show/41862.Evolution_and_the_Theory_of_Games][Evolution and the Theory of Games by John Maynard Smith]]
+
+** Game of Life
+
++ [[https://conwaylife.com/book/][Conway's Game of Life - Mathematics and Construction]]
++ [[https://stario.dev/apps/life][Life — Stario]]
 
 * Links
 
