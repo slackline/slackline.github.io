@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0a2a0723-3be7-4b78-8899-0e5c1752ab50
-:mtime:    20250307065146
+:mtime:    20261022100333 20250307065146
 :ctime:    20250307065146
 :END:
 #+TITLE: Mastodon Unfollowed
@@ -16,3 +16,4 @@ Mastodon accounts I've unfollowed but don't want to forget about completely.
 + [[https://mastox.eu/@ZackPolanski][@ZackPolanski@mastox.eu]]
 + [[https://mas.to/@alternativeto][@alternativeto@mas.to]]
 + [[https://mastodon.social/@selfhost_discovery][@selfhost_discovery@mastodon.social]]
++ [[https://mastodon.social/@Th3OneRaven][@Th3OneRaven]]
