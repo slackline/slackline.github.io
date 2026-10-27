@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d2ee7cc1-fe3a-4721-9477-7b3f0c975c4b
-:mtime:    20261019220144 20261019082507 20261019071034 20261018085740 20261017195625 20261017072024 20261004181641 20261001230455
+:mtime:    20261025174226 20261025135519 20261025120331 20261025104346 20261019220144 20261019082507 20261019071034 20261018085740 20261017195625 20261017072024 20261004181641 20261001230455
 :ctime:    20261001230455
 :END:
 #+TITLE: LittleFedi
@@ -84,24 +84,14 @@ We return to this later, first we need to write our ~PKGBUILD~
 configuration and [[id:9bc6a091-ed02-4423-b14a-d56f677c5cd0][Systemd]] unit files and so forth.
 
 #+begin_example
-# Maintinaer: Neil <nshephard at protonmail dot com>
+# Maintainer: Neil <nshephard at protonmail dot com>
 pkgname=littlefedi
-pkgver=26.10.13
 pkgrel=1
-pkgdesc="A small ActivityPub server written in Go with SQLite, local media storage and a web interface that works wi>
-arch=('any')
+pkgdesc="A small ActivityPub server written in Go with SQLite, local media storage and a web interface that
+works without JavaScript."
 url="https://littlefedi.org/"
 license=('MIT')
-#groups=()
-#depends=()
 makedepends=('go')
-#checkdepends=()
-#optdepends=()
-#provides=()
-#conflicts=()
-#replaces=()
-#backup=()
-#options=()
 install=
 changelog=
 source=("${url}/downloads/${pkgname}-${pkgver}-source.tar.gz")
@@ -110,36 +100,63 @@ sha256sums=('55a8e305893dc7f72f2062406a941b9efb397c6548d909213a621fabb9d17f44')
 validpgpkeys=()
 
 
+
 build() {
-        cd "$pkgname-$pkgver"
-        make build-blog
+    cd "${pkgname}-${pkgver}"
+    make build-blog
+}
+
+prepare() {
+        cd "${srcdir}/${pkgname}-${pkgver}/packaging/linux"
+        # .service files look for binaries in /usr/local/bin/ switch to /usr/bin/
+        sed -i "s/local\///" *.service
+        # Switch user to root in service file (unclear how to create user/groups post_install() doesn't appear to run)
+        sed -i "s/=littlefedi/=root/" littlefedi.service
 }
 
 package() {
-pwd
         install -Dm 755 "${pkgname}-${pkgver}/littlefedi-blog" "${pkgdir}/usr/bin/littlefedi"
-        install -Dm 644 "${pkgname}-${pkgver}/config/littlefedi.toml.example" "${pkgdir}/etc/littlefedi/littlefedi.toml
+        install -Dm 644 "${pkgname}-${pkgver}/config/littlefedi.toml.example"
+"${pkgdir}/etc/littlefedi/littlefedi.toml.example"
         install -Dm 644 "${pkgname}-${pkgver}/config/config.go" "${pkgdir}/etc/littlefedi/config.go"
-        install -Dm 644 "${pkgname}-${pkgver}/config/littlemesh-directory.toml.example" "${pkgdir}/etc/littlefedi/littlemesh-directory.toml
-install -Dm644 /dev/stdin \
-    "$pkgdir/usr/lib/systemd/system/myservice.service" <<'EOF'
-[Unit]
-Description=Littlefedi
-After=network.target
-StartLimitIntervalSec=0
-
-[Service]
-Type=simple
-Restart=always
-RestartSec=1
-User=<username>
-ExecStart=nohup /usr/bin/littlefedi --config /etc/littlefedi/littlefedi.toml
-
-[Install]
-WantedBy=multi-user.target
-EOF
+        install -Dm 644 "${pkgname}-${pkgver}/config/littlemesh-directory.toml.example"
+"${pkgdir}/etc/littlefedi/littlemesh-directory.toml.example"
+        install -Dm 644 "${pkgname}-${pkgver}/packaging/linux/littlefedi.service"
+"${pkgdir}/usr/lib/systemd/system/littlefedi.service"
+        install -Dm 644 "${pkgname}-${pkgver}/packaging/linux/littlefedi-directory.service"
+"${pkgdir}/usr/lib/systemd/system/littlefedi-directory.service"
+        install -Dm 644 "${pkgname}-${pkgver}/packaging/linux/littlefedi-lighthouse.service"
+"${pkgdir}/usr/lib/systemd/system/littlefedi-lighthouse.service"
+        touch "${pkgdir}/etc/littlefedi/littlefedi.env"
+        install -Dm 644 "${pkgname}-${pkgver}/LICENSE" "${pkgdir}/usr/share/licenses/littlefedi/LICENSE"
+        mkdir -p "${pkgdir}/var/lib/littlefedi"
 }
+
+post_install() {
+        useradd --no-create-home --user-group littlefedi
+        chown -R littleffedi:littlefedi /var/lib/littlefedi
+
+        echo ""
+        echo "LittleFedi"
+        echo "=========="
+        echo ""
+        echo "To get started with LittleFedi answer the prompts to..."
+        echo ""
+        echo "  littlefedi init [--config /etc/littlefedi/littlefedi.toml]"
+        echo ""
+        echo "The resulting configuration file can be edited and you should"
+        echo "consult the '/etc/littlefedi/littlefedi.toml.example for more"
+        echo "options."
+        echo ""
+        echo "See also the official documentation for mor information : "
+        echo ""
+        echo "https://littlefedi.org/docs.html"
+}
+
 #+end_example
+
+This builds and installs the package as well as installing the ~LICENSE~ and ~*.service~ files. In order to start the
+service we need to [[https://soc.0x47.org/@rooty/01a16dbc-c8fd-7248-9ea7-5eb321b1a1cf][add an empty littlefedi.env]] file.
 
 Test whether the package builds using...
 
@@ -191,6 +208,30 @@ makepkg --printsrcinfo > .SRCINFO
 #+end_example
 
 This is required as part of the submission to AUR.
+
+*** Checking Package
+
+There are still a few checks to make to ensure the package builds. Requires a few tools to be installed
+
+#+begin_example
+pacman -Syu devtools namcap
+#+end_example
+
+**** Clean chroot environment
+
+Test building in a clean ~chroot~ environment with ~pkgctl~ (part of ~devtools~).
+
+#+begin_example
+pkgctl build
+#+end_example
+
+**** Package Sanity
+
+This step is automatically run as part of ~pkgctl build~ and leaves log-files in the working directory.
+#+begin_example
+namcap PKGBUILD
+namcap littlefedi-23.10.13-1-any.pkg.tar.zst
+#+end_example
 
 ** Submitting to AUR
 
