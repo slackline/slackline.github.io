@@ -21,6 +21,8 @@ large language models.
 + [[https://sourcehut.org/blog/2026-08-27-tos-changes-and-llms/][Changes to SourceHut's terms of service regarding LLMs]]
 + [[https://blog.codeberg.org/protecting-our-floss-commons-from-llms.html][Protecting our FLOSS commons from LLMs — Codeberg News]]
 + [[https://leidendeclaration.ai/][Leiden Declaration on Artificial Intelligence and Mathematics]]
++ [[https://codeberg.org/uzu/strudel/src/branch/main/POLICY.md#post-ai-humane-policy-for-live-coding-development][strudel/POLICY.md at main - uzu/strudel - Codeberg.org]]
++ [[https://castlereagh.ai/][The Castlereagh Statement - The Castlereagh Statement]]
 
 ** Blog Posts
 
