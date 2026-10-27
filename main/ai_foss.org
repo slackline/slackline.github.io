@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       db5f2a26-8cf4-47a7-871f-47f8c8937a2e
-:mtime:    20261014200721 20260923231308 20260919120656
+:mtime:    20261027094208 20261014200721 20260923231308 20260919120656
 :ctime:    20260919120656
 :END:
 #+TITLE: AI FOSS
@@ -30,3 +30,4 @@ large language models.
 + [[https://blog.scientific-python.org/scientific-python/community-considerations-around-ai/][Blog - Community Considerations Around AI Contributions]]
 + [[https://blogs.gnome.org/alatiera/2026/09/23/the-gnome-llm-policy-that-i-want/][The GNOME LLM Policy That I Want – Rust in Peace]]
 + [[https://ploum.net/2026-10-01-pascal_wager.html][The AI Pascal’s Wager]]
++ [[https://mpadge.eu/blog/coding-alone.html][mp | Coding Alone]]
