@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       73b08c0b-3d6a-4328-b0ce-ea4632c2515d
+:mtime:    20261031201346
+:ctime:    20261031201346
+:END:
+#+TITLE: Git Unusual Uses
+#+DATE: [2026-10-31 Sat]
+#+FILETAGS: :git:applications:unique:
+
+* [[https://github.com/lexifina/global-law][Global-law]]
+
+#+begin_quote
+Git for Global Law: the law of every country as one git history, each country's record a submodule, every commit one law
+taking effect.
+#+end_quote
