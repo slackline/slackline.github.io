@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       470e9f37-f4f8-4e7f-adf2-3dbac9b8bf06
-:mtime:    20260105083612 20260103181717 20251231152833 20251109092228 20251027164931 20251014074615 20250914194603 20250805212553 20250621075602 20250527214044 20250526075929 20250312091850 20250209203305 20250202173405 20250201184321 20250118204303
+:mtime:    20261101195146 20260105083612 20260103181717 20251231152833 20251109092228 20251027164931 20251014074615 20250914194603 20250805212553 20250621075602 20250527214044 20250526075929 20250312091850 20250209203305 20250202173405 20250201184321 20250118204303
 :ctime:    20250118204303
 :END:
 #+STARTUP: align
@@ -1397,7 +1397,7 @@ days.
 * Resources
 :PROPERTIES:
 :ID:       ea9dd233-64c4-493f-a4dc-9ec73df0c7cd
-:mtime:    20260103181717 20251109092228 20251027164931 20251014074615 20250914194603 20250805212553 20250621075602 20250527213847 20250312091850 20250209203305 20250118204443
+:mtime:    20261101195146 20260103181717 20251109092228 20251027164931 20251014074615 20250914194603 20250805212553 20250621075602 20250527213847 20250312091850 20250209203305 20250118204443
 :ctime:    20250118204443
 :END:
 
@@ -1560,6 +1560,8 @@ These are now under their own page at [[id:e72589de-6f14-45d5-96fc-6a2e61354b2f]
 
 ** The Guardian
 
++ [[https://www.theguardian.com/lifeandstyle/2026/oct/10/strength-stretches-expert-tips-to-make-you-a-better-runner][Expert tips to make you a better runner - start slow, enlist a friend, choose strength over stretches | Running | The
+  Guardian]]
 + [[https://www.theguardian.com/lifeandstyle/article/2024/aug/11/the-foot-phenomenon-simple-surprising-ways-to-improve-your-balance-health-and-longevity][The foot phenomenon: simple, surprising ways to improve your balance, health – and longevity | Life and style | The Guardian]]
 + [[https://www.theguardian.com/lifeandstyle/2023/may/24/the-truth-about-booze-how-alcohol-really-affects-your-body-from-first-flush-of-happiness-to-hangover-hell][The truth about booze: how alcohol really affects your body, from first flush of happiness to hangover hell | Health & wellbeing ]]
 + [[https://www.theguardian.com/lifeandstyle/2023/mar/06/no-pain-plenty-of-gain-why-taking-it-easy-can-be-the-key-to-getting-fitter-and-happier][No pain, plenty of gain: why taking it easy can be the key to getting fitter – and happier | Fitness ]]
