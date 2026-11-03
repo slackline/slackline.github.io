@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       756cb499-0140-4093-8617-67e1ae339c2f
+:mtime:    20261029164010
+:ctime:    20261029164010
+:END:
+#+TITLE: Git Diff
+#+DATE: [2026-10-29 Thu]
+#+FILETAGS: :git:diff:
+
+* Alternatives
+
+** [[https://difftastic.wilfred.me.uk/][Difftastic]]
+
+Is an excellent, code aware, diffing tool that shows differences side by side and is easy to drop in as a default
+replacement to the standard ~git diff~
+
+* Patterns
+
+You can subset diffs in many different ways.
+
+** Excluding Directories
+
+Via a [[https://mas.to/@DHowett/117524913168134064][post on Mastodon]]
+
+#+begin_example
+git diff ":(exclude)subdir"
+#+end_example

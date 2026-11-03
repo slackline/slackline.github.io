@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a620a74f-3dae-4ac3-afc0-474ce16c9ab8
-:mtime:    20261009110357 20260908130100 20250813234719
+:mtime:    20261103201820 20261009110357 20260908130100 20250813234719
 :ctime:    20250813234719
 :END:
 #+TITLE: Git Tools
@@ -37,6 +37,11 @@ uvx gh-profiler ns-rse
 ** Gitopolis
 
 [[https://github.com/timabell/gitopolis][gitopolis]] is another tool, written in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]], for managing multiple repositories.
+
+** git-rexec
+
+[[https://github.com/jamescherti/git-rexec/][git-rexec]] "/recursively locates Git repositories within a directory and executes commands against them, either
+sequentially or in parallel./"
 
 * Keep the Why
 
