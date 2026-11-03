@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       a5111f33-dbb6-443e-a941-d368f2b065f6
+:mtime:    20261102230838
+:ctime:    20261102230838
+:END:
+#+TITLE: AI Caution
+#+DATE: [2026-11-02 Mon]
+#+FILETAGS: :ai:caution:lists:
+
+Various principles and declarations that many people have signed to promote oversight of AI.
+
++ [[https://futureoflife.org/open-letter/ai-principles/][Asilomar AI Principles - Future of Life Institute]]
++ [[https://humanstatement.org/][The Pro-Human AI Declaration]]

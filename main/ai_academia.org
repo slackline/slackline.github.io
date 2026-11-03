@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       272142ad-6dbc-4260-82fe-32bef3630a92
-:mtime:    20261030103421 20261027095208 20261012080406 20261009082652 20260917103759 20260916153200 20260916115212
+:mtime:    20261103215932 20261030103421 20261027095208 20261012080406 20261009082652 20260917103759 20260916153200 20260916115212
 :ctime:    20260916115212
 :END:
 #+TITLE: AI Academia
@@ -8,8 +8,8 @@
 
 * Research
 
-+ [[https://aiandeducation.mit.edu/][AI and Education – Report of MIT’s Ad Hoc Committee on AI Use in Teaching, Learning, and Research Training]]
-  ([[https://observer.co.uk/news/science-technology/article/what-are-universities-for-ai-can-help-answer-the-question][commentary]])
++ [[https://arxiv.org/abs/2604.04721][[2604.04721] AI Assistance Reduces Persistence and Hurts Independent Performance]] ([[https://news.berkeley.edu/2026/10/09/using-ai-for-just-10-minutes-erodes-your-ability-to-persist-at-hard-things/][Berkeley News]])
++ [[https://aiandeducation.mit.edu/][AI and Education – Report of MIT’s Ad Hoc Committee on AI Use in Teaching, Learning, and Research Training]] ([[https://observer.co.uk/news/science-technology/article/what-are-universities-for-ai-can-help-answer-the-question][commentary]])
 + [[https://spectrum.ieee.org/ai-generated-scientific-papers][I Used AI to Generate a Scientific Paper - IEEE Spectrum]]
 
 * Tools
