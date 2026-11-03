@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0d80a79b-5901-4d27-a12f-783931a016d7
-:mtime:    20251222070449
+:mtime:    20261101210757 20251222070449
 :ctime:    20251222070449
 :END:
 #+TITLE: Git SSH
@@ -16,7 +16,7 @@ If you want to use a specific key for a given repository add the following to th
 
 #+begin_example
 [core]
-    sshCommand = ssh -i ~/.ssh/haldane_ed25519 -F /dev/null~
+    sshCommand = ssh -i ~/.ssh/haldane_ed25519 -F /dev/null
 #+end_example
 
 * Links
