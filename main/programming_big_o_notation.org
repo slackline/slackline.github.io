@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       69b54535-ef58-4b39-b0dd-7bb88f18dd4e
+:mtime:    20261030171150
+:ctime:    20261030171150
+:END:
+#+TITLE: Big O Notation
+#+DATE: [2026-10-30 Fri]
+#+FILETAGS: :programming:algorithms:complexity:bigO:
+
+* Links
+
++ [[https://nedbatchelder.com/text/slowsgrows][Big-O: how code slows as data grows | Ned Batchelder]]
