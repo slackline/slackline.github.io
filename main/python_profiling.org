@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       dd7c615f-cd8b-426d-aec0-cfd3803437cc
-:mtime:    20251115120209 20251105134236 20240812121129 20240215115043 20240215090823 20230125190111 20230125155927
+:mtime:    20261105184601 20251115120209 20251105134236 20240812121129 20240215115043 20240215090823 20230125190111 20230125155927
 :ctime:    20230125155927
 :END:
 #+TITLE: Python Profiling
@@ -222,6 +222,8 @@ Always available as part of the standard library, call in command line with.
 
 * Links
 
+** Libraries
+
 + [[https://docs.python.org/3/library/profile.html][Python Profiling (Standard Library)]]
 + [[https://docs.python.org/3/library/profile.html#module-cProfile][cProfile]]
 + [[https://docs.python.org/3/library/profile.html#module-profile][profile]]
@@ -229,6 +231,10 @@ Always available as part of the standard library, call in command line with.
 + [[https://pypi.org/project/scalene/][Scalene]] ([[https://github.com/plasma-umass/scalene][GitHub]])
 + [[https://jiffyclub.github.io/snakeviz/][SnakeViz]]
 + [[https://viztracer.readthedocs.io/en/latest/index.html][VizTracer]]
+
+** Blogs
+
++ [[https://p403n1x87.github.io/the-state-of-python-profiling-in-2026.html#which-one-should-you-use][The State of Python Profiling in 2026]]
 
 ** Performance Speed Up
 
