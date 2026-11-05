@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       fb45721d-208d-421a-80c2-d90a9a842564
+:mtime:    20261105220611
+:ctime:    20261105220611
+:END:
+#+TITLE: Hidden Sound
+#+DATE: [2026-11-05 Thu]
+#+FILETAGS: :analysis:doppler:enf:
+
+
++ [[https://www.youtube.com/watch?v=UytYrhYLOKI][Locate any video using doppler from passing planes]]
++ [[https://robertheaton.com/enf/][How to date a recoding using background electrical noise]]
