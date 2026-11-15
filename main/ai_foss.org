@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       db5f2a26-8cf4-47a7-871f-47f8c8937a2e
-:mtime:    20261105211723 20261027094208 20261014200721 20260923231308 20260919120656
+:mtime:    20261115030604 20261105211723 20261027094208 20261014200721 20260923231308 20260919120656
 :ctime:    20260919120656
 :END:
 #+TITLE: AI FOSS
@@ -24,6 +24,7 @@ large language models.
 + [[https://codeberg.org/uzu/strudel/src/branch/main/POLICY.md#post-ai-humane-policy-for-live-coding-development][strudel/POLICY.md at main - uzu/strudel - Codeberg.org]]
 + [[https://castlereagh.ai/][The Castlereagh Statement - The Castlereagh Statement]]
 + [[https://nlnetlabs.nl/llm-policy/][NLnet Labs - LLM Policy]]
++ [[https://blog.cryptpad.org/2026/11/10/Temporary-AI-Policy/][Temporary AI Policy for CryptPad Development | CryptPad Blog]]
 
 ** Blog Posts
 
