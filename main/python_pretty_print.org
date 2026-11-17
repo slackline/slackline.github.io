@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       6c180103-0d35-47b3-a54a-d734a0da47b3
+:mtime:    20261117140736
+:ctime:    20261117140736
+:END:
+#+TITLE: Python Pretty Print
+#+DATE: [2026-11-17 Tue]
+#+FILETAGS: :python:dictionaries:json:
+
+Reading nested dictionaries is massively helped by using [[https://docs.python.org/3/library/pprint.html][pprint]].
+
+#+begin_example python
+from pprint import pp
+
+nested = {"a": {"b": {"c": {"d": [1, 2, 3], "e": [4, 5, 6]}, "f": {"g": [7, 8, 9], "h": [10, 11, 12]}}}}
+
+pp(nested, depth=5, compact=False)
+
+{'a': {'b': {'c': {'d': [1, 2, 3], 'e': [4, 5, 6]},
+             'f': {'g': [7, 8, 9], 'h': [10, 11, 12]}}}}
+#+end_example
