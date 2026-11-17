@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       16c65320-e19d-4bdc-ab55-c410860cddfa
-:mtime:    20261101190618 20230907162730 20230103103308 20221210172107
+:mtime:    20261116161247 20261101190618 20230907162730 20230103103308 20221210172107
 :ctime:    20221210172107
 :END:
 #+TITLE: sed
@@ -8,6 +8,14 @@
 #+FILETAGS: :bash:sed:unix:
 
 * Tips and Tricks
+
+** Multiple replacements
+
+Chain multiple replacements together with the ~-e~ operator.
+
+#+begin_example
+sed -e 's/one/none/g' -e's/two/three/g' input.file
+#+end_example
 
 ** Edit files in place
 
