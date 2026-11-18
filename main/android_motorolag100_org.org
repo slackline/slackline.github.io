@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       349c1607-ca60-4ea2-bb53-4eb45a0e9189
-:mtime:    20251231081707 20251227211325 20251227184524 20251227141324 20250305071008 20250304222343 20241021192025 20241020132011
+:mtime:    20261118214318 20261118082348 20251231081707 20251227211325 20251227184524 20251227141324 20250305071008 20250304222343 20241021192025 20241020132011
 :ctime:    20241020132011
 :END:
 #+TITLE: Motorolla g100
@@ -59,10 +59,10 @@ adb push Magisk-v30.6.apk /storage/self/primary/Download/.
 #+end_example
 
 2. Reboot the phone to recovery. If you already have LineageOS installed with this phone you should end up in the
-   LineageOS Recover mode with *ADB Sideload* listed.
+   LineageOS Recovery mode with *ADB Sideload* listed.
 
 #+begin_example
-adb -d reboot sidelload
+adb -d reboot sideload
 #+end_example
 
 At the bottom of the phones screen it should read...
@@ -80,18 +80,43 @@ adb sideload lineage-23.0-20251222-nightly-nio-signed.zip
 serving: 'lineage-23.0-20251222-nightly-nio-signed.zip'  (~47%)    adb: failed to read command: Success
 #+end_example
 
-As noted this may hang at 47% in the terminal, mine did, but on the phone it completed and I was prompted to reboot to
-recovery.
+As noted this may hang at 47% in the terminal, mine did, although I didn't see any message after it hung at 47%, on the
+phone though it showed (it took a while to move from ~Step 1/2~ to ~Step 2/2~ and then show recovery)...
 
-4. Reboot to recovery and on the phone click on ~Apply update > Apply from ADB~ sideload the MicroGapps
+#+begin_example
+Installing update...
+Step 1/2
+Step 2/2
+#+end_example
+
+...and I was prompted to reboot to recovery.
+
+4. Reboot to recovery and on the phone click on ~Apply update > Apply from ADB~ sideload the MindTheGapps package
 
 #+begin_example
 ❱ adb -d sideload MindTheGapps-16.0.0-arm64-20250812_214353.zip
 Total xfer: 1.00x
 #+end_example
 
-As noted in the instructions signature verification, on the phone screen, failed because the package is not signed by
-LineageOS, select "Yes" to continue anyway it should complete without problems on both the phone and terminal.
+As noted in the instru)...
+
+#+begin_example
+Installing update...
+Step 1/2
+Step 2/2
+#+end_example
+
+...and I was prompted to reboot to recovery.
+
+4. Reboot to recovery and on the phone click on ~Apply update > Apply from ADB~ sideload the MindTheGapps package
+
+#+begin_example
+❱ adb -d sideload MindTheGapps-16.0.0-arm64-20250812_214353.zip
+Total xfer: 1.00x
+#+end_example
+
+As noted the instructions signature verification, displayed on the phone screen, failed because the package is not
+signed by LineageOS, select "Yes" to continue anyway it should complete without problems on both the phone and terminal.
 
 5. Reboot the system.
 
@@ -138,7 +163,9 @@ This allows AdAway to work.
 
 Banking apps and others don't like you having a rooted device, but you can play cat and mouse and get around
 it. ~Settings > Configure DenyList~  and check the apps you want to hide. Then /Hide the Magisk app/, you get the to
-rename it, I reverse the name to ~Ksigam~. You don't even need to reboot (at least for the banking app I use!).
+rename it, I reverse the name to ~Ksigam~. In the past I found I didn't need to reboot (at least for the banking app I
+use!), but more recently that wasn't the case. I also had to reboot a couple of times before I could see the option to
+~Settings > Hide Magisk~ before being prompted to provide a new name.
 
 ** Modules
 
