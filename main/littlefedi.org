@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       d2ee7cc1-fe3a-4721-9477-7b3f0c975c4b
-:mtime:    20261025174226 20261025135519 20261025120331 20261025104346 20261019220144 20261019082507 20261019071034 20261018085740 20261017195625 20261017072024 20261004181641 20261001230455
+:mtime:    20261118214532 20261025174226 20261025135519 20261025120331 20261025104346 20261019220144 20261019082507 20261019071034 20261018085740 20261017195625 20261017072024 20261004181641 20261001230455
 :ctime:    20261001230455
 :END:
 #+TITLE: LittleFedi
@@ -228,6 +228,7 @@ pkgctl build
 **** Package Sanity
 
 This step is automatically run as part of ~pkgctl build~ and leaves log-files in the working directory.
+
 #+begin_example
 namcap PKGBUILD
 namcap littlefedi-23.10.13-1-any.pkg.tar.zst
@@ -236,3 +237,8 @@ namcap littlefedi-23.10.13-1-any.pkg.tar.zst
 ** Submitting to AUR
 
 The [[https://wiki.archlinux.org/title/AUR_submission_guidelines][AUR submission guidelines]] are clear and should be followed.
+
+* Links
+
++ [[https://littlefedi.org/][LittleFedi]] - downloads, docs and more.
++ [[https://issues.littlefedi.org/][LittleFedi Issue Tracker]]
