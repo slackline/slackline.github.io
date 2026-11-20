@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       914e33e0-8ba3-43dd-8899-134e25f3c2dc
+:mtime:    20261120213212
+:ctime:    20261120213212
+:END:
+#+TITLE: Electrification
+#+DATE: [2026-11-20 Fri]
+#+FILETAGS: :environment:climate:electrification:
+
+* Links
+
+** Two Wheel Electric Vehicles
+
++ [[https://climatemoney.substack.com/p/this-single-technology-is-killing][This single technology is killing oil demand]]
