@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0b6eddb6-eb5c-4f26-aaea-beed3505f195
-:mtime:    20260908151841 20240224205636 20240205164459 20231115133528
+:mtime:    20261120104811 20260908151841 20240224205636 20240205164459 20231115133528
 :ctime:    20231115133528
 :END:
 #+TITLE: Git Log
@@ -49,6 +49,12 @@ Search history for regex with the following (you can include ~-i~ to make it cas
 
 #+begin_example
 git log --grep="<expression>"
+#+end_example
+
+** Search for a file
+
+#+begin_example
+git log --all -- <filename>
 #+end_example
 
 * Find commit
