@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0eca0cca-f5d0-4259-879b-b7f1844c3e90
-:mtime:    20261122094212 20260923104446 20251109140047 20251109121620
+:mtime:    20261122113048 20261122094212 20260923104446 20251109140047 20251109121620
 :ctime:    20251109121620
 :END:
 #+TITLE: OpenWrt
@@ -22,7 +22,7 @@ original WRT54Gs as they use [[id:0e6300c6-7025-4f45-820d-4d9da82b41a6][Linux]] 
 + Table of Hardware
   + [[https://toh.openwrt.org][New]]
   + [[https://openwrt.org/toh/start][Old]]
-
++ [[https://repology.org/repository/openwrt_24_10_x86_64][OpenWRT Packages]]
 ** Software
 
 + [[https://unbound.docs.nlnetlabs.nl/en/latest/][Unbound]]

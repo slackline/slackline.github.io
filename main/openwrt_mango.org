@@ -1,11 +1,94 @@
 :PROPERTIES:
 :ID:       0183b7f5-ff0c-4427-a53d-027c6df20772
-:mtime:    20261122092850
+:mtime:    20261122210628 20261122111958 20261122092850
 :ctime:    20261122092850
 :END:
 #+TITLE: OpenWRT : GL.iNet Mango GL-MT300N-V2
 #+DATE: [2026-11-22 Sun]
 #+FILETAGS: :openwrt:linux:networking:foss:
+
+I kept some notes on installing and tinkering with this [[https://wiki.nshephard.dev/doku.php?id=linux:openwrt:gl-mt300n-v2][here]].
+
+* Initial Connection
+
+The default SSID for the WiFi is ~GL-MT300n-###~ where the end bit will depend on the device. The default password is
+~goodlife~ and on connecting you can then access the WebUI at ~http://192.168.8.1~ and are prompted to setup the device
+including setting a secure ~root~/admin password.
+
+I plugged a 32GB USB drive in and immediately followed the instructions to [[https://openwrt.org/docs/guide-user/additional-software/extroot_configuration][configure extroot]] so I had more space
+available.
+
+** Additional packages
+
+Having added space I cold then add more packages. The ~luci-app-adblock~ pulls in ~adblock~ for blocking adverts. No
+need to install ~shadow[-{adduser,deluser}]~ this time as it looks like they are bundled in-to ~busybox~.
+
+#+begin_example
+opkg update
+opkg install adblock bash git micropython minidlna mpd-full nano rsyncd zile luci-app-adblock
+#+end_example
+
+*** Blocking ads
+
+I hate ads so block them and trackers using my router, this is no different.
+
+#+begin_example
+uci set adblock.global.adb_backupdir="/etc/adblock"
+uci commit
+#+end_example
+
+** Modify hostname
+
+#+begin_example
+uci set system.@system[0].hostname='mango'
+uci commit system
+/etc/init.d/system reload
+#+end_example
+
+** Add user
+
+#+begin_example
+adduser -h /home/<user> -G adm -G users -s /bin/bash <user>
+#+end_example
+
+** Configure SSH
+
+I change the port from the common default of ~22~ and disabled root connections over [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] (forcing myself to use the
+account I created) and added my public SSH key via the LuCI interface (and to `/home/<user>/.ssh/id_ed25519.pub`). I
+added a configuration to ~~/.ssh/config~ to make it easy to login.
+
+** Blocking adverts
+
+#+begin_example
+# Backup the blocklists
+uci set adblock.global.adb_backupdir="/etc/adblock"
+
+# Save and apply
+uci commit adblock
+/etc/init.d/adblock restart
+#+end_example
+
+Then from the LuCI interface I tried to configure the adblock list, but there was no /Services/ menu item in the OpenWRT
+LuCI interface. I uninstalled both at the command line (~opkg remove luci-app-adblock adblock~) and reinstalled
+~luci-app-adblock~ via the LuCI interface and had a /Services > Adblock/ menu to configure the blocklist sources.
+
+* Upgrading
+
+ The GL.iNet WebUI has a useful interface for upgrading and includes the ability to auto-upgrade. However, if you have
+ expanded your storage and installed additional programmes as described above you need to be careful because doing so
+ will NOT automatically result in your expanded storage being used. This can be compounded if you choose the option to
+ install previously installed applications because those required to do the mounting of the external drive may not be
+ installed due to limited space.
+
+Instead you can install without including any previously installed packages and then go through the process of
+[[https://openwrt.org/docs/guide-user/additional-software/extroot_configuration][configuring extroot]] on the upgraded version. Once upgraded you will then have to reinstall any additional programmes you
+have installed such as zile, bash etc.
+
+I found I had to format the external USB drive as not doing so resulted in block: extroot: UUID mismatch and despite
+being able to mount the external drive there was no .extroot-uuid file to delete so I took the hit and deleted it. You
+will also have to reinstall the LuCi interface (best done through the GL.iNet WebUI).
+
+Current and old firmware versions are available here.
 
 * UBoot
 
@@ -16,9 +99,25 @@ This mode allows you to de-brick the router.
 3. Power on the device, keeping the reset button pressed for 5 seconds (light on the left nearest the reset button comes
    on and furthest light on the right flashes).
 4. Let go and the left and middle light will be on.
+5. Configure ethernet device
+
+#+begin_example
+ip address show dev enp0s31f6
+ip address flush dev enp0s31f6
+ip route flush dev enp0s31f6
+ip address add 192.168.1.2/24 dev enp0s31f6
+ip route add default via 192.168.1.1 dev enp0s31f6
+#+end_example
+
+You can now access ~http://192.168.1.1~ in a browser and flash new firmware.
 
 * Links
 
 + [[https://openwrt.org/toh/gl.inet/gl-mt300n_v2][OpenWRT : GL-MT300N-v2]]
 + [[https://firmware-selector.openwrt.org/?version=25.12.2&target=ramips%2Fmt76x8&id=glinet_gl-mt300n-v2][GL-MT300N-V2 OpenWRT Firmware]]
 + [[https://docs.gl-inet.com/router/en/4/user_guide/gl-mt300n-v2/][GL.iNet Mango (GL-MT300N-V2) User Guide]]
+
+** Blogs
+
++ [[https://web.archive.org/web/20220701233750/https://blog.jmdawson.co.uk/the-gl-mt300n-a-20-hackable-linux-router/][The GL-MT300N A $20 hackable Linux Router]]
++ [[https://the-gadgeteer.com/2019/04/15/gl-inet-gl-mt300n-v2-mango-mini-travel-router-review/][GL.iNet GL-MT300N-V2 (Mango) mini travel router review - The Gadgeteer]]
