@@ -1,10 +1,14 @@
 :PROPERTIES:
 :ID:       8b1e2298-ee48-43d3-a00b-94bb68413927
-:mtime:    20241014184942
+:mtime:    20261118222811 20241014184942
 :ctime:    20241014184942
 :END:
 #+TITLE: Free Software Foundation
 #+FILETAGS: :opensource:fsf:free:freedom:
+
+I support the [[https://www.fsf.org/][Free Software Foundation]] with annual donations.
+
+I have a [[https://galene.org/][Galene]] account courtesy of the FSF by virtue of being a subscriber.
 
 * Links
 
