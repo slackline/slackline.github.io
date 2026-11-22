@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       abfe0683-0301-4929-94f5-89092b00be23
+:mtime:    20261122092002
+:ctime:    20261122092002
+:END:
+#+TITLE: OpenWRT : Linksys WRT1900ACS
+#+DATE: [2026-11-22 Sun]
+#+FILETAGS: :openwrt:linux:networking:foss:
+
+My current workhorse which has been very stable. I'm loathe to upgrade to the current 24.10.4 as the household is so
+reliant on it.
+
+* Extensions
+
+I use a few additional packages on this device.
+
+* Links
+
++ [[https://openwrt.org/toh/linksys/wrt1900acs][OpenWrt : WRT1900ACS]]

@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       19449056-6706-4625-8d57-ee62e361fb3b
+:mtime:    20261122091826
+:ctime:    20261122091826
+:END:
+#+TITLE: OpenWRT : Linksys WRT54G
+#+DATE: [2026-11-22 Sun]
+#+FILETAGS: :openwrt:networking:linux:foss:
+
+Last official [[https://openwrt.org/toh/linksys/wrt54g][OpenWrt]] support was 19.07.10.
+
+* Links
+
++ [[https://downloads.linksys.com/downloads/userguide/1224638367336/wrt54g_ug.pdf][Official User Guide]]
++ [[https://en.wikipedia.org/wiki/Linksys_WRT54G_series][Wikipedia : Linksys WRT54G]]
++ [[https://openwrt.org/toh/linksys/wrt54g][OpenWRT : WRT54G/L/S]]

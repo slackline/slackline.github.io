@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       d34e7955-6aa1-4069-bfb0-b54bc067c749
+:mtime:    20261122094114
+:ctime:    20261122094114
+:END:
+#+TITLE: OpenWRT : GL.iNet GL-AX1800 (Flint)
+#+DATE: [2026-11-22 Sun]
+#+FILETAGS: :openwrt:linux:networking:foss:
+
+* Links
+
++ [[https://wikidevi.wi-cat.ru/GL.iNet_GL-AX1800_(Flint)][OpenWRT GL-AX1800]] (actually redirects to wikidevi.wi-cat.ru?)
++ [[https://docs.gl-inet.com/router/en/4/user_guide/gl-ax1800/][GL.iNet Flint (GL-AX1800) User Guide]]

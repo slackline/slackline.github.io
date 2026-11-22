@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       0183b7f5-ff0c-4427-a53d-027c6df20772
+:mtime:    20261122092850
+:ctime:    20261122092850
+:END:
+#+TITLE: OpenWRT : GL.iNet Mango GL-MT300N-V2
+#+DATE: [2026-11-22 Sun]
+#+FILETAGS: :openwrt:linux:networking:foss:
+
+* UBoot
+
+This mode allows you to de-brick the router.
+
+1. Plug in an ethernet cable to either WAN or LAN and connect to computer.
+2. Hold the reset button down.
+3. Power on the device, keeping the reset button pressed for 5 seconds (light on the left nearest the reset button comes
+   on and furthest light on the right flashes).
+4. Let go and the left and middle light will be on.
+
+* Links
+
++ [[https://openwrt.org/toh/gl.inet/gl-mt300n_v2][OpenWRT : GL-MT300N-v2]]
++ [[https://firmware-selector.openwrt.org/?version=25.12.2&target=ramips%2Fmt76x8&id=glinet_gl-mt300n-v2][GL-MT300N-V2 OpenWRT Firmware]]
++ [[https://docs.gl-inet.com/router/en/4/user_guide/gl-mt300n-v2/][GL.iNet Mango (GL-MT300N-V2) User Guide]]
