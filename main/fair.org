@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       b902439b-7bed-4493-8423-fab4c85f79a8
-:mtime:    20260925142117 20241230215848 20241222225949 20241222214642 20241209195457
+:mtime:    20261119212638 20260925142117 20241230215848 20241222225949 20241222214642 20241209195457
 :ctime:    20241209195457
 :END:
 #+TITLE: FAIR Principles
@@ -40,3 +40,7 @@ Principles.
 + [[https://shortdoi.org/][shortDOI Service]]
 + [[https://chem-bla-ics.linkedchemistry.info/2024/12/30/fair-blog-to-blog-citations.html][FAIR blog-to-blog citations | chem-bla-ics]]
 + [[https://www.go-fair.org/][GO FAIR initiative: Make your data & services FAIR]]
+
+** Data
+
++ [[https://zenodo.org/records/23493248][Deliberate Workflows. Why Small Decisions Define the SHAPE of Modern Research Data Processing | Zenodo]]
