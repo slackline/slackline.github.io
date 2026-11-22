@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       f1653a34-d0f6-45da-9660-e526b8b71008
+:mtime:    20261119223213
+:ctime:    20261119223213
+:END:
+#+TITLE: DAIR Institute
+#+DATE: [2026-11-19 Thu]
+#+FILETAGS: :ai:resistance:research:
+
+* Links
+
++ [[https://labor.dair-institute.org/][Luddite Lab]]
