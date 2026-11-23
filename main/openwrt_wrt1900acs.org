@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       abfe0683-0301-4929-94f5-89092b00be23
-:mtime:    20261122092002
+:mtime:    20261123102811 20261122164727 20261122121327 20261122092002
 :ctime:    20261122092002
 :END:
 #+TITLE: OpenWRT : Linksys WRT1900ACS
@@ -10,10 +10,90 @@
 My current workhorse which has been very stable. I'm loathe to upgrade to the current 24.10.4 as the household is so
 reliant on it.
 
+* Configuration
+
+** Networking
+
+*** PPPoE
+
+#+begin_example
+Username : XXXX@zen
+Password : XXXX
+Custom DNS : 1.1.1.1,8.8.8.8
+#+end_example
+** extroot
+
+Added a 32Gb USB drive to expand storage using [[https://openwrt.org/docs/guide-user/additional-software/extroot_configuration?s\[\]=extroot][extroot]]. Required adding ~block-mount~
+
+#+begin_example
+apk add block-mount
+#+end_example
+
+** Adblocking
+
+Traditionally I've used plain ~adblock~ but after reading [[https://forum.openwrt.org/t/the-best-package-to-encrypt-your-dns-traffic/92363/3][this]] thread decided to give [[https://docs.mossdef.org/adblock-fast/][~adblock-fast~]] and [[https://nlnetlabs.nl/projects/unbound/about/][unbound]] a
+whirl. The [[https://github.com/openwrt/packages/blob/master/net/unbound/files/README.md][unbound README.md]] is worth reading.
+
+
+#+begin_example
+apk add luci-app-adblock-fast luci-app-unbound unbound-host unbound-daemon unbound-control \
+  unbound-control-setup unbound-checkconf
+#+end_example
+
+As advised enable ~adblock-fast~
+
+#+begin_example
+uci set adblock-fast.config.enabled='1'
+uci commit adblock-fast
+#+end_example
+
+I found it failed to start and had to manually install...
+
+#+begin_example
+apk add gawk grep sed coreutils-sort
+#+end_example
+
+Even then it failed to start but that was because I needed to select some blocklists to include!
+
+I enabled Unbound and also enabled the DNSSEC option from the /Unbound > Recursive DNS > Basic/ configuration tab.
+* Upgrading
+
+Strategy
+
+1. Setup [[id:d34e7955-6aa1-4069-bfb0-b54bc067c749][OpenWRT : GL.iNet GL-AX1800 (Flint)]] and mirror services (see below).
+2. Connect router to laptop and upgrade
+3. Setup/mirror services
+4. Switch out GL-AX1800 and put shiny new WRT1900ACS back in place.
+
+** Configuration and Services
+
++ Ad-block is required
++ Port forwarding (see [[file:openwrt_secrets.org.gpg][table]])
++ Static IP Address for ~kimura~ (~192.168.1.45~) and ~alarmpi-4b~ (~192.168.1.28~) and ~crow~ (~192.168.1.46~) (see
+  [[file:openwrt_secrets.org.gpg][table]])
++ Add SSH public key and set SSH port to 418, allow ~root~ SSH temporarily but once upgraded add a user and their key
+  and disable ~root~ login.
+
+
+
 * Extensions
 
-I use a few additional packages on this device.
+If there is a LuCI interface I will typically install that as it pulls in the dependency and allows configuration from
+the LuCI WebUI.
 
+** [[https://repology.org/project/adblock/versions][AdBlock]]
+
+Good to block adverts and trackers at the router level so that everyone on the network has protection. Enabled various
+tracker lists.
+
+** Wake on Lan
+
+Installable via ~luci-app-wol~ which makes turning devices on easy.
 * Links
 
 + [[https://openwrt.org/toh/linksys/wrt1900acs][OpenWrt : WRT1900ACS]]
+
+** Packages
+
++
++ [[https://nlnetlabs.nl/projects/unbound/about/][Unbound]]
