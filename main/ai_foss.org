@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       db5f2a26-8cf4-47a7-871f-47f8c8937a2e
-:mtime:    20261115030604 20261105211723 20261027094208 20261014200721 20260923231308 20260919120656
+:mtime:    20261123105210 20261115030604 20261105211723 20261027094208 20261014200721 20260923231308 20260919120656
 :ctime:    20260919120656
 :END:
 #+TITLE: AI FOSS
@@ -12,6 +12,7 @@ large language models.
 * Links
 
 + [[https://noai.starlightnet.work/list.html][The No-AI list]]
++ [[https://0rwx.com/][0RWX Framework]]
 
 ** Project Policies
 
