@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0183b7f5-ff0c-4427-a53d-027c6df20772
-:mtime:    20261122210628 20261122111958 20261122092850
+:mtime:    20261124102004 20261123215049 20261122210628 20261122111958 20261122092850
 :ctime:    20261122092850
 :END:
 #+TITLE: OpenWRT : GL.iNet Mango GL-MT300N-V2
@@ -11,21 +11,50 @@ I kept some notes on installing and tinkering with this [[https://wiki.nshephard
 
 * Initial Connection
 
-The default SSID for the WiFi is ~GL-MT300n-###~ where the end bit will depend on the device. The default password is
+The default SSID for the WiFi is ~GL-MT300N-V2-eec~ where the end bit will depend on the device. The default password is
 ~goodlife~ and on connecting you can then access the WebUI at ~http://192.168.8.1~ and are prompted to setup the device
 including setting a secure ~root~/admin password.
 
-I plugged a 32GB USB drive in and immediately followed the instructions to [[https://openwrt.org/docs/guide-user/additional-software/extroot_configuration][configure extroot]] so I had more space
-available.
+** extroot
+
+I plugged a 16GB USB drive in and immediately followed the instructions to [[https://openwrt.org/docs/guide-user/additional-software/extroot_configuration][configure extroot]] so I had more space
+available. On this firmware ~busybox~ and the necessary kernel modules are already installed. I partitioned the disk on
+another computer (its faster!) before plugging it in.
+
+#+begin_example
+# Partition the disk
+DISK="/dev/sda"
+parted -s ${DISK} -- mklabel gpt mkpart extroot 2048s -2048s
+DEVICE="${DISK}1"
+mkfs.ext4 -L extroot ${DEVICE}
+
+# Check the eval variables are correctly assigned
+echo $(block info ${DEVICE} | grep -o -e 'UUID="\S*"')
+echo $(block info | grep -o -e 'MOUNT="\S*/overlay"')
+
+# Configure extroot
+#+end_example
+
 
 ** Additional packages
 
-Having added space I cold then add more packages. The ~luci-app-adblock~ pulls in ~adblock~ for blocking adverts. No
+Having added space I could then add more packages. The ~luci-app-adblock~ pulls in ~adblock~ for blocking adverts. No
 need to install ~shadow[-{adduser,deluser}]~ this time as it looks like they are bundled in-to ~busybox~.
 
 #+begin_example
 opkg update
-opkg install adblock bash git micropython minidlna mpd-full nano rsyncd zile luci-app-adblock
+opkg install \
+  bash \
+  git \
+  kitty-terminfo \
+  micropython \
+  minidlna \
+  mpd-full \
+  nano \
+  rsyncd \
+  zile \
+  luci-app-adblock-fast \
+  luci-app-unbound \
 #+end_example
 
 *** Blocking ads
@@ -46,6 +75,8 @@ uci commit system
 #+end_example
 
 ** Add user
+
+In this case ~busybox~ includes ~adduser~ and it works (unlike on the [[id:abfe0683-0301-4929-94f5-89092b00be23][OpenWRT : Linksys WRT1900ACS]]).
 
 #+begin_example
 adduser -h /home/<user> -G adm -G users -s /bin/bash <user>

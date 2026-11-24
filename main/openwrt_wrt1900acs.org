@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       abfe0683-0301-4929-94f5-89092b00be23
-:mtime:    20261123102811 20261122164727 20261122121327 20261122092002
+:mtime:    20261123215046 20261123102811 20261122164727 20261122121327 20261122092002
 :ctime:    20261122092002
 :END:
 #+TITLE: OpenWRT : Linksys WRT1900ACS
@@ -56,6 +56,53 @@ apk add gawk grep sed coreutils-sort
 Even then it failed to start but that was because I needed to select some blocklists to include!
 
 I enabled Unbound and also enabled the DNSSEC option from the /Unbound > Recursive DNS > Basic/ configuration tab.
+
+** Other add ons
+
+I also installed the following programs, where there is a LuCI interface I did so very the LuCI interface rather than
+command line (based on the above issue with ~adblock-fast~ UI not appearing when done from the command line).
+
+#+begin_example
+apk update
+apk add \
+  bash \
+  git \
+  kitty-terminfo \
+  micropython \
+  minidlna \
+  mpd-full \
+  nano \
+  rsyncd \
+  shadow-useradd \
+  shadow-userdel \
+  zile
+#+end_example
+
+** Adding a user
+
+For some reason ~busybox~ didn't have ~adduser~ built-in so installed relevant components along with ~sudo~.
+
+#+begin_example
+apk add shadow-useradd shadow-userdel shadow-passwd shadow-su sudo
+#+end_example
+
+Create a user account and set the password.
+
+#+begin_example
+useradd -m -G adm,audio,mpd,rsyncd,users -s /bin/bash
+passwd
+#+end_example
+
+Copy public ~id_ed25519.pub~ into ~~/.ssh/authorized_keys~.
+
+** Securing SSH
+
+Common options which can be set via the LuCI interface or by editing
+
++ Change SSH port.
++ Prevent root login via SSH.
++ Add public SSH keys and prevent login via password.
+
 * Upgrading
 
 Strategy
