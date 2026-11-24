@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a620a74f-3dae-4ac3-afc0-474ce16c9ab8
-:mtime:    20261103201820 20261009110357 20260908130100 20250813234719
+:mtime:    20261124164301 20261103201820 20261009110357 20260908130100 20250813234719
 :ctime:    20250813234719
 :END:
 #+TITLE: Git Tools
@@ -43,6 +43,10 @@ uvx gh-profiler ns-rse
 [[https://github.com/jamescherti/git-rexec/][git-rexec]] "/recursively locates Git repositories within a directory and executes commands against them, either
 sequentially or in parallel./"
 
+* [[https://github.com/lusingander/serie][Serie]]
+
+A terminal tool for viewing Git Log graphs. [[https://lusingander.github.io/serie/introduction/index.html][Documentation]] (config file live under ~/${XDG_CONFIG_HOME}/serie/config.toml~).
+
 * Keep the Why
 
 [[https://keepthewhy.com/][Keep the Why]] is a method/standard for recording /why/ the decisions/changes were made. It ostensibly looks geared
@@ -79,3 +83,4 @@ Notes]] but there.
 + [[https://alchemists.io/projects/git-lint][Git Lint | Alchemists]] - consistent, linted git commits
 + [[https://github.com/google/copybara][Copybara]] - a tool for transforming and moving code between repositories.
 + [[https://gitsocial.org/index.html][Git Social]]
++
