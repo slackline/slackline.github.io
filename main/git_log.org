@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0b6eddb6-eb5c-4f26-aaea-beed3505f195
-:mtime:    20261120104811 20260908151841 20240224205636 20240205164459 20231115133528
+:mtime:    20261125230601 20261120104811 20260908151841 20240224205636 20240205164459 20231115133528
 :ctime:    20231115133528
 :END:
 #+TITLE: Git Log
@@ -81,6 +81,12 @@ Written in [[id:3469c33e-7c61-46c7-b01e-655695f3b93c][Rust]] (like so many of th
 ** [[https://github.com/mlange-42/git-igitt][~git-igitt~]]
 
 An extension of ~git-graph~ that is interactive.
+
+** [[https://github.com/lusingander/serie][Serie]]
+
+A terminal tool for viewing Git Log graphs. [[https://lusingander.github.io/serie/introduction/index.html][Documentation]] (config file live under
+~/${XDG_CONFIG_HOME}/serie/config.toml~). Install on [[id:a53fa3c5-f091-4715-a1a4-a94071407abf][Arch Linux]] using ~paru serie-bin~ not available in any [[id:44b32b4e-1bef-49eb-b53c-86d9129cb29a][Gentoo]]
+overlays yet though.
 
 * Links
 
