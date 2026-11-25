@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0183b7f5-ff0c-4427-a53d-027c6df20772
-:mtime:    20261124102004 20261123215049 20261122210628 20261122111958 20261122092850
+:mtime:    20261125173611 20261124102004 20261123215049 20261122210628 20261122111958 20261122092850
 :ctime:    20261122092850
 :END:
 #+TITLE: OpenWRT : GL.iNet Mango GL-MT300N-V2
@@ -52,8 +52,9 @@ opkg install \
   mpd-full \
   nano \
   rsyncd \
+  shadow-su \
   zile \
-  luci-app-adblock-fast \
+  luci-app-adblock-simple \
   luci-app-unbound \
 #+end_example
 
@@ -85,8 +86,9 @@ adduser -h /home/<user> -G adm -G users -s /bin/bash <user>
 ** Configure SSH
 
 I change the port from the common default of ~22~ and disabled root connections over [[id:ae1e9b97-feb0-4f1a-b804-b89edaf5a790][SSH]] (forcing myself to use the
-account I created) and added my public SSH key via the LuCI interface (and to `/home/<user>/.ssh/id_ed25519.pub`). I
-added a configuration to ~~/.ssh/config~ to make it easy to login.
+account I created) I add a public SSH key to the user account in ~~/.ssh/authorized_keys~ and then disable password
+login as well as restricting SSH access to the LAN interface via the LuCI interface (and to
+`/home/<user>/.ssh/id_ed25519.pub`). I added a configuration to ~~/.ssh/config~ to make it easy to login.
 
 ** Blocking adverts
 
